@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { CloseIcon } from "../../icons/close-icon";
 import { cn } from "../../utils/cn";
-import { IconButton } from "./icon-button";
+import { ButtonIcon } from "./button-icon";
 import type { FC, ReactNode } from "react";
 
 const SIZE_CLASS_NAMES = {
@@ -48,7 +48,10 @@ export const Modal: FC<{
         "m-auto overflow-hidden rounded-xl border bg-paper p-0",
         "text-ink backdrop:bg-black/60",
         bare
-          ? "max-h-[calc(100dvh-1rem)] w-fit max-w-[calc(100vw-1rem)] border-rule"
+          ? cn(
+              "max-h-[calc(100dvh-1rem)] w-fit max-w-[calc(100vw-1rem)]",
+              "border-rule",
+            )
           : cn(
               "max-h-[calc(100dvh-2rem)] max-w-none border-rule-strong",
               SIZE_CLASS_NAMES[size],
@@ -58,13 +61,12 @@ export const Modal: FC<{
       {bare ? (
         <div className="relative">
           {children}
-          <IconButton
+          <ButtonIcon
             label="Close"
             onClick={onClose}
             className="absolute top-2 right-2 z-10"
-          >
-            <CloseIcon />
-          </IconButton>
+            icon={CloseIcon}
+          />
         </div>
       ) : (
         <div className="flex max-h-[calc(100dvh-2rem)] flex-col">
@@ -75,9 +77,7 @@ export const Modal: FC<{
             )}
           >
             <h2 className="m-0 text-base font-bold">{title}</h2>
-            <IconButton label="Close" onClick={onClose}>
-              <CloseIcon />
-            </IconButton>
+            <ButtonIcon label="Close" onClick={onClose} icon={CloseIcon} />
           </div>
           <div className="min-h-0 flex-1 overflow-auto p-4">{children}</div>
           {footer && (

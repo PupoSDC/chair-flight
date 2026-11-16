@@ -1,0 +1,3343 @@
+- id: Q0BNU4L0E
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222306
+    - AVEXAM-49504
+  annexes: []
+  learningObjectives:
+    - 022.01.02.01.05
+  template:
+    type: simple
+    question: "In flight, if the Constant Speed Drive (CSD) temperature indicator is
+      in the red arc the:"
+    explanation: ""
+    options:
+      - id: OB7MMNZOY
+        text: pilot must disconnect it, and the generator is not available for the rest
+          of flight.
+        correct: true
+        why: ""
+      - id: OP9DK7U9D
+        text: pilot has to throttle back.
+        correct: false
+        why: ""
+      - id: OLJSJWFU7
+        text: pilot must disconnect it and manually control the alternator.
+        correct: false
+        why: ""
+      - id: OQMYFHMSB
+        text: pilot can disconnect it to allow it to cool and use it again.
+        correct: false
+        why: ""
+- id: Q1NSHZCRP
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227718
+    - BGS-221395
+    - AVEXAM-96818
+    - ATPLGS-626195
+    - BGS-221756
+    - AVEXAM-13877
+  annexes: []
+  learningObjectives:
+    - 022.01.04.01.05
+  template:
+    type: simple
+    question: How is total fuel consumption calculated?
+    explanation: ""
+    options:
+      - id: OMFPAUHBJ
+        text: By subtracting the volume of the remaining fuel in the tanks from the
+          initial fuel total.
+        correct: false
+        why: ""
+      - id: OSYMM8K3H
+        text: By integrating the rate of fuel consumption over the flight time.
+        correct: true
+        why: ""
+      - id: OLNNBGN4P
+        text: By dividing total distance flown by the volume of fuel used.
+        correct: false
+        why: ""
+      - id: O9MAYE8LF
+        text: By differentiating the rate of fuel consumption over the flight time.
+        correct: false
+        why: ""
+- id: Q9VSQFBQB
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221264
+    - ATPLGS-627822
+    - BGS-220051
+    - AVEXAM-74357
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.01
+  template:
+    type: simple
+    question: "Considering a modern thrust computer, during a steady climb:"
+    explanation: ""
+    options:
+      - id: OMVZUAWDG
+        text: N1 is automatically adjusted as aircraft climbs and N2 remains constant.
+        correct: false
+        why: ""
+      - id: OLXQBETMY
+        text: N1 is automatically adjusted as aircraft climbs.
+        correct: true
+        why: ""
+      - id: O5VDFLSMQ
+        text: N2 is automatically adjusted as aircraft climbs and N1 remains constant.
+        correct: false
+        why: ""
+      - id: O1IPTRUVZ
+        text: N1 and N2 remain constant.
+        correct: false
+        why: ""
+- id: QAAEMYCZ
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227820
+    - ATPLGS-121067
+    - BGS-220037
+    - AVEXAM-64849
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: simple
+    question: A magnetic tachometer consists amongst others of ..
+    explanation: ""
+    options:
+      - id: OSLXPPWBS
+        text: a permanent magnet turning inside a non magnetic drag cup.
+        correct: true
+        why: ""
+      - id: OFTHF4164
+        text: a single-phase generator connected to a synchronous motor.
+        correct: false
+        why: ""
+      - id: OL4BF41GT
+        text: a single-phase generator connected to an asynchronous motor.
+        correct: false
+        why: ""
+      - id: OCCCLF2UE
+        text: a three phases generator connected to an asynchronous motor.
+        correct: false
+        why: ""
+- id: QAJRRFBA
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229576
+    - BGS-220047
+    - AVEXAM-95770
+    - AVEXAM-66947
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: simple
+    question: "The operating principle of an electronic tachometer probe is to
+      measure the:"
+    explanation: ""
+    options:
+      - id: OFHBVBJGV
+        text: magnetic field produced by a dynamo or an alternator.
+        correct: false
+        why: ""
+      - id: O40G45WBN
+        text: frequency of the sequence of electric impulses created by a notched wheel
+          rotating in a magnetic field.
+        correct: true
+        why: ""
+      - id: OGRTAHSNA
+        text: electromotive force produced by a dynamo or an alternator.
+        correct: false
+        why: ""
+      - id: OYJLZI1TK
+        text: rotation speed of an asynchronous motor energised by an alternator.
+        correct: false
+        why: ""
+- id: QALYZBVC
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229938
+    - ATPLGS-120790
+    - BGS-221269
+    - AVEXAM-71843
+    - ATPLQ-229195
+    - BGS-222178
+    - BGS-221196
+    - AVEXAM-70740
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.03
+  template:
+    type: calculation
+    question: "A pressure of {{psi}} psi is equivalent to approximately (in bar):"
+    variables:
+      - id: psi
+        label: pressure
+        unit: psi
+    answer:
+      formula: psi / 15
+      unit: bar
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: psi / 150
+      - id: d2
+        formula: psi / 1500
+      - id: d3
+        formula: psi / 1.5
+    presets:
+      - id: p1
+        values:
+          psi: 6000
+      - id: p2
+        values:
+          psi: 3000
+      - id: p3
+        values:
+          psi: 4500
+    explanation: >-
+      1 bar is about 14.5 psi, so for a quick approximation divide the value in
+      psi by about 15 to get bar.
+
+
+      **Solution**
+
+
+      {{f: psi / 15}} = {{n: psi / 15}} = **{{answer}} bar**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} bar**: divides by 150, one power of ten too much.
+
+      - **{{d2}} bar**: divides by 1500, two powers of ten too much.
+
+      - **{{d3}} bar**: divides by 1.5, one power of ten too little.
+- id: QAPEZHDMD
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225321
+    - BGS-221413
+    - AVEXAM-65050
+    - ATPLGS-626196
+    - BGS-222170
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.05
+  template:
+    type: simple
+    question: Which of the following indication is provided by the capacitive fuel
+      quantity measurement system?
+    explanation: ""
+    options:
+      - id: ONVJLCOVO
+        text: Fuel density-volume.
+        correct: false
+        why: ""
+      - id: O4RWCAT8F
+        text: Fuel inductance.
+        correct: false
+        why: ""
+      - id: OEXG5PIH8
+        text: Fuel volume.
+        correct: false
+        why: ""
+      - id: OHIHQTYMP
+        text: Fuel mass.
+        correct: true
+        why: ""
+- id: QBBUVFLC
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222510
+    - ATPLGS-627204
+    - BGS-221163
+    - BGS-222163
+  annexes: []
+  learningObjectives:
+    - 022.01.09.01.03
+  template:
+    type: simple
+    question: "The value shown by the indicator of a vibration monitoring system is
+      4\\. This is:"
+    explanation: ""
+    options:
+      - id: OMQ1LGLVG
+        text: 4% or 4 kHz depending on the type of aircraft.
+        correct: false
+        why: ""
+      - id: OGA35DY4B
+        text: a level of vibration without any unit.
+        correct: true
+        why: ""
+      - id: OKAL28HA8
+        text: 4 Hz.
+        correct: false
+        why: ""
+      - id: OAS4BTFKL
+        text: 4%.
+        correct: false
+        why: ""
+- id: QBKPSLFJ
+  docId: 022.01.03
+  relatedQuestions:
+    - QMMTJZVO
+  externalIds:
+    - ATPLQ-226770
+    - AVEXAM-40899
+    - BGS-222288
+    - AVEXAM-81310
+    - ATPLGS-625707
+    - BGS-222290
+    - ATPLGS-106035
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.03
+  template:
+    type: simple
+    question: "Which of these statements about the fuel mass unit is correct?  "
+    explanation: ""
+    options:
+      - id: OGJ8PQHBO
+        text: "1 kg = 2.2 lb.  "
+        correct: true
+        why: ""
+      - id: OIP9PDUIM
+        text: "1 kg = 0.45 lb.  "
+        correct: false
+        why: ""
+      - id: O1ZUYTWCV
+        text: "1 lb = 4.5 kg.  "
+        correct: false
+        why: ""
+      - id: OHBCEGMG8
+        text: "1 lb = 2.2 kg.  "
+        correct: false
+        why: ""
+- id: QBNDWCJW
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222666
+    - BGS-222287
+    - ATPLGS-120800
+  annexes: []
+  learningObjectives:
+    - 022.01.04.01.05
+  template:
+    type: simple
+    question: "By integrating a flow with respect to time we obtain:"
+    explanation: ""
+    options:
+      - id: OTF3QTDTR
+        text: a volume or a mass.
+        correct: true
+        why: ""
+      - id: O1LHQUETF
+        text: the diameter of the line.
+        correct: false
+        why: ""
+      - id: OS7QL8CTG
+        text: a pressure.
+        correct: false
+        why: ""
+      - id: O0SW2E8FT
+        text: the cross section of the line.
+        correct: false
+        why: ""
+- id: QBSVDDRV
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228259
+    - AVEXAM-77901
+    - ATPLGS-120473
+    - BGS-220030
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.05
+  template:
+    type: simple
+    question: "The basic principle of a capacitance fuel gauge system is that the:"
+    explanation: ""
+    options:
+      - id: OLJISEVZA
+        text: capacitance of a capacitor only depends on the density of the liquid on
+          which it is immersed.
+        correct: false
+        why: ""
+      - id: OGACSBG8G
+        text: internal resistance of a capacitor depends on the nature of the dielectric
+          in which it is immersed.
+        correct: false
+        why: ""
+      - id: ODRK6NPUM
+        text: capacitance of a capacitor depends on the nature of the dielectric in
+          which it is immersed.
+        correct: true
+        why: ""
+      - id: OV8UBHOCJ
+        text: electromotive force of a capacitor depends on the nature of the dielectric
+          in which it is immersed.
+        correct: false
+        why: ""
+- id: QBTKAJDD
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223816
+    - ATPLGS-627209
+    - AVEXAM-41897
+    - BGS-221981
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.05
+  template:
+    type: simple
+    question: The Hydraulic System Pressure Indicator holds..
+    explanation: ""
+    options:
+      - id: OGBBR69VZ
+        text: an aneroid capsule that receives a pneumatic signal from the hydraulic
+          reservoir.
+        correct: false
+        why: ""
+      - id: OMUCNBOGA
+        text: a bellows that receives a mechanical signal from a Bourdon tube.
+        correct: false
+        why: ""
+      - id: OXMU4DJOV
+        text: a transducer that receives an electric signal from a remote pressure
+          sensor.
+        correct: true
+        why: ""
+      - id: OUCQJPFQS
+        text: a diaphragm that receives a hydraulic signal from the accumulator.
+        correct: false
+        why: ""
+- id: QCCQJXCG
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223257
+    - AVEXAM-38093
+    - AVEXAM-4380
+    - BGS-222282
+    - BGS-221237
+    - AVEXAM-45861
+    - ATPLGS-625705
+    - ATPLGS-129533
+    - AVEXAM-11921
+    - AVEXAM-6130
+    - BGS-222280
+    - BGS-222283
+  annexes: []
+  learningObjectives:
+    - 022.01.02.01.03
+  template:
+    type: one-two
+    question: Which of these statements about temperature units are correct or incorrect?
+    explanation: ""
+    firstCorrectStatements:
+      - 20° Celsius = 68° Fahrenheit.
+    firstIncorrectStatements:
+      - 20° Celsius ≠ 68° Fahrenheit.
+    secondCorrectStatements:
+      - 0° Celsius = 273° Kelvin.
+    secondIncorrectStatements:
+      - 0° Celsius ≠ 273° Kelvin.
+- id: QCFDTREA
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228604
+    - BGS-220040
+    - AVEXAM-39957
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: simple
+    question: "A three-phase electrical tachometer utilises a generator feeding:"
+    explanation: ""
+    options:
+      - id: OSFOGJX4S
+        text: directly a galvanometer.
+        correct: false
+        why: ""
+      - id: OMUCHPKUV
+        text: a synchronous motor turning a drag cup.
+        correct: true
+        why: ""
+      - id: OBP4XP3LU
+        text: directly a drag cup.
+        correct: false
+        why: ""
+      - id: OIYGB4HVT
+        text: directly a voltmeter.
+        correct: false
+        why: ""
+- id: QCIGRUGW
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228075
+    - AVEXAM-90923
+    - BGS-220003
+    - ATPLGS-105877
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.04
+  template:
+    type: multiple-correct
+    question: "An aneroid capsule:"
+    explanation: ""
+    options:
+      - text: – measures differential pressure
+        correct: false
+        why: ""
+      - text: – measures absolute pressure
+        correct: true
+        why: ""
+      - text: – is used for low pressure measurement
+        correct: true
+        why: ""
+      - text: – is used for very high pressure measurement.
+        correct: false
+        why: ""
+- id: QCNIOIPG
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221881
+    - BGS-222167
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.01
+  template:
+    type: simple
+    question: "Concerning the thrust measurement, the N1 is defined as the:"
+    explanation: ""
+    options:
+      - id: OQTIYODOM
+        text: second stage compressor speed.
+        correct: false
+        why: ""
+      - id: OZMBWXOGI
+        text: low pressure shaft speed.
+        correct: true
+        why: ""
+      - id: O0FI7VY8C
+        text: high pressure shaft speed.
+        correct: false
+        why: ""
+      - id: OT94LCPOD
+        text: first stage compressor speed.
+        correct: false
+        why: ""
+- id: QCUYCMFG
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221549
+    - BGS-220046
+    - ATPLGS-121070
+    - AVEXAM-3010
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: simple
+    question: "The electronic tachometer sensor is composed of:"
+    explanation: ""
+    options:
+      - id: OPD2RF2AK
+        text: a notched wheel rotating in front of a permanent magnet.
+        correct: true
+        why: ""
+      - id: OLVQTTXXS
+        text: a circular magnet with four poles.
+        correct: false
+        why: ""
+      - id: OA5GRADEA
+        text: the rotor of a single phase A.C. generator.
+        correct: false
+        why: ""
+      - id: OUBM8K1YG
+        text: the rotor of a three-phase A.C. generator.
+        correct: false
+        why: ""
+- id: QCYEWPQI
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228290
+    - ATPLGS-628342
+    - BGS-221767
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.06
+  template:
+    type: simple
+    question: Having refuelled an aircraft, what safety-based action(s) must be
+      carried out?
+    explanation: ""
+    options:
+      - id: O8IMVCKPP
+        text: Reset the fuel gauge and load the passengers and the baggage, plus any
+          cargo.
+        correct: false
+        why: ""
+      - id: O8SGKWLGU
+        text: When refuelling is completed, switch the beacon "OFF", if the APU is NOT
+          running.
+        correct: false
+        why: ""
+      - id: OGSY27VKH
+        text: Calculate the fuel consumption.
+        correct: false
+        why: ""
+      - id: ODESMFPA3
+        text: Compare the indicated contents of the tanks with the expected contents.
+        correct: true
+        why: ""
+- id: QDBKNDPU
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228418
+    - BGS-220002
+    - ATPLGS-121103
+    - ATPLGS-105884
+    - AVEXAM-99001
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.04
+  template:
+    type: simple
+    question: >-
+      According to the range of pressure to be measured (low, medium, high),
+      different types of pressure sensors are used. Classify the following
+      sensors by order of increasing pressure for which they are suitable:
+
+
+      1 – bellows type   
+
+      2 – Bourdon tube type   
+
+      3 – aneroid capsule type
+    explanation: ""
+    options:
+      - id: OHJWZVFEK
+        text: 1, 2, 3.
+        correct: false
+        why: ""
+      - id: OMGOIO9NL
+        text: 2, 1, 3.
+        correct: false
+        why: ""
+      - id: OP4QO7BOV
+        text: 3, 2, 1.
+        correct: false
+        why: ""
+      - id: OTEOYWQT3
+        text: 3, 1, 2.
+        correct: true
+        why: ""
+- id: QDLPOIGS
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227780
+    - BGS-222289
+    - AVEXAM-40899
+    - BGS-222288
+    - AVEXAM-81310
+    - ATPLGS-625707
+    - BGS-222290
+    - ATPLGS-106035
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.03
+  template:
+    type: simple
+    question: Which of these statements about the fuel mass unit is correct?
+    explanation: ""
+    options:
+      - id: O4ZZAXOIS
+        text: 1 lb = 2.2 kg.
+        correct: false
+        why: ""
+      - id: OPC0OJHAV
+        text: 1 kg = 0.45 lb.
+        correct: false
+        why: ""
+      - id: OWZAFKG69
+        text: 1 lb = 0.45 kg.
+        correct: true
+        why: ""
+      - id: O2CDIPZUL
+        text: 1 kg = 0.22 lb.
+        correct: false
+        why: ""
+- id: QEHPRRZV
+  docId: 022.01.07
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228538
+    - AVEXAM-18862
+    - AVEXAM-68371
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.02
+  template:
+    type: simple
+    question: >-
+      Which formula represents the correct relationship between the following
+      parameters?   
+       P: power   
+       T: torque   
+       n: RPM   
+       GS: ground speed   
+       TAS: true air speed
+    explanation: ""
+    options:
+      - id: OC5L435VY
+        text: P = T × GS
+        correct: false
+        why: ""
+      - id: OPOQDO6ZO
+        text: P = T / (2 × π × n × 60)
+        correct: false
+        why: ""
+      - id: OCSXPPWFK
+        text: P = T × TAS
+        correct: false
+        why: ""
+      - id: OOIOU5JC8
+        text: P = T x (2 × π × n / 60)
+        correct: true
+        why: ""
+- id: QEJJSIPB
+  docId: 022.01.07
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222853
+    - BGS-221236
+    - ATPLGS-113281
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.02
+  template:
+    type: simple
+    question: |-
+      Given:
+
+      P = power.   
+      T = torque. n = RPM.
+
+      The correct relationship is:
+    explanation: ""
+    options:
+      - id: O0W3SP7I3
+        text: P = T / n.
+        correct: false
+        why: ""
+      - id: OGRTJZL47
+        text: P = T x GS.
+        correct: false
+        why: ""
+      - id: OB1YY22RH
+        text: P = T x n.
+        correct: true
+        why: ""
+      - id: OCMGKRWLB
+        text: P = T x TAS.
+        correct: false
+        why: ""
+- id: QELAFKBE
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221806
+    - BGS-221941
+    - AVEXAM-18643
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.05
+  template:
+    type: simple
+    question: For a capacitance type fuel indication system, what indication would
+      you expect in case of failure?
+    explanation: ""
+    options:
+      - id: OIOLHKVCP
+        text: A sudden full deflection of the fuel gauge towards empty.
+        correct: true
+        why: ""
+      - id: OQXO9ERA5
+        text: A progressive deflection of the gauge to full.
+        correct: false
+        why: ""
+      - id: OSE8PZCKJ
+        text: A red flag in the gauge.
+        correct: false
+        why: ""
+      - id: OYC8IGIAJ
+        text: A frozen fuel level indication.
+        correct: false
+        why: ""
+- id: QEMEGQVF
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221796
+    - BGS-221424
+    - AVEXAM-92695
+    - ATPLGS-106063
+  annexes: []
+  learningObjectives:
+    - 022.01.09.01.02
+  template:
+    type: one-two
+    question: "In a vibration monitoring system, a filter:"
+    explanation: ""
+    firstCorrectStatements:
+      - Erases any output which is normal to the engine.
+    firstIncorrectStatements:
+      - Allows through to the amplifier any frequency that is considered to be
+        harmful to the engine.
+    secondCorrectStatements:
+      - Allows through to the amplifier any frequency that is considered to be
+        harmful to the engine.
+    secondIncorrectStatements:
+      - Erases any output which is harmful to the engine.
+- id: QEPLQFYJQ
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229294
+    - AVEXAM-38093
+    - AVEXAM-4380
+    - BGS-222282
+    - BGS-221237
+    - AVEXAM-45861
+    - ATPLGS-625705
+    - ATPLGS-129533
+    - AVEXAM-11921
+    - AVEXAM-6130
+    - BGS-222280
+    - BGS-222283
+  annexes: []
+  learningObjectives:
+    - 022.01.02.01.03
+  template:
+    type: one-two
+    question: Which of these statements about temperature units are correct or incorrect?
+    explanation: ""
+    firstCorrectStatements:
+      - 15º Celsius = 59º Fahrenheit
+    firstIncorrectStatements:
+      - 15º Celsius = 273º Kelvin
+    secondCorrectStatements:
+      - 15º Celsius = 273º Kelvin
+    secondIncorrectStatements:
+      - 15º Celsius = 59º Fahrenheit
+- id: QEQVMFFM
+  docId: 022.01.08
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227961
+    - AVEXAM-21849
+  annexes: []
+  learningObjectives:
+    - 022.01.08.01.01
+    - 022.01.08.01.03
+  template:
+    type: simple
+    question: Choose the correct answers to complete the sentences regarding a
+      Synchroscope. There is/are (1) \_\_\_\_\_ dial(s) in a synchroscope. It
+      displays the engine speed to reduce (2) \_\_\_\_\_.
+    explanation: ""
+    options:
+      - id: ONNNC2FDK
+        text: (1) two; (2) engine noise/vibration
+        correct: false
+        why: ""
+      - id: OAUJJBXQB
+        text: (1) one; (2) engine noise/vibration
+        correct: true
+        why: ""
+      - id: OH3UOOWJW
+        text: (1) one; (2) reduce fuel consumption
+        correct: false
+        why: ""
+      - id: O2AQQLXWE
+        text: (1) two; (2) reduce fuel consumption
+        correct: false
+        why: ""
+- id: QEWVDOFW
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228762
+    - ATPLGS-121085
+    - BGS-221946
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.04
+  template:
+    type: simple
+    question: "The Bourdon tube is used to measure:"
+    explanation: ""
+    options:
+      - id: OFD5BFOPH
+        text: a flow rate.
+        correct: false
+        why: ""
+      - id: OCTCKJ9MD
+        text: temperature.
+        correct: false
+        why: ""
+      - id: OMAC91QUZ
+        text: quantity.
+        correct: false
+        why: ""
+      - id: OPNWLTSHP
+        text: pressure.
+        correct: true
+        why: ""
+- id: QFHFBGFGP
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228565
+    - BGS-222291
+    - AVEXAM-18510
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.03
+  template:
+    type: multiple-correct
+    question: "On an electronic display unit, the following N1 parameters can be
+      displayed:"
+    explanation: ""
+    options:
+      - text: – present N1.
+        correct: true
+        why: ""
+      - text: – commanded N1
+        correct: true
+        why: ""
+      - text: – maximum N1 operating limit.
+        correct: true
+        why: ""
+- id: QFLZTXCVG
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228173
+    - BGS-221395
+    - AVEXAM-96818
+    - ATPLGS-626195
+    - BGS-221756
+    - AVEXAM-13877
+  annexes: []
+  learningObjectives:
+    - 022.01.04.01.05
+  template:
+    type: simple
+    question: Which of the following statements shows how the total fuel consumption
+      can be calculated?
+    explanation: ""
+    options:
+      - id: OJOGIZUJB
+        text: The total fuel consumption can be calculated by dividing the total
+          distance which is flown by the volume of fuel which has been used.
+        correct: false
+        why: ""
+      - id: ONL5Y5CS9
+        text: The total fuel consumption can be calculated by integrating the rate of
+          fuel consumption over an hour.
+        correct: true
+        why: ""
+      - id: OMRODXTFY
+        text: The total fuel consumption can be calculated by subtracting the volume of
+          the remaining fuel on board from the initial total fuel on board.
+        correct: false
+        why: ""
+      - id: O9LNAVCV1
+        text: The total fuel consumption can be calculated by differentiating the rate
+          of fuel consumption over the time flown.
+        correct: false
+        why: ""
+- id: QFVODBXI
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228152
+    - ATPLGS-106041
+    - AVEXAM-47909
+    - BGS-221963
+  annexes: []
+  learningObjectives:
+    - 022.01.04.01.03
+  template:
+    type: multiple-correct
+    question: "Fuel flow can be expressed in:"
+    explanation: ""
+    options:
+      - text: – kg per m3.
+        correct: false
+        why: ""
+      - text: – lb per m3.
+        correct: false
+        why: ""
+      - text: – lb per hour.
+        correct: true
+        why: ""
+      - text: – kg per hour.
+        correct: true
+        why: ""
+- id: QGDLGVOM
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226699
+    - BGS-220052
+    - AVEXAM-15363
+    - ATPLGS-112832
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.01
+  template:
+    type: simple
+    question: "The EPR (Engine Pressure Ratio) is:"
+    explanation: ""
+    options:
+      - id: OZTV3XPKJ
+        text: the difference between the compressor inlet total pressure and the turbine
+          outlet total pressure.
+        correct: false
+        why: ""
+      - id: OEJYWZ0AR
+        text: the ratio of the turbine outlet total pressure to the ambient total
+          pressure.
+        correct: false
+        why: ""
+      - id: O3TSFONTS
+        text: the ratio of the turbine outlet total pressure to the compressor inlet
+          total pressure.
+        correct: true
+        why: ""
+      - id: OAWMXOS1E
+        text: the ratio of the compressor outlet total pressure to the compressor inlet
+          total pressure.
+        correct: false
+        why: ""
+- id: QGHZVFEN
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222815
+    - BGS-221957
+    - AVEXAM-17239
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.01
+  template:
+    type: simple
+    question: "Concerning a fuel gauge system, the most relevant fuel parameter is:"
+    explanation: ""
+    options:
+      - id: O5SEPMCPM
+        text: density.
+        correct: false
+        why: ""
+      - id: OTMN7I1JM
+        text: permittivity.
+        correct: false
+        why: ""
+      - id: ONSM1IH85
+        text: mass.
+        correct: true
+        why: ""
+      - id: OWCVTJGYD
+        text: volume.
+        correct: false
+        why: ""
+- id: QGXUCECX
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223358
+    - AVEXAM-74690
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.07
+  template:
+    type: simple
+    question: A manifold pressure gauge is consistently registering atmospheric
+      pressure. What may be the cause?
+    explanation: ""
+    options:
+      - id: OVNFD1L08
+        text: Leak in pressure gauge line.
+        correct: true
+        why: ""
+      - id: OFZSFLEWD
+        text: Ice in induction system.
+        correct: false
+        why: ""
+      - id: OLRJTTITB
+        text: Too high float level.
+        correct: false
+        why: ""
+      - id: OKMM27ZHN
+        text: Fuel of too low volatility.
+        correct: false
+        why: ""
+- id: QHAXKTLO
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222273
+    - BGS-220001
+    - AVEXAM-74638
+    - ATPLGS-120513
+    - BGS-220005
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.04
+  template:
+    type: simple
+    question: "A Bourdon tube is a:"
+    explanation: ""
+    options:
+      - id: OWPNZBSEL
+        text: smoke detector.
+        correct: false
+        why: ""
+      - id: OPCSLEAUV
+        text: vibration detector.
+        correct: false
+        why: ""
+      - id: OS51ZOBHU
+        text: pressure sensor.
+        correct: true
+        why: ""
+      - id: O4SM6QJUY
+        text: turbine temperature probe.
+        correct: false
+        why: ""
+- id: QHLXQGOI
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221362
+    - ATPLGS-121066
+    - BGS-220044
+    - AVEXAM-50114
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.03
+  template:
+    type: simple
+    question: One of the disadvantages of an electronic tachometer is the ..
+    explanation: ""
+    options:
+      - id: OZGFWW90D
+        text: influence of temperature on the indication.
+        correct: false
+        why: ""
+      - id: OJGTHRMBH
+        text: generation of spurious signals at the commutator.
+        correct: false
+        why: ""
+      - id: OOEA2DAJZ
+        text: high influence of line resistance on the indication.
+        correct: false
+        why: ""
+      - id: OIH7MLPP1
+        text: necessity of a power supply.
+        correct: true
+        why: ""
+- id: QHUOOLPR
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228410
+    - AVEXAM-34210
+    - BGS-222279
+    - BGS-222281
+    - AVEXAM-43604
+    - ATPLGS-113313
+  annexes: []
+  learningObjectives:
+    - 022.01.02.01.03
+  template:
+    type: simple
+    question: |-
+      Given:
+
+      C = temperature in Celsius.   
+      K = temperature in Kelvin.
+
+      The correct relationship between these different units is:
+    explanation: ""
+    options:
+      - id: OAR06CTQL
+        text: C = K x 1.8 + 32.
+        correct: false
+        why: ""
+      - id: ORLE4ILTQ
+        text: C = K – 273.
+        correct: true
+        why: ""
+      - id: ORMXTVVB4
+        text: K = C – 273.
+        correct: false
+        why: ""
+      - id: O46GC1KZ9
+        text: K = C x 1.8 + 32.
+        correct: false
+        why: ""
+- id: QHXXOKIX
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229348
+    - AVEXAM-51592
+    - BGS-221964
+    - ATPLGS-106022
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.05
+  template:
+    type: simple
+    question: "A capacitance-type quantity measurement system is based on the
+      variation of:"
+    explanation: ""
+    options:
+      - id: OEFMQ98FS
+        text: the dielectric of a capacitor.
+        correct: true
+        why: ""
+      - id: OLKMC2BH6
+        text: the permeability of a capacitor.
+        correct: false
+        why: ""
+      - id: OYM8RSRAX
+        text: the distance between the two plates of a capacitor.
+        correct: false
+        why: ""
+      - id: OQL97ALF7
+        text: the plate surface of a capacitor.
+        correct: false
+        why: ""
+- id: QIHWRKSQ
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229909
+    - AVEXAM-4521
+    - ATPLGS-106023
+    - BGS-221958
+    - ATPLGS-113275
+    - BGS-221226
+    - ATPLGS-113111
+    - AVEXAM-87637
+    - ATPLGS-106045
+  annexes: []
+  learningObjectives:
+    - 022.01.04.01.02
+  template:
+    type: one-two
+    question: Which statements about fuel flow are correct or incorrect?
+    explanation: ""
+    firstCorrectStatements:
+      - Fuel flow may be measured by volume per unit of time.
+    firstIncorrectStatements:
+      - Fuel flow may be measured by mass per unit of time.
+    secondCorrectStatements:
+      - Fuel flow may be measured by mass per unit of time.
+    secondIncorrectStatements:
+      - Fuel flow may be measured by volume per unit of time.
+- id: QIRDLUYZ
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226396
+    - BGS-221960
+    - AVEXAM-38987
+    - AVEXAM-37003
+    - BGS-221959
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.04
+  template:
+    type: simple
+    question: "Changes in temperature of the fuel affect its density, volume and
+      dielectric value Er. A decrease in temperature causes:"
+    explanation: ""
+    options:
+      - id: OPQZDPGH4
+        text: a decrease in volume, decreases in density and decreases in Er.
+        correct: false
+        why: ""
+      - id: O8ODQRP85
+        text: an increase in volume, decreases in density and decreases in Er.
+        correct: false
+        why: ""
+      - id: O8JISSDXI
+        text: an increase in volume, increases in density and increases in Er.
+        correct: false
+        why: ""
+      - id: OXHGBM4FU
+        text: a decrease in volume, increases in density and increases in Er.
+        correct: true
+        why: ""
+- id: QITOTFHC
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226818
+    - ATPLGS-121073
+    - AVEXAM-43277
+    - BGS-221262
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: simple
+    question: A Tachometer measures
+    explanation: ""
+    options:
+      - id: OM535WOPG
+        text: angular speed.
+        correct: true
+        why: ""
+      - id: OJZGD5PFZ
+        text: engine vibration.
+        correct: false
+        why: ""
+      - id: OKRFA3NS2
+        text: engine operating hours.
+        correct: false
+        why: ""
+      - id: O8JMZR7LG
+        text: angular momentum.
+        correct: false
+        why: ""
+- id: QIXDTUBB
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228978
+    - BGS-222134
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.02
+  template:
+    type: simple
+    question: "Engine speed is most commonly displayed as a:"
+    explanation: ""
+    options:
+      - id: OIMFNEBOM
+        text: ratio with the maximum measured power.
+        correct: false
+        why: ""
+      - id: OWCOTJSHI
+        text: percentage of design RPM.
+        correct: true
+        why: ""
+      - id: OWTY2DPKB
+        text: percentage of a maximum measured power.
+        correct: false
+        why: ""
+      - id: OZ0JSSASU
+        text: ratio with the measured torque.
+        correct: false
+        why: ""
+- id: QJ90YT112
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224847
+    - ATPLGS-106043
+    - BGS-220851
+    - AVEXAM-28933
+  annexes: []
+  learningObjectives:
+    - 022.01.04.01.01
+  template:
+    type: simple
+    question: >-
+      What is the operating principle of Flowmeters ("unit flow meters"), the
+      most commonly used at the present time?   
+       It is to measure across the system the:
+    explanation: ""
+    options:
+      - id: OESDEZDVC
+        text: Pressure and temperature of the fuel.
+        correct: false
+        why: ""
+      - id: OO0JL4YF9
+        text: Volumetric mass and di-electric resistance of the fuel.
+        correct: false
+        why: ""
+      - id: OVAL2F9R5
+        text: Volume and viscosity of the fuel.
+        correct: false
+        why: ""
+      - id: OTFLPDHEC
+        text: Quantity of fuel movement.
+        correct: true
+        why: ""
+- id: QJFPTQAC
+  docId: 022.01.07
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225964
+    - ATPLGS-626386
+    - AVEXAM-70163
+    - ATPLGS-120898
+    - BGS-222234
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.05
+  template:
+    type: simple
+    question: The sensors of the Electronic Torquemeter system measure the..
+    explanation: ""
+    options:
+      - id: O0XYULQ8G
+        text: angular speed of the propeller or rotor.
+        correct: false
+        why: ""
+      - id: ODDHAF4WF
+        text: twist in the engine output shaft.
+        correct: true
+        why: ""
+      - id: OSZSXC7EW
+        text: oil pressure in the gearbox.
+        correct: false
+        why: ""
+      - id: OUBC7LL7F
+        text: torsion in the propeller or rotor blades.
+        correct: false
+        why: ""
+- id: QJKBRACC
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223305
+    - AVEXAM-21364
+    - BGS-222230
+    - ATPLGS-106047
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: simple
+    question: The different types of tachometers are ..
+    explanation: ""
+    options:
+      - id: OVTLZCTEL
+        text: magnetic, capacitance, electronic.
+        correct: false
+        why: ""
+      - id: ODZRFL0YA
+        text: electrical, mechanical, density.
+        correct: false
+        why: ""
+      - id: OTJFJCS2L
+        text: mechanical, electrical, electronic.
+        correct: true
+        why: ""
+      - id: OM7TAEW1K
+        text: magnetic, electrical, helical.
+        correct: false
+        why: ""
+- id: QJYTRZVH
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227212
+    - ATPLGS-106071
+    - BGS-221939
+    - ATPLGS-129516
+    - AVEXAM-33303
+  annexes: []
+  learningObjectives:
+    - 022.01.09.01.03
+  template:
+    type: simple
+    question: A jet engine vibration meter is indicating "4". What is the unit of
+      this indication?
+    explanation: ""
+    options:
+      - id: ORFCRKIVS
+        text: m/s
+        correct: false
+        why: ""
+      - id: OROQ2IMAB
+        text: No units are specified
+        correct: true
+        why: ""
+      - id: OL6Y3EHLH
+        text: hPa
+        correct: false
+        why: ""
+      - id: OB8ST3TFE
+        text: Hz
+        correct: false
+        why: ""
+- id: QKC9VNQOV
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229411
+    - BGS-221870
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.05
+  template:
+    type: simple
+    question: What should a flight crew do following the loss of all fuel indications?
+    explanation: ""
+    options:
+      - id: OCL8HESHI
+        text: Turn off fuel pumps for 10 min and then turn them back on.
+        correct: false
+        why: ""
+      - id: OOMLOYGO8
+        text: Open the cross-feed valve to make sure the aeroplane stays in balance.
+        correct: false
+        why: ""
+      - id: OEFP8E0K2
+        text: Land as soon as possible and prepare for power off landing.
+        correct: false
+        why: ""
+      - id: OO1LWVZKA
+        text: Pull and reset the circuit breakers to check if the system restarts,
+          unless the checklist says otherwise.
+        correct: true
+        why: ""
+- id: QKCNRBUQ
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222334
+    - AVEXAM-49852
+    - BGS-220043
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: multiple-correct
+    question: "In a three-phase synchronous motor type tachometer:"
+    explanation: ""
+    options:
+      - text: – the transmitter is a direct current generator
+        correct: false
+        why: ""
+      - text: – the voltage is proportional to the transmitter drive speed
+        correct: false
+        why: ""
+      - text: – the frequency is proportional to the transmitter drive speed
+        correct: true
+        why: ""
+      - text: – the speed indicating element is a galvanometer
+        correct: false
+        why: ""
+      - text: – the speed indicating element is an asynchronous motor driving a magnetic
+          tachometer
+        correct: true
+        why: ""
+- id: QLIJGZIO
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228293
+    - AVEXAM-43536
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.04
+  template:
+    type: simple
+    question: The hydraulic pressure is sensed...
+    explanation: ""
+    options:
+      - id: O5OCU8BAX
+        text: By a Bourdon tube.
+        correct: true
+        why: ""
+      - id: OFEJCFPGO
+        text: By several aneroid capsules.
+        correct: false
+        why: ""
+      - id: ODVWTUPA0
+        text: By bellows via mechanical sensing from a Bourdon tube.
+        correct: false
+        why: ""
+      - id: ORPXBPBYM
+        text: Electrical signal generated by a pressure sensing element in a remote
+          location.
+        correct: false
+        why: ""
+- id: QLJHJPTE
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225572
+    - BGS-221413
+    - AVEXAM-65050
+    - ATPLGS-626196
+    - BGS-222170
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.05
+  template:
+    type: simple
+    question: "A capacitive fuel quantity measurement system provides the following
+      indication:"
+    explanation: ""
+    options:
+      - id: OMMKDLLSZ
+        text: The volume of the fuel.
+        correct: false
+        why: ""
+      - id: OX4EW12U2
+        text: The density-volume of the fuel.
+        correct: false
+        why: ""
+      - id: ORYTITRSD
+        text: The mass of the fuel.
+        correct: true
+        why: ""
+      - id: OXHFPT7NQ
+        text: The inductivity of the fuel.
+        correct: false
+        why: ""
+- id: QLTUGAKV
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225451
+    - BGS-221317
+    - AVEXAM-65694
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.02
+  template:
+    type: simple
+    question: "During take-off, the front probe of an EPR system becomes blocked by
+      ingested debris or icing but the rear probe remains unaffected. The
+      displayed EPR will likely be:"
+    explanation: ""
+    options:
+      - id: O5EDPNTGA
+        text: equal to zero, and N1 should be used instead.
+        correct: false
+        why: ""
+      - id: ORM38FPC2
+        text: lower than the actual EPR value.
+        correct: false
+        why: ""
+      - id: OCL9V2RIN
+        text: equal to the LP turbine exhaust pressure.
+        correct: false
+        why: ""
+      - id: O2GEKIDB1
+        text: higher than the actual EPR value.
+        correct: true
+        why: ""
+- id: QLWZSHGJ
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224239
+    - AVEXAM-83792
+    - BGS-220064
+  annexes: []
+  learningObjectives:
+    - 022.01.09.01.01
+  template:
+    type: simple
+    question: "Any vibration displayed on an engine vibration monitoring system of a
+      turbojet:"
+    explanation: ""
+    options:
+      - id: O1UTZNKR0
+        text: varies inversely with the square of the engine speed.
+        correct: false
+        why: ""
+      - id: ODMH9PZSZ
+        text: is presented without any amplification or filtering.
+        correct: false
+        why: ""
+      - id: OLVFZJDSX
+        text: indicates rotor imbalance.
+        correct: true
+        why: ""
+      - id: OZASSZYZF
+        text: is directly proportional to engine speed.
+        correct: false
+        why: ""
+- id: QLYVJPTS
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225947
+    - AVEXAM-84150
+  annexes:
+    - 022-turboprop-turbine-engine-display
+  learningObjectives:
+    - 022.01.03.01.06
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to figure.
+
+
+      The fuel tank capacity read from the figure is {{capacity}} l.
+
+
+      The tank is currently {{current}} % full.
+
+
+      The pilot requests that the aircraft be refuelled to obtain {{target}} %
+      full tank.
+
+
+      What is the amount of fuel that must be uplifted to obtain that value?
+    variables:
+      - id: capacity
+        label: tank capacity (from figure)
+        unit: l
+      - id: current
+        label: current fuel level
+        unit: "%"
+      - id: target
+        label: target fuel level
+        unit: "%"
+    chartInputs:
+      - capacity
+    answer:
+      formula: (target - current) / 100 * capacity
+      unit: l
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: current / 100 * capacity
+      - id: d2
+        formula: target / 100 * capacity
+      - id: d3
+        formula: capacity
+    presets:
+      - id: p1
+        values:
+          capacity: 544
+          current: 50
+          target: 70
+      - id: p2
+        values:
+          capacity: 400
+          current: 30
+          target: 80
+    explanation: >-
+      The fuel to uplift is the difference between the target and the current
+      fuel fraction, multiplied by the tank capacity.
+
+
+      **Solution**
+
+
+      {{f: (target - current) / 100 * capacity}} = {{n: (target - current) / 100
+      * capacity}} = **{{answer}} l**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} l**: the fuel already in the tank, not what has to be added.
+
+      - **{{d2}} l**: the total fuel in the tank at the target level, forgetting
+      to subtract what is already there.
+
+      - **{{d3}} l**: the full tank capacity.
+- id: QMAHFNXD
+  docId: 022.01.08
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228639
+    - ATPLGS-106058
+    - ATPLGS-106060
+    - AVEXAM-21922
+    - AVEXAM-19955
+  annexes: []
+  learningObjectives:
+    - 022.01.08.01.01
+  template:
+    type: one-two
+    question: What is correct/incorrect regarding the purpose of a synchroscope?
+    explanation: ""
+    firstCorrectStatements: []
+    firstIncorrectStatements:
+      - It synchronizes engine/propeller speed and synchronizes fuel consumption;
+    secondCorrectStatements:
+      - It reduces vibrations.
+    secondIncorrectStatements: []
+- id: QMAMOJKJ
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224452
+    - BGS-221233
+    - AVEXAM-54980
+    - ATPLGS-113266
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.03
+  template:
+    type: calculation
+    question: "A pressure of {{bar}} bar is equivalent to (in Pascal):"
+    variables:
+      - id: bar
+        label: pressure
+        unit: bar
+    answer:
+      formula: bar * 100000
+      unit: Pa
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: bar * 100
+      - id: d2
+        formula: bar * 10
+      - id: d3
+        formula: bar * 1000
+    presets:
+      - id: p1
+        values:
+          bar: 1
+      - id: p2
+        values:
+          bar: 2
+      - id: p3
+        values:
+          bar: 5
+    explanation: >-
+      By definition 1 bar = 100 000 Pa (1000 hPa), so the value in bar is
+      multiplied by 100 000.
+
+
+      **Solution**
+
+
+      {{f: bar * 100000}} = {{n: bar * 100000}} = **{{answer}} Pa**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} Pa**: uses a factor of 100, confusing bar with hPa/mbar steps.
+
+      - **{{d2}} Pa**: uses a factor of 10.
+
+      - **{{d3}} Pa**: uses a factor of 1000 (that is kPa per bar x 10, not Pa).
+- id: QMFTSCAA
+  docId: 022.01.07
+  relatedQuestions:
+    - QOMNMAAW
+  externalIds:
+    - ATPLQ-224503
+    - BGS-222251
+    - AVEXAM-77021
+    - AVEXAM-64405
+    - BGS-222250
+    - ATPLGS-627456
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.05
+  template:
+    type: simple
+    question: "The operating principle of an electronic torque meter is:"
+    explanation: ""
+    options:
+      - id: OF2CXYL1X
+        text: axial thrust and movement is generated when cylindrically cut gears are
+          used to transfer power from one shaft to another.
+        correct: false
+        why: ""
+      - id: OBUDOP6JP
+        text: axial thrust and movement is generated when helically cut gears are used
+          to transfer power from one shaft to another.
+        correct: false
+        why: ""
+      - id: OF23JUCGG
+        text: as power is increased, the torque shaft expands.
+        correct: false
+        why: ""
+      - id: OUHDHWJMY
+        text: as power is increased, the torque shaft twists.
+        correct: true
+        why: ""
+- id: QMIIBXZS
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222098
+    - AVEXAM-27641
+    - ATPLGS-628548
+  annexes: []
+  learningObjectives:
+    - 022.01.09.01.02
+  template:
+    type: simple
+    question: A piezoelectric sensor consists of (1) \_\_\_ dial(s) and measures (2)
+      \_\_\_.
+    explanation: ""
+    options:
+      - id: ODCJHU0YL
+        text: (1) inertial (2) temperature
+        correct: false
+        why: ""
+      - id: OZZ0ABYGV
+        text: (1) tangent (2) pressure
+        correct: false
+        why: ""
+      - id: OEZM5QN6M
+        text: (1) cockpit (2) vibration
+        correct: true
+        why: ""
+      - id: OIRT0NDBO
+        text: (1) avionics (2) humidity
+        correct: false
+        why: ""
+- id: QMJEUVHL
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226808
+    - ATPLGS-106073
+    - AVEXAM-90801
+    - BGS-222231
+  annexes: []
+  learningObjectives:
+    - 022.01.09.01.04
+  template:
+    type: simple
+    question: "On an electronic display unit, the source of the vibrations sensed by
+      an engine vibration monitoring system:"
+    explanation: ""
+    options:
+      - id: OSEOQPZRE
+        text: cannot be displayed because low and high pressure shaft vibrate at the
+          same frequency.
+        correct: false
+        why: ""
+      - id: OJD5EZCYA
+        text: can be displayed (N1 or N2).
+        correct: true
+        why: ""
+      - id: OIWOEQMD2
+        text: cannot be displayed because of too much interference inside the engines.
+        correct: false
+        why: ""
+      - id: OZT7Y1XNL
+        text: cannot be displayed because low and high pressure shafts are damaged by
+          the same frequencies.
+        correct: false
+        why: ""
+- id: QMMTJZVO
+  docId: 022.01.03
+  relatedQuestions:
+    - QBKPSLFJ
+  externalIds:
+    - ATPLQ-221322
+    - BGS-222289
+    - AVEXAM-50117
+    - BGS-222288
+    - AVEXAM-47838
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.03
+  template:
+    type: simple
+    question: Which of these statements about the fuel mass unit is correct?
+    explanation: ""
+    options:
+      - id: OGMUQEEOE
+        text: 1000 lb = 4500 kg.
+        correct: false
+        why: ""
+      - id: OG5Y9SJDJ
+        text: 1000 lb = 2200 kg.
+        correct: false
+        why: ""
+      - id: OH5UQMGPQ
+        text: 1 t = 2200 lb.
+        correct: true
+        why: ""
+      - id: OJI9K4OBC
+        text: 1 t = 450 lb.
+        correct: false
+        why: ""
+- id: QMUNWNWW
+  docId: 022.01.07
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224019
+    - ATPLGS-112462
+    - ATPLGS-129522
+    - AVEXAM-33640
+    - BGS-220062
+    - AVEXAM-23059
+    - BGS-221220
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.05
+  template:
+    type: simple
+    question: "Torque can be determined by measuring the:"
+    explanation: ""
+    options:
+      - id: OPKXWNB1W
+        text: the twist of a torque shaft of a known length.
+        correct: true
+        why: ""
+      - id: OY9YPQVQZ
+        text: ratio Pt7 / Pt2.
+        correct: false
+        why: ""
+      - id: OXVSQ4YTU
+        text: change in frequency between the torque shaft and the reference shaft.
+        correct: false
+        why: ""
+      - id: OYXG4RVXN
+        text: ratio Pt2 / Pt7.
+        correct: false
+        why: ""
+- id: QNHLKFOO
+  docId: 022.01.07
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222747
+    - BGS-222261
+    - ATPLGS-627208
+    - ATPLGS-106053
+    - AVEXAM-36893
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.01
+  template:
+    type: simple
+    question: "The magnitude of a torque is defined as:"
+    explanation: ""
+    options:
+      - id: O16ZTKMIX
+        text: force divided by its lever arm.
+        correct: false
+        why: ""
+      - id: OWKBFD54U
+        text: force divided by RPM.
+        correct: false
+        why: ""
+      - id: OSRN1MVTR
+        text: force times RPM.
+        correct: false
+        why: ""
+      - id: OD7LP0HCK
+        text: force times its lever arm.
+        correct: true
+        why: ""
+- id: QNIYQIYX
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221059
+    - AVEXAM-97079
+    - BGS-220033
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.04
+  template:
+    type: multiple-correct
+    question: "The indication of a fuel float gauge varies with:"
+    explanation: ""
+    options:
+      - text: – pitch angle
+        correct: true
+        why: ""
+      - text: – accelerations
+        correct: true
+        why: ""
+      - text: – fuel temperature.
+        correct: true
+        why: ""
+- id: QNQZYLBP
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225217
+    - AVEXAM-50391
+    - AVEXAM-67269
+    - BGS-220060
+    - ATPLGS-129505
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.01
+  template:
+    type: simple
+    question: "The two main sources of information used to calculate turbojet thrust
+      are the:"
+    explanation: ""
+    options:
+      - id: OR6Q5I4HZ
+        text: high pressure turbine rotation speed or the EPR.
+        correct: false
+        why: ""
+      - id: OIGNU5M9F
+        text: fan rotation speed (or N1) or the total pressure at the high pressure
+          compressor outlet.
+        correct: false
+        why: ""
+      - id: OQ2VFP4GV
+        text: fan rotation speed (or N1) or the total pressure at the low pressure
+          turbine outlet.
+        correct: false
+        why: ""
+      - id: OQHBDA8MF
+        text: fan rotation speed (or N1) or the EPR.
+        correct: true
+        why: ""
+- id: QOMNMAAW
+  docId: 022.01.07
+  relatedQuestions:
+    - QMFTSCAA
+  externalIds:
+    - ATPLQ-224061
+    - BGS-222251
+    - AVEXAM-77021
+    - AVEXAM-64405
+    - BGS-222250
+    - ATPLGS-627456
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.05
+  template:
+    type: simple
+    question: "An oil torque meter makes use of the following phenomenon:"
+    explanation: ""
+    options:
+      - id: OLKESPZIW
+        text: axial movement is generated when cylindrically cut gears are used to
+          transfer power from one shaft to another.
+        correct: false
+        why: ""
+      - id: OCJVISMZH
+        text: axial movement is generated when helically cut gears are used to transfer
+          power from one shaft to another.
+        correct: true
+        why: ""
+      - id: OVPKKCYZI
+        text: as power is increased, the torque shaft expands (the torque shaft is
+          connected to the engine only).
+        correct: false
+        why: ""
+      - id: OZLCK8DCG
+        text: as power is increased, the torque shaft twists (the torque shaft is
+          connected to both the engine and the propeller's reduction gear box).
+        correct: false
+        why: ""
+- id: QONQDUKG
+  docId: 022.01.08
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226504
+    - AVEXAM-20530
+    - ATPLGS-121088
+    - BGS-220038
+  annexes: []
+  learningObjectives:
+    - 022.01.08.01.01
+  template:
+    type: simple
+    question: "A synchroscope is used on aeroplanes to:"
+    explanation: ""
+    options:
+      - id: OUXTZJO7J
+        text: achieve optimum control of on-board voltages.
+        correct: false
+        why: ""
+      - id: OMYKCHVRS
+        text: set several engines to the same speed.
+        correct: true
+        why: ""
+      - id: O0PZZC5UG
+        text: reduce the rpm of each engine.
+        correct: false
+        why: ""
+      - id: OMGAEFGR7
+        text: reduce the vibration of each engine.
+        correct: false
+        why: ""
+- id: QOZBDRJI
+  docId: 022.01.07
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222449
+    - BGS-222098
+    - AVEXAM-63958
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.03
+  template:
+    type: simple
+    question: Newton metre (N m) is the SI unit of..
+    explanation: ""
+    options:
+      - id: OGQTCJX4J
+        text: torque.
+        correct: true
+        why: ""
+      - id: OMTTPRU3O
+        text: force.
+        correct: false
+        why: ""
+      - id: OXIYNT4CU
+        text: power.
+        correct: false
+        why: ""
+      - id: OESVAFLX3
+        text: pressure.
+        correct: false
+        why: ""
+- id: QPKRNVYQ
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224090
+    - BGS-220039
+    - ATPLGS-622623
+    - AVEXAM-59952
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: simple
+    question: "A three-phase electrical tachometer consists of:"
+    explanation: ""
+    options:
+      - id: OPSX8UGVD
+        text: three interconnected dynamos along a phonic wheel.
+        correct: false
+        why: ""
+      - id: ODPF9XTFB
+        text: a speed probe and a phonic wheel.
+        correct: false
+        why: ""
+      - id: OV3OSUMZX
+        text: three speed probes and a phonic wheel.
+        correct: false
+        why: ""
+      - id: ODJ2JRST8
+        text: a three-phase generator and a synchronous motor turning a drag-cup
+          assembly.
+        correct: true
+        why: ""
+- id: QPQYYHTP
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229515
+    - BGS-221288
+    - AVEXAM-53933
+    - AVEXAM-68134
+    - ATPLGS-120512
+    - ATPLGS-105881
+    - ATPLGS-105880
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.04
+  template:
+    type: simple
+    question: "The engine instrument utilising a bellows type sensor is:"
+    explanation: ""
+    options:
+      - id: O7KJP6JAA
+        text: an oil pressure gauge.
+        correct: false
+        why: ""
+      - id: OGTA2DHXI
+        text: a manifold pressure gauge.
+        correct: true
+        why: ""
+      - id: O9IFH3TXT
+        text: a fuel pressure gauge.
+        correct: false
+        why: ""
+      - id: OJEAFGS6F
+        text: an oil temperature gauge.
+        correct: false
+        why: ""
+- id: QPUHQGRE
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223638
+    - ATPLGS-120803
+    - BGS-221375
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.03
+  template:
+    type: simple
+    question: "On a N1 indicator, the maximum N1 admissible:"
+    explanation: ""
+    options:
+      - id: O2MEXW1BM
+        text: may be greater than 100%.
+        correct: true
+        why: ""
+      - id: OJWBZWOVM
+        text: is always less than 100%.
+        correct: false
+        why: ""
+      - id: OREA5I02P
+        text: is approximately 99%.
+        correct: false
+        why: ""
+      - id: OTI1I5VXN
+        text: is 100%.
+        correct: false
+        why: ""
+- id: QPVLCSVC
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225384
+    - AVEXAM-38093
+    - AVEXAM-4380
+    - BGS-222282
+    - BGS-221237
+    - AVEXAM-45861
+    - ATPLGS-625705
+    - ATPLGS-129533
+    - AVEXAM-11921
+    - AVEXAM-6130
+    - BGS-222280
+    - BGS-222283
+  annexes: []
+  learningObjectives:
+    - 022.01.02.01.03
+  template:
+    type: one-two
+    question: Which of these statements about temperature units are correct or incorrect?
+    explanation: ""
+    firstCorrectStatements:
+      - C = K – 273.
+    firstIncorrectStatements:
+      - C = K + 273.
+    secondCorrectStatements:
+      - F = (C x 1.8) + 32.
+    secondIncorrectStatements:
+      - F = (C x 1.8) - 32.
+- id: QQIZ5MGLZ
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223486
+    - AVEXAM-51477
+    - BGS-220867
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.05
+  template:
+    type: multiple-correct
+    question: What are the advantages of an electric float gauge?
+    explanation: ""
+    options:
+      - text: Ease of manufacture
+        correct: true
+        why: ""
+      - text: Independence of the indication relative to the variations of the aircraft
+          power system if the measurement is made by a ratiometer
+        correct: true
+        why: ""
+      - text: Independence of the indication relative to the variations of the aircraft
+          power system if the measurement is made by a galvanometer
+        correct: false
+        why: ""
+      - text: Independence of the indication relative to temperature variations
+        correct: false
+        why: ""
+- id: QQMBRTYJ
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225062
+    - AVEXAM-92537
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: multiple-correct
+    question: "The different types of tachometer are:"
+    explanation: ""
+    options:
+      - text: – electrical.
+        correct: true
+        why: ""
+      - text: – mechanical.
+        correct: true
+        why: ""
+      - text: – electronic.
+        correct: true
+        why: ""
+- id: QQPPYWZF
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225037
+    - ATPLGS-628386
+    - BGS-221603
+    - AVEXAM-44642
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.06
+  template:
+    type: simple
+    question: After refuelling at your destination, before the return trip, what
+      should be checked on the FMS fuel pages?
+    explanation: ""
+    options:
+      - id: O2AKKD0QE
+        text: That the fuel type is correctly recorded.
+        correct: false
+        why: ""
+      - id: OQA4IIXEX
+        text: That the fuel in the tanks is the correct type/grade.
+        correct: false
+        why: ""
+      - id: OVB4LIU39
+        text: That the fuel temperature is within acceptable limits.
+        correct: false
+        why: ""
+      - id: OXAS3PF1U
+        text: That the volume/mass of the fuel on board is correct according to how much
+          has been added.
+        correct: true
+        why: ""
+- id: QRNUWTUI
+  docId: 022.01.07
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225394
+    - AVEXAM-36805
+    - ATPLGS-120804
+    - BGS-222262
+    - ATPLGS-106056
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.03
+  template:
+    type: simple
+    question: "A torque may be expressed in:"
+    explanation: ""
+    options:
+      - id: OPNZLHRJF
+        text: Newton meter (N m).
+        correct: true
+        why: ""
+      - id: OL3BRZLA4
+        text: RPM
+        correct: false
+        why: ""
+      - id: OKDDV8DLP
+        text: Watt.
+        correct: false
+        why: ""
+      - id: OB0SVLL25
+        text: Newton per meter (N/m).
+        correct: false
+        why: ""
+- id: QRRLVP798
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226209
+    - BGS-221972
+    - ATPLGS-120792
+    - AVEXAM-40816
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.03
+  template:
+    type: simple
+    question: "In ISA conditions, the static pressure at mean sea level is 1013.25
+      hPa or:"
+    explanation: ""
+    options:
+      - id: O1KACE7AB
+        text: 1.45 psi or 29.92 in Hg.
+        correct: false
+        why: ""
+      - id: ODGY1YKP6
+        text: 14.5 psi or 29.92 in Hg.
+        correct: true
+        why: ""
+      - id: OR989LEVI
+        text: 14.5 psi or 2.92 in Hg.
+        correct: false
+        why: ""
+      - id: OYYLGFVCV
+        text: 1.45 psi or 2.92 in Hg.
+        correct: false
+        why: ""
+- id: QSAJJCML
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222204
+    - ATPLGS-120426
+    - BGS-220028
+    - AVEXAM-46697
+    - AVEXAM-48965
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.04
+  template:
+    type: simple
+    question: "In a compensated capacitance type quantity indicating system, the
+      contents gauge of a half-full fuel tank indicates a fuel mass of 8000 kg.
+      If a temperature rise increased the volume of fuel by 5%, the indicated
+      fuel mass would:"
+    explanation: ""
+    options:
+      - id: OY3NV2SOS
+        text: remain the same.
+        correct: true
+        why: ""
+      - id: OIZSFIV0X
+        text: decrease by 5%.
+        correct: false
+        why: ""
+      - id: OXIDBXRS2
+        text: increase by 10%.
+        correct: false
+        why: ""
+      - id: OCEXVERHJ
+        text: increase by 5%.
+        correct: false
+        why: ""
+- id: QSBHDNJS
+  docId: 022.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222696
+    - BGS-222177
+    - BGS-221088
+    - AVEXAM-30005
+  annexes: []
+  learningObjectives:
+    - 022.01.01.01.03
+  template:
+    type: calculation
+    question: "A pressure of {{bar}} bar is equivalent to approximately (in psi):"
+    variables:
+      - id: bar
+        label: pressure
+        unit: bar
+    answer:
+      formula: bar * 15
+      unit: psi
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: bar * 1.5
+      - id: d2
+        formula: bar * 0.15
+      - id: d3
+        formula: bar * 0.015
+    presets:
+      - id: p1
+        values:
+          bar: 200
+      - id: p2
+        values:
+          bar: 100
+      - id: p3
+        values:
+          bar: 400
+    explanation: >-
+      1 bar is about 14.5 psi, so for a quick approximation multiply the value
+      in bar by about 15 to get psi.
+
+
+      **Solution**
+
+
+      {{f: bar * 15}} = {{n: bar * 15}} = **{{answer}} psi**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} psi**: multiplies by 1.5, one power of ten too little.
+
+      - **{{d2}} psi**: multiplies by 0.15, two powers of ten too little.
+
+      - **{{d3}} psi**: multiplies by 0.015, three powers of ten too little.
+- id: QSCIFWPW
+  docId: 022.01.08
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224583
+    - BGS-222204
+    - ATPLGS-627206
+    - AVEXAM-38125
+  annexes: []
+  learningObjectives:
+    - 022.01.08.01.01
+  template:
+    type: simple
+    question: On a multi-engine aircraft, a synchroscope provides an indication of
+      the difference in..
+    explanation: ""
+    options:
+      - id: O86CHS2U3
+        text: vibration (Hz) between the engines.
+        correct: false
+        why: ""
+      - id: O2DHXJESD
+        text: speed (RPM) between the engines.
+        correct: true
+        why: ""
+      - id: OPPZUYM8X
+        text: low engine speed.
+        correct: false
+        why: ""
+      - id: OHKQGUFRA
+        text: voltage (V) between the electrical generators.
+        correct: false
+        why: ""
+- id: QSCYBHBQ
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227758
+    - ATPLGS-120476
+    - BGS-220036
+  annexes: []
+  learningObjectives:
+    - 022.01.04.01.02
+  template:
+    type: simple
+    question: "When compared with the volumetric fuel flow meter, the mass fuel flow
+      meter takes into account the fuel:"
+    explanation: ""
+    options:
+      - id: OIHWDKAM9
+        text: turbulent flow in the line.
+        correct: false
+        why: ""
+      - id: OUHWT8J1E
+        text: density.
+        correct: true
+        why: ""
+      - id: OWWURBAFL
+        text: permittivity
+        correct: false
+        why: ""
+      - id: OOKLJP37L
+        text: pressure.
+        correct: false
+        why: ""
+- id: QSFNAWLU
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223654
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.05
+  template:
+    type: simple
+    question: "The capacitance-type quantity measurement system gives an indication
+      based on:"
+    explanation: ""
+    options:
+      - id: OLMDL644S
+        text: The volume of fuel.
+        correct: false
+        why: ""
+      - id: ODD7TLQGX
+        text: The dielectric of a capacitor.
+        correct: true
+        why: ""
+      - id: OA3NCDOK2
+        text: The mass of fuel.
+        correct: false
+        why: ""
+      - id: OBDYILD41
+        text: The permeability of a capacitor.
+        correct: false
+        why: ""
+- id: QSHCWCLAL
+  docId: 022.01.08
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229038
+    - ATPLGS-120806
+    - BGS-221222
+  annexes: []
+  learningObjectives:
+    - 022.01.08.01.02
+  template:
+    type: simple
+    question: "On a twin-engine aeroplane, the synchroscope uses the following
+      principle:"
+    explanation: ""
+    options:
+      - id: ODFT2A55Z
+        text: it mathematically subtracts the RPM of both engines.
+        correct: false
+        why: ""
+      - id: OTZ15GTEP
+        text: it mathematically subtracts the vibrations of both engines.
+        correct: false
+        why: ""
+      - id: O9HK8WMM5
+        text: a piezoelectric sensor measures the vibrations on each engine.
+        correct: false
+        why: ""
+      - id: OFBNUZ5GV
+        text: it measures the frequency difference between the two engine driven
+          alternators.
+        correct: true
+        why: ""
+- id: QTCMDHRI
+  docId: 022.01.08
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228163
+    - ATPLGS-627207
+    - AVEXAM-92635
+    - BGS-221280
+  annexes: []
+  learningObjectives:
+    - 022.01.08.01.01
+  template:
+    type: one-two
+    question: Which of the following statements is/are correct as regards a
+      synchroscope on a multi-engine aircraft? A synchroscope is used to…
+    explanation: ""
+    firstCorrectStatements:
+      - A synchroscope is used to reduce structural vibration and noise.
+    firstIncorrectStatements:
+      - A synchroscope is used to increase structural vibration and noise.
+    secondCorrectStatements:
+      - A synchroscope is used to achieve symmetrical thrust and fuel
+        consumption.
+    secondIncorrectStatements:
+      - A synchroscope is used to achieve asymmetrical thrust and fuel
+        consumption.
+- id: QTFCONMP
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225288
+    - BGS-221948
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.01
+  template:
+    type: multiple-correct
+    question: "The parameters used to represent thrust are:"
+    explanation: ""
+    options:
+      - text: – N1 (low pressure shaft speed).
+        correct: true
+        why: ""
+      - text: – N2 (high pressure shaft speed).
+        correct: false
+        why: ""
+      - text: – EGT.
+        correct: false
+        why: ""
+      - text: – EPR.
+        correct: true
+        why: ""
+- id: QTRKVGXA
+  docId: 022.01.07
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228849
+    - AVEXAM-90266
+    - BGS-221402
+    - BGS-221318
+    - ATPLGS-627458
+  annexes: []
+  learningObjectives:
+    - 022.01.07.01.05
+  template:
+    type: one-two
+    question: Which of the below statements is/are correct regarding the operating
+      principle of an oil torque meter?
+    explanation: ""
+    firstCorrectStatements:
+      - Axial movement is generated by the helically cut gears.
+    firstIncorrectStatements:
+      - Axial movement is generated by the axially cut gears.
+    secondCorrectStatements:
+      - Axial force is proportional to the torque.
+    secondIncorrectStatements:
+      - Axial force is not proportional to the torque.
+- id: QTVTAJLO
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222658
+    - AVEXAM-11733
+    - BGS-221396
+  annexes: []
+  learningObjectives:
+    - 022.01.09.01.01
+  template:
+    type: simple
+    question: Why is an engine vibration monitoring system installed on jet engines?
+    explanation: ""
+    options:
+      - id: ONW3JTJJG
+        text: To register engine vibrations during flight in turbulent conditions.
+        correct: false
+        why: ""
+      - id: ONLVLTUHW
+        text: It monitors for changes in an engine's vibration level, to indicate a
+          possible engine failure.
+        correct: true
+        why: ""
+      - id: OVBX856NP
+        text: It monitors the vibration at the engine pylon, to indicate an impending
+          engine separation.
+        correct: false
+        why: ""
+      - id: OZVEELQE4
+        text: To dampen changes in an engine's vibration level, in order to meter the
+          fuel flow.
+        correct: false
+        why: ""
+- id: QUBPXQDG
+  docId: 022.01.08
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226749
+    - ATPLGS-120806
+    - ATPLGS-106057
+    - BGS-221222
+    - AVEXAM-94123
+  annexes: []
+  learningObjectives:
+    - 022.01.08.01.02
+  template:
+    type: simple
+    question: What is the method of operation of a synchroscope for a twin engine
+      aircraft?
+    explanation: ""
+    options:
+      - id: OEVRH0NOY
+        text: It measures the difference in output frequencies of both alternators (one
+          alternator in each engine).
+        correct: true
+        why: ""
+      - id: OIEIRRV3E
+        text: It mathematically subtracts RPM values of both engines.
+        correct: false
+        why: ""
+      - id: OPS92EHTN
+        text: It measures the vibration values of both engines with a piezoelectric
+          sensor.
+        correct: false
+        why: ""
+      - id: OGJH1PA9R
+        text: It mathematically subtracts vibration values of both engines.
+        correct: false
+        why: ""
+- id: QVHXOHNG
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222016
+    - BGS-221683
+    - AVEXAM-95675
+  annexes:
+    - 022-turboprop-turbine-engine-display
+  learningObjectives:
+    - 022.01.03.01.06
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      A pilot requests that the aircraft is to be refuelled so that the total
+      fuel on board is 70 US gal. Looking at the systems display from the annex,
+      has the aircraft been adequately refuelled?
+    explanation: ""
+    options:
+      - id: OGAXL0QRC
+        text: No, the amount of fuel on board is only 50 US gal.
+        correct: false
+        why: ""
+      - id: OEVEXX4BG
+        text: No, the fuel indicator shows that there are 272 US gal of fuel on board.
+        correct: false
+        why: ""
+      - id: O9CPB6KQB
+        text: No, the fuel indicator shows that there is only 272 lb of fuel on board.
+        correct: false
+        why: ""
+      - id: OJRVG9QKL
+        text: Yes, the amount of fuel on board is about 72 US gal.
+        correct: true
+        why: ""
+- id: QVNCGNIU
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222263
+    - ATPLGS-120351
+    - BGS-220053
+    - BGS-222048
+    - AVEXAM-13967
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.01
+  template:
+    type: simple
+    question: "The EPR is computed by:"
+    explanation: ""
+    options:
+      - id: OZKUFXMET
+        text: multiplying compressor discharge pressure by turbine inlet pressure.
+        correct: false
+        why: ""
+      - id: OJLS2BFTY
+        text: multiplying compressor inlet pressure by turbine discharge pressure.
+        correct: false
+        why: ""
+      - id: OTFMDKGKK
+        text: dividing turbine discharge pressure by compressor inlet pressure.
+        correct: true
+        why: ""
+      - id: O5OBBUHSL
+        text: dividing compressor discharge pressure by turbine discharge pressure.
+        correct: false
+        why: ""
+- id: QVNNFDHC
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228770
+    - BGS-220066
+    - ATPLGS-120628
+    - AVEXAM-89363
+  annexes: []
+  learningObjectives:
+    - 022.01.09.01.02
+  template:
+    type: simple
+    question: "The output from an engine vibration transducer is:"
+    explanation: ""
+    options:
+      - id: OSU9RJRIM
+        text: always filtered to remove unwanted frequencies.
+        correct: true
+        why: ""
+      - id: OED5CHYUB
+        text: directly proportional to engine speed.
+        correct: false
+        why: ""
+      - id: OT3BCPXCA
+        text: inversely proportional to engine speed.
+        correct: false
+        why: ""
+      - id: OVRDVSRMR
+        text: fed directly to the indicator in the flight deck without amplification or
+          filtering.
+        correct: false
+        why: ""
+- id: QX2RUE6D4
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224867
+    - ATPLGS-625708
+    - AVEXAM-69131
+    - BGS-221397
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.01
+  template:
+    type: simple
+    question: In a turbine engine, what is the parameter N**1**, which is used to
+      represent thrust?
+    explanation: ""
+    options:
+      - id: OPL3CBPOG
+        text: N1 refers to the rotational speed of the high speed spool which consists
+          of the high pressure compressor and the high pressure turbine.
+        correct: false
+        why: ""
+      - id: OSW9RMIEH
+        text: N1 refers to the rotational speed of the low speed spool which consists of
+          the fan, the low pressure compressor and the low pressure turbine.
+        correct: true
+        why: ""
+      - id: OED1W3ITK
+        text: the indication is usually calibrated in percent RPM.
+        correct: false
+        why: ""
+      - id: OHD5KTCYX
+        text: N1 is the ratio of the turbine discharge and the compressor inlet
+          pressure.
+        correct: false
+        why: ""
+- id: QXEDDMNC
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228768
+    - AVEXAM-52133
+    - BGS-221906
+  annexes:
+    - 022-turboprop-turbine-engine-display
+  learningObjectives:
+    - 022.01.03.01.06
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Considering the fuel indication given, how much fuel shall be added in
+      order to obtain full fuel tanks?
+    explanation: ""
+    options:
+      - id: OTAI3VJJR
+        text: 72 US gal
+        correct: true
+        why: ""
+      - id: OQJKI040C
+        text: 72 litres
+        correct: false
+        why: ""
+      - id: OIHXRFBH0
+        text: 172 litres
+        correct: false
+        why: ""
+      - id: ORSGYQWEX
+        text: 272 US gal
+        correct: false
+        why: ""
+- id: QXGUNCKG
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222483
+    - BGS-220059
+    - AVEXAM-9730
+  annexes: []
+  learningObjectives:
+    - 022.01.06.01.02
+  template:
+    type: simple
+    question: The sensor(s) feeding the EPR-indicator is(are)
+    explanation: ""
+    options:
+      - id: O66SPKIPS
+        text: tachometer located on the shaft of the N1 compressor.
+        correct: false
+        why: ""
+      - id: OD2NA2A5E
+        text: pressure probes, one located upstream from the compressor inlet, and the
+          other downstream from the turbine outlet.
+        correct: true
+        why: ""
+      - id: O0DJSYIKZ
+        text: tachometer located on the shaft of the N2 compressor.
+        correct: false
+        why: ""
+      - id: OPI3LEQO1
+        text: temperature probes, one located upstream from the compressor inlet, and an
+          other downstream from the turbine outlet.
+        correct: false
+        why: ""
+- id: QXHDSMEF
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223628
+    - AVEXAM-59927
+    - BGS-222284
+  annexes: []
+  learningObjectives:
+    - 022.01.02.01.03
+  template:
+    type: simple
+    question: "Given: C = temperature in Celsius. F = temperature in Fahrenheit. The
+      correct relationship between these different units is:"
+    explanation: ""
+    options:
+      - id: OYFYRWTET
+        text: F = C – 273.
+        correct: false
+        why: ""
+      - id: OLVOA9UIE
+        text: C = (F x 1.8) + 32.
+        correct: false
+        why: ""
+      - id: ODHV1D5DU
+        text: C = F – 273.
+        correct: false
+        why: ""
+      - id: OD0AVQWT7
+        text: F = (C x 1.8) + 32.
+        correct: true
+        why: ""
+- id: QXLWCJCC
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228113
+    - AVEXAM-4521
+    - ATPLGS-106023
+    - BGS-221958
+    - ATPLGS-113275
+    - BGS-221226
+    - ATPLGS-113111
+    - AVEXAM-87637
+    - ATPLGS-106045
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.01
+  template:
+    type: one-two
+    question: Which of these statements about fuel quantity measurement are correct
+      or incorrect?
+    explanation: ""
+    firstCorrectStatements:
+      - The quantity of fuel can be measured by volume.
+    firstIncorrectStatements:
+      - The quantity of fuel cannot be measured by volume.
+    secondCorrectStatements:
+      - The quantity of fuel can be measured by mass.
+    secondIncorrectStatements:
+      - The quantity of fuel cannot be measured by mass.
+- id: QYDBVFTB
+  docId: 022.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229382
+    - AVEXAM-69362
+    - BGS-221961
+    - ATPLGS-627210
+  annexes: []
+  learningObjectives:
+    - 022.01.03.01.04
+  template:
+    type: simple
+    question: The disadvantage(s) of a float type fuel quantity measuring system
+      compared to a capacitance fuel measuring system is (are) that the..
+    explanation: ""
+    options:
+      - id: OUI4EIEVG
+        text: design is complex.
+        correct: false
+        why: ""
+      - id: OE7BZHHWO
+        text: indications are influenced by aircraft attitude variations, accelerations,
+          and temperature variations.
+        correct: true
+        why: ""
+      - id: OC5QDUK5V
+        text: indications are influenced by aircraft attitude variations and
+          accelerations only.
+        correct: false
+        why: ""
+      - id: OWFCLPIYH
+        text: indications are influenced by aircraft attitude variations, accelerations,
+          and temperature variations, and the complex design.
+        correct: false
+        why: ""
+- id: QYFZJZUR
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227348
+    - ATPLGS-627205
+    - BGS-222164
+  annexes: []
+  learningObjectives:
+    - 022.01.09.01.02
+  template:
+    type: simple
+    question: Which type(s) of sensor may be used in an engine vibration monitoring
+      system?
+    explanation: ""
+    options:
+      - id: OAAB22XLU
+        text: Tachometers only.
+        correct: false
+        why: ""
+      - id: OUIWY1OOU
+        text: Magnet and piezoelectric crystal sensors.
+        correct: true
+        why: ""
+      - id: ORKZV4JXX
+        text: Tachometers and piezoelectric crystal sensors.
+        correct: false
+        why: ""
+      - id: OMCTBJ4HY
+        text: Piezoelectric crystal sensors only.
+        correct: false
+        why: ""
+- id: QYXSNCCY
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229046
+    - BGS-221362
+    - AVEXAM-6131
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.02
+  template:
+    type: simple
+    question: "On a modern jet aircraft, the engine speed is indicated by:"
+    explanation: ""
+    options:
+      - id: OCDHXHSOI
+        text: "% of maximum torque."
+        correct: false
+        why: ""
+      - id: OTFK8TBAK
+        text: "% value of maximum RPM."
+        correct: true
+        why: ""
+      - id: OCVQFHRSU
+        text: "% value of maximum power."
+        correct: false
+        why: ""
+      - id: OWIQCSUNH
+        text: The Engine Pressure Ratio (EPR).
+        correct: false
+        why: ""
+- id: QYZZSMSN
+  docId: 022.01.08
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229920
+    - BGS-221965
+  annexes: []
+  learningObjectives:
+    - 022.01.08.01.01
+  template:
+    type: simple
+    question: A synchroscope indicates whether two or more engines are
+    explanation: ""
+    options:
+      - id: OGIO5RCLJ
+        text: producing the same torque as it enhances aircraft handling.
+        correct: false
+        why: ""
+      - id: OARIR63HB
+        text: operating at the same EGT as it increases the total engine power.
+        correct: false
+        why: ""
+      - id: OIKX6KFQC
+        text: operating at the same speed as it helps reduce the noise and vibration.
+        correct: true
+        why: ""
+      - id: O7PXBYA0H
+        text: producing the same power as it helps to reduce the induced drag.
+        correct: false
+        why: ""
+- id: QZHOQWRC
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228517
+    - BGS-221619
+  annexes: []
+  learningObjectives:
+    - 022.01.05.01.01
+  template:
+    type: simple
+    question: "The methods which may be used to operate the RPM indicator are:"
+    explanation: ""
+    options:
+      - id: OCGGGAPKT
+        text: Centripetal, mechanical, and electrical.
+        correct: false
+        why: ""
+      - id: O1LSGKIVX
+        text: Electrical, mechanical, and magnetic.
+        correct: true
+        why: ""
+      - id: ONRK335MT
+        text: Electrical, magnetic, and hydraulic.
+        correct: false
+        why: ""
+      - id: OCRURYMZW
+        text: Hydraulic, mechanical, and magnetic.
+        correct: false
+        why: ""
+- id: QZQEHJCX
+  docId: "022.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229124
+    - ATPLGS-129378
+    - BGS-221307
+  annexes: []
+  learningObjectives:
+    - 022.01.04.01.05
+  template:
+    type: simple
+    question: "Total fuel consumption is obtained by:"
+    explanation: ""
+    options:
+      - id: OMIB95VR9
+        text: differentiating the fuel flow with respect to time.
+        correct: false
+        why: ""
+      - id: OAAMTNW3T
+        text: integrating the fuel flow with respect to time.
+        correct: true
+        why: ""
+      - id: O78FT91XB
+        text: subtracting the initial fuel quantity from the remaining fuel.
+        correct: false
+        why: ""
+      - id: OFHRTB1ZE
+        text: Subtracting the current fuel flow from the initial fuel quantity.
+        correct: false
+        why: ""

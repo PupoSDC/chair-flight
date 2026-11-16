@@ -1,0 +1,2224 @@
+- id: QBS9I6BOU
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319086
+    - BGS-310343
+  annexes: []
+  learningObjectives:
+    - 031.06.01.01.01
+  template:
+    type: simple
+    question: Which of the following statements is accurate when comparing the
+      attributes of pallets with those of containers? Pallets...
+    explanation: ""
+    options:
+      - id: OCHR7C8V6
+        text: do NOT require their own load manifest, while containers do.
+        correct: false
+        why: ""
+      - id: O1EJDPT3W
+        text: are more robust and heavier than containers.
+        correct: false
+        why: ""
+      - id: OH97TOBHC
+        text: are more suitable than containers for carrying oversized cargo items.
+        correct: true
+        why: ""
+      - id: OOHHNV5NL
+        text: allow for cargo to be more efficiently loaded in the hold than containers
+          do.
+        correct: false
+        why: ""
+- id: QCGIZFCK
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318766
+    - AVEXAM-17090
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.03
+  template:
+    type: calculation
+    question: >-
+      A container with a base area of {{length}} x {{width}} ft² is loaded into
+      a cargo compartment.
+
+
+      The maximum running load of the compartment is {{running}} lb/ft.
+
+
+      What is the maximum possible weight of the container?
+    variables:
+      - id: running
+        label: Running load limit
+        unit: lb/ft
+      - id: length
+        label: Container length
+        unit: ft
+      - id: width
+        label: Container width
+        unit: ft
+    answer:
+      formula: running * length
+      unit: lb
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: running * length * width
+      - id: d2
+        formula: running * (length + width)
+      - id: d3
+        formula: running
+    presets:
+      - id: p1
+        values:
+          running: 85
+          length: 5
+          width: 5
+      - id: p2
+        values:
+          running: 60
+          length: 4
+          width: 3
+      - id: p3
+        values:
+          running: 100
+          length: 6
+          width: 3
+    explanation: >-
+      A running load limit is a weight per unit of length along the compartment,
+      so only the container length (in the direction of the compartment axis)
+      matters, not its area. The maximum weight is the limit times that length.
+
+
+      **Solution**
+
+
+      {{f: running * length}} = {{n: running * length}} = **{{answer}} lb**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} lb**: Multiplies by the base area instead of the length.
+
+      - **{{d2}} lb**: Multiplies by the sum of the sides.
+
+      - **{{d3}} lb**: Takes the running load itself, ignoring the length.
+- id: QCMGZSVG
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319706
+    - ATPLGS-126682
+    - AVEXAM-84192
+    - BGS-310683
+    - ATPLQ-313759
+    - AVEXAM-8902
+    - ATPLGS-127346
+    - AVEXAM-66093
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.01
+  template:
+    type: calculation
+    question: "The structural limitation of a baggage compartment is {{limit}}
+      lb/ft². A load has a mass of {{mass}} kg and has to be distributed over an
+      area of at least:"
+    variables:
+      - id: limit
+        label: Floor load limit
+        unit: lb/ft2
+      - id: mass
+        label: Load mass
+        unit: kg
+    answer:
+      formula: mass / (limit * 4.88243)
+      unit: m2
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: mass / (limit * 0.45359)
+      - id: d2
+        formula: mass / limit
+      - id: d3
+        formula: limit * 4.88243 / mass
+      - id: d4
+        formula: mass / (limit * 10.764)
+    presets:
+      - id: p1
+        values:
+          limit: 50
+          mass: 320
+      - id: p2
+        values:
+          limit: 32
+          mass: 200
+      - id: p3
+        values:
+          limit: 40
+          mass: 450
+    explanation: >-
+      The floor loading limit is the maximum mass per unit of contact area, so
+      the minimum area is the load mass divided by the limit. The limit must
+      first be converted to metric units: 1 lb/ft² = 4.88243 kg/m².
+
+
+      **Solution**
+
+
+      Limit = {{limit}} lb/ft² × 4.88243 = {{= limit * 4.88243}} kg/m²
+
+
+      {{f: mass / (limit * 4.88243)}} = {{n: mass / (limit * 4.88243)}} =
+      **{{answer}} m²**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m²**: converts only the pound to kilograms and ignores the
+      square-foot to square-metre conversion, so the result is in ft², not m².
+
+      - **{{d2}} m²**: divides kg by lb/ft² without any unit conversion.
+
+      - **{{d3}} m²**: inverted ratio (limit divided by mass).
+
+      - **{{d4}} m²**: converts the area unit with 10.764 (ft² per m²) in the
+      wrong direction and ignores the lb to kg conversion.
+- id: QDNMUEYT
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315673
+    - BGS-310331
+    - ATPLGS-107206
+    - AVEXAM-76412
+  annexes: []
+  learningObjectives:
+    - 031.06.03.01.01
+  template:
+    type: simple
+    question: "Loads must be adequately secured in order to:"
+    explanation: ""
+    options:
+      - id: O0F1KDWKH
+        text: avoid unplanned Centre of Gravity (CG) movement and aircraft damage.
+        correct: true
+        why: ""
+      - id: OIWZPEQJC
+        text: prevent excessive 'g' loading during the landing flare.
+        correct: false
+        why: ""
+      - id: OGHAMBZL7
+        text: avoid any Centre of Gravity (CG) movement during flight.
+        correct: false
+        why: ""
+      - id: OPB9BF24Z
+        text: allow steep turns.
+        correct: false
+        why: ""
+- id: QDSJNIVN
+  docId: "031.06"
+  relatedQuestions:
+    - QRIULMDH
+  externalIds:
+    - ATPLQ-316919
+    - ATPLGS-126751
+    - BGS-310315
+    - AVEXAM-51653
+    - ATPLGS-107200
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.01
+  template:
+    type: calculation
+    question: >-
+      The maximum floor loading for a cargo compartment is {{limit}} kg per
+      square metre.
+
+
+      A package with a mass of {{mass}} kg is to be loaded on a pallet whose
+      base is entirely in contact with the floor.
+
+
+      The pallet is {{length}} cm long.
+
+
+      What is the minimum width of the pallet, in cm?
+    variables:
+      - id: mass
+        label: Package mass
+        unit: kg
+      - id: limit
+        label: Maximum floor loading
+        unit: kg/m²
+      - id: length
+        label: Pallet length
+        unit: cm
+    answer:
+      formula: mass / limit * 10000 / length
+      unit: cm
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: mass / limit * 10000
+      - id: d2
+        formula: mass / limit * 100 / length
+      - id: d3
+        formula: limit / mass * 10000 / length
+      - id: d4
+        formula: mass / limit * 10000 / length * 2
+    presets:
+      - id: p1
+        values:
+          mass: 600
+          limit: 750
+          length: 200
+      - id: p2
+        values:
+          mass: 450
+          limit: 500
+          length: 150
+      - id: p3
+        values:
+          mass: 800
+          limit: 400
+          length: 250
+    explanation: >-
+      The base area must be at least the mass divided by the maximum floor
+      loading (in m²). Converting to cm² (1 m² = 10 000 cm²) and dividing by the
+      length gives the minimum width.
+
+
+      **Solution**
+
+
+      Minimum area = {{= mass / limit}} m² = {{= mass / limit * 10000}} cm²
+
+
+      {{f: mass / limit * 10000 / length}} = {{n: mass / limit * 10000 /
+      length}} = **{{answer}} cm**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} cm**: this is the area in cm², the length was not divided out.
+
+      - **{{d2}} cm**: wrong unit conversion (factor 100 instead of 10 000).
+
+      - **{{d3}} cm**: the ratio of mass and limit is inverted.
+
+      - **{{d4}} cm**: the width is doubled.
+- id: QDURSY10A
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315549
+    - AVEXAM-41697
+  annexes: []
+  learningObjectives:
+    - 031.06.01.01.01
+  template:
+    type: simple
+    question: Which of the following loading methods is recommended for the
+      transport of unconventional cargo?
+    explanation: ""
+    options:
+      - id: OYOU4AFYD
+        text: Large and irregularly shaped cargo can only be loaded in cargo-only
+          aircraft.
+        correct: false
+        why: ""
+      - id: OL0ZFTPBQ
+        text: Large and irregularly shaped cargo is ideally stored as bulk cargo.
+        correct: false
+        why: ""
+      - id: OZIFEQA7R
+        text: Large and irregularly shaped cargo should be loaded as palletised cargo.
+        correct: true
+        why: ""
+      - id: O37RYA5TG
+        text: Large and irregularly shaped cargo can best be loaded in containers.
+        correct: false
+        why: ""
+- id: QEBZQIOOB
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314266
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: simple
+    question: "Pallets with a tare weight of 160 kg are loaded onto two ground
+      supports. The implication of this is that:"
+    explanation: ""
+    options:
+      - id: OD4ELNTRZ
+        text: The total weight of the loaded pallets will be increased by 160 kg.
+        correct: true
+        why: ""
+      - id: OIORUECJ3
+        text: The ground supports will carry a combined weight of 160 kg.
+        correct: false
+        why: ""
+      - id: OULU7UALZ
+        text: The total weight of the loaded pallets will be reduced by 160 kg.
+        correct: false
+        why: ""
+      - id: OIHVHY9ZP
+        text: The ground supports will be unloaded with a tare weight of 160 kg.
+        correct: false
+        why: ""
+- id: QFQT9BGT0
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315724
+  annexes:
+    - 031-cap-696-file-4-9-mrjt-forward-cargo-compartment-and
+  learningObjectives:
+    - 031.06.02.01.02
+    - 031.06.02.01.03
+  template:
+    type: simple
+    question: >-
+      Refer to figure or CAP696 Figure 4.9\.   
+
+      For the forward cargo compartment (Cargo Hold 1), area between balance
+      arms (BA) 286 in and 343 in, determine which of the 4 boxes may be loaded:
+    explanation: ""
+    options:
+      - id: OCQIDWZ1Y
+        text: "Box Y: 6.56 kg/inch and 69 kg per ft2"
+        correct: false
+        why: ""
+      - id: OTPAUQY3C
+        text: "Box X: 8.56 kg/inch and 70 kg per ft2"
+        correct: false
+        why: ""
+      - id: O5UL5TGTG
+        text: "Box Z: 8.45 kg/inch and 67 kg per ft2"
+        correct: true
+        why: ""
+      - id: O3EETO3AK
+        text: "Box W: 8.30 kg/inch and 90 kg per ft2"
+        correct: false
+        why: ""
+- id: QGXSSDAS
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318780
+    - AVEXAM-44061
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.01
+  template:
+    type: chart
+    question: A piece of cargo of 1.3 m2 and a mass of 600 kg is loaded on two
+      pallets with dimensions of 0.2 m x 1.2 m each. Considering that the
+      maximum area loading equals 367 kg/m2, can this cargo be transported in
+      the cargo hold?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: No, because the maximum area load is exceeded.
+        wrongAnswers:
+          - Yes, because the base area of the cargo sufficiently distributes the
+            load to comply with the maximum area load.
+          - Yes, only if the pallets are placed laterally on both ends of the
+            cargo.
+          - Yes, if the pallets are aligned longitudinally.
+        explanation: The load only rests on the two pallets, which have a combined area
+          of 2 × 0.2 × 1.2 = 0.48 m². The load on the floor is 600 ÷ 0.48 = 1
+          250 kg/m², far above 367 kg/m². The cargo **cannot be carried** this
+          way.
+- id: QIFP7RJJC
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314446
+    - ATPLGS-113543
+    - ATPLGS-126796
+    - AVEXAM-24614
+    - AVEXAM-82676
+    - ATPLGS-126800
+    - BGS-310671
+    - ATPLGS-126799
+    - AVEXAM-80494
+    - BGS-310673
+    - BGS-310672
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: calculation
+    question: A container has a floor contact area of {{area}} m². Given that the
+      maximum permissible floor load of the cargo compartment, which is
+      {{limit}} kg/m², must be respected, what is the maximum mass that can be
+      loaded in the container?
+    variables:
+      - id: limit
+        label: Floor load limit
+        unit: kg/m²
+      - id: area
+        label: Floor contact area
+        unit: m²
+    answer:
+      formula: limit * area
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: limit / area
+      - id: d2
+        formula: limit
+      - id: d3
+        formula: limit * area ^ 2
+    presets:
+      - id: p1
+        values:
+          limit: 732
+          area: 1.44
+      - id: p2
+        values:
+          limit: 650
+          area: 0.9
+      - id: p3
+        values:
+          limit: 500
+          area: 2
+    explanation: >-
+      The maximum permissible floor load is a mass per unit area. The maximum
+      mass of the container is the limit times the floor contact area.
+
+
+      **Solution**
+
+
+      {{f: limit * area}} = {{n: limit * area}} = **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: Divides the limit by the area instead of multiplying.
+
+      - **{{d2}} kg**: Takes the floor load limit itself, ignoring the contact
+      area.
+
+      - **{{d3}} kg**: Multiplies the limit by the area squared.
+- id: QIKHOCLZZ
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311823
+    - AVEXAM-88758
+    - BGS-310776
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.03
+  template:
+    type: chart
+    question: >-
+      The maximum running load of the aft cargo hold of an aeroplane is 1650
+      kg/m.
+
+
+      Assume the standard mass of the proposed pallet is 120 kg and 2299 kg of
+      baggage have to be loaded in the aft cargo hold.
+
+
+      Which of the following pallets (length x width) should be used in order to
+      comply with the running load limit and to optimise best the space in the
+      cargo hold?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 1.48 m x 1.46 m
+        wrongAnswers:
+          - 1.45 m x 1.44 m
+          - 1.43 m x 1.40 m
+          - 1.50 m x 1.47 m
+        explanation: "The pallet and the baggage together weigh 2 299 + 120 = 2 419 kg.
+          With a limit of 1 650 kg/m the pallet must be at least 2 419 ÷ 1 650 =
+          1.47 m long. Of the pallets that are long enough, the shortest wastes
+          the least space: **1.48 m × 1.46 m**."
+- id: QILUJSFI
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319118
+    - ATPLGS-126810
+    - BGS-310680
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.03
+  template:
+    type: calculation
+    question: Calculate the maximum mass that can be loaded on a pallet sized
+      {{length}} m x {{width}} m, to comply with a maximum running load of
+      {{running}} kg/m.
+    variables:
+      - id: running
+        label: Running load limit
+        unit: kg/m
+      - id: length
+        label: Pallet length
+        unit: m
+      - id: width
+        label: Pallet width
+        unit: m
+    answer:
+      formula: running * length
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: running * length * width
+      - id: d2
+        formula: running * (length + width)
+      - id: d3
+        formula: running / length
+    presets:
+      - id: p1
+        values:
+          running: 1915
+          length: 1.2
+          width: 1.2
+      - id: p2
+        values:
+          running: 1800
+          length: 1.5
+          width: 1.2
+      - id: p3
+        values:
+          running: 2000
+          length: 0.8
+          width: 0.6
+    explanation: >-
+      A running load limit is a mass per metre of length along the compartment,
+      so only the pallet length in that direction matters, not its area. The
+      maximum mass is the limit times that length.
+
+
+      **Solution**
+
+
+      {{f: running * length}} = {{n: running * length}} = **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: Multiplies by the area instead of the length.
+
+      - **{{d2}} kg**: Multiplies by the sum of the two sides.
+
+      - **{{d3}} kg**: Divides by the length instead of multiplying.
+- id: QJSRJJUA
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319501
+    - ATPLGS-625796
+    - BGS-310613
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.03
+  template:
+    type: chart
+    question: >-
+      Which of the listed containers is acceptable for loading in a cargo
+      compartment with a maximum permissible running load of 630 kg/m?
+
+
+      Container W (base dimensions 1.1 m x 1.1 m) loaded with 700 kg.
+
+
+      Container X (base dimensions 1.1 m x 1.1 m) loaded with 760 kg.
+
+
+      Container Y (base dimensions 1.2 m x 1.2 m) loaded with 700 kg.
+
+
+      Container Z (base dimensions 1.2 m x 1.2 m) loaded with 760 kg.
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: Container Y
+        wrongAnswers:
+          - Container X
+          - Container W
+          - Container Z
+        explanation: >-
+          Running load is the container's mass divided by its base width.
+          Compared with 630 kg/m:
+
+
+          - W: 700 ÷ 1.1 = 636 kg/m, too much.
+
+          - X: 760 ÷ 1.1 = 691 kg/m, too much.
+
+          - Y: 700 ÷ 1.2 = 583 kg/m, acceptable.
+
+          - Z: 760 ÷ 1.2 = 633 kg/m, too much.
+
+
+          Only **container Y** is acceptable.
+- id: QK1ZBHQIO
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318676
+    - ATPLGS-126752
+    - AVEXAM-28758
+    - BGS-310316
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: calculation
+    question: The maximum intensity floor loading for an aeroplane is given in the
+      Flight Manual as {{limit}} kg per square metre. What is the maximum mass
+      of a package which can be safely supported on a pallet with dimensions of
+      {{length_cm}} cm by {{width_cm}} cm?
+    variables:
+      - id: limit
+        label: Floor load limit
+        unit: kg/m²
+      - id: length_cm
+        label: Pallet length
+        unit: cm
+      - id: width_cm
+        label: Pallet width
+        unit: cm
+    answer:
+      formula: limit * length_cm * width_cm / 10000
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: limit / (length_cm * width_cm / 1000)
+      - id: d2
+        formula: limit / (length_cm * width_cm / 10000)
+      - id: d3
+        formula: limit * length_cm * width_cm / 100000
+    presets:
+      - id: p1
+        values:
+          limit: 650
+          length_cm: 80
+          width_cm: 80
+      - id: p2
+        values:
+          limit: 800
+          length_cm: 60
+          width_cm: 90
+      - id: p3
+        values:
+          limit: 500
+          length_cm: 100
+          width_cm: 120
+    explanation: >-
+      The floor load limit is given per square metre, so the pallet dimensions
+      must first be converted to metres (1 m² = 10 000 cm²). The maximum mass is
+      the limit times the pallet area.
+
+
+      **Solution**
+
+
+      {{f: limit * length_cm * width_cm / 10000}} = {{n: limit * length_cm *
+      width_cm / 10000}} = **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: Divides by the area (with an additional unit conversion
+      error) instead of multiplying.
+
+      - **{{d2}} kg**: Divides the limit by the area in m² instead of
+      multiplying.
+
+      - **{{d3}} kg**: Multiplies by the area but converts cm² to m² with the
+      wrong factor (100 000 instead of 10 000).
+- id: QKVID5JJN
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317932
+  annexes: []
+  learningObjectives:
+    - 031.06.01.01.01
+  template:
+    type: simple
+    question: What is correct regarding methods for cargo loading?
+    explanation: ""
+    options:
+      - id: OKJLRLVEJ
+        text: Containers can be used only in cargo aircraft, while pallets can also be
+          used in passenger aircraft.
+        correct: false
+        why: ""
+      - id: OXRBHCMZK
+        text: Large cargo is best loaded in pallets.
+        correct: true
+        why: ""
+      - id: OAJYGVVF0
+        text: Containers need their own manifest, while pallets don’t.
+        correct: false
+        why: ""
+      - id: OIEDIWNZB
+        text: Bulk cargo needs less personnel to be loaded.
+        correct: false
+        why: ""
+- id: QLPABYFA
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319705
+    - ATPLGS-107192
+    - BGS-310325
+    - BGS-310317
+    - AVEXAM-88402
+  annexes:
+    - 031-cap-696-file-4-9-mrjt-forward-cargo-compartment-and
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: chart-calculation
+    question: >-
+      A pallet with a freight platform measuring {{plat_l}} cm x {{plat_w}} cm
+      has a total mass of {{pallet_mass}} kg.
+
+
+      The pallet is carried on {{n_sup}} ground supports, each measuring
+      {{sup_w}} cm x {{sup_l}} cm.
+
+
+      The maximum permitted distribution load intensity of the lower deck
+      forward cargo compartment, read from the loading manual figure (CAP696
+      Figure 4.9), is {{max_int}} kg/m².
+
+
+      Calculate how much mass may be added to the pallet (positive result) or
+      must be off-loaded (negative result) to match this load intensity.
+    variables:
+      - id: plat_l
+        label: Platform length
+        unit: cm
+      - id: plat_w
+        label: Platform width
+        unit: cm
+      - id: pallet_mass
+        label: Pallet mass
+        unit: kg
+      - id: n_sup
+        label: Number of ground supports
+        unit: "-"
+      - id: sup_w
+        label: Support width
+        unit: cm
+      - id: sup_l
+        label: Support length
+        unit: cm
+      - id: max_int
+        label: Max distribution load intensity (read from figure)
+        unit: kg/m²
+    chartInputs:
+      - max_int
+    answer:
+      formula: max_int * n_sup * sup_w * sup_l / 10000 - pallet_mass
+      unit: kg
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: max_int * n_sup * sup_w * sup_l / 10000
+      - id: d2
+        formula: pallet_mass - max_int * n_sup * sup_w * sup_l / 10000
+      - id: d3
+        formula: max_int * sup_w * sup_l / 10000 - pallet_mass
+      - id: d4
+        formula: max_int * plat_l * plat_w / 10000 - pallet_mass
+    presets:
+      - id: p1
+        values:
+          plat_l: 200
+          plat_w: 250
+          pallet_mass: 300
+          n_sup: 2
+          sup_w: 20
+          sup_l: 200
+          max_int: 731.9
+    explanation: >-
+      The load intensity on the floor is the mass divided by the contact area,
+      which for a pallet is the area of the ground supports, not of the
+      platform. The maximum total mass is the load intensity limit times the
+      contact area; the difference with the current mass is what may be added or
+      must be removed.
+
+
+      **Solution**
+
+
+      Contact area = {{= n_sup * sup_w * sup_l / 10000}} m²
+
+
+      {{f: max_int * n_sup * sup_w * sup_l / 10000 - pallet_mass}} = {{n:
+      max_int * n_sup * sup_w * sup_l / 10000 - pallet_mass}} = **{{answer}}
+      kg** (positive: may be added)
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: the existing pallet mass is not subtracted (maximum
+      allowed total instead of the change).
+
+      - **{{d2}} kg**: the sign is reversed, so a mass that may be added is
+      shown as off-loaded.
+
+      - **{{d3}} kg**: only one ground support is used for the contact area.
+
+      - **{{d4}} kg**: the whole platform area is used instead of the area of
+      the ground supports.
+- id: QMAFZURJO
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315771
+    - BGS-310312
+    - ATPLGS-107195
+    - AVEXAM-79394
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.01
+    - 031.06.02.01.03
+  template:
+    type: chart
+    question: |-
+      The maximum load per running metre of an aeroplane is 350 kg/m.
+
+      The width of the floor area is 2 metres.
+
+      The floor strength limitation is 300 kg per square metre.
+
+      Which one of the following crates can be loaded directly on the floor?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: A load of 400 kg in a crate with dimensions 1.2 m × 1.2 m × 1.2 m.
+        wrongAnswers:
+          - A load of 400 kg in a crate with dimensions 1.4 m × 0.8 m × 0.8 m.
+          - A load of 500 kg in a crate with dimensions 1.5 m × 1 m × 1 m.
+          - A load of 700 kg in a crate with dimensions 1.8 m × 1.4 m × 0.8 m.
+        explanation: >-
+          Check each crate against both limits (running load = mass ÷ length
+          along the floor; floor load = mass ÷ base area):
+
+
+          - 400 kg, 1.2 m × 1.2 m: 333 kg/m and 278 kg/m². Both within limits.
+
+          - 400 kg, 1.4 m × 0.8 m: 357 kg/m² is over the floor limit.
+
+          - 500 kg, 1.5 m × 1 m: 333 kg/m² is over the floor limit.
+
+          - 700 kg, 1.8 m × 1.4 m: 389 kg/m is over the running limit.
+
+
+          Only the **first crate** can go directly on the floor.
+- id: QMAOHZIO
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318716
+    - BGS-310677
+    - ATPLGS-625778
+    - BGS-310115
+    - AVEXAM-96216
+    - ATPLGS-126774
+    - AVEXAM-69821
+    - BGS-310321
+    - ATPLQ-312061
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: calculation
+    question: "The floor of a cargo hold is limited to {{limit}} N/m². It is planned
+      to load a cubic container measuring {{side}} m on each side. Its maximum
+      gross mass must not exceed (assume g = {{g}} m/s²):"
+    variables:
+      - id: limit
+        label: Floor load limit
+        unit: N/m²
+      - id: side
+        label: Container side
+        unit: m
+      - id: g
+        label: Gravitational acceleration
+        unit: m/s²
+    answer:
+      formula: limit * side ^ 2 / g
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: limit * side ^ 2
+      - id: d2
+        formula: limit * side ^ 3
+      - id: d3
+        formula: limit * side ^ 3 / g
+      - id: d4
+        formula: limit * side ^ 3 * g
+    presets:
+      - id: p1
+        values:
+          limit: 5000
+          side: 0.4
+          g: 10
+      - id: p2
+        values:
+          limit: 4000
+          side: 0.5
+          g: 10
+      - id: p3
+        values:
+          limit: 6000
+          side: 0.6
+          g: 10
+    explanation: >-
+      The floor limit is a force per unit area, so the maximum weight is the
+      limit times the contact area (side squared). Dividing by g converts this
+      weight in newtons into a mass in kilograms.
+
+
+      **Solution**
+
+
+      {{f: limit * side ^ 2 / g}} = {{n: limit * side ^ 2 / g}} = **{{answer}}
+      kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: Gives the maximum force in newtons; it was not divided by
+      g.
+
+      - **{{d2}} kg**: Uses the volume (side cubed) instead of the contact area
+      and does not convert to mass.
+
+      - **{{d3}} kg**: Uses the volume (side cubed) instead of the contact area.
+
+      - **{{d4}} kg**: Uses the volume and multiplies by g instead of dividing.
+- id: QMBSJNXP
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312022
+    - AVEXAM-92149
+    - BGS-310690
+    - ATPLGS-126625
+  annexes: []
+  learningObjectives:
+    - 031.06.01.01.01
+  template:
+    type: simple
+    question: Palletised cargo..
+    explanation: ""
+    options:
+      - id: OBRQY8GHD
+        text: has fallen out of use due to the lack of protection.
+        correct: false
+        why: ""
+      - id: OO3FIOQYZ
+        text: can be loaded without specific loading equipment.
+        correct: false
+        why: ""
+      - id: OKCMYMGYN
+        text: consists of passenger baggage on pallets stored in the cargo holds.
+        correct: false
+        why: ""
+      - id: OAOUWAD1R
+        text: consists of multiple cargo boxes on pallets stored in the cargo holds.
+        correct: true
+        why: ""
+- id: QNQXKCTO
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311718
+    - ATPLGS-126796
+    - ATPLGS-126800
+    - BGS-310671
+    - AVEXAM-81951
+    - ATPLGS-126799
+    - BGS-310673
+    - BGS-310672
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: calculation
+    question: A container is loaded so that its floor contact area is {{area}} m².
+      Calculate the maximum mass of the container, given that the maximum
+      permissible floor load of the cargo compartment is {{floor_load}} kg/m².
+    variables:
+      - id: floor_load
+        label: Maximum floor load
+        unit: kg/m²
+      - id: area
+        label: Floor contact area
+        unit: m²
+    answer:
+      formula: floor_load * area
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: floor_load / area
+      - id: d2
+        formula: floor_load * area * 2
+      - id: d3
+        formula: floor_load * area / 2
+      - id: d4
+        formula: floor_load * sqrt(area)
+    presets:
+      - id: p1
+        values:
+          floor_load: 700
+          area: 0.12
+      - id: p2
+        values:
+          floor_load: 800
+          area: 0.3
+      - id: p3
+        values:
+          floor_load: 650
+          area: 0.4
+    explanation: >-
+      The floor load limit is a pressure-like limit in kg per square metre. The
+      maximum mass is the limit multiplied by the area over which the load is
+      spread.
+
+
+      **Solution**
+
+
+      {{f: floor_load * area}} = {{n: floor_load * area}} = **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: the load limit is divided by the area instead of
+      multiplied.
+
+      - **{{d2}} kg**: the result is doubled.
+
+      - **{{d3}} kg**: the result is halved.
+
+      - **{{d4}} kg**: the square root of the area is used.
+- id: QQJ0GZSAZ
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317135
+    - BGS-310698
+  annexes:
+    - 031-cap-696-file-4-9-mrjt-forward-cargo-compartment-and
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: chart-calculation
+    question: >-
+      A pallet measures {{length}} inches by {{width}} inches and is loaded in
+      the aft section of the forward cargo compartment (station 343 to 500).
+
+
+      The maximum distribution load intensity for this section, read from the
+      figure (CAP696 Figure 4.9), is {{max_int}} kg/ft².
+
+
+      Assume that 12 inches equal 1 foot.
+
+
+      What is the maximum mass that can be loaded on the pallet?
+    variables:
+      - id: length
+        label: Pallet length
+        unit: in
+      - id: width
+        label: Pallet width
+        unit: in
+      - id: max_int
+        label: Max distribution load intensity (read from figure)
+        unit: kg/ft²
+    chartInputs:
+      - max_int
+    answer:
+      formula: max_int * length * width / 144
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: max_int * length * width
+      - id: d2
+        formula: max_int * length * width / 12
+      - id: d3
+        formula: max_int * length * width / 1728
+      - id: d4
+        formula: max_int * (length + width) / 12
+    presets:
+      - id: p1
+        values:
+          length: 55
+          width: 40
+          max_int: 47.2
+      - id: p2
+        values:
+          length: 60
+          width: 40
+          max_int: 68
+    explanation: >-
+      The maximum mass is the distribution load intensity multiplied by the
+      pallet footprint. Since the intensity is given per square foot, the
+      footprint in square inches must be divided by 144.
+
+
+      **Solution**
+
+
+      Footprint = {{= length * width / 144}} ft²
+
+
+      {{f: max_int * length * width / 144}} = {{n: max_int * length * width /
+      144}} = **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: the pallet area is left in square inches instead of
+      converted to ft².
+
+      - **{{d2}} kg**: only a factor 12 is used to convert square inches to
+      square feet.
+
+      - **{{d3}} kg**: the cubic conversion factor 12³ is used instead of 12².
+
+      - **{{d4}} kg**: the pallet dimensions are added instead of multiplied.
+- id: QRIULMDH
+  docId: "031.06"
+  relatedQuestions:
+    - QDSJNIVN
+  externalIds:
+    - ATPLQ-317055
+    - AVEXAM-11487
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.01
+  template:
+    type: calculation
+    question: >-
+      The maximum permissible floor loading for a cargo compartment is {{limit}}
+      kg per square metre.
+
+
+      A package with a mass of {{mass}} kg is to be loaded on a pallet whose
+      base is entirely in contact with the floor.
+
+
+      The pallet is {{length}} m long.
+
+
+      What is the minimum width of the pallet (in metres, rounded to one
+      decimal)?
+    variables:
+      - id: mass
+        label: Package mass
+        unit: kg
+      - id: limit
+        label: Maximum floor loading
+        unit: kg/m²
+      - id: length
+        label: Pallet length
+        unit: m
+    answer:
+      formula: mass / limit / length
+      unit: m
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: mass / limit
+      - id: d2
+        formula: mass / limit * length
+      - id: d3
+        formula: length * limit / mass
+      - id: d4
+        formula: mass / limit / length + 0.2
+    presets:
+      - id: p1
+        values:
+          mass: 374
+          limit: 170
+          length: 1.6
+      - id: p2
+        values:
+          mass: 360
+          limit: 150
+          length: 2
+      - id: p3
+        values:
+          mass: 480
+          limit: 200
+          length: 1.5
+    explanation: >-
+      The pallet base area must be at least the mass divided by the maximum
+      floor loading. With the length fixed, the minimum width is that area
+      divided by the length.
+
+
+      **Solution**
+
+
+      Minimum area = {{= mass / limit}} m²
+
+
+      {{f: mass / limit / length}} = {{n: mass / limit / length}} = **{{answer}}
+      m**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: this is the required area, the length was not divided out.
+
+      - **{{d2}} m**: the area is multiplied by the length instead of divided.
+
+      - **{{d3}} m**: the ratio is inverted.
+
+      - **{{d4}} m**: an arbitrary margin is added to the correct width.
+- id: QRSV5CZEX
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313043
+    - BGS-310689
+    - ATPLGS-627152
+    - AVEXAM-93238
+  annexes: []
+  learningObjectives:
+    - 031.06.01.01.01
+    - 031.06.03.01.02
+  template:
+    type: simple
+    question: Considering the methods of loading cargo, which of the following
+      answers is correct?
+    explanation: ""
+    options:
+      - id: OM11MVSHI
+        text: Containers lock directly into the aircraft’s restraint system and have
+          their own manifest.
+        correct: true
+        why: ""
+      - id: OAVYXYUX6
+        text: Compared to pallets, bulk cargo is quicker to load and requires fewer
+          ground personnel.
+        correct: false
+        why: ""
+      - id: OFRJTOWS1
+        text: Pallets are used on smaller aircraft and must be strapped down to tie-down
+          points.
+        correct: false
+        why: ""
+      - id: OC7ZZ9LIV
+        text: Bulk cargo is secured onto unit load devices using nets.
+        correct: false
+        why: ""
+- id: QSMXHKZOF
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313181
+    - AVEXAM-83060
+    - ATPLGS-626306
+    - BGS-310675
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.01
+  template:
+    type: calculation
+    question: A box weighing {{mass}} kg is loaded into the cargo compartment.
+      Calculate the smallest required floor contact area of this box to avoid
+      exceeding the maximum floor load of {{limit}} kg/m².
+    variables:
+      - id: mass
+        label: Box mass
+        unit: kg
+      - id: limit
+        label: Maximum floor load
+        unit: kg/m²
+    answer:
+      formula: mass / limit
+      unit: m²
+      decimals: 3
+    distractors:
+      - id: d1
+        formula: limit / mass
+      - id: d2
+        formula: (mass + 10) / limit
+      - id: d3
+        formula: mass * limit / 1000
+      - id: d4
+        formula: mass / (limit * 2)
+    presets:
+      - id: p1
+        values:
+          mass: 105
+          limit: 600
+      - id: p2
+        values:
+          mass: 80
+          limit: 500
+      - id: p3
+        values:
+          mass: 250
+          limit: 400
+    explanation: >-
+      The floor load is the box mass divided by the area in contact with the
+      floor. To stay within the limit, the contact area must be at least the
+      mass divided by the maximum floor load.
+
+
+      **Solution**
+
+
+      {{f: mass / limit}} = {{n: mass / limit}} = **{{answer}} m²**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m²**: the ratio is inverted (limit divided by mass).
+
+      - **{{d2}} m²**: an extra 10 kg is added to the mass.
+
+      - **{{d3}} m²**: mass is multiplied by the limit instead of divided, with
+      a unit slip.
+
+      - **{{d4}} m²**: the limit is wrongly doubled.
+- id: QTHZACGH
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315198
+    - AVEXAM-39993
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: calculation
+    question: The baggage compartment of an aircraft is {{width}} m wide by
+      {{length}} m long and has a maximum floor loading of {{limit}} kg per
+      square metre. What is the maximum capacity of the baggage compartment
+      (limited by the maximum floor load only)?
+    variables:
+      - id: limit
+        label: Floor load limit
+        unit: kg/m²
+      - id: width
+        label: Width
+        unit: m
+      - id: length
+        label: Length
+        unit: m
+    answer:
+      formula: limit * width * length
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: limit / (width * length)
+      - id: d2
+        formula: limit * (width + length)
+      - id: d3
+        formula: limit / (width + length)
+    presets:
+      - id: p1
+        values:
+          limit: 500
+          width: 1.2
+          length: 1.4
+      - id: p2
+        values:
+          limit: 400
+          width: 1.5
+          length: 1.8
+      - id: p3
+        values:
+          limit: 600
+          width: 1
+          length: 1.6
+    explanation: >-
+      The floor loading limit is a maximum mass per unit of floor area. The
+      maximum load is therefore the limit multiplied by the floor area of the
+      compartment.
+
+
+      **Solution**
+
+
+      {{f: limit * width * length}} = {{n: limit * width * length}} =
+      **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: Divides the floor load limit by the area instead of
+      multiplying.
+
+      - **{{d2}} kg**: Multiplies the limit by the sum of the sides instead of
+      the area.
+
+      - **{{d3}} kg**: Divides the limit by the sum of the sides.
+- id: QTMPDTWU
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313661
+    - AVEXAM-85246
+    - BGS-310729
+    - ATPLGS-126801
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.03
+  template:
+    type: chart
+    question: >-
+      A box weighing 300 kg has dimensions of 1 m x 1.5 m x 0.6 m.
+
+
+      It needs to be loaded in a cargo hold compartment with a maximum running
+      load of 257.9 kg/m.
+
+
+      Indicate the side of the box that should be placed on the floor along the
+      longitudinal axis of the aircraft.
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: The side that is 1.5 m long.
+        wrongAnswers:
+          - The side that is 0.6 m long.
+          - The box cannot be placed directly on the floor.
+          - The side that is 1 m long.
+        explanation: >-
+          Divide the mass by the length lying along the aeroplane to get the
+          running load for each side:
+
+
+          - 1.5 m side: 300 ÷ 1.5 = 200 kg/m, within the limit of 257.9 kg/m.
+
+          - 1.0 m side: 300 kg/m, over the limit.
+
+          - 0.6 m side: 500 kg/m, over the limit.
+
+
+          Only the **1.5 m side** can be placed along the longitudinal axis.
+- id: QUB720BLJ
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315418
+    - ATPLGS-113543
+    - ATPLGS-126800
+    - AVEXAM-53100
+    - BGS-310673
+    - BGS-310679
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.03
+  template:
+    type: calculation
+    question: >-
+      A cubic container whose sides all measure {{side}} m is planned to be
+      loaded in a cargo compartment with a maximum running load of {{running}}
+      kg/m.
+
+
+      The container shall be loaded on two ground supports (of negligible mass)
+      having a length in the direction of flight of {{support_length}} m each.
+
+
+      Given that the maximum running load of the cargo compartment must be
+      respected, what is the maximum mass that can be loaded in the container?
+    variables:
+      - id: running
+        label: Running load limit
+        unit: kg/m
+      - id: side
+        label: Container side
+        unit: m
+      - id: support_length
+        label: Support length (flight direction)
+        unit: m
+    answer:
+      formula: running * 2 * support_length
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: running * side
+      - id: d2
+        formula: running
+      - id: d3
+        formula: running * support_length
+    presets:
+      - id: p1
+        values:
+          running: 1915
+          side: 0.8
+          support_length: 0.2
+      - id: p2
+        values:
+          running: 1500
+          side: 1.2
+          support_length: 0.3
+      - id: p3
+        values:
+          running: 2000
+          side: 0.6
+          support_length: 0.15
+    explanation: >-
+      The running load is the load per metre of length measured along the flight
+      direction. With supports, only the length of the supports in contact with
+      the floor counts, so the load is spread over the sum of their lengths.
+
+
+      **Solution**
+
+
+      {{f: running * 2 * support_length}} = {{n: running * 2 * support_length}}
+      = **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: Uses the full container length instead of the length of
+      the supports.
+
+      - **{{d2}} kg**: Takes the running load itself, ignoring the support
+      length.
+
+      - **{{d3}} kg**: Uses only one support length.
+- id: QUNJMHCB
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312258
+    - BGS-310681
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.01
+  template:
+    type: calculation
+    question: Calculate the minimum required floor contact area for a load of
+      {{mass_t}} metric tons, in order to avoid exceeding the cargo
+      compartment’s maximum permissible floor load of {{load}} kg/m².
+    variables:
+      - id: mass_t
+        label: Load mass
+        unit: t
+      - id: load
+        label: Maximum floor load
+        unit: kg/m2
+    answer:
+      formula: mass_t * 1000 / load
+      unit: m²
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: mass_t * load
+      - id: d2
+        formula: mass_t * 1000 * load
+      - id: d3
+        formula: mass_t * 100 / load
+      - id: d4
+        formula: sqrt(mass_t * 1000 / load)
+    presets:
+      - id: p1
+        values:
+          mass_t: 0.126
+          load: 70
+      - id: p2
+        values:
+          mass_t: 0.098
+          load: 60
+      - id: p3
+        values:
+          mass_t: 0.35
+          load: 85
+    explanation: >-
+      The floor load is the mass divided by the contact area, so the minimum
+      contact area that keeps the floor load at its limit is the mass divided by
+      the maximum permissible floor load. Convert tonnes to kg first.
+
+
+      **Solution**
+
+
+      {{f: mass_t * 1000 / load}} = {{n: mass_t * 1000 / load}} = **{{answer}}
+      m²**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m²**: the mass is multiplied by the floor load instead of
+      divided.
+
+      - **{{d2}} m²**: mass multiplied by the floor load, with the tonnes
+      converted to kg.
+
+      - **{{d3}} m²**: wrong unit conversion (1 t = 100 kg).
+
+      - **{{d4}} m²**: this is the side length of a square contact area, not the
+      area.
+- id: QUOSACHV
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317155
+    - AVEXAM-91142
+    - BGS-310790
+    - ATPLQ-313778
+    - ATPLGS-113543
+    - BGS-310678
+    - ATPLGS-126799
+    - AVEXAM-80494
+    - BGS-310672
+    - BGS-310679
+  annexes:
+    - 031-lrjt-weight-and-balance-manual-forward-cargo-hold-floor
+    - 031-maximum-allowable-weight-table
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: chart-calculation
+    question: >-
+      A container with base dimensions {{length}} m x {{width}} m is loaded
+      directly on the floor of the forward cargo hold.
+
+
+      The maximum permissible floor load (distribution load intensity), read
+      from the figure, is {{floor_load}} kg/m².
+
+
+      Determine the maximum mass that can be loaded in the container.
+    variables:
+      - id: length
+        label: Container length
+        unit: m
+      - id: width
+        label: Container width
+        unit: m
+      - id: floor_load
+        label: Max floor load (read from figure)
+        unit: kg/m²
+    chartInputs:
+      - floor_load
+    answer:
+      formula: floor_load * length * width
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: floor_load * (length + width)
+      - id: d2
+        formula: floor_load * length
+      - id: d3
+        formula: floor_load / (length * width)
+      - id: d4
+        formula: floor_load * length * width / 2
+    presets:
+      - id: p1
+        values:
+          length: 2.2
+          width: 1.4
+          floor_load: 650
+      - id: p2
+        values:
+          length: 0.8
+          width: 0.8
+          floor_load: 731.25
+    explanation: >-
+      The maximum floor load is a mass per unit area. Multiplying it by the
+      container base area (length x width) gives the maximum mass that keeps the
+      floor loading within limits; the height of the container is irrelevant.
+
+
+      **Solution**
+
+
+      {{f: floor_load * length * width}} = {{n: floor_load * length * width}} =
+      **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: the base lengths are added instead of multiplied.
+
+      - **{{d2}} kg**: only one base dimension is used for the area.
+
+      - **{{d3}} kg**: the load limit is divided by the area instead of
+      multiplied.
+
+      - **{{d4}} kg**: the area is halved.
+- id: QWRLBCXK
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315458
+    - AVEXAM-35052
+    - ATPLGS-127360
+    - BGS-310699
+  annexes: []
+  learningObjectives:
+    - 031.06.01.01.01
+  template:
+    type: simple
+    question: "Rush bags, late arrival bags, pilots’ or cabin crew baggage will be
+      loaded as :"
+    explanation: ""
+    options:
+      - id: OXTZHENTQ
+        text: palletised cargo
+        correct: false
+        why: ""
+      - id: O0YSLQ99U
+        text: containerised cargo
+        correct: false
+        why: ""
+      - id: O9H1L1RT4
+        text: forbidden cargo
+        correct: false
+        why: ""
+      - id: O8ADUZBS6
+        text: bulk cargo
+        correct: true
+        why: ""
+- id: QWWFVPQJ
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-316203
+    - ATPLGS-113543
+    - ATPLGS-126796
+    - AVEXAM-24614
+    - AVEXAM-82676
+    - ATPLGS-126800
+    - BGS-310671
+    - ATPLGS-126799
+    - BGS-310673
+    - BGS-310672
+    - BGS-310679
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: calculation
+    question: >-
+      A container has a base area of {{base_area}} m².
+
+
+      The container is loaded on two ground supports (of negligible mass), each
+      having floor-contact dimensions of {{support_length}} m x
+      {{support_width}} m.
+
+
+      Given that the maximum permissible floor load of the cargo compartment,
+      which is {{limit}} kg/m², must be respected, what is the maximum mass that
+      can be loaded in the container?
+    variables:
+      - id: limit
+        label: Floor load limit
+        unit: kg/m²
+      - id: base_area
+        label: Container base area
+        unit: m²
+      - id: support_length
+        label: Support length
+        unit: m
+      - id: support_width
+        label: Support width
+        unit: m
+    answer:
+      formula: limit * 2 * support_length * support_width
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: limit / (2 * support_length * support_width)
+      - id: d2
+        formula: limit * support_length * support_width
+      - id: d3
+        formula: limit * base_area
+    presets:
+      - id: p1
+        values:
+          limit: 732
+          base_area: 1.44
+          support_length: 0.2
+          support_width: 1.2
+      - id: p2
+        values:
+          limit: 650
+          base_area: 1
+          support_length: 0.1
+          support_width: 1
+      - id: p3
+        values:
+          limit: 800
+          base_area: 1
+          support_length: 0.1
+          support_width: 0.9
+    explanation: >-
+      When a container stands on supports, the load is transferred to the floor
+      only through the support contact area, not through the whole base. The
+      maximum mass is the floor limit times the total contact area of the two
+      supports.
+
+
+      **Solution**
+
+
+      Contact area = 2 x {{support_length}} x {{support_width}} = {{= 2 *
+      support_length * support_width}} m²
+
+
+      {{f: limit * 2 * support_length * support_width}} = {{n: limit * 2 *
+      support_length * support_width}} = **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: Divides the limit by the contact area instead of
+      multiplying.
+
+      - **{{d2}} kg**: Uses the contact area of only one support.
+
+      - **{{d3}} kg**: Uses the whole base area of the container instead of the
+      support contact area.
+- id: QXBVQAUV
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318961
+    - ATPLGS-126795
+    - AVEXAM-72116
+    - BGS-310670
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: chart
+    question: "Which one of the following shipments can be loaded in a cargo
+      compartment with a floor loading of 70 kg/m²? Shipment W: 500 kg on a
+      pallet sized 2 m x 2 m Shipment X: 500 kg on a pallet sized 1 m x 1 m
+      Shipment Y: 600 kg on a pallet sized 2 m x 2 m Shipment Z: 600 kg on a
+      pallet sized 3 m x 3 m (All pallets are in direct contact with the cargo
+      floor)."
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: Shipment Z
+        wrongAnswers:
+          - Shipment W
+          - Shipment Y
+          - Shipment X
+        explanation: |-
+          Floor loading is mass divided by pallet area:
+
+          - W: 500 ÷ 4 = 125 kg/m².
+          - X: 500 ÷ 1 = 500 kg/m².
+          - Y: 600 ÷ 4 = 150 kg/m².
+          - Z: 600 ÷ 9 = 67 kg/m².
+
+          Only **shipment Z** is under 70 kg/m².
+- id: QXCSCXCT
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317174
+    - BGS-310674
+    - ATPLGS-126803
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.01
+  template:
+    type: calculation
+    question: >-
+      The floor loading limit of a cargo compartment is {{load}} kg/m².
+
+
+      A box of {{mass}} kg is to be loaded on a square pallet whose side length
+      is available in steps of 0.2 m (0.8 m, 1.0 m, 1.2 m, 1.4 m, ...).
+
+
+      What is the side length (in m) of the smallest acceptable square pallet?
+    variables:
+      - id: mass
+        label: Mass of the box
+        unit: kg
+      - id: load
+        label: Floor loading limit
+        unit: kg/m2
+    answer:
+      formula: ceil(sqrt(mass / load) * 5) / 5
+      unit: m
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: sqrt(mass / load)
+      - id: d2
+        formula: floor(sqrt(mass / load) * 5) / 5
+      - id: d3
+        formula: ceil(sqrt(mass / load) * 5) / 5 + 0.2
+      - id: d4
+        formula: mass / load
+    presets:
+      - id: p1
+        values:
+          mass: 806
+          load: 732
+      - id: p2
+        values:
+          mass: 1100
+          load: 600
+    explanation: >-
+      The pallet contact area must be at least mass divided by the floor load
+      limit. For a square pallet the side is the square root of that area,
+      rounded up to the next available size.
+
+
+      **Solution**
+
+
+      Required area = {{= mass / load}} m²
+
+
+      Side length = {{f: sqrt(mass / load)}} = {{= sqrt(mass / load)}} m,
+      rounded up to the next 0.2 m step: **{{answer}} m**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: the exact side length is not rounded up to an available
+      pallet size.
+
+      - **{{d2}} m**: the side length is rounded down, so the floor load limit
+      would be exceeded.
+
+      - **{{d3}} m**: one size too large is chosen.
+
+      - **{{d4}} m**: this is the required area in m², not the side length.
+- id: QXDMTXKJ
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317508
+    - AVEXAM-96673
+    - BGS-310686
+    - ATPLGS-126623
+  annexes: []
+  learningObjectives:
+    - 031.06.01.01.01
+  template:
+    type: simple
+    question: Which of the listed types of cargo can be found in a bulk cargo
+      compartment?
+    explanation: ""
+    options:
+      - id: OTCTEN2CY
+        text: Containerised cargo.
+        correct: false
+        why: ""
+      - id: OE3J6CWNR
+        text: Live animals.
+        correct: false
+        why: ""
+      - id: OJJSTUPMT
+        text: Late-arrival and crew baggage.
+        correct: true
+        why: ""
+      - id: ON5U7USBE
+        text: Palletised cargo.
+        correct: false
+        why: ""
+- id: QXWUTHTF
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319155
+    - AVEXAM-34078
+  annexes: []
+  learningObjectives:
+    - 031.06.02.01.02
+  template:
+    type: calculation
+    question: A cubic container has sides of {{side}} m. What is the maximum mass
+      that can be loaded in this container without exceeding the maximum
+      permissible floor load of {{limit}} kg/m²?
+    variables:
+      - id: limit
+        label: Floor load limit
+        unit: kg/m²
+      - id: side
+        label: Container side
+        unit: m
+    answer:
+      formula: limit * side ^ 2
+      unit: kg
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: limit / side ^ 2
+      - id: d2
+        formula: limit / side ^ 3
+      - id: d3
+        formula: limit * side ^ 3
+    presets:
+      - id: p1
+        values:
+          limit: 240
+          side: 0.9
+      - id: p2
+        values:
+          limit: 300
+          side: 0.7
+      - id: p3
+        values:
+          limit: 180
+          side: 1.1
+    explanation: >-
+      A cubic container rests on a square face, so the floor contact area is the
+      side squared. The maximum mass is the permissible floor load times this
+      contact area.
+
+
+      **Solution**
+
+
+      {{f: limit * side ^ 2}} = {{n: limit * side ^ 2}} = **{{answer}} kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: Divides the limit by the contact area instead of
+      multiplying.
+
+      - **{{d2}} kg**: Divides the limit by the volume (side cubed).
+
+      - **{{d3}} kg**: Multiplies by the volume (side cubed) instead of the
+      contact area.
+- id: QYTR1CNXV
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319007
+    - BGS-310555
+    - AVEXAM-75735
+  annexes: []
+  learningObjectives:
+    - 031.06.01.01.01
+  template:
+    type: simple
+    question: Regarding the handling of the cargo, which statement is correct?
+    explanation: ""
+    options:
+      - id: OL7OWZDNT
+        text: Pallets offer better protection than containers against damage to the
+          aeroplane caused by cargo items.
+        correct: false
+        why: ""
+      - id: OHIC7QCIG
+        text: Containers can be used only in cargo aeroplanes, while pallets can also be
+          used in passenger aeroplanes.
+        correct: false
+        why: ""
+      - id: OJRAGYJUB
+        text: Containers provide better protection than pallets against damage to the
+          cargo items.
+        correct: true
+        why: ""
+      - id: ONBFCKQVL
+        text: Containers have a lighter weight structure when compared to pallets with
+          the same floor dimension.
+        correct: false
+        why: ""
+- id: QZUXAUJP
+  docId: "031.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311237
+    - ATPLGS-126627
+    - AVEXAM-91874
+    - BGS-310656
+  annexes: []
+  learningObjectives:
+    - 031.06.03.01.02
+  template:
+    type: simple
+    question: Regarding the securing of traffic load, which of the following answers
+      is correct?
+    explanation: ""
+    options:
+      - id: OV3OBWKXI
+        text: During rotation on take-off, the dangers of an unsecured load include
+          possible damage to bulkheads and the forward shift of the CG to
+          outside of the CG limits.
+        correct: false
+        why: ""
+      - id: OXPYB6K2X
+        text: During flight, containers and pallets are permitted to remain on rollers
+          within tracks, provided they are secured by latches.
+        correct: true
+        why: ""
+      - id: OOSGUULFJ
+        text: Traffic load must be restrained throughout flight so that only the
+          predictable movement of CG with fuel burn can occur.
+        correct: false
+        why: ""
+      - id: OTQURKBYB
+        text: Unit load devices must be restrained with straps to the designated
+          tie-down points in the cargo floor.
+        correct: false
+        why: ""

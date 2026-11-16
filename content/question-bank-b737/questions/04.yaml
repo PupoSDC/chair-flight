@@ -1,0 +1,691 @@
+- id: QRQQQTEU
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: In flight below 2000 feet RA, on an ILS Autopilot approach with flare
+      armed, what happens if you push a TO/GA switch once?
+    explanation: |
+      > ### A/P Go–Around
+      >
+      > The A/P GA mode requires dual A/P operation and is available after FLARE
+      > armed is annunciated and prior to the A/P sensing touchdown.
+      >
+      > > Note: For go-arounds initiated at or above 2000 feet RA, either a single or a
+      > > double button push will engage A/T N1 thrust mode and not the reduced
+      > > go-around N1 thrust mode. During this time, the A/T FMA will show N1
+      >
+      > With the first push of either TO/GA switch:
+      > - Below 2000 feet RA (below 15,500 feet pressure altitude if both RA’s
+      >   have failed):
+      >   - A/T (if armed) engages in GA and the A/T Engaged Mode
+      >     annunciation on the FMA indicates GA
+      >   - thrust advances toward the reduced go–around N1 to produce 1000 to
+      >     2000 fpm rate of climb
+    options:
+      - id: ly908
+        text: Autothrottle advances thrust levers to reduced Go-Around N1.
+        correct: true
+        why: ""
+      - id: iwwbjl
+        text: Autothrottle will disengage, and ARM is displayed in FMA.
+        correct: false
+        why: ""
+      - id: ndxc
+        text: Autothrottle advances thrust levers to full Go-Around N1.
+        correct: false
+        why: ""
+      - id: uagjz
+        text: Autopilot will disengage, and CWS P will annunciate.
+        correct: false
+        why: ""
+- id: QAAFLQVF
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: true-or-false
+    question: After takeoff the autothrottle will remain in Throttle Hold (THR HLD)
+      until 800 feet RA.
+    explanation: |
+      800 ft RA is a magic number on the 737. 
+
+      > At 84 KIAS, the A/T mode annunciates THR HLD.
+      > (...)
+      > After LIFT-OFF:
+      >  - (...)
+      >  - the A/T remains in THR HLD until 800 feet above field elevation. A/T
+      >    annunciation then changes from THR HLD to ARM and reduction to
+      >    climb thrust can be made by pushing the N1 switch.
+
+      The Two modes are very similar, the only difference is that ARM offers
+      additional protections: 
+
+      > - **THR HLD**: the thrust lever autothrottle servos are inhibited; the pilot
+      >   can set the thrust levers manually
+      > - **ARM**: no autothrottle mode engaged. The thrust lever autothrottle
+      >   servos are inhibited; the pilot can set thrust levers manually. Minimum
+      >   speed protection is provided
+    answer: true
+- id: QWQSXVSK
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: one-two
+    question: Which Statements are correct?
+    explanation: |-
+      - The A/T automatically disengages approximately 2 seconds after touchdown.
+      - the A/P must be manually disengaged after touchdown. Landing roll-out is 
+        executed manually after disengaging the A/P.
+    firstCorrectStatements:
+      - The A/T automatically disengages approximately 2 seconds after touchdown.
+    firstIncorrectStatements:
+      - The A/T must be manually disengaged after touchdown.
+    secondCorrectStatements:
+      - The A/P must be manually disengaged after touchdown.
+      - Landing roll-out is executed manually after disengaging the A/P.
+    secondIncorrectStatements:
+      - The A/P  automatically disengages approximately 2 seconds after
+        touchdown.
+      - Landing roll-out is executed automatically by the A/P.
+- id: QPFIFEVS
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: What components make up the Automatic Flight System (AFS)?
+    explanation: |
+      > The automatic flight system (AFS) consists of the autopilot flight director system
+      > (AFDS) and the autothrottle (A/T). The flight management computer (FMC)
+      > provides N1 limits and target N1 for the A/T and command airspeeds for the A/T
+      > and AFDS
+    options:
+      - id: tc12i
+        text: Flight directors, MCP mode selector system, autothrottles.
+        correct: false
+        why: ""
+      - id: is7ca
+        text: Autopilot, MCP mode selector system, autothrottles.
+        correct: false
+        why: ""
+      - id: d0enc
+        text: Autothrottles and autopilot flight director system.
+        correct: true
+        why: ""
+      - id: 7gf42
+        text: AFDS, MCP mode selector system, autothrottles.
+        correct: false
+        why: ""
+- id: QOUVUJED
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: What normally provides the N1 limits and target N1 values to the
+      Autothrottle?
+    explanation: |
+      > The automatic flight system (AFS) consists of the autopilot flight director system
+      > (AFDS) and the autothrottle (A/T). The flight management computer (FMC)
+      > provides N1 limits and target N1 for the A/T and command airspeeds for the A/T
+      > and AFDS
+    options:
+      - id: thkhif
+        text: The Electronic Engine Controls (EECs).
+        correct: false
+        why: ""
+      - id: gduto
+        text: The Flight Management Computer.
+        correct: true
+        why: ""
+      - id: l3i4x
+        text: The Autothrottle Computer.
+        correct: false
+        why: ""
+      - id: 4392c
+        text: The Flight Control Computers.
+        correct: false
+        why: ""
+- id: QXPSFKGX
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: What does an illuminated green light mean in the MCP buttons?
+    explanation: |
+      This question is the centerpiece of the Type Rating. The MCP is not the source
+      of truth on what modes are active. That's the FMA. The MCP green lights
+      simply highlight that a mode can be deselected.
+
+      For example:
+
+      > N1 Switch
+      >  - Push – (light illuminated)
+      >    - deselects N1 mode and extinguishes switch light
+      >    - engages autothrottles in ARM mode.
+    options:
+      - id: par59
+        text: That mode is currently engaged and active.
+        correct: false
+        why: ""
+      - id: dhmco
+        text: The switch is available to be selected.
+        correct: false
+        why: ""
+      - id: fjcdth
+        text: That mode is currently de-selected and inactive.
+        correct: false
+        why: ""
+      - id: aosv1
+        text: That switch can be de-selected.
+        correct: true
+        why: ""
+- id: QZZWOSXV
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: If you engage Level Change by pressing the LVL CHG switch on the MCP
+      and the green light illuminates, what other indications will occur as this
+      mode engages?
+    explanation: |
+      > ### Level Change (LVL CHG) Switch
+
+      > - **Push**:
+      >   - LVL CHG switch light illuminates
+      >   - pitch mode annunciates MCP SPD for climb or descent
+      >   - autothrottle mode annunciates N1 for climb and RETARD followed by
+    options:
+      - id: tselk
+        text: Speed window blanks, MCP SPD annunciated for pitch mode, N1 annunciated
+          for thrust mode.
+        correct: false
+        why: ""
+      - id: 80uwx
+        text: Speed window blanks, MCP SPD annunciated for pitch mode, N1 or RETARD/ARM
+          annunciated for thrust mode.
+        correct: false
+        why: ""
+      - id: js2x9
+        text: Speed window opens to show target speed, MCP SPD annunciated for thrust
+          mode, N1 annunciated for pitch mode.
+        correct: false
+        why: ""
+      - id: m5wqf
+        text: Speed window opens to show target speed, MCP SPD annunciated for pitch
+          mode, N1 or RETARD/ARM annunciated for thrust mode.
+        correct: true
+        why: ""
+- id: QJNWGYFN
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: In flight, with Autopilot engaged in CMD B, which FCC controls the
+      logic for the flight directors on the Captain's PFD.
+    explanation: |
+      > Normally, FCC A drives the captain’s command bars and FCC B drives the first
+      > officer’s command bars. With both F/D switches ON, the logic for both pilots’ F/D
+      > modes is controlled by the master FCC, and both FMA displays show the same
+      > mode status.
+      > 
+      > The master FCC is indicated by illumination of the respective master (MA) F/D
+      > indicator light. The master FCC is determined as follows:
+      > - with neither A/P engaged in CMD, the FCC for the first F/D turned on is
+      >   the master
+      > - **with one or both A/Ps engaged in CMD, the FCC for the first A/P in
+      >   CMD is the master FCC, regardless of which F/D is turned on first**.
+    options:
+      - id: zf3mhj
+        text: FMS A
+        correct: false
+        why: ""
+      - id: 9ziis
+        text: FMS B
+        correct: false
+        why: ""
+      - id: mt1odf
+        text: FCC A
+        correct: false
+        why: ""
+      - id: 29no2h
+        text: FCC B
+        correct: true
+        why: ""
+- id: QKHFCCKX
+  relatedQuestions:
+    - QPOAUIXH
+  annexes: []
+  chapter: "04"
+  template:
+    type: true-or-false
+    question: The VOR/LOC mode must be armed before the second Autopilot can be
+      selected during a dual channel autopilot approach.
+    explanation: |
+      > One VHF NAV receiver must be tuned to an ILS frequency before the approach
+      > mode can be selected. For a dual A/P approach, the second VHF NAV receiver
+      > must be tuned to the ILS frequency and the corresponding A/P engaged in CMD
+      > prior to 800 feet RA.
+      > 
+      > (...)
+      > 
+      > After setting the localizer frequency and course, pushing the APP switch selects
+      > the APP mode. The APP switch illuminates and VOR/LOC and G/S annunciate
+      > armed. The APP mode permits selecting the second A/P to engage in CMD.
+
+      So the correct answer would say the APP mode must be selected before the second
+      A/P can be engaged in CMD. Both the VOR/LOC and G/S must be armed before the
+      second A/P can be engaged in CMD.
+    answer: false
+- id: QNIYDNJK
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: What does a flashing "A" displayed to the left of the selected MCP
+      speed indicate?
+    explanation: |
+      > - Underspeed limiting (flashing character “A”) 
+      >   – minimum speed
+      > - Overspeed limiting (flashing character “8”)
+      >   - Vmo or Mmo limit
+      >   - landing gear limit
+      >   - flap limit
+    options:
+      - id: ailf4
+        text: Underspeed limiting, FMC speed or MCP selected speed cannot be reached.
+        correct: true
+        why: ""
+      - id: 7uua2
+        text: limiting for maximum speed for current flap setting.
+        correct: false
+        why: ""
+      - id: iubqv
+        text: Overspeed limiting at Mmo limit
+        correct: false
+        why: ""
+      - id: dznvb
+        text: Overspeed limiting at Vmo Limit
+        correct: false
+        why: ""
+      - id: x2ttw
+        text: Overspeed limiting, current speed selection greater than current flap
+          setting limit.
+        correct: false
+        why: ""
+      - id: nhyry
+        text: Overspeed limiting, Minimum speed for current flap setting cannot be
+          achieved.
+        correct: false
+        why: ""
+      - id: q35e8
+        text: Underspeed limiting, Vmo or Mmo limit.
+        correct: false
+        why: ""
+- id: QDQOPYTG
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: An altitude restriction is entered at the top of descent, the aircraft
+      will not now follow the Idle Descent path but will descend to meet the
+      altitude restriction.  After achieving the altitude restriction which of
+      the indicated flight paths will the aircraft follow for the rest of the
+      descent?
+    explanation: ""
+    options:
+      - id: npa3b
+        text: Descends to achieve restriction then maintains level flight until
+          intercepts the original idle descent path. (A)
+        correct: true
+        why: ""
+      - id: wisb
+        text: Descends to achieve restriction, then continues steady descent to End of
+          Descent. (C)
+        correct: false
+        why: ""
+      - id: 3aoim
+        text: None of the options
+        correct: false
+        why: ""
+      - id: bxh1
+        text: Descends to achieve restriction then descends at 1000 fpm until
+          intercepting original idle descent path. (B)
+        correct: false
+        why: ""
+- id: QPOAUIXH
+  relatedQuestions:
+    - QKHFCCKX
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: For approach, by what altitude must the second Autopilot be selected
+      for dual Autopilot operation?
+    explanation: |
+      > One VHF NAV receiver must be tuned to an ILS frequency before the approach
+      > mode can be selected. For a dual A/P approach, the second VHF NAV receiver
+      > must be tuned to the ILS frequency and the corresponding A/P engaged in CMD
+      > prior to 800 feet RA.
+    options:
+      - id: 1hgpg
+        text: 1500 feet RA
+        correct: false
+        why: ""
+      - id: hzian
+        text: 500 feet RA
+        correct: false
+        why: ""
+      - id: n5wqh
+        text: 350 feet RA
+        correct: false
+        why: ""
+      - id: piar3
+        text: 800 feet RA
+        correct: true
+        why: ""
+- id: QPPUAMBZ
+  relatedQuestions:
+    - QRCPVOMB
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: Below which RA should FLARE mode be armed during AUTOLAND?
+    explanation: |
+      > Shortly after capturing LOC and G/S and below 1500 feet RA:
+      > - the second A/P couples with the flight controls
+      > - test of the ILS deviation monitor system is performed and the G/S and LOC display turns amber and flashes
+      > - FLARE armed is annunciated
+      > - the SINGLE CH annunciation extinguishes
+      > - A/P go–around mode arms but is not annunciated
+      > 
+      > (...)
+      >
+      > If FLARE is not armed by approximately 350 feet RA, both A/Ps automatically disengage.
+
+      So the 2 magic numbers are 1500ft for ARM, and 350 for A/P disengage if ARM failed.
+    options:
+      - id: op5bp
+        text: 350 feet RA.
+        correct: false
+        why: ""
+      - id: y8drz
+        text: 1500 RA
+        correct: true
+        why: ""
+      - id: i17aoj
+        text: 50 feet RA.
+        correct: false
+        why: ""
+      - id: 6zsjz
+        text: 350 feet AGL.
+        correct: false
+        why: ""
+- id: QBJVITLF
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: If an altitude restriction is entered before TOD, the aircraft will
+      commence the descent early to follow a new idle descent path to achieve
+      the descent restriction.  If ALT INTV is then selected after the descent
+      restriction, which of the paths will the aircraft follow?
+    explanation: ""
+    options:
+      - id: stxtj
+        text: Path A.  Descends to achieve restriction then maintains level flight until
+          intercepts the original idle descent path.
+        correct: false
+        why: ""
+      - id: kwp64
+        text: Path C.  Descends to achieve restriction, then continues steady descent to
+          End of Descent.
+        correct: false
+        why: ""
+      - id: hbvohi
+        text: Path D.  Descends to achieve restriction, then continues on that new idle
+          descent path until new commands are entered.
+        correct: false
+        why: ""
+      - id: 73fig
+        text: Path B.  Descends to achieve restriction then descends at 1000 fpm until
+          intercepting original idle descent path.
+        correct: true
+        why: ""
+- id: QQVXBUJX
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: With VNAV engaged, pushing the SPD INTV switch has what effect?
+    explanation: |
+      > ### Speed Intervention (SPD INTV) Switch
+      > - Push (when VNAV engaged) –
+      >   - IAS/MACH display alternately shows selected IAS/Mach and blanks
+      >   - when IAS/MACH display is unblanked, FMC speed intervention is
+      >     active, FMC target speed is displayed, and IAS/MACH Selector may be
+      >     used to set desired speed
+      >   - when IAS/MACH display is blank, FMC computed target speed is
+      >     active and displayed on the airspeed indicator
+    options:
+      - id: x3m1gk
+        text: IAS/MACH window blanks and next FMC speed restriction becomes active,
+          magenta target speed displayed above speed tape on PFD.
+        correct: false
+        why: ""
+      - id: b0ma3
+        text: IAS/MACH window opens up showing current FMC target speed, and IAS/MACH
+          selector can be used to set new desired speed.
+        correct: true
+        why: ""
+      - id: w20tt
+        text: Current or next speed restriction deleted from FMC, IAS/MACH window opens
+          up showing previous FMC target speed, and IAS/MACH selector can be
+          used to set new desired speed.
+        correct: false
+        why: ""
+      - id: 9a82u
+        text: No effect, VNAV remains engaged with the FMC controlling target speed.
+        correct: false
+        why: ""
+- id: QECWBBDU
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: At what altitude will the FLARE manoeuvre start during AUTOLAND?
+    explanation: |
+      > ### Flare
+      > The A/P flare maneuver starts at approximately 50 feet RA and is completed at
+      > touchdown:
+      > - FLARE engaged is annunciated and F/D command bars retract.
+      > - the A/T begins retarding thrust at approximately 27 feet RA so as to
+      >   reach idle at touchdown. A/T FMA annunciates RETARD.
+      > - the A/T automatically disengages approximately 2 seconds after
+      >   touchdown.
+      > - the A/P must be manually disengaged after touchdown. Landing roll-out
+      >   is executed manually after disengaging the A/P.
+    options:
+      - id: c4ps8
+        text: 50 feet AGL.
+        correct: false
+        why: ""
+      - id: b4bny
+        text: 50 RA.
+        correct: true
+        why: ""
+      - id: 6mxia
+        text: 350 feet RA.
+        correct: false
+        why: ""
+      - id: lcti8
+        text: 500 feet AGL.
+        correct: false
+        why: ""
+- id: QRCPVOMB
+  relatedQuestions:
+    - QPPUAMBZ
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: Why do we check that FLARE mode is armed at 500 feet RA?
+    explanation: |
+      > Shortly after capturing LOC and G/S and below 1500 feet RA:
+      > - the second A/P couples with the flight controls
+      > - test of the ILS deviation monitor system is performed and the G/S and LOC display turns amber and flashes
+      > - FLARE armed is annunciated
+      > - the SINGLE CH annunciation extinguishes
+      > - A/P go–around mode arms but is not annunciated
+      > 
+      > (...)
+      >
+      > If FLARE is not armed by approximately 350 feet RA, both A/Ps automatically disengage.
+
+      So the 2 magic numbers are 1500ft for ARM, and 350 for A/P disengage if ARM failed.
+      A check is commonly done at 500ft to avoid being surprised by A/P disengagement at 350ft.
+    options:
+      - id: oqbq8
+        text: To allow start of the flare manoeuvre at 350 feet RA.
+        correct: false
+        why: ""
+      - id: 83dn1
+        text: To allow APP mode to be selected at this point if FLARE not armed.
+        correct: false
+        why: ""
+      - id: 9ybo7h
+        text: To be aware that A/P will disengage at 350 feet RA if not armed.
+        correct: true
+        why: ""
+      - id: 1hcnw
+        text: To allow the second A/P to be engaged at this point.
+        correct: false
+        why: ""
+- id: QYDSAIBA
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: Other than by selecting N1 mode by pressing the N1 switch on the MCP,
+      when else will N1 mode automatically engage.
+    explanation: ""
+    options:
+      - id: bnrd6
+        text: LVL CHG and VNAV engaged within first 2.5 minutes after takeoff.
+        correct: false
+        why: ""
+      - id: sas16
+        text: Never, N1 mode is only ever manually selected and engaged.
+        correct: false
+        why: ""
+      - id: uniui
+        text: LVL CHG engaged in climb more than 2.5 minutes after takeoff.
+        correct: false
+        why: ""
+      - id: 7jk26
+        text: VNAV engaged in climb and LVL CHG engaged in climb more than 2.5 minutes
+          after takeoff.
+        correct: true
+        why: ""
+- id: QYGCWQFU
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: What will cause the A/T to disengage?
+    explanation: |
+      > Any of the following conditions or actions disengages the A/T:
+      > - moving the A/T Arm switch to OFF
+      > - pushing either A/T Disengage switch
+      > - an A/T system fault is detected
+      > - two seconds have elapsed since landing touchdown
+    options:
+      - id: 1agn9
+        text: Push Either A/T Disengage switch and Move A/T ARM switch to OFF
+        correct: false
+        why: ""
+      - id: r8fe9
+        text: Push Either A/T Disengage switch and An A/T system fault is detected
+        correct: false
+        why: ""
+      - id: 6l3q6
+        text: Immediately the left main landing gear is compressed, Push Either A/T
+          Disengage switch and Move A/T ARM switch to OFF.
+        correct: false
+        why: ""
+      - id: lcvbw
+        text: Move A/T ARM switch to OFF, Push Either A/T Disengage switch and An A/T
+          system fault is detected
+        correct: true
+        why: ""
+- id: QPMWCJNE
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: simple
+    question: What are the indications for A/T disconnected.
+    explanation: ""
+    options:
+      - id: pprlgf
+        text: A/T P/RST disengage light illuminates steady.
+        correct: false
+        why: ""
+      - id: 11eo
+        text: Tone sounds and A/T P/RST disengage light illuminates steady
+        correct: false
+        why: ""
+      - id: myyh5h
+        text: A/T P/RST disengage light flashes.
+        correct: true
+        why: ""
+      - id: kaf09
+        text: Tone sounds and A/T P/RST disengage light flashes
+        correct: false
+        why: ""
+- id: QWXNTDHQ
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: true-or-false
+    question: The A/T is controlled by FCC A only.
+    explanation: ""
+    answer: true
+- id: QHVQHDTL
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: true-or-false
+    question: During THR HLD (Throttle Hold), if you manually move the throttle
+      levers, the A/T will try to return them to their original position.
+    explanation: |
+      > - **THR HLD**: the thrust lever autothrottle servos are inhibited; the pilot
+      >   can set the thrust levers manually
+    answer: false
+- id: QYNUCYUP
+  relatedQuestions: []
+  annexes: []
+  chapter: "04"
+  template:
+    type: true-or-false
+    question: The Autothrottle (A/T) system, provides automatic thrust control from
+      the start of takeoff, through all stages of flight to up to and including
+      landing.
+    explanation: ""
+    answer: true

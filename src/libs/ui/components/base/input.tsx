@@ -22,11 +22,11 @@ export const Input: FC<
         "placeholder:text-muted/50 disabled:opacity-50",
         invalid
           ? "border-red-600 text-red-600 dark:border-red-400 dark:text-red-400"
-          : cn("text-ink", error ? "border-accent" : "border-rule-strong"),
+          : cn("text-ink", error ? "border-danger" : "border-rule-strong"),
       )}
       aria-invalid={Boolean(error) || invalid}
       {...props}
     />
-    {error && <span className="text-[11px] text-accent">{error}</span>}
+    {error && <span className="text-[11px] text-danger">{error}</span>}
   </label>
 );

@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "username": "captain_admin",
+      "role": "admin"
+    },
+    {
+      "username": "first_officer",
+      "role": "user"
+    },
+    {
+      "username": "cadet_alice",
+      "role": "user"
+    },
+    {
+      "username": "cadet_bob",
+      "role": "user"
+    },
+    {
+      "username": "instructor_carla",
+      "role": "user"
+    },
+    {
+      "username": "student_dan",
+      "role": "user"
+    },
+    {
+      "username": "dispatcher_eve",
+      "role": "user"
+    },
+    {
+      "username": "navigator_frank",
+      "role": "user"
+    },
+    {
+      "username": "cabin_grace",
+      "role": "user"
+    },
+    {
+      "username": "tower_heidi",
+      "role": "user"
+    }
+  ],
+  "pendingBodies": [
+    "Is this still in the 2024 syllabus?",
+    "Great question, saving it for revision.",
+    "Does the question bank use kg/m³ or g/cm³ more often?",
+    "I disagree with the explanation, but thanks for posting it."
+  ],
+  "openers": [
+    "The SI unit of density is **kg/m³**, so the answer is straightforward.",
+    "I keep mixing this one up with specific gravity.",
+    "Density is mass per unit volume: `ρ = m / V`.",
+    "Why are `bar` and `psi` even in the options?",
+    "This came up in my last exam, nearly identical wording.",
+    "Quick memory trick: **D**ensity = **D**ivide mass by volume.",
+    "Is g/cm³ also accepted? It is not the SI unit though.",
+    "Can someone explain why kg/cm² is wrong?",
+    "Just got this wrong, I was thinking about pressure.",
+    "Pressure is force per area, density is mass per volume. Easy to mix up.",
+    "For reference, air at ISA sea level is about **1.225 kg/m³**.",
+    "Thanks, this finally clicked for me.",
+    "Does anyone have a good source for the full list of SI units?",
+    "I think the question is a bit too easy for ATPL, but fine.",
+    "Remember the base units: kg, m, s, A, K, mol, cd."
+  ],
+  "followUps": [
+    "Agreed.",
+    "Good point, thanks!",
+    "Not sure that is right, check the docs.",
+    "Same here, I got it wrong the first time.",
+    "That is exactly how I remember it.",
+    "Thanks for the explanation 🙏",
+    "Could you share the source?",
+    "+1, this helped me a lot.",
+    "Wait, so the unit of weight density would be N/m³?",
+    "I would add that temperature changes it as well.",
+    "Slightly off topic, but this matters for altimetry too.",
+    "Yes, and **kg/L** is common in fuel calculations, just not SI."
+  ],
+  "longForms": [
+    "A few units people confuse:\n\n- density: kg/m³\n- pressure: Pa (not bar)\n- force: N\n- energy: J",
+    "> The SI unit of density is kilogram per cubic metre.\n\nPretty much what the syllabus says, see 021.08.",
+    "Worked example:\n\n```\nm = 1.225 kg\nV = 1 m³\nρ = m / V = 1.225 kg/m³\n```",
+    "Useful table:\n\n| Quantity | SI unit |\n| --- | --- |\n| density | kg/m³ |\n| pressure | Pa |\n| force | N |",
+    "See the [SI brochure](https://www.bipm.org/en/measurement-units) for the official definitions.",
+    "I wrote a short summary: **density** goes down with altitude, which is why *true airspeed* is higher than *indicated airspeed* when you climb."
+  ]
+}

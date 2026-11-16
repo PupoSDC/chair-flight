@@ -1,4 +1,4 @@
-import type { QuestionBankName } from "../question-bank/question-banks.ts";
+import type { QuestionBankName } from "../question-banks/question-banks.ts";
 
 export type Test = {
   id: string;

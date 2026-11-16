@@ -1,0 +1,278 @@
+- id: QCPXONMI
+  relatedQuestions: []
+  annexes: []
+  chapter: "03"
+  template:
+    type: true-or-false
+    question: The engine Cowl Anti-Ice valve is located UPSTREAM of the Engine Bleed
+      Air Valve.
+    explanation: |
+      The engine cowl anti-ice valve controls the flow of air from the engine bleed
+      to the engine cowl. The Engine bleed valve controls the flow of air from the
+      bleeds to bleed air duct. 
+
+      The air that flows from the bleeds can flow directly to the engine cowl 
+      without passing through the engine bleed valve. 
+    answer: true
+- id: QKCBZAWK
+  relatedQuestions:
+    - QKCBZAWJ
+  annexes: []
+  chapter: "03"
+  template:
+    type: true-or-false
+    question: If the cowl anti-ice valve fails to move to the position indicated by
+      the ENG ANTI-ICE switch, the COWL VALVE OPEN light remains illuminated
+      bright blue and an amber TAI indication immediately illuminates on the
+      CDS.
+    explanation: |
+      > If the cowl anti–ice valve fails to move to the position indicated by the ENG
+      > ANTI–ICE switch, the COWL VALVE OPEN light remains illuminated bright
+      > blue and an amber TAI indication illuminates on the CDS **after a short delay**
+    answer: false
+- id: QKCBZAWJ
+  relatedQuestions:
+    - QKCBZAWK
+  annexes: []
+  chapter: "03"
+  template:
+    type: simple
+    question: What indication will there be if a cowl anti-ice valve fails to move
+      to the selected position?
+    explanation: |
+      > If the cowl anti–ice valve fails to move to the position indicated by the ENG
+      > ANTI–ICE switch, the COWL VALVE OPEN light remains illuminated bright
+      > blue and an amber TAI indication illuminates on the CDS **after a short delay**
+    options:
+      - id: fxnasf
+        text: The COWL VALVE OPEN light remains illuminated bright blue.
+        correct: true
+        why: ""
+      - id: safjkd
+        text: The COWL ANTI-ICE light illuminates amber.
+        correct: false
+        why: ""
+      - id: 21rqw
+        text: A green TAI indication illuminates on the CDS after a short delay.
+        correct: false
+        why: ""
+      - id: vdk8e
+        text: The COWL ANTI-ICE light momentarily illuminates bright blue
+        correct: false
+        why: ""
+- id: QAQPFLDN
+  relatedQuestions: []
+  annexes: []
+  chapter: "03"
+  template:
+    type: simple
+    question: Positioning ENG ANTI-ICE switch to on has what effect?
+    explanation: |
+      > ### 3 ENGINE ANTI–ICE Switches
+      > 
+      > - **ON**
+      >   - related cowl anti–ice valve is open
+      >   - stick shaker logic is set for icing conditions.
+      >   - Green TAI indication shows on the engine display.
+      > - **OFF**
+      >   - related cowl anti–ice valve is closed
+      >   - stick shaker logic returns to normal if wing anti–ice has not been used in flight.
+      >   - Green TAI indication on the engine display extinguishes.
+    options:
+      - id: p3aeh
+        text: Stall warning logic adjusts stick shaker and minimum maneuver speed bars
+          on airspeed indicator.
+        correct: true
+        why: ""
+      - id: s7i0e
+        text: Adjusted stall warning logic for stick shaker, minimum maneuver speed bars
+          on airspeed indicator, and automatically adjusted FMC displayed VREF;
+          remain for rest of flight.
+        correct: false
+        why: ""
+      - id: 0wqto
+        text: Adjusted stall warning logic for stick shaker, minimum maneuver speed bars
+          on airspeed indicator, and automatically adjusted FMC displayed VREF;
+          return to normal when engine anti-ice is positioned to OFF.
+        correct: false
+        why: ""
+      - id: 3h735
+        text: FMC displayed VREF is adjusted automatically.
+        correct: false
+        why: ""
+- id: QFREULTP
+  relatedQuestions: []
+  annexes: []
+  chapter: "03"
+  template:
+    type: true-or-false
+    question: |
+      When operating on standby power only the Captain's pitot probe is still 
+      heated;
+
+      If the Captain's pitot probe heating fails in this condition, there is no 
+      CAPT PITOT alert given.
+    explanation: |
+      > ### Probe and Sensor Heat
+      >
+      > Pitot probes, the total air temperature probe and the alpha vanes are electrically
+      > heated. Static ports are not heated. When operating on standby power, only the
+      > captain’s pitot probe is heated, however, the CAPT PITOT light does not
+      > illuminate for a failure.
+    answer: true
+- id: QXRHVXMX
+  relatedQuestions: []
+  annexes: []
+  chapter: "03"
+  template:
+    type: true-or-false
+    question: On the ground and in flight, the wing anti-ice valves close if the
+      forward thrust levers are advanced above the takeoff warning setting.
+    explanation: |
+      > ### Wing Anti–Ice System Operation
+      >
+      > On the ground, positioning the WING ANTI–ICE switch ON opens both control
+      > valves if thrust on both engines is below the setting for takeoff warning activation
+      > and the temperature inside both wing distribution ducts is less than the thermal
+      > switch activation temperature.
+      > 
+      > Both valves close if either engine thrust is above the takeoff warning setting or
+      > either temperature sensor senses a duct overtemperature. The valves automatically
+      > reopen if thrust on both engines is reduced and both temperature sensors are cool.
+
+      The wing anti-ice valves close if the forward thrust levers are advanced above the
+      takeoff warning setting only on the ground.
+    answer: false
+- id: QFWBIPXB
+  relatedQuestions: []
+  annexes: []
+  chapter: "03"
+  template:
+    type: simple
+    question: "The rain removal system for the forward windows comprises the following:"
+    explanation: ""
+    options:
+      - id: rdjk7
+        text: Heated windows, Windshield wipers,
+        correct: false
+        why: ""
+      - id: t0irj
+        text: Windshield wipers, hydrophobic rain repellent coating.
+        correct: true
+        why: ""
+      - id: nb2s8
+        text: Windshield wipers, heated windows, hydrophobic rain repellent coating.
+        correct: false
+        why: ""
+      - id: 0s5x5
+        text: Windshield wipers.
+        correct: false
+        why: ""
+- id: QTBVGRWC
+  relatedQuestions: []
+  annexes: []
+  chapter: "03"
+  template:
+    type: simple
+    question: What do the green ON lights indicate above the Window heat switches?
+    explanation: |
+      > ### Window Heat ON Lights
+      >
+      > - **Illuminated (green)**:
+      >   – window heat is being applied to selected window(s).
+      > - **Extinguished**: 
+      >   - switch is OFF, or
+      >   - an overheat is detected, or
+      >   - a system failure has occurred
+      >   - system is at correct temperature.
+    options:
+      - id: a71st
+        text: Illuminated means window heat needs to be switched on for that window,
+          extinguished means heat now being applied to that window.
+        correct: false
+        why: ""
+      - id: ye77k
+        text: Extinguished means heat still being applied to window but not yet at
+          correct operating temperature, illuminated means window at correct
+          temperature.
+        correct: false
+        why: ""
+      - id: 8bt0h
+        text: Illuminated means heat being applied to windows, extinguished means
+          windows at correct temperature
+        correct: true
+        why: ""
+      - id: 6uayg
+        text: Illuminated means the window Overheat system has activated.
+        correct: false
+        why: ""
+- id: QTBVGRWD
+  relatedQuestions: []
+  annexes: []
+  chapter: "03"
+  template:
+    type: simple
+    question: Which statement is correct for when the window heat Test Switch is put
+      into the OVHT position?
+    explanation: |
+      > ### WINDOW HEAT Test Switch (spring–loaded to neutral)
+      >
+      > - OVHT: simulates an overheat condition.
+      > - PWR TEST: provides a confidence test. 
+    options:
+      - id: k1241
+        text: Simulates an overheat condition in order to test the system
+        correct: true
+        why: ""
+      - id: fcsfa
+        text: Performs a voltage check of the power supplies.
+        correct: false
+        why: ""
+      - id: 4ddsc
+        text: Checks for the presence of the window heat elements
+        correct: false
+        why: ""
+      - id: 124ac
+        text: Can only be used if all green lights are on.
+        correct: false
+        why: ""
+- id: QTBVGRWE
+  relatedQuestions: []
+  annexes: []
+  chapter: "03"
+  template:
+    type: simple
+    question: |
+      Whilst on the ground with WING ANTI-ICE selected ON, what is the 
+      result of advancing the thrust levers beyond the take-off warning setting?
+    explanation: |
+      > Both valves close if either engine thrust is above the takeoff warning setting or
+      > either temperature sensor senses a duct overtemperature. The valves automatically
+      > reopen if thrust on both engines is reduced and both temperature sensors are cool.
+
+      The switch flicks back to **OFF** when the weight on wheels switch detects the aircraft 
+      is airborne. 
+
+      > The WING ANTI–ICE switch automatically trips OFF at lift–off when the
+      > air/ground sensor goes to the air mode
+    options:
+      - id: gvbsxh
+        text: Both wing anti-ice control valves close and the WING ANTI-ICE switch
+          remains in the ON position
+        correct: true
+        why: ""
+      - id: fsajkca
+        text: Both wing anti-ice control valves remain open and the WING ANTI-ICE switch
+          remains set at ON.
+        correct: false
+        why: ""
+      - id: q214as
+        text: Both wing anti-ice control valves remain open and the WING ANTI-ICE switch
+          trips OFF.
+        correct: false
+        why: ""
+      - id: fbcajs
+        text: Both wing anti-ice control valves close and the WING ANTI-ICE switch trips
+          OFF.
+        correct: false
+        why: ""

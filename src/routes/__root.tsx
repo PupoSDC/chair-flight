@@ -1,21 +1,30 @@
 /// <reference types="vite/client" />
 
+import figtree400 from "@fontsource/figtree/files/figtree-latin-400-normal.woff2?url";
+import figtree500 from "@fontsource/figtree/files/figtree-latin-500-normal.woff2?url";
+import figtree600 from "@fontsource/figtree/files/figtree-latin-600-normal.woff2?url";
+import figtree700 from "@fontsource/figtree/files/figtree-latin-700-normal.woff2?url";
 import {
   createRootRoute,
   HeadContent,
   ScriptOnce,
   Scripts,
 } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { THEME_SCRIPT } from "../libs/ui/hooks/use-theme";
 import type { ErrorComponentProps } from "@tanstack/react-router";
 import type { FC, PropsWithChildren } from "react";
+import katexCss from "katex/dist/katex.min.css?url";
 import appCss from "../styles.css?url";
-import "@fontsource/figtree/latin-400.css";
-import "@fontsource/figtree/latin-500.css";
-import "@fontsource/figtree/latin-600.css";
-import "@fontsource/figtree/latin-700.css";
 
 const RootDocument: FC<PropsWithChildren> = ({ children }) => {
+  useEffect(() => {
+    if (!import.meta.env.DEV) return;
+    import("../tools/design-mask/activate-design-mask").then((module) => {
+      module.activateDesignMask();
+    });
+  }, []);
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -70,7 +79,17 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#0b6bcb" },
     ],
     links: [
+      ...[figtree400, figtree500, figtree600, figtree700].map((href) => {
+        return {
+          rel: "preload",
+          href,
+          as: "font",
+          type: "font/woff2",
+          crossOrigin: "anonymous" as const,
+        };
+      }),
       { rel: "stylesheet", href: appCss },
+      { rel: "stylesheet", href: katexCss },
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
     ],

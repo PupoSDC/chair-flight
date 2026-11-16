@@ -1,0 +1,4384 @@
+- id: Q2JEDJUNZ
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328367
+    - AVEXAM-88708
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: calculation
+    question: >-
+      A high tension cable is located {{dist}} NM from the DER (departure end of
+      runway). Calculate the obstacle clearance for a Class B single-engine
+      piston aeroplane with the following conditions.
+
+
+      - Climb gradient: {{grad}} %
+
+      - TAS: {{tas}} kt
+
+      - Tailwind component: {{tw}} kt
+
+      - Cable height: {{oh}} ft
+
+
+      What is the obstacle clearance over the cable (ft)?
+    variables:
+      - id: dist
+        label: Distance to the cable from the DER
+        unit: NM
+      - id: grad
+        label: Climb gradient
+        unit: "%"
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: tw
+        label: Tailwind component
+        unit: kt
+      - id: oh
+        label: Cable height
+        unit: ft
+    answer:
+      formula: dist * 6080 * tas / (tas + tw) * grad / 100 + 50 - oh
+      unit: ft
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: dist * 6080 * tas / (tas + tw) * grad / 100 - oh
+      - id: d2
+        formula: dist * 6080 * tas / (tas + tw) * grad / 100 + 50
+      - id: d3
+        formula: dist * 6080 * grad / 100 + 50 - oh
+      - id: d4
+        formula: dist * 6080 * tas / (tas - tw) * grad / 100 + 50 - oh
+    presets:
+      - id: p1
+        values:
+          dist: 1
+          grad: 5
+          tas: 133
+          tw: 10
+          oh: 104
+      - id: p2
+        values:
+          dist: 1.5
+          grad: 4
+          tas: 110
+          tw: 5
+          oh: 250
+      - id: p3
+        values:
+          dist: 2
+          grad: 5
+          tas: 120
+          tw: 10
+          oh: 150
+    explanation: >-
+      A climb in a single-engine aeroplane gains height at the climb gradient
+      over the distance flown. A tailwind makes the aeroplane cover more ground
+      for the same air distance, so the height gained is corrected by TAS
+      divided by groundspeed. The 50 ft screen height is added and the cable
+      height is subtracted.
+
+
+      **Solution**
+
+
+      - Ground distance: {{= dist * 6080}} ft
+
+      - Height gained over the ground distance: {{= dist * 6080 * tas / (tas +
+      tw) * grad / 100}} ft
+
+      - Obstacle clearance = height gained + 50 ft - cable height = **{{answer}}
+      ft**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ft**: the 50 ft screen height is left out.
+
+      - **{{d2}} ft**: the cable height is not subtracted.
+
+      - **{{d3}} ft**: the tailwind correction (TAS / groundspeed) is left out.
+
+      - **{{d4}} ft**: the tailwind is subtracted from the TAS instead of added
+      to it.
+- id: Q2OTBLVOM
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328943
+    - AVEXAM-69920
+    - BGS-320618
+    - BGS-320476
+    - ATPLGS-107231
+    - AVEXAM-49380
+    - AVEXAM-4957
+    - ATPLGS-625131
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: How does a downslope runway affect the take off and landing
+      performance of an aeroplane? It…
+    explanation: ""
+    options:
+      - id: O8EESTGQR
+        text: increases both the take off distance and the landing distance.
+        correct: false
+        why: ""
+      - id: OO8BSNICR
+        text: increases the take off distance, and decreases the landing distance.
+        correct: false
+        why: ""
+      - id: OWNJVZF7L
+        text: decreases both the take off distance and the landing distance.
+        correct: false
+        why: ""
+      - id: OYEAQU6DC
+        text: decreases the take off distance, and increases the landing distance.
+        correct: true
+        why: ""
+- id: Q3XWPEZ8U
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-325537
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "The following runways are available: 07/250 and 01/190. The wind is
+      coming from 350°/25 degrees. Which runway should the pilot choose?"
+    explanation: ""
+    options:
+      - id: OCNLGCT0L
+        text: "250"
+        correct: false
+        why: ""
+      - id: ORBTJEHSG
+        text: "010"
+        correct: true
+        why: ""
+      - id: OQIX9U3CH
+        text: "070"
+        correct: false
+        why: ""
+      - id: OHYG5IEYI
+        text: "190"
+        correct: false
+        why: ""
+- id: Q6DQNJNR0
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323360
+    - ATPLGS-107399
+    - ATPLGS-625118
+    - BGS-320091
+    - AVEXAM-23442
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: The stalling speed or the minimum steady flight speed at which the
+      aeroplane is controllable in landing configuration is abbreviated as...
+    explanation: ""
+    options:
+      - id: OZR4L6QCB
+        text: VMC.
+        correct: false
+        why: ""
+      - id: OTNETEQLX
+        text: VSO.
+        correct: true
+        why: ""
+      - id: OU8GQ0RPF
+        text: VS.
+        correct: false
+        why: ""
+      - id: OUC6XHKGM
+        text: VS1.
+        correct: false
+        why: ""
+- id: Q90OS6YYM
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326479
+    - ATPLGS-107751
+    - ATPLGS-627415
+    - AVEXAM-80604
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: Which of the following groups of conditions are the most favourable
+      for take-off?
+    explanation: ""
+    options:
+      - id: OQLATUOCS
+        text: High airfield elevation, low temperature, high atmospheric pressure.
+        correct: false
+        why: ""
+      - id: O39VXUFEG
+        text: Low airfield elevation, low humidity, low temperature, high atmospheric
+          pressure.
+        correct: true
+        why: ""
+      - id: OEATXY2H2
+        text: High airfield elevation, low humidity, high temperature, low atmospheric
+          pressure.
+        correct: false
+        why: ""
+      - id: OYDDZZD2G
+        text: Low airfield elevation, high temperature, low air density.
+        correct: false
+        why: ""
+- id: Q9MQBGOTA
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329968
+    - BGS-320980
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: A multi-engined performance class B aeroplane has a wingspan of less
+      than 60 metres. What is the semi-width of the obstacle accountability area
+      at a distance of D from the end of the TODA? A semi-width…
+    explanation: ""
+    options:
+      - id: OTJXL6LOK
+        text: at the discretion of the pilot to ensure obstacle avoidance.
+        correct: false
+        why: ""
+      - id: O8TM5OHUC
+        text: of at least 2 x wingspan plus 90 m, plus D x0.125.
+        correct: false
+        why: ""
+      - id: O5LUYMBJW
+        text: of at least 1/2 x wingspan plus 90 m, plus D x0.125.
+        correct: false
+        why: ""
+      - id: OAOHEIPJA
+        text: of at least 1/2 x wingspan plus 60 m, plus D x0.125.
+        correct: true
+        why: ""
+- id: QAJXOSOZK
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-327941
+    - AVEXAM-79154
+    - BGS-320771
+    - AVEXAM-28033
+    - ATPLGS-626979
+    - BGS-321138
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: In case of an obstacle that is within the obstacle accountability area
+      but at some distance from the threshold, what flap setting is generally
+      recommended?
+    explanation: ""
+    options:
+      - id: O78QBPMOD
+        text: Lower or no flap setting in order to achieve a greater climb gradient,
+          accepting an increased ground-roll distance.
+        correct: true
+        why: ""
+      - id: OZC2UZPZC
+        text: Higher flap setting in order to achieve a greater climb gradient,
+          accepting an increased ground-roll distance.
+        correct: false
+        why: ""
+      - id: OCT8XB5JI
+        text: Higher flap setting in order to achieve a shorter ground-roll distance and
+          a greater climb gradient.
+        correct: false
+        why: ""
+      - id: OCEQY7UPI
+        text: Lower or no flap setting in order to achieve a shorter ground-roll
+          distance and a greater climb gradient.
+        correct: false
+        why: ""
+- id: QATTFZLV
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326356
+    - BGS-321225
+    - AVEXAM-24883
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.03
+  template:
+    type: chart
+    question: >-
+      A multi-engine turboprop aircraft with a max take-off weight of 5 300 kg
+      is under performance class B.
+
+
+      Given the following speeds, what is its V**R** and V**2**.
+
+
+      V**SO**: 63 kt V**S1**: 69 kt V**S**: 77 kt V**MC**: 70 kt
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: "VR: 76 kt, V2: 83 kt"
+        wrongAnswers:
+          - "VR: 85 kt, V2: 92 kt"
+          - "VR: 69 kt, V2: 76 kt"
+          - "VR: 95 kt, V2: 102 kt"
+        explanation: For a Performance Class B aeroplane the rotation speed is 1.1 × VS1
+          = 1.1 × 69 = 76 kt. The take-off safety speed is 1.2 × VS1 = 1.2 × 69
+          = 83 kt. Both are above VMC (70 kt), so the answer is **VR 76 kt, V2
+          83 kt**.
+- id: QBPAZRGE
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-327825
+    - ATPLGS-107274
+    - AVEXAM-63746
+    - AVEXAM-74131
+    - BGS-320777
+    - AVEXAM-98974
+    - AVEXAM-43074
+    - AVEXAM-74967
+    - AVEXAM-52316
+    - ATPLGS-127658
+  annexes:
+    - cap-698-page-52-figure-4.1
+  learningObjectives:
+    - 032.02.03.01.07
+  template:
+    type: calculation
+    question: >-
+      Refer to the figure (CAP 698 file 4.1). Given the following information,
+      what is the maximum allowed wind speed (round down to whole knots)?
+
+
+      - Aeroplane maximum allowed crosswind component: {{cw}} kt
+
+      - Runway direction: {{rwy}}°(M)
+
+      - Wind direction: {{wd}}°(M)
+    variables:
+      - id: cw
+        label: Max crosswind component
+        unit: kt
+      - id: rwy
+        label: Runway direction
+        unit: °
+      - id: wd
+        label: Wind direction
+        unit: °
+    answer:
+      formula: floor(cw / abs(sin(wd - rwy)))
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: floor(cw / abs(cos(wd - rwy)))
+      - id: d2
+        formula: floor(cw * abs(sin(wd - rwy)))
+      - id: d3
+        formula: floor(cw / abs(tan(wd - rwy)))
+      - id: d4
+        formula: floor(cw * abs(cos(wd - rwy)))
+    presets:
+      - id: p1
+        values:
+          cw: 25
+          rwy: 240
+          wd: 190
+      - id: p2
+        values:
+          cw: 20
+          rwy: 120
+          wd: 170
+      - id: p3
+        values:
+          cw: 20
+          rwy: 90
+          wd: 130
+    explanation: >-
+      The crosswind component is the wind speed times the sine of the angle
+      between wind direction and runway direction. The maximum wind speed that
+      keeps the crosswind within its limit is therefore the limit divided by
+      that sine.
+
+
+      **Solution**
+
+
+      Angle = {{= abs(wd - rwy)}}°
+
+
+      {{f: cw / abs(sin(wd - rwy))}} = {{n: cw / abs(sin(wd - rwy))}} = {{= cw /
+      abs(sin(wd - rwy))}} kt, rounded down to **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: uses the cosine (headwind component) instead of the sine
+      of the angle.
+
+      - **{{d2}} kt**: multiplies the limit by the sine instead of dividing,
+      which gives the crosswind component of a wind equal to the limit.
+
+      - **{{d3}} kt**: uses the tangent of the angle.
+
+      - **{{d4}} kt**: multiplies by the cosine, a mix-up of the component
+      formulas.
+- id: QBSHDZN7T
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322908
+    - ATPLGS-107788
+    - AVEXAM-53731
+    - ATPLGS-107456
+    - AVEXAM-97269
+    - ATPLGS-122958
+    - ATPLGS-107604
+    - ATPLGS-107633
+    - ATPLGS-107461
+    - AVEXAM-55505
+    - AVEXAM-50976
+    - AVEXAM-26505
+    - AVEXAM-79124
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: Assume a normal approach and landing with a class B aeroplane on a dry
+      runway. Which of the following values shows the corresponding screen
+      height?
+    explanation: ""
+    options:
+      - id: O2SFZ4O6B
+        text: "60 ft "
+        correct: false
+        why: ""
+      - id: O5KOSRIGM
+        text: "50 ft "
+        correct: true
+        why: ""
+      - id: OIIILHJFC
+        text: "35 ft "
+        correct: false
+        why: ""
+      - id: OKOVHCTLJ
+        text: "100 ft "
+        correct: false
+        why: ""
+- id: QBWYHQED4
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324792
+    - AVEXAM-61320
+    - BGS-320075
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "Changing the take-off flap setting from flap 15° to flap 5° will
+      normally result in:"
+    explanation: ""
+    options:
+      - id: OIK1QOTTG
+        text: "a shorter take-off distance and an equal climb. "
+        correct: false
+        why: ""
+      - id: OVBRRYIKI
+        text: "a longer take-off distance and a better climb. "
+        correct: true
+        why: ""
+      - id: OPOJIBXEW
+        text: "a shorter take-off distance and a better climb. "
+        correct: false
+        why: ""
+      - id: OAG1MPIGV
+        text: "a better climb and an equal take-off distance. "
+        correct: false
+        why: ""
+- id: QCFKXVBZ
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-325854
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.09
+  template:
+    type: simple
+    question: What will be the effect on the landing distance required for a Class B
+      aircraft, if the runway has a downhill slope of 2%?
+    explanation: ""
+    options:
+      - id: OBSYHZANA
+        text: The landing distance required is not affected by downhill slopes.
+        correct: false
+        why: ""
+      - id: OBYYITJYM
+        text: The landing distance required will increase by 10%.
+        correct: true
+        why: ""
+      - id: OCBSYSNCV
+        text: The landing distance required will increase by 5%.
+        correct: false
+        why: ""
+      - id: OXEO3ZROI
+        text: The landing distance required will increase by 2%.
+        correct: false
+        why: ""
+- id: QCFTR1UKL
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326431
+    - ATPLGS-625111
+    - BGS-320775
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: A Performance Class B aeroplane is being used in a Commercial Air
+      Transport operation. No stopway or clearway is available. The unfactored
+      Take-Off Distance, specified in the AFM, shall not exceed the Take-Off Run
+      Available TORA when multiplied by a factor of…
+    explanation: ""
+    options:
+      - id: OIKTALEQJ
+        text: 1.5.
+        correct: false
+        why: ""
+      - id: ONSNZLUBE
+        text: 1.15.
+        correct: false
+        why: ""
+      - id: O8ESWCGUV
+        text: 1.25.
+        correct: true
+        why: ""
+      - id: OEE7WVMZL
+        text: 1.3.
+        correct: false
+        why: ""
+- id: QCUX6FIOW
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329582
+    - AVEXAM-75047
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "Consider two different aircraft: a single-engine piston (SEP)
+      producing 160 hp and a weight of 1300 lb, and a multi-engine piston (MEP)
+      with two engines, each with 160 hp and a weight of 1900 lb. In the event
+      of an engine failure, which of these aircraft would perform better?"
+    explanation: ""
+    options:
+      - id: O18USHDA4
+        text: The SEP aircraft is due to its higher power-to-weight ratio compared to
+          the MEP.
+        correct: false
+        why: ""
+      - id: OISRGHDJH
+        text: The MEP aircraft due to its redundancy.
+        correct: true
+        why: ""
+      - id: OG7VR39HP
+        text: The SEP aircraft is due to its lighter weight and simpler configuration.
+        correct: false
+        why: ""
+      - id: OVBYMI0CU
+        text: Both aircraft would perform similarly in the event of an engine failure.
+        correct: false
+        why: ""
+- id: QDAP2H0E5
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329255
+    - AVEXAM-1026
+    - ATPLGS-113835
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: The rotation speed V**R** for normal utility single-engined landplanes
+      (MTOM 5700 kg or less) must be the same as or faster than..
+    explanation: ""
+    options:
+      - id: O8EC1BCTR
+        text: 1.10 VMC or 1.20 VS1, whichever is the greater.
+        correct: false
+        why: ""
+      - id: ONZWPNHMN
+        text: 1.20 VS1.
+        correct: false
+        why: ""
+      - id: OB6OY4XVW
+        text: 1.05 VMC or 1.10 VS1, whichever is the greater.
+        correct: false
+        why: ""
+      - id: OOWYDQMWS
+        text: VS1.
+        correct: true
+        why: ""
+- id: QDFIO3SCE
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329191
+    - AVEXAM-57246
+    - BGS-321005
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: Which of the following options correctly describes the effects on
+      aircraft performance of landing on wet or contaminated runways?
+    explanation: ""
+    options:
+      - id: OPIS6P4ZU
+        text: The effect of the increased wheel drag through the water is far greater
+          than the loss of friction and reduced braking effect, therefore
+          landing distances decrease.
+        correct: false
+        why: ""
+      - id: OYPFFN5Q3
+        text: Hydroplaning creates more drag on the wheels, which is evenly balanced by
+          less effective brake drag, thus creating a similar deceleration force
+          compared to a dry runway.
+        correct: false
+        why: ""
+      - id: O9OZL8JH0
+        text: The lower effective braking force has a much greater effect on increasing
+          the landing distance than the benefit of higher drag.
+        correct: true
+        why: ""
+      - id: OFBTXLJYS
+        text: The coefficient of friction is dramatically increased, which reduces the
+          maximum braking energy that can be applied, which increases the
+          landing distance.
+        correct: false
+        why: ""
+- id: QDFLQZWC
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324233
+    - ATPLGS-625177
+    - AVEXAM-60897
+    - AVEXAM-21540
+    - ATPLGS-625079
+    - BGS-320726
+    - AVEXAM-8777
+    - BGS-320725
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.12
+  template:
+    type: simple
+    question: A Performance Class B, multi engined aeroplane is used for Commercial
+      Air Transport. The Take-Off Distance calculations must take into
+      account...
+    explanation: ""
+    options:
+      - id: OMYJNILUK
+        text: 50% of the reported Tailwind Component.
+        correct: false
+        why: ""
+      - id: OIQXXFGGB
+        text: at most only 50% of the reported Tailwind Component.
+        correct: false
+        why: ""
+      - id: OKK66QHDO
+        text: at least 150% of the reported Tailwind Component.
+        correct: true
+        why: ""
+      - id: OR2RQU9QC
+        text: the actual Tailwind Component.
+        correct: false
+        why: ""
+- id: QDJBVMXQY
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324587
+    - AVEXAM-71125
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "For an SEP in the utility category, taking-off on a dry paved runway,
+      the minimum value of V**R** is:"
+    explanation: ""
+    options:
+      - id: ODZFHEKCM
+        text: V2
+        correct: false
+        why: ""
+      - id: OZJ5ZIG05
+        text: The higher of 1.05VMCA or 1.2VSR
+        correct: false
+        why: ""
+      - id: OFTXNBZ3G
+        text: VS1
+        correct: true
+        why: ""
+      - id: OZNEJMKEV
+        text: The higher of 1.1VMCA or 1.25VSR
+        correct: false
+        why: ""
+- id: QDJFGCUO
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-321900
+    - AVEXAM-66533
+    - BGS-321010
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.02
+  template:
+    type: calculation
+    question: >-
+      What will be the V_REF speed for a Class B performance category
+      single-engined piston aeroplane with a maximum take-off mass of 1633 kg,
+      given the following stall speeds?
+
+
+      - V_SO: {{vso}} kt
+
+      - V_S1: {{vs1}} kt
+
+      - V_S: {{vs}} kt
+    variables:
+      - id: vso
+        label: V_SO
+        unit: kt
+      - id: vs1
+        label: V_S1
+        unit: kt
+      - id: vs
+        label: V_S
+        unit: kt
+    answer:
+      formula: 1.3 * vso
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: 1.2 * vs1
+      - id: d2
+        formula: 1.3 * vs1
+      - id: d3
+        formula: 1.3 * vs
+    presets:
+      - id: p1
+        values:
+          vso: 60
+          vs1: 63
+          vs: 68
+      - id: p2
+        values:
+          vso: 56
+          vs1: 60
+          vs: 64
+      - id: p3
+        values:
+          vso: 50
+          vs1: 53
+          vs: 57
+    explanation: >-
+      For a Class B aeroplane the reference landing speed V_REF is 1.3 times the
+      stall speed in the landing configuration, V_SO.
+
+
+      **Solution**
+
+
+      {{f: 1.3 * vso}} = {{n: 1.3 * vso}} = **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: uses a factor of 1.2 applied to V_S1.
+
+      - **{{d2}} kt**: applies 1.3 to V_S1 (clean/specified configuration)
+      instead of V_SO (landing configuration).
+
+      - **{{d3}} kt**: applies 1.3 to V_S instead of V_SO.
+- id: QDRKOSMP
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328920
+    - AVEXAM-97107
+    - ATPLGS-626485
+    - BGS-320491
+    - BGS-320490
+    - AVEXAM-60130
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.12
+  template:
+    type: simple
+    question: During take-offs for a twin engine aircraft with wing mounted engines
+      (both being right hand props), which of the following conditions is the
+      most favourable handling-wise?
+    explanation: ""
+    options:
+      - id: OH53W9TDY
+        text: Left quartering wind and left engine failure.
+        correct: false
+        why: ""
+      - id: OZOYR5AST
+        text: Left quartering wind and right engine failure.
+        correct: true
+        why: ""
+      - id: OINM4NOAX
+        text: Right quartering wind and right engine failure.
+        correct: false
+        why: ""
+      - id: OORRM4LBW
+        text: Right quartering wind and left engine failure.
+        correct: false
+        why: ""
+- id: QE8EVJ4BM
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326561
+    - AVEXAM-77257
+    - BGS-320823
+    - AVEXAM-30091
+    - ATPLGS-627863
+    - AVEXAM-70704
+    - BGS-320829
+    - BGS-320938
+  annexes: []
+  learningObjectives:
+    - 032.02.04.01.03
+  template:
+    type: chart
+    question: "For planning purposes, determine the net distance travelled down to 4
+      000 ft for a single-engine piston aircraft following an engine failure at
+      8 000 ft. Given the following data: TAS: 120 kts GS: 150 kts Gross
+      gradient of descent 11% Gross/net gradient decrement 0.5% Still air
+      distance (ft) = (Height difference (ft) x 100) / % net gradient Ground
+      distance = still air distance x (groundspeed / TAS)"
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 7.1 NM
+        wrongAnswers:
+          - 5.7 NM
+          - 6.2 NM
+          - 7.8 NM
+        explanation: The net gradient is 11 + 0.5 = 11.5 %. The still-air distance for
+          the 4 000 ft descent is 4 000 × 100 ÷ 11.5 = 34 783 ft, about 5.7 NM.
+          Correcting for the wind multiplies it by 150 ÷ 120, giving about **7.1
+          NM**.
+- id: QEFFTGLEG
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323113
+    - AVEXAM-61702
+    - ATPLGS-114013
+    - ATPLGS-107401
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: >-
+      CS-23 defines a certain speed that must be reached on take-off. What speed
+      is needed to correctly complete the following statement for item 2? For
+      normal utility single-engined aeroplanes, the speed at 15 m (50 ft) above
+      the take-off surface level must not be less than the higher of:
+
+
+      1\. a speed that is safe under all reasonably expected conditions,
+      including turbulence and complete engine failure, or   
+
+      2\. ....
+    explanation: ""
+    options:
+      - id: OH3ZKBDF0
+        text: 1.20 VS1.
+        correct: true
+        why: ""
+      - id: OJJXI7IZ7
+        text: 1.10 VS1.
+        correct: false
+        why: ""
+      - id: OBQ7JRZ5Q
+        text: 1.05 VMC.
+        correct: false
+        why: ""
+      - id: OFBBWA0XO
+        text: 1.10 VMC.
+        correct: false
+        why: ""
+- id: QEPWLCPG7
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323555
+    - BGS-320220
+    - AVEXAM-99732
+    - ATPLGS-114167
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "The combination of factors that most requires a low-angled flap
+      setting for take-off is:"
+    explanation: ""
+    options:
+      - id: OUSYPAIWS
+        text: Low field elevation, no obstacles in the climb-out path, short runway and
+          a low ambient temperature.
+        correct: false
+        why: ""
+      - id: OQ3DX6QEE
+        text: Low field elevation, close-in obstacles in the climb-out path, short
+          runway and a high ambient temperature.
+        correct: false
+        why: ""
+      - id: OLIY7E3TL
+        text: High field elevation, distant obstacles in the climb-out path, long runway
+          and a high ambient temperature.
+        correct: true
+        why: ""
+      - id: OYJGVHA8O
+        text: High field elevation, no obstacles in the climb-out path, low ambient
+          temperature and short runway.
+        correct: false
+        why: ""
+- id: QEVDPEOE
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328270
+    - AVEXAM-95417
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.12
+  template:
+    type: simple
+    question: >-
+      Fill in the blanks:
+
+
+      For an aeroplane in Performance Class B, the net take-off flight path
+      begins at a height of (1)\_\_\_\_\_ and ends at a height of (2)\_\_\_\_\_.
+    explanation: ""
+    options:
+      - id: OIEOWJJJV
+        text: (1) 50 ft; (2) 1 500 ft.
+        correct: true
+        why: ""
+      - id: OTWBSV8Z4
+        text: (1) 35 ft; (2) 1 000 ft.
+        correct: false
+        why: ""
+      - id: OFWBI8CNK
+        text: (1) 35 ft; (2) 1 500 ft.
+        correct: false
+        why: ""
+      - id: OU0G4RIPI
+        text: (1) 50 ft; (2) 1 000 ft.
+        correct: false
+        why: ""
+- id: QFIHNIAOO
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322024
+    - BGS-320306
+    - ATPLGS-107619
+    - AVEXAM-66953
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "Assuming the gross mass, altitude and airspeed remain unchanged,
+      moving the Centre of Gravity from the forward safe limit to the aft safe
+      limit:"
+    explanation: ""
+    options:
+      - id: OBGOZOY1O
+        text: increases the power required.
+        correct: false
+        why: ""
+      - id: ODHJ0Z1TS
+        text: affects neither drag nor power required.
+        correct: false
+        why: ""
+      - id: OVADWND9R
+        text: increases the induced drag.
+        correct: false
+        why: ""
+      - id: O8NUYJZ1Z
+        text: decreases the induced drag and reduces the power required.
+        correct: true
+        why: ""
+- id: QFLMMMFQ
+  docId: "032.02"
+  relatedQuestions:
+    - Q7T8VCJFM
+  externalIds:
+    - ATPLQ-327057
+    - AVEXAM-80881
+    - AVEXAM-55288
+    - AVEXAM-83780
+  annexes:
+    - 032-airfield-diagram-with-crossing-runways-09-27-and-18-36
+  learningObjectives:
+    - 032.02.04.01.02
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to the figure. Given the following information, calculate the
+      obstacle clearance for a departure on the runway track from runway 27 in a
+      class B SEP aircraft:
+
+
+      - Climb gradient: {{gradient}} %
+
+      - TAS: {{tas}} kt
+
+      - Wind: {{wdir}} degrees / {{wspd}} kt
+
+      - Runway heading: {{rwy}} degrees
+
+
+      1 NM = 6080 ft
+
+
+      The ground distance to the obstacle ({{gd}} NM) and the obstacle height
+      ({{obst}} ft) are the values read from the figure.
+
+
+      Height gain = ((GD x gradient) / 100) x (TAS / GS). Give the obstacle
+      clearance in ft.
+    variables:
+      - id: gradient
+        label: Climb gradient
+        unit: "%"
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: wdir
+        label: Wind direction
+        unit: deg
+      - id: wspd
+        label: Wind speed
+        unit: kt
+      - id: rwy
+        label: Runway heading
+        unit: deg
+      - id: gd
+        label: Ground distance to obstacle (read from the figure)
+        unit: NM
+      - id: obst
+        label: Obstacle height (read from the figure)
+        unit: ft
+    chartInputs:
+      - gd
+      - obst
+    answer:
+      formula: gd * 6080 * gradient / 100 * tas / (tas - wspd * cos(wdir - rwy)) - obst
+      unit: ft
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: gd * 6080 * gradient / 100 - obst
+      - id: d2
+        formula: gd * 6080 * gradient / 100 * tas / (tas + wspd * cos(wdir - rwy)) -
+          obst
+      - id: d3
+        formula: gd * 6080 * gradient / 100 * tas / (tas - wspd * cos(wdir - rwy))
+      - id: d4
+        formula: gd * 6080 * gradient / 100 * tas / (tas - wspd) - obst
+      - id: d5
+        formula: gd * 6080 * gradient / 100 * tas / (tas - wspd * sin(wdir - rwy)) -
+          obst
+    presets:
+      - id: p1
+        values:
+          gradient: 4.5
+          tas: 115
+          wdir: 230
+          wspd: 14
+          rwy: 270
+          gd: 3
+          obst: 152
+      - id: p2
+        values:
+          gradient: 5
+          tas: 120
+          wdir: 200
+          wspd: 10
+          rwy: 270
+          gd: 2.5
+          obst: 300
+      - id: p3
+        values:
+          gradient: 6
+          tas: 125
+          wdir: 330
+          wspd: 16
+          rwy: 270
+          gd: 2
+          obst: 250
+    explanation: >-
+      The obstacle clearance is the height gained at the obstacle minus the
+      obstacle height. The headwind component follows from the wind angle
+      relative to the runway heading, and it gives the ground speed used to
+      correct the gained height by TAS/GS.
+
+
+      **Solution**
+
+
+      Headwind component = wind speed x cos(wind direction - runway heading) =
+      {{= wspd * cos(wdir - rwy)}} kt
+
+
+      GS = TAS - headwind = {{= tas - wspd * cos(wdir - rwy)}} kt
+
+
+      Height gain = {{f: gd * 6080 * gradient / 100 * tas / (tas - wspd *
+      cos(wdir - rwy))}} = {{= gd * 6080 * gradient / 100 * tas / (tas - wspd *
+      cos(wdir - rwy))}} ft
+
+
+      Clearance = {{= gd * 6080 * gradient / 100 * tas / (tas - wspd * cos(wdir
+      - rwy))}} ft - {{obst}} ft = **{{answer}} ft**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ft**: ignores the wind (TAS = GS).
+
+      - **{{d2}} ft**: treats the headwind component as a tailwind.
+
+      - **{{d3}} ft**: this is the height gain; the obstacle height was not
+      subtracted.
+
+      - **{{d4}} ft**: uses the full wind speed instead of its headwind
+      component.
+
+      - **{{d5}} ft**: uses sin instead of cos for the headwind component.
+- id: QFQUEGCA
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328257
+    - AVEXAM-77402
+    - BGS-320131
+    - ATPLGS-622222
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.06
+  template:
+    type: simple
+    question: The critical engine inoperative…
+    explanation: ""
+    options:
+      - id: OO7SRDZLM
+        text: increases the power required and the total drag due to the additional drag
+          of the windmilling engine and the compensation of the yaw moment.
+        correct: true
+        why: ""
+      - id: OCZMR6KXF
+        text: does not affect the aeroplane performance since it is independent of the
+          power plant.
+        correct: false
+        why: ""
+      - id: OFZVYK7CD
+        text: increases the power required and decreases the total drag due to the
+          windmilling engine.
+        correct: false
+        why: ""
+      - id: OZDCAUSIY
+        text: decreases the power required and increases the total drag due to the
+          additional drag of the windmilling engine and the compensation of the
+          yaw moment.
+        correct: false
+        why: ""
+- id: QFTE7PNR2
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329660
+    - ATPLGS-625112
+    - AVEXAM-94705
+    - BGS-320617
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "Which of the following requirements must be met by a MEP Performance
+      Class B aircraft landing on dry runways? The actual landing distance shall
+      be less than:"
+    explanation: ""
+    options:
+      - id: OGPNYLBGO
+        text: 1.43 x LDA.
+        correct: false
+        why: ""
+      - id: OORF8ASQU
+        text: 0.6 x LDA.
+        correct: false
+        why: ""
+      - id: OJHUXZKCB
+        text: 0.7 x LDA.
+        correct: true
+        why: ""
+      - id: OBBPXKEZF
+        text: 1.15 x LDA.
+        correct: false
+        why: ""
+- id: QFUXKFLM
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328334
+    - ATPLGS-113512
+    - AVEXAM-24852
+    - AVEXAM-54793
+    - ATPLGS-122635
+    - ATPLGS-107625
+  annexes: []
+  learningObjectives:
+    - 032.02.04.01.02
+  template:
+    type: simple
+    question: >-
+      A twin-engine piston aeroplane with all engines operating commences
+      take-off and the following information is given:
+
+
+      Maximum take-off mass: 4 750 kg   
+
+      Airport elevation: 500 ft   
+
+      Obstacle elevation: 644 ft   
+
+      Distance from the end of the take-off distance to the obstacle: 2 000 m   
+
+      Temperature: ISA   
+
+      QNH: 1 018 hPa   
+
+      SID: straight departure, no specific climb requirements published
+
+
+      What is the regulatory minimum vertical clearance between aircraft and
+      obstacle?
+    explanation: ""
+    options:
+      - id: OVOILGSJ8
+        text: 35 ft
+        correct: false
+        why: ""
+      - id: OH30CLTVI
+        text: 50 ft
+        correct: true
+        why: ""
+      - id: OUNMXDWA2
+        text: 694 ft
+        correct: false
+        why: ""
+      - id: OIGNZVKDP
+        text: 175 ft
+        correct: false
+        why: ""
+- id: QFXTUSLR
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324203
+    - ATPLGS-625085
+    - AVEXAM-53333
+  annexes: []
+  learningObjectives:
+    - 032.02.04.01.03
+  template:
+    type: simple
+    question: "An aircraft has a descent gradient of 4.8% with the engine
+      inoperative. For the purpose of compliance with the en-route requirements,
+      the distance travelled during a height loss of 2000 ft would be (Class B
+      single engine):"
+    explanation: ""
+    options:
+      - id: OATYXSZWW
+        text: 6.8 NM
+        correct: false
+        why: ""
+      - id: OTQGQQSXW
+        text: 6.2 NM
+        correct: true
+        why: ""
+      - id: OOUOREERH
+        text: 9.6 NM
+        correct: false
+        why: ""
+      - id: OKTRIHQLT
+        text: 7.65 NM
+        correct: false
+        why: ""
+- id: QGBPPLLDH
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322841
+    - AVEXAM-23911
+    - ATPLGS-625199
+    - AVEXAM-44588
+    - BGS-320143
+    - BGS-320621
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "An aircraft has two certified landing flaps positions, 25° and 35°.
+      If a pilot chooses 25° instead of 35°, the aircraft will have:"
+    explanation: ""
+    options:
+      - id: OZ6PKEYIH
+        text: "a reduced landing distance and better go-around performance. "
+        correct: false
+        why: ""
+      - id: OZYYNY9CS
+        text: "a reduced landing distance and degraded go-around performance. "
+        correct: false
+        why: ""
+      - id: OH1LPHTA6
+        text: an increased landing distance and degraded go-around performance.
+        correct: false
+        why: ""
+      - id: OWULY7LVK
+        text: "an increased landing distance and better go-around performance. "
+        correct: true
+        why: ""
+- id: QGNZEZTD
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322455
+    - AVEXAM-66233
+    - BGS-320628
+    - ATPLGS-626980
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.11
+  template:
+    type: simple
+    question: How does a change in Pressure Altitude influence the Landing Distance
+      and Ground Roll Distance?
+    explanation: ""
+    options:
+      - id: OOXQ4VX5K
+        text: Higher Pressure Altitude results in an increased Landing Distance Required
+          and an increased Ground Roll Distance.
+        correct: true
+        why: ""
+      - id: O3XNIPSXP
+        text: Higher Pressure Altitude results in a decreased Landing Distance Required
+          and a decreased Ground Roll Distance.
+        correct: false
+        why: ""
+      - id: OM7SGHXER
+        text: Lower Pressure Altitude results in a decreased Landing Distance Required
+          and an increased Ground Roll Distance.
+        correct: false
+        why: ""
+      - id: OSSDKT977
+        text: Lower Pressure Altitude results in an increased Landing Distance Required
+          and a decreased Ground Roll Distance.
+        correct: false
+        why: ""
+- id: QGQEOCNWR
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329836
+    - ATPLGS-625201
+    - BGS-320766
+    - BGS-320631
+    - ATPLGS-627419
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.11
+  template:
+    type: simple
+    question: If air density increases, the take-off distance required / landing
+      distance required will...
+    explanation: ""
+    options:
+      - id: OMADOD9OH
+        text: increase / decrease.
+        correct: false
+        why: ""
+      - id: ONCTZS2CP
+        text: increase / increase.
+        correct: false
+        why: ""
+      - id: OEZK3K0V8
+        text: decrease / increase.
+        correct: false
+        why: ""
+      - id: OBX5TTT1C
+        text: decrease / decrease.
+        correct: true
+        why: ""
+- id: QH0C3NKF5
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-327546
+    - BGS-321202
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: You are flying an aircraft just after takeoff with a rate of climb of
+      500 ft/min, a TAS of 110 kt and no wind. You are at the 50 ft screen
+      height, and there is a crane located 374 m ahead with a height of 9 m
+      (over the runway elevation). What will be the obstacle clearance over the
+      crane?
+    explanation: ""
+    options:
+      - id: OMPOVQOGG
+        text: 22.9 m
+        correct: true
+        why: ""
+      - id: OKULSDOKT
+        text: 55 m
+        correct: false
+        why: ""
+      - id: OK7PPAFZK
+        text: 10.1 m
+        correct: false
+        why: ""
+      - id: OILN576LB
+        text: 7.6 m
+        correct: false
+        why: ""
+- id: QHI35MMTP
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-327815
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: What effect will an increase in temperature and pressure altitude have
+      on landing distance?
+    explanation: ""
+    options:
+      - id: OWPJVB3DY
+        text: Landing distance increases due to increased air density.
+        correct: false
+        why: ""
+      - id: OQ9MMF0BZ
+        text: Landing distance decreases due to increased air density.
+        correct: false
+        why: ""
+      - id: OJXJXZQUC
+        text: Landing distance increases due to reduced air density.
+        correct: true
+        why: ""
+      - id: OUNRYN9XC
+        text: Landing distance decreases due to reduced air density.
+        correct: false
+        why: ""
+- id: QHTNQYBR
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323800
+    - AVEXAM-82381
+    - AVEXAM-1862
+    - BGS-320783
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.09
+  template:
+    type: simple
+    question: Unless otherwise specified, when landing on a runway with a downslope
+      of 2%, the landing distances required should be increased by..
+    explanation: ""
+    options:
+      - id: OZPNCFRVF
+        text: 5%.
+        correct: false
+        why: ""
+      - id: O5W4FLOAF
+        text: 15%.
+        correct: false
+        why: ""
+      - id: ODFDIZI1J
+        text: 2%.
+        correct: false
+        why: ""
+      - id: OGWDFLRQE
+        text: 10%.
+        correct: true
+        why: ""
+- id: QHVMABMTM
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323379
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: calculation
+    question: >-
+      Based on actual conditions, an aeroplane has the following performance
+      take-off mass limitations:
+
+
+      | FLAPS | **0º** | **10º** | **15º** |
+
+      | ------ | ------- | ------- | ------- |
+
+      | RUNWAY | {{r0}} kg | {{r10}} kg | {{r15}} kg |
+
+      | CLIMB | {{c0}} kg | {{c10}} kg | {{c15}} kg |
+
+
+      Structural limits: take-off/landing/zero fuel: {{smax}} kg
+
+
+      The Maximum Take-off Mass is:
+    variables:
+      - id: r0
+        label: Runway limit flaps 0
+        unit: kg
+      - id: r10
+        label: Runway limit flaps 10
+        unit: kg
+      - id: r15
+        label: Runway limit flaps 15
+        unit: kg
+      - id: c0
+        label: Climb limit flaps 0
+        unit: kg
+      - id: c10
+        label: Climb limit flaps 10
+        unit: kg
+      - id: c15
+        label: Climb limit flaps 15
+        unit: kg
+      - id: smax
+        label: Structural limit
+        unit: kg
+    answer:
+      formula: min(smax, max(min(r0, c0), min(r10, c10), min(r15, c15)))
+      unit: kg
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: min(r15, c15)
+      - id: d2
+        formula: max(c0, c10, c15)
+      - id: d3
+        formula: min(r0, c0)
+    presets:
+      - id: p1
+        values:
+          r0: 4100
+          r10: 4400
+          r15: 4600
+          c0: 4700
+          c10: 4500
+          c15: 4200
+          smax: 4300
+      - id: p2
+        values:
+          r0: 5100
+          r10: 5400
+          r15: 5700
+          c0: 5900
+          c10: 5600
+          c15: 5200
+          smax: 5500
+    explanation: >-
+      For each flap setting the take-off mass is limited by the lower of the
+      runway limit and the climb limit. The best flap setting is the one that
+      gives the highest of these values, and the structural limit then caps the
+      result.
+
+
+      **Solution**
+
+
+      For each flap setting take the lower of runway and climb limit, choose the
+      highest of the three, then compare it with the structural limit:
+
+
+      {{f: min(smax, max(min(r0, c0), min(r10, c10), min(r15, c15)))}} = {{n:
+      min(smax, max(min(r0, c0), min(r10, c10), min(r15, c15)))}} = **{{answer}}
+      kg**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg**: takes the limit of flaps 15 only, which is not the best
+      flap setting.
+
+      - **{{d2}} kg**: takes the highest climb limit and ignores the runway and
+      structural limits.
+
+      - **{{d3}} kg**: takes the limit of flaps 0 only, which is not the best
+      flap setting.
+- id: QI3PUPWAR
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329453
+    - AVEXAM-92710
+    - BGS-321157
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: A light twin piston-engined aeroplane is cruising at 2000 ft when one
+      of its engines fails. Whilst the pilot is performing the necessary actions
+      to secure the engine, they observe that the aircraft is in a very slow
+      descent, even with their operative engine at maximum continuous power.
+      What is the reason for this?
+    explanation: ""
+    options:
+      - id: OP7A32Q80
+        text: The power required has reduced because drag is increased by the stationary
+          propeller and the required control inputs to maintain direction, and
+          the remaining engine has sufficient excess power.
+        correct: false
+        why: ""
+      - id: OKLGAOVNU
+        text: The power available has reduced because the feathered propeller only
+          produces a small amount of thrust compared to normal and therefore the
+          power required is less than the power available.
+        correct: false
+        why: ""
+      - id: OLYVJEFDB
+        text: The pilot must NOT have feathered the propeller of the failed engine,
+          because ALL twin-engined aeroplanes that are certified in accordance
+          with CS-23 must be able to climb within their environmental envelope.
+        correct: false
+        why: ""
+      - id: OXTKZADEJ
+        text: The increased drag from the propeller of the failed engine and the
+          required control inputs to maintain direction mean that the power from
+          the remaining engine is insufficient to maintain altitude.
+        correct: true
+        why: ""
+- id: QJJDQARD
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323505
+    - AVEXAM-9393
+    - ATPLGS-627861
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.05
+  template:
+    type: simple
+    question: Which propeller configuration will give the best controllability if a
+      light twin aircraft suffers a failure of the critical engine after
+      departure?
+    explanation: ""
+    options:
+      - id: OT8DLQ8XM
+        text: Counter rotating propellers.
+        correct: true
+        why: ""
+      - id: ONIPCHBVW
+        text: Engines mounted on the side of the fuselage.
+        correct: false
+        why: ""
+      - id: OYADQSISV
+        text: Both engines producing the same thrust line.
+        correct: false
+        why: ""
+      - id: O5UJTWFOT
+        text: Clockwise rotating propellers.
+        correct: false
+        why: ""
+- id: QKIUGGFA
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323002
+    - AVEXAM-42860
+  annexes: []
+  learningObjectives:
+    - 032.02.04.01.02
+  template:
+    type: calculation
+    question: Following a take-off limited by the 50 ft screen height, a light
+      twin-engine aircraft climbs on a gradient of {{grad}}%. What is the
+      obstacle clearance margin above a {{oh}} ft obstacle (relative to the
+      runway), situated {{dist}} NM from the 50 ft point? (1 NM = 6 080 ft)
+    variables:
+      - id: grad
+        label: Climb gradient
+        unit: "%"
+      - id: oh
+        label: Obstacle height
+        unit: ft
+      - id: dist
+        label: Distance from the 50 ft point
+        unit: NM
+    answer:
+      formula: 50 + grad / 100 * dist * 6080 - oh
+      unit: ft
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: grad / 100 * dist * 6080 - oh
+      - id: d2
+        formula: grad / 100 * dist * 6080 - 50 - oh
+      - id: d3
+        formula: 50 + grad / 100 * dist * 1852 - oh
+      - id: d4
+        formula: 50 + grad / 100 * dist * 6080
+    presets:
+      - id: p1
+        values:
+          grad: 9
+          oh: 800
+          dist: 2
+      - id: p2
+        values:
+          grad: 7
+          oh: 500
+          dist: 3
+      - id: p3
+        values:
+          grad: 5
+          oh: 900
+          dist: 4
+    explanation: >-
+      After lift-off the aeroplane starts at the 50 ft screen height and then
+      gains height at the climb gradient. The clearance is that height at the
+      obstacle minus the obstacle height.
+
+
+      **Solution**
+
+
+      Height gain = {{= grad / 100 * dist * 6080}} ft
+
+
+      {{f: 50 + grad / 100 * dist * 6080 - oh}} = {{n: 50 + grad / 100 * dist *
+      6080 - oh}} = **{{answer}} ft**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ft**: the 50 ft screen height forgotten.
+
+      - **{{d2}} ft**: the screen height subtracted instead of added.
+
+      - **{{d3}} ft**: the distance converted with 1 NM = 1852 ft, but 1852 is
+      the metre value.
+
+      - **{{d4}} ft**: the obstacle height not subtracted.
+- id: QKOKURDTD
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324683
+    - ATPLGS-114124
+    - BGS-320378
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: multiple-correct
+    question: |-
+      The following parameters affect the take-off ground run:
+
+      Which parameters will decrease the take-off ground run?
+    explanation: ""
+    options:
+      - text: decreasing take-off mass
+        correct: true
+        why: ""
+      - text: increasing take-off mass
+        correct: false
+        why: ""
+      - text: increasing density
+        correct: true
+        why: ""
+      - text: decreasing density
+        correct: false
+        why: ""
+      - text: increasing flap setting
+        correct: true
+        why: ""
+      - text: decreasing flap setting
+        correct: false
+        why: ""
+      - text: increasing pressure altitude
+        correct: false
+        why: ""
+      - text: decreasing pressure altitude
+        correct: true
+        why: ""
+- id: QKSUQDHN
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322570
+    - AVEXAM-20186
+    - AVEXAM-91587
+    - BGS-320888
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.01
+  template:
+    type: simple
+    question: "On landing an aircraft crosses the threshold at a correct screen
+      height of 50 ft but 10 kt faster than the correct VREF. Select the correct
+      statement:"
+    explanation: ""
+    options:
+      - id: O4JNUUHKS
+        text: Landing distance increases and the ground roll reduces.
+        correct: false
+        why: ""
+      - id: OVFTLNOXR
+        text: Landing distance decreases and the ground roll increases.
+        correct: false
+        why: ""
+      - id: OUFBRXREU
+        text: Landing distance decreases.
+        correct: false
+        why: ""
+      - id: O8DZESN3H
+        text: Landing distance increases.
+        correct: true
+        why: ""
+- id: QLSYJUQP
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323398
+    - BGS-321204
+    - AVEXAM-30326
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.07
+  template:
+    type: simple
+    question: >-
+      Consider a multi-engine aeroplane with an MTOW < 5700kg. The aeroplane is
+      flying at 2 000 ft with an engine failed, maintaining maximum power and
+      the minimum control speed (VMC) for this altitude.
+
+
+      If the pilot descends, maintaining the same speed and power setting, the
+      directional control of the aeroplane will be (1) \_\_\_\_\_, because VMC
+      (2) \_\_\_\_\_ as altitude decreases.
+    explanation: ""
+    options:
+      - id: OXMGXBSL3
+        text: (1) maintained; (2) decreases
+        correct: false
+        why: ""
+      - id: ONZVBBJKY
+        text: (1) maintained; (2) increases
+        correct: false
+        why: ""
+      - id: OTLIZCLPQ
+        text: (1) lost; (2) increases
+        correct: true
+        why: ""
+      - id: OKQ8KAWIS
+        text: (1) lost; (2) decreases
+        correct: false
+        why: ""
+- id: QMNOJZSTT
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322063
+    - AVEXAM-91145
+    - AVEXAM-65032
+    - ATPLGS-122962
+    - BGS-320694
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: Consider a climb with a piston engine aeroplane. What will happen to
+      the fuel flow if the pilot maintains the same power setting?
+    explanation: ""
+    options:
+      - id: OSNQ5C7TR
+        text: With increasing altitude air density decreases, therefore less fuel is
+          required for combustion, so the fuel flow decreases.
+        correct: true
+        why: ""
+      - id: OBQ8HNGUD
+        text: With increasing altitude air density decreases and the power output of the
+          engine decreases. This has to be compensated for by an increased fuel
+          flow.
+        correct: false
+        why: ""
+      - id: OFGQHQWYB
+        text: The temperature decreases and thereby over-compensates for the decreasing
+          air density which is caused by the decreasing pressure. This results
+          in a decreasing fuel flow.
+        correct: false
+        why: ""
+      - id: OZVAOBGZ9
+        text: The temperature decreases and thereby compensates for the decreasing air
+          density which is caused by the decreasing pressure. Therefore the fuel
+          flow remains the same.
+        correct: false
+        why: ""
+- id: QN15SH3NJ
+  docId: "032.02"
+  relatedQuestions:
+    - QOMGIMGP
+  externalIds:
+    - ATPLQ-328359
+    - AVEXAM-77257
+    - BGS-320823
+    - AVEXAM-30091
+    - AVEXAM-57906
+    - AVEXAM-67543
+    - ATPLGS-627863
+    - BGS-321179
+    - AVEXAM-70704
+    - AVEXAM-32628
+    - BGS-320829
+    - BGS-320938
+  annexes: []
+  learningObjectives:
+    - 032.02.04.01.03
+  template:
+    type: calculation
+    question: >-
+      For a single engine aeroplane, calculate the net glide distance following
+      an engine failure. Given:
+
+
+      - Altitude: {{alt}} ft
+
+      - Terrain elevation: {{elev}} ft
+
+      - Gross gradient: {{gross}} %
+
+      - TAS: {{tas}} kt
+
+      - Tailwind: {{tw}} kt
+
+
+      Assume the net gradient is the gross gradient plus a 0.5 % decrement, and
+      1 NM = 6 080 ft.
+
+
+      Still air distance = (height difference (ft) x 100) / net gradient (%)
+
+      Ground distance = still air distance x (GS / TAS)
+    variables:
+      - id: alt
+        label: Altitude
+        unit: ft
+      - id: elev
+        label: Terrain elevation
+        unit: ft
+      - id: gross
+        label: Gross gradient
+        unit: "%"
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: tw
+        label: Tailwind
+        unit: kt
+    answer:
+      formula: (alt - elev) * 100 / (gross + 0.5) / 6080 * (tas + tw) / tas
+      unit: NM
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (alt - elev) * 100 / gross / 6080 * (tas + tw) / tas
+      - id: d2
+        formula: (alt - elev) * 100 / (gross + 0.5) / 6080
+      - id: d3
+        formula: (alt - elev) * 100 / (gross + 0.5) / 6080 * (tas - tw) / tas
+      - id: d4
+        formula: (alt - elev) * 100 / (gross + 0.5) / 6080 * tas / (tas + tw)
+    presets:
+      - id: p1
+        values:
+          alt: 9000
+          elev: 250
+          gross: 11
+          tas: 101
+          tw: 3
+      - id: p2
+        values:
+          alt: 8000
+          elev: 500
+          gross: 10
+          tas: 110
+          tw: 10
+      - id: p3
+        values:
+          alt: 10000
+          elev: 300
+          gross: 9
+          tas: 95
+          tw: 8
+    explanation: >-
+      In a glide the aeroplane covers a still-air distance set by the height
+      available and the net glide gradient (the gross gradient made 0.5 %
+      steeper to allow for the decrement). Wind then scales this distance by the
+      ratio of ground speed to TAS; a tailwind increases the ground speed.
+
+
+      **Solution**
+
+
+      Height difference = {{alt}} - {{elev}} = {{= alt - elev}} ft
+
+
+      Net gradient = {{gross}} + 0.5 = {{= gross + 0.5}} %
+
+
+      Still air distance = {{= (alt - elev) * 100 / (gross + 0.5)}} ft = {{=
+      (alt - elev) * 100 / (gross + 0.5) / 6080}} NM
+
+
+      GS = {{tas}} + {{tw}} = {{= tas + tw}} kt
+
+
+      {{f: (alt - elev) * 100 / (gross + 0.5) / 6080 * (tas + tw) / tas}} = {{n:
+      (alt - elev) * 100 / (gross + 0.5) / 6080 * (tas + tw) / tas}} =
+      **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: uses the gross gradient without the 0.5 % decrement.
+
+      - **{{d2}} NM**: gives the still-air distance and ignores the tailwind.
+
+      - **{{d3}} NM**: subtracts the tailwind instead of adding it (headwind
+      correction).
+
+      - **{{d4}} NM**: inverts the ratio and uses TAS / GS instead of GS / TAS.
+- id: QNEUJRUW
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322515
+    - AVEXAM-21310
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.02
+  template:
+    type: simple
+    question: Which option describes, for a Class B performance category single
+      engine piston aeroplane, a restriction on determining the take-off speed
+      VR?
+    explanation: ""
+    options:
+      - id: OC3DSXH7K
+        text: VR must be equal to or greater than VS1.
+        correct: true
+        why: ""
+      - id: O0ZP8PUJU
+        text: VR and V2 both must be equal to or greater than VS.
+        correct: false
+        why: ""
+      - id: OS0SSCMVO
+        text: VR must be equal to or greater than VS and V2 must be equal to or greater
+          than 1.3 x VSO.
+        correct: false
+        why: ""
+      - id: OUJRVZSG1
+        text: VR must be equal to or greater than VSO.
+        correct: false
+        why: ""
+- id: QNXGXXPPC
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323764
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: The strength of the yawing moment caused by an engine failure on a
+      twin-engine aeroplane...
+    explanation: ""
+    options:
+      - id: OWKWVOSSM
+        text: will be greater when the CG is located at the forward CG limit.
+        correct: false
+        why: ""
+      - id: ONHDM62A1
+        text: is independent of the location (fore or aft) of the CG.
+        correct: true
+        why: ""
+      - id: OCA0R4RDN
+        text: will be greater when the CG is located at the aft CG limit.
+        correct: false
+        why: ""
+      - id: OUT33DS70
+        text: will be greater when the CG is located halfway between the forward and aft
+          CG limits.
+        correct: false
+        why: ""
+- id: QO8TRH9VH
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-325824
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: You are planning to fly a VFR sight-seeing flight during the day with
+      a paying passenger. During the take-off climb out, which of the following
+      most accurately describes the lateral obstacle clearance.
+    explanation: ""
+    options:
+      - id: OBGIWE9XW
+        text: 90 m until 600 m after the departure end of Runway (DER) then 150 m
+        correct: false
+        why: ""
+      - id: OCZVE76RM
+        text: 35 ft
+        correct: false
+        why: ""
+      - id: OZE05E2QD
+        text: You must look out of the cockpit to visually identify and avoid obstacles
+        correct: true
+        why: ""
+      - id: ON9AARDKK
+        text: 50 ft
+        correct: false
+        why: ""
+- id: QODGAKMD
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326641
+    - AVEXAM-69920
+    - BGS-320618
+    - AVEXAM-49380
+    - ATPLGS-625131
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.09
+  template:
+    type: simple
+    question: How does a high-altitude runway affect the V**1**, the take-off
+      distance, and the landing distance?
+    explanation: ""
+    options:
+      - id: OHKTDZGJB
+        text: V1 – increases; take-off distance – increases; Landing distance –
+          increases.
+        correct: false
+        why: ""
+      - id: ONJBPUZC8
+        text: V1 – increases; take-off distance – decreases; landing distance –
+          decreases.
+        correct: false
+        why: ""
+      - id: OHH3CZHXY
+        text: V1 – decreases; take-off distance – decreases; landing distance –
+          decreases.
+        correct: false
+        why: ""
+      - id: O0HTCTRO3
+        text: V1 – decreases; take-off distance – increases; landing distance –
+          increases.
+        correct: true
+        why: ""
+- id: QOEFLQY6B
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-321328
+    - ATPLGS-625174
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "Landing on a runway with 5 mm wet snow will:"
+    explanation: ""
+    options:
+      - id: O8BVYZWWY
+        text: decrease landing distance
+        correct: false
+        why: ""
+      - id: OZPX4ZNJW
+        text: increase landing distance
+        correct: true
+        why: ""
+      - id: OOMQ54M2I
+        text: give a slightly reduced landing distance, due to increased impingement
+          drag
+        correct: false
+        why: ""
+      - id: OECE1NKKA
+        text: not affect the landing distance
+        correct: false
+        why: ""
+- id: QOFAYGOS
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-325235
+    - AVEXAM-82381
+    - AVEXAM-1862
+    - BGS-320783
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.09
+  template:
+    type: simple
+    question: "Unless otherwise specified, when landing on a runway with a downslope
+      of 2.5%, the landing distances required should be increased by:"
+    explanation: ""
+    options:
+      - id: OUDFX4ZCL
+        text: 10%
+        correct: false
+        why: ""
+      - id: OT1EDGBUR
+        text: 5%
+        correct: false
+        why: ""
+      - id: OTT7JCJAB
+        text: 12.5%
+        correct: true
+        why: ""
+      - id: OFTMMFVUV
+        text: 2%
+        correct: false
+        why: ""
+- id: QOMGIMGP
+  docId: "032.02"
+  relatedQuestions:
+    - QN15SH3NJ
+  externalIds:
+    - ATPLQ-327829
+    - AVEXAM-59767
+  annexes: []
+  learningObjectives:
+    - 032.02.04.01.03
+  template:
+    type: calculation
+    question: >-
+      A single engine aircraft has a gross glide gradient of {{gross}} %.
+
+
+      Determine the net glide distance from {{h1}} ft to {{h2}} ft.
+
+
+      Assume still air, a 0.5 % decrement (net gradient = gross gradient + 0.5
+      %) and 1 NM = 6 080 ft.
+    variables:
+      - id: gross
+        label: Gross glide gradient
+        unit: "%"
+      - id: h1
+        label: Start altitude
+        unit: ft
+      - id: h2
+        label: End altitude
+        unit: ft
+    answer:
+      formula: (h1 - h2) * 100 / (gross + 0.5) / 6080
+      unit: NM
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (h1 - h2) * 100 / gross / 6080
+      - id: d2
+        formula: (h1 - h2) * 100 / (gross - 0.5) / 6080
+      - id: d3
+        formula: h1 * 100 / (gross + 0.5) / 6080
+      - id: d4
+        formula: (h1 - h2) * 100 / (gross + 0.5)
+    presets:
+      - id: p1
+        values:
+          gross: 8
+          h1: 10000
+          h2: 2000
+      - id: p2
+        values:
+          gross: 10
+          h1: 8000
+          h2: 1500
+      - id: p3
+        values:
+          gross: 9
+          h1: 12000
+          h2: 3000
+    explanation: >-
+      The net glide gradient is the gross gradient plus the 0.5 % decrement. The
+      still-air distance over the ground is the height lost divided by this
+      gradient, converted to nautical miles.
+
+
+      **Solution**
+
+
+      Height lost = {{h1}} - {{h2}} = {{= h1 - h2}} ft
+
+
+      Net gradient = {{gross}} + 0.5 = {{= gross + 0.5}} %
+
+
+      {{f: (h1 - h2) * 100 / (gross + 0.5) / 6080}} = {{n: (h1 - h2) * 100 /
+      (gross + 0.5) / 6080}} = **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: uses the gross gradient without the decrement.
+
+      - **{{d2}} NM**: subtracts the decrement instead of adding it, making the
+      glide too shallow.
+
+      - **{{d3}} NM**: uses the starting altitude instead of the height
+      difference.
+
+      - **{{d4}} NM**: forgets to convert feet to nautical miles (value is in
+      feet).
+- id: QOOJLK6RN
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324075
+    - AVEXAM-49023
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: During a flight in a twin engine piston aeroplane under performance
+      Class B, an engine failure is experienced. The pilot correctly performs
+      the engine failure procedure. After setting the required thrust on the
+      live engine, the pilot notices a continuous descent of 400 ft/min. Which
+      of the following could have caused this?
+    explanation: ""
+    options:
+      - id: OTR5TSWTZ
+        text: Corrective rudder towards the dead engine has not been applied.
+        correct: false
+        why: ""
+      - id: O56M88XIH
+        text: The live engine has not been feathered.
+        correct: false
+        why: ""
+      - id: O4WHXGDGN
+        text: Corrective rudder towards the live engine has not been applied.
+        correct: false
+        why: ""
+      - id: OLUARWJM0
+        text: The dead engine has not been feathered.
+        correct: true
+        why: ""
+- id: QOPSSPJZ
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328420
+    - AVEXAM-62580
+    - ATPLQ-322892
+    - ATPLGS-127658
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.07
+  template:
+    type: calculation
+    question: >-
+      A single-engine class B aeroplane has the following wind limitations:
+      crosswind {{xw}} kt, headwind 30 kt, tailwind 10 kt.
+
+
+      Consider a take-off from runway 20 (heading {{rwy}} degrees) with the wind
+      from {{wdir}} degrees.
+
+
+      Using trigonometry, determine the maximum wind speed that stays within the
+      crosswind limit and allows take-off.
+
+
+      Round down to a whole number of knots (use 2 decimal places in the
+      intermediate calculation).
+    variables:
+      - id: xw
+        label: Crosswind limit
+        unit: kt
+      - id: rwy
+        label: Runway heading
+        unit: deg
+      - id: wdir
+        label: Wind direction
+        unit: deg
+    answer:
+      formula: floor(xw / sin(wdir - rwy))
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: ceil(xw / sin(wdir - rwy))
+      - id: d2
+        formula: xw
+      - id: d3
+        formula: floor(xw / cos(wdir - rwy))
+      - id: d4
+        formula: floor(xw * sin(wdir - rwy))
+    presets:
+      - id: p1
+        values:
+          xw: 17
+          rwy: 200
+          wdir: 250
+      - id: p2
+        values:
+          xw: 17
+          rwy: 200
+          wdir: 265
+      - id: p3
+        values:
+          xw: 17
+          rwy: 200
+          wdir: 240
+    explanation: >-
+      The crosswind component is wind speed x sin(angle between wind and runway
+      heading). The maximum wind speed that keeps the crosswind at the limit is
+      therefore the limit divided by that sine, rounded down so that the limit
+      is not exceeded.
+
+
+      **Solution**
+
+
+      Wind angle = {{wdir}} - {{rwy}} = {{= wdir - rwy}} degrees
+
+
+      Maximum wind speed = {{f: xw / sin(wdir - rwy)}} = {{n: xw / sin(wdir -
+      rwy)}} = {{= xw / sin(wdir - rwy)}} kt, rounded down to **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: rounds up, which would exceed the crosswind limit.
+
+      - **{{d2}} kt**: simply takes the crosswind limit as the wind speed,
+      ignoring the wind angle.
+
+      - **{{d3}} kt**: uses cos instead of sin (headwind instead of crosswind
+      component).
+
+      - **{{d4}} kt**: multiplies by sin instead of dividing.
+- id: QP8FECLS7
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322824
+    - AVEXAM-119
+  annexes:
+    - cap-698-page-17-figure-2.1
+  learningObjectives:
+    - "032.02"
+  template:
+    type: chart-calculation
+    question: Refer to the figure (CAP698 file 2.1). What is the maximum estimated
+      stall speed at {{mass}} lbs? Use the value read from the chart.
+    variables:
+      - id: mass
+        label: Aeroplane mass
+        unit: lbs
+      - id: stall_chart
+        label: Stall speed read from the chart
+        unit: kt
+    chartInputs:
+      - stall_chart
+    answer:
+      formula: stall_chart
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: stall_chart + 14
+      - id: d2
+        formula: stall_chart + 3
+      - id: d3
+        formula: stall_chart - 9
+      - id: d4
+        formula: stall_chart * 1.1
+    presets:
+      - id: p1
+        values:
+          mass: 3400
+          stall_chart: 68
+    explanation: >-
+      The stall speed for a given mass is read from the stall speed chart: enter
+      at the mass, go to the applicable curve and read the speed on the speed
+      axis.
+
+
+      **Solution**
+
+
+      The value read from the chart is {{stall_chart}} kt, so the answer is
+      **{{answer}} kt**.
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: reading the stall speed for a different mass or flap
+      line.
+
+      - **{{d2}} kt**: a small misread of the mass or speed scale.
+
+      - **{{d3}} kt**: reading the line for a lower mass.
+
+      - **{{d4}} kt**: adding a 10% margin that is not asked for.
+- id: QPRTGZNA
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324562
+    - AVEXAM-94460
+    - BGS-321217
+    - BGS-320873
+    - ATPLGS-628216
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.06
+  template:
+    type: simple
+    question: Complete the statement with regards to a twin engine propeller
+      aircraft certified under CS-23. In the event of an engine failure, the
+      thrust required will (1) \_\_\_\_\_ and the excess thrust will (2)
+      \_\_\_\_\_.
+    explanation: ""
+    options:
+      - id: OFGN1JTGU
+        text: (1) increase; (2) decrease by more than 50%
+        correct: true
+        why: ""
+      - id: O9PWQ1UJG
+        text: (1) decrease by 50%; (2) decrease by more than 50%
+        correct: false
+        why: ""
+      - id: OZUOZYO8Y
+        text: (1) increase; (2) decrease by 50%
+        correct: false
+        why: ""
+      - id: OH7W8CYN0
+        text: (1) increase; (2) decrease by less than 50%
+        correct: false
+        why: ""
+- id: QPRZG2AWY
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322356
+    - AVEXAM-38155
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: A pilot has become accustomed to landing on long runways, with a high
+      approach speed. Which of the following could happen if the pilot now
+      attempts to land on a short runway using this same technique?
+    explanation: ""
+    options:
+      - id: OMWO2HXZ9
+        text: A normal landing.
+        correct: false
+        why: ""
+      - id: OFSTEA6B1
+        text: The aircraft will have too much kinetic energy, and might overshoot the
+          runway.
+        correct: true
+        why: ""
+      - id: OM8PHKWKG
+        text: The landing will be better than usual.
+        correct: false
+        why: ""
+      - id: OZJ2AWS37
+        text: The aircraft will not have enough kinetic energy, and might undershoot the
+          runway.
+        correct: false
+        why: ""
+- id: QPUVSCHM
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323889
+    - BGS-320712
+    - AVEXAM-15327
+    - AVEXAM-41795
+    - BGS-320711
+    - ATPLGS-625089
+    - ATPLGS-625202
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.02
+  template:
+    type: simple
+    question: "Effect of flaps on take-off performance: Approved take-off flap
+      settings: UP / 5° / 10° / 15° If a take-off is performed with flaps 10°
+      instead of using flaps UP the"
+    explanation: ""
+    options:
+      - id: OJLL01PGP
+        text: Take-off distance increases.
+        correct: false
+        why: ""
+      - id: OX9ABQQ7V
+        text: Climb performance decreases.
+        correct: true
+        why: ""
+      - id: O4RAKETVQ
+        text: Lift-off speed increases.
+        correct: false
+        why: ""
+      - id: ORTWGEHNV
+        text: Ground roll distance increases.
+        correct: false
+        why: ""
+- id: QQFXYWDO
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-321643
+    - ATPLGS-625191
+    - BGS-320801
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.02
+  template:
+    type: simple
+    question: How does an approach and landing with full flaps compare to one with
+      zero flaps? The full flap approach and landing will have a...
+    explanation: ""
+    options:
+      - id: O11EE4KRQ
+        text: faster approach speed and larger ground roll distance.
+        correct: false
+        why: ""
+      - id: OJAALLWPY
+        text: slower approach speed and shorter ground roll distance.
+        correct: true
+        why: ""
+      - id: OI8LLOOBZ
+        text: slower approach speed and larger ground roll distance.
+        correct: false
+        why: ""
+      - id: O8GLTK7ON
+        text: faster approach speed and shorter ground roll distance.
+        correct: false
+        why: ""
+- id: QQR9TMFNV
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329351
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: You are planning to fly to an aerodrome with a short runway. Which of
+      the following conditions would be most restrictive for landing
+      performance, and why?
+    explanation: ""
+    options:
+      - id: O5KQKX6U6
+        text: High OAT due to high groundspeed.
+        correct: true
+        why: ""
+      - id: OHHJNS39F
+        text: High pressure due to high groundspeed.
+        correct: false
+        why: ""
+      - id: OKCWGBOA2
+        text: High OAT due to high performance.
+        correct: false
+        why: ""
+      - id: OVT2DXUXW
+        text: High pressure due to low performance.
+        correct: false
+        why: ""
+- id: QQVYT5LQO
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326894
+    - AVEXAM-38766
+    - AVEXAM-46512
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: In a twin engine piston aircraft with both engines rotating
+      anti-clockwise, which is the critical engine if there is an engine failure
+      after take-off?
+    explanation: ""
+    options:
+      - id: OKEEO8NAX
+        text: Right engine.
+        correct: true
+        why: ""
+      - id: OGRTN1YX9
+        text: Left or right engine, depending on the crosswind direction.
+        correct: false
+        why: ""
+      - id: O6EKYAQYI
+        text: Left engine.
+        correct: false
+        why: ""
+      - id: OZ3R8YD2F
+        text: Left or right engine, depending on the runway track.
+        correct: false
+        why: ""
+- id: QQZLJTZW
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322264
+    - BGS-320842
+    - AVEXAM-9367
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.12
+  template:
+    type: simple
+    question: "For a multi-engine Class B aircraft, all engines operating, the
+      take-off flight path is equal to the gross gradient of the actual flight
+      path:"
+    explanation: ""
+    options:
+      - id: OGIBUGOIO
+        text: Multiplied by 0.77.
+        correct: true
+        why: ""
+      - id: OWFLJNEV6
+        text: Flown up to a height of 35 ft.
+        correct: false
+        why: ""
+      - id: OLUUVD8UB
+        text: Until reaching cruise altitude.
+        correct: false
+        why: ""
+      - id: OV03I4RVS
+        text: Flown up to a height of 400 ft.
+        correct: false
+        why: ""
+- id: QQZVHKYN
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323770
+    - ATPLGS-122671
+    - BGS-320727
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.12
+  template:
+    type: simple
+    question: A Performance Class B multi-engined aeroplane is utilised in
+      Commercial Air Transport. Should an engine fail during take-off, by what
+      minimum vertical distance must the aeroplane clear an obstacle situated at
+      the extended centreline of the take-off runway?
+    explanation: ""
+    options:
+      - id: OHOQO9GU2
+        text: 35 feet
+        correct: false
+        why: ""
+      - id: O4S7HLIWN
+        text: 90 metres
+        correct: false
+        why: ""
+      - id: O9QK8FPPO
+        text: 50 feet
+        correct: true
+        why: ""
+      - id: OMQMH70UG
+        text: 50 metres
+        correct: false
+        why: ""
+- id: QRG41LEAS
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326450
+    - ATPLGS-627873
+    - BGS-320724
+    - ATPLGS-627185
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: The critical engine of a multi-engined, propeller-driven aeroplane is
+      the one whose failure would result in the most adverse effect on the
+      aeroplane’s...
+    explanation: ""
+    options:
+      - id: OTJHTQGCB
+        text: endurance.
+        correct: false
+        why: ""
+      - id: O9P420NLE
+        text: maximum altitude.
+        correct: false
+        why: ""
+      - id: OKJTMRX3P
+        text: fuel consumption.
+        correct: false
+        why: ""
+      - id: OY0CKTYYP
+        text: handling and performance characteristics.
+        correct: true
+        why: ""
+- id: QRHEPNIF
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323781
+    - AVEXAM-38556
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.03
+  template:
+    type: simple
+    question: "For a class B performance twin-engined aircraft, VR must:"
+    explanation: ""
+    options:
+      - id: O7RCFX73F
+        text: Not be less than the greater of 1.1 VMC or 1.2 VS.
+        correct: false
+        why: ""
+      - id: O4NCZW4MR
+        text: Not be less than the greater of 1.10 VS1 or 1.05 VMC.
+        correct: true
+        why: ""
+      - id: OZBWYRYPD
+        text: Be equal 1.1 VMC.
+        correct: false
+        why: ""
+      - id: OHMTDJTRP
+        text: Be equal to 1.2.VS1.
+        correct: false
+        why: ""
+- id: QRPGCLB9W
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329832
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: How is take-off performance affected by using flaps 10° instead of
+      flaps 5°?
+    explanation: ""
+    options:
+      - id: OBOOD0EEA
+        text: Increased drag, stall speed decreases, ground roll increases.
+        correct: false
+        why: ""
+      - id: OIRBEUUMT
+        text: Increased drag, stall speed increases, ground roll decreases.
+        correct: false
+        why: ""
+      - id: OX1JRXAXQ
+        text: Increased lift, stall speed increases, ground roll increases.
+        correct: false
+        why: ""
+      - id: OYP4ZKTM9
+        text: stall speed decreases
+        correct: true
+        why: ""
+- id: QRXIEMLUN
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323738
+    - AVEXAM-77257
+    - AVEXAM-30091
+    - AVEXAM-67543
+    - ATPLGS-627863
+    - BGS-321179
+    - AVEXAM-70704
+    - AVEXAM-32628
+    - BGS-320829
+    - BGS-320938
+    - BGS-321027
+  annexes: []
+  learningObjectives:
+    - 032.02.04.01.03
+  template:
+    type: calculation
+    question: >-
+      A single-engined piston aeroplane is flying at an altitude of {{alt}} ft
+      with a constant headwind component of {{hw}} kt. If the engine fails at
+      this altitude, what is the expected net glide distance over the ground to
+      an elevation of {{elev}} ft?
+
+
+      - L/D: {{ld}}:1
+
+      - TAS: {{tas}} kt
+
+
+      Assume 1 NM = 6 080 ft and a 0.5 % decrement (net gradient = 100 / (L/D) +
+      0.5 %).
+
+
+      Still air distance = (height difference / net gradient) x 100
+
+      Ground distance = still air distance x (GS / TAS)
+    variables:
+      - id: alt
+        label: Altitude
+        unit: ft
+      - id: hw
+        label: Headwind component
+        unit: kt
+      - id: elev
+        label: Terrain elevation
+        unit: ft
+      - id: ld
+        label: L/D ratio
+        unit: ""
+      - id: tas
+        label: TAS
+        unit: kt
+    answer:
+      formula: (alt - elev) * 100 / (100 / ld + 0.5) / 6080 * (tas - hw) / tas
+      unit: NM
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (alt - elev) * 100 / (100 / ld + 0.5) / 6080
+      - id: d2
+        formula: (alt - elev) * 100 / (100 / ld + 0.5) / 6080 * (tas + hw) / tas
+      - id: d3
+        formula: (alt - elev) * 100 / (100 / ld) / 6080 * (tas - hw) / tas
+      - id: d4
+        formula: alt * 100 / (100 / ld + 0.5) / 6080 * (tas - hw) / tas
+    presets:
+      - id: p1
+        values:
+          alt: 5000
+          hw: 25
+          elev: 250
+          ld: 9.1
+          tas: 140
+      - id: p2
+        values:
+          alt: 6000
+          hw: 20
+          elev: 300
+          ld: 10
+          tas: 130
+      - id: p3
+        values:
+          alt: 4000
+          hw: 15
+          elev: 200
+          ld: 8.5
+          tas: 120
+    explanation: >-
+      The glide gradient follows from the lift-to-drag ratio (100 / (L/D) in %),
+      made 0.5 % steeper for the decrement. The still-air distance is the height
+      available divided by this net gradient; a headwind reduces the ground
+      speed, so the ground distance is scaled by GS / TAS.
+
+
+      **Solution**
+
+
+      Height difference = {{= alt - elev}} ft
+
+
+      Net gradient = 100 / {{ld}} + 0.5 = {{= 100 / ld + 0.5}} %
+
+
+      GS = {{tas}} - {{hw}} = {{= tas - hw}} kt
+
+
+      {{f: (alt - elev) * 100 / (100 / ld + 0.5) / 6080 * (tas - hw) / tas}} =
+      {{n: (alt - elev) * 100 / (100 / ld + 0.5) / 6080 * (tas - hw) / tas}} =
+      **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: ignores the headwind (no GS / TAS correction).
+
+      - **{{d2}} NM**: adds the headwind to the TAS as if it were a tailwind.
+
+      - **{{d3}} NM**: omits the 0.5 % decrement.
+
+      - **{{d4}} NM**: uses the full altitude instead of the height above the
+      terrain.
+- id: QS6PQFKIP
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328409
+    - AVEXAM-40543
+    - AVEXAM-98198
+    - BGS-320964
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "What does VREF stand for? It is the speed in a specified:"
+    explanation: ""
+    options:
+      - id: OZJ4HOJZH
+        text: Take-off configuration, at the point where the aeroplane climbs through 35
+          ft over the departure runway end, and is used to determine the
+          take-off distance.
+        correct: false
+        why: ""
+      - id: OHNYM0RMW
+        text: Landing configuration, at the point where the aeroplane descends through
+          50 ft, and is used to determine the landing distance for manual
+          landings.
+        correct: true
+        why: ""
+      - id: OVOBKY553
+        text: Take-off configuration, at the point where the aeroplane climbs through 50
+          ft over the departure runway end, and is used to determine the
+          take-off distance.
+        correct: false
+        why: ""
+      - id: OLGE9RZYS
+        text: Landing configuration, at the point where the aeroplane touches down on
+          the runway, and is used to determine the landing distance for manual
+          landings.
+        correct: false
+        why: ""
+- id: QSGH2SNOQ
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329610
+    - ATPLGS-107593
+    - AVEXAM-68161
+    - BGS-320146
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "The effect that a tailwind has on the value of the maximum endurance
+      speed is:"
+    explanation: ""
+    options:
+      - id: OV8CSM8QW
+        text: none.
+        correct: true
+        why: ""
+      - id: OT7E066SZ
+        text: that the IAS must be decreased.
+        correct: false
+        why: ""
+      - id: ON0SUDG2V
+        text: that a tailwind only affects the holding speed.
+        correct: false
+        why: ""
+      - id: OOI53SSGD
+        text: that the IAS must be increased.
+        correct: false
+        why: ""
+- id: QSLBITSB
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-327292
+    - AVEXAM-12175
+    - BGS-321033
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.04
+  template:
+    type: simple
+    question: Consider a constant speed propeller aeroplane in the take-off
+      configuration with full throttle position and forward RPM lever. How does
+      thrust change when the aeroplane accelerates from the brake-release point
+      to V**LOF**? As speed builds up, the thrust…
+    explanation: ""
+    options:
+      - id: O4EMQAHYR
+        text: Remains constant.
+        correct: false
+        why: ""
+      - id: OKHT56XC1
+        text: Decrease or increases, depending on the form of the wing.
+        correct: false
+        why: ""
+      - id: OUSJP95BU
+        text: Increases.
+        correct: false
+        why: ""
+      - id: O5SGCBTNT
+        text: Decreases.
+        correct: true
+        why: ""
+- id: QSRDFVFY
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-321854
+    - AVEXAM-91016
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.13
+  template:
+    type: simple
+    question: "For Class B aircraft, the obstacle accountability area is defined as:"
+    explanation: ""
+    options:
+      - id: OJKSWXCNX
+        text: The area after the TODA within which obstacles must be considered for the
+          purposes of a go around.
+        correct: false
+        why: ""
+      - id: OWTB7OOV7
+        text: An area just before the LDA within which obstacles are considered for the
+          purpose of landing.
+        correct: false
+        why: ""
+      - id: O0RVJWQ2G
+        text: The area beyond the TODA within which obstacles are considered for the
+          purposes of takeoff climb performance.
+        correct: true
+        why: ""
+      - id: OKMXNA26H
+        text: The area beyond the TORA within which obstacles are considered for the
+          purposes of takeoff climb performance.
+        correct: false
+        why: ""
+- id: QTOOYTUP
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326861
+    - AVEXAM-36327
+    - BGS-320439
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.02
+  template:
+    type: calculation
+    question: >-
+      According to CS-23, determine the minimum VR speed for a Class B
+      twin-engine aeroplane, given:
+
+
+      - VS: {{vs}} kt
+
+      - VMC: {{vmc}} kt
+    variables:
+      - id: vs
+        label: VS
+        unit: kt
+      - id: vmc
+        label: VMC
+        unit: kt
+    answer:
+      formula: max(1.05 * vmc, 1.1 * vs)
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: 1.1 * vmc
+      - id: d2
+        formula: 1.05 * vs
+      - id: d3
+        formula: min(1.05 * vmc, 1.1 * vs)
+      - id: d4
+        formula: 1.2 * vs
+    presets:
+      - id: p1
+        values:
+          vs: 76
+          vmc: 84
+      - id: p2
+        values:
+          vs: 80
+          vmc: 70
+      - id: p3
+        values:
+          vs: 72
+          vmc: 80
+    explanation: >-
+      For a CS-23 Class B twin, the rotation speed VR must not be less than the
+      larger of 1.05 VMC and 1.10 VS.
+
+
+      **Solution**
+
+
+      {{f: max(1.05 * vmc, 1.1 * vs)}} = {{n: max(1.05 * vmc, 1.1 * vs)}} =
+      **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: applies the 1.10 factor to VMC instead of 1.05.
+
+      - **{{d2}} kt**: applies the 1.05 factor to VS instead of 1.10.
+
+      - **{{d3}} kt**: takes the smaller of the two limits instead of the
+      larger.
+
+      - **{{d4}} kt**: uses 1.2 VS, which is the V2 factor, not the VR minimum.
+- id: QTZNJRMXT
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-321318
+    - BGS-320544
+    - ATPLGS-627407
+  annexes:
+    - cap-698-page-17-figure-2.1
+  learningObjectives:
+    - "032.02"
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to figure or CAP698 file 2.2. Given the following information, what
+      is the rotation speed?
+
+
+      - Outside air temperature (OAT): {{oat}} °C
+
+      - Airport pressure altitude: {{pa}} ft
+
+      - Headwind component: {{hw}} kt
+
+      - Take-off mass: {{mass}} lb
+
+
+      Flap setting: Approach
+
+
+      (The value is read from the figure.)
+    variables:
+      - id: oat
+        label: OAT
+        unit: °C
+      - id: pa
+        label: Pressure altitude
+        unit: ft
+      - id: hw
+        label: Headwind component
+        unit: kt
+      - id: mass
+        label: Take-off mass
+        unit: lb
+      - id: vr
+        label: Rotation speed read from the figure
+        unit: kt
+    chartInputs:
+      - vr
+    answer:
+      formula: vr
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: vr + 8
+      - id: d2
+        formula: vr + 5
+      - id: d3
+        formula: vr + 10
+      - id: d4
+        formula: vr - 6
+    presets:
+      - id: p1
+        values:
+          oat: 25
+          pa: 2500
+          hw: 5
+          mass: 3600
+          vr: 67
+    explanation: >-
+      The rotation speed is read from the take-off performance table using the
+      flap setting, mass, pressure altitude, OAT and headwind component.
+
+
+      **Solution**
+
+
+      Entering the figure with the given conditions gives rotation speed =
+      **{{answer}} kt**.
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: reading the speed for a wrong flap setting or mass.
+
+      - **{{d2}} kt**: a misread of the table row (5 kt too high).
+
+      - **{{d3}} kt**: a misread of the table row (10 kt too high).
+
+      - **{{d4}} kt**: reading the value for a lower mass.
+- id: QU7RBT1PS
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328977
+    - BGS-321064
+    - AVEXAM-88810
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: A pilot of a single-engined turbine aeroplane performs a Commercial
+      Air Transport flight with passengers over land with no significant terrain
+      and the cruise phase will be above a solid layer of cloud. The planned
+      route must be such that, in the event of an engine failure, the aeroplane
+      is able to glide...
+    explanation: ""
+    options:
+      - id: ORVHRDUYG
+        text: from an altitude where the rate of climb is at least 300 fpm to a point
+          1000 ft above a runway, onto which a successful landing can be made.
+        correct: false
+        why: ""
+      - id: OEGRFFHNI
+        text: to the point of landing on a suitable landing site and there should be no
+          cloud below a height of 1000 ft agl.
+        correct: false
+        why: ""
+      - id: OHI3QO2GV
+        text: to a point 1000 ft above a suitable landing area and the bottom of any
+          solid cloud layer should be above the minimum safe altitude.
+        correct: true
+        why: ""
+      - id: O8SUOJJ1A
+        text: to a point 1000 ft above a runway onto which a successful emergency
+          landing can be made and there should be no cloud below the minimum
+          safe altitude.
+        correct: false
+        why: ""
+- id: QUJRYWZM
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-325390
+    - AVEXAM-39200
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.02
+  template:
+    type: simple
+    question: How is take-off performance affected by using flaps 10° instead of
+      flaps 5°?
+    explanation: ""
+    options:
+      - id: OUUHNC0WS
+        text: Ground roll is increased, drag is increased, climb performance is
+          decreased.
+        correct: false
+        why: ""
+      - id: OE2LJMIKQ
+        text: Ground roll is decreased, drag is increased, climb performance is
+          increased.
+        correct: false
+        why: ""
+      - id: O5CCWTXHC
+        text: Ground roll is decreased, drag is decreased, climb performance is
+          increased.
+        correct: false
+        why: ""
+      - id: ODSGA1MHS
+        text: Ground roll is decreased, drag is increased, climb performance is
+          decreased.
+        correct: true
+        why: ""
+- id: QUNLUYF7D
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-325560
+    - AVEXAM-95859
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: Which of the following is correct concerning fuel consumption change
+      at altitude of a propeller driven aeroplane?
+    explanation: ""
+    options:
+      - id: OBTUJI5ZW
+        text: Increases after VMP
+        correct: true
+        why: ""
+      - id: OWDT3LTEJ
+        text: Increases before VMP
+        correct: false
+        why: ""
+      - id: OBXKXOZY3
+        text: "Decreases after VMP "
+        correct: false
+        why: ""
+      - id: OQ9BPC2GD
+        text: "Decreases before VMP "
+        correct: false
+        why: ""
+- id: QUOIONXM
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328860
+    - AVEXAM-9393
+    - AVEXAM-63107
+    - ATPLGS-627861
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.06
+  template:
+    type: simple
+    question: Which propeller configuration results in the best handling
+      characteristics if a light twin suffers a left hand engine failure after
+      departure from runway 36? The reported wind is 270°/10 kts.
+    explanation: ""
+    options:
+      - id: O4ZLLS3OH
+        text: Counter rotating propellers.
+        correct: true
+        why: ""
+      - id: O7XC0YB4J
+        text: All have the same control problems.
+        correct: false
+        why: ""
+      - id: OLNXA8FTQ
+        text: Clockwise rotating propellers.
+        correct: false
+        why: ""
+      - id: OXNVZFJNK
+        text: Engines mounted on the side of the fuselage.
+        correct: false
+        why: ""
+- id: QURXCGOL
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324742
+    - AVEXAM-86776
+    - ATPLGS-122673
+    - BGS-320791
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.12
+  template:
+    type: simple
+    question: >-
+      A pilot is calculating the Take-Off Distance for a Performance Class B
+      multi-engined aeroplane. Specific factors must be applied to the AFM data
+      to take into account variables that affect the take-off performance.
+
+
+      These factors have NOT been provided in the AFM and other performance and
+      operating manuals from the manufacturer. For which variables must the
+      pilot apply a factor greater than 1.0?
+    explanation: ""
+    options:
+      - id: OCRSTK2F7
+        text: "Surface type: paved, Condition: dry."
+        correct: false
+        why: ""
+      - id: OK9MEUB6O
+        text: "Surface type: paved, Condition: wet."
+        correct: false
+        why: ""
+      - id: OTQQGQEZE
+        text: "Surface type: grass, Condition: wet or dry."
+        correct: true
+        why: ""
+      - id: OP7AMNFDY
+        text: "Surface type: paved or grass, Condition: wet."
+        correct: false
+        why: ""
+- id: QUYI6QYYS
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329249
+    - AVEXAM-95507
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: What can be done to reduce any issues with asymmetric thrust in a twin
+      engined propeller aircraft?
+    explanation: ""
+    options:
+      - id: OAQJ0KZS1
+        text: Place the engines further forwards on the wings.
+        correct: false
+        why: ""
+      - id: OEGXC0IAF
+        text: Use counter-rotating propellers.
+        correct: true
+        why: ""
+      - id: O09GWVGHF
+        text: Have not more than 3 blades per propeller.
+        correct: false
+        why: ""
+      - id: OYMHUEJDQ
+        text: Place the engines a greater distance from the aircraft's centre line.
+        correct: false
+        why: ""
+- id: QUZB0QFWK
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322899
+    - ATPLGS-625212
+    - AVEXAM-6923
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "For a multi-engine aircraft in Performance Class B the minimum gross
+      gradient of climb after a balked landing is:"
+    explanation: ""
+    options:
+      - id: OMUSBOXJW
+        text: 2.5%
+        correct: true
+        why: ""
+      - id: OM6BWSMMU
+        text: 2%
+        correct: false
+        why: ""
+      - id: OCPXQXKQL
+        text: 1.5%
+        correct: false
+        why: ""
+      - id: OYOWIH4Y3
+        text: 3.2%
+        correct: false
+        why: ""
+- id: QV26QNKAJ
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326676
+    - ATPLGS-107609
+    - AVEXAM-36630
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: On a twin engined piston aircraft with variable pitch propellers, for
+      a given mass and altitude, the minimum drag speed is 125 kt and the
+      holding speed (minimum fuel burn per hour) is 95 kt. The best rate of
+      climb speed will be obtained for a speed...
+    explanation: ""
+    options:
+      - id: OY3VCCOXQ
+        text: between 95kt and 125kt
+        correct: true
+        why: ""
+      - id: OZJXUTNM6
+        text: equal to 125kt
+        correct: false
+        why: ""
+      - id: ONWCRFBWK
+        text: < 95kt
+        correct: false
+        why: ""
+      - id: OURIEBRRZ
+        text: equal to 95kt
+        correct: false
+        why: ""
+- id: QWKXH80HG
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329881
+    - AVEXAM-61106
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: For a multi-engine aircraft in the class B performance category, what
+      is the minimum all engine take-off climb gradient?
+    explanation: ""
+    options:
+      - id: OSE9RQB3D
+        text: 2.5%
+        correct: false
+        why: ""
+      - id: OP0YL3S1F
+        text: 4%
+        correct: true
+        why: ""
+      - id: ODP907SRH
+        text: 3.3%
+        correct: false
+        why: ""
+      - id: OILB6DFJ2
+        text: 2.8%
+        correct: false
+        why: ""
+- id: QXDQXS5VU
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329004
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: What are the implications on takeoff distances if a pilot increases
+      thrust while aligning with the runway for a rolling takeoff?
+    explanation: ""
+    options:
+      - id: OL0K6QDQG
+        text: TOD increases and ASD decreases
+        correct: false
+        why: ""
+      - id: OVXDKOXMZ
+        text: TOD and ASD decrease
+        correct: false
+        why: ""
+      - id: OBZSDAEMM
+        text: TOD decreases and ASD increases
+        correct: false
+        why: ""
+      - id: OADHZWGU8
+        text: TOD and ASD increase
+        correct: true
+        why: ""
+- id: QXEITHGB
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-325767
+    - AVEXAM-63642
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.11
+  template:
+    type: simple
+    question: >-
+      A pilot performs two landings onto the same runway. Both are from 3º
+      approaches, with the same conditions present.
+
+
+      Landing 1: The aeroplane passes the runway threshold at a height of almost
+      100 ft and the correct landing airspeed   
+       Landing 2: The aeroplane passes the runway threshold at 50 ft but with an airspeed 5 knots higher than the correct landing airspeed.
+
+      Choose the correct statement.
+    explanation: ""
+    options:
+      - id: OPIF46HTL
+        text: Landing 1 has a greater landing distance due to excess energy while
+          landing 2 achieves the planned landing distance since the aeroplane
+          touches down at the optimum touchdown point.
+        correct: false
+        why: ""
+      - id: OOSWXIFI9
+        text: Both landings result in the planned landing distance being used since the
+          landing distance allows for small deviations in height above the
+          landing threshold and landing speed.
+        correct: false
+        why: ""
+      - id: OOEJ3SHSL
+        text: Both landings result in a greater landing distance than expected, where
+          landing 2 is less predictable as it depends on how excess energy is
+          dissipated during the flare and subsequent ground roll.
+        correct: true
+        why: ""
+      - id: OWAJYJVKR
+        text: Landing 1 achieves the planned landing distance since the landing distance
+          starts at 50 ft while landing 2 has a greater landing distance due to
+          excess energy.
+        correct: false
+        why: ""
+- id: QXGIZJH0A
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-326065
+    - BGS-321227
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: A pilot is planning to fly a light aircraft to an airport with a short
+      runway, but which is long enough to land safely. The pilot is accustomed
+      to landing at airports with long or very long runways and a mixture of
+      small and large aeroplanes, where ATC often asks small aircraft to
+      maintain a high approach speed to facilitate traffic flow. If the pilot
+      flies as per their regular habit (with a high approach speed) when landing
+      on the short runway…
+    explanation: ""
+    options:
+      - id: O2DGJQ9AA
+        text: the landing is more likely to be successful since the safety factors
+          account for any inaccuracies in speed and touchdown point and
+          therefore assure a safe landing.
+        correct: false
+        why: ""
+      - id: OXO8JMDF5
+        text: the landing must be completed such that the aeroplane touches down before
+          the normal touchdown point in order to allow for a greater braking
+          distance after landing.
+        correct: false
+        why: ""
+      - id: OP9NFKPYH
+        text: there is NO risk of runway excursion if the aeroplane touches down at the
+          optimum touchdown point because the brakes are able to absorb greater
+          energy.
+        correct: false
+        why: ""
+      - id: OTZDW1AXH
+        text: there is a large risk of runway excursion as a higher-than-optimum
+          approach speed increases the risk of floating with significant
+          additional kinetic energy dissipating.
+        correct: true
+        why: ""
+- id: QXNB9T9MK
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323350
+    - ATPLGS-127636
+    - AVEXAM-48317
+    - BGS-320140
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: The take-off distance required increases...
+    explanation: ""
+    options:
+      - id: OIWUFBNX9
+        text: due to downhill slope because of the smaller angle of attack.
+        correct: false
+        why: ""
+      - id: OGLVMAH58
+        text: due to slush on the runway.
+        correct: true
+        why: ""
+      - id: O1USRWXU3
+        text: due to lower gross mass at take-off.
+        correct: false
+        why: ""
+      - id: OEZQAGPVD
+        text: due to head wind because of the drag augmentation.
+        correct: false
+        why: ""
+- id: QXNMEMJU
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-321947
+    - ATPLGS-622557
+    - BGS-320723
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.05
+  template:
+    type: simple
+    question: For a Performance Class B, multi engined aeroplane, in order to
+      eliminate any problems associated with a critical engine failure,
+    explanation: ""
+    options:
+      - id: OFZUQJB4D
+        text: all propellers turn in the same direction.
+        correct: false
+        why: ""
+      - id: OD26MW4FY
+        text: propellers with a minimum of three blades are used.
+        correct: false
+        why: ""
+      - id: OSJTI8H9E
+        text: engines are mounted away from the aeroplane’s centreline.
+        correct: false
+        why: ""
+      - id: OJPH9BFPE
+        text: counter rotating propellers are installed.
+        correct: true
+        why: ""
+- id: QXO85MTJR
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323115
+    - AVEXAM-58553
+    - ATPLGS-107396
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: "The landing reference speed VREF has, in accordance with
+      international requirements, the following margins above stall speed in
+      landing configuration:"
+    explanation: ""
+    options:
+      - id: O5TWRDNA3
+        text: 20%
+        correct: false
+        why: ""
+      - id: OZT8A8RHG
+        text: 10%
+        correct: false
+        why: ""
+      - id: O1JRARIOW
+        text: 30%
+        correct: true
+        why: ""
+      - id: OURM0EZKU
+        text: 15%
+        correct: false
+        why: ""
+- id: QXPWSDHDK
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324028
+    - AVEXAM-3023
+    - BGS-320708
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: multiple-correct
+    question: Which of the following limitations apply to the Take-Off Distance
+      (TOD) for Performance Class B aeroplanes operating from a dry runway?
+    explanation: ""
+    options:
+      - text: Without a stopway nor a clearway available, when multiplied by a factor of
+          1.25, it should NOT exceed the Take-Off Run Available (TORA).
+        correct: true
+        why: ""
+      - text: When a stopway and/or clearway is available, it should NOT exceed the
+          Take-Off Run Available (TORA).
+        correct: true
+        why: ""
+      - text: With a stopway and/or clearway available, when multiplied by a factor of
+          1.15, it should NOT exceed the Take-Off Distance Available (TODA).
+        correct: true
+        why: ""
+      - text: With a stopway and/or clearway available, when multiplied by a factor of
+          1.15, it should NOT exceed the Accelerate-Stop Distance Available
+          (ASDA).
+        correct: false
+        why: ""
+- id: QXTKGSBS
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-321525
+    - ATPLGS-625201
+    - BGS-320766
+    - BGS-320631
+    - ATPLGS-627419
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.11
+  template:
+    type: simple
+    question: If the air temperature decreases, the take-off distance / ground-roll
+      distance will…
+    explanation: ""
+    options:
+      - id: ODGY9NCED
+        text: increase / decrease.
+        correct: false
+        why: ""
+      - id: ODHYPYBUD
+        text: increase / increase.
+        correct: false
+        why: ""
+      - id: ODTIYGNAS
+        text: decrease / increase.
+        correct: false
+        why: ""
+      - id: OKUV3QYZY
+        text: decrease / decrease.
+        correct: true
+        why: ""
+- id: QYUJP3YZZ
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-329589
+    - BGS-321235
+    - AVEXAM-61837
+    - BGS-321124
+    - AVEXAM-47544
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: A pilot is operating a commercial air transport flight in accordance
+      with EU Regulations (Part-CAT) in a twin-engine Performance Class B
+      aeroplane. It is a sightseeing flight under VFR during the day.
+      Considering the performance requirements for take-off and departure, which
+      of the following options is correct regarding the horizontal extent of the
+      flight path accountability area for this flight? The obstacle clearance
+      accountability area...
+    explanation: ""
+    options:
+      - id: OXYQKPZTB
+        text: commences at the end of the TODA and consists of a 90 m wide corridor
+          along the flight path until the aeroplane reaches 50 ft above any
+          obstacle.
+        correct: false
+        why: ""
+      - id: OP3MT2XUA
+        text: commences at the assumed engine failure height and will gradually widen as
+          the distance along the flight path increases.
+        correct: false
+        why: ""
+      - id: OQRVUQBCC
+        text: is at least 60 m wide from the end of the TORA, gradually extending to a
+          maximum 300m width along the planned flight path.
+        correct: false
+        why: ""
+      - id: OXQEQ0RKI
+        text: is effectively substituted by ensuring the weather conditions during
+          operation are sufficient to visually navigate and avoid obstacles.
+        correct: true
+        why: ""
+- id: QZASYAPD
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-328619
+    - AVEXAM-87298
+    - BGS-320097
+    - ATPLGS-107624
+  annexes: []
+  learningObjectives:
+    - 032.02.03.01.04
+  template:
+    type: simple
+    question: How does the thrust of a propeller vary during take-off run, assuming
+      unstalled flow conditions at the propeller blades? The thrust...
+    explanation: ""
+    options:
+      - id: OLDLUFSFR
+        text: decreases while the aeroplane speed builds up.
+        correct: true
+        why: ""
+      - id: OVEHADAUK
+        text: has no change during take-off and climb.
+        correct: false
+        why: ""
+      - id: OM04XMNXN
+        text: increases while the aeroplane speed builds up.
+        correct: false
+        why: ""
+      - id: OGHVIP0RM
+        text: varies with mass changes only.
+        correct: false
+        why: ""
+- id: QZCIOXEZ
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-322660
+    - AVEXAM-77257
+    - BGS-320823
+    - AVEXAM-30091
+    - AVEXAM-57906
+    - AVEXAM-67543
+    - ATPLGS-627863
+    - BGS-321179
+    - AVEXAM-70704
+    - AVEXAM-32628
+    - BGS-320829
+    - BGS-320938
+  annexes: []
+  learningObjectives:
+    - 032.02.04.01.03
+  template:
+    type: calculation
+    question: >-
+      For a single-engine aeroplane, calculate the net glide distance following
+      an engine failure. Given:
+
+
+      - Altitude: {{alt}} ft
+
+      - Terrain elevation: {{elev}} ft
+
+      - Gross gradient: {{grad}}%
+
+      - TAS: {{tas}} kt
+
+      - Headwind: {{hw}} kt (a negative value is a tailwind)
+
+
+      Still air distance = (height difference (ft) x 100) / net gradient (%)
+
+      Ground distance = still air distance x (GS / TAS)
+
+      Assume 1 NM = 6 080 ft.
+    variables:
+      - id: alt
+        label: altitude
+        unit: ft
+      - id: elev
+        label: terrain elevation
+        unit: ft
+      - id: grad
+        label: gross gradient
+        unit: "%"
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: hw
+        label: headwind
+        unit: kt
+    answer:
+      formula: (alt - elev) * 100 / (grad + 0.5) / 6080 * (tas - hw) / tas
+      unit: NM
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (alt - elev) * 100 / (grad + 0.5) / 6080
+      - id: d2
+        formula: (alt - elev) * 100 / (grad + 0.5) / 6080 * tas / (tas - hw)
+      - id: d3
+        formula: (alt - elev) * 100 / grad / 6080 * tas / (tas - hw)
+      - id: d4
+        formula: (alt - elev) * 100 / grad / 6080 * (tas - hw) / tas
+      - id: d5
+        formula: (alt - elev) * 100 / (grad - 0.5) / 6080 * (tas - hw) / tas
+    presets:
+      - id: p1
+        values:
+          alt: 9500
+          elev: 500
+          grad: 11
+          tas: 250
+          hw: 42
+      - id: p2
+        values:
+          alt: 8000
+          elev: 300
+          grad: 10
+          tas: 120
+          hw: 20
+      - id: p3
+        values:
+          alt: 7500
+          elev: 0
+          grad: 12
+          tas: 180
+          hw: 30
+    explanation: >-
+      After an engine failure the aeroplane glides at the net gradient, which is
+      the gross gradient increased by 0.5% (the net glide path is steeper than
+      the gross one). The still-air distance is the height above the terrain
+      divided by that gradient, and it is converted to a ground distance with
+      the groundspeed to TAS ratio, so a headwind shortens the glide.
+
+
+      **Solution**
+
+
+      Height difference = {{= alt - elev}} ft
+
+
+      Net gradient = {{= grad + 0.5}}%
+
+
+      GS = {{= tas - hw}} kt
+
+
+      {{f: (alt - elev) * 100 / (grad + 0.5) / 6080 * (tas - hw) / tas}} = {{n:
+      (alt - elev) * 100 / (grad + 0.5) / 6080 * (tas - hw) / tas}} =
+      **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: still-air distance, the wind correction GS / TAS is not
+      applied.
+
+      - **{{d2}} NM**: the ratio is inverted (TAS / GS), so a headwind wrongly
+      lengthens the glide.
+
+      - **{{d3}} NM**: gross gradient used instead of net, and the ratio is
+      inverted.
+
+      - **{{d4}} NM**: gross gradient used instead of the net gradient.
+
+      - **{{d5}} NM**: the 0.5% is subtracted instead of added, giving a
+      gradient that is too shallow.
+- id: QZGCCHWG
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323334
+    - AVEXAM-36327
+    - ATPLGS-627860
+    - AVEXAM-79404
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.02
+  template:
+    type: simple
+    question: You are in a single engine piston aircraft with a stall speed of 68
+      kt. What is the minimum value of VR for this aircraft?
+    explanation: ""
+    options:
+      - id: ORWX2PF75
+        text: 68 kt
+        correct: true
+        why: ""
+      - id: OMICSEASB
+        text: 82 kt
+        correct: false
+        why: ""
+      - id: OZQYPAL2J
+        text: 71 kt
+        correct: false
+        why: ""
+      - id: OQWDBLSN9
+        text: 75 kt
+        correct: false
+        why: ""
+- id: QZPUYGNJ
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-324036
+    - AVEXAM-77780
+    - BGS-320641
+    - AVEXAM-36803
+  annexes: []
+  learningObjectives:
+    - 032.02.01.01.02
+  template:
+    type: calculation
+    question: What is the minimum speed at 50 ft above the take-off surface for a
+      single-engine aeroplane with a VS1 of {{vs1}} kt?
+    variables:
+      - id: vs1
+        label: VS1
+        unit: kt
+    answer:
+      formula: ceil(1.2 * vs1)
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: ceil(1.3 * vs1)
+      - id: d2
+        formula: ceil(1.1 * vs1)
+      - id: d3
+        formula: ceil(1.05 * vs1)
+    presets:
+      - id: p1
+        values:
+          vs1: 67
+      - id: p2
+        values:
+          vs1: 58
+      - id: p3
+        values:
+          vs1: 62
+    explanation: >-
+      For single-engine aeroplanes (performance class B) the speed at the 50 ft
+      screen height must be at least 1.2 times the stall speed VS1 in the
+      take-off configuration. The result is rounded up to the next whole knot.
+
+
+      **Solution**
+
+
+      {{f: 1.2 * vs1}} = {{n: 1.2 * vs1}} = {{= 1.2 * vs1}} kt, rounded up to
+      **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: uses a factor of 1.3 instead of 1.2.
+
+      - **{{d2}} kt**: uses a factor of 1.1 instead of 1.2.
+
+      - **{{d3}} kt**: uses a factor of only 1.05, which is too low for the 50
+      ft screen height.
+- id: QZQUZ2RMG
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-323129
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: For a piston-engine, at what altitude will it have the best endurance?
+    explanation: ""
+    options:
+      - id: OUS7GJNKX
+        text: at service ceiling
+        correct: false
+        why: ""
+      - id: OLWKX18NF
+        text: about 15000 ft
+        correct: false
+        why: ""
+      - id: OYIPDVSJF
+        text: at 15000 ft and more
+        correct: false
+        why: ""
+      - id: OJFFBNFMU
+        text: about Mean Sea Level
+        correct: true
+        why: ""
+- id: QZZFO7JW5
+  docId: "032.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-325803
+    - BGS-320079
+    - AVEXAM-87038
+    - AVEXAM-11079
+    - BGS-320080
+    - AVEXAM-55212
+    - ATPLGS-107298
+    - ATPLGS-107595
+  annexes: []
+  learningObjectives:
+    - "032.02"
+  template:
+    type: simple
+    question: An aeroplane with reciprocating engines is flying at a constant angle
+      of attack, mass and configuration. With increasing altitude the drag...
+    explanation: ""
+    options:
+      - id: OYKCUP6DH
+        text: remains unchanged but the CAS increases.
+        correct: false
+        why: ""
+      - id: OJPKSSI1Z
+        text: increases at constant TAS.
+        correct: false
+        why: ""
+      - id: OLLXAPNTH
+        text: remains unchanged but the TAS increases.
+        correct: true
+        why: ""
+      - id: OZIDEQQ95
+        text: decreases and the CAS decreases too because of the lower air density.
+        correct: false
+        why: ""

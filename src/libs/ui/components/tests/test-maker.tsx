@@ -1,16 +1,26 @@
-import { useEffect, useState } from "react";
-import { useMediaQuery } from "../../hooks/use-media-query";
+import { useState } from "react";
 import { cn } from "../../utils/cn";
+import { Button } from "../base/button";
 import { Checkbox } from "../base/checkbox";
-import { Modal } from "../base/modal";
 import { NestedCheckboxSelect } from "../base/nested-checkbox-select";
-import { Select } from "../base/select";
 import { SliderWithInput } from "../base/slider-with-input";
-import type { FC } from "react";
-import type { fetchSubjects } from "../../../../routes/-server-functions/question-bank/fetch-subjects";
-import type { QuestionBankName } from "../../../core/question-bank/question-banks";
+import type { FC, ReactNode } from "react";
 
-type Subject = Awaited<ReturnType<typeof fetchSubjects>>[number];
+type Subject = {
+  id: string;
+  shortName: string;
+  numberOfExamQuestions: number;
+  chapters: {
+    id: string;
+    text: string;
+    numberOfQuestions: number;
+    sections: {
+      id: string;
+      text: string;
+      numberOfQuestions: number;
+    }[];
+  }[];
+};
 
 export type TestMakerConfig = {
   mode: "exam" | "study";
@@ -21,76 +31,66 @@ export type TestMakerConfig = {
 
 const MAX_QUESTIONS = 200;
 
-const getStorageKey = (questionBank: QuestionBankName) =>
-  `chair-flight-test-maker-${questionBank}`;
+const Step: FC<{
+  title?: string;
+  aside?: ReactNode;
+  className?: string;
+  children: ReactNode;
+}> = ({ title, aside, className, children }) => (
+  <section className={cn("flex min-h-0 flex-col gap-3", className)}>
+    {(title || aside) && (
+      <div className="flex flex-none items-center justify-between gap-2">
+        <h2 className="m-0 text-base font-bold">{title}</h2>
+        {aside}
+      </div>
+    )}
+    {children}
+  </section>
+);
 
-const readConfig = (questionBank: QuestionBankName) => {
-  try {
-    const stored = localStorage.getItem(getStorageKey(questionBank));
-    return stored ? (JSON.parse(stored) as Partial<TestMakerConfig>) : {};
-  } catch {
-    return {};
-  }
-};
-
-const getDefaults = (subject: Subject) => ({
-  learningObjectiveIds: subject.chapters.map((chapter) => chapter.id),
-  numberOfQuestions: subject.numberOfExamQuestions,
-});
-
-const SectionLabel: FC<{ label: string; aside?: React.ReactNode }> = ({
-  label,
-  aside,
-}) => (
-  <div className="flex items-center justify-between gap-2">
-    <span className="text-xs font-semibold text-ink">{label}</span>
-    {aside}
-  </div>
+const Option: FC<{
+  selected: boolean;
+  label: string;
+  hint?: string;
+  onClick: () => void;
+}> = ({ selected, label, hint, onClick }) => (
+  <button
+    type="button"
+    aria-pressed={selected}
+    onClick={onClick}
+    className={cn(
+      "flex min-h-11 flex-1 cursor-pointer flex-col items-center",
+      "justify-center gap-1 rounded-lg border-2 bg-paper px-3 py-2",
+      "text-sm font-semibold text-ink",
+      selected
+        ? "border-accent text-accent"
+        : "border-rule hover:border-accent",
+    )}
+  >
+    {label}
+    {hint && <span className="text-xs font-normal text-muted">{hint}</span>}
+  </button>
 );
 
 export const TestMaker: FC<{
-  questionBank: QuestionBankName;
   subjects: Subject[];
   submitting: boolean;
   error: string;
+  banner?: ReactNode;
+  wide?: boolean;
   onSubmit: (config: TestMakerConfig) => void;
-}> = ({ questionBank, subjects, submitting, error, onSubmit }) => {
-  const isMobile = useMediaQuery("(max-width: 639px)");
-  const [modalOpen, setModalOpen] = useState(false);
-  const [config, setConfig] = useState<TestMakerConfig>(() => ({
-    mode: "exam",
-    subject: subjects[0]?.id ?? "",
-    learningObjectiveIds: [],
-    numberOfQuestions: 40,
-    ...(subjects[0] ? getDefaults(subjects[0]) : {}),
-  }));
+}> = ({ subjects, submitting, error, banner, wide, onSubmit }) => {
+  const [mode, setMode] = useState<TestMakerConfig["mode"] | null>(null);
+  const [subjectId, setSubjectId] = useState<string | null>(null);
+  const [choosingSubject, setChoosingSubject] = useState(true);
+  const [learningObjectiveIds, setLearningObjectiveIds] = useState<string[]>(
+    [],
+  );
+  const [requested, setRequested] = useState(20);
 
-  useEffect(() => {
-    const stored = readConfig(questionBank);
-    const subject = subjects.find((item) => item.id === stored.subject);
-    if (!subject) return;
-    setConfig({
-      ...getDefaults(subject),
-      mode: stored.mode === "study" ? "study" : "exam",
-      subject: subject.id,
-      ...(stored.learningObjectiveIds
-        ? { learningObjectiveIds: stored.learningObjectiveIds }
-        : {}),
-      ...(stored.numberOfQuestions
-        ? { numberOfQuestions: stored.numberOfQuestions }
-        : {}),
-    });
-  }, [questionBank, subjects]);
-
-  const saveConfig = (next: TestMakerConfig) => {
-    setConfig(next);
-    try {
-      localStorage.setItem(getStorageKey(questionBank), JSON.stringify(next));
-    } catch {}
-  };
-
-  const subject = subjects.find((item) => item.id === config.subject);
+  const subject = subjects.find((item) => item.id === subjectId);
   const chapters = subject?.chapters ?? [];
+  const study = mode === "study";
   const questionCounts = new Map(
     chapters.flatMap((chapter) => [
       [chapter.id, chapter.numberOfQuestions] as const,
@@ -99,20 +99,21 @@ export const TestMaker: FC<{
       ),
     ]),
   );
-  const availableQuestions = config.learningObjectiveIds.reduce(
-    (total, id) => total + (questionCounts.get(id) ?? 0),
-    0,
-  );
+  const availableQuestions = study
+    ? learningObjectiveIds.reduce(
+        (total, id) => total + (questionCounts.get(id) ?? 0),
+        0,
+      )
+    : chapters.reduce((total, chapter) => total + chapter.numberOfQuestions, 0);
   const maxQuestions = Math.max(1, Math.min(MAX_QUESTIONS, availableQuestions));
-  const isExam = config.mode === "exam";
-  const numberOfQuestions = isExam
-    ? (subject?.numberOfExamQuestions ?? config.numberOfQuestions)
-    : Math.min(config.numberOfQuestions, maxQuestions);
+  const numberOfQuestions = study
+    ? Math.min(requested, maxQuestions)
+    : Math.min(subject?.numberOfExamQuestions ?? 1, maxQuestions);
   const allSelected = chapters.every((chapter) =>
-    config.learningObjectiveIds.includes(chapter.id),
+    learningObjectiveIds.includes(chapter.id),
   );
   const someSelected = chapters.some((chapter) =>
-    config.learningObjectiveIds.includes(chapter.id),
+    learningObjectiveIds.includes(chapter.id),
   );
   const items = chapters.map((chapter) => ({
     id: chapter.id,
@@ -124,61 +125,179 @@ export const TestMaker: FC<{
       subLabel: `${section.id} - ${section.numberOfQuestions} questions`,
     })),
   }));
-  const valid = config.learningObjectiveIds.length > 0 && !submitting;
+  const ready =
+    Boolean(mode && subject) &&
+    !choosingSubject &&
+    availableQuestions > 0 &&
+    (!study || learningObjectiveIds.length > 0) &&
+    !submitting;
 
-  const nestedSelect = (className?: string) => (
-    <NestedCheckboxSelect
-      className={className}
-      items={items}
-      values={config.learningObjectiveIds}
-      onChange={(learningObjectiveIds) =>
-        saveConfig({ ...config, learningObjectiveIds })
-      }
-    />
-  );
+  const selectSubject = (next: Subject) => {
+    setSubjectId(next.id);
+    setLearningObjectiveIds(next.chapters.map((chapter) => chapter.id));
+    setRequested(next.numberOfExamQuestions);
+    setChoosingSubject(false);
+  };
+
+  const submit = () => {
+    if (!mode || !subject || !ready) return;
+    onSubmit({
+      mode,
+      subject: subject.id,
+      learningObjectiveIds: study
+        ? learningObjectiveIds
+        : chapters.map((chapter) => chapter.id),
+      numberOfQuestions,
+    });
+  };
+
+  const twoColumns = Boolean(wide && study && subject && !choosingSubject);
 
   return (
-    <form
-      className="mx-auto flex h-full w-full max-w-4xl flex-col gap-3 p-3 sm:p-4"
-      onSubmit={(event) => {
-        event.preventDefault();
-        onSubmit({ ...config, numberOfQuestions });
-      }}
+    <div
+      className={cn(
+        "mx-auto flex h-full w-full flex-col gap-4 overflow-hidden p-4",
+        "sm:p-8 lg:flex-row lg:gap-8",
+        twoColumns ? "max-w-6xl" : "max-w-xl",
+        !wide && "gap-5",
+      )}
     >
-      <Select
-        label="Mode"
-        placeholder="Mode"
-        value={config.mode}
-        disabled={submitting}
-        options={[
-          { value: "exam", label: "Exam" },
-          { value: "study", label: "Study" },
-        ]}
-        onChange={(event) =>
-          saveConfig({
-            ...config,
-            mode: event.target.value === "study" ? "study" : "exam",
-          })
-        }
-      />
-      <Select
-        label="Subject"
-        placeholder="Subject"
-        value={config.subject}
-        disabled={submitting}
-        options={subjects.map((item) => ({
-          value: item.id,
-          label: `${item.id} - ${item.shortName}`,
-        }))}
-        onChange={(event) => {
-          const next = subjects.find((item) => item.id === event.target.value);
-          if (next)
-            saveConfig({ ...config, subject: next.id, ...getDefaults(next) });
-        }}
-      />
-      <div className="flex flex-col gap-1.5">
-        <SectionLabel
-          label="Learning Objectives"
+      <div
+        className={cn(
+          "contents lg:flex lg:min-h-0 lg:flex-col lg:gap-4",
+          twoColumns ? "lg:w-80 lg:flex-none" : "lg:w-full",
+        )}
+      >
+        {!(wide && mode) && (
+          <h1 className="m-0 flex-none text-2xl font-bold sm:text-3xl">
+            Create a test
+          </h1>
+        )}
+        {banner}
+        <Step
+          title={wide && mode ? undefined : "Choose a mode"}
+          className="flex-none"
+        >
+          <div className="flex gap-2">
+            <Option
+              selected={mode === "exam"}
+              label="Exam"
+              hint={
+                mode
+                  ? undefined
+                  : "All chapters of a subject. You can't see your results until you finish."
+              }
+              onClick={() => setMode("exam")}
+            />
+            <Option
+              selected={mode === "study"}
+              label="Study"
+              hint={
+                mode
+                  ? undefined
+                  : "Pick learning objectives and see if your answers are correct as you go."
+              }
+              onClick={() => setMode("study")}
+            />
+          </div>
+        </Step>
+        {mode && (
+          <Step
+            title={wide && subject && !choosingSubject ? undefined : "Subject"}
+            className={cn(choosingSubject ? "flex-1" : "flex-none")}
+          >
+            {choosingSubject || !subject ? (
+              <ul
+                className={cn(
+                  "m-0 flex min-h-0 flex-1 list-none flex-col overflow-auto",
+                  "overscroll-contain rounded-lg border border-rule bg-paper p-0",
+                )}
+              >
+                {subjects.map((item) => (
+                  <li
+                    key={item.id}
+                    className="flex-none border-b border-rule last:border-b-0"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => selectSubject(item)}
+                      className={cn(
+                        "flex w-full cursor-pointer flex-col border-0",
+                        "bg-transparent p-3 text-left text-ink",
+                        "hover:text-accent",
+                        item.id === subjectId && "text-accent",
+                      )}
+                    >
+                      <span className="text-sm font-medium">
+                        {item.id} - {item.shortName}
+                      </span>
+                      <span className="text-xs text-muted">
+                        {item.numberOfExamQuestions} exam questions
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setChoosingSubject(true)}
+                className={cn(
+                  "flex w-full cursor-pointer flex-col rounded-lg border-2",
+                  "border-accent bg-paper p-3 text-left text-accent",
+                )}
+              >
+                <span className="text-sm font-medium">
+                  {subject.id} - {subject.shortName}
+                </span>
+                <span className="text-xs text-muted">
+                  {subject.numberOfExamQuestions} exam questions
+                </span>
+              </button>
+            )}
+          </Step>
+        )}
+        {mode && subject && !choosingSubject && (
+          <Step
+            title={wide ? "Questions" : "Number of questions"}
+            className={cn("flex-none", wide && "gap-1.5 max-lg:order-1")}
+            aside={
+              <span className="text-[11px] text-muted">
+                {`total: ${availableQuestions}`}
+              </span>
+            }
+          >
+            <SliderWithInput
+              min={1}
+              max={maxQuestions}
+              value={numberOfQuestions}
+              disabled={!study || submitting}
+              onChange={setRequested}
+            />
+          </Step>
+        )}
+        <div
+          className={cn(
+            "mt-auto flex flex-none flex-col gap-2",
+            wide && "max-lg:order-2",
+          )}
+        >
+          {error && <p className="m-0 text-sm text-danger">{error}</p>}
+          <Button
+            variant="primary"
+            size="large"
+            className="w-full"
+            disabled={!ready}
+            onClick={submit}
+          >
+            {submitting ? "Creating..." : "Start"}
+          </Button>
+        </div>
+      </div>
+      {twoColumns && (
+        <Step
+          title="Learning objectives"
+          className="min-h-0 flex-1"
           aside={
             <label className="flex cursor-pointer items-center gap-2 text-xs">
               select all
@@ -186,94 +305,23 @@ export const TestMaker: FC<{
                 checked={allSelected}
                 indeterminate={!allSelected && someSelected}
                 onChange={() =>
-                  saveConfig({
-                    ...config,
-                    learningObjectiveIds: allSelected
-                      ? []
-                      : chapters.map((chapter) => chapter.id),
-                  })
+                  setLearningObjectiveIds(
+                    allSelected ? [] : chapters.map((chapter) => chapter.id),
+                  )
                 }
               />
             </label>
           }
-        />
-        {isMobile && (
-          <input
-            readOnly
-            aria-label="Learning Objectives"
-            className={cn(
-              "h-9 w-full cursor-pointer rounded-md border border-rule-strong",
-              "bg-paper px-3 text-sm text-ink",
-            )}
-            value={
-              allSelected
-                ? "All!"
-                : config.learningObjectiveIds.length === 0
-                  ? "None"
-                  : "Some"
-            }
-            onClick={() => setModalOpen(true)}
-          />
-        )}
-      </div>
-      {!isMobile && (
-        <div className="min-h-0 flex-1 overflow-auto rounded-md">
-          {nestedSelect()}
-        </div>
-      )}
-      <div className={cn("flex flex-col gap-1.5", isMobile && "mt-auto")}>
-        <SectionLabel
-          label="Number of Questions"
-          aside={
-            <span className="text-[11px] text-muted">
-              {!isExam && `max: ${maxQuestions}, `}
-              {`total: ${availableQuestions}`}
-            </span>
-          }
-        />
-        <SliderWithInput
-          min={1}
-          max={maxQuestions}
-          value={numberOfQuestions}
-          disabled={isExam || submitting}
-          onChange={(value) =>
-            saveConfig({ ...config, numberOfQuestions: value })
-          }
-        />
-      </div>
-      {error && <p className="m-0 text-sm text-danger">{error}</p>}
-      <button
-        type="submit"
-        disabled={!valid}
-        className={cn(
-          "h-11 w-full flex-none cursor-pointer rounded-md border-0",
-          "bg-accent text-base font-semibold text-white hover:opacity-90",
-          "disabled:cursor-default disabled:opacity-50",
-        )}
-      >
-        {submitting ? "Creating..." : "Start!"}
-      </button>
-      {modalOpen && (
-        <Modal
-          title="Learning Objectives"
-          size="full"
-          onClose={() => setModalOpen(false)}
-          footer={
-            <button
-              type="button"
-              onClick={() => setModalOpen(false)}
-              className={cn(
-                "h-10 w-full cursor-pointer rounded-md border-0 bg-accent",
-                "font-semibold text-white",
-              )}
-            >
-              Submit
-            </button>
-          }
         >
-          {nestedSelect()}
-        </Modal>
+          <div className="min-h-0 flex-1 overflow-auto overscroll-contain">
+            <NestedCheckboxSelect
+              items={items}
+              values={learningObjectiveIds}
+              onChange={setLearningObjectiveIds}
+            />
+          </div>
+        </Step>
       )}
-    </form>
+    </div>
   );
 };

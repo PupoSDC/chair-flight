@@ -1,7 +1,11 @@
 import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex";
+import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import { getHighlightRegExp } from "../../../base/get-highlight-reg-exp";
+import { useSearchWords } from "../../hooks/use-search-words";
 import { cn } from "../../utils/cn";
-import { getHighlightRegExp, useSearchWords } from "./search-highlight";
 import type { FC } from "react";
 
 type HastNode = {
@@ -25,7 +29,7 @@ const markNode = (pattern: RegExp, node: HastNode): HastNode[] => {
         : { type: "text", value: part },
     );
   }
-  if (node.children && node.tagName !== "code") {
+  if (node.children && node.tagName !== "code" && node.tagName !== "math") {
     node.children = node.children.flatMap((child) => markNode(pattern, child));
   }
   return [node];
@@ -45,8 +49,12 @@ export const Markdown: FC<{
   return (
     <div className={cn("markdown", className)}>
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        rehypePlugins={words.length > 0 ? [rehypeHighlight(words)] : []}
+        remarkPlugins={[remarkGfm, remarkMath]}
+        rehypePlugins={[
+          rehypeRaw,
+          ...(words.length > 0 ? [rehypeHighlight(words)] : []),
+          rehypeKatex,
+        ]}
       >
         {children}
       </ReactMarkdown>

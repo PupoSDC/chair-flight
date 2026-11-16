@@ -30,8 +30,8 @@ export const QuestionMultipleChoice: FC<{
   onAnnexClick,
 }) => {
   return (
-    <div className="flex flex-col gap-3">
-      <Markdown className="text-base">{question}</Markdown>
+    <div className="flex flex-col gap-6 lg:gap-10">
+      <Markdown className="question-markdown text-base">{question}</Markdown>
       {annexes.length > 0 && (
         <div className="flex flex-wrap gap-2">
           {annexes.map((href) => (
@@ -40,12 +40,18 @@ export const QuestionMultipleChoice: FC<{
               type="button"
               aria-label="Open annex"
               className={cn(
-                "size-14 cursor-pointer overflow-hidden rounded-md border",
+                "grid size-14 cursor-pointer place-items-center",
+                "overflow-hidden",
+                "rounded-md border",
                 "border-rule-strong bg-paper p-0 hover:border-accent",
               )}
               onClick={() => onAnnexClick?.(href)}
             >
-              <img src={href} alt="" className="size-full object-cover" />
+              {href.endsWith(".pdf") ? (
+                <span className="text-xs font-semibold text-muted">PDF</span>
+              ) : (
+                <img src={href} alt="" className="size-full object-cover" />
+              )}
             </button>
           ))}
         </div>
@@ -61,13 +67,14 @@ export const QuestionMultipleChoice: FC<{
               disabled={disabled}
               aria-pressed={selected}
               className={cn(
-                "flex min-h-[78px] cursor-pointer items-center gap-5 rounded-md",
+                "flex min-h-[78px] cursor-pointer items-center gap-5",
+                "rounded-md",
                 "border px-4 py-3 text-left text-sm",
                 "disabled:cursor-default",
                 !showResult &&
                   (selected
                     ? "border-brand bg-brand text-white"
-                    : "border-ink/80 bg-transparent text-ink hover:bg-ink/5"),
+                    : "border-ink/80 bg-paper text-ink hover:border-accent"),
                 showResult &&
                   selected &&
                   correct &&
@@ -79,18 +86,18 @@ export const QuestionMultipleChoice: FC<{
                 showResult &&
                   !selected &&
                   correct &&
-                  "border-2 border-success bg-transparent text-ink",
+                  "border-2 border-success bg-paper text-ink",
                 showResult &&
                   !selected &&
                   !correct &&
-                  "border-ink/40 bg-transparent text-ink",
+                  "border-ink/40 bg-paper text-ink",
               )}
               onClick={() => onOptionClick(option.id)}
             >
               <span
                 className={cn(
                   "w-8 flex-none text-center text-[44px] leading-none",
-                  !showResult && !selected && "text-brand",
+                  !showResult && !selected && "text-muted",
                 )}
               >
                 {OPTION_LETTERS[index]}
@@ -98,7 +105,9 @@ export const QuestionMultipleChoice: FC<{
               <span className="flex min-w-0 flex-col gap-1">
                 <span>{option.text}</span>
                 {showResult && option.why && (
-                  <span className="text-xs opacity-80">{option.why}</span>
+                  <Markdown className="text-xs opacity-80">
+                    {option.why}
+                  </Markdown>
                 )}
               </span>
             </button>

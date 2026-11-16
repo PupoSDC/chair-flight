@@ -1,5 +1,41 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-display: optional;
+  font-weight: 400;
+  src: url("@fontsource/figtree/files/figtree-latin-400-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-display: optional;
+  font-weight: 500;
+  src: url("@fontsource/figtree/files/figtree-latin-500-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-display: optional;
+  font-weight: 600;
+  src: url("@fontsource/figtree/files/figtree-latin-600-normal.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-display: optional;
+  font-weight: 700;
+  src: url("@fontsource/figtree/files/figtree-latin-700-normal.woff2")
+    format("woff2");
+}
+
 :root {
   color-scheme: light dark;
   --canvas: light-dark(#edf5fd, #0b0d0e);
@@ -16,28 +52,6 @@
   --danger: light-dark(#c41c1c, #e5484d);
   --danger-soft: light-dark(#fce4e4, #3a1616);
   --warning: light-dark(#9a5b13, #f3c46b);
-  --teal: light-dark(#1f9d55, #4cc38a);
-  --teal-soft: light-dark(#dff5e8, #10301f);
-  --rose: light-dark(#d93a2b, #f58a7d);
-  --rose-soft: light-dark(#fde6e3, #3a1a17);
-}
-
-[data-bank="type"] {
-  --canvas: light-dark(#fdf0ee, #0d0b0b);
-  --rule: light-dark(#f2dcd8, #3a3232);
-  --rule-strong: light-dark(#f7c9c3, #53443f);
-  --brand: #c8372b;
-  --accent: light-dark(#c8372b, #f0645a);
-  --accent-soft: light-dark(#fde6e3, #3a1a17);
-}
-
-[data-bank="prep"] {
-  --canvas: light-dark(#edf8f1, #0b0d0c);
-  --rule: light-dark(#d9ebe0, #32393a);
-  --rule-strong: light-dark(#bfe6cc, #3f5348);
-  --brand: #1f8f4e;
-  --accent: light-dark(#1f8f4e, #4cc38a);
-  --accent-soft: light-dark(#dff5e8, #10301f);
 }
 
 :root[data-theme="light"] {
@@ -69,6 +83,34 @@
   --color-rose-soft: var(--rose-soft);
   --animate-slide: slide 30s linear infinite;
   --animate-blink: blink 1s step-start infinite;
+  --animate-shake: shake 0.45s ease-in-out;
+  --animate-spin-once: spin-once 0.5s ease-in-out;
+  @keyframes spin-once {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    15% {
+      transform: translateX(-8px) rotate(-0.6deg);
+    }
+    35% {
+      transform: translateX(7px) rotate(0.5deg);
+    }
+    55% {
+      transform: translateX(-5px) rotate(-0.3deg);
+    }
+    75% {
+      transform: translateX(3px);
+    }
+  }
   @keyframes slide {
     to {
       transform: translateY(-50%);
@@ -147,6 +189,12 @@
   .markdown :is(th, td) {
     @apply border border-rule px-2 py-1 text-left;
   }
+  .question-markdown thead {
+    @apply bg-accent-soft;
+  }
+  .question-markdown tbody :is(th, td) {
+    @apply bg-paper;
+  }
   .markdown .search-mark {
     @apply rounded-sm bg-warning/40 text-inherit;
   }
@@ -170,5 +218,134 @@
   }
   .sliding-fade-2 {
     mask-image: linear-gradient(to right, rgb(0 0 0 / 0.4), rgb(0 0 0 / 0.75));
+  }
+}
+
+@layer components {
+  .b737-module,
+  .cessna-module,
+  .a320-module {
+    background-image:
+      radial-gradient(
+        ellipse at 15% 30%,
+        color-mix(in srgb, var(--accent) 10%, transparent),
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse at 95% 90%,
+        color-mix(in srgb, var(--accent) 7%, transparent),
+        transparent 50%
+      );
+  }
+
+  [data-module-home="true"] {
+    --module-chart-opacity: 0.12;
+    --module-aircraft-opacity: 0.15;
+  }
+
+  .b737-module-chart,
+  .cessna-module-chart,
+  .a320-module-chart {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    color: var(--accent);
+    opacity: var(--module-chart-opacity, 0.05);
+    mask-image: radial-gradient(ellipse at 50% 48%, transparent 20%, #000 85%);
+  }
+
+  .b737-module-chart,
+  .cessna-module-chart,
+  .a320-module-chart {
+    background-image:
+      linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .a320-module-chart {
+    background-position: 40px 40px;
+  }
+
+  .b737-module-chart svg,
+  .cessna-module-chart svg,
+  .a320-module-chart svg {
+    position: absolute;
+    inset: 0;
+  }
+}
+
+@layer components {
+  .aircraft-module-outline {
+    position: absolute;
+    bottom: 7%;
+    left: 4%;
+    z-index: -1;
+    width: 92%;
+    aspect-ratio: 326 / 118;
+    pointer-events: none;
+    color: var(--accent);
+    opacity: var(--module-aircraft-opacity, 0.06);
+  }
+}
+
+@layer components {
+  .home-page {
+    background: var(--canvas);
+    background-image:
+      radial-gradient(
+        ellipse at 5% 15%,
+        color-mix(in srgb, var(--accent) 18%, transparent),
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse at 95% 85%,
+        color-mix(in srgb, var(--accent) 14%, transparent),
+        transparent 55%
+      );
+  }
+
+  .home-blueprint-background {
+    position: fixed;
+    inset: 3rem 0 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    color: var(--accent);
+    opacity: 0.48;
+    mask-image: radial-gradient(
+      ellipse at 50% 48%,
+      transparent 13%,
+      rgb(0 0 0 / 0.18) 30%,
+      #000 58%
+    );
+  }
+
+  .home-blueprint-background svg {
+    position: absolute;
+    inset: 0;
+  }
+
+  @media (max-width: 640px) {
+    .home-blueprint-turbine {
+      transform: translate(535px, 120px) scale(0.65);
+    }
+
+    .home-blueprint-propeller {
+      transform: translate(940px, 140px) rotate(28deg) scale(0.65);
+    }
+
+    .home-blueprint-wing {
+      transform: translate(430px, 810px) rotate(-18deg) scale(0.6);
+    }
+
+    .home-blueprint-yoke {
+      transform: translate(890px, 810px) rotate(-12deg) scale(0.7);
+    }
+
+    .home-blueprint-background {
+      opacity: 0.38;
+    }
   }
 }

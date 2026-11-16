@@ -1,0 +1,3862 @@
+- id: Q0J0723AV
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627855
+    - ATPLGS-124741
+    - BGS-621121
+    - ATPLGS-124742
+    - BGS-621122
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: calculation
+    question: |-
+      A radio wave has a wavelength of {{lam}} m.
+
+      What is its frequency in MHz?
+    variables:
+      - id: lam
+        label: Wavelength
+        unit: m
+    answer:
+      formula: 300 / lam
+      unit: MHz
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: 300 / (lam * 10)
+      - id: d2
+        formula: 150 / lam
+      - id: d3
+        formula: lam / 300
+      - id: d4
+        formula: 300 / lam ^ 2
+    presets:
+      - id: p1
+        values:
+          lam: 8.25
+      - id: p2
+        values:
+          lam: 3
+      - id: p3
+        values:
+          lam: 15
+    explanation: >-
+      Frequency is the speed of light divided by the wavelength. The speed of
+      light is 300 million m/s, so with the wavelength in metres the frequency
+      in MHz is 300 divided by the wavelength.
+
+
+      **Solution**
+
+
+      - {{f: 300 / lam}} = {{n: 300 / lam}} = **{{answer}} MHz**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} MHz**: divides by an extra factor of ten.
+
+      - **{{d2}} MHz**: uses half the speed of light.
+
+      - **{{d3}} MHz**: inverts the ratio, dividing the wavelength by 300.
+
+      - **{{d4}} MHz**: squares the wavelength instead of using it once.
+- id: Q1L9RV4PY
+  docId: "062.01"
+  relatedQuestions:
+    - QANSYZIAU
+  externalIds:
+    - ATPLQ-627668
+    - BGS-621112
+    - ATPLGS-116236
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: calculation
+    question: The frequency of a VOR is {{freq}} MHz. What is the corresponding
+      wavelength, in metres?
+    variables:
+      - id: freq
+        label: Frequency
+        unit: MHz
+    answer:
+      formula: 300 / freq
+      unit: m
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: 3000 / freq
+      - id: d2
+        formula: 30000 / freq
+      - id: d3
+        formula: 300000 / freq
+      - id: d4
+        formula: freq / 300
+    presets:
+      - id: p1
+        values:
+          freq: 117.5
+      - id: p2
+        values:
+          freq: 121.5
+      - id: p3
+        values:
+          freq: 108
+    explanation: >-
+      Radio waves travel at about 300 000 000 m/s. The wavelength in metres
+      equals 300 divided by the frequency in MHz, so the two quantities are
+      linked by one simple rule.
+
+
+      **Solution**
+
+
+      {{f: 300 / freq}} = {{n: 300 / freq}} = **{{answer}} m**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: a result ten times too big, the decimal point has moved by
+      one place.
+
+      - **{{d2}} m**: a result a hundred times too big.
+
+      - **{{d3}} m**: a result a thousand times too big, a wrong unit
+      conversion.
+
+      - **{{d4}} m**: inverts the formula and divides the frequency by 300.
+- id: Q1QNVDDZV
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621840
+    - ATPLGS-116337
+  annexes:
+    - 062-radio-wave-propagation-diagram-transmitter-ionosphere-sky-wave-and-ground
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      What kind of disturbances may occur in the area marked by the circle in
+      the figure?
+    explanation: ""
+    options:
+      - id: OPGM7FSM7
+        text: Diffraction
+        correct: false
+        why: ""
+      - id: OLFPA1BKU
+        text: Shoreline/Coastal effect
+        correct: false
+        why: ""
+      - id: O99XBBXLY
+        text: Fading and interference
+        correct: true
+        why: ""
+      - id: OYVMKLIIL
+        text: Absorption
+        correct: false
+        why: ""
+- id: Q1U72H9HU
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629289
+    - ATPLGS-127809
+    - BGS-620937
+    - AVEXAM-93279
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: What is meant by the term "Fading"?
+    explanation: ""
+    options:
+      - id: OMORUGANL
+        text: The interference of the ground and sky wave.
+        correct: true
+        why: ""
+      - id: OKNNQA8K5
+        text: The disappearance of the D-layer with beginning of the evening twilight.
+        correct: false
+        why: ""
+      - id: OO37Y57EB
+        text: An effect at RADAR which leads to ‘blind speed’.
+        correct: false
+        why: ""
+      - id: O43BIW7MM
+        text: An effect which can be observed only in the F-layer of the ionosphere.
+        correct: false
+        why: ""
+- id: Q2QFEVHWF
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629423
+    - BGS-621526
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: At night, the ionosphere undergoes changes in ionisation density,
+      leading to fluctuations in the strength of received signals in the LF/MF
+      frequency band. This phenomenon is commonly referred to as...
+    explanation: ""
+    options:
+      - id: OUKM9ENQU
+        text: attenuation and its impact are greatest on sky waves with high transmitted
+          frequencies.
+        correct: false
+        why: ""
+      - id: OIAOTFE3L
+        text: super refraction, which increases the range and strength of the sky wave.
+        correct: false
+        why: ""
+      - id: OL0CRPQIE
+        text: absorption mostly affects the ground wave and is dependent on the
+          transmission power.
+        correct: false
+        why: ""
+      - id: OPF0NDTKC
+        text: fading, caused by the received ground wave and sky wave going out of
+          phase.
+        correct: true
+        why: ""
+- id: Q3LPSVTV8
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621489
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: A particular METAR states 4 000 m of visibility. This can refer to the
+      visibility of a light on an unlit background. The intensity of this light
+      is how many candelas?
+    explanation: ""
+    options:
+      - id: OXGDMWJGV
+        text: 1 000
+        correct: true
+        why: ""
+      - id: OIVLGIXHH
+        text: 4 000 000
+        correct: false
+        why: ""
+      - id: ORE54GG26
+        text: 4 000
+        correct: false
+        why: ""
+      - id: O4CRQWCXX
+        text: 1 000 000
+        correct: false
+        why: ""
+- id: Q3Q7WZ0VE
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624028
+    - BGS-620917
+    - ATPLGS-124710
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Which statement below concerning Mountain Effect is correct?
+    explanation: ""
+    options:
+      - id: O5O974NJL
+        text: may occur on NDB and VOR bearings.
+        correct: true
+        why: ""
+      - id: OCXQLZ5TG
+        text: will be compensated for by the receiver.
+        correct: false
+        why: ""
+      - id: O98RG0BFM
+        text: occurs only on NDB bearings.
+        correct: false
+        why: ""
+      - id: O7YWOW7X7
+        text: does not occur at low altitudes.
+        correct: false
+        why: ""
+- id: Q3UHYERLR
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629555
+    - ATPLGS-620981
+    - BGS-621084
+    - ATPLGS-124750
+    - AVEXAM-8076
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: What type of antenna is used in a modern Airborne Weather Radar?
+    explanation: ""
+    options:
+      - id: ORG6BEW7L
+        text: Slotted planar antenna
+        correct: true
+        why: ""
+      - id: OHIODQ9TR
+        text: omnidirectional antenna
+        correct: false
+        why: ""
+      - id: OMY5K5FVA
+        text: Loop antenna
+        correct: false
+        why: ""
+      - id: OE8BLPQ5G
+        text: Dipole
+        correct: false
+        why: ""
+- id: Q59QHZVIE
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624187
+    - ATPLGS-621011
+    - BGS-621031
+    - ATPLGS-127808
+    - BGS-621117
+    - ATPLGS-621273
+    - AVEXAM-16737
+    - AVEXAM-47004
+    - BGS-620877
+    - BGS-620805
+    - AVEXAM-34912
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: How are radio waves in MF propagated?
+    explanation: ""
+    options:
+      - id: O9OW88ZRS
+        text: At daytime as ground wave, during night only as sky wave.
+        correct: false
+        why: ""
+      - id: O7GFWNUG5
+        text: At daytime as ground wave, during night as ground wave and sky wave.
+        correct: true
+        why: ""
+      - id: OSSBHCBC7
+        text: At daytime and during night only as ground wave.
+        correct: false
+        why: ""
+      - id: OW8CNUWDQ
+        text: At daytime as ground wave and sky wave, during night only as ground wave.
+        correct: false
+        why: ""
+- id: Q5KF6JOZO
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627662
+    - BGS-621011
+    - ATPLGS-116190
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: How is the unit Hertz (Hz) defined?
+    explanation: ""
+    options:
+      - id: OSVAAAEZS
+        text: The time of one complete oscillation.
+        correct: false
+        why: ""
+      - id: OPKPEGYJM
+        text: The distance a radio wave travels in one second.
+        correct: false
+        why: ""
+      - id: OPNCB0VWM
+        text: The number of electromagnetic oscillations per second.
+        correct: true
+        why: ""
+      - id: OGUSEYKVY
+        text: The number of electromagnetic oscillations per minute.
+        correct: false
+        why: ""
+- id: Q5LWJFQTZ
+  docId: "062.01"
+  relatedQuestions:
+    - QCGMLOGDI
+  externalIds:
+    - ATPLQ-628427
+    - BGS-621144
+    - AVEXAM-33709
+    - ATPLGS-626518
+    - ATPLQ-625127
+    - BGS-621113
+    - ATPLGS-116237
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: calculation
+    question: |-
+      A radio wave has a frequency of {{freq}} kHz.
+
+      What is its wavelength in metres?
+    variables:
+      - id: freq
+        label: Frequency
+        unit: kHz
+    answer:
+      formula: 300000 / freq
+      unit: m
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: 300 / freq
+      - id: d2
+        formula: 3000000 / freq
+      - id: d3
+        formula: 30000 / freq
+      - id: d4
+        formula: 150000 / freq
+    presets:
+      - id: p1
+        values:
+          freq: 400
+      - id: p2
+        values:
+          freq: 427
+      - id: p3
+        values:
+          freq: 1000
+    explanation: >-
+      Wavelength is the speed of light divided by the frequency. The speed of
+      light is 300 000 km/s, or 3 × 10^8 m/s. A kilohertz is 1000 Hz, so with
+      the frequency in kHz the wavelength in metres is 300 000 divided by the
+      frequency.
+
+
+      **Solution**
+
+
+      - {{f: 300000 / freq}} = {{n: 300000 / freq}} = **{{answer}} m**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: does not convert kHz to Hz, so the result is out by a
+      factor of 1000.
+
+      - **{{d2}} m**: has an extra factor of ten.
+
+      - **{{d3}} m**: is a factor of ten too small.
+
+      - **{{d4}} m**: gives half the wavelength.
+- id: Q5TH4NKMP
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628513
+    - AVEXAM-60075
+    - BGS-621116
+    - ATPLGS-116208
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Which failure in radio navigation is connected with "Fading"?
+    explanation: ""
+    options:
+      - id: ODQA9UMI3
+        text: Shoreline/coastal Effect
+        correct: false
+        why: ""
+      - id: OIOX0EMXC
+        text: Mountain Effect
+        correct: false
+        why: ""
+      - id: OGES3HEXE
+        text: Twilight/night Effect
+        correct: true
+        why: ""
+      - id: O2INNHY0E
+        text: Static Discharge
+        correct: false
+        why: ""
+- id: Q784DF87X
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627678
+    - ATPLGS-627963
+    - BGS-620878
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "According to the International Telecommunication Union (ITU) code, a
+      radio signal may be classified by three symbols. The abbreviation A3E is
+      used for the type of transmission in which the carrier wave is:"
+    explanation: ""
+    options:
+      - id: OODKD77XH
+        text: A continuous wave interrupted with a keyed Morse code ident as used by an
+          NDB.
+        correct: false
+        why: ""
+      - id: OIMIYP2AZ
+        text: Amplitude modulated to transmit the Morse code ident, as is used by a VOR.
+        correct: false
+        why: ""
+      - id: ORV4RDPTH
+        text: Interrupted to transmit the Morse code identification, as used by an NDB.
+        correct: false
+        why: ""
+      - id: O00EBYLYA
+        text: Amplitude modulated by a speech signal, such as is used for VHF-COM.
+        correct: true
+        why: ""
+- id: Q79TEEP1O
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-623186
+    - AVEXAM-41402
+    - BGS-620016
+    - ATPLGS-620953
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Skip distance is the...
+    explanation: ""
+    options:
+      - id: ORLKGMOCA
+        text: thickness of the ionosphere.
+        correct: false
+        why: ""
+      - id: OGX3SWK63
+        text: range from the transmitter to the first sky wave return.
+        correct: true
+        why: ""
+      - id: OA0HPH7CZ
+        text: wavelength distance of a certain frequency.
+        correct: false
+        why: ""
+      - id: OJETTOABR
+        text: highest critical frequency distance.
+        correct: false
+        why: ""
+- id: Q8RXH39VA
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-623215
+    - AVEXAM-9257
+    - BGS-621348
+    - AVEXAM-92940
+    - AVEXAM-90181
+    - ATPLGS-100474
+    - AVEXAM-79319
+    - AVEXAM-67710
+    - AVEXAM-43658
+    - BGS-620924
+    - ATPLGS-100472
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: VHF (Very High Frequency) waves occur in which frequency range?
+    explanation: ""
+    options:
+      - id: OFTFDN9TM
+        text: 300 MHz – 3000 MHz
+        correct: false
+        why: ""
+      - id: OLSIBLZJ7
+        text: 30 MHz – 300 MHz
+        correct: true
+        why: ""
+      - id: O7MMDBRZA
+        text: 3 GHz – 30 GHz
+        correct: false
+        why: ""
+      - id: ORK4CJKG6
+        text: 3 MHz – 30 MHz
+        correct: false
+        why: ""
+- id: Q8ZEZXGIP
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628563
+    - AVEXAM-29486
+    - BGS-621076
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Modulation is
+    explanation: ""
+    options:
+      - id: OKR17YUWY
+        text: the process to provide a radio carrier wave for transmission.
+        correct: false
+        why: ""
+      - id: OR56JFUYY
+        text: to allow the signal to be amplified to the required power level.
+        correct: false
+        why: ""
+      - id: OCJDN2EC6
+        text: a continuous wave which is capable of carrying audible signals without
+          modification.
+        correct: false
+        why: ""
+      - id: ODLXWZ2R7
+        text: the process of impressing and transporting information by radio waves.
+        correct: true
+        why: ""
+- id: QAI1KFFJH
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621475
+    - AVEXAM-74436
+    - ATPLGS-620970
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: A reason that GPS satellites use helical antennae is
+    explanation: ""
+    options:
+      - id: OYI7DUKTT
+        text: to achieve better omni directional receiving qualities.
+        correct: false
+        why: ""
+      - id: O8HML2LEQ
+        text: to improve the signal to noise ratio.
+        correct: false
+        why: ""
+      - id: OFKQZPFFW
+        text: that the signal has a circular polarization.
+        correct: true
+        why: ""
+      - id: OLGJ3KJO7
+        text: to neutralize the ionospheric delay.
+        correct: false
+        why: ""
+- id: QANSYZIAU
+  docId: "062.01"
+  relatedQuestions:
+    - Q1L9RV4PY
+  externalIds:
+    - ATPLQ-624861
+    - BGS-621110
+    - AVEXAM-1449
+    - ATPLGS-124503
+    - ATPLGS-620998
+    - BGS-620747
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: calculation
+    question: Which frequency corresponds to a wavelength of {{wl}} cm? Give the
+      answer in MHz.
+    variables:
+      - id: wl
+        label: Wavelength
+        unit: cm
+    answer:
+      formula: 30000 / wl
+      unit: MHz
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: 300 / wl
+      - id: d2
+        formula: 3000 / wl
+      - id: d3
+        formula: 300 * wl / 100
+      - id: d4
+        formula: 15000 / wl
+    presets:
+      - id: p1
+        values:
+          wl: 12
+      - id: p2
+        values:
+          wl: 3
+      - id: p3
+        values:
+          wl: 75
+    explanation: >-
+      Radio waves travel at about 300 000 000 m/s, and frequency equals this
+      speed divided by the wavelength. The wavelength is in cm, so it is first
+      converted to metres (÷ 100), and the result is then given in MHz (÷ 1 000
+      000).
+
+
+      **Solution**
+
+
+      {{f: 300000000 / (wl / 100)}} = {{n: 300000000 / (wl / 100)}} Hz =
+      **{{answer}} MHz**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} MHz**: uses the wavelength in cm as if it were in metres.
+
+      - **{{d2}} MHz**: uses 3000 instead of 30000, a factor of ten too small.
+
+      - **{{d3}} MHz**: multiplies by the wavelength instead of dividing by it.
+
+      - **{{d4}} MHz**: uses half the speed of the wave, so the frequency is
+      halved.
+- id: QAP3VL2RQ
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629003
+    - AVEXAM-6873
+    - ATPLGS-621320
+    - BGS-620088
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The VHF Omnirange (VOR) uses the following wavelengths:"
+    explanation: ""
+    options:
+      - id: ORHECOVRQ
+        text: decimetric.
+        correct: false
+        why: ""
+      - id: OVDDCBXVA
+        text: centimetric.
+        correct: false
+        why: ""
+      - id: O7Q79NICC
+        text: hectometric.
+        correct: false
+        why: ""
+      - id: ONYBSSUYQ
+        text: metric.
+        correct: true
+        why: ""
+- id: QAZA5L9IE
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627317
+    - BGS-620939
+    - ATPLGS-625974
+    - AVEXAM-762
+    - BGS-621102
+    - ATPLGS-625975
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Under what conditions can VHF voice communications often suffer
+      interference from transmissions on the same frequency at a distance
+      considerably greater than line-of-sight?
+    explanation: ""
+    options:
+      - id: OIGIICVES
+        text: The interfering signal may be refracted as a surface wave over a large
+          expanse of water.
+        correct: false
+        why: ""
+      - id: O4VCJOOXO
+        text: The interfering signal may be refracted from mountains between the
+          transmitter and receiver.
+        correct: false
+        why: ""
+      - id: OMSKAJGJE
+        text: A temperature inversion in the atmosphere can cause 'super-refraction'.
+        correct: true
+        why: ""
+      - id: O0TKCXCQB
+        text: The interfering signal may be refracted from the ionosphere at night.
+        correct: false
+        why: ""
+- id: QBNDSWIY
+  docId: 062.01.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625769
+    - BGS-621170
+    - BGS-621542
+    - ATPLGS-629615
+    - AVEXAM-64436
+    - AVEXAM-12781
+  annexes: []
+  learningObjectives:
+    - 062.01.01.03.02
+  template:
+    type: simple
+    question: Which of the following options contains the correct frequency band,
+      propagation path and frequency range for radio communications using a
+      single side band?
+    explanation: ""
+    options:
+      - id: ORWY5HRHD
+        text: HF, surface waves only, 3 MHz to 30 MHz.
+        correct: false
+        why: ""
+      - id: OGMO9ETGL
+        text: HF, surface and sky waves, 3 MHz to 30 MHz.
+        correct: true
+        why: ""
+      - id: ONVF3THEP
+        text: MF, surface and sky waves, 190 KHz to 1750 KHz.
+        correct: false
+        why: ""
+      - id: O28U1ZI8G
+        text: VHF, sky waves, 108 MHz to 117.975 MHz.
+        correct: false
+        why: ""
+- id: QBOPBJR04
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627600
+    - AVEXAM-20410
+    - ATPLGS-620962
+    - BGS-620644
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: In aviation electronic systems the so-called Doppler principle may be
+      used in
+    explanation: ""
+    options:
+      - id: OM7HOFTMN
+        text: VOR , DME and GPS.
+        correct: false
+        why: ""
+      - id: OIDFYGHQI
+        text: VOR, MTI and the mapping mode of AWR.
+        correct: false
+        why: ""
+      - id: O7ATUH95Q
+        text: VOR, GPS and MTI and the turbulence mode of AWR.
+        correct: true
+        why: ""
+      - id: OUASIMQ7H
+        text: VOR, DME and ILS.
+        correct: false
+        why: ""
+- id: QBTSRIHLN
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625206
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: What is the appropriate radio communication frequency band to be used
+      for a long cross over water?
+    explanation: ""
+    options:
+      - id: OLJCAQ36S
+        text: MF
+        correct: false
+        why: ""
+      - id: OZSMINYQR
+        text: UHF
+        correct: false
+        why: ""
+      - id: OKMKKAIUF
+        text: HF
+        correct: true
+        why: ""
+      - id: OPAVIFMNL
+        text: VHF
+        correct: false
+        why: ""
+- id: QCGMLOGDI
+  docId: "062.01"
+  relatedQuestions:
+    - Q5LWJFQTZ
+  externalIds:
+    - ATPLQ-621132
+    - ATPLGS-620945
+    - BGS-620926
+    - AVEXAM-94720
+    - ATPLQ-626618
+    - BGS-620005
+    - ATPLGS-620943
+    - AVEXAM-408
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: calculation
+    question: |-
+      A radio signal has a frequency of {{freq}} MHz.
+
+      What is its wavelength in metres?
+    variables:
+      - id: freq
+        label: Frequency
+        unit: MHz
+    answer:
+      formula: 300 / freq
+      unit: m
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: 3000 / freq
+      - id: d2
+        formula: 30 / freq
+      - id: d3
+        formula: 150 / freq
+      - id: d4
+        formula: freq / 300
+    presets:
+      - id: p1
+        values:
+          freq: 121.95
+      - id: p2
+        values:
+          freq: 118.7
+      - id: p3
+        values:
+          freq: 130
+    explanation: >-
+      Wavelength is the speed of light divided by the frequency. The speed of
+      light is 300 million m/s, so with the frequency in MHz the wavelength in
+      metres is 300 divided by the frequency.
+
+
+      **Solution**
+
+
+      - {{f: 300 / freq}} = {{n: 300 / freq}} = **{{answer}} m**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: has an extra factor of ten.
+
+      - **{{d2}} m**: is a factor of ten too small.
+
+      - **{{d3}} m**: gives half the wavelength.
+
+      - **{{d4}} m**: inverts the ratio, dividing the frequency by 300.
+- id: QCWH5MKXQ
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-623498
+    - AVEXAM-52395
+    - ATPLGS-626333
+    - BGS-621123
+    - AVEXAM-42802
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: What happens to the amplitude and frequency of the carrier in A1A
+      keying? The amplitude..
+    explanation: ""
+    options:
+      - id: OQI4TCPXN
+        text: increases but the frequency remains constant.
+        correct: false
+        why: ""
+      - id: O3D44X4DV
+        text: and the frequency both increase.
+        correct: false
+        why: ""
+      - id: OUSPXN1FS
+        text: and the frequency both remain constant.
+        correct: true
+        why: ""
+      - id: ODSXS8SOV
+        text: remains constant but the frequency increases.
+        correct: false
+        why: ""
+- id: QCZRH5VTV
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629020
+    - AVEXAM-75871
+    - BGS-621326
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: In the cruise a flight crew hears a click on the ATC frequency, no
+      speaking can be heard but the frequency is blocked, and no other
+      transmissions can be heard. What is most likely to be happening?
+    explanation: ""
+    options:
+      - id: OTRBIPJ9G
+        text: The carrier wave, which is modulated by the transmitter, is NOT being
+          broadcast by the ATC station.
+        correct: false
+        why: ""
+      - id: OYLXHOLTU
+        text: The transmitting station is sending the upper and lower sidebands only,
+          the carrier wave is missing.
+        correct: false
+        why: ""
+      - id: OV5BYQTPB
+        text: The receiving station is sending a radio signal, but the carrier wave is
+          NOT being modulated.
+        correct: false
+        why: ""
+      - id: OPLEFORWO
+        text: The transmitting station is sending a signal, but the carrier wave is NOT
+          being modulated.
+        correct: true
+        why: ""
+- id: QDAVVKBV
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627871
+    - BGS-621163
+    - ATPLGS-628259
+    - AVEXAM-1717
+  annexes: []
+  learningObjectives:
+    - 062.01.02.03.02
+  template:
+    type: simple
+    question: "The following might be caused by antenna shadowing:"
+    explanation: ""
+    options:
+      - id: OPHRGZWME
+        text: A weather radar failing to show a distant turbulent cloud due to the
+          signals being blocked by a nearer cloud.
+        correct: false
+        why: ""
+      - id: OUADHUUI7
+        text: Blocking of a VOR transmission caused by buildings close to the antenna.
+        correct: false
+        why: ""
+      - id: ONVPESXDJ
+        text: Poor radio reception of a VOR ident signal while the aircraft is making an
+          orbit (360° medium-level turn).
+        correct: true
+        why: ""
+      - id: OJVGY8OQO
+        text: An aircraft appearing as two distinct Indications on a radar controller's
+          display.
+        correct: false
+        why: ""
+- id: QDEQ3HHCH
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628718
+    - BGS-621118
+    - ATPLGS-124325
+    - AVEXAM-71477
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The phase angle of a wave is:"
+    explanation: ""
+    options:
+      - id: OXGAAVSEN
+        text: The angle of the modulation on a wavelength expressed in degrees from 000°
+          to 360°.
+        correct: false
+        why: ""
+      - id: ODDQWHSZ3
+        text: The position of a modulation on a wavelength expressed in degrees from
+          000° to 360°.
+        correct: false
+        why: ""
+      - id: OBQOYCQVR
+        text: The deflection on a wave expressed in degrees from 000° to 360°.
+        correct: false
+        why: ""
+      - id: OXBNFAMVY
+        text: The fraction of one wavelength expressed in degrees from 000° to 360°.
+        correct: true
+        why: ""
+- id: QEFIBFMTB
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628220
+  annexes:
+    - 062-four-antenna-types-figures-1-4
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: |-
+      Refer to figure.
+
+      Which figure represents an ADF receiver antenna?
+    explanation: ""
+    options:
+      - id: OC2ZOWWLI
+        text: Figure 2
+        correct: false
+        why: ""
+      - id: ORRSVZPGU
+        text: Figure 4
+        correct: false
+        why: ""
+      - id: OJHIHINB7
+        text: Figure 1
+        correct: false
+        why: ""
+      - id: OIHMTVED9
+        text: Figure 3
+        correct: true
+        why: ""
+- id: QEFNYKYNW
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621423
+    - ATPLGS-124893
+    - ATPLGS-124894
+  annexes:
+    - 062-four-efis-navigation-display-figures-1-4
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Which of the figures depicts an Electronic Flight Instrument System (EFIS)
+      display in plan mode?
+    explanation: ""
+    options:
+      - id: ORHG4O7SS
+        text: Figure 3
+        correct: false
+        why: ""
+      - id: OK3DMQYQZ
+        text: Figure 1
+        correct: false
+        why: ""
+      - id: O9OHRSRVS
+        text: Figure 2
+        correct: true
+        why: ""
+      - id: O7P2LTMRT
+        text: Figure 4
+        correct: false
+        why: ""
+- id: QELCBJC4W
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628336
+    - BGS-620010
+    - ATPLGS-620947
+    - AVEXAM-56230
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: The advantage of slotted antennas in modern radar technology is to..
+    explanation: ""
+    options:
+      - id: OKGQPMM1N
+        text: greatly reduce lateral lobes, consequently concentrating more energy into
+          the main beam.
+        correct: true
+        why: ""
+      - id: O11KGULWC
+        text: simultaneously transmit weather and mapping beams.
+        correct: false
+        why: ""
+      - id: O1TQF11WU
+        text: produce a wide beam for better target detection.
+        correct: false
+        why: ""
+      - id: OPAIADWVC
+        text: eliminate the need for azimuth slaving.
+        correct: false
+        why: ""
+- id: QEN00ESGH
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621780
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: If flying an aircraft not equipped with automatic temperature
+      correction, to which altitudes should the PIC apply temperature
+      correction?
+    explanation: ""
+    options:
+      - id: OVDAZYEAQ
+        text: only at the intermediate section.
+        correct: false
+        why: ""
+      - id: OOLOTUVQK
+        text: only at MDH/MDA or DH/DA.
+        correct: false
+        why: ""
+      - id: OFGDMZNPC
+        text: only at the step-down fixes inside the final approach fix (FAF).
+        correct: false
+        why: ""
+      - id: OSLFXRLM8
+        text: at MDH/MDA or DH/DA and step-down fixes inside the final approach fix
+          (FAF).
+        correct: true
+        why: ""
+- id: QEUKKARU2
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621643
+    - BGS-620649
+    - ATPLGS-620967
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: What is meant by keying in A1A modulation
+    explanation: ""
+    options:
+      - id: OIIAH3XLH
+        text: changing the amplitude of the carrier wave to add information.
+        correct: false
+        why: ""
+      - id: OAKFL9WRU
+        text: interrupting the modulating signal to break it into dots and dashes.
+        correct: false
+        why: ""
+      - id: OLPPQLNXP
+        text: interrupting the carrier wave to break it into dots and dashes.
+        correct: true
+        why: ""
+      - id: OCJMZ8PBT
+        text: adding information on the carrier wave by use of a modulating signal.
+        correct: false
+        why: ""
+- id: QFBCTZPPF
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626922
+    - AVEXAM-75510
+    - ATPLGS-621608
+    - BGS-620549
+    - ATPLGS-628282
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: What are the effects of shadowing by parts of the aircraft on the
+      reception of signals from NAVSTAR GPS satellites?
+    explanation: ""
+    options:
+      - id: OCTXC3F10
+        text: It causes multipath propagation.
+        correct: false
+        why: ""
+      - id: OSECSAYNB
+        text: It may prevent the reception of signals.
+        correct: true
+        why: ""
+      - id: OQMLNJJJR
+        text: It has no influence because high frequency signals are unaffected.
+        correct: false
+        why: ""
+      - id: OA44T1RVS
+        text: The signals will be distorted, however the error can be corrected for
+          using an algorithm and information from unaffected signals.
+        correct: false
+        why: ""
+- id: QFBMTDBLX
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628626
+  annexes:
+    - 062-four-antenna-types-figures-1-4
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: |-
+      Refer to figure.
+
+      Which figure represents a parabolic antenna?
+    explanation: ""
+    options:
+      - id: OOAZB39AA
+        text: Figure 3
+        correct: false
+        why: ""
+      - id: OOU4HEOS6
+        text: Figure 1
+        correct: true
+        why: ""
+      - id: OF3BD1IMN
+        text: Figure 4
+        correct: false
+        why: ""
+      - id: OWF6YHTTS
+        text: Figure 2
+        correct: false
+        why: ""
+- id: QFCUHHMW
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625843
+    - ATPLGS-620995
+    - ATPLGS-620984
+    - AVEXAM-73073
+    - BGS-620722
+  annexes: []
+  learningObjectives:
+    - 062.01.03.04.01
+  template:
+    type: simple
+    question: Which statement about VHF/UHF propagation in connection with Ground
+      Direction Finders is correct?
+    explanation: ""
+    options:
+      - id: OBFVW0WFV
+        text: For both VHF/UHF propagation, the space wave is the only propagation path
+          of practical use. There is no sky wave under normal conditions.
+        correct: true
+        why: ""
+      - id: OYPE5BCQY
+        text: Neither VHF/UHF has a sky wave under any conditions. For VHF the surface
+          wave is the main propagation path and for UHF the space wave.
+        correct: false
+        why: ""
+      - id: OBTWRJIIR
+        text: VHF-frequencies below 120 MHz may be subjected to sporadic E-reflection
+          and then have a sky wave. For both VHF/UHF the surface wave is the
+          only propagation path of practical use.
+        correct: false
+        why: ""
+      - id: OBKM3IQXW
+        text: VHF has, under normal conditions, a sky wave, whereas UHF has not. For
+          both VHF/UHF propagation the space wave is the main propagation path.
+        correct: false
+        why: ""
+- id: QFISPOZCD
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622294
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: calculation
+    question: The pilot of an aircraft changes heading to the right, from {{h1}}° to
+      {{h2}}°, taking the shortest way, and makes a rate-1 turn (3° per second).
+      What is the duration of this manoeuvre, in seconds?
+    variables:
+      - id: h1
+        label: Initial heading
+        unit: °
+      - id: h2
+        label: Final heading
+        unit: °
+    answer:
+      formula: abs(h2 - h1) / 3
+      unit: s
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: abs(h2 - h1) / 4
+      - id: d2
+        formula: abs(h2 - h1) / 6
+      - id: d3
+        formula: abs(h2 - h1) / 2
+      - id: d4
+        formula: abs(h2 - h1) / 3 + 10
+    presets:
+      - id: p1
+        values:
+          h1: 214
+          h2: 334
+      - id: p2
+        values:
+          h1: 100
+          h2: 190
+    explanation: >-
+      A rate-1 turn is a turn at 3° per second, whatever the bank angle or true
+      airspeed. The duration is therefore the heading change divided by 3.
+      Taking the shortest way round, the heading changes by {{= abs(h2 - h1)}}°.
+
+
+      **Solution**
+
+
+      {{f: abs(h2 - h1) / 3}} = {{n: abs(h2 - h1) / 3}} = **{{answer}} s**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} s**: uses 4° per second instead of 3°.
+
+      - **{{d2}} s**: uses 6° per second, a rate-2 turn.
+
+      - **{{d3}} s**: uses 2° per second.
+
+      - **{{d4}} s**: adds 10 seconds to the correct time.
+- id: QFLCDEOGU
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622428
+    - AVEXAM-80152
+    - BGS-620700
+    - ATPLGS-620987
+    - ATPLGS-116166
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: An electromagnetic wave consists of an oscillating electric (E) and an
+      oscillating magnetic (H) field. Which of the following answers is true?
+    explanation: ""
+    options:
+      - id: ODSM6DUXX
+        text: The (E) field and the (H) field are perpendicular to each other.
+        correct: true
+        why: ""
+      - id: OSATGEB9K
+        text: When a constant current is sent through the antenna the (E) and (H) field
+          are parallel.
+        correct: false
+        why: ""
+      - id: OBJH26EMR
+        text: A dipole antenna is only capable to transmit the (H) field.
+        correct: false
+        why: ""
+      - id: OWLK3XWOU
+        text: The (H) field is parallel to the wire and the (E) field is perpendicular
+          to it.
+        correct: false
+        why: ""
+- id: QFPDY2NJO
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626327
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: A VHF radio wave is propagated...
+    explanation: ""
+    options:
+      - id: OSMEKEDZ6
+        text: as a ground during day and space during night.
+        correct: false
+        why: ""
+      - id: OBLHUNATS
+        text: as a ground during night and space during day.
+        correct: false
+        why: ""
+      - id: OTMOFX64J
+        text: as a space wave during day and night.
+        correct: true
+        why: ""
+      - id: OBFPNH0TQ
+        text: as a ground wave during day and night.
+        correct: false
+        why: ""
+- id: QGHYBDBC
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-623593
+    - BGS-621354
+    - AVEXAM-14571
+    - ATPLGS-628257
+  annexes: []
+  learningObjectives:
+    - 062.01.02.03.02
+  template:
+    type: simple
+    question: What is correct regarding antenna shadowing?
+    explanation: ""
+    options:
+      - id: OGHZIXXJO
+        text: Poor reception of GPS signals due to very weak signals compared to the
+          background noise at that frequency.
+        correct: false
+        why: ""
+      - id: OPMH48IWO
+        text: Terrain blocking the path between the transmitter and receiver/aircraft
+          antenna.
+        correct: false
+        why: ""
+      - id: ONGYV7VSC
+        text: Reduced reception by an antenna when part of the airframe blocks the
+          signal to the antenna.
+        correct: true
+        why: ""
+      - id: OWTWNC3SL
+        text: Protection of a radar-reception antenna from the strong signals produced
+          by a nearby transmission antenna.
+        correct: false
+        why: ""
+- id: QGSAM3MR6
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627533
+    - ATPLGS-621011
+    - BGS-621031
+    - ATPLGS-127808
+    - BGS-621117
+    - ATPLGS-621273
+    - ATPLGS-621009
+    - AVEXAM-16737
+    - AVEXAM-47004
+    - ATPLGS-625947
+    - BGS-620877
+    - BGS-620805
+    - AVEXAM-34912
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "HF-radio waves travel:"
+    explanation: ""
+    options:
+      - id: OJM64VKWK
+        text: during daytime as ground and sky waves, during night time as ground waves
+          only.
+        correct: false
+        why: ""
+      - id: OZV7D3UGL
+        text: during daytime and at night as ground waves only.
+        correct: false
+        why: ""
+      - id: O0O6TMMZJ
+        text: quasi-optically.
+        correct: false
+        why: ""
+      - id: OADOUMSIR
+        text: during daytime and night time as sky waves, and the range of the ground
+          wave is very small.
+        correct: true
+        why: ""
+- id: QGYPYQYSN
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627700
+    - BGS-621507
+    - BGS-620991
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: In which frequency band may fading occur during the twilight period?
+    explanation: ""
+    options:
+      - id: OJEIHUU74
+        text: UHF
+        correct: false
+        why: ""
+      - id: OSMUDTCEU
+        text: VHF
+        correct: false
+        why: ""
+      - id: OFJPBHIKW
+        text: HF
+        correct: false
+        why: ""
+      - id: OQL0S9XLI
+        text: MF
+        correct: true
+        why: ""
+- id: QH3OTIHBH
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621605
+    - ATPLGS-628072
+    - ATPLQ-621246
+    - ATPLGS-628324
+    - AVEXAM-5640
+  annexes: []
+  learningObjectives:
+    - "062.01"
+    - "062.06"
+  template:
+    type: definition
+    question: What does the term {term} mean?
+    explanation: ""
+    options:
+      - id: OC6PRI8IZ
+        term: antenna shadowing
+        definition: The antenna is masked from the transmitter due to the aircraft
+          attitude.
+      - id: OOWPI0DQF
+        term: SBAS
+        definition: Satellite Based Augmentation System
+    fakeOptions:
+      - id: FH3OTIHBH0
+        definition: Terrain is in between the receiver and the transmitter.
+      - id: FH3OTIHBH1
+        definition: The antenna shielded from the sun in order to reduce the influence
+          of the ionosphere.
+      - id: FH3OTIHBH2
+        definition: The antenna is placed under a dome.
+      - id: FH3OTIHBH3
+        definition: Supplement Based Augmentation System
+      - id: FH3OTIHBH4
+        definition: Satellite Based Area System
+      - id: FH3OTIHBH5
+        definition: Service Broadcast Application System
+- id: QHZYNK8QP
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624082
+    - ATPLGS-629677
+    - AVEXAM-16788
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Single sideband two way communication is used in what frequency band
+      and how can such radio waves propagate?
+    explanation: ""
+    options:
+      - id: OCSQX6YJG
+        text: HF (3-30 MHZ), as ground waves only.
+        correct: false
+        why: ""
+      - id: OXD6KRAZA
+        text: HF (3-30 MHZ), as ground waves and sky waves.
+        correct: true
+        why: ""
+      - id: OWGUVXZRN
+        text: MF (3-30 MHZ), as ground waves.
+        correct: false
+        why: ""
+      - id: OKLBBAWTP
+        text: MF (3-30 MHZ), as ground waves and sky waves.
+        correct: false
+        why: ""
+- id: QI1NPYCDY
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622300
+    - AVEXAM-59819
+    - ATPLGS-620968
+    - BGS-620650
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The phenomenon when a wave bends when it passes around an
+      impenetrable obstacle is called:"
+    explanation: ""
+    options:
+      - id: OIVWOSDZW
+        text: reflection
+        correct: false
+        why: ""
+      - id: OB7LC4TNQ
+        text: interference
+        correct: false
+        why: ""
+      - id: ONC7SQADJ
+        text: diffraction
+        correct: true
+        why: ""
+      - id: OMKTXIDT2
+        text: refraction
+        correct: false
+        why: ""
+- id: QIBZGHYOY
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626915
+    - ATPLGS-124708
+    - BGS-620933
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The skip-zone is defined as:"
+    explanation: ""
+    options:
+      - id: OXORJX4SK
+        text: the area, where neither the ground waves nor the sky waves are received.
+        correct: true
+        why: ""
+      - id: OBGFL65HN
+        text: the area, where only the sky wave is receivable.
+        correct: false
+        why: ""
+      - id: OUPLWBXCR
+        text: the area, where only the ground wave is receivable.
+        correct: false
+        why: ""
+      - id: OQ0TEG1FR
+        text: the area, where ground and sky waves are receivable.
+        correct: false
+        why: ""
+- id: QJ1DVY7J7
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622644
+    - BGS-620012
+    - ATPLGS-620949
+    - AVEXAM-89427
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Comparing a parabolic reflector with a flat plate antenna of the same size
+    explanation: ""
+    options:
+      - id: OM8IAOQSK
+        text: the parabolic reflector generates less side lobes than the flat plate
+          antenna.
+        correct: false
+        why: ""
+      - id: OOK7YVJOL
+        text: the flat plate antenna generates less side lobes than the parabolic
+          reflector.
+        correct: true
+        why: ""
+      - id: O0O0ZJCU1
+        text: the flat plate antenna has a considerably smaller beam width.
+        correct: false
+        why: ""
+      - id: OVILVT8R4
+        text: the parabolic reflector has a considerably smaller beam width.
+        correct: false
+        why: ""
+- id: QJB0QVAU9
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628602
+    - ATPLGS-621011
+    - BGS-621031
+    - ATPLGS-127808
+    - BGS-621117
+    - AVEXAM-16737
+    - AVEXAM-47004
+    - ATPLGS-625947
+    - AVEXAM-71681
+    - BGS-620877
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "Describe the propagation of VHF radio waves:"
+    explanation: ""
+    options:
+      - id: OCU7XQGO0
+        text: Line of sight propagation
+        correct: true
+        why: ""
+      - id: O5X0EJI0O
+        text: Earth reflected waves
+        correct: false
+        why: ""
+      - id: OMO6N1ADY
+        text: During daytime as ground waves, at night as sky waves
+        correct: false
+        why: ""
+      - id: O4OK6TVVZ
+        text: During day and night time as ground waves
+        correct: false
+        why: ""
+- id: QJGPNAYD
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629857
+    - BGS-620646
+    - ATPLGS-620964
+    - AVEXAM-41387
+  annexes: []
+  learningObjectives:
+    - 062.01.02.03.01
+  template:
+    type: simple
+    question: Which of the following summaries lists only directional antennas?
+    explanation: ""
+    options:
+      - id: OLYJ3PCSX
+        text: Sense antenna, parabolic antenna, slotted planar array antenna, helical
+          antenna.
+        correct: false
+        why: ""
+      - id: O64SITDIO
+        text: Loop antenna, parabolic antenna, slotted planar array antenna, helical
+          antenna.
+        correct: true
+        why: ""
+      - id: OLKCBK2G6
+        text: Dipole antenna, loop antenna, parabolic antenna, slotted planar array
+          antenna.
+        correct: false
+        why: ""
+      - id: OWOKUUTLL
+        text: Dipole antenna, sense antenna, parabolic antenna, helical antenna.
+        correct: false
+        why: ""
+- id: QJPN1MMEG
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622090
+    - ATPLGS-629725
+    - BGS-621428
+    - AVEXAM-83503
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: A pilot departs an aerodrome on the West coast of Spain at dawn for a
+      flight to New York. Half an hour after departure, the VHF station for
+      communication can no longer be received. What are two of the main reasons
+      that VHF radio range is limited to line of sight?
+    explanation: ""
+    options:
+      - id: OHYORBMST
+        text: No ionospheric refraction and no ground wave.
+        correct: true
+        why: ""
+      - id: OLW8K6GH9
+        text: Absorption by the ionosphere, and no direct waves.
+        correct: false
+        why: ""
+      - id: OL6MLJKJD
+        text: Inversion of polarisation by the ionosphere, and attenuation.
+        correct: false
+        why: ""
+      - id: OZQ19HP2C
+        text: Fading by reflected signals, and limited transmission power.
+        correct: false
+        why: ""
+- id: QJQEKVZUW
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626846
+    - ATPLGS-625946
+    - BGS-621069
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The Sky Wave propagates as follows:"
+    explanation: ""
+    options:
+      - id: OX6ORBMQT
+        text: It travels between ground and D layer of the ionosphere.
+        correct: false
+        why: ""
+      - id: OLM0S6YHQ
+        text: A wave transmitted into space will be reflected back to the earth’s
+          surface by the ionosphere.
+        correct: true
+        why: ""
+      - id: OSHGFX3JC
+        text: It travels along the earth’s surface.
+        correct: false
+        why: ""
+      - id: OLCRAEJVO
+        text: It travels inside the Ionosphere along the boundary between E and F layer.
+        correct: false
+        why: ""
+- id: QKAMYTU3B
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624578
+    - ATPLGS-629697
+    - AVEXAM-8278
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: You are trying to get a bearing on an NDB in the MF frequency range.
+      In theory, how can you best receive a strong enough signal?
+    explanation: ""
+    options:
+      - id: OLNCNEH74
+        text: Fly towards the NDB to better capture the sky wave.
+        correct: false
+        why: ""
+      - id: OYLLSWEFO
+        text: Increase your distance from the NDB to better capture the ground wave.
+        correct: false
+        why: ""
+      - id: OFCKUMNMU
+        text: Climb to increase your chance of capturing the ground wave.
+        correct: false
+        why: ""
+      - id: O1XXXV9SL
+        text: Climb to increase your chance of capturing the sky wave.
+        correct: true
+        why: ""
+- id: QKOU7GC1F
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621459
+    - ATPLGS-116191
+    - AVEXAM-6849
+    - BGS-621119
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The amplitude of a wave or oscillation is:"
+    explanation: ""
+    options:
+      - id: OGSUZSFHS
+        text: Its maximum deflection.
+        correct: true
+        why: ""
+      - id: OLPPC3TZS
+        text: The information impressed onto the carrier wave.
+        correct: false
+        why: ""
+      - id: ODPFXOKOK
+        text: Speed of light divided by frequency.
+        correct: false
+        why: ""
+      - id: OTXB4WD9W
+        text: Its maximum length.
+        correct: false
+        why: ""
+- id: QKWCGFP2Z
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625255
+    - ATPLGS-124770
+    - BGS-621083
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: The function of the antenna in a radio communication system is to..
+    explanation: ""
+    options:
+      - id: OTNT2SSQV
+        text: prevent the receiver from demodulating background noise.
+        correct: false
+        why: ""
+      - id: ODJ9BZOTL
+        text: split the electromagnetic field into separate E (Electric) and H
+          (Magnetic) waves for transmission.
+        correct: false
+        why: ""
+      - id: OWEKQHZIL
+        text: act as a transducer between free-space propagation and transmission line
+          propagation.
+        correct: true
+        why: ""
+      - id: OJIASI5XE
+        text: separate the baseband signal from the carrier wave signal.
+        correct: false
+        why: ""
+- id: QL2YU9N2J
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624599
+    - AVEXAM-38695
+    - BGS-621184
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Why do VHF radio signals used for communication and navigation have a
+      limited range?
+    explanation: ""
+    options:
+      - id: OVUVZCN8C
+        text: Sky waves are refracted from the D-layer.
+        correct: false
+        why: ""
+      - id: OBB9PVXEQ
+        text: Because of the curvature of the Earth.
+        correct: true
+        why: ""
+      - id: ORNUA6644
+        text: Direct waves interfere with ionosphere waves.
+        correct: false
+        why: ""
+      - id: OLQ4Y9NAX
+        text: Ground waves are absorbed by the Earth’s surface.
+        correct: false
+        why: ""
+- id: QLCMD1AUO
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628866
+    - AVEXAM-23762
+    - ATPLGS-620954
+    - BGS-620017
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "In the propagation of MF waves, the phenomenon of FADING is
+      particularly found:"
+    explanation: ""
+    options:
+      - id: O7TGUCFRL
+        text: at night, due to the combination of the sky and ground waves.
+        correct: true
+        why: ""
+      - id: OZTZVDJZJ
+        text: by day and when raining.
+        correct: false
+        why: ""
+      - id: O6RIQMKWT
+        text: at night and when raining.
+        correct: false
+        why: ""
+      - id: OFEJI05LA
+        text: by day, due to the combination of sky and ground waves.
+        correct: false
+        why: ""
+- id: QLEIKGRUU
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626731
+    - BGS-621520
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: An aircraft is flying in the skip zone (dead space). The pilot wishes
+      to establish communication with ATC on an HF frequency. Theoretically, the
+      pilot can fly (1) \_\_\_\_\_ in order to receive the (2) \_\_\_\_\_ wave.
+    explanation: ""
+    options:
+      - id: O7NO6CLHY
+        text: (1) higher; (2) sky
+        correct: true
+        why: ""
+      - id: OT7KCURCM
+        text: (1) lower; (2) surface
+        correct: false
+        why: ""
+      - id: OTR4ITTOL
+        text: (1) towards the station; (2) sky
+        correct: false
+        why: ""
+      - id: OVJZCE5AD
+        text: (1) away from the station; (2) surface
+        correct: false
+        why: ""
+- id: QLGXDLO84
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624972
+    - AVEXAM-92940
+    - AVEXAM-50047
+    - AVEXAM-90181
+    - ATPLGS-100474
+    - AVEXAM-43658
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: MF (Medium Frequency) waves occur in which frequency range below?
+    explanation: ""
+    options:
+      - id: OLQ7ZHZZR
+        text: 30 MHz – 300 MHz
+        correct: false
+        why: ""
+      - id: OMZUNXNO3
+        text: 300 kHz – 3000 kHz
+        correct: true
+        why: ""
+      - id: ODY3069ID
+        text: 3 MHz – 30 MHz
+        correct: false
+        why: ""
+      - id: OP7LTID4Z
+        text: 30 kHz – 300 kHz
+        correct: false
+        why: ""
+- id: QLRJUPOG2
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628279
+    - BGS-621301
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "Pulse length is expressed as:"
+    explanation: ""
+    options:
+      - id: ONDCMLSOS
+        text: An amplitude.
+        correct: false
+        why: ""
+      - id: O2HABVKHE
+        text: A frequency.
+        correct: false
+        why: ""
+      - id: OIVNOJNVY
+        text: Distance.
+        correct: false
+        why: ""
+      - id: OBURHLT1S
+        text: Time.
+        correct: true
+        why: ""
+- id: QLVVWDVW
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629082
+    - BGS-620935
+  annexes:
+    - 062-radio-wave-propagation-diagram-with-ionosphere-ground-wave-a-sky
+  learningObjectives:
+    - 062.01.03.06.01
+  template:
+    type: simple
+    question: |-
+      Refer to figure.
+
+      Which letter in the figure below indicates the Skip Distance?
+    explanation: ""
+    options:
+      - id: OVULBWKRG
+        text: b
+        correct: false
+        why: ""
+      - id: OZEJIRJTD
+        text: a
+        correct: false
+        why: ""
+      - id: OF7RWSCV4
+        text: c
+        correct: false
+        why: ""
+      - id: OUXBSZZSE
+        text: d
+        correct: true
+        why: ""
+- id: QLYEMET7I
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624057
+    - BGS-620651
+    - ATPLGS-620969
+    - AVEXAM-71212
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: From which physical phenomenon do sky waves originate?
+    explanation: ""
+    options:
+      - id: OJPKCRIV2
+        text: diffraction
+        correct: false
+        why: ""
+      - id: ON3FJSKFR
+        text: interference
+        correct: false
+        why: ""
+      - id: OAN31CPJ5
+        text: absorption
+        correct: false
+        why: ""
+      - id: OXTOZVTTI
+        text: refraction
+        correct: true
+        why: ""
+- id: QM2DRXBKX
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626419
+    - ATPLGS-621547
+    - ATPLGS-124976
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Which of the following uses Kalman filtering?
+    explanation: ""
+    options:
+      - id: OYMYYFJZS
+        text: An Electronic Flight Instrument System (EFIS).
+        correct: false
+        why: ""
+      - id: OJLLIMLOI
+        text: A DME receiver.
+        correct: false
+        why: ""
+      - id: OCG4WLOSV
+        text: A VOR receiver.
+        correct: false
+        why: ""
+      - id: O5VIYE6TU
+        text: A Flight Management System (FMS).
+        correct: true
+        why: ""
+- id: QMDL1FOJA
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621327
+    - BGS-620869
+    - AVEXAM-45231
+    - ATPLGS-621008
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The sky wave is an electromagnetic wave which travels:"
+    explanation: ""
+    options:
+      - id: OBAMKQF6H
+        text: Across the earth's surface.
+        correct: false
+        why: ""
+      - id: ODBBTN9U9
+        text: Into space to be refracted in the ionosphere.
+        correct: true
+        why: ""
+      - id: OGSQQNK6R
+        text: Inside the ionosphere along the boundary layer.
+        correct: false
+        why: ""
+      - id: OPWQV8LCE
+        text: By line of sight between transmitter and receiver.
+        correct: false
+        why: ""
+- id: QMFUYFHF
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-623333
+    - BGS-621270
+    - BGS-620664
+    - AVEXAM-49977
+    - BGS-620653
+    - ATPLGS-620971
+  annexes: []
+  learningObjectives:
+    - 062.01.02.02.01
+  template:
+    type: simple
+    question: What describes polarization?
+    explanation: ""
+    options:
+      - id: OYJ2CFBPL
+        text: Rotation of the antenna around a fixed axis.
+        correct: false
+        why: ""
+      - id: OBVJ770R1
+        text: Orientation of the plane of oscillation of the electrical component (E) of
+          the electromagnetic wave.
+        correct: true
+        why: ""
+      - id: OX5FNTR0A
+        text: Orientation of the plane of oscillation of the magnetic component (H) of
+          the electromagnetic wave.
+        correct: false
+        why: ""
+      - id: ONIBHVHB2
+        text: Orientation of the antenna to the North Pole.
+        correct: false
+        why: ""
+- id: QMOBEZ8JB
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625089
+    - BGS-621068
+    - AVEXAM-74416
+    - ATPLGS-625945
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The Ground Wave propagates as follows:"
+    explanation: ""
+    options:
+      - id: OASLFZYIL
+        text: The wave will be reflected at the ionosphere back to the ground.
+        correct: false
+        why: ""
+      - id: O4KGG8JEY
+        text: It travels along the earth’s surface and follows the curvature of the
+          earth.
+        correct: true
+        why: ""
+      - id: OL4TQ6VWO
+        text: The ground wave is transmitted toward the earth’s surface and will be
+          reflected.
+        correct: false
+        why: ""
+      - id: OKP0EWQ1E
+        text: It travels beneath the ground.
+        correct: false
+        why: ""
+- id: QN8C22P29
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625874
+    - ATPLGS-116192
+    - AVEXAM-32837
+    - BGS-621086
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "When raising the frequency of an electromagnetic wave, the:"
+    explanation: ""
+    options:
+      - id: OM5TQVTST
+        text: Wavelength decreases
+        correct: true
+        why: ""
+      - id: O9FDG58ZD
+        text: Wavelength and amplitude increases
+        correct: false
+        why: ""
+      - id: ONF2IID3M
+        text: Wavelength increases
+        correct: false
+        why: ""
+      - id: ORRN7GLAJ
+        text: Wavelength remains the same
+        correct: false
+        why: ""
+- id: QN8NX4UJL
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628885
+    - AVEXAM-21260
+    - ATPLGS-620991
+    - BGS-620716
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Single Side Band (SSB) is used...
+    explanation: ""
+    options:
+      - id: OKFK36VZC
+        text: with NDB transmissions to reduce the bandwidth
+        correct: false
+        why: ""
+      - id: OXBXZHMTX
+        text: in HF two-way communication.
+        correct: true
+        why: ""
+      - id: O54UFU7HV
+        text: with transmissions of the Meteorological aerodrome Report (METAR)
+        correct: false
+        why: ""
+      - id: OBBPG05SM
+        text: in VHF transmissions to reduce transmission power.
+        correct: false
+        why: ""
+- id: QODFZ9MQ4
+  docId: "062.01"
+  relatedQuestions:
+    - QOSNRDO4X
+  externalIds:
+    - ATPLQ-626884
+    - ATPLGS-116238
+    - AVEXAM-59520
+    - BGS-620927
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: calculation
+    question: |-
+      An airborne weather radar operates at a frequency of {{freq}} GHz.
+
+      What is the corresponding wavelength in centimetres?
+    variables:
+      - id: freq
+        label: Frequency
+        unit: GHz
+    answer:
+      formula: 30 / freq
+      unit: cm
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: 300 / freq
+      - id: d2
+        formula: 30 * freq
+      - id: d3
+        formula: 3 / freq
+      - id: d4
+        formula: 15 / freq
+    presets:
+      - id: p1
+        values:
+          freq: 9.33
+      - id: p2
+        values:
+          freq: 2.4
+      - id: p3
+        values:
+          freq: 10.5
+    explanation: >-
+      Radio waves travel at the speed of light, about 300 000 km per second, so
+      the wavelength is that speed divided by the frequency. With the frequency
+      in GHz, the wavelength comes out in centimetres as 30 divided by the
+      frequency.
+
+
+      **Solution**
+
+
+      - {{f: 30 / freq}} = {{n: 30 / freq}} = **{{answer}} cm**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} cm**: uses 300 instead of 30, which is out by a factor of ten.
+
+      - **{{d2}} cm**: multiplies by the frequency instead of dividing.
+
+      - **{{d3}} cm**: gives the wavelength in metres without converting it to
+      centimetres.
+
+      - **{{d4}} cm**: halves the wavelength.
+- id: QOVKFGZV
+  docId: 062.01.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625379
+  annexes: []
+  learningObjectives:
+    - 062.01.01.03.01
+  template:
+    type: simple
+    question: 3-30 kHz frequency band is referred to...
+    explanation: ""
+    options:
+      - id: O7WD43LCR
+        text: VLF.
+        correct: true
+        why: ""
+      - id: OU1C81YMX
+        text: ULF.
+        correct: false
+        why: ""
+      - id: OYM9ZVGEI
+        text: LF.
+        correct: false
+        why: ""
+      - id: OBLIBB99W
+        text: ELF.
+        correct: false
+        why: ""
+- id: QPCA5HWND
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621369
+    - AVEXAM-46050
+    - BGS-620013
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Which aeronautical radio frequency band uses refraction within
+      ionospheric layers?
+    explanation: ""
+    options:
+      - id: OVREK3AJR
+        text: VHF
+        correct: false
+        why: ""
+      - id: OAEAYLKFF
+        text: VLF
+        correct: false
+        why: ""
+      - id: OJLEAPP6M
+        text: HF
+        correct: true
+        why: ""
+      - id: OYKNOMQVC
+        text: UHF
+        correct: false
+        why: ""
+- id: QPFO3AJF9
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625002
+    - AVEXAM-9257
+    - AVEXAM-92940
+    - AVEXAM-50047
+    - AVEXAM-90181
+    - ATPLGS-100474
+    - AVEXAM-79319
+    - AVEXAM-67710
+    - AVEXAM-43658
+    - BGS-620924
+    - ATPLGS-100472
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "MF (Medium Frequency) waves appear in the frequency spectrum:"
+    explanation: ""
+    options:
+      - id: O05QNR1QF
+        text: 30 GHz - 300 GHz
+        correct: false
+        why: ""
+      - id: OLX5LYLFJ
+        text: 30 MHz - 300 MHz
+        correct: false
+        why: ""
+      - id: OC6MMGCIN
+        text: 300 kHz - 3 000 kHz
+        correct: true
+        why: ""
+      - id: OQUCMLUBZ
+        text: 3 MHz - 30 MHz
+        correct: false
+        why: ""
+- id: QPFR19E6A
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625335
+    - BGS-621173
+    - ATPLGS-628230
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The correct position for the GPS antenna on an airplane is:"
+    explanation: ""
+    options:
+      - id: ONLKJ7NM7
+        text: In the nose of the aircraft.
+        correct: false
+        why: ""
+      - id: OKDRB550L
+        text: In the tailplane.
+        correct: false
+        why: ""
+      - id: O9GTJWHXG
+        text: On the top of the fuselage.
+        correct: true
+        why: ""
+      - id: OKWR6ULMH
+        text: On the bottom of the fuselage.
+        correct: false
+        why: ""
+- id: QPII3AOMV
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624285
+    - AVEXAM-63651
+    - BGS-620648
+    - ATPLGS-620966
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Phase modulation...
+    explanation: ""
+    options:
+      - id: OMTNGWS3N
+        text: results in a change of polarisation of the modulated signal.
+        correct: false
+        why: ""
+      - id: OGFRECQIR
+        text: is a modulation form used in ILS where the phase of the navigation signals
+          is changed with 90° or 150°.
+        correct: false
+        why: ""
+      - id: OJXYENJMV
+        text: is a modulation form used in GPS where the phase of the carrier wave is
+          reversed.
+        correct: true
+        why: ""
+      - id: OBVA0Q2FM
+        text: results in a change of amplitude of the carrier wave.
+        correct: false
+        why: ""
+- id: QPJEPHIIZ
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-623314
+    - ATPLGS-620992
+    - BGS-621074
+    - AVEXAM-25195
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "Modulation is:"
+    explanation: ""
+    options:
+      - id: OBAOO1TAC
+        text: the separation of information from a radio wave during receiving.
+        correct: false
+        why: ""
+      - id: OVVADUHWB
+        text: the amplification of the received radio wave in the detector.
+        correct: false
+        why: ""
+      - id: OUZAFDMOS
+        text: the addition of information onto a radio wave during transmission.
+        correct: true
+        why: ""
+      - id: OANIPXVKE
+        text: the transformation of the radio wave into a digital signal.
+        correct: false
+        why: ""
+- id: QQKXLBDSV
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-623085
+    - ATPLGS-620990
+    - BGS-620715
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The phenomenon of a change in direction of an EM-wave occurring at an
+      interface between two different media, so that the wave returns into the
+      medium from which it originated, is called:"
+    explanation: ""
+    options:
+      - id: OXFEBQJFJ
+        text: interference
+        correct: false
+        why: ""
+      - id: OHE8VRUIF
+        text: refraction
+        correct: false
+        why: ""
+      - id: ODGQA46LV
+        text: diffraction
+        correct: false
+        why: ""
+      - id: OGJTCDDPA
+        text: reflection
+        correct: true
+        why: ""
+- id: QQOXUQMKH
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629574
+    - ATPLGS-625973
+    - BGS-620202
+    - AVEXAM-72589
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: During a flight at FL210, a pilot does not receive any DME distance
+      indication from a DME station located approximately 220 NM away. The
+      reason for this is that the..
+    explanation: ""
+    options:
+      - id: OYCBODFBC
+        text: Altitude is too high.
+        correct: false
+        why: ""
+      - id: OMDJCE7XY
+        text: The power of the transmitted signal is too weak to be received by the DME
+          station.
+        correct: false
+        why: ""
+      - id: OMM1WGRRT
+        text: Aeroplane is circling around the station.
+        correct: false
+        why: ""
+      - id: OSDRNYUW0
+        text: Aeroplane is below the minimum altitude for line of sight propagation.
+        correct: true
+        why: ""
+- id: QQZ75KSVB
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621478
+    - ATPLGS-620952
+    - AVEXAM-57201
+    - BGS-620932
+    - AVEXAM-10806
+    - ATPLGS-620951
+    - BGS-620015
+    - BGS-620014
+    - ATPLGS-625948
+    - BGS-620931
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: An apparent increase in the transmitted frequency, which is
+      proportional to the transmitter velocity, will occur when the..
+    explanation: ""
+    options:
+      - id: OWWMRWZR8
+        text: transmitter goes into standby.
+        correct: false
+        why: ""
+      - id: OWCLJ7XNO
+        text: transmitter moves away from the receiver.
+        correct: false
+        why: ""
+      - id: OBHJCYAVB
+        text: receiver moves away from the transmitter.
+        correct: false
+        why: ""
+      - id: OMGFX0VH3
+        text: transmitter moves towards the receiver.
+        correct: true
+        why: ""
+- id: QRBGFLWF
+  docId: "062.01"
+  relatedQuestions:
+    - QYQNEZKA
+  externalIds:
+    - ATPLQ-621115
+    - AVEXAM-39872
+    - AVEXAM-25853
+    - BGS-621032
+    - ATPLGS-124809
+    - ATPLGS-116334
+    - BGS-621033
+    - ATPLGS-116335
+  annexes:
+    - 062-frequency-modulated-carrier-wave-diagram-constant-amplitude-with-varying-frequency
+  learningObjectives:
+    - 062.01.01.06.01
+  template:
+    type: simple
+    question: |-
+      Refer to figure.
+
+      What type of modulation is shown in the figure below?
+    explanation: ""
+    options:
+      - id: O7JMFDXSR
+        text: Frequency modulation
+        correct: true
+        why: ""
+      - id: ODXYLHURC
+        text: no modulation
+        correct: false
+        why: ""
+      - id: OCYMZPX05
+        text: Pulse modulation
+        correct: false
+        why: ""
+      - id: OYU50JNM2
+        text: Amplitude modulation
+        correct: false
+        why: ""
+- id: QRDKMEP5J
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627767
+    - BGS-620018
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: The skip distance of HF-transmission will increase with...
+    explanation: ""
+    options:
+      - id: OWYBI723F
+        text: lower frequency and higher level of the refracting ionospheric layer.
+        correct: false
+        why: ""
+      - id: OLHZKBFDO
+        text: higher frequency and lower level of the refracting ionospheric layer.
+        correct: false
+        why: ""
+      - id: O2UBBQIKI
+        text: lower frequency and lower level of the refracting ionospheric layer.
+        correct: false
+        why: ""
+      - id: OSJBYG0MW
+        text: higher frequency and higher level of the refracting ionospheric layer.
+        correct: true
+        why: ""
+- id: QRK43EVRJ
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627110
+    - AVEXAM-70814
+    - BGS-620040
+    - ATPLGS-621357
+    - ATPLQ-627246
+    - BGS-620019
+    - AVEXAM-94428
+    - BGS-621268
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: calculation
+    question: What is the wavelength of a non-directional beacon (NDB) transmitting
+      on {{freq}} kHz? Give the answer in metres.
+    variables:
+      - id: freq
+        label: Frequency
+        unit: kHz
+    answer:
+      formula: 300000 / freq
+      unit: m
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: 300000 / freq / 10
+      - id: d2
+        formula: 300000 / freq * 10
+      - id: d3
+        formula: 3000 / freq
+      - id: d4
+        formula: 300000 * freq
+    presets:
+      - id: p1
+        values:
+          freq: 375
+      - id: p2
+        values:
+          freq: 300
+    explanation: >-
+      A radio wave travels at the speed of light, about 300 000 000 m/s. The
+      wavelength is that speed divided by the frequency in hertz. The frequency
+      is given in kHz, so the same result is found by dividing 300 000 by the
+      frequency in kHz.
+
+
+      **Solution**
+
+
+      {{f: 300000 / freq}} = {{n: 300000 / freq}} = **{{answer}} m**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: a factor of ten too small, the decimal point is in the
+      wrong place.
+
+      - **{{d2}} m**: a factor of ten too large.
+
+      - **{{d3}} m**: uses 3 000 instead of 300 000 in the calculation.
+
+      - **{{d4}} m**: multiplies by the frequency instead of dividing.
+- id: QRNWRZYYV
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624184
+    - AVEXAM-19319
+    - ATPLGS-620989
+    - BGS-620714
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Radio waves in the VHF and higher frequency bands propagate mainly as...
+    explanation: ""
+    options:
+      - id: OFWIEIVJR
+        text: sky waves.
+        correct: false
+        why: ""
+      - id: OABSPIT3W
+        text: earth reflected waves.
+        correct: false
+        why: ""
+      - id: ORKPP5OAQ
+        text: space waves.
+        correct: true
+        why: ""
+      - id: OMHRBTHIK
+        text: surface waves.
+        correct: false
+        why: ""
+- id: QROGAJKC
+  docId: 062.01.01.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629671
+    - AVEXAM-44628
+    - AVEXAM-57239
+    - ATPLGS-116165
+    - BGS-620697
+    - AVEXAM-66662
+  annexes: []
+  learningObjectives:
+    - 062.01.01.03.04
+  template:
+    type: simple
+    question: A radio signal may be classified by three symbols in accordance with
+      the ITU radio regulation e.g. A1A. Which statement is true?
+    explanation: ""
+    options:
+      - id: ORMV1FFTR
+        text: The second symbol indicates the nature of information to be transmitted
+        correct: false
+        why: ""
+      - id: OREJPMULZ
+        text: The third symbol indicates the nature of the signal modulating the main
+          carrier
+        correct: false
+        why: ""
+      - id: OV41PWKH9
+        text: The first symbol indicates the type of modulation of the main carrier
+        correct: true
+        why: ""
+      - id: OHWVJ1Z8S
+        text: The three symbols together indicate which device is transmitting on the
+          carrier
+        correct: false
+        why: ""
+- id: QRXWDSSPH
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626656
+    - AVEXAM-86736
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: A student pilot has just learnt that meteorological information for
+      aircraft en route on long-haul flights is sent by radio. What kind of
+      radio receiver is needed to receive this information?
+    explanation: ""
+    options:
+      - id: OPIQABJLR
+        text: Single sideband receiver.
+        correct: true
+        why: ""
+      - id: OVRSBC82C
+        text: Double sideband receiver.
+        correct: false
+        why: ""
+      - id: OZR2MS980
+        text: LF/MF receiver.
+        correct: false
+        why: ""
+      - id: OZIT5LSUL
+        text: VHF receiver.
+        correct: false
+        why: ""
+- id: QSEEDTCY
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621968
+    - BGS-621114
+    - BGS-621115
+    - ATPLGS-124874
+  annexes:
+    - 062-radio-wave-propagation-diagram-transmitter-ionosphere-ray-paths-a-b
+  learningObjectives:
+    - 062.01.03.01.04
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Which physical effects affecting wave propagation are shown in the figure
+      below?
+    explanation: ""
+    options:
+      - id: O0CDRXVVE
+        text: A = absorption B = damping C = reflection
+        correct: false
+        why: ""
+      - id: O6TZYA8G2
+        text: A = refraction B = absorption C = reflection
+        correct: true
+        why: ""
+      - id: ODGRWNGOY
+        text: A = reflection B = polarisation C = refraction
+        correct: false
+        why: ""
+      - id: OCHVFSXSU
+        text: A = refraction B = scattering C = diffraction
+        correct: false
+        why: ""
+- id: QSJVJZSG
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624647
+    - BGS-620779
+    - AVEXAM-34620
+    - ATPLGS-125085
+  annexes: []
+  learningObjectives:
+    - 062.01.02.01.02
+  template:
+    type: simple
+    question: A vertically-mounted dipole antenna is used for RF transmissions. The
+      receiving antenna has to be..
+    explanation: ""
+    options:
+      - id: OHAVUOOPI
+        text: in the same vertical alignment in order to receive the electrical field of
+          the RF transmission in the horizontal plane.
+        correct: false
+        why: ""
+      - id: O4IDCNACB
+        text: aligned horizontally in order to receive the electrical field of the RF
+          transmission in vertical plane.
+        correct: false
+        why: ""
+      - id: OMYEWLQXQ
+        text: aligned horizontally in order to receive the electrical field of the RF
+          transmission in horizontal plane.
+        correct: false
+        why: ""
+      - id: ONSWQGIQM
+        text: in the same vertical alignment in order to receive the electrical field of
+          the RF transmission in the vertical plane.
+        correct: true
+        why: ""
+- id: QSXUXPA8F
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621270
+    - AVEXAM-10077
+    - ATPLGS-116209
+    - BGS-621056
+    - AVEXAM-56352
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The damping of a radio wave is so strong that no signal can be
+      received. This phenomenon is called:"
+    explanation: ""
+    options:
+      - id: OYROPYH3P
+        text: reflection
+        correct: false
+        why: ""
+      - id: OPC92DJZC
+        text: refraction
+        correct: false
+        why: ""
+      - id: OQUTMGLVI
+        text: absorption
+        correct: true
+        why: ""
+      - id: ONUSHIZ0E
+        text: diffraction
+        correct: false
+        why: ""
+- id: QTDMVZUFT
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627573
+    - ATPLGS-626159
+    - AVEXAM-46977
+    - AVEXAM-6314
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: 'The term "phase" can be defined as:'
+    explanation: ""
+    options:
+      - id: ORA7H95IJ
+        text: the sequence of events in which the RF energy goes from zero to maximum
+          positive, to zero, to maximum negative and returns to zero forming a
+          single wave.
+        correct: false
+        why: ""
+      - id: OTJQPFDTE
+        text: the fraction of one wavelength expressed in degrees from 000° to 360°.
+        correct: true
+        why: ""
+      - id: O7EV1N8AM
+        text: the angular difference between the corresponding points of two cycles of
+          equal wavelength, which is measurable in degrees.
+        correct: false
+        why: ""
+      - id: OSOWUO9KK
+        text: the number of complete cycles formed per second.
+        correct: false
+        why: ""
+- id: QTFVNWCOJ
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629641
+    - AVEXAM-47797
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Among these frequency ranges, which one would contain VHF waves only?
+    explanation: ""
+    options:
+      - id: OMLVDXXOZ
+        text: 90 kHz to 295 kHz
+        correct: false
+        why: ""
+      - id: OQTCRENBR
+        text: 29 GHz to 132 GHz
+        correct: false
+        why: ""
+      - id: O1E8W0W2P
+        text: 29 MHz to 132 MHz
+        correct: false
+        why: ""
+      - id: OM4AMDLCD
+        text: 90 MHz to 295 MHz
+        correct: true
+        why: ""
+- id: QTLRUJFRW
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628946
+    - ATPLGS-127827
+    - BGS-620966
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: The unit for measuring frequency is ... and measures cycles ...
+    explanation: ""
+    options:
+      - id: OPIQB9X9S
+        text: Metres, per minute
+        correct: false
+        why: ""
+      - id: O1MAQSUIZ
+        text: Hertz, per minute
+        correct: false
+        why: ""
+      - id: OVLIVWKZS
+        text: Metres, per second
+        correct: false
+        why: ""
+      - id: OLAWNSM6N
+        text: Hertz, Per second
+        correct: true
+        why: ""
+- id: QTXRHFKQ
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-629503
+    - BGS-620866
+    - AVEXAM-60150
+    - ATPLGS-621007
+  annexes: []
+  learningObjectives:
+    - 062.01.02.01.02
+  template:
+    type: calculation
+    question: "A dipole antenna in its simplest form, suited for a frequency of
+      {{freq}} MHz, should have a length of (in cm):"
+    variables:
+      - id: freq
+        label: Frequency
+        unit: MHz
+    answer:
+      formula: 15000 / freq
+      unit: cm
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: 10000 / freq
+      - id: d2
+        formula: 30000 / freq
+      - id: d3
+        formula: 22500 / freq
+      - id: d4
+        formula: 7500 / freq
+    presets:
+      - id: p1
+        values:
+          freq: 110
+      - id: p2
+        values:
+          freq: 121.5
+      - id: p3
+        values:
+          freq: 146
+    explanation: >-
+      A simple dipole is half a wavelength long. The wavelength in metres equals
+      300 divided by the frequency in MHz, so half the wavelength in cm equals
+      15000 divided by the frequency in MHz.
+
+
+      **Solution**
+
+
+      {{f: 15000 / freq}} = {{n: 15000 / freq}} = **{{answer}} cm**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} cm**: a third of the wavelength instead of half of it.
+
+      - **{{d2}} cm**: the full wavelength instead of half of it.
+
+      - **{{d3}} cm**: three quarters of the wavelength.
+
+      - **{{d4}} cm**: a quarter of the wavelength.
+- id: QTZTYTK7F
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625070
+    - BGS-621066
+    - AVEXAM-51566
+    - BGS-620984
+    - ATPLGS-124746
+    - ATPLGS-124745
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: How is amplitude modulation achieved?
+    explanation: ""
+    options:
+      - id: OMZSY2QET
+        text: The information is added onto the carrier wave by altering the frequency
+          of the carrier.
+        correct: false
+        why: ""
+      - id: O1XDZTD8M
+        text: The information is added onto the carrier wave by reversing the phases of
+          the carrier.
+        correct: false
+        why: ""
+      - id: OBNCHTTTR
+        text: The information is added onto the carrier wave by altering the amplitude
+          of the carrier.
+        correct: true
+        why: ""
+      - id: OK0FX2JO4
+        text: The information is added onto the carrier wave by interrupting the
+          carrier.
+        correct: false
+        why: ""
+- id: QUODIR6KR
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621661
+    - AVEXAM-72291
+    - ATPLGS-629709
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: An aircraft is flying on an East Track of 090°. The pilot is in
+      contact with ATC at a distant destination aerodrome via the HF
+      communication radio. Ten minutes after sunset, the pilot loses contact.
+      What happened?
+    explanation: ""
+    options:
+      - id: OSAW8KJMO
+        text: The aircraft has entered the skip zone between the skywave and the surface
+          wave.
+        correct: true
+        why: ""
+      - id: OZUZ4TZTZ
+        text: The skywave interferes with the surface wave into a dead space.
+        correct: false
+        why: ""
+      - id: OU5YMKHHG
+        text: The aircraft is no longer receiving the surface wave.
+        correct: false
+        why: ""
+      - id: OGGCLI5QD
+        text: The night effect prevents reception of the sky wave.
+        correct: false
+        why: ""
+- id: QUT9KS5LT
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622399
+    - AVEXAM-63890
+    - BGS-621052
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: At what velocity do electromagnetic waves travel?
+    explanation: ""
+    options:
+      - id: OJNH2YMJE
+        text: The speed of sound.
+        correct: false
+        why: ""
+      - id: OVMUXATPC
+        text: The speed of light.
+        correct: true
+        why: ""
+      - id: OTPR2HAPS
+        text: It depends on the frequency of the wave.
+        correct: false
+        why: ""
+      - id: OUYLPKE3Q
+        text: The speed of light + velocity of the transmitter.
+        correct: false
+        why: ""
+- id: QV5GSWFSZ
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622657
+    - AVEXAM-79631
+    - ATPLGS-628293
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: What is the receiver aerial location of a GNSS system?
+    explanation: ""
+    options:
+      - id: OOPFZXI8F
+        text: Bottom of the fuselage.
+        correct: false
+        why: ""
+      - id: OUVVYZALN
+        text: Top of the tail.
+        correct: false
+        why: ""
+      - id: OVQAFGMIS
+        text: Top of the fuselage.
+        correct: true
+        why: ""
+      - id: OHWKX8AOO
+        text: Left wing tip.
+        correct: false
+        why: ""
+- id: QW0F95H3X
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625047
+    - BGS-621393
+    - AVEXAM-77167
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: International Telecommunication Union (ITU) classification
+      abbreviations used in aviation include the (1) \_\_\_\_\_ abbreviation.
+      This designates carrier wave emissions amplitude modulated with Morse code
+      which is used by (2) \_\_\_\_\_.
+    explanation: ""
+    options:
+      - id: O3W83OEFJ
+        text: (1) A2A; (2) VORs
+        correct: false
+        why: ""
+      - id: OWCN8BTPL
+        text: (1) A3E; (2) NDBs
+        correct: false
+        why: ""
+      - id: OFYA4SZDQ
+        text: (1) A2A; (2) NDBs
+        correct: true
+        why: ""
+      - id: ORLWPRE3R
+        text: (1) A3E; (2) VORs
+        correct: false
+        why: ""
+- id: QWFX5SHSX
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625944
+    - ATPLGS-621011
+    - BGS-621031
+    - ATPLGS-127808
+    - BGS-621117
+    - ATPLGS-621273
+    - ATPLGS-621009
+    - AVEXAM-16737
+    - AVEXAM-47004
+    - BGS-620873
+    - BGS-620877
+    - BGS-620805
+    - AVEXAM-34912
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "VLF-radio waves travel:"
+    explanation: ""
+    options:
+      - id: OZD0UBCZW
+        text: by line-of-sight
+        correct: false
+        why: ""
+      - id: OIMWWQTWA
+        text: during daytime as ground and sky waves, during night time as ground waves
+          only
+        correct: false
+        why: ""
+      - id: O5KJOVUQ9
+        text: during day and night as ground waves
+        correct: true
+        why: ""
+      - id: O2Q8MLESE
+        text: during day time as sky waves
+        correct: false
+        why: ""
+- id: QWOU32LXZ
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626039
+    - BGS-621075
+    - AVEXAM-67068
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "Modulation is:"
+    explanation: ""
+    options:
+      - id: O7OUOIKGF
+        text: the elimination of disturbances for improving the reception.
+        correct: false
+        why: ""
+      - id: OTJDO2KM2
+        text: the addition of a high frequency signal (tone, voice) onto a low frequency
+          carrier wave.
+        correct: false
+        why: ""
+      - id: OXIKQDUOU
+        text: the tuning of the receiver in to the frequency of the transmitter.
+        correct: false
+        why: ""
+      - id: O2VO0WLGP
+        text: the addition of a low frequency signal (tone, voice) onto a high frequency
+          carrier wave.
+        correct: true
+        why: ""
+- id: QX4ILTGJR
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624286
+    - BGS-620998
+    - ATPLGS-124747
+    - AVEXAM-70676
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Where is pulse modulation used?
+    explanation: ""
+    options:
+      - id: OXJSD2WIJ
+        text: In VHF.
+        correct: false
+        why: ""
+      - id: O4M4MBSIU
+        text: In ILS localiser.
+        correct: false
+        why: ""
+      - id: O8ANTXMOP
+        text: In Radar.
+        correct: true
+        why: ""
+      - id: OQEMOZTZ8
+        text: In VOR.
+        correct: false
+        why: ""
+- id: QXPBZJYRD
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627244
+    - AVEXAM-72291
+    - ATPLGS-629709
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: An aircraft is flying eastbound, speaking with a very distant ATC
+      station near its destination airport with the sun setting behind it. 10
+      minutes later the pilot stops receiving voice communications from the ATC.
+      What has caused this?
+    explanation: ""
+    options:
+      - id: O9RUSCEQT
+        text: The aircraft's communication systems have failed and it must divert to the
+          nearest suitable alternate.
+        correct: false
+        why: ""
+      - id: OXGNH4QKR
+        text: The aircraft is now inside the skip zone, between the ground wave and the
+          sky wave, and therefore cannot receive the controller.
+        correct: true
+        why: ""
+      - id: OOHDEORFE
+        text: The ground wave has been reduced by the night effect and the aircraft is
+          no longer within its range.
+        correct: false
+        why: ""
+      - id: OXQTIQWEK
+        text: The sky wave and ground wave are fading each other out as they arrive out
+          of phase.
+        correct: false
+        why: ""
+- id: QYDHIWJC5
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622014
+  annexes:
+    - 062-four-antenna-types-figures-1-4
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: |-
+      Refer to figure.
+
+      Which figure represents a VDF antenna?
+    explanation: ""
+    options:
+      - id: O9D9S7VHI
+        text: Figure 3
+        correct: false
+        why: ""
+      - id: OFSZNPZAR
+        text: Figure 1
+        correct: false
+        why: ""
+      - id: OHKTMZKMH
+        text: Figure 2
+        correct: true
+        why: ""
+      - id: OI7VEZRVT
+        text: Figure 4
+        correct: false
+        why: ""
+- id: QYMQEM5W7
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-627799
+    - BGS-620876
+    - ATPLGS-621010
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: What is the simplest Type of an antenna called?
+    explanation: ""
+    options:
+      - id: OYPHMYGI0
+        text: Dipole
+        correct: true
+        why: ""
+      - id: OZC5RUSBH
+        text: Loop antenna
+        correct: false
+        why: ""
+      - id: OFRZKBRMO
+        text: Quadrupole
+        correct: false
+        why: ""
+      - id: OXNZ3HHMC
+        text: Monopole
+        correct: false
+        why: ""
+- id: QYQNEZKA
+  docId: "062.01"
+  relatedQuestions:
+    - QRBGFLWF
+  externalIds:
+    - ATPLQ-628358
+    - AVEXAM-39872
+    - AVEXAM-25853
+    - BGS-621032
+    - ATPLGS-124809
+    - ATPLGS-116334
+    - BGS-621033
+    - ATPLGS-116335
+  annexes:
+    - 062-amplitude-modulated-carrier-wave-diagram-varying-amplitude-envelope-with-constant
+  learningObjectives:
+    - 062.01.01.06.01
+  template:
+    type: simple
+    question: |-
+      Refer to figure.
+
+      What type of modulation is shown in the figure below?
+    explanation: ""
+    options:
+      - id: OX4YKUCAW
+        text: Frequency modulation
+        correct: false
+        why: ""
+      - id: OQBKCVPZC
+        text: No modulation
+        correct: false
+        why: ""
+      - id: OC7ZYB5GK
+        text: Pulse modulation
+        correct: false
+        why: ""
+      - id: OLKSQ7OQM
+        text: Amplitude modulation
+        correct: true
+        why: ""
+- id: QYSESDTFV
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621585
+    - ATPLGS-124753
+    - BGS-621073
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: Within which frequency band listed below are radio waves propagated as
+      space waves?
+    explanation: ""
+    options:
+      - id: OIZ56MBBA
+        text: VLF.
+        correct: false
+        why: ""
+      - id: OFP1LVYYF
+        text: MF.
+        correct: false
+        why: ""
+      - id: OYAARDDPN
+        text: HF.
+        correct: false
+        why: ""
+      - id: OFT3ALUCK
+        text: VHF.
+        correct: true
+        why: ""
+- id: QYV4MCPDY
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621146
+    - ATPLGS-124743
+    - BGS-621053
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "Electromagnetic waves in the VLF – band have a frequency spectrum of:"
+    explanation: ""
+    options:
+      - id: OJRJGD2SL
+        text: 30-300 kHz.
+        correct: false
+        why: ""
+      - id: OJ93HT57X
+        text: 3-30 kHz.
+        correct: true
+        why: ""
+      - id: O06NLNOV1
+        text: 30-300 MHz.
+        correct: false
+        why: ""
+      - id: OWTTJFAXJ
+        text: 300-3000 kHz.
+        correct: false
+        why: ""
+- id: QYXHADEMG
+  docId: "062.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628672
+    - BGS-620934
+    - ATPLGS-124709
+    - AVEXAM-25015
+  annexes: []
+  learningObjectives:
+    - "062.01"
+  template:
+    type: simple
+    question: "The skip distance is:"
+    explanation: ""
+    options:
+      - id: O4UESZCD4
+        text: the distance from transmitter to earth surface up to the point where the
+          first sky wave can be received
+        correct: true
+        why: ""
+      - id: OALYAIQ2D
+        text: the distance from transmitter to an obstacle which limits the extension of
+          the ground wave
+        correct: false
+        why: ""
+      - id: OTF9ABTTD
+        text: the distance from transmitter to the maximum range of the sky wave
+        correct: false
+        why: ""
+      - id: OAOFCZ7WV
+        text: the distance from transmitter to the maximum range of the ground wave
+        correct: false
+        why: ""

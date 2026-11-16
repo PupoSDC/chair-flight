@@ -1,25 +1,6 @@
-import { createContext, useContext } from "react";
+import { getHighlightRegExp } from "../../../base/get-highlight-reg-exp";
+import { useSearchWords } from "../../hooks/use-search-words";
 import type { FC, ReactNode } from "react";
-
-const SearchHighlightContext = createContext("");
-
-export const SearchHighlightProvider = SearchHighlightContext.Provider;
-
-export const useSearchWords = () => {
-  const query = useContext(SearchHighlightContext);
-  return query
-    .split(/\s+/)
-    .filter((word) => word.length > 1)
-    .slice(0, 8);
-};
-
-export const getHighlightRegExp = (words: string[]) =>
-  words.length === 0
-    ? null
-    : new RegExp(
-        `(${words.map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
-        "gi",
-      );
 
 export const Highlight: FC<{ children: string }> = ({ children }) => {
   const pattern = getHighlightRegExp(useSearchWords());

@@ -1,0 +1,4489 @@
+- id: Q4YXB7SAX
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314329
+    - ATPLGS-127323
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: >-
+      An aircraft with one nose landing gear and two main landing gears is
+      weighed on jacks. Determine the CG position of the aircraft, in inches
+      from the datum, using the following readouts:
+
+
+      - Nose landing gear, located at {{na}} inches from datum, reading: {{nw}}
+      kg
+
+      - Each main landing gear, located at {{ma}} inches from datum, reading:
+      {{mw}} kg
+    variables:
+      - id: na
+        label: Nose gear arm
+        unit: in
+      - id: nw
+        label: Nose gear reading
+        unit: kg
+      - id: ma
+        label: Main gear arm
+        unit: in
+      - id: mw
+        label: Reading of each main gear
+        unit: kg
+    answer:
+      formula: (nw * na + 2 * mw * ma) / (nw + 2 * mw)
+      unit: in
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (nw * na + mw * ma) / (nw + mw)
+      - id: d2
+        formula: na + ma
+      - id: d3
+        formula: (na + ma) / 2
+      - id: d4
+        formula: (nw * na + 2 * mw * ma) / (2 * mw)
+    presets:
+      - id: p1
+        values:
+          na: 161
+          nw: 6448
+          ma: 795
+          mw: 13738
+      - id: p2
+        values:
+          na: 150
+          nw: 5900
+          ma: 780
+          mw: 12500
+    explanation: >-
+      The mass is the sum of all gear readings and the CG is the total moment
+      about the datum divided by the total mass.
+
+
+      **Solution**
+
+
+      Mass = {{nw}} + 2 * {{mw}} = {{= nw + 2 * mw}} kg
+
+
+      {{f: (nw * na + 2 * mw * ma) / (nw + 2 * mw)}} = {{n: (nw * na + 2 * mw *
+      ma) / (nw + 2 * mw)}} = **{{answer}} in**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} in**: counts only one main gear.
+
+      - **{{d2}} in**: adds the two arms instead of weighting them by the loads.
+
+      - **{{d3}} in**: takes the plain average of the two arms.
+
+      - **{{d4}} in**: divides the total moment by the main gear loads only.
+- id: Q7U8KYYE0
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312624
+    - AVEXAM-9353
+    - BGS-310539
+    - AVEXAM-61059
+    - ATPLQ-316536
+    - BGS-310725
+    - ATPLGS-126620
+    - AVEXAM-5485
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: calculation
+    question: The CG position of an aeroplane is {{cg}} m aft of the datum. The MAC
+      leading edge (LEMAC) is {{le}} m aft of the datum and the MAC length is
+      {{mac}} m. What is the CG position in % MAC?
+    variables:
+      - id: cg
+        label: CG position
+        unit: m
+      - id: le
+        label: LEMAC
+        unit: m
+      - id: mac
+        label: MAC length
+        unit: m
+    answer:
+      formula: (cg - le) / mac * 100
+      unit: "% MAC"
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: cg / mac * 100 - le
+      - id: d2
+        formula: (cg - le) / cg * 100
+      - id: d3
+        formula: (le + mac - cg) / mac * 100
+      - id: d4
+        formula: (cg - le) / mac * 10
+      - id: d5
+        formula: cg / mac
+    presets:
+      - id: p1
+        values:
+          cg: 16.13
+          le: 14.72
+          mac: 3.08
+      - id: p2
+        values:
+          cg: 12.4
+          le: 12.12
+          mac: 1.34
+    explanation: >-
+      The CG in % MAC is the distance of the CG behind the MAC leading edge
+      divided by the MAC length. Other wing dimensions (root or tip chords) do
+      not matter.
+
+
+      **Solution**
+
+
+      {{f: (cg - le) / mac * 100}} = {{n: (cg - le) / mac * 100}} = **{{answer}}
+      % MAC**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} % MAC**: subtracts the leading edge after scaling, so the two
+      terms are inconsistent.
+
+      - **{{d2}} % MAC**: divides by the CG position instead of the MAC length.
+
+      - **{{d3}} % MAC**: measures from the trailing edge instead of the leading
+      edge.
+
+      - **{{d4}} % MAC**: wrong power of ten in the percentage.
+
+      - **{{d5}} % MAC**: forgets to subtract the leading edge and to convert to
+      a percentage.
+- id: Q8CNM6MVZ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315661
+    - AVEXAM-6842
+  annexes: []
+  learningObjectives:
+    - 031.04.01.02.02
+  template:
+    type: simple
+    question: Which Section of the Aircraft Flight Manual describes the Centre of
+      Gravity limitations?
+    explanation: ""
+    options:
+      - id: O7CYVWJSI
+        text: Emergency Procedures
+        correct: false
+        why: ""
+      - id: OL6VEKV75
+        text: Normal Procedures
+        correct: false
+        why: ""
+      - id: OA5FL2561
+        text: Performance
+        correct: false
+        why: ""
+      - id: OCNCBSKYS
+        text: Limitations
+        correct: true
+        why: ""
+- id: Q9RNNLHME
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313994
+    - ATPLGS-126611
+    - BGS-310652
+    - BGS-310246
+    - ATPLGS-129402
+    - ATPLGS-127341
+    - AVEXAM-54402
+    - AVEXAM-26383
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: chart
+    question: >-
+      An aeroplane has a mean aerodynamic chord (MAC) of 135 inches.
+
+
+      The leading edge of this chord is 526.6 inches aft of the datum.
+
+
+      Calculate the location of the centre of gravity of the aeroplane in terms
+      of percentage MAC if the mass of the aeroplane is acting vertically
+      through a Balance Arm located 560 inches aft of the datum.
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 24.8%
+        wrongAnswers:
+          - 75.6%
+          - 85.5%
+          - 18.1%
+        explanation: The centre of gravity is 560 − 526.6 = 33.4 inches behind the
+          leading edge of the chord. As a share of the 135 inch chord that is
+          33.4 ÷ 135 = **24.8 %** MAC.
+- id: QA1GHEVXQ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314332
+    - AVEXAM-72726
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.02
+    - 031.04.03.02.01
+  template:
+    type: simple
+    question: "The basic empty mass (BEM) and the basic empty mass centre of gravity
+      (CG) position are noted in:"
+    explanation: ""
+    options:
+      - id: ONOH0VDOU
+        text: The weighing report.
+        correct: true
+        why: ""
+      - id: OGVXJL4KG
+        text: The load and trim sheet.
+        correct: false
+        why: ""
+      - id: OZ00PRHJE
+        text: The cargo manifest.
+        correct: false
+        why: ""
+      - id: O3BM0QHWY
+        text: The certificate of airworthiness.
+        correct: false
+        why: ""
+- id: QAG1GILQN
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319078
+    - AVEXAM-5590
+    - AVEXAM-94843
+    - AVEXAM-29799
+    - ATPLGS-107071
+    - BGS-310292
+    - ATPLGS-107092
+    - ATPLGS-107063
+    - AVEXAM-97588
+    - ATPLGS-107086
+    - ATPLGS-107080
+    - ATPLGS-126659
+    - BGS-310293
+    - BGS-310294
+    - AVEXAM-82479
+  annexes:
+    - 031-mass-balance-cg-envelope
+  learningObjectives:
+    - 031.04.01.04.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      At the Maximum Landing Mass the range of safe CG positions, as determined
+      from the appropriate graph in the loading manual, is:
+    explanation: ""
+    options:
+      - id: OGEIN5M6S
+        text: Forward limit 8.0% MAC aft limit 26.8% MAC
+        correct: false
+        why: ""
+      - id: OGMEM0QVT
+        text: Forward limit 7.4% MAC aft limit 27.0% MAC
+        correct: true
+        why: ""
+      - id: OT2R0YUAM
+        text: Forward limit 8.6% MAC aft limit 27.0% MAC
+        correct: false
+        why: ""
+      - id: OYDI4ABLF
+        text: Forward limit 8.0% MAC aft limit 27.2% MAC
+        correct: false
+        why: ""
+- id: QARAYYHI6
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312493
+    - AVEXAM-51791
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.03
+  template:
+    type: simple
+    question: Some aircraft are equipped with fuel trim tanks located in the
+      aeroplane’s fin or horizontal stabiliser to actively manage CG position.
+      Which of the following is an advantage of having a trim tank in the
+      horizontal stabiliser?
+    explanation: ""
+    options:
+      - id: OOOGNJDCA
+        text: It decreases the maximum range.
+        correct: false
+        why: ""
+      - id: OXIY7AUAV
+        text: It increases the efficiency of the elevator during slow flight.
+        correct: false
+        why: ""
+      - id: OP0LF6F8M
+        text: It increases the structural mass.
+        correct: false
+        why: ""
+      - id: OQPUEK6ZE
+        text: It allows the crew to keep the CG at an aft position.
+        correct: true
+        why: ""
+- id: QAZUOBH0D
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319608
+    - AVEXAM-49544
+  annexes:
+    - 031-usable-fuel-diagram-and-table
+  learningObjectives:
+    - 031.04.01.07.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      For Mass and Balance and Aerodynamic purposes, a pilot decides to refuel
+      only the inner and outer wing tanks on both sides, while the centre tank
+      remains empty. How much fuel is available?
+    explanation: ""
+    options:
+      - id: O75RSMWSB
+        text: 15 608 kg
+        correct: false
+        why: ""
+      - id: OKFNSUZG3
+        text: 12 252 kg
+        correct: true
+        why: ""
+      - id: O0U5SBKBH
+        text: 10 870 kg
+        correct: false
+        why: ""
+      - id: O7J761HXE
+        text: 18 728 kg
+        correct: false
+        why: ""
+- id: QBBXLIQF
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317268
+    - AVEXAM-96223
+    - BGS-310547
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.01
+  template:
+    type: simple
+    question: An aircraft is used for Commercial Air Transport. Since the aircraft's
+      initial entry into service, 3 years ago, several repairs and modifications
+      have been executed. These changes were accurately documented. The Operator
+      uses individual aircraft masses. Does the aircraft need to be re-weighed
+      now?
+    explanation: ""
+    options:
+      - id: ORIRYC43J
+        text: Yes, because the applicable EU regulation requires a re-weighing every 3
+          years.
+        correct: false
+        why: ""
+      - id: OTH343RF4
+        text: Yes, because re-weighting should be done after every repair and/or
+          modification.
+        correct: false
+        why: ""
+      - id: OAJNQQE7H
+        text: No, but it must be re-weighed within the next 12 months.
+        correct: true
+        why: ""
+      - id: ONTRM1RFS
+        text: No, but it must be re-weighed within the next 6 years.
+        correct: false
+        why: ""
+- id: QBF9CF9QN
+  docId: "031.04"
+  relatedQuestions:
+    - QSXAKADJ
+  externalIds:
+    - ATPLQ-319589
+    - ATPLGS-127324
+    - AVEXAM-95631
+    - BGS-310471
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: >-
+      A tri-wheel aircraft has its datum {{dn}} inches aft of the nose wheel and
+      {{ma}} inches forward of the main wheels.
+
+
+      The nose jack shows {{nw}} lb and each main wheel jack shows {{mw}} lb.
+
+
+      Determine the CG position, in inches measured from the nose wheel.
+    variables:
+      - id: dn
+        label: Datum aft of nose wheel
+        unit: in
+      - id: ma
+        label: Datum forward of main wheels
+        unit: in
+      - id: nw
+        label: Nose jack reading
+        unit: lb
+      - id: mw
+        label: Reading of each main jack
+        unit: lb
+    answer:
+      formula: (nw * (0 - dn) + 2 * mw * ma) / (nw + 2 * mw) + dn
+      unit: in
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (nw * (0 - dn) + 2 * mw * ma) / (nw + 2 * mw)
+      - id: d2
+        formula: (nw * (0 - dn) + 2 * mw * ma) / (nw + 2 * mw) - dn
+      - id: d3
+        formula: ma + dn
+      - id: d4
+        formula: (nw * dn + 2 * mw * ma) / (nw + 2 * mw) + dn
+    presets:
+      - id: p1
+        values:
+          dn: 25
+          ma: 180
+          nw: 125
+          mw: 3400
+      - id: p2
+        values:
+          dn: 30
+          ma: 175
+          nw: 140
+          mw: 3000
+    explanation: >-
+      First find the CG relative to the datum (nose wheel arm negative), then
+      add the distance from the nose wheel to the datum to refer it to the nose
+      wheel.
+
+
+      **Solution**
+
+
+      Total = {{= nw + 2 * mw}} lb
+
+
+      CG from datum = {{= (nw * (0 - dn) + 2 * mw * ma) / (nw + 2 * mw)}} in
+
+
+      {{f: (nw * (0 - dn) + 2 * mw * ma) / (nw + 2 * mw) + dn}} = **{{answer}}
+      in** from the nose wheel
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} in**: the CG from the datum, not from the nose wheel.
+
+      - **{{d2}} in**: subtracts the datum offset instead of adding it.
+
+      - **{{d3}} in**: uses only the geometry and ignores the weights.
+
+      - **{{d4}} in**: uses a positive nose wheel arm.
+- id: QCQMRXRZ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317112
+    - AVEXAM-99723
+  annexes:
+    - cap-696-page-20-figure-2.5
+  learningObjectives:
+    - 031.04.01.04.01
+  template:
+    type: simple
+    question: Refer to figure or CAP 696 Figure 2.5\. What is the safe CG range for
+      a single-engined piston aeroplane with a cruise mass of 2 600 lb?
+    explanation: ""
+    options:
+      - id: ODAUQMXUH
+        text: "Forward limit: 79.0 in; aft limit: 87.7 in"
+        correct: false
+        why: ""
+      - id: OTFHS8AR1
+        text: "Forward limit: 74.0 in; aft limit: 87.7 in"
+        correct: true
+        why: ""
+      - id: OCQROVBYP
+        text: "Forward limit: 71.4 in; aft limit: 88.4 in"
+        correct: false
+        why: ""
+      - id: ODKJIYIN1
+        text: "Forward limit: 77.1 in; aft limit: 87.7 in"
+        correct: false
+        why: ""
+- id: QCRJPCHB
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313132
+    - BGS-310709
+    - AVEXAM-5118
+  annexes: []
+  learningObjectives:
+    - 031.04.01.02.02
+  template:
+    type: simple
+    question: Information about CG limits can be found..
+    explanation: ""
+    options:
+      - id: OM4FNJCPB
+        text: in the aircraft’s Certificate of Registration.
+        correct: false
+        why: ""
+      - id: O5WIOQKXW
+        text: on the Air Operator Certificate.
+        correct: false
+        why: ""
+      - id: OJKMU3VWD
+        text: in the Aircraft Checklist.
+        correct: false
+        why: ""
+      - id: OZNLQKKPO
+        text: in the Aircraft Flight Manual.
+        correct: true
+        why: ""
+- id: QCXDIOIP
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314829
+    - ATPLGS-107108
+    - ATPLGS-625793
+    - AVEXAM-37192
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.01
+  template:
+    type: simple
+    question: The Basic Empty Mass of an aircraft is recorded in..
+    explanation: ""
+    options:
+      - id: OBJJGCTAI
+        text: the loading manifest. It differs from Dry Operating Mass by the value of
+          the traffic load.
+        correct: false
+        why: ""
+      - id: OINOVVAYZ
+        text: the loading manifest. It differs from the Zero Fuel Mass by the value of
+          the traffic load.
+        correct: false
+        why: ""
+      - id: ORFSBUXHX
+        text: the weighing schedule. If changes occur, due to modifications, the
+          aircraft must be re-weighed always.
+        correct: false
+        why: ""
+      - id: OWSVNBWZA
+        text: the weighing schedule and is amended to take account of changes due to
+          modifications of the aircraft.
+        correct: true
+        why: ""
+- id: QD6YKWASE
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315891
+    - AVEXAM-42801
+    - ATPLGS-107075
+    - ATPLGS-626990
+    - AVEXAM-83216
+    - ATPLGS-107070
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+    - 031.05.01.01.01
+  template:
+    type: calculation
+    question: >-
+      The mass and balance information gives:
+
+
+      - Basic empty mass: {{bem}} kg
+
+      - CG at BEM: {{bemcg}} m ({{bempct}} % MAC)
+
+      - MAC: {{mac}} m
+
+
+      From the flight manual: pilot and front seat occupant: {{crew}} kg each,
+      front seats arm {{crewarm}} m; fuel tanks arm {{fuelarm}} m. The fuel
+      tanks contain {{fuell}} litres of 100LL with a density of {{dens}} kg/l.
+      The rear seats are not occupied. Taxi fuel is negligible.
+
+
+      What is the position of the centre of gravity at take-off, in % MAC
+      (rounded to whole numbers)?
+    variables:
+      - id: bem
+        label: Basic empty mass
+        unit: kg
+      - id: bemcg
+        label: CG at BEM
+        unit: m
+      - id: bempct
+        label: CG at BEM
+        unit: "% MAC"
+      - id: mac
+        label: MAC length
+        unit: m
+      - id: crew
+        label: Mass of each front seat occupant
+        unit: kg
+      - id: crewarm
+        label: Front seat arm
+        unit: m
+      - id: fuell
+        label: Fuel volume
+        unit: l
+      - id: dens
+        label: Fuel density
+        unit: kg/l
+      - id: fuelarm
+        label: Fuel tank arm
+        unit: m
+    answer:
+      formula: ((bem * bemcg + 2 * crew * crewarm + fuell * dens * fuelarm) / (bem + 2
+        * crew + fuell * dens) - (bemcg - bempct / 100 * mac)) / mac * 100
+      unit: "% MAC"
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: ((bem * bemcg + 2 * crew * crewarm + fuell * dens * fuelarm) / (bem + 2
+          * crew + fuell * dens)) / mac * 100
+      - id: d2
+        formula: ((bem * bemcg + 2 * crew * crewarm + fuell * dens * fuelarm) / (bem + 2
+          * crew + fuell * dens) - bemcg) / mac * 100
+      - id: d3
+        formula: ((bem * bemcg + fuell * dens * fuelarm) / (bem + fuell * dens) - (bemcg
+          - bempct / 100 * mac)) / mac * 100
+      - id: d4
+        formula: ((bem * bemcg + 2 * crew * crewarm + fuell / dens * fuelarm) / (bem + 2
+          * crew + fuell / dens) - (bemcg - bempct / 100 * mac)) / mac * 100
+    presets:
+      - id: p1
+        values:
+          bem: 1095
+          bemcg: 1.98
+          bempct: 25
+          mac: 2
+          crew: 80
+          crewarm: 2.5
+          fuell: 139
+          dens: 0.72
+          fuelarm: 1.9
+      - id: p2
+        values:
+          bem: 1180
+          bemcg: 2.05
+          bempct: 27
+          mac: 2.1
+          crew: 85
+          crewarm: 2.45
+          fuell: 200
+          dens: 0.72
+          fuelarm: 1.95
+    explanation: >-
+      The take-off CG is the total moment divided by the total mass. The leading
+      edge of the MAC follows from the CG at BEM and its position in % MAC; the
+      CG in % MAC is the distance of the CG behind the leading edge divided by
+      the MAC length.
+
+
+      **Solution**
+
+
+      Fuel mass = {{fuell}} * {{dens}} = {{= fuell * dens}} kg
+
+
+      Total mass = {{= bem + 2 * crew + fuell * dens}} kg; total moment = {{=
+      bem * bemcg + 2 * crew * crewarm + fuell * dens * fuelarm}} kg·m
+
+
+      CG = {{= (bem * bemcg + 2 * crew * crewarm + fuell * dens * fuelarm) /
+      (bem + 2 * crew + fuell * dens)}} m
+
+
+      LEMAC = {{bemcg}} - {{bempct}} % * {{mac}} = {{= bemcg - bempct / 100 *
+      mac}} m
+
+
+      %MAC = **{{answer}} % MAC**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} % MAC**: measures the CG from the datum instead of from the
+      leading edge of the MAC.
+
+      - **{{d2}} % MAC**: measures from the CG at BEM instead of from the
+      leading edge of the MAC.
+
+      - **{{d3}} % MAC**: leaves out the pilot and front seat occupant.
+
+      - **{{d4}} % MAC**: divides the fuel volume by the density instead of
+      multiplying.
+- id: QDKABYMQ1
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319403
+    - BGS-310723
+    - ATPLGS-127366
+  annexes:
+    - cap-696-page-25-figure-3.5
+  learningObjectives:
+    - 031.04.01.04.01
+  template:
+    type: simple
+    question: Refer to figure or CAP696 file 3.5\. Assuming Maximum Structural
+      Take-Off Mass (MSTOM), what CG locations (inches of aft datum) have to be
+      considered as the front and aft CG positions?
+    explanation: ""
+    options:
+      - id: OAN5EAA9O
+        text: 82.0 in 90.6 in
+        correct: false
+        why: ""
+      - id: O7MPDKLCE
+        text: 88.7 in and 94.6 in
+        correct: false
+        why: ""
+      - id: OUWS4N71B
+        text: 90.6 in and 94.6 in
+        correct: true
+        why: ""
+      - id: ORCHRACUB
+        text: 82.0 in and 94.6 in
+        correct: false
+        why: ""
+- id: QDKDCYWTO
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319236
+    - AVEXAM-43558
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.03
+  template:
+    type: simple
+    question: If the CG of an aircraft is close to its forward limit, what will be
+      achieved if fuel is transferred from the wing tanks to the aeroplane’s fin
+      or horizontal stabiliser tanks?
+    explanation: ""
+    options:
+      - id: OOKI8LIWI
+        text: Efficient stability control, by repositioning the CG aft.
+        correct: false
+        why: ""
+      - id: OYSJE8RAA
+        text: Best fuel economy, by repositioning the CG forward.
+        correct: false
+        why: ""
+      - id: OPUKI9TH8
+        text: Efficient fuel consumption, by repositioning the CG aft.
+        correct: true
+        why: ""
+      - id: OJQMP1TYX
+        text: Best range, by repositioning the CG forward.
+        correct: false
+        why: ""
+- id: QDKHOOOG
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312146
+    - BGS-310254
+    - AVEXAM-68460
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.01
+  template:
+    type: simple
+    question: Where may an aircraft be weighed?
+    explanation: ""
+    options:
+      - id: OQMUVO5BU
+        text: In an enclosed hangar.
+        correct: true
+        why: ""
+      - id: OIJMSPQDZ
+        text: At a specified "weighing location" on the airfield.
+        correct: false
+        why: ""
+      - id: O1MFRWU4Y
+        text: In an area of the airfield set aside for maintenance.
+        correct: false
+        why: ""
+      - id: OFMVNNZDB
+        text: In a quiet parking area clear of the normal manoeuvring area.
+        correct: false
+        why: ""
+- id: QDNEPWRDI
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312905
+    - ATPLGS-126700
+    - AVEXAM-57365
+    - BGS-310473
+  annexes:
+    - 031-fuel-tank-layout-7-tanks
+  learningObjectives:
+    - 031.04.01.07.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Using the diagram, how much fuel could be loaded at reference station
+      4.575, when all tanks were fitted in this aircraft?
+    explanation: ""
+    options:
+      - id: ONKZ69DK9
+        text: 1171 litres
+        correct: false
+        why: ""
+      - id: ODXZYLSPC
+        text: 423 litres
+        correct: false
+        why: ""
+      - id: OO5OXNGPI
+        text: 806 litres
+        correct: true
+        why: ""
+      - id: OXCP3HPQP
+        text: 324 litres
+        correct: false
+        why: ""
+- id: QDON9I2V0
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313714
+    - AVEXAM-71356
+    - AVEXAM-9555
+    - ATPLGS-622452
+    - BGS-310749
+    - AVEXAM-43294
+    - ATPLGS-127365
+    - BGS-310748
+    - ATPLGS-626180
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: >-
+      Given the following aircraft weighing data, determine the CG position,
+      expressed as the distance forward of the main gear (in cm):
+
+
+      - Mass on nose gear: {{nose}} kg
+
+      - Mass on right main gear: {{right}} kg
+
+      - Mass on left main gear: {{left}} kg
+
+      - Distance between nose and main gear: {{dist}} cm
+    variables:
+      - id: nose
+        label: Mass on nose gear
+        unit: kg
+      - id: right
+        label: Mass on right main gear
+        unit: kg
+      - id: left
+        label: Mass on left main gear
+        unit: kg
+      - id: dist
+        label: Distance nose gear to main gear
+        unit: cm
+    answer:
+      formula: nose * dist / (nose + right + left)
+      unit: cm
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: dist - nose * dist / (nose + right + left)
+      - id: d2
+        formula: nose * dist / (right + left)
+      - id: d3
+        formula: 2 * nose * dist / (nose + right + left)
+      - id: d4
+        formula: nose * dist / (nose + right)
+    presets:
+      - id: p1
+        values:
+          nose: 435
+          right: 2385
+          left: 2415
+          dist: 583
+      - id: p2
+        values:
+          nose: 400
+          right: 2300
+          left: 2350
+          dist: 560
+      - id: p3
+        values:
+          nose: 520
+          right: 2600
+          left: 2650
+          dist: 610
+    explanation: >-
+      When an aircraft is weighed, taking moments about the main gear shows that
+      the nose gear reaction times the wheelbase equals the total mass times the
+      distance of the CG forward of the main gear.
+
+
+      **Solution**
+
+
+      {{f: nose * dist / (nose + right + left)}} = {{n: nose * dist / (nose +
+      right + left)}} = **{{answer}} cm** forward of the main gear
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} cm**: this is the CG distance aft of the nose gear, not forward
+      of the main gear.
+
+      - **{{d2}} cm**: the nose gear mass is left out of the total mass.
+
+      - **{{d3}} cm**: the nose gear moment is counted twice.
+
+      - **{{d4}} cm**: the left main gear mass is forgotten in the total mass.
+- id: QDS2PBSMH
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313745
+    - AVEXAM-59400
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: calculation
+    question: |-
+      Calculate the position of the centre of gravity of a jet, in % MAC, given:
+
+      - MAC leading edge: {{le}} m aft of datum
+      - MAC trailing edge: {{te}} m aft of datum
+      - Centre of gravity: {{cg}} m aft of datum
+    variables:
+      - id: le
+        label: MAC leading edge
+        unit: m
+      - id: te
+        label: MAC trailing edge
+        unit: m
+      - id: cg
+        label: CG position
+        unit: m
+    answer:
+      formula: (cg - le) / (te - le) * 100
+      unit: "% MAC"
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (cg - le) / te * 100
+      - id: d2
+        formula: (te - cg) / (te - le) * 100
+      - id: d3
+        formula: (cg - le) / le * 100
+      - id: d4
+        formula: (cg - le) / (te - le) * 10
+    presets:
+      - id: p1
+        values:
+          le: 13.21
+          te: 15.63
+          cg: 13.65
+      - id: p2
+        values:
+          le: 13.1
+          te: 15.5
+          cg: 13.9
+      - id: p3
+        values:
+          le: 13.3
+          te: 15.7
+          cg: 14.2
+    explanation: >-
+      The CG in % MAC is the distance of the CG behind the MAC leading edge
+      divided by the MAC length (trailing edge minus leading edge).
+
+
+      **Solution**
+
+
+      MAC = {{= te - le}} m
+
+
+      {{f: (cg - le) / (te - le) * 100}} = {{n: (cg - le) / (te - le) * 100}} =
+      **{{answer}} % MAC**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} % MAC**: divides by the trailing edge position instead of the
+      MAC length.
+
+      - **{{d2}} % MAC**: measures from the trailing edge, giving the distance
+      forward of it.
+
+      - **{{d3}} % MAC**: divides by the leading edge position instead of the
+      MAC length.
+
+      - **{{d4}} % MAC**: omits the factor to convert the ratio into a
+      percentage correctly (factor 10 instead of 100).
+- id: QE6XRMZGQ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311615
+    - AVEXAM-15283
+    - AVEXAM-32955
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.02
+  template:
+    type: calculation
+    question: >-
+      According to the AFM, the centre tank fuel has to be consumed prior to the
+      wing tanks fuel. According to the pre-flight fuel planning, the remaining
+      fuel upon landing will be {{lf}} kg. Given the following information
+      below, calculate your CG position upon landing:
+
+
+      - Zero Fuel Mass: {{zfm}} kg
+
+      - CG position at TOM: {{cgt}} m
+
+      - Fuel in centre tank at take-off: {{fc}} kg
+
+      - Centre fuel tank station: {{xc}} m
+
+      - Fuel in wing tanks at take-off: {{fw}} kg
+
+      - Wing fuel tank station: {{xw}} m
+    variables:
+      - id: lf
+        label: Landing fuel
+        unit: kg
+      - id: zfm
+        label: ZFM
+        unit: kg
+      - id: cgt
+        label: CG at TOM
+        unit: m
+      - id: fc
+        label: Centre tank fuel
+        unit: kg
+      - id: xc
+        label: Centre tank station
+        unit: m
+      - id: fw
+        label: Wing tanks fuel
+        unit: kg
+      - id: xw
+        label: Wing tank station
+        unit: m
+    answer:
+      formula: ((zfm + fc + fw) * cgt - fc * xc - (fw - lf) * xw) / (zfm + lf)
+      unit: m
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: ((zfm + fc + fw) * cgt - fw * xw - (fc - lf) * xc) / (zfm + lf)
+      - id: d2
+        formula: ((zfm + fc + fw) * cgt - fc * xc - (fw - lf) * xw) / zfm
+      - id: d3
+        formula: ((zfm + fc + fw) * cgt - fc * xc - fw * xw) / (zfm + lf)
+    presets:
+      - id: p1
+        values:
+          lf: 2000
+          zfm: 40000
+          cgt: 15.45
+          fc: 28000
+          xc: 15.3
+          fw: 26000
+          xw: 15.7
+      - id: p2
+        values:
+          lf: 1500
+          zfm: 38000
+          cgt: 15.5
+          fc: 20000
+          xc: 15.2
+          fw: 22000
+          xw: 15.9
+    explanation: >-
+      The CG is the total moment divided by the total mass. The take-off mass is
+      ZFM + fuel; its moment is TOM x CG at TOM. The centre tank is emptied
+      first, then the wing tanks are burned down to the landing fuel; subtract
+      the moments of the fuel burned and divide by the landing mass (ZFM +
+      landing fuel).
+
+
+      **Solution**
+
+
+      Take-off mass: {{= zfm + fc + fw}} kg, moment: {{= (zfm + fc + fw) * cgt}}
+      kg m
+
+      Centre tank burned: {{fc}} kg, moment {{= fc * xc}} kg m
+
+      Wing tanks burned: {{= fw - lf}} kg, moment {{= (fw - lf) * xw}} kg m
+
+      Landing mass: {{= zfm + lf}} kg
+
+
+      {{f: ((zfm + fc + fw) * cgt - fc * xc - (fw - lf) * xw) / (zfm + lf)}} =
+      **{{answer}} m**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: the wing tank fuel was burned before the centre tank,
+      contrary to the AFM.
+
+      - **{{d2}} m**: the landing moment was divided by the ZFM instead of the
+      landing mass (landing fuel left out of the mass).
+
+      - **{{d3}} m**: all the fuel was removed from the moment, including the
+      landing fuel that stays on board.
+- id: QEDQTY3P8
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317638
+  annexes:
+    - 031-cap-696-figure-2-5-cg-envelope-single-engine-piston
+  learningObjectives:
+    - 031.04.01.04.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      A Single Engine Piston aeroplane prepares to land at a mass of 2 500 lb.
+      What is the forward limit CG position of this landing mass?
+    explanation: ""
+    options:
+      - id: OHW5F6SL0
+        text: 87.7 in
+        correct: false
+        why: ""
+      - id: OD0YWGHTD
+        text: 69.0 in
+        correct: false
+        why: ""
+      - id: OKIQD2O8C
+        text: 76.2 in
+        correct: false
+        why: ""
+      - id: OEPMY0QF4
+        text: 74.0 in
+        correct: true
+        why: ""
+- id: QENTAKSI
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311981
+    - ATPLGS-622305
+    - BGS-310196
+    - AVEXAM-71309
+  annexes: []
+  learningObjectives:
+    - 031.04.01.02.04
+  template:
+    type: simple
+    question: The centre of gravity of an aircraft is that point through which the
+      Total Mass of the aircraft is said to act. In what direction does the
+      weight act?
+    explanation: ""
+    options:
+      - id: OVR8KCZ5K
+        text: It is governed by the distribution of the mass within the aircraft.
+        correct: false
+        why: ""
+      - id: ONTRNJOLD
+        text: Always parallel to the aircraft's vertical axis.
+        correct: false
+        why: ""
+      - id: ODWCKVXQK
+        text: Parallel to the gravity vector.
+        correct: true
+        why: ""
+      - id: OQC4ETM16
+        text: At right angles to the flight path.
+        correct: false
+        why: ""
+- id: QENYHVO9V
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315221
+    - ATPLGS-126636
+    - BGS-310730
+  annexes:
+    - 031-load-limitations-for-lower-deck-cargo-compartments-02
+  learningObjectives:
+    - 031.04.01.06.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Using the annex, determine the maximum allowable mass and running load of
+      the middle compartment of the forward cargo hold.
+    explanation: ""
+    options:
+      - id: OQMATDBQE
+        text: 483 kg and 8.47 kg/in
+        correct: true
+        why: ""
+      - id: OON9QMAXZ
+        text: 3305 kg and 8.47 kg/in
+        correct: false
+        why: ""
+      - id: O3FSZ7NFH
+        text: 483 kg and 68.0 kg/sq ft
+        correct: false
+        why: ""
+      - id: OJRTGY7GV
+        text: 3305 kg and 68.0 kg/sq ft
+        correct: false
+        why: ""
+- id: QETEZDFX
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-316944
+    - BGS-310470
+    - AVEXAM-9555
+    - ATPLGS-622452
+    - BGS-310749
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: >-
+      Given the following weighing data, calculate the aircraft CG position, as
+      the distance aft of the nose wheel (in inches).
+
+
+      - Mass on nose wheel: {{nose}} kg
+
+      - Mass on left main wheels: {{left}} kg
+
+      - Mass on right main wheels: {{right}} kg
+
+      - Distance between the nose and main wheels: {{dist}} in
+    variables:
+      - id: nose
+        label: Mass on nose wheel
+        unit: kg
+      - id: left
+        label: Mass on left main wheels
+        unit: kg
+      - id: right
+        label: Mass on right main wheels
+        unit: kg
+      - id: dist
+        label: Distance nose wheel to main wheels
+        unit: in
+    answer:
+      formula: (left + right) * dist / (nose + left + right)
+      unit: in
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: nose * dist / (nose + left + right)
+      - id: d2
+        formula: nose * dist / (left + right)
+      - id: d3
+        formula: left * dist / (nose + left + right)
+      - id: d4
+        formula: dist - nose * dist / (left + right)
+    presets:
+      - id: p1
+        values:
+          nose: 285
+          left: 1465
+          right: 1395
+          dist: 92
+      - id: p2
+        values:
+          nose: 300
+          left: 1500
+          right: 1450
+          dist: 90
+      - id: p3
+        values:
+          nose: 270
+          left: 1400
+          right: 1350
+          dist: 95
+    explanation: >-
+      Taking moments about the nose wheel, the total mass times the CG distance
+      equals the sum of the main wheel masses times the wheelbase. Note that 7
+      ft 8 in = 92 in.
+
+
+      **Solution**
+
+
+      {{f: (left + right) * dist / (nose + left + right)}} = {{n: (left + right)
+      * dist / (nose + left + right)}} = **{{answer}} in** aft of the nose wheel
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} in**: this is the CG distance forward of the main wheels, not
+      aft of the nose wheel.
+
+      - **{{d2}} in**: the nose mass is left out of the total mass, and the
+      result is the distance forward of the main wheels.
+
+      - **{{d3}} in**: only the left main wheel moment is used.
+
+      - **{{d4}} in**: distance forward of main wheels computed with the wrong
+      total, then subtracted from the wheelbase.
+- id: QEYPKGZL
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313969
+    - ATPLGS-107106
+    - AVEXAM-11764
+    - BGS-310255
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.01
+  template:
+    type: simple
+    question: 'An aeroplane must be re-weighed at certain intervals. When an
+      operator uses _"fleet masses"_ and provided that changes have been
+      correctly documented, this interval is:'
+    explanation: ""
+    options:
+      - id: OSASNWLQ8
+        text: Whenever a major modification is carried out.
+        correct: false
+        why: ""
+      - id: OFB2NOY4U
+        text: 9 years for each aeroplane.
+        correct: true
+        why: ""
+      - id: OH9SJKSTS
+        text: Whenever the certificate of airworthiness is renewed.
+        correct: false
+        why: ""
+      - id: OBT22MOAY
+        text: 4 years for each aeroplane.
+        correct: false
+        why: ""
+- id: QF10KVZKQ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318293
+    - BGS-310635
+    - AVEXAM-39344
+  annexes:
+    - 031-mrjt-mass-balance-cg-envelope
+  learningObjectives:
+    - 031.04.01.04.01
+  template:
+    type: simple
+    question: |-
+      Refer to figure.
+
+      Determine what the CG limits are at the maximum take-off mass.
+    explanation: ""
+    options:
+      - id: OO7EA3UD0
+        text: 12.5% and 19.5%.
+        correct: false
+        why: ""
+      - id: OAHNRSHHB
+        text: 7.25% and 26.7%.
+        correct: false
+        why: ""
+      - id: OAPWDLIA7
+        text: 9.25% and 26%.
+        correct: true
+        why: ""
+      - id: OEJFKPVYT
+        text: 7.7% and 27.3%.
+        correct: false
+        why: ""
+- id: QFB4K2V9C
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317832
+    - ATPLGS-127323
+    - ATPLQ-311188
+    - ATPLGS-127364
+    - BGS-310713
+    - AVEXAM-70722
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: >-
+      An aeroplane with one nose landing gear and two main landing gears is
+      weighed on jacks. Determine the CG position (in inches aft of the datum)
+      using the following readouts:
+
+
+      - Nose landing gear, located at {{nose_arm}} in from the datum, reading:
+      {{nose_mass}} kg
+
+      - Each main landing gear, located at {{main_arm}} in from the datum,
+      reading: {{main_mass}} kg
+    variables:
+      - id: nose_mass
+        label: Nose gear reading
+        unit: kg
+      - id: nose_arm
+        label: Nose gear arm
+        unit: in
+      - id: main_mass
+        label: Reading of each main gear
+        unit: kg
+      - id: main_arm
+        label: Main gear arm
+        unit: in
+    answer:
+      formula: (nose_mass * nose_arm + 2 * main_mass * main_arm) / (nose_mass + 2 *
+        main_mass)
+      unit: in
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (nose_mass * nose_arm + main_mass * main_arm) / (nose_mass + main_mass)
+      - id: d2
+        formula: (nose_arm + main_arm) / 2
+      - id: d3
+        formula: (nose_mass * nose_arm + 2 * main_mass * main_arm) / (nose_mass +
+          main_mass)
+      - id: d4
+        formula: (nose_mass * nose_arm + 2 * main_mass * main_arm) / (2 * main_mass)
+    presets:
+      - id: p1
+        values:
+          nose_mass: 2300
+          nose_arm: 161
+          main_mass: 19300
+          main_arm: 775
+      - id: p2
+        values:
+          nose_mass: 6488
+          nose_arm: 161
+          main_mass: 17783
+          main_arm: 775
+    explanation: >-
+      The basic empty mass is the sum of all jack readings, and the CG is the
+      total moment divided by this mass. The aircraft has two main gears, each
+      carrying the stated reading.
+
+
+      **Solution**
+
+
+      BEM = {{= nose_mass + 2 * main_mass}} kg
+
+
+      {{f: (nose_mass * nose_arm + 2 * main_mass * main_arm) / (nose_mass + 2 *
+      main_mass)}} = {{n: (nose_mass * nose_arm + 2 * main_mass * main_arm) /
+      (nose_mass + 2 * main_mass)}} = **{{answer}} in** aft of the datum
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} in**: only one main gear is counted.
+
+      - **{{d2}} in**: the arms are averaged without weighting by the gear
+      loads.
+
+      - **{{d3}} in**: the total moment is divided by the mass with only one
+      main gear.
+
+      - **{{d4}} in**: the nose gear mass is left out of the total mass.
+- id: QFHXG3K8D
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312503
+    - ATPLGS-126611
+    - BGS-310652
+    - BGS-310246
+    - ATPLGS-129402
+    - ATPLGS-127341
+    - AVEXAM-54402
+    - AVEXAM-26383
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: calculation
+    question: >-
+      An aeroplane has a mean aerodynamic chord (MAC) of {{mac}} inches.
+
+
+      The leading edge of this chord is {{le}} inches aft of the datum.
+
+
+      Give the location of the centre of gravity of the aeroplane in % MAC if
+      the mass of the aeroplane acts through a balance arm located {{cg}} inches
+      aft of the datum.
+    variables:
+      - id: mac
+        label: MAC length
+        unit: in
+      - id: le
+        label: MAC leading edge
+        unit: in
+      - id: cg
+        label: CG balance arm
+        unit: in
+    answer:
+      formula: (cg - le) / mac * 100
+      unit: "% MAC"
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: cg / mac * 100 - le / mac * 10
+      - id: d2
+        formula: (cg - le) / cg * 100
+      - id: d3
+        formula: (le + mac - cg) / mac * 100
+      - id: d4
+        formula: cg / mac * 10
+    presets:
+      - id: p1
+        values:
+          mac: 134.5
+          le: 526.6
+          cg: 560
+      - id: p2
+        values:
+          mac: 140.2
+          le: 530
+          cg: 570
+    explanation: >-
+      The CG in % MAC is the distance of the CG behind the MAC leading edge
+      divided by the MAC length.
+
+
+      **Solution**
+
+
+      {{f: (cg - le) / mac * 100}} = {{n: (cg - le) / mac * 100}} = **{{answer}}
+      % MAC**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} % MAC**: a calculation slip: the CG and leading edge ratios are
+      scaled inconsistently.
+
+      - **{{d2}} % MAC**: divides by the CG position instead of the MAC length.
+
+      - **{{d3}} % MAC**: measures from the trailing edge instead of the leading
+      edge.
+
+      - **{{d4}} % MAC**: divides the CG by the MAC length and scales by 10.
+- id: QFIOGJOL
+  docId: "031.04"
+  relatedQuestions:
+    - QLZLCTUG
+  externalIds:
+    - ATPLQ-311563
+    - BGS-310784
+    - AVEXAM-28574
+  annexes: []
+  learningObjectives:
+    - 031.04.01.02.04
+  template:
+    type: simple
+    question: Which one of the following statements below best describes the Centre
+      of Gravity (CG) of an aircraft?
+    explanation: ""
+    options:
+      - id: OOPMKN0XI
+        text: The CG is the point at which the total weight is assumed to be
+          concentrated.
+        correct: true
+        why: ""
+      - id: OTWJLN61A
+        text: The CG is the point at which the sum of the values of the moments is NOT
+          zero.
+        correct: false
+        why: ""
+      - id: OJHFANUJV
+        text: The CG is the point at which the total weight is applied and acts in the
+          longitudinal direction.
+        correct: false
+        why: ""
+      - id: OHCFDVQJ4
+        text: The CG is the point at which the sum of the balance arms is nil.
+        correct: false
+        why: ""
+- id: QFZMSNUP
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312504
+    - BGS-310363
+  annexes:
+    - cap-696-page-28-figure-4.3
+  learningObjectives:
+    - 031.04.03.03.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Using CAP 696 Figure 4.3 determine the moment change when flaps are
+      retracted from 40° to 15°.
+    explanation: ""
+    options:
+      - id: OV1OXLTNK
+        text: \-2000 kgins
+        correct: true
+        why: ""
+      - id: OAJZEVQCH
+        text: +2000 kgins
+        correct: false
+        why: ""
+      - id: OAL49IVQK
+        text: \-1000 kgins
+        correct: false
+        why: ""
+      - id: OX3NKGJ47
+        text: +1000 kgins
+        correct: false
+        why: ""
+- id: QG0JQO8ZR
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315518
+  annexes:
+    - cap-696-page-17-figure-2.1
+  learningObjectives:
+    - 031.04.01.01.02
+  template:
+    type: simple
+    question: Refer to figure or CAP 696 file 2.1. Where is the datum of the
+      aircraft located?
+    explanation: ""
+    options:
+      - id: OBJPQUV39
+        text: 97.0 inches forward of the mainwheels.
+        correct: true
+        why: ""
+      - id: OXYMR5SLJ
+        text: 39.0 inches aft of the firewall.
+        correct: false
+        why: ""
+      - id: OKBETWLMD
+        text: 74.0 inches forward of the elevator.
+        correct: false
+        why: ""
+      - id: OHLMXUCNA
+        text: 87.7 inches forward of the mainwheels.
+        correct: false
+        why: ""
+- id: QGRBT68PM
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311835
+    - AVEXAM-5590
+    - AVEXAM-94843
+    - AVEXAM-29799
+    - ATPLGS-107071
+    - BGS-310292
+    - ATPLGS-107092
+    - ATPLGS-107063
+    - AVEXAM-97588
+    - BGS-310295
+    - ATPLGS-107086
+    - ATPLGS-107080
+    - ATPLGS-126659
+    - BGS-310293
+    - BGS-310294
+    - AVEXAM-82479
+  annexes:
+    - 031-annex-031-007-mass-balance-cg-envelope
+  learningObjectives:
+    - 031.04.01.04.01
+  template:
+    type: simple
+    question: >-
+      Refer to Annex -031-007\.   
+       The aeroplane has a Take-Off Mass of 58 000 kg. At this mass the range of allowable CG positions, as determined from graph, is:
+    explanation: ""
+    options:
+      - id: OJ6RGBBQW
+        text: Forward limit 8.2% MAC aft limit 26.2% MAC
+        correct: false
+        why: ""
+      - id: O4I6VI9KE
+        text: Forward limit 9.5% MAC aft limit 26.1% MAC
+        correct: false
+        why: ""
+      - id: OBPRWF9JD
+        text: Forward limit 8.5% MAC aft limit 26.1% MAC
+        correct: false
+        why: ""
+      - id: ONSILWBVW
+        text: Forward limit 8.0% MAC aft limit 26.5% MAC
+        correct: true
+        why: ""
+- id: QGYHFL80E
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313925
+    - BGS-310536
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.03
+  template:
+    type: simple
+    question: One of the main advantages associated with fuel tanks in the
+      aeroplane's horizontal stabiliser is to...
+    explanation: ""
+    options:
+      - id: OY4O4EFGT
+        text: Increase the stall speed due to an aft CG position.
+        correct: false
+        why: ""
+      - id: OQDUXETSP
+        text: Keep the CG at the rear during the flight.
+        correct: true
+        why: ""
+      - id: OGSPMXPOQ
+        text: Increase the longitudinal static stability.
+        correct: false
+        why: ""
+      - id: ONVVJTZVN
+        text: Reduce the total empty mass of the aeroplane.
+        correct: false
+        why: ""
+- id: QGZ3TI5JL
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314994
+    - ATPLGS-626181
+    - AVEXAM-47083
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.02
+  template:
+    type: simple
+    question: If during flight a considerable amount of fuel was transferred from a
+      fuel tank located in the forward fuselage section to a fuel tank located
+      at the rear section of the fuselage, what effect would this have on the
+      aircraft?
+    explanation: ""
+    options:
+      - id: OUDMFCVDC
+        text: Increase in range and decrease in stall speed.
+        correct: true
+        why: ""
+      - id: OZKWOUBLU
+        text: Increase in range and stall speed.
+        correct: false
+        why: ""
+      - id: OM4D5ODSF
+        text: Increase in stability and trim drag.
+        correct: false
+        why: ""
+      - id: OGGFRPDRW
+        text: Increase in stability and decrease in trim drag.
+        correct: false
+        why: ""
+- id: QHGIGJDN
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319892
+    - AVEXAM-2769
+    - BGS-310239
+    - ATPLGS-107168
+  annexes:
+    - 031-aeroplane-reference-datum-mac-and-cg-variables
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to the figure.
+
+
+      A jet aeroplane has a take-off weight of {{w}} N and a centre of gravity
+      located {{cg}} m from the zero reference point.
+
+
+      At the last moment {{aw}} N of freight is added in the forward compartment
+      at {{aa}} m from the zero reference point.
+
+
+      The MAC leading edge (point A) is at X = {{x}} m and the MAC length is Y =
+      {{y}} m (both read from the figure).
+
+
+      What is the final CG location in % MAC, measured from point A?
+    variables:
+      - id: w
+        label: Take-off weight
+        unit: N
+      - id: cg
+        label: Initial CG
+        unit: m
+      - id: aw
+        label: Added freight weight
+        unit: N
+      - id: aa
+        label: Freight arm
+        unit: m
+      - id: x
+        label: "X: MAC leading edge"
+        unit: m
+      - id: y
+        label: "Y: MAC length"
+        unit: m
+    chartInputs:
+      - x
+      - y
+    answer:
+      formula: ((w * cg + aw * aa) / (w + aw) - x) / y * 100
+      unit: "% MAC"
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (cg - x) / y * 100
+      - id: d2
+        formula: ((w * cg - aw * aa) / (w - aw) - x) / y * 100
+      - id: d3
+        formula: ((w * cg + aw * aa) / w - x) / y * 100
+      - id: d4
+        formula: ((w * cg + aw * aa) / (w + aw) - x) / ((w * cg + aw * aa) / (w + aw)) *
+          100
+    presets:
+      - id: p1
+        values:
+          w: 460000
+          cg: 15.4
+          aw: 12000
+          aa: 10
+          x: 14
+          y: 4.6
+    explanation: >-
+      Adding freight shifts the CG: the new CG is the total moment divided by
+      the new total weight. It is then expressed as a percentage of the MAC from
+      the leading edge, using the geometry read from the figure.
+
+
+      **Solution**
+
+
+      New CG = {{= (w * cg + aw * aa) / (w + aw)}} m
+
+
+      {{f: ((w * cg + aw * aa) / (w + aw) - x) / y * 100}} = **{{answer}} %
+      MAC**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} % MAC**: the CG before the freight was added.
+
+      - **{{d2}} % MAC**: subtracts the freight instead of adding it.
+
+      - **{{d3}} % MAC**: divides the moment by the original weight instead of
+      the new weight.
+
+      - **{{d4}} % MAC**: divides by the CG position instead of the MAC length.
+- id: QHIWJQBKQ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313592
+    - AVEXAM-5590
+    - AVEXAM-94843
+    - AVEXAM-29799
+    - ATPLGS-107071
+    - BGS-310292
+    - ATPLGS-107092
+    - ATPLGS-107063
+    - AVEXAM-97588
+    - BGS-310295
+    - ATPLGS-107086
+    - ATPLGS-107080
+    - ATPLGS-126659
+    - BGS-310293
+    - BGS-310294
+    - AVEXAM-82479
+  annexes:
+    - 031-mass-balance-cg-envelope
+  learningObjectives:
+    - 031.04.01.04.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure. 
+
+
+      The aeroplane has a landing mass of 53 000 kg. The range of allowable CG
+      positions, as determined from the graph, is:
+    explanation: ""
+    options:
+      - id: OCJ2QCFDJ
+        text: Forward limit 8.7% MAC aft limit 26.8% MAC
+        correct: false
+        why: ""
+      - id: OVOFNCUKB
+        text: Forward limit 7.3% MAC aft limit 26.8% MAC
+        correct: false
+        why: ""
+      - id: OEGOKR2T4
+        text: Forward limit 7.8% MAC aft limit 27.0% MAC
+        correct: true
+        why: ""
+      - id: OWA9BHGFU
+        text: Forward limit 8.2% MAC aft limit 27.0% MAC
+        correct: false
+        why: ""
+- id: QHMRPWVVF
+  docId: "031.04"
+  relatedQuestions:
+    - QJLTV3J7T
+  externalIds:
+    - ATPLQ-319629
+    - ATPLGS-114155
+    - BGS-310263
+    - BGS-310259
+    - AVEXAM-29030
+    - AVEXAM-26701
+    - ATPLGS-126712
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: >-
+      An aeroplane with a two wheel nose gear and four main wheels rests on the
+      ground with a single nose wheel load of {{nose_load}} kg and a single main
+      wheel load of {{main_load}} kg.
+
+
+      The distance between the nose wheels and the main wheels is {{dist}} m.
+
+
+      How far is the centre of gravity in front of the main wheels?
+
+
+      Give the answer in cm.
+    variables:
+      - id: nose_load
+        label: Single nose wheel load
+        unit: kg
+      - id: main_load
+        label: Single main wheel load
+        unit: kg
+      - id: dist
+        label: Distance nose to main wheels
+        unit: m
+    answer:
+      formula: 2 * nose_load * dist * 100 / (2 * nose_load + 4 * main_load)
+      unit: cm
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: nose_load * dist * 100 / (nose_load + main_load)
+      - id: d2
+        formula: nose_load * dist * 100 / (2 * nose_load + 4 * main_load)
+      - id: d3
+        formula: 2 * nose_load * dist * 100 / (4 * main_load)
+      - id: d4
+        formula: dist * 100 - 2 * nose_load * dist * 100 / (2 * nose_load + 4 *
+          main_load)
+    presets:
+      - id: p1
+        values:
+          nose_load: 500
+          main_load: 6000
+          dist: 10
+      - id: p2
+        values:
+          nose_load: 450
+          main_load: 5500
+          dist: 9
+    explanation: >-
+      The nose gear carries two wheels and the main gear four, so the total nose
+      load and main load must be built from the single wheel loads first.
+      Moments about the main wheels then give the CG distance in front of them.
+
+
+      **Solution**
+
+
+      Nose load = {{= 2 * nose_load}} kg, main load = {{= 4 * main_load}} kg
+
+
+      {{f: 2 * nose_load * dist * 100 / (2 * nose_load + 4 * main_load)}} = {{n:
+      2 * nose_load * dist * 100 / (2 * nose_load + 4 * main_load)}} =
+      **{{answer}} cm** in front of the main wheels
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} cm**: only one nose wheel and one main wheel are counted.
+
+      - **{{d2}} cm**: the nose gear has two wheels, but only one nose wheel
+      load is used in the moment.
+
+      - **{{d3}} cm**: the nose gear load is left out of the total mass.
+
+      - **{{d4}} cm**: this is the CG distance behind the nose wheels, not in
+      front of the main wheels.
+- id: QHN8XQTKO
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319461
+    - AVEXAM-47593
+    - ATPLGS-107064
+    - AVEXAM-38752
+    - ATPLGS-107091
+    - ATPLGS-126750
+    - BGS-310242
+  annexes: []
+  learningObjectives:
+    - 031.04.01.02.03
+  template:
+    type: calculation
+    question: At a given mass the CG position is at {{pct}}% MAC. If the leading
+      edge of MAC is at a position {{lemac}} inches aft of the datum and the MAC
+      is given as {{mac}} inches, determine the position of the CG in relation
+      to the datum.
+    variables:
+      - id: pct
+        label: CG position
+        unit: "% MAC"
+      - id: lemac
+        label: LEMAC
+        unit: in
+      - id: mac
+        label: MAC length
+        unit: in
+    answer:
+      formula: lemac + pct / 100 * mac
+      unit: inches aft of the datum
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: pct / 100 * mac
+      - id: d2
+        formula: mac + pct / 100 * lemac
+      - id: d3
+        formula: lemac - pct / 100 * mac
+    presets:
+      - id: p1
+        values:
+          pct: 15
+          lemac: 625.6
+          mac: 134.5
+      - id: p2
+        values:
+          pct: 25
+          lemac: 640.2
+          mac: 120.4
+      - id: p3
+        values:
+          pct: 32
+          lemac: 610.8
+          mac: 142.6
+    explanation: >-
+      The CG expressed as a percentage of MAC is measured from the leading edge
+      of the MAC. Its distance from the datum is the distance of the leading
+      edge plus that percentage of the MAC length.
+
+
+      **Solution**
+
+
+      {{f: lemac + pct / 100 * mac}} = {{n: lemac + pct / 100 * mac}} =
+      **{{answer}} inches aft of the datum**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} inches**: this is only the distance of the CG behind the
+      leading edge of the MAC; LEMAC was not added.
+
+      - **{{d2}} inches**: the roles of LEMAC and MAC length were swapped.
+
+      - **{{d3}} inches**: the distance behind the leading edge was subtracted
+      instead of added.
+- id: QHXPKHVK
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311092
+    - ATPLGS-126707
+    - BGS-310204
+    - AVEXAM-34090
+  annexes: []
+  learningObjectives:
+    - 031.04.01.02.04
+  template:
+    type: simple
+    question: Along which axis is the centre of gravity location normally computed?
+    explanation: ""
+    options:
+      - id: O3YCIDYYZ
+        text: Vertical axis.
+        correct: false
+        why: ""
+      - id: O6UKUSTXQ
+        text: Horizontal axis.
+        correct: false
+        why: ""
+      - id: OBTSQISMD
+        text: Lateral axis.
+        correct: false
+        why: ""
+      - id: OHF5I1QK3
+        text: Longitudinal axis.
+        correct: true
+        why: ""
+- id: QIC7YO7NU
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-316283
+    - AVEXAM-9353
+    - BGS-310539
+    - AVEXAM-61059
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: calculation
+    question: >-
+      The CG position of an aeroplane is {{cg}} inches aft of the datum. Given
+      the following characteristics of the wing, calculate the CG position as %
+      MAC.
+
+
+      - Leading edge of the wing root: {{rle}} inches aft of the datum
+
+      - Leading edge of the MAC: {{le}} inches aft of the datum
+
+      - Leading edge of the wing tip: {{tle}} inches aft of the datum
+
+      - Length of the wing root chord: {{rc}} inches
+
+      - Length of the MAC: {{mac}} inches
+
+      - Length of the wing tip chord: {{tc}} inches
+    variables:
+      - id: cg
+        label: CG position
+        unit: in
+      - id: rle
+        label: Wing root leading edge
+        unit: in
+      - id: le
+        label: MAC leading edge
+        unit: in
+      - id: tle
+        label: Wing tip leading edge
+        unit: in
+      - id: rc
+        label: Wing root chord
+        unit: in
+      - id: mac
+        label: MAC length
+        unit: in
+      - id: tc
+        label: Wing tip chord
+        unit: in
+    answer:
+      formula: (cg - le) / mac * 100
+      unit: "% MAC"
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: (cg - rle) / rc * 100
+      - id: d2
+        formula: (cg - le) / rc * 100
+      - id: d3
+        formula: (cg - tle) / tc * 100 + 50
+      - id: d4
+        formula: (cg - rle) / mac * 100
+    presets:
+      - id: p1
+        values:
+          cg: 683.4
+          rle: 575
+          le: 598
+          tle: 680
+          rc: 183.82
+          mac: 164.38
+          tc: 60.13
+      - id: p2
+        values:
+          cg: 690
+          rle: 580
+          le: 603
+          tle: 685
+          rc: 185
+          mac: 165
+          tc: 62
+    explanation: >-
+      Only the MAC leading edge and the MAC length are relevant: the CG in % MAC
+      is the CG's distance behind the MAC leading edge divided by the MAC
+      length. The wing root and tip data are distractors.
+
+
+      **Solution**
+
+
+      {{f: (cg - le) / mac * 100}} = {{n: (cg - le) / mac * 100}} = **{{answer}}
+      % MAC**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} % MAC**: uses the wing root chord and its leading edge instead
+      of the MAC.
+
+      - **{{d2}} % MAC**: uses the MAC leading edge but divides by the wing root
+      chord.
+
+      - **{{d3}} % MAC**: uses the wing tip chord and an arbitrary offset.
+
+      - **{{d4}} % MAC**: uses the wing root leading edge with the MAC length.
+- id: QICCADGN
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-316674
+    - AVEXAM-14091
+  annexes:
+    - 031-cap-696-file-4-9-mrjt-forward-cargo-compartment-and
+  learningObjectives:
+    - 031.04.01.01.02
+    - 031.04.01.06.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure or Loading Manual MRJT 1 Figure 4.9).   
+       For the transport aeroplane the moment (balance) arm (B.A.) for the forward hold centroid is:
+    explanation: ""
+    options:
+      - id: O44FRKQ4S
+        text: 421.5 inches.
+        correct: false
+        why: ""
+      - id: OPKLYJCVC
+        text: 257 inches.
+        correct: false
+        why: ""
+      - id: OGQ9CEWHP
+        text: 367.9 inches.
+        correct: true
+        why: ""
+      - id: OXVWXY6ZB
+        text: 314.5 inches.
+        correct: false
+        why: ""
+- id: QIQBZNHQ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319898
+    - AVEXAM-9634
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.01
+  template:
+    type: simple
+    question: When must an operator ensure an aircraft is weighed?
+    explanation: ""
+    options:
+      - id: OCN2ERZ9A
+        text: Every 9 years for individual aircraft.
+        correct: false
+        why: ""
+      - id: O7LGNI60Y
+        text: Every 4 years for individual aircraft.
+        correct: true
+        why: ""
+      - id: OWO4XARBX
+        text: When DOM exceeds +/- 0.5% of the maximum take-off mass.
+        correct: false
+        why: ""
+      - id: OLXEMX5HX
+        text: When DOM exceeds +/- 0.5% of the maximum landing mass.
+        correct: false
+        why: ""
+- id: QIUTGPVB
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314045
+    - ATPLGS-625794
+    - BGS-310660
+    - AVEXAM-33116
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: calculation
+    question: >-
+      An aeroplane has a basic empty mass of {{bem}} kg located at station
+      {{bems}}.
+
+
+      The pilot's mass is {{pm}} kg, located at station {{ps}}.
+
+
+      The fuel mass is {{fm}} kg, located at station {{fs}}.
+
+
+      The length of the MAC is {{mac}} inches and 0 % MAC is at station {{le}}.
+
+
+      What is the centre of gravity location of the loaded aeroplane in % MAC?
+    variables:
+      - id: bem
+        label: Basic empty mass
+        unit: kg
+      - id: bems
+        label: BEM station
+        unit: in
+      - id: pm
+        label: Pilot mass
+        unit: kg
+      - id: ps
+        label: Pilot station
+        unit: in
+      - id: fm
+        label: Fuel mass
+        unit: kg
+      - id: fs
+        label: Fuel station
+        unit: in
+      - id: mac
+        label: MAC length
+        unit: in
+      - id: le
+        label: Station of 0 % MAC
+        unit: in
+    answer:
+      formula: ((bem * bems + pm * ps + fm * fs) / (bem + pm + fm) - le) / mac * 100
+      unit: "% MAC"
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (bem * bems + pm * ps + fm * fs) / (bem + pm + fm)
+      - id: d2
+        formula: ((bem * bems + pm * ps) / (bem + pm) - le) / mac * 100
+      - id: d3
+        formula: ((bem * bems + pm * ps + fm * fs) / (bem + pm + fm) - bems) / mac * 100
+      - id: d4
+        formula: ((bem * bems + pm * ps + fm * fs) / (bem + pm + fm) - le) / (bem * bems
+          + pm * ps + fm * fs) * 1000
+    presets:
+      - id: p1
+        values:
+          bem: 1000
+          bems: 92
+          pm: 80
+          ps: 100
+          fm: 120
+          fs: 130
+          mac: 60
+          le: 80
+      - id: p2
+        values:
+          bem: 1200
+          bems: 90
+          pm: 85
+          ps: 102
+          fm: 150
+          fs: 128
+          mac: 62
+          le: 78
+      - id: p3
+        values:
+          bem: 980
+          bems: 95
+          pm: 75
+          ps: 98
+          fm: 100
+          fs: 132
+          mac: 58
+          le: 82
+    explanation: >-
+      The loaded CG station is the sum of all moments divided by the total mass.
+      Its position in % MAC is the distance behind 0 % MAC divided by the MAC
+      length.
+
+
+      **Solution**
+
+
+      Total mass = {{= bem + pm + fm}} kg; total moment = {{= bem * bems + pm *
+      ps + fm * fs}}
+
+
+      CG station = {{= (bem * bems + pm * ps + fm * fs) / (bem + pm + fm)}}
+
+
+      %MAC = **{{answer}} % MAC**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} % MAC**: the CG station itself, not converted to % MAC.
+
+      - **{{d2}} % MAC**: leaves out the fuel.
+
+      - **{{d3}} % MAC**: measures from the BEM station instead of from 0 % MAC.
+
+      - **{{d4}} % MAC**: divides by the total moment instead of the MAC length.
+- id: QIXGBDAHA
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311857
+    - AVEXAM-6694
+    - BGS-310542
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.02
+  template:
+    type: simple
+    question: A turbojet aeroplane is designed with swept-back wings. It is fitted
+      with a central fuel tank and, on each wing, an inner and outer fuel tank.
+      A Commercial Air Transport flight is operated with full fuel in tanks. At
+      landing, all the fuel in the central tank is consumed; the landing CG
+      position compared to that of the top of climb will be...
+    explanation: ""
+    options:
+      - id: OMEA0MGDL
+        text: unchanged.
+        correct: false
+        why: ""
+      - id: OQE8HZBIZ
+        text: aft or forward, depending on the number of engines fitted.
+        correct: false
+        why: ""
+      - id: OM5K6PDHS
+        text: aft.
+        correct: true
+        why: ""
+      - id: OSYE8EF4V
+        text: forward.
+        correct: false
+        why: ""
+- id: QJBYBNIE
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312209
+    - AVEXAM-74406
+  annexes: []
+  learningObjectives:
+    - 031.04.01.02.02
+  template:
+    type: simple
+    question: Which section of the Aircraft Flight Manual describes the Centre of
+      Gravity limits of the aircraft?
+    explanation: ""
+    options:
+      - id: OAERFHVFF
+        text: None – they have to be individually computed for every flight.
+        correct: false
+        why: ""
+      - id: OURRQV2DI
+        text: The aircraft limitations section.
+        correct: true
+        why: ""
+      - id: OMYSISO8F
+        text: The operational procedures section.
+        correct: false
+        why: ""
+      - id: OGUADCGSN
+        text: The performance section.
+        correct: false
+        why: ""
+- id: QJJECAXM
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318673
+    - AVEXAM-51476
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.02
+  template:
+    type: simple
+    question: Fuel is moved from the wing tanks to the horizontal stabilizer of an
+      aircraft. Which change in aircraft characteristics can be expected?
+    explanation: ""
+    options:
+      - id: OZWV24VGJ
+        text: The range increases with the aft CG movement.
+        correct: true
+        why: ""
+      - id: OW6AQKPD8
+        text: With the forward CG movement, the stick force increases.
+        correct: false
+        why: ""
+      - id: O10XILZFC
+        text: Longitudinal stability decreases with the forward CG movement.
+        correct: false
+        why: ""
+      - id: OGMKXPVR0
+        text: With the aft CG movement, the total drag increases.
+        correct: false
+        why: ""
+- id: QJKXXXHV
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313945
+    - AVEXAM-18836
+    - ATPLGS-129018
+    - BGS-310208
+  annexes: []
+  learningObjectives:
+    - 031.04.01.01.03
+  template:
+    type: simple
+    question: "Moment (balance) arms are measured from a specific point to the body
+      station at which the mass is located. That point is known as:"
+    explanation: ""
+    options:
+      - id: OH2M9PQ9V
+        text: The centre of gravity of the aircraft.
+        correct: false
+        why: ""
+      - id: OHGILCJCC
+        text: The focal point.
+        correct: false
+        why: ""
+      - id: OVLXHHYUG
+        text: The axis.
+        correct: false
+        why: ""
+      - id: OWQEV1B03
+        text: The datum.
+        correct: true
+        why: ""
+- id: QJLTV3J7T
+  docId: "031.04"
+  relatedQuestions:
+    - QHMRPWVVF
+  externalIds:
+    - ATPLQ-317577
+    - ATPLGS-114155
+    - BGS-310263
+    - BGS-310259
+    - AVEXAM-29030
+    - AVEXAM-26701
+    - ATPLGS-126712
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: >-
+      An aircraft with a two wheel nose gear and four main wheels rests on the
+      ground with a single nose wheel load of {{nose_load}} N and a single main
+      wheel load of {{main_load}} N.
+
+
+      The distance between the nose wheels and the main wheels is {{dist}} m.
+
+
+      How far is the Centre of Gravity in front of the main wheels?
+
+
+      Give the answer in cm.
+    variables:
+      - id: nose_load
+        label: Single nose wheel load
+        unit: N
+      - id: main_load
+        label: Single main wheel load
+        unit: N
+      - id: dist
+        label: Distance nose to main wheels
+        unit: m
+    answer:
+      formula: 2 * nose_load * dist * 100 / (2 * nose_load + 4 * main_load)
+      unit: cm
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: nose_load * dist * 100 / (nose_load + main_load)
+      - id: d2
+        formula: nose_load * dist * 100 / (2 * nose_load + 4 * main_load)
+      - id: d3
+        formula: 2 * nose_load * dist * 100 / (4 * main_load)
+      - id: d4
+        formula: dist * 100 - 2 * nose_load * dist * 100 / (2 * nose_load + 4 *
+          main_load)
+    presets:
+      - id: p1
+        values:
+          nose_load: 7250
+          main_load: 60000
+          dist: 10
+      - id: p2
+        values:
+          nose_load: 6800
+          main_load: 55000
+          dist: 9
+    explanation: >-
+      The weight on the wheels is proportional to the CG position: the CG lies
+      closer to the gear that carries more load. Build the total nose and main
+      loads from the single wheel loads, then take moments about the main
+      wheels.
+
+
+      **Solution**
+
+
+      Nose load = {{= 2 * nose_load}} N, main load = {{= 4 * main_load}} N
+
+
+      {{f: 2 * nose_load * dist * 100 / (2 * nose_load + 4 * main_load)}} = {{n:
+      2 * nose_load * dist * 100 / (2 * nose_load + 4 * main_load)}} =
+      **{{answer}} cm** in front of the main wheels
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} cm**: only one nose wheel and one main wheel are counted.
+
+      - **{{d2}} cm**: only one nose wheel load is used in the moment.
+
+      - **{{d3}} cm**: the nose gear load is left out of the total weight.
+
+      - **{{d4}} cm**: this is the CG distance behind the nose wheels, not in
+      front of the main wheels.
+- id: QJVVVFCXO
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-316635
+    - ATPLGS-126697
+    - BGS-310624
+  annexes:
+    - 031-cg-envelope-mrjt1
+  learningObjectives:
+    - 031.04.01.04.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Assuming Maximum Structural Landing Mass (MSLM), what CG locations (in %
+      MAC) have to be considered as the front and aft CG positions?
+    explanation: ""
+    options:
+      - id: OFTZSKNQH
+        text: 7.3% and 26.8%
+        correct: true
+        why: ""
+      - id: OTYJ3SXFV
+        text: 4.0% and 32.0%
+        correct: false
+        why: ""
+      - id: OSIYTSJDW
+        text: 7.9% and 27.2%
+        correct: false
+        why: ""
+      - id: OXPT8HYIW
+        text: 9.2% and 26.0%
+        correct: false
+        why: ""
+- id: QJWMZKCI
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319393
+    - AVEXAM-34823
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.03
+  template:
+    type: simple
+    question: Some aircraft are equipped with fuel trim tanks located in the
+      aeroplane’s fin or horizontal stabiliser to actively manage CG position.
+      What is a potential disadvantage of such a system?
+    explanation: ""
+    options:
+      - id: OXATOM0PQ
+        text: The requirement for an additional fuel filling point at the rear of the
+          aircraft.
+        correct: false
+        why: ""
+      - id: OTR1EMIWY
+        text: Complicated pre-flight paper work, when completing the load and trim
+          sheet.
+        correct: false
+        why: ""
+      - id: OF65ASDTC
+        text: A much increased work load for the flight crew.
+        correct: false
+        why: ""
+      - id: OEWYEHWHR
+        text: If fuel becomes trapped in this location then an out of CG limit situation
+          may develop.
+        correct: true
+        why: ""
+- id: QKXITQA1K
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317986
+    - BGS-310452
+    - AVEXAM-59998
+  annexes: []
+  learningObjectives:
+    - 031.04.01.01.03
+  template:
+    type: calculation
+    question: |-
+      Determine the balance arm, given:
+
+      - Moment: {{moment}} N.mm
+      - Mass: {{mass}} kg
+
+      Assume g = {{g}} m/s².
+    variables:
+      - id: moment
+        label: Moment
+        unit: N.mm
+      - id: mass
+        label: Mass
+        unit: kg
+      - id: g
+        label: g
+        unit: m/s²
+    answer:
+      formula: moment / (mass * g)
+      unit: mm
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: moment / (mass * g ^ 2)
+      - id: d2
+        formula: moment / mass
+      - id: d3
+        formula: moment / mass * g
+    presets:
+      - id: p1
+        values:
+          moment: 5000
+          mass: 500
+          g: 10
+      - id: p2
+        values:
+          moment: 6000
+          mass: 200
+          g: 10
+      - id: p3
+        values:
+          moment: 8000
+          mass: 400
+          g: 10
+    explanation: >-
+      The moment of a mass about the datum is the force it exerts (its weight,
+      mass times g) multiplied by the balance arm. The arm is therefore the
+      moment divided by the weight.
+
+
+      **Solution**
+
+
+      {{f: moment / (mass * g)}} = {{n: moment / (mass * g)}} = **{{answer}}
+      mm**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} mm**: g was applied twice (divided by g squared).
+
+      - **{{d2}} mm**: the moment was divided by the mass only; the force is
+      mass times g, not mass.
+
+      - **{{d3}} mm**: g was multiplied instead of divided.
+- id: QLEEGUGJ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317261
+    - AVEXAM-3846
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: simple
+    question: >-
+      What is the correct formula to calculate the CG position as a percentage
+      of the mean aerodynamic chord if the CG is at a distance L from the datum?
+
+
+      MAC: the length of the mean aerodynamic chord.   
+       LEMAC: the distance of the mean aerodynamic chord leading edge from the datum.   
+       TEMAC: the distance of the mean aerodynamic chord trailing edge from the datum.
+    explanation: ""
+    options:
+      - id: O7DKEZ3OD
+        text: ((TEMAC - MAC)/L) x 100
+        correct: false
+        why: ""
+      - id: OAWK5G41Y
+        text: ((L - MAC)/LEMAC) x 100
+        correct: false
+        why: ""
+      - id: ODZWQSOWG
+        text: ((L - LEMAC)/MAC) x 100
+        correct: true
+        why: ""
+      - id: O3X4QA10Z
+        text: ((TEMAC - L)/MAC) x 100
+        correct: false
+        why: ""
+- id: QLZLCTUG
+  docId: "031.04"
+  relatedQuestions:
+    - QFIOGJOL
+  externalIds:
+    - ATPLQ-319873
+    - AVEXAM-37386
+  annexes: []
+  learningObjectives:
+    - 031.04.01.02.04
+  template:
+    type: simple
+    question: Which one of the following statements below best describes the Centre
+      of Gravity (CG) of an aircraft?
+    explanation: ""
+    options:
+      - id: OIF1FTKIV
+        text: The CG is a fixed point defined by the Operator and stated in the
+          Operations Manual.
+        correct: false
+        why: ""
+      - id: OLU3L724E
+        text: The CG is a theoretical point stated in the Limitations section of the
+          Aircraft Flight Manual.
+        correct: false
+        why: ""
+      - id: ONDWRS6YD
+        text: The CG is a fixed point through which the three axes of the aircraft act.
+        correct: false
+        why: ""
+      - id: OUQZWSO49
+        text: The CG is a theoretical point where all the mass is said to be
+          concentrated.
+        correct: true
+        why: ""
+- id: QMLLNSSRN
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314281
+    - BGS-310508
+  annexes:
+    - cap-696-page-28-figure-4.3
+  learningObjectives:
+    - 031.04.01.03.03
+    - 031.05.01.01.01
+  template:
+    type: chart-calculation
+    question: >-
+      The CG at take-off is at {{cg}} % MAC and the take-off mass is {{tom}} kg.
+
+
+      The leading edge of the MAC lies {{le}} inches aft of the datum and the
+      MAC length is {{mac}} inches (both read from the MAC figure, CAP 696
+      MRJT).
+
+
+      What is the mass moment in kg-inch?
+    variables:
+      - id: tom
+        label: Take-off mass
+        unit: kg
+      - id: cg
+        label: CG position
+        unit: "% MAC"
+      - id: le
+        label: Distance of MAC leading edge from datum (read from figure)
+        unit: in
+      - id: mac
+        label: MAC length (read from figure)
+        unit: in
+    chartInputs:
+      - le
+      - mac
+    answer:
+      formula: tom * (le + cg / 100 * mac)
+      unit: kg-inch
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: tom * le
+      - id: d2
+        formula: tom * mac
+      - id: d3
+        formula: tom * cg / 100 * mac
+      - id: d4
+        formula: tom * (le - cg / 100 * mac)
+    presets:
+      - id: p1
+        values:
+          tom: 60000
+          cg: 21
+          le: 625.6
+          mac: 134.5
+    explanation: >-
+      The CG arm from the datum equals the distance of the MAC leading edge plus
+      the CG position as a fraction of the MAC length. The mass moment is the
+      mass multiplied by this arm.
+
+
+      **Solution**
+
+
+      CG arm = {{= le + cg / 100 * mac}} in
+
+
+      {{f: tom * (le + cg / 100 * mac)}} = {{n: tom * (le + cg / 100 * mac)}} =
+      **{{answer}} kg-inch**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kg-inch**: the CG is taken at the leading edge of the MAC (the
+      % MAC is ignored).
+
+      - **{{d2}} kg-inch**: the MAC length is used as the arm.
+
+      - **{{d3}} kg-inch**: the leading edge distance is forgotten.
+
+      - **{{d4}} kg-inch**: the CG offset is subtracted from the leading edge
+      instead of added.
+- id: QMTI96PWJ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311100
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: calculation
+    question: >-
+      The mean aerodynamic chord published in the flight manual of an aeroplane
+      starts at {{le}} mm and ends at {{te}} mm from the datum line.
+
+
+      The centre of gravity of a loaded aeroplane is at {{pct}}% MAC.
+
+
+      Determine the associated distance of the CG position to the datum (in mm).
+    variables:
+      - id: le
+        label: MAC leading edge distance
+        unit: mm
+      - id: te
+        label: MAC trailing edge distance
+        unit: mm
+      - id: pct
+        label: CG position
+        unit: "% MAC"
+    answer:
+      formula: le + pct / 100 * (te - le)
+      unit: mm
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: pct / 100 * te
+      - id: d2
+        formula: le + pct / 100 * te
+      - id: d3
+        formula: te - pct / 100 * (te - le)
+      - id: d4
+        formula: pct / 100 * (te - le)
+      - id: d5
+        formula: (le + te) * pct / 100
+    presets:
+      - id: p1
+        values:
+          le: 520
+          te: 1700
+          pct: 30
+      - id: p2
+        values:
+          le: 450
+          te: 1650
+          pct: 25
+    explanation: >-
+      The CG position as a percentage of MAC is measured from the leading edge
+      of the MAC. The distance to the datum is the leading edge distance plus
+      that fraction of the MAC length.
+
+
+      **Solution**
+
+
+      MAC length = {{= te - le}} mm
+
+
+      {{f: le + pct / 100 * (te - le)}} = {{n: le + pct / 100 * (te - le)}} =
+      **{{answer}} mm**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} mm**: the percentage is applied to the trailing edge distance
+      instead of the MAC length.
+
+      - **{{d2}} mm**: the percentage is applied to the trailing edge distance
+      before adding the leading edge distance.
+
+      - **{{d3}} mm**: the CG distance is measured from the trailing edge
+      instead of the leading edge.
+
+      - **{{d4}} mm**: the leading edge distance is not added.
+
+      - **{{d5}} mm**: the percentage is applied to the sum of the leading and
+      trailing edge distances.
+- id: QNFJQIXF
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318061
+    - AVEXAM-58222
+    - ATPLQ-315938
+    - BGS-310541
+    - AVEXAM-73716
+  annexes:
+    - 031-aeroplane-reference-datum-mac-and-cg-variables
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to the figure.
+
+
+      The CG of an aeroplane is located at {{pct}} % MAC, which is Z = {{z}} m
+      aft of the datum.
+
+
+      Using the leading-edge position of the MAC given in the annex (X = {{x}} m
+      aft of the datum, read from the figure), calculate the length of the MAC.
+    variables:
+      - id: z
+        label: "Z: CG distance from datum"
+        unit: m
+      - id: pct
+        label: CG position
+        unit: "% MAC"
+      - id: x
+        label: "X: MAC leading edge position"
+        unit: m
+    chartInputs:
+      - x
+    answer:
+      formula: (z - x) / (pct / 100)
+      unit: m
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: z / (pct / 100)
+      - id: d2
+        formula: z - x
+      - id: d3
+        formula: x / (pct / 100)
+      - id: d4
+        formula: (z + x) / (pct / 100)
+    presets:
+      - id: p1
+        values:
+          z: 15.6
+          pct: 23
+          x: 14
+      - id: p2
+        values:
+          z: 32.25
+          pct: 13
+          x: 31.3
+    explanation: >-
+      The CG distance behind the MAC leading edge is the CG %MAC times the MAC
+      length. So the MAC length is (CG arm - leading edge arm) divided by the CG
+      expressed as a fraction.
+
+
+      **Solution**
+
+
+      {{f: (z - x) / (pct / 100)}} = {{n: (z - x) / (pct / 100)}} = **{{answer}}
+      m**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: Forgets to subtract the leading-edge position.
+
+      - **{{d2}} m**: Gives the distance of the CG from the leading edge, not
+      the MAC length.
+
+      - **{{d3}} m**: Uses the leading-edge arm instead of the CG distance from
+      it.
+
+      - **{{d4}} m**: Adds the leading-edge arm instead of subtracting it.
+- id: QOHPUIGJ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315123
+    - BGS-310557
+    - BGS-310753
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.01
+  template:
+    type: simple
+    question: "The weighing of an aircraft must be performed:"
+    explanation: ""
+    options:
+      - id: OM2P5D00T
+        text: Whenever there is a modification applied to the aircraft.
+        correct: false
+        why: ""
+      - id: OHT1BQXY6
+        text: At the intervals of nine years if individual aircraft masses are used.
+        correct: false
+        why: ""
+      - id: OSUSVLT0I
+        text: Whenever the cumulative mass changes to the DOM exceeds plus/minus 5% of
+          the MSTOM.
+        correct: false
+        why: ""
+      - id: O0XPBDID5
+        text: Whenever the cumulative change to the DOM exceeds plus/minus 0.5% of the
+          MSLM.
+        correct: true
+        why: ""
+- id: QOQQRSHD
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-311703
+    - AVEXAM-90231
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.01
+  template:
+    type: calculation
+    question: >-
+      Determine the length of the MAC in cm, given:
+
+
+      - Leading edge at wing root: STA {{rle}}
+
+      - Trailing edge at wing root: STA {{rte}}
+
+      - Leading edge at wing tip: STA {{tle}}
+
+      - Trailing edge at wing tip: STA {{tte}}
+
+      - Leading edge of MAC: STA {{mle}}
+
+      - Trailing edge of MAC: STA {{mte}}
+
+
+      Note: body stations are distances from the aircraft nose in 10^-1 m (1 STA
+      unit = 10 cm).
+    variables:
+      - id: rle
+        label: Root leading edge
+        unit: STA
+      - id: rte
+        label: Root trailing edge
+        unit: STA
+      - id: tle
+        label: Tip leading edge
+        unit: STA
+      - id: tte
+        label: Tip trailing edge
+        unit: STA
+      - id: mle
+        label: MAC leading edge
+        unit: STA
+      - id: mte
+        label: MAC trailing edge
+        unit: STA
+    answer:
+      formula: (mte - mle) * 10
+      unit: cm
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (mte - mle) * 100
+      - id: d2
+        formula: mte - mle
+      - id: d3
+        formula: (rte - rle) * 10
+      - id: d4
+        formula: (tte - tle) * 10
+      - id: d5
+        formula: ((rte - rle) + (tte - tle)) / 2 * 10
+    presets:
+      - id: p1
+        values:
+          rle: 235
+          rte: 250
+          tle: 148
+          tte: 212
+          mle: 192
+          mte: 224
+      - id: p2
+        values:
+          rle: 240
+          rte: 258
+          tle: 150
+          tte: 205
+          mle: 190
+          mte: 225
+    explanation: >-
+      The MAC length is the distance between the MAC leading and trailing edge
+      stations. Station numbers are in units of 0.1 m, so each unit is 10 cm.
+
+
+      **Solution**
+
+
+      {{f: (mte - mle) * 10}} = {{n: (mte - mle) * 10}} = **{{answer}} cm**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} cm**: Wrong factor of 100 (treats a station unit as 1 m).
+
+      - **{{d2}} cm**: Leaves the length in station units without converting to
+      cm.
+
+      - **{{d3}} cm**: Is the root chord, not the MAC.
+
+      - **{{d4}} cm**: Is the tip chord, not the MAC.
+
+      - **{{d5}} cm**: Is the mean of root and tip chord, which is not the MAC.
+- id: QOUJAVBCX
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317175
+    - BGS-310801
+    - ATPLQ-312140
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: >-
+      After the weighing procedure of an aircraft with the results given below,
+      what is the distance (in metres) of the CG of the BEM forward of the main
+      landing gear?
+
+
+      - Nose landing gear jack point: {{nose}} kg
+
+      - Each main landing gear jack point (two main gears): {{main}} kg
+
+      - Longitudinal distance between the nose landing gear and the main landing
+      gears: {{dist}} m
+    variables:
+      - id: nose
+        label: Nose gear reading
+        unit: kg
+      - id: main
+        label: Reading of each main gear
+        unit: kg
+      - id: dist
+        label: Distance nose gear to main gears
+        unit: m
+    answer:
+      formula: nose * dist / (nose + 2 * main)
+      unit: m
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: nose * dist / (nose + main)
+      - id: d2
+        formula: nose * dist / (2 * main)
+      - id: d3
+        formula: dist - nose * dist / (nose + 2 * main)
+      - id: d4
+        formula: nose * dist / main
+    presets:
+      - id: p1
+        values:
+          nose: 1850
+          main: 8140
+          dist: 10
+      - id: p2
+        values:
+          nose: 1850
+          main: 8140
+          dist: 12.2
+    explanation: >-
+      Taking moments about the main gear, the nose gear reaction times the
+      wheelbase equals the total mass times the distance of the CG forward of
+      the main gear. The total mass is the nose reading plus both main gear
+      readings.
+
+
+      **Solution**
+
+
+      {{f: nose * dist / (nose + 2 * main)}} = {{n: nose * dist / (nose + 2 *
+      main)}} = **{{answer}} m** forward of the main gear
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: only one main gear is counted in the total mass.
+
+      - **{{d2}} m**: the nose gear mass is left out of the total mass.
+
+      - **{{d3}} m**: this is the CG distance aft of the nose gear, not forward
+      of the main gear.
+
+      - **{{d4}} m**: the total mass is replaced by a single main gear reading.
+- id: QOV2IOJDU
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314750
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: >-
+      Calculate the centre of gravity of the basic empty configuration, in cm
+      from the datum, from the weighing results:
+
+
+      - Nose wheel: {{wn}} N, arm {{an}} cm
+
+      - Left main wheel: {{wl}} N, arm {{am}} cm
+
+      - Right main wheel: {{wr}} N, arm {{am}} cm
+    variables:
+      - id: wn
+        label: Nose wheel weight
+        unit: N
+      - id: an
+        label: Nose wheel arm
+        unit: cm
+      - id: wl
+        label: Left main wheel weight
+        unit: N
+      - id: wr
+        label: Right main wheel weight
+        unit: N
+      - id: am
+        label: Main wheel arm
+        unit: cm
+    answer:
+      formula: (wn * an + (wl + wr) * am) / (wn + wl + wr)
+      unit: cm
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: wn * an + (wl + wr) * am
+      - id: d2
+        formula: (wn * abs(an) + (wl + wr) * am) / (wn + wl + wr)
+      - id: d3
+        formula: am
+      - id: d4
+        formula: (wn * an + (wl + wr) * am) / (wl + wr)
+      - id: d5
+        formula: (an + 2 * am) / 3
+    presets:
+      - id: p1
+        values:
+          wn: 1200
+          an: -30
+          wl: 4100
+          wr: 4200
+          am: 210
+      - id: p2
+        values:
+          wn: 1500
+          an: -40
+          wl: 4800
+          wr: 4700
+          am: 200
+      - id: p3
+        values:
+          wn: 1100
+          an: -25
+          wl: 3900
+          wr: 3950
+          am: 215
+    explanation: >-
+      The CG is the total moment about the datum divided by the total weight.
+      The nose wheel is ahead of the datum, so its arm is negative.
+
+
+      **Solution**
+
+
+      Total weight = {{= wn + wl + wr}} N; total moment = {{= wn * an + (wl +
+      wr) * am}} N·cm
+
+
+      {{f: (wn * an + (wl + wr) * am) / (wn + wl + wr)}} = {{n: (wn * an + (wl +
+      wr) * am) / (wn + wl + wr)}} = **{{answer}} cm**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} cm**: the total moment itself, not divided by the weight.
+
+      - **{{d2}} cm**: treats the nose wheel arm as positive.
+
+      - **{{d3}} cm**: only the main wheel arm, ignoring the nose wheel.
+
+      - **{{d4}} cm**: divides the total moment by the main wheel loads only.
+
+      - **{{d5}} cm**: plain average of the three arms.
+- id: QPCFXJOW
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319971
+    - ATPLGS-107101
+    - AVEXAM-7501
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.01
+  template:
+    type: multiple-correct
+    question: When must the operator ensure an aircraft is weighed?
+    explanation: ""
+    options:
+      - text: On initial entry into service.
+        correct: true
+        why: ""
+      - text: If the mass and balance records have not been adjusted for alterations or
+          modification.
+        correct: true
+        why: ""
+      - text: Every 48 months after initial weighing, unless "Fleet Masses" are utilized
+          by the operator.
+        correct: true
+        why: ""
+      - text: If the cumulative change in CG position exceeds ± 0.5% of the Mean
+          Aerodynamic Chord (MAC)
+        correct: true
+        why: ""
+      - text: Whenever the cumulative changes to the Dry Operating Mass (DOM) exceed ±
+          0.5% of the Maximum Landing Mass (MLM).
+        correct: true
+        why: ""
+- id: QPEPBV4RO
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-318851
+    - BGS-310764
+  annexes: []
+  learningObjectives:
+    - 031.04.01.01.01
+  template:
+    type: simple
+    question: During the pre-flight preparation, the pilot wants to plot the
+      longitudinal and lateral CGs at the take-off mass. To make the
+      calculations, they look for the information about the datum and the moment
+      arms of the aircraft and the equipment. Where may this be found?
+    explanation: ""
+    options:
+      - id: OIHUGQKBV
+        text: Reference Table of the Aircraft Flight Manual.
+        correct: false
+        why: ""
+      - id: O6XSYGUTT
+        text: Aircraft Flight Manual, Operating Procedures section.
+        correct: false
+        why: ""
+      - id: OXD0EVSNA
+        text: Aircraft Flight Manual, Weight and Loading Distribution section.
+        correct: true
+        why: ""
+      - id: OTCGPRONJ
+        text: Aircraft Flight Manual, Performance section.
+        correct: false
+        why: ""
+- id: QPZEKMTH
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319056
+  annexes:
+    - 031-aeroplane-reference-datum-mac-and-cg-variables
+  learningObjectives:
+    - 031.04.01.03.01
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to the figure. On the common datum scale, the forward CG limit is X
+      = {{x}} in and the aft CG limit is Z = {{z}} in.
+
+
+      What is the length of the MAC of this aeroplane?
+    variables:
+      - id: x
+        label: "X: forward CG limit from datum"
+        unit: in
+      - id: z
+        label: "Z: aft CG limit from datum"
+        unit: in
+    chartInputs:
+      - x
+      - z
+    answer:
+      formula: z - x
+      unit: in
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: z + x
+      - id: d2
+        formula: x
+      - id: d3
+        formula: z
+      - id: d4
+        formula: (z - x) / 2
+    presets:
+      - id: p1
+        values:
+          x: 1174.5
+          z: 1453
+      - id: p2
+        values:
+          x: 1220
+          z: 1500
+    explanation: >-
+      The MAC is the distance between the forward and aft limits measured from
+      the same datum.
+
+
+      **Solution**
+
+
+      {{f: z - x}} = **{{answer}} in**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} in**: adds the two arms instead of finding their separation.
+
+      - **{{d2}} in**: gives only the forward limit arm.
+
+      - **{{d3}} in**: gives only the aft limit arm.
+
+      - **{{d4}} in**: halves the MAC without justification.
+- id: QPZYQRO29
+  docId: "031.04"
+  relatedQuestions:
+    - QDS2PBSMH
+  externalIds:
+    - ATPLQ-316291
+    - ATPLGS-107062
+    - AVEXAM-34939
+    - AVEXAM-49949
+    - ATPLGS-107079
+    - BGS-310240
+    - ATPLGS-126724
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: calculation
+    question: >-
+      The loaded centre of gravity of an aeroplane is {{cg}} mm aft of the
+      datum.
+
+
+      The mean aerodynamic chord lies between station {{le}} mm aft and {{te}}
+      mm aft.
+
+
+      The CG expressed as % MAC is (round to a whole number):
+    variables:
+      - id: cg
+        label: CG position
+        unit: mm
+      - id: le
+        label: MAC leading edge station
+        unit: mm
+      - id: te
+        label: MAC trailing edge station
+        unit: mm
+    answer:
+      formula: (cg - le) / (te - le) * 100
+      unit: "% MAC"
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (cg - le) / te * 100
+      - id: d2
+        formula: (te - cg) / (te - le) * 100
+      - id: d3
+        formula: cg / te * 100
+      - id: d4
+        formula: (cg - le) / le * 100
+    presets:
+      - id: p1
+        values:
+          cg: 713
+          le: 524
+          te: 1706
+      - id: p2
+        values:
+          cg: 820
+          le: 600
+          te: 1800
+      - id: p3
+        values:
+          cg: 650
+          le: 480
+          te: 1650
+    explanation: >-
+      The MAC length is the trailing edge station minus the leading edge
+      station. The CG in % MAC is the distance behind the leading edge divided
+      by that length.
+
+
+      **Solution**
+
+
+      MAC = {{te}} - {{le}} = {{= te - le}} mm
+
+
+      {{f: (cg - le) / (te - le) * 100}} = {{n: (cg - le) / (te - le) * 100}} =
+      **{{answer}} % MAC**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} % MAC**: divides by the trailing edge station instead of the
+      MAC length.
+
+      - **{{d2}} % MAC**: measures from the trailing edge.
+
+      - **{{d3}} % MAC**: divides the CG station by the trailing edge station.
+
+      - **{{d4}} % MAC**: divides by the leading edge station instead of the MAC
+      length.
+- id: QQQWGELY
+  docId: "031.04"
+  relatedQuestions:
+    - Q7U8KYYE0
+  externalIds:
+    - ATPLQ-318048
+    - BGS-310241
+    - ATPLGS-114209
+    - ATPLGS-107089
+    - AVEXAM-10537
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: calculation
+    question: >-
+      Calculate the centre of gravity in % MAC (mean aerodynamic chord) with the
+      following data:
+
+
+      - Distance datum - centre of gravity: {{cg}} m
+
+      - Distance datum - leading edge of the MAC: {{le}} m
+
+      - Length of MAC: {{mac}} m
+    variables:
+      - id: cg
+        label: Datum to CG
+        unit: m
+      - id: le
+        label: Datum to MAC leading edge
+        unit: m
+      - id: mac
+        label: MAC length
+        unit: m
+    answer:
+      formula: round((round(cg * 100) - round(le * 100)) / mac * 10) / 10
+      unit: "% MAC"
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (cg - le) / cg * 100
+      - id: d2
+        formula: (le + mac - cg) / mac * 100
+      - id: d3
+        formula: cg / (le + mac) * 100
+      - id: d4
+        formula: (cg - le) / (mac - le) * 100
+    presets:
+      - id: p1
+        values:
+          cg: 12.53
+          le: 9.63
+          mac: 8
+      - id: p2
+        values:
+          cg: 13.2
+          le: 10.1
+          mac: 7.5
+    explanation: >-
+      The CG in % MAC is the distance of the CG behind the MAC leading edge
+      divided by the MAC length.
+
+
+      **Solution**
+
+
+      {{f: (cg - le) / mac * 100}} = {{n: (cg - le) / mac * 100}} = **{{answer}}
+      % MAC**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} % MAC**: divides by the CG distance instead of the MAC length.
+
+      - **{{d2}} % MAC**: measures from the trailing edge of the MAC.
+
+      - **{{d3}} % MAC**: divides the CG by the trailing edge position.
+
+      - **{{d4}} % MAC**: divides by the MAC length minus the leading edge
+      position.
+- id: QREKIUCQ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-319680
+    - BGS-310205
+    - AVEXAM-62027
+    - ATPLGS-107049
+    - ATPLGS-126708
+  annexes: []
+  learningObjectives:
+    - 031.04.01.01.03
+  template:
+    type: simple
+    question: Which of the following statements describes the "datum" in mass and
+      balance calculations?
+    explanation: ""
+    options:
+      - id: OCFXUJVQS
+        text: It is the distance from the centre of gravity to the point through which
+          the weight of the component acts.
+        correct: false
+        why: ""
+      - id: OOAZEN7DV
+        text: Initially, it is the most forward position of the centre of gravity and
+          moves aft during the flight.
+        correct: false
+        why: ""
+      - id: ODB3WXO3U
+        text: It is the point on the aircraft designated by the manufacturers from which
+          all centre of gravity measurements and calculations are made.
+        correct: true
+        why: ""
+      - id: OXNNJ392J
+        text: It is the most aft position of the centre of gravity.
+        correct: false
+        why: ""
+- id: QRENDDQR
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313453
+    - BGS-310532
+    - AVEXAM-35857
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.01
+  template:
+    type: simple
+    question: An aircraft has had modifications done to it that were known. 3 years
+      have passed since it was last weighed. Does it need to be reweighed?
+    explanation: ""
+    options:
+      - id: O2GH6ROUP
+        text: It has to be reweighed in 6 years time.
+        correct: false
+        why: ""
+      - id: OBHTXVGCA
+        text: It has to be reweighed every 12 months.
+        correct: false
+        why: ""
+      - id: OH8NDXZZX
+        text: It has to be reweighed after every modification.
+        correct: false
+        why: ""
+      - id: OVNXMZUTI
+        text: According to EU-OPS, it doesn't have to be reweighed.
+        correct: true
+        why: ""
+- id: QRFZTVHA
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-316302
+    - AVEXAM-88646
+  annexes: []
+  learningObjectives:
+    - 031.04.02.01.01
+  template:
+    type: simple
+    question: According to the applicable operational requirements, which one of the
+      following statements is correct regarding the weighing and re-weighing
+      procedure of an aircraft?
+    explanation: ""
+    options:
+      - id: OCAMEJUUF
+        text: Weighing must be systematically carried out whenever a modification is
+          applied on the aircraft.
+        correct: false
+        why: ""
+      - id: OPNBWOXXJ
+        text: Weighing wet aircraft is permitted.
+        correct: false
+        why: ""
+      - id: OACVZ3AH0
+        text: Weighing should be accomplished in an enclosed building.
+        correct: true
+        why: ""
+      - id: O8UQEHXD4
+        text: Weighing must be performed prior to every flight.
+        correct: false
+        why: ""
+- id: QRJISAGX
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-314780
+    - AVEXAM-74118
+    - BGS-310653
+    - ATPLGS-126619
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.03
+  template:
+    type: chart
+    question: "If the CG is located at 670 inches, what would be its position as a
+      percentage of the MAC, given the following characteristics of an aircraft?
+      Leading Edge MAC: 627.1 inches Length of MAC: 155.8 inches"
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 27.6%
+        wrongAnswers:
+          - 82%
+          - 93.6%
+          - 23.2%
+        explanation: The centre of gravity is 670 − 627.1 = 42.9 inches behind the
+          leading edge of the chord. As a share of the 155.8 inch chord that is
+          42.9 ÷ 155.8 = **27.6 %** MAC.
+- id: QSQSJHMWH
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312376
+    - AVEXAM-15283
+    - AVEXAM-32955
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.02
+  template:
+    type: calculation
+    question: >-
+      You are departing for a flight with a planned landing fuel of {{lf}} kg.
+      According to aircraft limitations, the centre tank fuel must be used prior
+      to the wing tank fuel. Given the following information, the location of
+      the CG on landing will be how many metres aft of the datum?
+
+
+      - Maximum Take-Off Mass: {{mtom}} kg
+
+      - Actual Take-Off Mass: {{tom}} kg
+
+      - Take-off CG location: {{cg}} m aft of the datum
+
+      - Fuel in centre tank at take-off: {{c}} kg
+
+      - Fuel in wing tanks at take-off: {{w}} kg
+
+      - Centre fuel tank centroid: {{carm}} m aft of the datum
+
+      - Wing fuel tank centroid: {{warm}} m aft of the datum
+    variables:
+      - id: lf
+        label: Landing fuel
+        unit: kg
+      - id: mtom
+        label: Max take-off mass
+        unit: kg
+      - id: tom
+        label: Take-off mass
+        unit: kg
+      - id: cg
+        label: Take-off CG
+        unit: m
+      - id: c
+        label: Centre tank fuel
+        unit: kg
+      - id: w
+        label: Wing tank fuel
+        unit: kg
+      - id: carm
+        label: Centre tank centroid
+        unit: m
+      - id: warm
+        label: Wing tank centroid
+        unit: m
+    answer:
+      formula: (tom * cg - c * carm - (w - lf) * warm) / (tom - c - (w - lf))
+      unit: m
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: (tom * cg - w * warm - (c + w - lf - w) * carm) / (tom - c - w + lf)
+      - id: d2
+        formula: cg
+      - id: d3
+        formula: (tom * cg - (c + w - lf) * (carm + warm) / 2) / (tom - (c + w - lf))
+      - id: d4
+        formula: (tom * cg - c * carm - (w - lf) * warm) / tom
+    presets:
+      - id: p1
+        values:
+          lf: 1800
+          mtom: 99800
+          tom: 59500
+          cg: 16.26
+          c: 10000
+          w: 18000
+          carm: 15.38
+          warm: 17.79
+      - id: p2
+        values:
+          lf: 2000
+          mtom: 99800
+          tom: 62000
+          cg: 16.4
+          c: 9000
+          w: 17000
+          carm: 15.4
+          warm: 17.8
+    explanation: >-
+      The landing CG follows from the moment balance: take-off moment minus the
+      moments of the fuel burned, divided by the landing mass. Centre-tank fuel
+      is burned first, so all of it is gone and the rest comes from the wing
+      tanks.
+
+
+      **Solution**
+
+
+      Fuel burned = {{= c + w - lf}} kg (centre {{c}} kg, wing {{= w - lf}} kg)
+
+      Landing mass = {{= tom - c - (w - lf)}} kg
+
+      Landing moment = {{= tom * cg - c * carm - (w - lf) * warm}} kg·m
+
+      Landing CG = {{= tom * cg - c * carm - (w - lf) * warm}} / {{= tom - c -
+      (w - lf)}} = **{{answer}} m**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} m**: Burns the wing tank fuel first, leaving centre tank fuel
+      at landing.
+
+      - **{{d2}} m**: Is the unchanged take-off CG.
+
+      - **{{d3}} m**: Treats the burned fuel as taken from the mean of both tank
+      centroids.
+
+      - **{{d4}} m**: Divides the landing moment by the take-off mass instead of
+      the landing mass.
+- id: QSRTEPON
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-316716
+  annexes:
+    - 031-aircraft-side-view-reference-datum-wing-root-chord-positions-a
+  learningObjectives:
+    - 031.04.01.03.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Given the figure's information, calculate the length of the Mean
+      Aerodynamic Chord.
+    explanation: ""
+    options:
+      - id: O3XSRX1LS
+        text: 1.3 metres
+        correct: false
+        why: ""
+      - id: OAILPGTQ9
+        text: 4 metres
+        correct: true
+        why: ""
+      - id: O2J1S1ZP3
+        text: 18 metres
+        correct: false
+        why: ""
+      - id: OFZAQWZDO
+        text: 14 metres
+        correct: false
+        why: ""
+- id: QSXAKADJ
+  docId: "031.04"
+  relatedQuestions:
+    - QBF9CF9QN
+  externalIds:
+    - ATPLQ-317969
+    - AVEXAM-14868
+  annexes: []
+  learningObjectives:
+    - 031.04.02.02.01
+  template:
+    type: calculation
+    question: |-
+      A tri-wheel aircraft has its datum {{dn}} cm aft of the nose wheel.
+
+      The weight on the nose wheel is {{nw}} lb.
+
+      The main gear is {{ma}} cm aft of the datum.
+
+      The weight on each main gear is {{mw}} lb.
+
+      Calculate the CG position, in cm aft of the datum.
+    variables:
+      - id: dn
+        label: Datum aft of nose wheel
+        unit: cm
+      - id: nw
+        label: Nose wheel weight
+        unit: lb
+      - id: ma
+        label: Main gear arm
+        unit: cm
+      - id: mw
+        label: Weight on each main gear
+        unit: lb
+    answer:
+      formula: (nw * (0 - dn) + 2 * mw * ma) / (nw + 2 * mw)
+      unit: cm
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (nw * (0 - dn) + 2 * mw * ma) / (nw + 2 * mw) + dn
+      - id: d2
+        formula: ma
+      - id: d3
+        formula: (nw * dn + 2 * mw * ma) / (nw + 2 * mw)
+      - id: d4
+        formula: (nw * (0 - dn) + 2 * mw * ma) / (2 * mw)
+    presets:
+      - id: p1
+        values:
+          dn: 25
+          nw: 125
+          ma: 180
+          mw: 3000
+      - id: p2
+        values:
+          dn: 30
+          nw: 140
+          ma: 175
+          mw: 3100
+    explanation: >-
+      The nose wheel lies {{dn}} cm forward of the datum, so its arm is
+      negative. The CG is the total moment divided by the total weight (BEM).
+
+
+      **Solution**
+
+
+      Total = {{= nw + 2 * mw}} lb; moment = {{= nw * (0 - dn) + 2 * mw * ma}}
+      lb·cm
+
+
+      {{f: (nw * (0 - dn) + 2 * mw * ma) / (nw + 2 * mw)}} = {{n: (nw * (0 - dn)
+      + 2 * mw * ma) / (nw + 2 * mw)}} = **{{answer}} cm**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} cm**: the CG measured from the nose wheel instead of the datum.
+
+      - **{{d2}} cm**: only the main gear arm, ignoring the nose wheel.
+
+      - **{{d3}} cm**: uses a positive nose wheel arm.
+
+      - **{{d4}} cm**: divides the moment by the main gear weights only.
+- id: QTAIBMEQ
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-317548
+    - ATPLGS-126772
+    - BGS-310244
+    - AVEXAM-29122
+  annexes: []
+  learningObjectives:
+    - 031.04.01.03.02
+  template:
+    type: simple
+    question: "The centre of gravity of an aeroplane is at 25% of the Mean
+      Aerodynamic Chord. This means that the centre of gravity of the aeroplane
+      is situated at 25% of the length of:"
+    explanation: ""
+    options:
+      - id: OV4EXXPFJ
+        text: the aeroplane in relation to the leading edge.
+        correct: false
+        why: ""
+      - id: OOSTKPF2D
+        text: the mean aerodynamic chord in relation to the datum.
+        correct: false
+        why: ""
+      - id: O9IUSBEFU
+        text: the mean aerodynamic chord in relation to the trailing edge.
+        correct: false
+        why: ""
+      - id: OMDQQ86JE
+        text: the mean aerodynamic chord in relation to the leading edge.
+        correct: true
+        why: ""
+- id: QTHDSCWR
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315606
+    - BGS-310534
+  annexes: []
+  learningObjectives:
+    - 031.04.01.07.03
+  template:
+    type: simple
+    question: Consider the risks associated with fuel tanks in horizontal stabilizer
+      also known as trim tanks. If the transfer mechanism fails during climb and
+      isolates fuel in the trim tank…
+    explanation: ""
+    options:
+      - id: O25F0CU3L
+        text: Drag will increase.
+        correct: false
+        why: ""
+      - id: OKQZITW0Q
+        text: Manoeuvrability will be decreased.
+        correct: false
+        why: ""
+      - id: OUMALIXQR
+        text: Flight range will be reduced.
+        correct: true
+        why: ""
+      - id: OIQ0NSHLU
+        text: Forward centre of gravity limit will be exceeded.
+        correct: false
+        why: ""
+- id: QTIKYPAIT
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-312650
+    - AVEXAM-81665
+    - AVEXAM-63089
+    - ATPLGS-126647
+    - BGS-310676
+  annexes:
+    - 031-load-limitations-for-lower-deck-cargo-compartments-02
+  learningObjectives:
+    - 031.04.01.06.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Using the annex, determine what is the maximum floor loading in the aft
+      cargo compartment between BA 940 and BA 997.
+    explanation: ""
+    options:
+      - id: ON4ALE1GO
+        text: 414 kg
+        correct: false
+        why: ""
+      - id: O0B81D605
+        text: 68 kg/sq ft
+        correct: true
+        why: ""
+      - id: OOANQVEOJ
+        text: 4187 kg
+        correct: false
+        why: ""
+      - id: O5DPYYWGJ
+        text: 7.26 kg/in
+        correct: false
+        why: ""
+- id: QUTO5C7YN
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-315860
+    - BGS-310695
+    - AVEXAM-73136
+    - AVEXAM-88223
+    - ATPLGS-127603
+  annexes:
+    - 031-loading-manifest-table-light-aeroplane
+  learningObjectives:
+    - 031.04.03.02.01
+    - 031.05.01.01.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Calculate the CG position and moment for the BASIC EMPTY MASS by using the
+      data given from the attached table:
+    explanation: ""
+    options:
+      - id: OUU4PQPCW
+        text: 95.3 in aft of datum and the moment is 380 373 in.lb
+        correct: false
+        why: ""
+      - id: O0H6FGLEN
+        text: 113.6 in aft of datum and the moment is 430 998 in.lb
+        correct: false
+        why: ""
+      - id: O9LFEWJZ6
+        text: 115.7 in aft of datum and the moment is 365 074 in.lb
+        correct: true
+        why: ""
+      - id: O6P24EBTP
+        text: 111.4 in aft of datum and the moment is 489 666 in.lb
+        correct: false
+        why: ""
+- id: QVESXEFTP
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313435
+    - ATPLGS-126645
+    - BGS-310665
+  annexes:
+    - cap-696-page-25-figure-3.5
+  learningObjectives:
+    - 031.04.01.04.01
+  template:
+    type: simple
+    question: Refer to figure or CAP696 file 3.5\. Extract the forward and aft
+      centre of gravity limit from the given diagram for a mass of 4300 lb.
+    explanation: ""
+    options:
+      - id: OTOEQC5ZR
+        text: Forward CG limit 88.0 in. Aft CG limit 94.0 in.
+        correct: false
+        why: ""
+      - id: OC6H59DED
+        text: Forward CG limit 87.2 in. Aft CG limit 94.6 in.
+        correct: true
+        why: ""
+      - id: OVQZ00KMY
+        text: Forward CG limit 88.0 in. Aft CG limit 94.6 in.
+        correct: false
+        why: ""
+      - id: OFRROJFB8
+        text: Forward CG limit 87.2 in. Aft CG limit 94.0 in.
+        correct: false
+        why: ""
+- id: QVSXSWVX5
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313399
+  annexes: []
+  learningObjectives:
+    - 031.04.01.02.02
+  template:
+    type: simple
+    question: Where can information on the CG limits of an aircraft be found?
+    explanation: ""
+    options:
+      - id: OXZ2HMYBR
+        text: Aircraft Weighing Report.
+        correct: false
+        why: ""
+      - id: OGQHOLDNS
+        text: Operations Manual.
+        correct: false
+        why: ""
+      - id: OFN66YGGW
+        text: Aircraft Flight Manual.
+        correct: true
+        why: ""
+      - id: OUIKAOJLH
+        text: Crew Training Documents.
+        correct: false
+        why: ""
+- id: QXDDWBXE
+  docId: "031.04"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-313073
+    - AVEXAM-43417
+    - ATPLGS-107066
+    - BGS-310235
+  annexes:
+    - 031-mrjt-locations-diagram-with-balance-arms-and-table-to-convert
+  learningObjectives:
+    - 031.04.01.01.01
+  template:
+    type: simple
+    question: |-
+      Refer to figure.
+
+      For the medium range twin jet the datum point is located:
+    explanation: ""
+    options:
+      - id: OVAQG2BKN
+        text: 540 cm forward of the front spar.
+        correct: false
+        why: ""
+      - id: OLDAMVGHV
+        text: at the leading edge of the Mean Aerodynamic Chord (MAC).
+        correct: false
+        why: ""
+      - id: OYCOMO1EY
+        text: 540 inches forward of the front spar.
+        correct: true
+        why: ""
+      - id: OBIUW1SSI
+        text: on the nose of the aeroplane.
+        correct: false
+        why: ""

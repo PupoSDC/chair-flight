@@ -1,0 +1,6282 @@
+- id: Q122F3R2C
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336436
+    - AVEXAM-9137
+    - ATPLGS-629336
+    - ATPLGS-129309
+  annexes:
+    - jeppesen-vfr-chart-icao-1-11
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017\.   
+       Find the the frequency of the Linz ATIS. (Linz aerodrome: N48º15’ E014º11’)
+    explanation: ""
+    options:
+      - id: OVXQBI5BX
+        text: 129.62 MHz
+        correct: false
+        why: ""
+      - id: OOKLCMAHI
+        text: 128.12 MHz
+        correct: true
+        why: ""
+      - id: OUGYTKDUF
+        text: 118.80 MHz
+        correct: false
+        why: ""
+      - id: OWVF1UIM7
+        text: 116.60 MHz
+        correct: false
+        why: ""
+- id: Q2HPCLFH1
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336627
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: How can we use/insert a motorway intersection as a GNSS waypoint?
+    explanation: ""
+    options:
+      - id: OWBELKL92
+        text: GNSS waypoints are just for IFR flights.
+        correct: false
+        why: ""
+      - id: OOCT2ZJ82
+        text: You can choose the motorway intersection as a waypoint since all motorway
+          intersections are already GNSS waypoints.
+        correct: false
+        why: ""
+      - id: OICA8FTOS
+        text: Add a motorway as a user waypoint using a bearing and distance from a GNSS
+          waypoint.
+        correct: true
+        why: ""
+      - id: OHJG1L64J
+        text: We need to change our flight plan to IFR.
+        correct: false
+        why: ""
+- id: Q3MRNQTEQ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337388
+    - AVEXAM-80627
+    - ATPLGS-627103
+  annexes:
+    - jeppesen-lfrs-10-9
+    - jeppesen-lfrs-19-1
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: |-
+      Refer to NANTES - Charts 19-1, 19-2, 19-3 from Jeppesen GSPRM 2017.   
+       How many VFR approaches to Nantes are published?
+    explanation: ""
+    options:
+      - id: OT6XUNJZB
+        text: "3"
+        correct: false
+        why: ""
+      - id: ONIBD39XF
+        text: "4"
+        correct: true
+        why: ""
+      - id: OVNCB5TKH
+        text: "5"
+        correct: false
+        why: ""
+      - id: OEOZBPQ1E
+        text: "1"
+        correct: false
+        why: ""
+- id: Q4IHUDYT0
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336159
+    - ATPLGS-626292
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      Given the following information, what heading (°) must be selected in
+      order to maintain the desired track DTK?
+
+
+      - DTK: {{dtk}}°
+
+      - TAS: {{tas}} kt
+
+      - Wind: {{wd}}°/{{ws}} kt
+    variables:
+      - id: dtk
+        label: Desired track
+        unit: °
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: wd
+        label: Wind direction
+        unit: °
+      - id: ws
+        label: Wind speed
+        unit: kt
+    answer:
+      formula: dtk + asin(ws * sin(wd - dtk) / tas)
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: dtk - asin(ws * sin(wd - dtk) / tas)
+      - id: d2
+        formula: dtk - asin(ws / tas)
+      - id: d3
+        formula: dtk + asin(ws / tas)
+      - id: d4
+        formula: wd + asin(ws * sin(wd - dtk) / tas)
+    presets:
+      - id: p1
+        values:
+          dtk: 90
+          tas: 380
+          wd: 60
+          ws: 60
+      - id: p2
+        values:
+          dtk: 270
+          tas: 250
+          wd: 300
+          ws: 40
+      - id: p3
+        values:
+          dtk: 180
+          tas: 300
+          wd: 130
+          ws: 35
+    explanation: >-
+      To hold the desired track, the heading must be offset into the wind by the
+      wind correction angle: WCA = asin(WS x sin(wind direction - track) / TAS).
+      The heading is the track plus this angle (a negative angle when the wind
+      comes from the left of track).
+
+
+      **Solution**
+
+
+      WCA = {{= asin(ws * sin(wd - dtk) / tas)}}°
+
+
+      {{f: dtk + asin(ws * sin(wd - dtk) / tas)}} = {{n: dtk + asin(ws * sin(wd
+      - dtk) / tas)}} = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} °**: The correction was applied in the wrong direction (away
+      from the wind).
+
+      - **{{d2}} °**: The full wind speed was used as cross wind, ignoring the
+      wind angle, and applied in the wrong direction.
+
+      - **{{d3}} °**: The full wind speed was used as cross wind, ignoring the
+      wind angle.
+
+      - **{{d4}} °**: The correction was applied to the wind direction instead
+      of the track.
+- id: Q4MIXNQYQ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334539
+    - AVEXAM-17420
+    - BGS-331418
+  annexes:
+    - jeppesen-vfr-chart-icao-1-14
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      (For this question use VFR chart ED-4 from the Jeppesen GSPRM 2017).   
+       Which option gives the correct type, identification, and frequency of a navigation aid?
+    explanation: ""
+    options:
+      - id: OAG5LAMSU
+        text: VOR/DME, RDG, 114.70 MHz (near N49°00ı, E012°30 ı)
+        correct: true
+        why: ""
+      - id: OBPMFB8YJ
+        text: VOR, END, 393 kHz (near N48°30ı, E012°30 ı)
+        correct: false
+        why: ""
+      - id: OMTLVK0CB
+        text: VOR, LKSR, 123.50 MHz (near N49°00ı, E014°00 ı)
+        correct: false
+        why: ""
+      - id: ODMMFG7GJ
+        text: VOR, RODING, 114.70 MHz (near N49°00ı, E012°30 ı)
+        correct: false
+        why: ""
+- id: Q51NX80QT
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334663
+    - AVEXAM-42306
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      A mountain {{obst}} ft AMSL will be crossed on a magnetic track of 006°
+      (VFR flight, track 356° T, variation 10° W).
+
+
+      What is the lowest VFR ICAO flight level the aircraft must fly to obtain a
+      clearance of {{clr}} ft?
+
+
+      QNH: {{qnh}} hPa.
+
+
+      Assume 1 hPa = 30 ft.
+
+
+      Give the flight level number (e.g. 95 for FL095).
+    variables:
+      - id: obst
+        label: Mountain elevation
+        unit: ft
+      - id: clr
+        label: Required clearance
+        unit: ft
+      - id: qnh
+        label: QNH
+        unit: hPa
+    answer:
+      formula: 15 + 20 * ceil(((obst + clr + (1013 - qnh) * 30) / 100 - 15) / 20)
+      unit: FL
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: 5 + 20 * ceil(((obst + clr + (1013 - qnh) * 30) / 100 - 5) / 20)
+      - id: d2
+        formula: 15 + 20 * ceil(((obst + clr - (1013 - qnh) * 30) / 100 - 15) / 20)
+      - id: d3
+        formula: ceil((obst + clr + (1013 - qnh) * 30) / 500) * 5
+      - id: d4
+        formula: 15 + 20 * ceil(((obst + clr + (1013 - qnh) * 30 + 2000) / 100 - 15) /
+          20)
+    presets:
+      - id: p1
+        values:
+          obst: 6011
+          clr: 2000
+          qnh: 990
+      - id: p2
+        values:
+          obst: 5600
+          clr: 2000
+          qnh: 1000
+    explanation: >-
+      The minimum altitude is obstacle elevation plus clearance. With QNH below
+      1013 hPa the flight level lies higher than the altitude, so the QNH
+      difference is added. On a magnetic track of 000-179° the VFR cruising
+      levels are odd thousands plus 500 ft (FL35, 55, 75, 95, ...), so the
+      result is rounded up to the next such level.
+
+
+      **Solution**
+
+
+      Minimum altitude = {{f: obst + clr}} = {{= obst + clr}} ft
+
+
+      QNH correction = {{= (1013 - qnh) * 30}} ft, required pressure altitude =
+      {{= obst + clr + (1013 - qnh) * 30}} ft
+
+
+      Next VFR level on an easterly track: **FL{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} **: the cruising levels of the opposite (westerly) semicircle
+      were used.
+
+      - **{{d2}} **: the QNH correction was subtracted instead of added.
+
+      - **{{d3}} **: rounded up to the next 500 ft only, ignoring the VFR
+      semicircular rule.
+
+      - **{{d4}} **: an extra 2000 ft margin was added.
+- id: Q6QSERQ89
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337877
+    - ATPLGS-629371
+    - ATPLGS-629375
+  annexes:
+    - jeppesen-lddu-19-1
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to Dubrovnik VFR Chart 19-1 from Jeppesen GSPRM 2017\. How many
+      VFR Approach/Departure routes are published?
+    explanation: ""
+    options:
+      - id: OJY5ZD5NY
+        text: "10"
+        correct: false
+        why: ""
+      - id: ODHVSZDOS
+        text: "5"
+        correct: true
+        why: ""
+      - id: OPPU5GHRC
+        text: "12"
+        correct: false
+        why: ""
+      - id: OE9PRRKEM
+        text: "1"
+        correct: false
+        why: ""
+- id: Q78TSRUW3
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334563
+    - ATPLGS-629269
+    - AVEXAM-22172
+    - BGS-330062
+  annexes:
+    - jeppesen-area-chart-10-1v-aberdeen-united-kingdom-25-aug
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ABERDEEN - Chart 10-IV from jeppesen.   
+       What is the correct frequency to contact with the Scottish Information Service when flying overhead the reporting point "BANCHORY", Southwest of Aberdeen Airport?
+    explanation: ""
+    options:
+      - id: OJYRCCVTH
+        text: "126.25"
+        correct: false
+        why: ""
+      - id: OL6HIZC8B
+        text: "119.87"
+        correct: true
+        why: ""
+      - id: OVM4JRNSE
+        text: "134.10"
+        correct: false
+        why: ""
+      - id: OPSNSTNX8
+        text: "135.17"
+        correct: false
+        why: ""
+- id: Q8EBTCMCY
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334023
+    - BGS-331469
+    - BGS-330779
+    - ATPLGS-629307
+    - BGS-331179
+    - ATPLGS-629384
+    - ATPLGS-629380
+    - BGS-331313
+    - ATPLGS-129312
+    - BGS-331238
+    - ATPLGS-622505
+    - BGS-330796
+    - AVEXAM-96658
+    - ATPLGS-629408
+    - AVEXAM-59654
+    - BGS-331005
+  annexes:
+    - jeppesen-leal-19-1
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to Alicante (LEAL) VFR Chart 19-1 from the Jeppesen GSPRM 2017\.
+      What is the maximum permissible altitude for an aircraft approaching to
+      the reporting point NE (N38º 21.7', W000º 24.5')?
+    explanation: ""
+    options:
+      - id: OXCSQJQPT
+        text: FL75
+        correct: false
+        why: ""
+      - id: OJKZGKFCP
+        text: 4 500 feet
+        correct: false
+        why: ""
+      - id: OYRALPOQQ
+        text: 1 500 feet
+        correct: false
+        why: ""
+      - id: OHWZJWXRJ
+        text: 2 000 feet
+        correct: true
+        why: ""
+- id: Q8GUKWPCK
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335071
+    - BGS-331409
+  annexes:
+    - jeppesen-vfr-chart-icao-1-07
+  learningObjectives:
+    - "033.01"
+  template:
+    type: chart
+    question: >-
+      Please refer to figure or to VFR chart ED-4 from the Jeppesen GSPRM 2017\.
+
+
+      You are planning a flight from Niederoblarn aerodrome (LOGO) (47°29′N,
+      014°00'E) to Leoben Timmersdorf aerodrome (LOGT) (47°23'N, 014°58'E).
+
+
+      Determine the approximate distance between the LOGO and LOGT aerodromes:
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 39 NM
+        wrongAnswers:
+          - 28 NM
+          - 73 NM
+          - 45 NM
+        explanation: >-
+          The latitude difference is 6′, which is 6 NM. The longitude difference
+          is 58′, and at 47° N one minute of longitude is about 0.68 NM, so 58 ×
+          0.68 = 39.3 NM.
+
+
+          The distance is about √(39.3² + 6²) = 39.8, so approximately **39
+          NM**.
+- id: Q8IZMY85R
+  docId: "033.01"
+  relatedQuestions:
+    - QJYRGISZ
+  externalIds:
+    - ATPLQ-335040
+    - BGS-331445
+  annexes:
+    - 033-long-range-cruise-table-isa-20-cg-33-max-cruise
+  learningObjectives:
+    - "033.01"
+  template:
+    type: chart
+    question: Refer to figure. Determine the TAS if the aeroplane's weight is {{gw}}
+      kg and it is flying at FL{{fl}} with an OAT of {{oat}} °C.
+    explanation: ""
+    variables:
+      - id: gw
+        label: Aeroplane weight
+        unit: kg
+      - id: fl
+        label: Flight level
+        unit: FL
+      - id: oat
+        label: OAT
+        unit: °C
+    entries:
+      - id: e1
+        values:
+          gw: 67500
+          fl: 370
+          oat: -36
+        answer: 463 kt
+        wrongAnswers:
+          - 469 kt
+          - 250 kt
+          - 254 kt
+        explanation: >-
+          The TAS is read from the figure for the aeroplane weight, the flight
+          level and the OAT.
+
+
+          **Solution**
+
+
+          - Enter the figure at a weight of {{gw}} kg, FL{{fl}} and an OAT of
+          {{oat}} °C.
+
+          - The TAS is **463 kt**.
+
+
+          **Why the other answers are wrong**
+
+
+          - **469 kt**: a misread of the figure, slightly high.
+
+          - **250 kt**: a misread of the figure, far too low.
+
+          - **254 kt**: a misread of the figure, far too low.
+- id: QAC9VCHGJ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333035
+    - ATPLGS-629307
+    - BGS-331005
+  annexes:
+    - jeppesen-leal-19-1
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to Alicante Chart 19-1 from Jeppesen GSPRM 2017. An aircraft is
+      intending to land at Alicante aerodrome (LEAL) and has been cleared to
+      follow the Tabarca Route towards the airport. What is the maximum altitude
+      at which it is permitted to fly?
+    explanation: ""
+    options:
+      - id: ONAISTTN1
+        text: FL75
+        correct: false
+        why: ""
+      - id: OSRHVST8D
+        text: 2000 ft
+        correct: false
+        why: ""
+      - id: OODKLIJSO
+        text: 1500 ft
+        correct: true
+        why: ""
+      - id: ORK11QD4G
+        text: 800 ft
+        correct: false
+        why: ""
+- id: QACRDLXSL
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333588
+    - AVEXAM-99966
+    - BGS-331042
+    - BGS-331357
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: |-
+      Given the following information, what is the expected leg time?
+
+      - Leg track: {{trk}}°
+      - Distance: {{dist}} NM
+      - TAS: {{tas}} kt
+      - Wind: {{wd}}°/{{ws}} kt
+    variables:
+      - id: trk
+        label: Track
+        unit: °
+      - id: dist
+        label: Distance
+        unit: NM
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: wd
+        label: Wind direction
+        unit: °
+      - id: ws
+        label: Wind speed
+        unit: kt
+    answer:
+      formula: dist / (tas * cos(asin(ws * sin(wd - trk) / tas)) - ws * cos(wd - trk))
+        * 60
+      unit: minutes
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: dist / tas * 60
+      - id: d2
+        formula: dist / (tas - ws * abs(sin(wd - trk))) * 60
+      - id: d3
+        formula: dist / (tas * cos(asin(ws * sin(wd - trk) / tas)) + ws * cos(wd - trk))
+          * 60
+    presets:
+      - id: p1
+        values:
+          trk: 90
+          dist: 100
+          tas: 350
+          wd: 30
+          ws: 100
+      - id: p2
+        values:
+          trk: 270
+          dist: 120
+          tas: 420
+          wd: 330
+          ws: 80
+      - id: p3
+        values:
+          trk: 180
+          dist: 150
+          tas: 280
+          wd: 240
+          ws: 60
+    explanation: >-
+      The leg time is the distance divided by the ground speed. The ground speed
+      follows from the wind triangle: the wind correction angle (WCA) needed to
+      hold the track changes the TAS component along the track, and the wind
+      adds or subtracts its along-track component.
+
+
+      **Solution**
+
+
+      WCA = {{= asin(ws * sin(wd - trk) / tas)}}°
+
+
+      Ground speed = {{= tas * cos(asin(ws * sin(wd - trk) / tas)) - ws * cos(wd
+      - trk)}} kt
+
+
+      Leg time = {{f: dist / (tas * cos(asin(ws * sin(wd - trk) / tas)) - ws *
+      cos(wd - trk)) * 60}} = **{{answer}} minutes**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} minutes**: wind ignored, distance divided by TAS.
+
+      - **{{d2}} minutes**: the crosswind-related sine component was used as
+      headwind and no wind correction angle was applied.
+
+      - **{{d3}} minutes**: the headwind component was added to the TAS as if it
+      were a tailwind.
+- id: QADVDPBX
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336296
+    - AVEXAM-99790
+  annexes:
+    - vfr-chart-bavaria-straubing-area-edms-straubing-1054-1350m-127
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: >-
+      Refer to Jeppesen GSPRM Training Route Manual - VFR Chart ED-4   
+       A VFR flight from RODING VOR/DME (RDG, N49°02.5' E012°31.5') is on 065º radial of RODING VOR. To receive the latest QNH, the pilot of the aircraft enters a frequency of 123.42 MHz. The name of the suitable frequency is:
+    explanation: ""
+    options:
+      - id: OBOQRJID9
+        text: ARNBRUCK INFO.
+        correct: false
+        why: ""
+      - id: OBL0C1YL9
+        text: STRAUBING ATIS.
+        correct: false
+        why: ""
+      - id: O841JWYDW
+        text: ARNSCHWANG.
+        correct: true
+        why: ""
+      - id: OGUJPFY4N
+        text: VILSHOFEN INFO.
+        correct: false
+        why: ""
+- id: QAFSRKYJ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338454
+  annexes:
+    - jeppesen-vfr-chart-icao-1-11
+  learningObjectives:
+    - 033.01.01.03.03
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.   
+       On a VFR flight in Austria, the departure airfield is RIED KIRCHHEIM (LOLK, N48° 12.8' E13° 20.8') and the destination is FREISTADT (LOLF, N48° 30.9' E14° 24.5'). If the pilot intends to fly directly to the destination, the best navigation aid that could be used is located at...
+    explanation: ""
+    options:
+      - id: OTZOKGBCY
+        text: 48º13.8'N, 014º06.2'E
+        correct: false
+        why: ""
+      - id: O16GXUX0P
+        text: 48º30.9'N, 014º24.6'E
+        correct: false
+        why: ""
+      - id: OVQCM7J6M
+        text: 48º25.9'N, 014º07.8'E
+        correct: true
+        why: ""
+      - id: OKKPSNDV5
+        text: 48º14.2'N, 014º19.3'E
+        correct: false
+        why: ""
+- id: QBCOXNKP
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334637
+    - ATPLGS-629443
+    - AVEXAM-53440
+    - BGS-331049
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - 033.01.01.03.02
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017.   
+
+      A VFR flight intends to land at Alicante Aerodrome (LEAL). The aircraft is
+      currently overhead VFR report point SE, following the Tabarca route to
+      intercept the South Route. The pilot expects delays, as the airport is
+      busy with IFR arrivals and departures.
+
+
+      Where might the pilot be expected to hold?
+    explanation: ""
+    options:
+      - id: OOOG10AT2
+        text: Holding overhead ATE VOR (as determined by Alicante APP).
+        correct: false
+        why: ""
+      - id: ORHFWK2HU
+        text: Overhead VFR reporting point S as established by Alicante TWR.
+        correct: true
+        why: ""
+      - id: OUOYQEYAP
+        text: Published holding overhead ALT VOR as determined by Alicante APP.
+        correct: false
+        why: ""
+      - id: OHVXMTT2E
+        text: Overhead VFR reporting point SE prior to entering the ATZ, as established
+          by Alicante TWR.
+        correct: false
+        why: ""
+- id: QBDNVBPZ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333881
+    - AVEXAM-97431
+    - ATPLGS-629392
+  annexes:
+    - jeppesen-vfr-chart-excerpt-bavaria-czech-border
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: Refer to VFR Chart ED-4 from the Jeppesen GSPRM 2017. For an aircraft
+      flying VFR from Straubing (EDMS) aerodrome (N48°54.0’ E012°31.1’) to Linz
+      international (LOWL) aerodrome (N48°14.1’ E014°11.3’), what is the best
+      cruising altitude, VFR checkpoint and ground navigational aid to tune to?
+    explanation: ""
+    options:
+      - id: O48GXPOTY
+        text: 7 000 ft; Highway A92; LNZ VOR/DME.
+        correct: false
+        why: ""
+      - id: OSUM7HODN
+        text: 7 500 ft; Power plant at Vilshofen; FRE VOR/DME.
+        correct: false
+        why: ""
+      - id: OMTW2KR0P
+        text: 6 500 ft; Highway A3; LNZ VOR/DME.
+        correct: false
+        why: ""
+      - id: OQCF6GEKM
+        text: 7 500 ft; Highway A3; LNZ VOR/DME.
+        correct: true
+        why: ""
+- id: QBJWDPWX
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335660
+    - AVEXAM-51580
+    - BGS-330004
+    - ATPLGS-107823
+  annexes: []
+  learningObjectives:
+    - 033.01.01.02.05
+  template:
+    type: calculation
+    question: |-
+      How many feet do you have to climb to reach FL{{fl}}?
+
+      Given:
+
+      - Departure aerodrome elevation: {{elev}} ft
+      - QNH = {{qnh}} hPa
+
+      Temperature = ISA
+      1 hPa = 30 ft
+    variables:
+      - id: fl
+        label: Flight level
+        unit: FL
+      - id: elev
+        label: Aerodrome elevation
+        unit: ft
+      - id: qnh
+        label: QNH
+        unit: hPa
+    answer:
+      formula: fl * 100 - (elev + (1013 - qnh) * 30)
+      unit: ft
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: fl * 100 + (qnh - 1013) * 30
+      - id: d2
+        formula: fl * 100 - elev + 2 * (qnh - 1013) * 30
+      - id: d3
+        formula: fl * 100 - elev
+    presets:
+      - id: p1
+        values:
+          fl: 75
+          elev: 1500
+          qnh: 1023
+      - id: p2
+        values:
+          fl: 90
+          elev: 800
+          qnh: 1005
+      - id: p3
+        values:
+          fl: 55
+          elev: 2200
+          qnh: 1018
+    explanation: >-
+      A flight level is a pressure altitude (standard setting 1013 hPa). The
+      pressure altitude of the aerodrome is its elevation corrected by 30 ft per
+      hPa of difference between 1013 hPa and the QNH. The climb required is the
+      difference between the flight level and the aerodrome pressure altitude.
+
+
+      **Solution**
+
+
+      Aerodrome pressure altitude = {{elev}} + (1013 - {{qnh}}) × 30 = {{= elev
+      + (1013 - qnh) * 30}} ft
+
+
+      {{f: fl * 100 - (elev + (1013 - qnh) * 30)}} = {{n: fl * 100 - (elev +
+      (1013 - qnh) * 30)}} = **{{answer}} ft**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ft**: the QNH correction is applied to the flight level with
+      the wrong sign and the aerodrome elevation is ignored.
+
+      - **{{d2}} ft**: the QNH correction is applied with the wrong sign, and
+      twice.
+
+      - **{{d3}} ft**: the flight level minus the elevation, ignoring the QNH
+      correction.
+- id: QBTRRBKS
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331288
+    - ATPLGS-628083
+    - AVEXAM-27697
+  annexes:
+    - jeppesen-lfrs-10-9
+    - jeppesen-lfrs-19-1
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: simple
+    question: >-
+      Refer to NANTES - Charts 19-1, 19-2, 19-3 from Jeppesen GSPRM 2017.   
+       Which reporting point instructions are ATC likely to give you if you were planning to depart from Nantes airfield by following the Loire River towards the North-East, but without overflying the city of Nantes?
+    explanation: ""
+    options:
+      - id: O7PBVSTAD
+        text: E, 1500 ft.
+        correct: false
+        why: ""
+      - id: OUJTS9JGD
+        text: NE, 1000 ft.
+        correct: true
+        why: ""
+      - id: OXTQYSVMO
+        text: W, 1500 ft.
+        correct: false
+        why: ""
+      - id: OQ3LJSXDL
+        text: NW, 1000 ft.
+        correct: false
+        why: ""
+- id: QBVDVZFFG
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338517
+  annexes:
+    - jeppesen-vfr-chart-icao-1-07
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to figure.  
+
+      An aircraft is at 9 000 feet at position (47º30'N, 014º00'E) and flies VFR
+      towards LOXA Aigen Im Ennstal airport. What action must be made by the
+      Pilot when approaching LOXA airport?
+    explanation: ""
+    options:
+      - id: OO4YEG8VZ
+        text: Contact Tower frequency after entering through TRAUTENFELS.
+        correct: false
+        why: ""
+      - id: OCJFNX8ZR
+        text: Fly Inbound TRAUTENFELS maintaing the same altitude.
+        correct: false
+        why: ""
+      - id: O2CXXY7R4
+        text: Immediately descend to 5 000 feet and contact 130.00.
+        correct: true
+        why: ""
+      - id: OGN4RZQF9
+        text: Contact Wien Information 124.40 for clearance.
+        correct: false
+        why: ""
+- id: QBVFBDDL
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333462
+    - AVEXAM-32720
+  annexes:
+    - vfr-chart-bavaria-straubing-area-edms-straubing-1054-1350m-127
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: chart
+    question: Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017. What is the distance
+      and true course from RODING VOR (RDG, N49°02.5' E012°31.5') to
+      THALMÄSSING-WAIZENHOFEN (EDPW, N49° 03.85' E011° 12.57') airfield?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 272°, 52 NM
+        wrongAnswers:
+          - 092°, 39 NM
+          - 092°, 52 NM
+          - 272°, 39 NM
+        explanation: >-
+          RODING is at 12°31.5′ E and THALMÄSSING-WAIZENHOFEN at 11°12.57′ E, so
+          it lies to the west by 78.9′ of longitude. At 49° N one minute of
+          longitude is about 0.655 NM, so 78.9 × 0.655 = 51.7 NM. The 1.35′
+          difference in latitude hardly changes this.
+
+
+          The true course is just north of due west, **272°**, and the distance
+          is **52 NM**.
+- id: QBWSHL8TU
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332863
+    - AVEXAM-59162
+  annexes:
+    - jeppesen-vfr-chart-icao-1-08
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017\.   
+       Find the frequency of the navaid which is located approximately 11 NM south of Munich aerodrome? (Munich aerodrome: N48° 21.23' E011° 47.17')
+    explanation: ""
+    options:
+      - id: OOITJR2NL
+        text: 115.20 MHz
+        correct: false
+        why: ""
+      - id: OLTBMJR54
+        text: 112.30 MHz
+        correct: true
+        why: ""
+      - id: OL8KOMMNR
+        text: 115.00 MHz
+        correct: false
+        why: ""
+      - id: OQUBUWW6V
+        text: 114.40 MHz
+        correct: false
+        why: ""
+- id: QC0YXTSRA
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331120
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: chart
+    question: "Given the following information, calculate the drift angle: TAS: 179
+      kt Wind: 330°(M)/25 kt VAR: 20°W Course: 210°(M)"
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 8° Left
+        wrongAnswers:
+          - 10° Left
+          - 18° Left
+          - 12° Left
+        explanation: >-
+          The wind is 120° off the track, giving a crosswind of 25 × sin 120° =
+          21.7 kt and a headwind of 12.5 kt.
+
+
+          The ground speed along the track is about 165 kt, so the drift is the
+          angle whose tangent is 21.7 ÷ 165, which is about **8° Left**. The
+          wind and the course are both magnetic, so the variation is not needed.
+- id: QCHQMGY53
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335677
+    - ATPLGS-628084
+    - ATPLGS-629346
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017\.   
+       Find the highest obstacle or elevation, within a 10 NM wide corridor and considering a 5 NM radius around the aerodromes, when flying directly from Griesau (N48°57′, E12°25′) to Arnbruck (N49°7′, E12°59′).
+    explanation: ""
+    options:
+      - id: ODQHQ0ZJ7
+        text: 4 055 ft.
+        correct: true
+        why: ""
+      - id: OVHG3EBET
+        text: 3 438 ft.
+        correct: false
+        why: ""
+      - id: OCPBOLGR7
+        text: 3 717 ft.
+        correct: false
+        why: ""
+      - id: OFYMZNUG7
+        text: 4 777 ft.
+        correct: false
+        why: ""
+- id: QCIAFEIW
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334214
+    - BGS-331026
+  annexes:
+    - jeppesen-vfr-chart-icao-1-01
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      (For this question use VFR chart ED-4 from the Jeppesen GSPRM 2017).   
+       Which option would be the best visual point flying VFR in the vicinity of Albstadt Degerfeld aerodrome (EDSA) (N48o 15', E009o 04')?
+    explanation: ""
+    options:
+      - id: OMQTHV4ZN
+        text: The natural high point with elevation 2638 about 8 NM east of EDSA.
+        correct: false
+        why: ""
+      - id: OJJZG7QEI
+        text: The village TROCHTELFINGEN about 8 NM east-north-east of EDSA.
+        correct: false
+        why: ""
+      - id: OMPWQBK8U
+        text: The T junction of the railway near GAMMERTINGEN about 6 NM east of EDSA.
+        correct: true
+        why: ""
+      - id: O4Q0T919H
+        text: One of the T junctions of the secondary roads in the area 9 NM east of
+          EDSA.
+        correct: false
+        why: ""
+- id: QCNWHAST
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331638
+    - ATPLGS-628084
+    - ATPLGS-629346
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.   
+       Find the highest obstacle or elevation, within a corridor 5 NM either side of track and considering a 5 NM radius around the aerodromes, when flying directly from Griesau (N48°57′, E12°25′) to Arnbruck (N49°7′, E12°59′).
+    explanation: ""
+    options:
+      - id: O8ZTE19HI
+        text: 3 717 ft.
+        correct: false
+        why: ""
+      - id: OXA4JZP78
+        text: 4 777 ft.
+        correct: false
+        why: ""
+      - id: OAJRAMJPB
+        text: 3 438 ft.
+        correct: false
+        why: ""
+      - id: OGON5GWEX
+        text: 4 055 ft.
+        correct: true
+        why: ""
+- id: QDCICVFQ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334165
+    - BGS-331050
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - 033.01.01.01.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure or Alicante (LEAL) charts 19-1 and 19-3 from the VFR
+      section of the GSPRM Jeppesen.   
+
+      You are flying northbound along the coast and you have to transit the
+      Alicante Air Traffic Zone (ATZ), which of the following is the correct
+      route when crossing the ATZ?
+    explanation: ""
+    options:
+      - id: OXOS2UYQM
+        text: Join the South Corridor at Point SW to VOR ALT, then to Point N, and
+          follow the North Route to Point NE.
+        correct: false
+        why: ""
+      - id: OJMZUBUNO
+        text: Join the South Corridor at Point SW to VOR ALT, then follow the North
+          Corridor to Point NE1.
+        correct: true
+        why: ""
+      - id: OKYM3FBNP
+        text: Follow the coast line across the ATZ and call when crossing the runway
+          centreline.
+        correct: false
+        why: ""
+      - id: O5E4COX0X
+        text: Follow the coast line to Point SW, then to Point N, then to Point NE1.
+        correct: false
+        why: ""
+- id: QDGAH8RX6
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-339134
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017\.   
+
+      Along which route do you proceed if you experience a communication
+      failure?
+    explanation: ""
+    options:
+      - id: OI12HKD5S
+        text: North route
+        correct: false
+        why: ""
+      - id: OEA32QPY8
+        text: Tabarca route
+        correct: false
+        why: ""
+      - id: ODQ89LIV2
+        text: North corridor
+        correct: false
+        why: ""
+      - id: OGHKDKGXM
+        text: East of South route
+        correct: true
+        why: ""
+- id: QDIGPH7OT
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338242
+    - ATPLGS-629345
+    - AVEXAM-30301
+  annexes:
+    - jeppesen-vfr-chart-icao-1-06
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to VFR chart ED-4 from the Jeppesen GSPRM 2017\. You are
+      planning a VFR flight from Albstadt (EDSA) (N48°15.0' E009°03.6') to
+      Laupheim (ETHL) (N48°13.2' E009°54.6') aerodromes. What are the
+      callsign(s) and frequency(ies) of the flight information services for this
+      route?
+    explanation: ""
+    options:
+      - id: O7KRDPTEE
+        text: Langen information 128.95 mHz, Munchen information 126.95 mHz, and Erbach
+          information 118.27 mHz.
+        correct: false
+        why: ""
+      - id: OFFQDWUFX
+        text: Degerfeld information 125.10 mHz and Laupheim information 122.10 mHz.
+        correct: false
+        why: ""
+      - id: ODLEDCOOA
+        text: Degerfeld information 125.10 mHz and Langen information 128.95 mHz.
+        correct: false
+        why: ""
+      - id: ORNKLEX9F
+        text: Langen information 128.95 mHz and Munchen information 126.95 mHz.
+        correct: true
+        why: ""
+- id: QDJQIJPCQ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337414
+    - ATPLGS-629371
+  annexes:
+    - jeppesen-lddu-19-1
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: |-
+      Refer to Dubrovnik VFR Chart 19-1 from Jeppesen GSPRM 2017.  
+      How many visual procedures are published?
+    explanation: ""
+    options:
+      - id: OKBH43TL4
+        text: "1"
+        correct: false
+        why: ""
+      - id: OJQJISL0D
+        text: "5"
+        correct: false
+        why: ""
+      - id: OKMNAFW56
+        text: "10"
+        correct: true
+        why: ""
+      - id: OGAGA296L
+        text: "12"
+        correct: false
+        why: ""
+- id: QDJTYNNU6
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334710
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: An aircraft is flying at FL{{fl}}, OAT {{oat}} °C, QNH {{qnh}} hPa
+      (station at sea level). Assume 1 hPa = 30 ft. What is the true altitude?
+    variables:
+      - id: fl
+        label: flight level
+        unit: ""
+      - id: oat
+        label: OAT
+        unit: °C
+      - id: qnh
+        label: QNH
+        unit: hPa
+    answer:
+      formula: (fl * 100 + (qnh - 1013) * 30) * (1 + 0.004 * (oat - 15 + 0.2 * fl))
+      unit: ft
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (fl * 100 + (qnh - 1013) * 30)
+      - id: d2
+        formula: (fl * 100 + (qnh - 1013) * 30) * (1 - 0.004 * (oat - 15 + 0.2 * fl))
+      - id: d3
+        formula: fl * 100 * (1 + 0.004 * (oat - 15 + 0.2 * fl))
+      - id: d4
+        formula: (fl * 100 + (1013 - qnh) * 30) * (1 + 0.004 * (oat - 15 + 0.2 * fl))
+    presets:
+      - id: p1
+        values:
+          fl: 180
+          oat: -11
+          qnh: 1003
+      - id: p2
+        values:
+          fl: 140
+          oat: -5
+          qnh: 1000
+      - id: p3
+        values:
+          fl: 240
+          oat: -40
+          qnh: 1020
+    explanation: >-
+      True altitude is the pressure altitude corrected for the QNH (30 ft per
+      hPa difference from 1013 hPa) and for temperature (about 4 ft per 1000 ft
+      per °C of ISA deviation). ISA temperature at the level is 15 - 2 * FL/10
+      °C.
+
+
+      **Solution**
+
+
+      ISA temperature = {{= 15 - 0.2 * fl}} °C, ISA deviation = {{= (oat - 15 +
+      0.2 * fl)}} °C
+
+
+      Altitude corrected for QNH = {{= (fl * 100 + (qnh - 1013) * 30)}} ft
+
+
+      {{= (fl * 100 + (qnh - 1013) * 30)}} * (1 + 0.004 * {{= (oat - 15 + 0.2 *
+      fl)}}) = **{{answer}} ft**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ft**: the temperature correction was omitted.
+
+      - **{{d2}} ft**: the temperature correction has the wrong sign (warmer
+      than ISA means a higher true altitude).
+
+      - **{{d3}} ft**: the QNH correction was omitted.
+
+      - **{{d4}} ft**: the QNH correction was applied with the wrong sign.
+- id: QDKGBJR6Q
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331423
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: chart
+    question: |-
+      Given:
+
+      - True course (TC): 017°
+      - Wind: 160°/25 kts
+      - True airspeed (TAS): 180 kts
+
+      Find wind correction angle (WCA) and ground speed (GS):
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: WCA +5°, GS 199 kts.
+        wrongAnswers:
+          - WCA +5°, GS 161 kts.
+          - WCA -5°, GS 161 kts.
+          - WCA -5°, GS 199 kts.
+        explanation: The wind is 143° to the right of the track, so it has a tailwind of
+          about 20 kt and a crosswind of about 15 kt from the right. The
+          aircraft is turned about 5° to the right to correct for the crosswind,
+          which is the WCA. The ground speed is then about 180 × cos 5° + 20 =
+          199 kts.
+- id: QDUSHBDO8
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334067
+    - BGS-331469
+    - ATPLGS-629384
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - "033.01"
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to the VFR chart (Jeppesen GSPRM 2017). An aircraft on a VFR flight
+      intends to fly overhead aerodrome Straubing (EDMS). The upper limit of the
+      Straubing Class F airspace read from the chart is {{top}} ft. What is the
+      minimum indicated altitude (ft) required to clear the airspace by
+      {{margin}} ft?
+
+
+      Altimeter temperature error with an OAT -7°C at Straubing: {{err}} ft. QNH
+      at Straubing: 998 hPa. Altimeter setting: 998 hPa.
+    variables:
+      - id: top
+        label: Airspace upper limit (read from chart)
+        unit: ft
+      - id: margin
+        label: Required clearance
+        unit: ft
+      - id: err
+        label: Altimeter temperature error
+        unit: ft
+    chartInputs:
+      - top
+    answer:
+      formula: top + margin + err
+      unit: ft
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: top + margin - err
+      - id: d2
+        formula: top - margin + err
+      - id: d3
+        formula: top + err
+      - id: d4
+        formula: top + margin
+    presets:
+      - id: p1
+        values:
+          top: 3550
+          margin: 500
+          err: 240
+      - id: p2
+        values:
+          top: 4200
+          margin: 500
+          err: 180
+      - id: p3
+        values:
+          top: 2800
+          margin: 1000
+          err: 150
+    explanation: >-
+      The required true altitude is the airspace limit plus the clearance. In
+      cold air the altimeter over-reads, so the true altitude is lower than
+      indicated; the indicated altitude must therefore be higher by the
+      temperature error. The altimeter setting equals QNH, so no pressure
+      correction is needed.
+
+
+      **Solution**
+
+
+      {{f: top + margin + err}} = {{n: top + margin + err}} = **{{answer}} ft**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ft**: The temperature error was subtracted instead of added.
+
+      - **{{d2}} ft**: The clearance was subtracted instead of added.
+
+      - **{{d3}} ft**: The clearance was forgotten.
+
+      - **{{d4}} ft**: The temperature error was forgotten.
+- id: QDWLEQSI
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-339629
+    - AVEXAM-49525
+  annexes:
+    - jeppesen-lfrs-10-9
+    - jeppesen-lfrs-19-1
+  learningObjectives:
+    - 033.01.01.01.03
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Which frequency should you tune to listen to the Automatic Terminal
+      Information Service valid for Nantes/Atlantique airport?
+    explanation: ""
+    options:
+      - id: OQLB4HY4A
+        text: 126,925 MHz
+        correct: true
+        why: ""
+      - id: OGNDPZGJA
+        text: 124,25 MHz
+        correct: false
+        why: ""
+      - id: OTOTQU39W
+        text: 115,20 MHz
+        correct: false
+        why: ""
+      - id: OHX98N1KC
+        text: 124,425 MHz
+        correct: false
+        why: ""
+- id: QDYCGKRY
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335329
+    - ATPLGS-627112
+    - BGS-331413
+  annexes: []
+  learningObjectives:
+    - 033.01.01.02.03
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      What is the highest obstacle within 4 NM of the road A9, proceeding south
+      from MIKE NDB (N48°34’, E 011°36’) to where it crosses the railway line
+      north-east of OBERSCHLEISSHEIM aerodrome (EDNX) (N 48°14’, E011°34’)?
+    explanation: ""
+    options:
+      - id: OYC50EXHF
+        text: 2297 feet
+        correct: false
+        why: ""
+      - id: OEOOXRETT
+        text: 2100 feet
+        correct: false
+        why: ""
+      - id: OENBRB0LT
+        text: 2175 feet
+        correct: true
+        why: ""
+      - id: OGSQTZRSO
+        text: 1657 feet
+        correct: false
+        why: ""
+- id: QDZHCSPX
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331921
+    - ATPLGS-627111
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: chart
+    question: Refer to ALICANTE charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM 2017.
+      What is the magnetic bearing from reporting point N to NE?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 066°
+        wrongAnswers:
+          - 221°
+          - 246°
+          - 041°
+        explanation: >-
+          The magnetic bearing is measured clockwise from magnetic north. It is
+          read from the charts as the direction from reporting point N to
+          reporting point NE.
+
+
+          **Solution**
+
+
+          - Draw the line from reporting point N to NE on the charts and read
+          the bearing.
+
+          - The bearing is **066°**.
+
+
+          **Why the other answers are wrong**
+
+
+          - **246°**: the reciprocal bearing, measured from NE back to N.
+
+          - **221°**: a misread of the bearing from the wrong reference point.
+
+          - **041°**: a misread of the bearing in the wrong direction.
+- id: QDZTQPJE
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332582
+    - AVEXAM-96205
+    - ATPLGS-629272
+  annexes: []
+  learningObjectives:
+    - 033.01.01.02.07
+  template:
+    type: simple
+    question: How do you determine the position of a significant VFR waypoint for
+      insertion into a Global Navigation Satellite System (GNSS) flight plan?
+    explanation: ""
+    options:
+      - id: ORVZSCO83
+        text: By using the distance and bearing from an existing significant point and
+          using coordinates.
+        correct: true
+        why: ""
+      - id: OOM4FRUWA
+        text: By typing in the name of a city, town, or village and the corresponding
+          bearing and distance from it.
+        correct: false
+        why: ""
+      - id: OJYDN86SV
+        text: By using any designator of waypoints from IFR charts.
+        correct: false
+        why: ""
+      - id: OFUNDH0LI
+        text: It is not possible to enter your own waypoints. It is only possible to
+          select a waypoint from the internal navigation database.
+        correct: false
+        why: ""
+- id: QEENDJIMN
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338506
+    - AVEXAM-27380
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017.   
+       When approaching Alicante, what is the procedure if you experience a communication failure?
+    explanation: ""
+    options:
+      - id: OQ606BDIR
+        text: Proceed in the direction of SW reporting point, assume a track east of
+          South Route to S reporting point and maintain a maximum of 800 ft
+          AMSL.
+        correct: true
+        why: ""
+      - id: OGSFORXAK
+        text: Maintain heading and altitude for 7 minutes, then descend to 2 000 ft and
+          proceed to closest VFR reporting point and hold, waiting for light
+          signals.
+        correct: false
+        why: ""
+      - id: OF4HVE4AI
+        text: Set transponder 7600, proceed according to your filled flight plan if no
+          instructions have been received previously, otherwise follow latest
+          ATC instructions.
+        correct: false
+        why: ""
+      - id: OTZNBVMCN
+        text: Turn to the closest aerodrome without control zone, land there and inform
+          ATC via phone call.
+        correct: false
+        why: ""
+- id: QEJNPNYP5
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-339531
+    - BGS-331438
+  annexes:
+    - 032-cap-697-sep-cruise-performance-table-25-0-in-hg
+  learningObjectives:
+    - "033.01"
+  template:
+    type: chart-calculation
+    question: >-
+      Determine the aircraft's drift (to the right) on a course of {{crs}}° (M),
+      given:
+
+
+      Level: FL70, ISA+10 °C, 2500 RPM, full throttle
+
+
+      - TAS (read from the figure / CAP 697 Figure 2.2, Table 2.2.1): {{tas}} kt
+
+      - Wind: {{wd}}° (T)/{{ws}} kt
+
+      - Variation: {{var_e}}°E
+    variables:
+      - id: crs
+        label: magnetic course
+        unit: °
+      - id: wd
+        label: wind direction
+        unit: °
+      - id: ws
+        label: wind speed
+        unit: kt
+      - id: var_e
+        label: easterly variation
+        unit: °
+      - id: tas
+        label: TAS from figure
+        unit: kt
+    chartInputs:
+      - tas
+    answer:
+      formula: abs(asin(ws * sin(crs + var_e - wd) / tas))
+      unit: ° right
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: abs(asin(ws * sin(crs - wd) / tas))
+      - id: d2
+        formula: abs(asin(ws * sin(crs - var_e - wd) / tas))
+      - id: d3
+        formula: abs(asin(ws * cos(crs + var_e - wd) / tas))
+    presets:
+      - id: p1
+        values:
+          crs: 127
+          wd: 110
+          ws: 50
+          var_e: 15
+          tas: 170
+      - id: p2
+        values:
+          crs: 250
+          wd: 200
+          ws: 40
+          var_e: 10
+          tas: 160
+    explanation: >-
+      Drift is the angle between heading and track caused by the wind:
+      sin(drift) = wind speed * sin(angle between track and wind) / TAS. The
+      wind is true, so the magnetic course is converted to true with the
+      variation (east is added).
+
+
+      **Solution**
+
+
+      True course = {{crs}} + {{var_e}} = {{= crs + var_e}}°
+
+
+      Drift = asin({{ws}} * sin({{= crs + var_e}} - {{wd}}) / {{tas}}) =
+      **{{answer}}° right**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}° right**: the magnetic course was compared directly with the
+      true wind direction.
+
+      - **{{d2}}° right**: the easterly variation was subtracted instead of
+      added.
+
+      - **{{d3}}° right**: cosine used instead of sine of the wind angle.
+- id: QEXKCEJQE
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-339856
+    - AVEXAM-24314
+    - ATPLGS-629385
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: You want to plan a very accurate VFR route within a controlled
+      airspace. Which of the following landmarks do you consider best suited for
+      insertion into a GNSS flight plan using coordinates?
+    explanation: ""
+    options:
+      - id: OHIADCC86
+        text: Large wooden areas
+        correct: false
+        why: ""
+      - id: ODKC3V644
+        text: Major cities
+        correct: false
+        why: ""
+      - id: OGOQOGBFI
+        text: Lakes and rivers
+        correct: false
+        why: ""
+      - id: OBMTJVIHP
+        text: Motorway or railroad junctions
+        correct: true
+        why: ""
+- id: QFAD8LTQE
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336335
+    - AVEXAM-78676
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017.   
+       When approaching Alicante from the south and flying near the coast, when must an aircraft contact ATC?
+    explanation: ""
+    options:
+      - id: OCKJ5SBUR
+        text: At point SE.
+        correct: false
+        why: ""
+      - id: OWVQKNNNS
+        text: When crossing the ATZ boundary.
+        correct: false
+        why: ""
+      - id: OXMVAXIKV
+        text: Overhead ALT VOR.
+        correct: false
+        why: ""
+      - id: OFYBXGVGK
+        text: At point SW.
+        correct: true
+        why: ""
+- id: QFBEGBLB5
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336406
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017.   
+       What is the maximum altitude following the Tabarca route?
+    explanation: ""
+    options:
+      - id: OI3SV666V
+        text: 1 500 ft AMSL
+        correct: true
+        why: ""
+      - id: OI8QWVBWS
+        text: 1 500 ft AGL
+        correct: false
+        why: ""
+      - id: OU4DD5QQB
+        text: 2 000 ft AMSL
+        correct: false
+        why: ""
+      - id: O28T9NTKA
+        text: 2 000 ft AGL
+        correct: false
+        why: ""
+- id: QFCIAZPD
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338546
+    - ATPLQ-331549
+    - ATPLGS-627107
+    - AVEXAM-60679
+  annexes:
+    - jeppesen-vfr-chart-icao-1-08
+    - jeppesen-vfr-chart-icao-1-11
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to the chart (VFR chart ED-4, Jeppesen GSPRM).
+
+
+      Find the magnetic course for a flight from A (N{{lat1_d}}°{{lat1_m}}'
+      E{{lon1_d}}°{{lon1_m}}') to B (N{{lat2_d}}°{{lat2_m}}'
+      E{{lon2_d}}°{{lon2_m}}').
+
+
+      The magnetic variation read from the chart is {{var_e}}° E.
+    variables:
+      - id: lat1_d
+        label: Latitude A, degrees
+        unit: °
+      - id: lat1_m
+        label: Latitude A, minutes
+        unit: "'"
+      - id: lon1_d
+        label: Longitude A, degrees
+        unit: °
+      - id: lon1_m
+        label: Longitude A, minutes
+        unit: "'"
+      - id: lat2_d
+        label: Latitude B, degrees
+        unit: °
+      - id: lat2_m
+        label: Latitude B, minutes
+        unit: "'"
+      - id: lon2_d
+        label: Longitude B, degrees
+        unit: °
+      - id: lon2_m
+        label: Longitude B, minutes
+        unit: "'"
+      - id: var_e
+        label: Variation (east, read from the figure)
+        unit: °
+    chartInputs:
+      - var_e
+    answer:
+      formula: (atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) * cos(((lat1_d
+        + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d + lat2_m / 60) -
+        (lat1_d + lat1_m / 60)) - var_e) + 360 - 360 * floor(((atan2(((lon2_d +
+        lon2_m / 60) - (lon1_d + lon1_m / 60)) * cos(((lat1_d + lat1_m / 60) +
+        (lat2_d + lat2_m / 60)) / 2), (lat2_d + lat2_m / 60) - (lat1_d + lat1_m
+        / 60)) - var_e) + 360) / 360)
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) * cos(((lat1_d
+          + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d + lat2_m / 60)
+          - (lat1_d + lat1_m / 60))) + 360 - 360 * floor(((atan2(((lon2_d +
+          lon2_m / 60) - (lon1_d + lon1_m / 60)) * cos(((lat1_d + lat1_m / 60) +
+          (lat2_d + lat2_m / 60)) / 2), (lat2_d + lat2_m / 60) - (lat1_d +
+          lat1_m / 60))) + 360) / 360)
+      - id: d2
+        formula: ((atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) *
+          cos(((lat1_d + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d +
+          lat2_m / 60) - (lat1_d + lat1_m / 60)) - var_e) + 360 - 360 *
+          floor(((atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) *
+          cos(((lat1_d + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d +
+          lat2_m / 60) - (lat1_d + lat1_m / 60)) - var_e) + 360) / 360)) + 180 -
+          360 * floor((((atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60))
+          * cos(((lat1_d + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d
+          + lat2_m / 60) - (lat1_d + lat1_m / 60)) - var_e) + 360 - 360 *
+          floor(((atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) *
+          cos(((lat1_d + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d +
+          lat2_m / 60) - (lat1_d + lat1_m / 60)) - var_e) + 360) / 360)) + 180)
+          / 360)
+      - id: d3
+        formula: ((atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) *
+          cos(((lat1_d + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d +
+          lat2_m / 60) - (lat1_d + lat1_m / 60))) + 360 - 360 *
+          floor(((atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) *
+          cos(((lat1_d + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d +
+          lat2_m / 60) - (lat1_d + lat1_m / 60))) + 360) / 360)) + 180 - 360 *
+          floor((((atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) *
+          cos(((lat1_d + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d +
+          lat2_m / 60) - (lat1_d + lat1_m / 60))) + 360 - 360 *
+          floor(((atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) *
+          cos(((lat1_d + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d +
+          lat2_m / 60) - (lat1_d + lat1_m / 60))) + 360) / 360)) + 180) / 360)
+      - id: d4
+        formula: (atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) * cos(((lat1_d
+          + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d + lat2_m / 60)
+          - (lat1_d + lat1_m / 60)) + var_e) + 360 - 360 *
+          floor(((atan2(((lon2_d + lon2_m / 60) - (lon1_d + lon1_m / 60)) *
+          cos(((lat1_d + lat1_m / 60) + (lat2_d + lat2_m / 60)) / 2), (lat2_d +
+          lat2_m / 60) - (lat1_d + lat1_m / 60)) + var_e) + 360) / 360)
+    presets:
+      - id: p1
+        values:
+          lat1_d: 48
+          lat1_m: 35
+          lon1_d: 11
+          lon1_m: 8
+          lat2_d: 48
+          lat2_m: 11
+          lon2_d: 11
+          lon2_m: 49
+          var_e: 2.4
+      - id: p2
+        values:
+          lat1_d: 48
+          lat1_m: 30.9
+          lon1_d: 14
+          lon1_m: 24.5
+          lat2_d: 48
+          lat2_m: 31.1
+          lon2_d: 13
+          lon2_m: 20.8
+          var_e: 3.3
+    explanation: >-
+      The true course follows from the difference in position: the east-west
+      distance is the change in longitude times the cosine of the mean latitude,
+      the north-south distance is the change in latitude. The magnetic course is
+      the true course minus the east variation (plus the west variation).
+
+
+      **Solution**
+
+
+      True course = {{= atan2((lon2_d + lon2_m / 60 - lon1_d - lon1_m / 60) *
+      cos((lat1_d + lat1_m / 60 + lat2_d + lat2_m / 60) / 2), lat2_d + lat2_m /
+      60 - lat1_d - lat1_m / 60)}}° (negative values mean the angle is measured
+      west of north, add 360°)
+
+
+      Magnetic course = true course - {{var_e}}° = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the variation is ignored, which gives the true course.
+
+      - **{{d2}}°**: the reciprocal of the correct magnetic course (flight
+      direction reversed).
+
+      - **{{d3}}°**: the reciprocal of the true course.
+
+      - **{{d4}}°**: the east variation is added instead of subtracted.
+- id: QFCPLWLM8
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335514
+    - BGS-331302
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      An aircraft is being flown in the cruise. The wind pushes it to the left
+      of track. Determine the expected drift (magnitude), given:
+
+
+      - Course: {{crs}}° (M)
+
+      - TAS: {{tas}} kt
+
+      - Forecast wind: {{wd}}°/{{ws}} kt
+
+      - Variation: {{var_w}}°W
+    variables:
+      - id: crs
+        label: magnetic course
+        unit: °
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: wd
+        label: wind direction
+        unit: °
+      - id: ws
+        label: wind speed
+        unit: kt
+      - id: var_w
+        label: westerly variation
+        unit: °
+    answer:
+      formula: abs(asin(ws * sin(wd - (crs - var_w)) / tas))
+      unit: ° left
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: abs(asin(ws * sin(wd - crs) / tas))
+      - id: d2
+        formula: abs(asin(ws * sin(wd - (crs + var_w)) / tas))
+      - id: d3
+        formula: abs(asin(ws * cos(wd - (crs - var_w)) / tas))
+    presets:
+      - id: p1
+        values:
+          crs: 210
+          tas: 179
+          wd: 330
+          ws: 50
+          var_w: 20
+      - id: p2
+        values:
+          crs: 60
+          tas: 140
+          wd: 130
+          ws: 40
+          var_w: 15
+    explanation: >-
+      Drift follows from sin(drift) = wind speed * sin(angle between wind and
+      track) / TAS. The wind is given in true degrees, so the magnetic course
+      must first be converted to a true course (west variation is subtracted).
+
+
+      **Solution**
+
+
+      True course = {{crs}} - {{var_w}} = {{= (crs - var_w)}}°
+
+
+      Drift = asin({{ws}} * sin({{wd}} - {{= (crs - var_w)}}) / {{tas}}) =
+      **{{answer}}° left**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}° left**: the magnetic course was compared directly with the
+      true wind direction.
+
+      - **{{d2}}° left**: the westerly variation was added instead of
+      subtracted.
+
+      - **{{d3}}° left**: cosine used instead of sine of the wind angle.
+- id: QFCROHXXL
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331593
+    - ATPLGS-629322
+    - AVEXAM-44215
+    - AVEXAM-35831
+  annexes:
+    - jeppesen-vfr-chart-icao-1-11
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      Determine the true course (TC) from point A to point B, given the
+      coordinates:
+
+
+      - Point A: N{{alat_d}}° {{alat_m}}' E{{alon_d}}° {{alon_m}}'
+
+      - Point B: N{{blat_d}}° {{blat_m}}' E{{blon_d}}° {{blon_m}}'
+
+
+      Give the true course in degrees.
+    variables:
+      - id: alat_d
+        label: Latitude A (degrees)
+        unit: °
+      - id: alat_m
+        label: Latitude A (minutes)
+        unit: min
+      - id: alon_d
+        label: Longitude A (degrees)
+        unit: °
+      - id: alon_m
+        label: Longitude A (minutes)
+        unit: min
+      - id: blat_d
+        label: Latitude B (degrees)
+        unit: °
+      - id: blat_m
+        label: Latitude B (minutes)
+        unit: min
+      - id: blon_d
+        label: Longitude B (degrees)
+        unit: °
+      - id: blon_m
+        label: Longitude B (minutes)
+        unit: min
+    answer:
+      formula: ((atan2(sin((blon_d + blon_m / 60) - (alon_d + alon_m / 60)) *
+        cos(blat_d + blat_m / 60), cos(alat_d + alat_m / 60) * sin(blat_d +
+        blat_m / 60) - sin(alat_d + alat_m / 60) * cos(blat_d + blat_m / 60) *
+        cos((blon_d + blon_m / 60) - (alon_d + alon_m / 60)))) - 360 *
+        floor((atan2(sin((blon_d + blon_m / 60) - (alon_d + alon_m / 60)) *
+        cos(blat_d + blat_m / 60), cos(alat_d + alat_m / 60) * sin(blat_d +
+        blat_m / 60) - sin(alat_d + alat_m / 60) * cos(blat_d + blat_m / 60) *
+        cos((blon_d + blon_m / 60) - (alon_d + alon_m / 60)))) / 360))
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: atan2(sin((blon_d + blon_m) - (alon_d + alon_m)) * cos(blat_d +
+          blat_m), cos(alat_d + alat_m) * sin(blat_d + blat_m) - sin(alat_d +
+          alat_m) * cos(blat_d + blat_m) * cos((blon_d + blon_m) - (alon_d +
+          alon_m)))
+      - id: d2
+        formula: (atan2(sin((blon_d + blon_m / 60) - (alon_d + alon_m / 60)) *
+          cos(blat_d + blat_m / 60), cos(alat_d + alat_m / 60) * sin(blat_d +
+          blat_m / 60) - sin(alat_d + alat_m / 60) * cos(blat_d + blat_m / 60) *
+          cos((blon_d + blon_m / 60) - (alon_d + alon_m / 60)))) + 180
+      - id: d3
+        formula: 90 - (atan2(sin((blon_d + blon_m / 60) - (alon_d + alon_m / 60)) *
+          cos(blat_d + blat_m / 60), cos(alat_d + alat_m / 60) * sin(blat_d +
+          blat_m / 60) - sin(alat_d + alat_m / 60) * cos(blat_d + blat_m / 60) *
+          cos((blon_d + blon_m / 60) - (alon_d + alon_m / 60))))
+      - id: d4
+        formula: -(atan2(sin((blon_d + blon_m / 60) - (alon_d + alon_m / 60)) *
+          cos(blat_d + blat_m / 60), cos(alat_d + alat_m / 60) * sin(blat_d +
+          blat_m / 60) - sin(alat_d + alat_m / 60) * cos(blat_d + blat_m / 60) *
+          cos((blon_d + blon_m / 60) - (alon_d + alon_m / 60))))
+    presets:
+      - id: p1
+        values:
+          alat_d: 48
+          alat_m: 30.9
+          alon_d: 14
+          alon_m: 24.5
+          blat_d: 48
+          blat_m: 31.1
+          blon_d: 13
+          blon_m: 20.8
+      - id: p2
+        values:
+          alat_d: 49
+          alat_m: 0
+          alon_d: 10
+          alon_m: 0
+          blat_d: 49
+          blat_m: 15
+          blon_d: 11
+          blon_m: 0
+      - id: p3
+        values:
+          alat_d: 52
+          alat_m: 30
+          alon_d: 5
+          alon_m: 10
+          blat_d: 52
+          blat_m: 20
+          blon_d: 4
+          blon_m: 50
+    explanation: >-
+      The true course is the initial great-circle bearing from point A to point
+      B, measured clockwise from true north. It is computed from the coordinates
+      with the spherical bearing formula. Minutes are converted to decimal
+      degrees (minutes / 60); if the result is negative, add 360° so that it
+      lies between 0° and 360°.
+
+
+      **Solution**
+
+
+      Longitude difference (B minus A): {{= (blon_d + blon_m / 60) - (alon_d +
+      alon_m / 60)}}°
+
+
+      Bearing before adjusting to 0° to 360°: {{= atan2(sin((blon_d + blon_m /
+      60) - (alon_d + alon_m / 60)) * cos(blat_d + blat_m / 60), cos(alat_d +
+      alat_m / 60) * sin(blat_d + blat_m / 60) - sin(alat_d + alat_m / 60) *
+      cos(blat_d + blat_m / 60) * cos((blon_d + blon_m / 60) - (alon_d + alon_m
+      / 60)))}}°
+
+
+      True course: **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: minutes used as decimal degrees (minutes not divided by
+      60).
+
+      - **{{d2}}°**: reciprocal course (bearing + 180°), i.e. the direction from
+      B back to A.
+
+      - **{{d3}}°**: 90° minus the bearing; the sine and cosine axes of the
+      formula are swapped.
+
+      - **{{d4}}°**: sign error; the mirror image of the bearing is given.
+- id: QFGXUYJ1D
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333794
+    - ATPLQ-336571
+    - AVEXAM-54361
+    - BGS-331046
+    - ATPLGS-629293
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      A pilot flies under VFR and must clear the highest obstacle on the route
+      by a minimum height. Given the following information:
+
+
+      - Highest obstacle elevation: {{obstacle}} ft
+
+      - Required clearance: {{clearance}} ft
+
+      - Magnetic track: {{track}}°
+
+      - QNH: {{qnh}} hPa
+
+      - Temperature: ISA {{isa}}°C
+
+
+      Assume 1 hPa = 30 ft. What is the lowest appropriate VFR flight level that
+      gives this clearance?
+    variables:
+      - id: obstacle
+        label: Highest obstacle elevation
+        unit: ft
+      - id: clearance
+        label: Required clearance
+        unit: ft
+      - id: track
+        label: Magnetic track
+        unit: °
+      - id: qnh
+        label: QNH
+        unit: hPa
+      - id: isa
+        label: Temperature deviation from ISA
+        unit: °C
+    answer:
+      formula: ((1500 - 1000 * floor(track / 180)) + 2000 * ceil((((obstacle +
+        clearance) / (1 + 0.004 * isa) - (qnh - 1013.25) * 30) - (1500 - 1000 *
+        floor(track / 180))) / 2000)) / 100
+      unit: FL
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: ((1000 - 1000 * floor(track / 180)) + 2000 * ceil((((obstacle +
+          clearance) / (1 + 0.004 * isa) - (qnh - 1013.25) * 30) - (1000 - 1000
+          * floor(track / 180))) / 2000)) / 100
+      - id: d2
+        formula: ((1500 - 1000 * floor(track / 180)) + 2000 * floor((((obstacle +
+          clearance) / (1 + 0.004 * isa) - (qnh - 1013.25) * 30) - (1500 - 1000
+          * floor(track / 180))) / 2000)) / 100
+      - id: d3
+        formula: round((obstacle + clearance) / 100)
+    presets:
+      - id: p1
+        values:
+          obstacle: 13421
+          clearance: 2000
+          track: 311
+          qnh: 989
+          isa: -10
+      - id: p2
+        values:
+          obstacle: 4200
+          clearance: 1000
+          track: 168
+          qnh: 1026
+          isa: -12
+      - id: p3
+        values:
+          obstacle: 9000
+          clearance: 1000
+          track: 80
+          qnh: 1010
+          isa: 5
+    explanation: >-
+      The required height is the obstacle elevation plus the clearance. It is
+      corrected for the temperature (4 ft per degree per 1000 ft) and for the
+      QNH (30 ft per hPa) to give a flight level reading, and then the lowest
+      VFR level for the track at or above that value is chosen. For tracks of
+      000° to 179° magnetic the VFR levels are odd thousands plus 500 ft, and
+      for 180° to 359° they are even thousands plus 500 ft.
+
+
+      **Solution**
+
+
+      - Required height: {{= obstacle + clearance}} ft
+
+      - Corrected for temperature: {{= (obstacle + clearance) / (1 + 0.004 *
+      isa)}} ft
+
+      - Corrected for QNH: {{= ((obstacle + clearance) / (1 + 0.004 * isa) -
+      (qnh - 1013.25) * 30)}} ft
+
+      - Lowest VFR level for the track at or above that value: **FL{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **FL{{d1}}**: uses the IFR level pattern instead of the VFR pattern for
+      the track.
+
+      - **FL{{d2}}**: rounds down, so the level does not give the required
+      clearance.
+
+      - **FL{{d3}}**: only converts the obstacle height to a flight level and
+      ignores the corrections.
+- id: QFLOQTMUY
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337591
+    - ATPLGS-123166
+    - AVEXAM-70906
+  annexes:
+    - croatia-aip-table-ldsp-ad-2-3-operational-hours-and
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: |-
+      Refer to figure.
+
+      The operational hours of the ARO in local time are.
+    explanation: ""
+    options:
+      - id: OUVIQFYSR
+        text: 04:00-20:00.
+        correct: false
+        why: ""
+      - id: OKFDYKPZD
+        text: 05:00-20:00.
+        correct: false
+        why: ""
+      - id: O9OSN7FVF
+        text: 05:00-21:00.
+        correct: false
+        why: ""
+      - id: ODDD6LKBD
+        text: 00:00-24:00.
+        correct: true
+        why: ""
+- id: QFUN98PBC
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332583
+  annexes:
+    - jeppesen-vfr-chart-icao-1-09
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: "The minimum grid area altitude applicable for Mengen airport (EDTM,
+      48°03'N 009°22'E) is:"
+    explanation: ""
+    options:
+      - id: OCMS1HTAA
+        text: 1 819 ft.
+        correct: false
+        why: ""
+      - id: O7RC001UG
+        text: 460 ft.
+        correct: false
+        why: ""
+      - id: OKE5R6LFJ
+        text: 1 120 m.
+        correct: false
+        why: ""
+      - id: OULOR1JUI
+        text: 4 600 ft.
+        correct: true
+        why: ""
+- id: QFYNRYWAY
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338360
+    - ATPLGS-627105
+  annexes:
+    - jeppesen-lfrs-10-9
+    - jeppesen-lfrs-19-1
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: |-
+      Refer to NANTES - Charts 19-1, 19-2, 19-3 from Jeppesen GSPRM 2017.   
+       What is correct concerning VFR transit flights?
+    explanation: ""
+    options:
+      - id: OKC30UVME
+        text: Transit flights have to maintain an altitude between 1 000 ft and 1 500 ft
+          AMSL; altitudes above and below are reserved for arrivals and
+          departures.
+        correct: false
+        why: ""
+      - id: OW0ZT5WT4
+        text: It is recommended to conduct arrivals at 1 500 ft AMSL and departures at 1
+          000 ft AMSL.
+        correct: false
+        why: ""
+      - id: OBLHF1TRY
+        text: ATC can instruct aircraft to report passing one or more of the waypoints
+          along the route.
+        correct: true
+        why: ""
+      - id: OS7FEXVAB
+        text: VFR transit flights have to follow either the western or the eastern
+          route.
+        correct: false
+        why: ""
+- id: QGICLVAT
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331586
+    - BGS-339578
+    - AVEXAM-16189
+  annexes: []
+  learningObjectives:
+    - 033.01.01.02.05
+  template:
+    type: calculation
+    question: >-
+      The elevation of the departure airport is {{elev}} ft.
+
+
+      An aircraft has to climb to FL{{fl}} with a rate of climb of {{roc}}
+      ft/min.
+
+
+      The QNH is {{qnh}} hPa.
+
+
+      Determine the climb time (assume 1 hPa = 30 ft).
+    variables:
+      - id: elev
+        label: Airport elevation
+        unit: ft
+      - id: fl
+        label: Flight level
+        unit: FL
+      - id: roc
+        label: Rate of climb
+        unit: ft/min
+      - id: qnh
+        label: QNH
+        unit: hPa
+    answer:
+      formula: (fl * 100 - (elev + (1013 - qnh) * 30)) / roc
+      unit: min
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (fl * 100 - elev) / roc
+      - id: d2
+        formula: (fl * 100 - elev - 2 * (1013 - qnh) * 30) / roc
+      - id: d3
+        formula: (fl * 100 - elev + 2 * (1013 - qnh) * 30) / roc
+    presets:
+      - id: p1
+        values:
+          elev: 2500
+          fl: 105
+          roc: 750
+          qnh: 995
+      - id: p2
+        values:
+          elev: 1800
+          fl: 85
+          roc: 700
+          qnh: 985
+      - id: p3
+        values:
+          elev: 3200
+          fl: 120
+          roc: 600
+          qnh: 1000
+    explanation: >-
+      The flight level is a pressure altitude, so the height to climb is
+      measured from the pressure altitude of the aerodrome: its elevation plus
+      30 ft per hPa that the QNH is below 1013 hPa. The climb time is that
+      height divided by the rate of climb.
+
+
+      **Solution**
+
+
+      Airport pressure altitude = {{elev}} + (1013 - {{qnh}}) × 30 = {{= (elev +
+      (1013 - qnh) * 30)}} ft
+
+      Height to climb = {{= fl * 100}} - {{= (elev + (1013 - qnh) * 30)}} = {{=
+      fl * 100 - (elev + (1013 - qnh) * 30)}} ft
+
+
+      {{f: (fl * 100 - (elev + (1013 - qnh) * 30)) / roc}} = {{n: (fl * 100 -
+      (elev + (1013 - qnh) * 30)) / roc}} = **{{answer}} min**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} min**: the QNH correction is ignored; the height is taken from
+      the elevation only.
+
+      - **{{d2}} min**: the QNH correction is applied with the wrong sign, and
+      twice.
+
+      - **{{d3}} min**: the QNH correction is applied twice in the right
+      direction (it is added to the height instead of the aerodrome pressure
+      altitude being computed).
+- id: QGUOLTXU
+  docId: "033.01"
+  relatedQuestions:
+    - QRZZADRR
+  externalIds:
+    - ATPLQ-336220
+    - AVEXAM-13363
+    - ATPLGS-129295
+  annexes:
+    - jeppesen-vfr-chart-icao-1-08
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to VFR chart ED-4 from Jeppesen GSPRM 2017. You are approaching
+      airfield MÜHLDORF (EDMY) from the east on track {{track}}°. The descent
+      should be planned to arrive at {{target_alt}} ft approximately abeam of
+      airfield ALTÖTTING.
+
+
+      Atmospheric conditions: ISA
+
+
+      - TAS: {{tas}} kt
+
+      - Average wind: {{wind_dir}}° (T) / {{wind_spd}} kt
+
+      - Rate of descent: {{rod}} ft/min
+
+      - Cruising level: FL{{fl_cruise}}
+
+      - Distance from MÜHLDORF to the point abeam ALTÖTTING (value read from the
+      chart): {{dist_fig}} NM
+
+
+      How many nautical miles from MÜHLDORF is your top of descent (ToD)?
+    variables:
+      - id: track
+        label: Track
+        unit: °
+      - id: target_alt
+        label: Target altitude
+        unit: ft
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: wind_dir
+        label: Wind direction
+        unit: °
+      - id: wind_spd
+        label: Wind speed
+        unit: kt
+      - id: rod
+        label: Rate of descent
+        unit: ft/min
+      - id: fl_cruise
+        label: Cruising level
+        unit: FL
+      - id: dist_fig
+        label: Distance MÜHLDORF to point abeam ALTÖTTING (read from the graph)
+        unit: NM
+    chartInputs:
+      - dist_fig
+    answer:
+      formula: (fl_cruise * 100 - target_alt) / rod * (tas - wind_spd * cos(wind_dir -
+        track)) / 60 + dist_fig
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (fl_cruise * 100 - target_alt) / rod * (tas - wind_spd * cos(wind_dir -
+          track)) / 60
+      - id: d2
+        formula: (fl_cruise * 100 - target_alt) / rod * tas / 60 + dist_fig
+      - id: d3
+        formula: (fl_cruise * 100 - target_alt) / rod * (tas + wind_spd * cos(wind_dir -
+          track)) / 60 + dist_fig
+      - id: d4
+        formula: (fl_cruise * 100 - target_alt) / (2 * rod) * (tas - wind_spd *
+          cos(wind_dir - track)) / 60 + dist_fig
+    presets:
+      - id: p1
+        values:
+          track: 270
+          target_alt: 3500
+          tas: 110
+          wind_dir: 300
+          wind_spd: 16
+          rod: 500
+          fl_cruise: 125
+          dist_fig: 6
+      - id: p2
+        values:
+          track: 270
+          target_alt: 2500
+          tas: 120
+          wind_dir: 320
+          wind_spd: 20
+          rod: 600
+          fl_cruise: 110
+          dist_fig: 8
+    explanation: >-
+      The top of descent is the distance flown during the descent, plus the
+      distance from MÜHLDORF to the point abeam ALTÖTTING. The descent takes
+      (cruising level - target altitude) / rate of descent minutes. The
+      groundspeed is the TAS reduced by the headwind component, which is the
+      wind speed multiplied by the cosine of the angle between the wind
+      direction and the track.
+
+
+      **Solution**
+
+
+      Time to descend: {{n: (fl_cruise * 100 - target_alt) / rod}} min
+
+
+      Groundspeed: {{n: tas - wind_spd * cos(wind_dir - track)}} kt
+
+
+      TOD distance: {{f: (fl_cruise * 100 - target_alt) / rod * (tas - wind_spd
+      * cos(wind_dir - track)) / 60 + dist_fig}} = {{n: (fl_cruise * 100 -
+      target_alt) / rod * (tas - wind_spd * cos(wind_dir - track)) / 60 +
+      dist_fig}} = **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+      - **{{d1}} NM**: forgets the distance from MÜHLDORF to the point abeam
+      ALTÖTTING.
+
+      - **{{d2}} NM**: ignores the wind.
+
+      - **{{d3}} NM**: treats the wind as a tailwind.
+
+      - **{{d4}} NM**: uses twice the rate of descent, which halves the descent
+      time.
+- id: QH2H3LXFB
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335494
+    - ATPLGS-629337
+    - AVEXAM-99834
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      The following information is for an aircraft in the cruise at 11:50 UTC.
+
+
+      Cruise level: FL410
+
+
+      - OAT: ISA +{{isa_dev}}°C
+
+      - Mach number: {{mach}}
+
+      - Wind component: {{wc}} kt (negative = headwind)
+
+
+      What will be the groundspeed? (Use a local speed of sound of 38.9 *
+      sqrt(T) kt, T in kelvin; ISA temperature at FL410 is -56.5°C.)
+    variables:
+      - id: mach
+        label: Mach number
+        unit: ""
+      - id: isa_dev
+        label: ISA deviation
+        unit: °C
+      - id: wc
+        label: Wind component
+        unit: kt
+    answer:
+      formula: mach * 38.9 * sqrt(273.15 - 56.5 + isa_dev) + wc
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: mach * 38.9 * sqrt(273.15 - 56.5 + isa_dev) - wc
+      - id: d2
+        formula: mach * 38.9 * sqrt(273.15 - 56.5 + isa_dev)
+      - id: d3
+        formula: mach * 38.9 * sqrt(273.15 - 56.5) + wc
+    presets:
+      - id: p1
+        values:
+          mach: 0.86
+          isa_dev: 10
+          wc: -25
+      - id: p2
+        values:
+          mach: 0.82
+          isa_dev: 15
+          wc: -40
+      - id: p3
+        values:
+          mach: 0.78
+          isa_dev: 5
+          wc: 30
+    explanation: >-
+      Groundspeed is true airspeed plus the wind component along track. TAS
+      follows from the Mach number and the speed of sound, which depends on the
+      static air temperature (ISA temperature at FL410 plus the deviation).
+
+
+      **Solution**
+
+
+      SAT = -56.5 + {{isa_dev}} = {{= -56.5 + isa_dev}} °C = {{= 273.15 - 56.5 +
+      isa_dev}} K
+
+
+      TAS = {{mach}} * 38.9 * sqrt({{= 273.15 - 56.5 + isa_dev}}) = {{= mach *
+      38.9 * sqrt(273.15 - 56.5 + isa_dev)}} kt
+
+
+      GS = TAS + wind component = {{= mach * 38.9 * sqrt(273.15 - 56.5 +
+      isa_dev)}} + ({{wc}}) = **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: the wind component is applied with the wrong sign.
+
+      - **{{d2}} kt**: the wind component is ignored (groundspeed taken equal to
+      TAS).
+
+      - **{{d3}} kt**: the ISA deviation is ignored when computing the
+      temperature and hence the speed of sound.
+- id: QHLUZCSI
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337761
+    - AVEXAM-43556
+    - ATPLGS-627101
+  annexes:
+    - jeppesen-lfrs-10-9
+    - jeppesen-lfrs-19-1
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: simple
+    question: >-
+      Refer to NANTES - Charts 19-1, 19-2, 19-3 from Jeppesen GSPRM 2017.   
+       On a VFR flight, you need to transit around Nantes airport. Who shall you contact to inform about your intentions?
+    explanation: ""
+    options:
+      - id: ONB6GYWQZ
+        text: Nantes Approach
+        correct: false
+        why: ""
+      - id: ORJ7E7JQ2
+        text: Nantes/Atlantique
+        correct: false
+        why: ""
+      - id: OJLZ4GELH
+        text: Nantes Information
+        correct: true
+        why: ""
+      - id: OAJ7CN483
+        text: Nantes Tower
+        correct: false
+        why: ""
+- id: QHMBAZJX
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334497
+    - AVEXAM-53707
+    - ATPLGS-629323
+  annexes:
+    - jeppesen-lfrs-19-1
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: simple
+    question: Refer to Nantes chart 19-1 from Jeppesen GSPRM. An aeroplane is
+      departing from Nantes to conduct VFR flight to the northwest and will
+      cross waypoint (NW). What will be the best visual check point to check the
+      position at waypoint (NW).
+    explanation: ""
+    options:
+      - id: OHMCH4O9R
+        text: By looking for the highway junction, which is the only junction in that
+          area.
+        correct: true
+        why: ""
+      - id: OVOZG7APD
+        text: By checking your position using GNSS.
+        correct: false
+        why: ""
+      - id: OG1MZ8W0D
+        text: The lighted mast next to NW.
+        correct: false
+        why: ""
+      - id: OX3DKMI4M
+        text: By checking your position with bearing and distance from NTS VOR/DME.
+        correct: false
+        why: ""
+- id: QHTXJ76LC
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-339387
+    - ATPLGS-625298
+    - BGS-339584
+    - ATPLGS-113562
+    - ATPLQ-339497
+    - BGS-330243
+    - AVEXAM-73300
+  annexes: []
+  learningObjectives:
+    - "033.01"
+    - 033.06.01.01.05
+  template:
+    type: calculation
+    question: >-
+      An aircraft cruises at FL {{fl}} with a ground speed of {{gs}} kt. The
+      true airspeed stays constant in the descent, the wind is negligible and
+      the temperature is ISA. The pilot wants to arrive overhead the aerodrome
+      at {{alt}} ft (QNH {{qnh}} hPa) with a rate of descent of {{rod}} ft/min.
+
+
+      At what distance from the aerodrome should the descent be commenced? (Use
+      1 hPa = 30 ft and standard pressure 1013 hPa; answer in NM.)
+    variables:
+      - id: fl
+        label: Cruise flight level
+        unit: ""
+      - id: qnh
+        label: QNH
+        unit: hPa
+      - id: alt
+        label: Altitude to reach
+        unit: ft
+      - id: rod
+        label: Rate of descent
+        unit: ft/min
+      - id: gs
+        label: Ground speed
+        unit: kt
+    answer:
+      formula: (fl * 100 + (qnh - 1013) * 30 - alt) / rod * gs / 60
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (fl * 100 - alt) / rod * gs / 60
+      - id: d2
+        formula: (fl * 100 - (qnh - 1013) * 30 - alt) / rod * gs / 60
+      - id: d3
+        formula: (fl * 100 + (qnh - 1013) * 30) / rod * gs / 60
+      - id: d4
+        formula: (fl * 100 + (qnh - 1013) * 30 - alt) / rod
+    presets:
+      - id: p1
+        values:
+          fl: 85
+          qnh: 1030
+          alt: 2000
+          rod: 500
+          gs: 140
+      - id: p2
+        values:
+          fl: 95
+          qnh: 1030
+          alt: 2000
+          rod: 500
+          gs: 155
+      - id: p3
+        values:
+          fl: 110
+          qnh: 1020
+          alt: 1500
+          rod: 500
+          gs: 150
+    explanation: >-
+      The descent distance is the time needed to lose the height multiplied by
+      the ground speed. The height to lose is measured from the true altitude at
+      cruise level: a flight level is flown on the standard setting (1013 hPa),
+      so with QNH {{qnh}} hPa the aeroplane is {{= (qnh - 1013) * 30}} ft ({{=
+      qnh - 1013}} hPa × 30 ft/hPa) higher above the QNH datum than the flight
+      level suggests.
+
+
+      **Solution**
+
+
+      Height to lose = {{= fl * 100}} ft + {{= (qnh - 1013) * 30}} ft - {{alt}}
+      ft = {{= fl * 100 + (qnh - 1013) * 30 - alt}} ft
+
+
+      Time = {{= (fl * 100 + (qnh - 1013) * 30 - alt)}} ft / {{rod}} ft/min =
+      {{= (fl * 100 + (qnh - 1013) * 30 - alt) / rod}} min
+
+
+      {{f: (fl * 100 + (qnh - 1013) * 30 - alt) / rod * gs / 60}} = {{n: (fl *
+      100 + (qnh - 1013) * 30 - alt) / rod * gs / 60}} = **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: the QNH correction was ignored and the descent was
+      planned from the flight level as if it were altitude.
+
+      - **{{d2}} NM**: the QNH correction was subtracted instead of added.
+
+      - **{{d3}} NM**: the target altitude was not subtracted, so too much
+      height was assumed.
+
+      - **{{d4}} NM**: this is the descent time in minutes, not multiplied by
+      the ground speed.
+- id: QIEDFED8V
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331459
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      Calculate the time it will take to fly from A to B on a cross country
+      flight given the data below.
+
+
+      - Distance A to B: {{dist}} NM
+
+      - TAS: {{tas}} kt
+
+      - TT: {{trk}}°
+
+      - W/V: {{wdir}}°/{{wspd}} kt
+    variables:
+      - id: dist
+        label: Distance
+        unit: NM
+      - id: trk
+        label: True track
+        unit: °
+      - id: wdir
+        label: Wind direction (from)
+        unit: °
+      - id: wspd
+        label: Wind speed
+        unit: kt
+      - id: tas
+        label: TAS
+        unit: kt
+    answer:
+      formula: dist / (tas * cos(asin(wspd * sin(wdir - trk) / tas)) - wspd * cos(wdir
+        - trk)) * 60
+      unit: min
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: dist / tas * 60
+      - id: d2
+        formula: dist / (tas - wspd * cos(wdir - trk)) * 60
+      - id: d3
+        formula: dist / (tas + wspd * cos(wdir - trk)) * 60
+      - id: d4
+        formula: dist / (tas - wspd) * 60
+      - id: d5
+        formula: dist / (tas + wspd) * 60
+    presets:
+      - id: p1
+        values:
+          dist: 83
+          trk: 130
+          wdir: 22
+          wspd: 23
+          tas: 120
+      - id: p2
+        values:
+          dist: 120
+          trk: 250
+          wdir: 300
+          wspd: 30
+          tas: 140
+      - id: p3
+        values:
+          dist: 95
+          trk: 45
+          wdir: 330
+          wspd: 25
+          tas: 110
+    explanation: >-
+      The time is the distance divided by the ground speed, which is obtained
+      from the wind triangle (wind correction angle for drift, then the wind
+      component along the track).
+
+
+      **Solution**
+
+
+      Wind correction angle: {{= asin(wspd * sin(wdir - trk) / tas)}}°
+
+
+      Ground speed: {{= tas * cos(asin(wspd * sin(wdir - trk) / tas)) - wspd *
+      cos(wdir - trk)}} kt
+
+
+      {{f: dist / (tas * cos(asin(wspd * sin(wdir - trk) / tas)) - wspd *
+      cos(wdir - trk)) * 60}} = {{n: dist / (tas * cos(asin(wspd * sin(wdir -
+      trk) / tas)) - wspd * cos(wdir - trk)) * 60}} = **{{answer}} min**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} min**: ignores the wind (time at TAS).
+
+      - **{{d2}} min**: uses the wind component but ignores the drift
+      correction.
+
+      - **{{d3}} min**: adds the wind component with the wrong sign.
+
+      - **{{d4}} min**: treats the whole wind speed as a headwind.
+
+      - **{{d5}} min**: treats the whole wind speed as a tailwind.
+- id: QISIHHH6G
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336603
+    - ATPLGS-627104
+    - AVEXAM-84688
+  annexes:
+    - jeppesen-lfrs-10-9
+    - jeppesen-lfrs-19-1
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: |-
+      Refer to NANTES - Charts 19-1, 19-2, 19-3 from Jeppesen GSPRM 2017\.   
+       To which risk should you pay special attention?
+    explanation: ""
+    options:
+      - id: OZIP7KAZK
+        text: Increased traffic of gliders and microlights has to be expected.
+        correct: false
+        why: ""
+      - id: OOUS7ITFN
+        text: Runway incursions can occur, because the holding point is located at a
+          great distance from the runway.
+        correct: true
+        why: ""
+      - id: OFVD7M2WF
+        text: A lighted obstacle in front of threshold 03 might be mistaken for the
+          aerodrome beacon.
+        correct: false
+        why: ""
+      - id: OJ6RO1KDE
+        text: East traffic circuits should be preferred for noise abatement reasons.
+        correct: false
+        why: ""
+- id: QJTHYPWF
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332893
+    - ATPLGS-627145
+  annexes:
+    - jeppesen-lddu-19-1
+  learningObjectives:
+    - 033.01.01.02.03
+  template:
+    type: simple
+    question: |-
+      Refer to DUBROVNIK - charts 19-1 and 19-2 from Jeppesen GSPRM 2017.   
+       What is the elevation of the highest obstacle on the chart?
+    explanation: ""
+    options:
+      - id: O1ATXE17T
+        text: 4 000 ft AGL
+        correct: false
+        why: ""
+      - id: OLFCOEHNE
+        text: 5 017 ft AMSL
+        correct: true
+        why: ""
+      - id: OOARJ13J2
+        text: 1 907 ft AMSL
+        correct: false
+        why: ""
+      - id: OJCH71EJN
+        text: 4 000 ft AMSL
+        correct: false
+        why: ""
+- id: QJXJBNVM
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337674
+    - AVEXAM-72630
+    - ATPLGS-627109
+  annexes:
+    - jeppesen-vfr-chart-icao-1-11
+    - vfr-chart-bavaria-regensburg-straubing-landshut-passau-area
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: simple
+    question: >-
+      Refer to VFR chart ED(4) from GSPRM 2017.   
+       While planning a day VFR flight between Freistadt aerodrome LOLF (N48°31', E014°25') to Dingolfing aerodrome EDPD (N48°40', E012°30'), you need to select visually conspicuous point for the sector West of the E013°45' to record the progress of the flight. Which of the following is the best waypoint?
+    explanation: ""
+    options:
+      - id: OVJFKEWGM
+        text: The lighted mass at N48°47', E012°53'.
+        correct: false
+        why: ""
+      - id: ODYX0PJJ1
+        text: Vilshofen aerodrome (EDMV) at N48°38', E013°12'.
+        correct: false
+        why: ""
+      - id: O8BYQCVKP
+        text: The mast at N48°32', E013°36'.
+        correct: false
+        why: ""
+      - id: ORNIPIRF3
+        text: The motorway bridge at N48°36', E13°22'.
+        correct: true
+        why: ""
+- id: QKBTOGISR
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335592
+    - ATPLGS-627145
+    - ATPLGS-627099
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017\.   
+       What is the elevation of the highest obstacle on the chart?
+    explanation: ""
+    options:
+      - id: OVNSJTCY4
+        text: FL75
+        correct: false
+        why: ""
+      - id: OE7IWMBUO
+        text: 5 000 ft AGL
+        correct: false
+        why: ""
+      - id: O4AVRUPB8
+        text: 4 252 ft AMSL
+        correct: true
+        why: ""
+      - id: OXIGZZ5GT
+        text: 1 821 ft AMSL
+        correct: false
+        why: ""
+- id: QKDUWINKN
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335582
+    - ATPLGS-625321
+    - AVEXAM-22265
+    - BGS-339557
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      On a VFR flight, the traffic circuit altitude has to be established
+      {{off}} NM before reaching the destination aerodrome. The descent must
+      begin no later than how many nautical miles' ground distance from the
+      airfield?
+
+
+      - Rate of descent: {{rod}} ft/min
+
+      - Ground speed during descent: {{gs}} kt
+
+      - Initial altitude: {{init}} ft AMSL
+
+      - Traffic circuit altitude: {{circ}} ft AMSL
+    variables:
+      - id: init
+        label: Initial altitude
+        unit: ft
+      - id: circ
+        label: Circuit altitude
+        unit: ft
+      - id: rod
+        label: Rate of descent
+        unit: ft/min
+      - id: gs
+        label: Ground speed
+        unit: kt
+      - id: off
+        label: Distance before aerodrome
+        unit: NM
+    answer:
+      formula: (init - circ) / rod * gs / 60 + off
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (init - circ) / rod * gs / 60
+      - id: d2
+        formula: init / rod * gs / 60
+      - id: d3
+        formula: init / rod * gs / 60 + off
+    presets:
+      - id: p1
+        values:
+          init: 4500
+          circ: 2500
+          rod: 500
+          gs: 130
+          off: 5
+      - id: p2
+        values:
+          init: 5000
+          circ: 3000
+          rod: 500
+          gs: 120
+          off: 4
+      - id: p3
+        values:
+          init: 6000
+          circ: 3000
+          rod: 600
+          gs: 140
+          off: 5
+    explanation: >-
+      The descent has to be finished at the circuit altitude a fixed distance
+      before the aerodrome. The descent itself covers (height to lose / rate of
+      descent) x ground speed, and the extra distance to the aerodrome is added
+      on top.
+
+
+      **Solution**
+
+
+      Height to lose = {{init}} - {{circ}} = {{= init - circ}} ft
+
+      Descent distance = {{= init - circ}} / {{rod}} x {{gs}} / 60 = {{= (init -
+      circ) / rod * gs / 60}} NM
+
+      {{f: (init - circ) / rod * gs / 60 + off}} = {{n: (init - circ) / rod * gs
+      / 60 + off}} = **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: forgets to add the {{off}} NM between the end of the
+      descent and the aerodrome.
+
+      - **{{d2}} NM**: descends from the initial altitude to zero instead of to
+      the circuit altitude, and forgets the {{off}} NM.
+
+      - **{{d3}} NM**: descends to zero instead of to the circuit altitude.
+- id: QKTXMUKO
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332021
+    - BGS-331220
+    - ATPLGS-629325
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: multiple-correct
+    question: >-
+      Refer to figure or to VFR chart ED-4 from the Jeppesen GSPRM 2017.  
+
+      You are planning a VFR flight from Schärding Süben (LOLS) (48°24'11"N,
+      013°26'53"E) to Pfarrkirchen (EDNP) (48°25'12"N, 012°51'53"E) aerodromes,
+      which of the following statements are true?
+    explanation: ""
+    options:
+      - text: The cruising altitude should be 5500 ft
+        correct: false
+        why: ""
+      - text: Your route follows the river "Rott" Westwards
+        correct: true
+        why: ""
+      - text: The cruising altitude should be 6500 ft
+        correct: true
+        why: ""
+      - text: Your route follows the A3 motorway Northwards
+        correct: false
+        why: ""
+      - text: You will enter class F airspace during the final approach
+        correct: true
+        why: ""
+      - text: You will enter class E airspace during the final approach
+        correct: false
+        why: ""
+- id: QKVZXXFP3
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335621
+    - ATPLGS-129306
+    - AVEXAM-46672
+  annexes:
+    - jeppesen-vfr-chart-icao-1-11
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.   
+       An aircraft is on a VFR flight in Austria. The departure airfield is Ried Kirchheim (LOLK, N48° 12.8' E13° 20.8') and the destination is Freistadt (LOLF, N48° 30.9' E14° 24.5'). Which of the following radio frequencies should be used as a radio navigation aid if the pilot intends to fly directly to the destination?
+    explanation: ""
+    options:
+      - id: OICWVTU2R
+        text: 113.50 MHz (Freistadt VOR)
+        correct: true
+        why: ""
+      - id: OZG3ZOQCM
+        text: 327 kHz (Linz NDB)
+        correct: false
+        why: ""
+      - id: OZJNWKIEY
+        text: Freistadt airfield
+        correct: false
+        why: ""
+      - id: OBVJCFWSM
+        text: 116.60 MHz (Linz VOR)
+        correct: false
+        why: ""
+- id: QLAFTDXGO
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337275
+    - ATPLGS-107835
+    - AVEXAM-67694
+  annexes:
+    - jeppesen-vfr-chart-icao-1-08
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: |-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.   
+       What is the frequency of MUNICH ATIS?
+    explanation: ""
+    options:
+      - id: OGKCFEIHX
+        text: 123.12 MHz
+        correct: true
+        why: ""
+      - id: OVO8ETLQC
+        text: 120.50 MHz
+        correct: false
+        why: ""
+      - id: ORJ4JMQI9
+        text: 124.57 MHz
+        correct: false
+        why: ""
+      - id: O6NHGR683
+        text: 112.30 MHz
+        correct: false
+        why: ""
+- id: QMACLHNGT
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333516
+    - ATPLGS-629436
+    - AVEXAM-5877
+  annexes:
+    - jeppesen-vfr-chart-icao-1-13
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to VFR Chart ED-4 from the Jeppesen GSPRM 2017\. A VFR flight is
+      planned from Freiburg i. Br. airport (EDTF, N48°01.3’, E007°50.1’) to
+      Offenburg airport (EDTO, N48°27.0’, E007°55.5’) at the lowest safe
+      altitude. Which is the best visual reference landmark for drift and time
+      deviation checks along the intended route?
+    explanation: ""
+    options:
+      - id: OWUAJFZK7
+        text: The wind farm East off Altdorf-Wallburg (EDSW) airport.
+        correct: false
+        why: ""
+      - id: OKT1XTUJO
+        text: The unlighted tower North off Emmendingen town.
+        correct: true
+        why: ""
+      - id: O0UAWMUKE
+        text: The wind farm Southwest off Schweighausen town.
+        correct: false
+        why: ""
+      - id: O4AIHBNZT
+        text: The river crossing Herbolzheim town.
+        correct: false
+        why: ""
+- id: QMFDIFKGQ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331107
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017.   
+       When approaching from the southwest, what is the last compulsory reporting point?
+    explanation: ""
+    options:
+      - id: ODOCNA8JX
+        text: When entering the ATZ of LEAL
+        correct: false
+        why: ""
+      - id: OBOA19N4B
+        text: S
+        correct: true
+        why: ""
+      - id: ONOZXAMNY
+        text: SE
+        correct: false
+        why: ""
+      - id: OAKKJ14JA
+        text: VOR/DME ALT
+        correct: false
+        why: ""
+- id: QMHJS1YRM
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331313
+    - AVEXAM-17219
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: chart
+    question: The minimum climb gradient for obstacle clearance is 4%. TAS for the
+      best rate of climb is 230 kt. Given a tailwind of 15 kt, what minimum rate
+      of climb can be achieved?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 995 ft/min
+        wrongAnswers:
+          - 935 ft/min
+          - 595 ft/min
+          - 875 ft/min
+        explanation: >-
+          The tailwind adds to the speed over the ground: 230 + 15 = 245 kt. One
+          knot is about 101 ft/min, so 245 kt is 24 800 ft/min.
+
+
+          A 4 % gradient needs 0.04 × 24 800 = **995 ft/min**.
+- id: QMPCNUBR
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338320
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - 033.01.01.03.02
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017.   
+       How many VFR procedures are published?
+    explanation: ""
+    options:
+      - id: OJKNH8UNO
+        text: "4"
+        correct: false
+        why: ""
+      - id: O9XZ2DX6S
+        text: "3"
+        correct: false
+        why: ""
+      - id: OY9U10S1X
+        text: "5"
+        correct: true
+        why: ""
+      - id: OUKVSRECT
+        text: "1"
+        correct: false
+        why: ""
+- id: QMXEIKWZ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-339348
+    - AVEXAM-14194
+    - BGS-330847
+    - ATPLGS-123167
+  annexes:
+    - 033-croatia-vfr-manual-ldlo-ad-2-10
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      A VFR flight arrives at LDLO (elevation 154 ft). What is the height of the
+      traffic circuit?
+    explanation: ""
+    options:
+      - id: OSNKUTD0D
+        text: 1200 ft AGL
+        correct: false
+        why: ""
+      - id: OGCTJOKQK
+        text: 800 ft AGL
+        correct: true
+        why: ""
+      - id: OTFASYNVQ
+        text: 1500 ft AGL
+        correct: false
+        why: ""
+      - id: OXGT8LBX5
+        text: 1000 ft AGL
+        correct: false
+        why: ""
+- id: QN2KHBV8W
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337360
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: one-two
+    question: An aircraft is flying along a true course of 276º and the actual wind
+      is different than the forecast wind. The forecast wind is 240/15 and the
+      actual wind is 290/25. The airspeed remains the same. Which statements are
+      correct or incorrect?
+    explanation: ""
+    firstCorrectStatements:
+      - The lower ground speed will result in a later time of arrival.
+    firstIncorrectStatements: []
+    secondCorrectStatements: []
+    secondIncorrectStatements:
+      - The wind correction angle will change from a value to the right to a
+        value to the left.
+- id: QN4GLVBZM
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331855
+    - ATPLGS-628491
+    - AVEXAM-17131
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      Given the following information, what is the wind correction angle
+      (magnitude) to be applied? The wind requires a correction to the left.
+
+
+      - Wind: {{wd}}°/{{ws}} kt (T)
+
+      - TAS: {{tas}} kt
+
+      - Variation: {{var_e}}°E
+
+      - Heading: {{hdg}}° (M)
+    variables:
+      - id: wd
+        label: wind direction
+        unit: °
+      - id: ws
+        label: wind speed
+        unit: kt
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: var_e
+        label: easterly variation
+        unit: °
+      - id: hdg
+        label: magnetic heading
+        unit: °
+    answer:
+      formula: abs(asin(ws * sin(wd - (hdg + var_e)) / tas))
+      unit: ° left
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: abs(asin(ws * sin(wd - hdg) / tas))
+      - id: d2
+        formula: abs(asin(ws * sin(wd - (hdg - var_e)) / tas))
+      - id: d3
+        formula: 2 * abs(asin(ws * sin(wd - (hdg + var_e)) / tas))
+      - id: d4
+        formula: abs(asin(ws * sin(wd - (hdg + var_e)) / tas)) + var_e
+    presets:
+      - id: p1
+        values:
+          wd: 60
+          ws: 60
+          tas: 380
+          var_e: 5
+          hdg: 85
+      - id: p2
+        values:
+          wd: 100
+          ws: 50
+          tas: 280
+          var_e: 5
+          hdg: 130
+    explanation: >-
+      The wind correction angle is the angle between track and heading needed to
+      cancel the drift: sin(WCA) = wind speed * sin(angle between wind and
+      track) / TAS. Wind is given in true degrees, so the magnetic heading must
+      first be converted to true using the variation (east is added).
+
+
+      **Solution**
+
+
+      True heading = {{hdg}} + {{var_e}} = {{= (hdg + var_e)}}°
+
+
+      WCA = asin({{ws}} * sin({{wd}} - {{= (hdg + var_e)}}) / {{tas}}) =
+      **{{answer}}° to the left**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the magnetic heading was used against the true wind
+      direction (no variation applied).
+
+      - **{{d2}}°**: the easterly variation was subtracted instead of added.
+
+      - **{{d3}}°**: the correction was doubled.
+
+      - **{{d4}}°**: the variation was added to the WCA.
+- id: QNARZK4XM
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333805
+    - ATPLGS-129312
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017\.   
+       What is the maximum permissible altitude for reaching the compulsory reporting point NE?
+    explanation: ""
+    options:
+      - id: OZ8AW5UHJ
+        text: 2 000 m AMSL
+        correct: false
+        why: ""
+      - id: OGILGXZLV
+        text: 1 500 ft AMSL
+        correct: false
+        why: ""
+      - id: O20HHCSQH
+        text: 1 500 m AGL
+        correct: false
+        why: ""
+      - id: O0E5DUETJ
+        text: 2 000 ft AMSL
+        correct: true
+        why: ""
+- id: QNEZDXBF3
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333708
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      A flight is planned from REGENSBURG-OBERHUB (EDNR, N49°08.5' E012°04.9')
+      to STRUNKOVICE (LKSR, N49°05.0' E14°04.5'). What is the minimum altitude
+      which should be maintained during the flight?
+    explanation: ""
+    options:
+      - id: ODM6EBJHJ
+        text: 5 100 ft
+        correct: false
+        why: ""
+      - id: OIJJRGTCB
+        text: 7 200 ft
+        correct: false
+        why: ""
+      - id: OE2JYBSFN
+        text: 5 300 ft
+        correct: true
+        why: ""
+      - id: OQLHDXSDY
+        text: 3 700 ft
+        correct: false
+        why: ""
+- id: QNF4GUGC2
+  docId: "033.01"
+  relatedQuestions:
+    - QHTXJ76LC
+  externalIds:
+    - ATPLQ-333833
+    - AVEXAM-57620
+    - BGS-339585
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      Given the following information, at what distance from the destination
+      should descent be commenced?
+
+
+      - Height to lose: {{alt}} ft
+
+      - Rate of descent: {{rod}} ft/min
+
+      - Ground speed: {{gs}} kt
+
+
+      Give the distance in NM.
+    variables:
+      - id: alt
+        label: Height to lose
+        unit: ft
+      - id: rod
+        label: Rate of descent
+        unit: ft/min
+      - id: gs
+        label: Ground speed
+        unit: kt
+    answer:
+      formula: alt / rod * gs / 60
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: alt / rod * gs
+      - id: d2
+        formula: alt / rod
+      - id: d3
+        formula: alt / rod * gs / 100
+      - id: d4
+        formula: alt / rod * gs / 60 * 1.15
+      - id: d5
+        formula: alt / rod * 60 / gs
+    presets:
+      - id: p1
+        values:
+          alt: 3500
+          rod: 300
+          gs: 135
+      - id: p2
+        values:
+          alt: 5000
+          rod: 500
+          gs: 150
+      - id: p3
+        values:
+          alt: 4000
+          rod: 400
+          gs: 120
+    explanation: >-
+      The descent distance is the descent time multiplied by the ground speed.
+      The time follows from the height to lose divided by the rate of descent;
+      the ground speed in kt is converted to NM per minute by dividing by 60.
+
+
+      **Solution**
+
+
+      Time = {{alt}} ft / {{rod}} ft/min = {{= alt / rod}} min
+
+
+      {{f: alt / rod * gs / 60}} = {{n: alt / rod * gs / 60}} = **{{answer}}
+      NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: the ground speed was not converted from NM/h to NM/min
+      (division by 60 forgotten).
+
+      - **{{d2}} NM**: this is only the descent time in minutes, not a distance.
+
+      - **{{d3}} NM**: ground speed divided by 100 instead of 60.
+
+      - **{{d4}} NM**: the result was converted with the NM to statute mile
+      factor of 1.15 for no reason.
+
+      - **{{d5}} NM**: the time and the ground speed were combined in the wrong
+      ratio (inverted).
+- id: QNK3BXIZM
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331581
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: "Which of the following statements is correct? The climb gradient is:"
+    explanation: ""
+    options:
+      - id: OCAH0PWRM
+        text: Represents the angle of variation.
+        correct: false
+        why: ""
+      - id: OPR5A6VEN
+        text: Always smaller than the angle of climb.
+        correct: false
+        why: ""
+      - id: OQ3IISZW7
+        text: The same as the angle of climb.
+        correct: false
+        why: ""
+      - id: OVB7KFI8G
+        text: Always larger than the angle of climb.
+        correct: true
+        why: ""
+- id: QNKF8UAR9
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338542
+  annexes:
+    - jeppesen-vfr-chart-icao-1-10
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to figure or to chart ED-4 from the Jeppesen GSPRM 2017 .   
+       As you approach Linz Airport from the North, what is the best visual aid to use just before entering the Linz TMA?
+    explanation: ""
+    options:
+      - id: OCDZ4PHKZ
+        text: Lighted Mast (3 547 ft)
+        correct: true
+        why: ""
+      - id: OBJR6QLS3
+        text: High ground (2 392 ft)
+        correct: false
+        why: ""
+      - id: O13KHRMC6
+        text: Friestadt VOR
+        correct: false
+        why: ""
+      - id: OEEFAHTHV
+        text: LOLE airport
+        correct: false
+        why: ""
+- id: QNNIGGQG
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337364
+    - BGS-331469
+    - ATPLGS-628084
+    - AVEXAM-28836
+    - ATPLGS-629384
+    - ATPLGS-629380
+    - ATPLGS-629340
+    - ATPLGS-629382
+    - AVEXAM-3778
+    - AVEXAM-31564
+    - BGS-331125
+    - AVEXAM-66854
+    - ATPLGS-628486
+    - BGS-331313
+    - ATPLGS-629346
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      (For this question use the VFR chart ED-4 from the Jeppesen GSPRM 2017).
+      An aircraft is flying a direct course from Straubing aerodrome (EDMS)
+      (N48°54', E012°31') to Sonnen aerodrome (EDPS) (N48°41', E013°42').
+
+
+      What is the highest obstacle within 5 NM off the course?
+    explanation: ""
+    options:
+      - id: OV9K0HYRI
+        text: 7200 ft
+        correct: false
+        why: ""
+      - id: OWYKFCSOQ
+        text: 3111 ft
+        correct: false
+        why: ""
+      - id: O3LVUQEVZ
+        text: 1540 ft
+        correct: false
+        why: ""
+      - id: OHNZYGWSM
+        text: 3754 ft
+        correct: true
+        why: ""
+- id: QNRJDNHI
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334681
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to the figure (VFR chart ED-4, Jeppesen GSPRM).
+
+
+      The true track between Regensburg Oberhub aerodrome (EDNR) and Strunkovice
+      aerodrome (LKSR) is {{track}}° (T).
+
+
+      The magnetic variation read from the chart is {{var_e}}° E.
+
+
+      What is the magnetic track?
+    variables:
+      - id: track
+        label: True track
+        unit: °
+      - id: var_e
+        label: Variation (east, read from the figure)
+        unit: °
+    chartInputs:
+      - var_e
+    answer:
+      formula: track - var_e
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: track
+      - id: d2
+        formula: track + var_e
+      - id: d3
+        formula: track - 2 * var_e
+    presets:
+      - id: p1
+        values:
+          track: 92
+          var_e: 3
+    explanation: >-
+      Magnetic track is true track corrected for variation: east variation is
+      subtracted ("variation east, magnetic least"), west variation is added.
+
+
+      **Solution**
+
+
+      {{f: track - var_e}} = {{n: track - var_e}} = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} °**: the variation is not applied, which gives the true track.
+
+      - **{{d2}} °**: the east variation is added instead of subtracted.
+
+      - **{{d3}} °**: the variation is applied twice.
+- id: QO6EDW0QG
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338977
+    - BGS-330953
+    - AVEXAM-7387
+    - ATPLGS-129320
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      _Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017._   
+       You are approaching from the southeast via reporting point SE and cleared via Tabarca route, then via South route. What is your maximum allowed altitude?
+    explanation: ""
+    options:
+      - id: OVJQLQKZX
+        text: FL 75
+        correct: false
+        why: ""
+      - id: ODZAUOGRA
+        text: 2000 ft AMSL
+        correct: false
+        why: ""
+      - id: OMJLKUGAG
+        text: 1500 ft AMSL
+        correct: true
+        why: ""
+      - id: OWDIO0TPQ
+        text: 8000 ft AMSL
+        correct: false
+        why: ""
+- id: QOBNQPJR
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337976
+    - ATPLGS-627100
+    - AVEXAM-17107
+  annexes:
+    - jeppesen-lfrs-10-9
+    - jeppesen-lfrs-19-1
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: |-
+      Refer to NANTES - Charts 19-1, 19-2, 19-3 from Jeppesen GSPRM 2017.   
+       When approaching Nantes, what is a valid Special VFR minimum?
+    explanation: ""
+    options:
+      - id: OGFMFCEC7
+        text: The minimum ceiling for Special VFR procedures is 700 ft AMSL.
+        correct: false
+        why: ""
+      - id: OIFAHNXC0
+        text: " VFR traffic must maintain a minimum distance of 800 metres from clouds."
+        correct: false
+        why: ""
+      - id: OWPD8DUAW
+        text: Arrivals from the east have to maintain an altitude of not more than 1 000
+          ft AGL.
+        correct: false
+        why: ""
+      - id: OOFGUL8HM
+        text: Departures to the west have to maintain an altitude of not more than 1 000
+          ft AMSL.
+        correct: true
+        why: ""
+- id: QP1J2FARX
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334359
+    - BGS-331447
+    - BGS-331206
+    - ATPLGS-626294
+    - AVEXAM-78443
+    - BGS-330987
+    - BGS-331360
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      When reviewing the wind charts, you notice that the average wind in cruise
+      will be a {{hw}} kt headwind. Given the following data, what will be the
+      flight time to destination?
+
+
+      - Time to top of climb: {{cl}} min
+
+      - Cruise leg: {{dist}} NM, TAS {{tas}} kt
+
+      - Time from top of descent to landing: {{de}} min
+
+
+      Express the flight time as hours and minutes; give the minutes part (0 to
+      59) after the full hours.
+    variables:
+      - id: cl
+        label: Time to top of climb
+        unit: min
+      - id: dist
+        label: Cruise distance
+        unit: NM
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: hw
+        label: Headwind component
+        unit: kt
+      - id: de
+        label: Descent time
+        unit: min
+    answer:
+      formula: round((cl + dist / (tas - hw) * 60 + de)) - 60 * floor(round((cl + dist
+        / (tas - hw) * 60 + de)) / 60)
+      unit: min
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: round((cl + dist / (tas + hw) * 60 + de)) - 60 * floor(round((cl + dist
+          / (tas + hw) * 60 + de)) / 60)
+      - id: d2
+        formula: round((cl + dist / (tas - hw) * 60)) - 60 * floor(round((cl + dist /
+          (tas - hw) * 60)) / 60)
+      - id: d3
+        formula: round((dist / (tas - hw) * 60 + de)) - 60 * floor(round((dist / (tas -
+          hw) * 60 + de)) / 60)
+      - id: d4
+        formula: round((cl + dist / tas * 60 + de)) - 60 * floor(round((cl + dist / tas
+          * 60 + de)) / 60)
+    presets:
+      - id: p1
+        values:
+          cl: 30
+          dist: 740
+          tas: 460
+          hw: 25
+          de: 22
+      - id: p2
+        values:
+          cl: 25
+          dist: 620
+          tas: 440
+          hw: 30
+          de: 18
+      - id: p3
+        values:
+          cl: 32
+          dist: 850
+          tas: 480
+          hw: 20
+          de: 24
+    explanation: >-
+      Total flight time is the climb time, plus the cruise time at the ground
+      speed (TAS minus headwind), plus the descent time.
+
+
+      **Solution**
+
+
+      Cruise ground speed = {{= tas - hw}} kt, cruise time = {{= dist / (tas -
+      hw) * 60}} min
+
+
+      Total = {{= cl}} + {{= dist / (tas - hw) * 60}} + {{= de}} = {{= round((cl
+      + dist / (tas - hw) * 60 + de))}} min = {{= floor(round((cl + dist / (tas
+      - hw) * 60 + de)) / 60)}} h **{{answer}} min**
+
+
+      **Why the other answers are wrong** (minutes part of the flight time)
+
+
+      - **{{d1}} min**: the headwind was added to the TAS.
+
+      - **{{d2}} min**: the descent time was forgotten.
+
+      - **{{d3}} min**: the climb time was forgotten.
+
+      - **{{d4}} min**: the wind was ignored.
+- id: QPH2ERBSW
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332765
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to the figure. The true course is {{tc}}°. The variation in the area
+      is {{var}}° W and the wind is calm. The deviation card is reproduced in
+      the annex; the correction read from it for the magnetic heading is
+      {{dev}}° (added to the magnetic heading).
+
+
+      In order to follow this course, the pilot must fly a compass heading of
+      (answer in degrees):
+    variables:
+      - id: tc
+        label: True course
+        unit: °
+      - id: var
+        label: Westerly variation
+        unit: °
+      - id: dev
+        label: Deviation correction (read from card)
+        unit: °
+    chartInputs:
+      - dev
+    answer:
+      formula: tc + var + dev
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: tc - var + dev
+      - id: d2
+        formula: tc + var - dev
+      - id: d3
+        formula: tc + 2 * var + dev
+      - id: d4
+        formula: tc - var - dev
+    presets:
+      - id: p1
+        values:
+          tc: 42
+          var: 6
+          dev: 4
+      - id: p2
+        values:
+          tc: 120
+          var: 4
+          dev: -3
+    explanation: >-
+      Going from true to compass: add westerly variation (True → Magnetic: West
+      is best, i.e. add), then apply the deviation from the card (Magnetic →
+      Compass).
+
+
+      **Solution**
+
+
+      Magnetic heading = {{tc}}° + {{var}}° = {{= tc + var}}°
+
+
+      {{f: tc + var + dev}} = {{n: tc + var + dev}} = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: variation subtracted instead of added.
+
+      - **{{d2}}°**: deviation applied with the wrong sign.
+
+      - **{{d3}}°**: variation applied twice.
+
+      - **{{d4}}°**: variation and deviation both applied with the wrong sign.
+- id: QPLCWHGY
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338192
+    - ATPLGS-627146
+    - AVEXAM-10564
+  annexes: []
+  learningObjectives:
+    - 033.01.01.02.05
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to VFR chart ED-4. You depart from Beilngries / EDNC aerodrome and
+      continue eastbound at the minimum grid altitude, which is read from the
+      chart as {{grid_alt}} ft.
+
+
+      The altimeter is set incorrectly:
+
+
+      - Altimeter setting used: {{set_hpa}} hPa
+
+      - QNH given by the aerodrome: {{qnh_hpa}} hPa
+
+
+      What is your approximate true altitude shortly after departure? (1 hPa =
+      30 ft)
+    variables:
+      - id: grid_alt
+        label: Minimum grid altitude (read from chart)
+        unit: ft
+      - id: set_hpa
+        label: Altimeter setting used
+        unit: hPa
+      - id: qnh_hpa
+        label: QNH
+        unit: hPa
+    chartInputs:
+      - grid_alt
+    answer:
+      formula: grid_alt - 30 * (set_hpa - qnh_hpa)
+      unit: ft
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: grid_alt
+      - id: d2
+        formula: grid_alt + 30 * (set_hpa - qnh_hpa)
+      - id: d3
+        formula: grid_alt - 100 * (set_hpa - qnh_hpa)
+      - id: d4
+        formula: grid_alt - (set_hpa - qnh_hpa)
+    presets:
+      - id: p1
+        values:
+          grid_alt: 3580
+          set_hpa: 1010
+          qnh_hpa: 1001
+      - id: p2
+        values:
+          grid_alt: 4200
+          set_hpa: 1015
+          qnh_hpa: 1009
+    explanation: >-
+      The minimum grid altitude is read from the chart. The altimeter is set to
+      a higher pressure than the actual QNH, so it indicates too high. The true
+      altitude is therefore lower than the altitude read from the chart.
+
+
+      **Solution**
+
+
+      - Altimeter setting error: {{= set_hpa - qnh_hpa}} hPa, which is {{= 30 *
+      (set_hpa - qnh_hpa)}} ft
+
+      - True altitude: {{f: grid_alt - 30 * (set_hpa - qnh_hpa)}} = {{n:
+      grid_alt - 30 * (set_hpa - qnh_hpa)}} = **{{answer}} ft**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ft**: ignores the altimeter setting error.
+
+      - **{{d2}} ft**: adds the error instead of subtracting it.
+
+      - **{{d3}} ft**: uses 100 ft per hPa instead of 30 ft per hPa.
+
+      - **{{d4}} ft**: uses 1 ft per hPa instead of 30 ft per hPa.
+- id: QPTYSWPFA
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332382
+    - BGS-330001
+    - AVEXAM-32857
+    - ATPLGS-108290
+    - ATPLGS-622317
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      An aircraft is flying at Mach 0.84 at FL 330.
+
+
+      The static air temperature is {{sat}} °C and the headwind component {{hw}}
+      kt.
+
+
+      The controller requests the pilot to cross a meridian in {{t_min}} min.
+
+
+      The distance to go is {{dist}} NM.
+
+
+      The reduced Mach number should be (give the Mach number to 2 decimals)
+    variables:
+      - id: dist
+        label: Distance to go
+        unit: NM
+      - id: t_min
+        label: Time available
+        unit: min
+      - id: hw
+        label: Headwind component
+        unit: kt
+      - id: sat
+        label: Static air temperature
+        unit: °C
+    answer:
+      formula: (dist / (t_min / 60) + hw) / (38.9456 * sqrt(sat + 273.15))
+      unit: M
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: dist / (t_min / 60) / (38.9456 * sqrt(sat + 273.15))
+      - id: d2
+        formula: (dist / (t_min / 60) - hw) / (38.9456 * sqrt(sat + 273.15))
+      - id: d3
+        formula: (dist / (t_min / 60) + hw) / 600
+      - id: d4
+        formula: (dist / (t_min / 100) + hw) / (38.9456 * sqrt(sat + 273.15))
+    presets:
+      - id: p1
+        values:
+          dist: 570
+          t_min: 82
+          hw: 52
+          sat: -48
+      - id: p2
+        values:
+          dist: 480
+          t_min: 70
+          hw: 40
+          sat: -50
+    explanation: >-
+      The required ground speed is distance over time. Adding the headwind
+      component gives the true airspeed needed, and dividing by the local speed
+      of sound (38.9456 x square root of the absolute temperature, in kt) gives
+      the Mach number.
+
+
+      **Solution**
+
+
+      Ground speed = {{= dist / (t_min / 60)}} kt, TAS = {{= dist / (t_min / 60)
+      + hw}} kt
+
+
+      Speed of sound = {{= 38.9456 * sqrt(sat + 273.15)}} kt
+
+
+      Mach = {{f: (dist / (t_min / 60) + hw) / (38.9456 * sqrt(sat + 273.15))}}
+      = **{{answer}} M**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} M**: the headwind is ignored (ground speed used as TAS).
+
+      - **{{d2}} M**: the headwind is subtracted instead of added.
+
+      - **{{d3}} M**: a constant speed of sound of 600 kt is used instead of the
+      value at the static air temperature.
+
+      - **{{d4}} M**: the time is converted to hours with 100 instead of 60.
+- id: QPY1QKG3H
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-339273
+    - ATPLGS-107826
+    - ATPLGS-629414
+    - ATPLGS-107822
+  annexes:
+    - jeppesen-area-chart-10-1v-aberdeen-united-kingdom-25-aug
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to Aberdeen (EGPD) 10-1V chart from the Jeppesen GSPRM 2017\.
+      What is the elevation of the highest obstacle within the Aberdeen Control
+      Area?
+    explanation: ""
+    options:
+      - id: OI4C5OPXV
+        text: 1 785 ft
+        correct: false
+        why: ""
+      - id: OUXTCHWVB
+        text: 2 052 ft
+        correct: false
+        why: ""
+      - id: OPJPMZCGC
+        text: 2 122 ft
+        correct: true
+        why: ""
+      - id: OCRMHJWHL
+        text: 1 733 ft
+        correct: false
+        why: ""
+- id: QQ6FFBJ0R
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332580
+  annexes:
+    - vfr-navigation-exercise-on-a-jeppesen-chart
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      You are about to take a VFR flight in Summer with no serviceable radio
+      aids on board your aircraft. The flight is likely to occur in haze in the
+      late afternoon, with the Sun deteriorating visibility even more. Which
+      route should you plan to take?
+    explanation: ""
+    options:
+      - id: OPAT7YEZ3
+        text: Route 1 via "RDG" VOR.
+        correct: false
+        why: ""
+      - id: O0GT7AGWL
+        text: Route 4 via the big city of Regensburg.
+        correct: false
+        why: ""
+      - id: OFN74ROD6
+        text: Route 2 via the highway then the river.
+        correct: true
+        why: ""
+      - id: OQ6UP0UIF
+        text: Route 3 via the tall mast.
+        correct: false
+        why: ""
+- id: QQIZIY11G
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334931
+    - ATPLGS-627006
+    - AVEXAM-73179
+    - BGS-331456
+  annexes:
+    - jeppesen-vfr-chart-icao-1-05
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      An Aircraft is planned to fly from Blaubeuren aerodrome (EDMC) (N
+      48°25’,E009°48’) to Schwenningen at Neckar aerodrome (EDTS) (N 48°04’,
+      E008°34’) following the most direct routing. The route can include any
+      airspace at these two airports, but the remaining portions of the route
+      shall remain clear of any airspaces classes D, E or F and any danger or
+      restricted areas. Which of the following is the most suitable visual
+      turning point for the route?
+    explanation: ""
+    options:
+      - id: O0BUGPVRJ
+        text: Hayingen gliding site (N 48°17’, E009°28’)
+        correct: false
+        why: ""
+      - id: OAGXEQ5XC
+        text: The mast south-west of Balingen (N 48°13’, E 008°49’)
+        correct: true
+        why: ""
+      - id: OSJHL0GWC
+        text: Münsingen Eisberg gliding site (N 48°25’, E009°26’)
+        correct: false
+        why: ""
+      - id: O0HVO834M
+        text: Albstadt Degerfeld (EDSA) airfield (N 48°15’, E009°04’)
+        correct: false
+        why: ""
+- id: QQXDFSLT
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335384
+    - AVEXAM-604977
+  annexes:
+    - jeppesen-vfr-chart-icao-1-02
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: |-
+      Refer to Jeppesen GSPRM Training Route Manual - VFR Chart ED-4   
+       Linz airport (LOWL, 48°14′N, 14°11′E) is within airspace:
+    explanation: ""
+    options:
+      - id: ORECF7U9O
+        text: Class E.
+        correct: false
+        why: ""
+      - id: OMDHAFYBJ
+        text: Class G.
+        correct: false
+        why: ""
+      - id: OPGJB41SF
+        text: Class D.
+        correct: true
+        why: ""
+      - id: O4JPM2XML
+        text: Class C.
+        correct: false
+        why: ""
+- id: QR8HOLJDP
+  docId: "033.01"
+  relatedQuestions:
+    - QA6KP6JYQ
+  externalIds:
+    - ATPLQ-332387
+    - BGS-331190
+    - BGS-331294
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      Given the following information, calculate the maximum attainable flight
+      time and range.
+
+
+      - Average fuel flow: {{ff}} US gal/h
+
+      - Available fuel: {{fuel}} US gal
+
+      - TAS: {{tas}} kt
+
+      - Wind component: {{wc}} kt tailwind
+
+
+      What is the range in NM?
+    variables:
+      - id: ff
+        label: Fuel flow
+        unit: US gal/h
+      - id: fuel
+        label: Available fuel
+        unit: US gal
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: wc
+        label: Tailwind component
+        unit: kt
+    answer:
+      formula: fuel / ff * (tas + wc)
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: fuel / ff * (tas - wc)
+      - id: d2
+        formula: fuel / ff * tas
+      - id: d3
+        formula: fuel / ff * (tas + 2 * wc)
+      - id: d4
+        formula: fuel / ff * (tas + wc) * 60
+    presets:
+      - id: p1
+        values:
+          ff: 9.6
+          fuel: 50
+          tas: 100
+          wc: 15
+      - id: p2
+        values:
+          ff: 11
+          fuel: 44
+          tas: 120
+          wc: 25
+    explanation: >-
+      The endurance is the available fuel divided by the fuel flow. The range is
+      the endurance multiplied by the ground speed, i.e. the TAS plus the
+      tailwind component.
+
+
+      **Solution**
+
+
+      Endurance: {{= fuel / ff}} h
+
+
+      {{f: fuel / ff * (tas + wc)}} = {{n: fuel / ff * (tas + wc)}} =
+      **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: the tailwind subtracted as if it were a headwind.
+
+      - **{{d2}} NM**: wind ignored, TAS used as ground speed.
+
+      - **{{d3}} NM**: wind component applied twice.
+
+      - **{{d4}} NM**: endurance converted to minutes before multiplying by the
+      speed in kt.
+- id: QRPCD7IA2
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337314
+    - ATPLGS-629416
+    - BGS-331317
+  annexes:
+    - jeppesen-vfr-chart-icao-1-12
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to the image or VFR chart ED-4 from the Jeppesen GSPRM 2017\.
+      What is the identification and frequency of the ground navigation aid
+      located East off SIERRA waypoint (N48°37', E009°14')?
+    explanation: ""
+    options:
+      - id: OJNYREEJV
+        text: TGO, 112.50 MHz
+        correct: true
+        why: ""
+      - id: OLFTFKISC
+        text: SGD, 112.50 MHz
+        correct: false
+        why: ""
+      - id: OM0LSPHKS
+        text: INFO, 123.25 MHz
+        correct: false
+        why: ""
+      - id: O0EGFQXPA
+        text: SGD, 115.45 MHz
+        correct: false
+        why: ""
+- id: QRPG7SJZG
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332428
+    - ATPLGS-628084
+    - ATPLGS-629346
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017. Find the highest
+      obstacle or elevation, considering a 7 NM radius around the aerodromes,
+      when flying directly from Griesau (N48°57′, E12°25′) to Arnbruck (N49°7′,
+      E12°59′).
+    explanation: ""
+    options:
+      - id: O8ZSOTCQO
+        text: 3 438 ft
+        correct: false
+        why: ""
+      - id: OYNRPFDQF
+        text: 4 055 ft
+        correct: false
+        why: ""
+      - id: OXA6J3ZWC
+        text: 4 777 ft
+        correct: true
+        why: ""
+      - id: OPHH6LFUE
+        text: 3 717 ft
+        correct: false
+        why: ""
+- id: QRUPC3SCY
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334097
+    - ATPLGS-629340
+    - ATPLGS-629382
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017. What is the
+      elevation of the highest lighted obstacle in the vicinity of an aircraft's
+      direct route from Arnbruck (EDNB, N49°7′, E12°59′) to Pfarrkirchen (EDNP,
+      48°25'N, 012°51'E)?
+    explanation: ""
+    options:
+      - id: OGVT09TEJ
+        text: 1 965 ft AMSL
+        correct: true
+        why: ""
+      - id: OYCJWYOG4
+        text: 3 695 ft AMSL
+        correct: false
+        why: ""
+      - id: OCBL2EZW1
+        text: 2 918 ft AMSL
+        correct: false
+        why: ""
+      - id: OTTLYQKRA
+        text: 1 528 ft AMSL
+        correct: false
+        why: ""
+- id: QSFND3XVC
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333123
+    - ATPLGS-629336
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to VFR chart ED-4 from the Jeppesen GSPRM 2017.   
+       Given the coordinates N49°00, E012°30, what is the frequency of the nearby navaid?
+    explanation: ""
+    options:
+      - id: OZCX0ZOWG
+        text: 393 kHz
+        correct: false
+        why: ""
+      - id: OP7XMUNAV
+        text: 122.60 MHz
+        correct: false
+        why: ""
+      - id: OAVDB76CS
+        text: 123.50 MHz
+        correct: false
+        why: ""
+      - id: OCAQF3JAC
+        text: 114.70 MHz
+        correct: true
+        why: ""
+- id: QSGTYQLB
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336750
+    - ATPLGS-627144
+  annexes:
+    - jeppesen-lddu-19-1
+  learningObjectives:
+    - 033.01.01.03.02
+  template:
+    type: simple
+    question: |-
+      Refer to DUBROVNIK - charts 19-1 and 19-2 from Jeppesen GSPRM 2017.   
+       How many VFR arrivals to Dubrovnik are published?
+    explanation: ""
+    options:
+      - id: OWYUZS9C2
+        text: "5"
+        correct: true
+        why: ""
+      - id: OEB2OG4AE
+        text: "8"
+        correct: false
+        why: ""
+      - id: O3QYVFPZN
+        text: "1"
+        correct: false
+        why: ""
+      - id: O3M5VXDRE
+        text: "4"
+        correct: false
+        why: ""
+- id: QSVD1U0TJ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338534
+    - ATPLGS-629283
+    - BGS-330970
+    - AVEXAM-60059
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: |-
+      Given the following information, what is the air distance covered (NAM)?
+
+      - TAS: {{tas}} kt
+      - Headwind component: {{hw}} kt
+      - Ground distance: {{gd}} NGM
+    variables:
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: hw
+        label: Headwind component
+        unit: kt
+      - id: gd
+        label: Ground distance
+        unit: NGM
+    answer:
+      formula: gd * tas / (tas - hw)
+      unit: NAM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: gd * (tas - hw) / tas
+      - id: d2
+        formula: gd
+      - id: d3
+        formula: gd + hw
+      - id: d4
+        formula: gd * tas / (tas + hw)
+    presets:
+      - id: p1
+        values:
+          tas: 120
+          hw: 20
+          gd: 200
+      - id: p2
+        values:
+          tas: 150
+          hw: 30
+          gd: 300
+      - id: p3
+        values:
+          tas: 200
+          hw: 40
+          gd: 400
+    explanation: >-
+      The air distance is the distance flown through the air mass. It is related
+      to the ground distance by the ratio of TAS to ground speed, and with a
+      headwind the ground speed is TAS minus the headwind component.
+
+
+      **Solution**
+
+
+      Ground speed = {{f: tas - hw}} = {{n: tas - hw}} = {{= tas - hw}} kt
+
+
+      {{f: gd * tas / (tas - hw)}} = {{n: gd * tas / (tas - hw)}} = **{{answer}}
+      NAM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NAM**: the ratio is inverted (ground speed / TAS instead of TAS
+      / ground speed).
+
+      - **{{d2}} NAM**: this is just the ground distance, ignoring the wind.
+
+      - **{{d3}} NAM**: adds the wind speed to the distance instead of scaling
+      it by TAS / ground speed.
+
+      - **{{d4}} NAM**: treats the headwind as a tailwind (ground speed = TAS +
+      wind).
+- id: QTAQNZ6K4
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334602
+    - ATPLGS-629340
+    - ATPLGS-629382
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to VFR chart ED-4 from the Jeppesen GSPRM 2017. You are planning
+      a VFR flight from Landshut aerodrome (EDML, 48°30.7'N 012°02.0"E) to
+      Deggendorf aerodrome (EDMW, 48°49.8'N 012°52.8"E) following the A92
+      highway. What is the height of the highest man-made obstacle in the
+      vicinity of your route?
+    explanation: ""
+    options:
+      - id: ORCK2YCPW
+        text: 2 094 ft AMSL
+        correct: false
+        why: ""
+      - id: OOH1K3CVZ
+        text: 2 089 ft AMSL
+        correct: true
+        why: ""
+      - id: OHHWSYZJW
+        text: 1 528 ft AMSL
+        correct: false
+        why: ""
+      - id: O7NM7LDXS
+        text: 1 766 ft AMSL
+        correct: false
+        why: ""
+- id: QTIIVMUH
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-339164
+    - ATPLGS-129294
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017.   
+       On a VFR flight, you need to overfly Alicante CTR from NE1 and exit at SW. Who shall you be in contact with and what would be an appropriate altitude?
+    explanation: ""
+    options:
+      - id: OV5URD59P
+        text: Valencia Control, 5 000 ft
+        correct: true
+        why: ""
+      - id: O9LNELWDJ
+        text: Alicante Tower, 5 000 ft
+        correct: false
+        why: ""
+      - id: OYSE2TDRT
+        text: Valencia Control, 1 000 ft
+        correct: false
+        why: ""
+      - id: OKZJFLGOL
+        text: Alicante Tower, 2 000 ft
+        correct: false
+        why: ""
+- id: QTOFA3ZG0
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335081
+    - AVEXAM-68544
+    - ATPLGS-629446
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: What is the best landmark for a pilot flying a VFR flight to get
+      distance and bearing?
+    explanation: ""
+    options:
+      - id: OOBHRFY9G
+        text: Large cities and towns.
+        correct: false
+        why: ""
+      - id: O3PSVMFP3
+        text: An airport runway.
+        correct: true
+        why: ""
+      - id: OUH8PX25P
+        text: A large lake.
+        correct: false
+        why: ""
+      - id: O5OJYZDD6
+        text: A large forest.
+        correct: false
+        why: ""
+- id: QTSHTFWN
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-334807
+    - ATPLGS-129291
+  annexes:
+    - jeppesen-vfr-chart-icao-1-05
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.   
+       You are planning a VFR flight from Blaubeuren (EDMC, N048° 25.18' E09° 47.85') to Donaueschingen Villingen (EDTD, N047° 58.42' E08° 31.33'). Which of the following landmarks would be suitable to overfly as a turning point in order to not enter any restricted area?
+    explanation: ""
+    options:
+      - id: O5PZEPVFC
+        text: Albstadt Degerfeld Aerodrome (EDSA).
+        correct: false
+        why: ""
+      - id: OIQHEVAAN
+        text: The radio mast south of the town Balingen.
+        correct: true
+        why: ""
+      - id: OU5GQQKR7
+        text: Münsingen Eisberg glider aerodrome
+        correct: false
+        why: ""
+      - id: OY1HATVTW
+        text: Hayingen glider aerodrome.
+        correct: false
+        why: ""
+- id: QTVFXUMG
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333678
+    - ATPLGS-627007
+    - AVEXAM-31564
+  annexes:
+    - jeppesen-vfr-chart-icao-1-08
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.Refer to München / Munich
+      airport (EDDM, N048° 21.23' E11° 47.17').   
+       What is the lowest altitude of class C airspace?
+    explanation: ""
+    options:
+      - id: OZSBROC1S
+        text: FL65
+        correct: false
+        why: ""
+      - id: OCDBLSST9
+        text: FL100
+        correct: false
+        why: ""
+      - id: OLCZ2QUPQ
+        text: 3500 ft
+        correct: true
+        why: ""
+      - id: OHCLH9ZYZ
+        text: 4500 ft
+        correct: false
+        why: ""
+- id: QTYMMYVS
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338139
+    - ATPLGS-627110
+  annexes:
+    - jeppesen-vfr-chart-icao-1-08
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.   
+       You are approaching Ingolstadt Airport ETSI (N48° 42.9' E011° 32.1’) and you have to obtain the distance from a navaids. Which navaid provides the best distance measurement in order to land at ETSI?
+    explanation: ""
+    options:
+      - id: OA0UOT3LP
+        text: 112.80 WLD VOR/DME
+        correct: false
+        why: ""
+      - id: ODBDFCO0X
+        text: 108.90 NEU Tacan
+        correct: false
+        why: ""
+      - id: OFTKKBQNB
+        text: 111.40 IGL Tacan
+        correct: true
+        why: ""
+      - id: OJIVUEQI7
+        text: 345 IGL NDB
+        correct: false
+        why: ""
+- id: QTZHSXWP
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333835
+    - AVEXAM-66854
+  annexes: []
+  learningObjectives:
+    - 033.01.01.02.03
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.   
+       When following the highway from MIKE NDB (near 48°30'N 11°30'E) to the south until it crosses a railway from München, what is the highest obstacle within a range of 4 NM?
+    explanation: ""
+    options:
+      - id: OU61IU5MK
+        text: 2148 ft
+        correct: false
+        why: ""
+      - id: OWFMCIGXR
+        text: 2175 ft
+        correct: true
+        why: ""
+      - id: OUN82ZSQG
+        text: 1749 ft
+        correct: false
+        why: ""
+      - id: OBOHV9WPE
+        text: 1496 ft
+        correct: false
+        why: ""
+- id: QUAI73T1Z
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-339733
+    - AVEXAM-18362
+    - ATPLGS-627145
+  annexes:
+    - jeppesen-lfrs-10-9
+    - jeppesen-lfrs-19-1
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: |-
+      Refer to NANTES - Charts 19-1, 19-2, 19-3 from Jeppesen GSPRM 2017\.   
+       What is the elevation of the highest obstacle on the chart?
+    explanation: ""
+    options:
+      - id: OFSHV3VBD
+        text: 1 000 ft AMSL
+        correct: false
+        why: ""
+      - id: OWVEZGUS9
+        text: 2 500 ft AMSL
+        correct: false
+        why: ""
+      - id: OVMTZVCLR
+        text: " 912 ft AMSL"
+        correct: true
+        why: ""
+      - id: ORH9TMKVC
+        text: 369 ft AGL
+        correct: false
+        why: ""
+- id: QUSUWUTA
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-331854
+    - AVEXAM-66725
+  annexes: []
+  learningObjectives:
+    - 033.01.01.03.03
+  template:
+    type: simple
+    question: A VFR flight is planned from aerodrome A to aerodrome B on a 085°
+      track. What would be an appropriate Flight Level for this route?
+    explanation: ""
+    options:
+      - id: OCHBJQSO7
+        text: FL60
+        correct: false
+        why: ""
+      - id: OD9QWXNYD
+        text: FL65
+        correct: false
+        why: ""
+      - id: OJOQQPN0V
+        text: FL50
+        correct: false
+        why: ""
+      - id: OJVTK26SQ
+        text: FL55
+        correct: true
+        why: ""
+- id: QVGLXXCF
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337390
+    - ATPLGS-629577
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: simple
+    question: >-
+      Refer to Alicante - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017.   
+       What is the track and distance from reporting point N to NE?
+    explanation: ""
+    options:
+      - id: OP3ASKUV6
+        text: 066° - 7 NM
+        correct: true
+        why: ""
+      - id: OZNGZNSA9
+        text: 044° - 12 NM
+        correct: false
+        why: ""
+      - id: OPTBSTWFT
+        text: 066° - 12 NM
+        correct: false
+        why: ""
+      - id: OLLZAHMWE
+        text: 044° - 7 NM
+        correct: false
+        why: ""
+- id: QVHZYIWC
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337534
+    - ATPLGS-626086
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - 033.01.01.01.01
+  template:
+    type: simple
+    question: How many VFR corridors are published according to Jeppesen GSPRM
+      Training Route Manual ALICANTE Charts 19-1,19-2,19-3?
+    explanation: ""
+    options:
+      - id: OL6MQKOLK
+        text: "1"
+        correct: false
+        why: ""
+      - id: OTGUZWGPI
+        text: "2"
+        correct: true
+        why: ""
+      - id: OXSXQUDQH
+        text: "4"
+        correct: false
+        why: ""
+      - id: OOPYMW3EF
+        text: "5"
+        correct: false
+        why: ""
+- id: QVVRCYYO
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333474
+    - AVEXAM-33678
+    - BGS-331307
+  annexes:
+    - jeppesen-airport-chart-19-1-edny-friedrichshafen-25-aug-17
+  learningObjectives:
+    - 033.01.01.02.04
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      (For this question use VFR chart Friedrichshafen (EDNY) 19-1 from the
+      Jeppesen GSPRM 2017).You are planning VFR departure from Friedrichshafen
+      aerodrome (EDNY) using runway 24. What is the correct departure procedure
+      to route via point NOVEMBER?
+
+
+      After take off, turn right to track…
+    explanation: ""
+    options:
+      - id: ON2DP7CS1
+        text: 300°(M), flying NOT above 2000 ft
+        correct: false
+        why: ""
+      - id: OCPQX20CE
+        text: 315°(M), flying NOT above 3000 ft.
+        correct: true
+        why: ""
+      - id: OXA3TKQ5M
+        text: 307°(M), flying NOT above 2000 ft.
+        correct: false
+        why: ""
+      - id: OHZRXT9OC
+        text: 269°(M), flying NOT above 3000 ft. When crossing the railway line, track
+          299° (M).
+        correct: false
+        why: ""
+- id: QWCNHPWEO
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333213
+    - ATPLGS-622367
+    - BGS-331411
+    - AVEXAM-78676
+    - AVEXAM-27380
+    - ATPLGS-629443
+    - AVEXAM-53440
+    - BGS-331049
+    - ATPLGS-622521
+    - ATPLGS-622505
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017\.   
+       A VFR flight which intends to land at Alicante aerodrome (LEAL) is currently overhead VFR report point SE, following the Tabarca route to intercept the South Route. The airport is busy with IFR departures and arrivals. ATC informs the VFR flight to expect delays.
+
+      Where is the VFR traffic expected to hold?
+    explanation: ""
+    options:
+      - id: ONBEET0SG
+        text: Published holding overhead ALT/VOR as determined by Alicante APP.
+        correct: false
+        why: ""
+      - id: OPWWFIO38
+        text: Overhead VFR reporting point SE prior to entering the ATZ.
+        correct: false
+        why: ""
+      - id: OBCLQDWHK
+        text: Published holding overhead ATE/VOR as determined by Alicante APP.
+        correct: false
+        why: ""
+      - id: OINTBCOZJ
+        text: Overhead VFR reporting point S as established by Alicante TWR.
+        correct: true
+        why: ""
+- id: QWKSUSGC6
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333577
+    - ATPLGS-627416
+    - AVEXAM-91563
+  annexes:
+    - aip-croatia-visual-operation-chart-ldsb-ad-2-24-13
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to figure.   
+
+      The first reporting point when departing for a VFR flight from LDSB to the
+      north, to join the ADRIA 4 route, will be.
+    explanation: ""
+    options:
+      - id: O8O8UT6IH
+        text: Supetar (43 22 57N, 016 33 05E).
+        correct: true
+        why: ""
+      - id: O7B0NW2PH
+        text: Omi (43 26 31N, 016 41 49E).
+        correct: false
+        why: ""
+      - id: O1DNAC73S
+        text: Sumartin (43 17 12N, 016 52 25E).
+        correct: false
+        why: ""
+      - id: OF0TQEMW1
+        text: Puia (43 21 05N, 016 43 50E).
+        correct: false
+        why: ""
+- id: QWKXULMD
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336441
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - 033.01.01.02.02
+  template:
+    type: calculation
+    question: Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017. What is the distance
+      between the obstacle with a height of 4055 ft (N{{a1d}}°{{a1m}}',
+      E{{o1d}}°{{o1m}}') and airport EDPS (N{{a2d}}°{{a2m}}',
+      E{{o2d}}°{{o2m}}')?
+    variables:
+      - id: a1d
+        label: Obstacle latitude, degrees
+        unit: °
+      - id: a1m
+        label: Obstacle latitude, minutes
+        unit: "'"
+      - id: o1d
+        label: Obstacle longitude, degrees
+        unit: °
+      - id: o1m
+        label: Obstacle longitude, minutes
+        unit: "'"
+      - id: a2d
+        label: Airport latitude, degrees
+        unit: °
+      - id: a2m
+        label: Airport latitude, minutes
+        unit: "'"
+      - id: o2d
+        label: Airport longitude, degrees
+        unit: °
+      - id: o2m
+        label: Airport longitude, minutes
+        unit: "'"
+    answer:
+      formula: sqrt(((a1d - a2d) * 60 + a1m - a2m) ^ 2 + (((o2d - o1d) * 60 + o2m -
+        o1m) * cos((a1d + a1m / 60 + a2d + a2m / 60) / 2)) ^ 2)
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: sqrt(((a1d - a2d) * 60 + a1m - a2m) ^ 2 + ((o2d - o1d) * 60 + o2m -
+          o1m) ^ 2)
+      - id: d2
+        formula: abs((a1d - a2d) * 60 + a1m - a2m) + abs((o2d - o1d) * 60 + o2m - o1m)
+      - id: d3
+        formula: abs((o2d - o1d) * 60 + o2m - o1m) * cos((a1d + a1m / 60 + a2d + a2m /
+          60) / 2)
+      - id: d4
+        formula: abs((a1d - a2d) * 60 + a1m - a2m) + abs((o2d - o1d) * 60 + o2m - o1m) *
+          cos((a1d + a1m / 60 + a2d + a2m / 60) / 2)
+    presets:
+      - id: p1
+        values:
+          a1d: 49
+          a1m: 9
+          o1d: 13
+          o1m: 4
+          a2d: 48
+          a2m: 41
+          o2d: 13
+          o2m: 41.78
+      - id: p2
+        values:
+          a1d: 50
+          a1m: 10
+          o1d: 12
+          o1m: 20
+          a2d: 49
+          a2m: 30
+          o2d: 13
+          o2m: 15
+    explanation: >-
+      One minute of latitude is one nautical mile. One minute of longitude is
+      cos(latitude) nautical miles, so the difference in longitude must be
+      scaled by the cosine of the mean latitude. The distance then follows from
+      Pythagoras.
+
+
+      **Solution**
+
+
+      Latitude difference: {{= (a1d - a2d) * 60 + a1m - a2m}} NM
+
+
+      Departure (east-west): {{= ((o2d - o1d) * 60 + o2m - o1m) * cos((a1d + a1m
+      / 60 + a2d + a2m / 60) / 2)}} NM
+
+
+      Distance = **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: longitude not scaled by the cosine of latitude.
+
+      - **{{d2}} NM**: differences added instead of using Pythagoras.
+
+      - **{{d3}} NM**: only the east-west component was used.
+
+      - **{{d4}} NM**: latitude and east-west components added instead of
+      combined with Pythagoras.
+- id: QWWEIIFVH
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338134
+    - ATPLGS-626142
+    - BGS-330749
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      Given the following information, how long does it take to reach the Top of
+      Climb (TOC)? Give the answer in minutes.
+
+
+      - Departure aerodrome elevation: {{elev}} ft
+
+      - TOC: FL{{toc_fl}}
+
+      - Rate of climb: {{roc}} ft/min
+
+      - QNH: {{qnh}} hPa
+    variables:
+      - id: elev
+        label: Departure aerodrome elevation
+        unit: ft
+      - id: qnh
+        label: QNH
+        unit: hPa
+      - id: toc_fl
+        label: TOC flight level
+        unit: FL
+      - id: roc
+        label: Rate of climb
+        unit: ft/min
+    answer:
+      formula: (toc_fl * 100 - (elev + 30 * (1013 - qnh))) / roc
+      unit: min
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (toc_fl * 100 - elev) / roc
+      - id: d2
+        formula: (toc_fl * 100 - (elev + 30 * (1013 - qnh))) / roc - 1
+      - id: d3
+        formula: toc_fl * 100 / roc
+      - id: d4
+        formula: (toc_fl * 100 + elev + 30 * (1013 - qnh)) / roc
+    presets:
+      - id: p1
+        values:
+          elev: 2500
+          qnh: 995
+          toc_fl: 185
+          roc: 1500
+      - id: p2
+        values:
+          elev: 1200
+          qnh: 1008
+          toc_fl: 80
+          roc: 800
+    explanation: >-
+      The climb starts from the pressure altitude of the aerodrome, which is the
+      elevation corrected for the QNH at 30 ft per hPa from 1013 hPa. The height
+      to climb is the TOC altitude minus that pressure altitude, and the time is
+      the height divided by the rate of climb.
+
+
+      **Solution**
+
+
+      Pressure altitude: {{= elev + 30 * (1013 - qnh)}} ft
+
+
+      Height to climb: {{= toc_fl * 100 - (elev + 30 * (1013 - qnh))}} ft
+
+
+      Time: {{f: (toc_fl * 100 - (elev + 30 * (1013 - qnh))) / roc}} = {{n:
+      (toc_fl * 100 - (elev + 30 * (1013 - qnh))) / roc}} = **{{answer}} min**
+
+
+      **Why the other answers are wrong**
+
+      - **{{d1}} min**: ignores the QNH correction.
+
+      - **{{d2}} min**: subtracts one extra minute, a calculation slip.
+
+      - **{{d3}} min**: uses the TOC altitude alone and ignores the departure
+      altitude.
+
+      - **{{d4}} min**: adds the pressure altitude instead of subtracting it.
+- id: QXV7DDLDC
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333619
+    - AVEXAM-13063
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to Enroute\_ED-4\_VFR from GSPRM Training Route Manual 2017.   
+       For a planned and authorized landing on a grassland 5 NM east of RODING VOR (RDG, N49°02', E012°32'), a frequency of 120.65 MHz is used to request the latest QNH for the nearby Straubing airfield. Which of the following is the corresponding call sign?
+    explanation: ""
+    options:
+      - id: OWISIX65V
+        text: Straubing Radar
+        correct: false
+        why: ""
+      - id: O1CRNPBTZ
+        text: München Information
+        correct: true
+        why: ""
+      - id: OHSJIWX1Y
+        text: Straubing Information
+        correct: false
+        why: ""
+      - id: OYUDLKD2Z
+        text: Straubing Tower
+        correct: false
+        why: ""
+- id: QYLPVUUB
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337130
+    - AVEXAM-77285
+  annexes:
+    - jeppesen-vfr-chart-icao-1-04
+  learningObjectives:
+    - 033.01.01.03.03
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.   
+       Choose the correct statement on a standard day regarding the airspace above Stuttgart Airport (EDDS, N48°41.4', E009°13.3').
+    explanation: ""
+    options:
+      - id: O1LGJ3HTR
+        text: At 2 000 ft AMSL you would be in class E airspace.
+        correct: false
+        why: ""
+      - id: OFSIWEL3R
+        text: At 5 000 ft AMSL you would be in class G airspace.
+        correct: false
+        why: ""
+      - id: OSWKNDQGO
+        text: At 4 000 ft AMSL you would be in class C airspace.
+        correct: true
+        why: ""
+      - id: O0DB6DAG2
+        text: At 4 000 ft AMSL you would be in class D airspace.
+        correct: false
+        why: ""
+- id: QYMO24QSF
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-333423
+    - ATPLGS-107829
+    - BGS-330003
+    - AVEXAM-49563
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: "VFR flights shall not be flown over the congested areas of cities at
+      a height less than:"
+    explanation: ""
+    options:
+      - id: ORJ0T613E
+        text: 1 000 ft above the highest obstacle within a radius of 600 m from the
+          aircraft.
+        correct: true
+        why: ""
+      - id: O3BIEJZDL
+        text: the highest obstacle.
+        correct: false
+        why: ""
+      - id: OW4HWW7BM
+        text: 2 000 ft above the highest obstacle within a radius of 600 ft from the
+          aircraft.
+        correct: false
+        why: ""
+      - id: OUQX1ODZ3
+        text: 500 ft above the highest obstacle.
+        correct: false
+        why: ""
+- id: QYV1DQWVT
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-335522
+    - ATPLGS-629433
+    - AVEXAM-24889
+    - BGS-331214
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: You want to plan a VFR flight within a controlled airspace using your
+      GNSS flight plan as a back-up navigation method. Which of the following
+      are best suited as significant points for entering into your GNSS flight
+      plan as VFR waypoints using a distance and bearing?
+    explanation: ""
+    options:
+      - id: OV6YISILO
+        text: Airport reference point.
+        correct: true
+        why: ""
+      - id: OID8IMFSG
+        text: Power lines.
+        correct: false
+        why: ""
+      - id: OTZ0DTBUO
+        text: Major cities and large towns.
+        correct: false
+        why: ""
+      - id: OGZJPFR6B
+        text: Coastlines.
+        correct: false
+        why: ""
+- id: QZNNI02KR
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332771
+    - AVEXAM-92075
+  annexes: []
+  learningObjectives:
+    - "033.01"
+  template:
+    type: calculation
+    question: >-
+      An aircraft is flying VFR using a VOR to navigate and follows radial
+      {{radial}}° (magnetic) outbound from the VOR. Determine the expected wind
+      correction angle (WCA), given:
+
+
+      - Wind: {{wd}}° (T) / {{ws}} kt
+
+      - TAS: {{tas}} kt
+
+      - Variation: {{var}}° W
+
+
+      Positive = right, negative = left.
+    variables:
+      - id: radial
+        label: Radial (magnetic)
+        unit: °
+      - id: wd
+        label: Wind direction (true)
+        unit: °
+      - id: ws
+        label: Wind speed
+        unit: kt
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: var
+        label: Westerly variation
+        unit: °
+    answer:
+      formula: asin(ws * sin(wd - (radial - var)) / tas)
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: -asin(ws * sin(wd - (radial - var)) / tas)
+      - id: d2
+        formula: asin(ws * sin(wd - radial) / tas)
+      - id: d3
+        formula: asin(ws * sin(wd - (radial + var)) / tas)
+      - id: d4
+        formula: asin(ws / tas)
+    presets:
+      - id: p1
+        values:
+          radial: 128
+          wd: 80
+          ws: 35
+          tas: 155
+          var: 15
+      - id: p2
+        values:
+          radial: 250
+          wd: 300
+          ws: 25
+          tas: 120
+          var: 5
+      - id: p3
+        values:
+          radial: 90
+          wd: 140
+          ws: 30
+          tas: 140
+          var: 8
+    explanation: >-
+      The wind is given in true degrees while the radial is magnetic, so the
+      radial must first be converted to a true track. With westerly variation,
+      true = magnetic - variation. The WCA then follows from the wind triangle:
+      sin(WCA) = wind speed x sin(wind angle relative to track) / TAS.
+
+
+      **Solution**
+
+
+      True track = {{radial}}° - {{var}}° = {{= radial - var}}°
+
+
+      {{f: asin(ws * sin(wd - (radial - var)) / tas)}} = {{n: asin(ws * sin(wd -
+      (radial - var)) / tas)}} = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: right size but wrong sign.
+
+      - **{{d2}}°**: the variation was ignored and the magnetic radial was used
+      as if it were a true track.
+
+      - **{{d3}}°**: the variation was applied with the wrong sign (east instead
+      of west).
+
+      - **{{d4}}°**: uses the full wind speed, as if the wind were perpendicular
+      to the track.
+- id: QZONC7HSM
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-338349
+    - ATPLGS-629577
+    - AVEXAM-39664
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to ALICANTE - charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM
+      2017.   
+       What is the distance between reporting points N and NE?
+    explanation: ""
+    options:
+      - id: O29T2YFPC
+        text: 5 NM
+        correct: false
+        why: ""
+      - id: O61VY10JA
+        text: 7.5 km
+        correct: false
+        why: ""
+      - id: OZXGEEMXX
+        text: 13 NM
+        correct: false
+        why: ""
+      - id: OHZPAREWX
+        text: 7 NM
+        correct: true
+        why: ""
+- id: QZPWVQJQX
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-336752
+    - ATPLGS-629434
+  annexes:
+    - jeppesen-leal-19-1
+    - jeppesen-leal-19-3
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: Refer to ALICANTE charts 19-1, 19-2 and 19-3 from Jeppesen GSPRM 2017.
+      What is the route that must be followed by an aircraft passing through
+      Alicante as VFR from the South?
+    explanation: ""
+    options:
+      - id: O6LJP19BL
+        text: SW - S - N - NE1
+        correct: false
+        why: ""
+      - id: ONUDTENI3
+        text: NE1 - ALT - SW
+        correct: false
+        why: ""
+      - id: OXGW5UZJB
+        text: SW - ALT - NE1
+        correct: true
+        why: ""
+      - id: OOZDPVOEG
+        text: NE1 - ATE - SW
+        correct: false
+        why: ""
+- id: QZU5CIPVE
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337348
+    - AVEXAM-72186
+  annexes:
+    - jeppesen-lddu-19-1
+  learningObjectives:
+    - "033.01"
+  template:
+    type: simple
+    question: >-
+      Refer to DUBROVNIK - charts 19-1 and 19-2 from Jeppesen GSPRM 2017\.   
+       What is the specified altitude following the arrival route from Sv. Andrija Island?
+    explanation: ""
+    options:
+      - id: OIP5WBVAO
+        text: 1 500 ft AMSL
+        correct: true
+        why: ""
+      - id: OXIUQS2WK
+        text: 4 000 ft AGL
+        correct: false
+        why: ""
+      - id: OGILW9ZSI
+        text: 4 000 ft AMSL
+        correct: false
+        why: ""
+      - id: OAWQPDURZ
+        text: 1 500 ft AGL
+        correct: false
+        why: ""
+- id: QZWQARGRK
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-332834
+  annexes:
+    - jeppesen-vfr-chart-icao-1-08
+  learningObjectives:
+    - "033.01"
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to VFR chart ED-4 from the Jeppesen GSPRM. The distance between the
+      two aids measured on the chart is {{nm}} NM.
+
+
+      Give this distance in km.
+    variables:
+      - id: nm
+        label: Distance measured on the chart
+        unit: NM
+    chartInputs:
+      - nm
+    answer:
+      formula: nm * 1.852
+      unit: km
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: nm
+      - id: d2
+        formula: nm * 1.15078
+      - id: d3
+        formula: nm / 1.852
+      - id: d4
+        formula: nm * 1.609
+    presets:
+      - id: p1
+        values:
+          nm: 36.5
+      - id: p2
+        values:
+          nm: 25
+      - id: p3
+        values:
+          nm: 48
+    explanation: >-
+      The chart distance (read from the chart in NM) is converted to km with 1
+      NM = 1.852 km.
+
+
+      **Solution**
+
+
+      {{f: nm * 1.852}} = {{n: nm * 1.852}} = **{{answer}} km**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} km**: the NM value was left unconverted.
+
+      - **{{d2}} km**: converted to statute miles instead of km.
+
+      - **{{d3}} km**: divided by 1.852 instead of multiplied.
+
+      - **{{d4}} km**: used the statute mile factor (1.609) instead of the
+      nautical mile factor.
+- id: QZZCDLKQ
+  docId: "033.01"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-337688
+    - ATPLGS-629329
+  annexes:
+    - jeppesen-vfr-chart-icao-1-06
+  learningObjectives:
+    - 033.01.01.03.03
+  template:
+    type: simple
+    question: Refer to VFR chart ED-4 from the Jeppesen GSPRM 2017. You are planning
+      a VFR flight from Albstadt (EDSA) (N48°16' E009°04') to Saulgau (EDTU)
+      (N48°02' E009°31' ) aerodromes. Which Flight Information Service
+      frequency(ies) should you contact?
+    explanation: ""
+    options:
+      - id: OT957L02S
+        text: Only 128.95
+        correct: true
+        why: ""
+      - id: ODAC5HZ8S
+        text: 125.10 & 123.60
+        correct: false
+        why: ""
+      - id: OX0QYUBBR
+        text: 128.95 & 126.95
+        correct: false
+        why: ""
+      - id: OSA7NQXZR
+        text: Only 126.95
+        correct: false
+        why: ""

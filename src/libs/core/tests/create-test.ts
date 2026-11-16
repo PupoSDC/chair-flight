@@ -1,8 +1,8 @@
 import { getRandomGenerator } from "../../base/get-random-generator.ts";
 import { getRandomId } from "../../base/get-random-id.ts";
 import { createTestQuestion } from "./create-test-question.ts";
-import type { QuestionBankName } from "../question-bank/question-banks.ts";
-import type { QuestionVariant } from "../question-bank/question-variant.ts";
+import type { QuestionBankName } from "../question-banks/question-banks.ts";
+import type { QuestionTemplate } from "../question-templates/question-template.ts";
 import type { Test } from "./test.ts";
 
 export const createTest = ({
@@ -21,8 +21,7 @@ export const createTest = ({
   templates: {
     id: string;
     annexes: string[];
-    explanation: string;
-    variant: QuestionVariant;
+    template: QuestionTemplate;
   }[];
 }): Test => {
   const random = getRandomGenerator(seed);
@@ -38,8 +37,8 @@ export const createTest = ({
     createdAtEpochMs: Date.now(),
     startedAtEpochMs: null,
     finishedAtEpochMs: null,
-    questions: templates
-      .filter((template) => template.variant.type !== "multiple-correct")
-      .map((template) => createTestQuestion(template, getRandomId(random))),
+    questions: templates.map((template) =>
+      createTestQuestion(template, getRandomId(random)),
+    ),
   };
 };

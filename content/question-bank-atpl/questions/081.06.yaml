@@ -1,0 +1,4948 @@
+- id: Q041LCFFU
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815826
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: calculation
+    question: >-
+      The manoeuvring speed (VA) of a light aeroplane is {{va1}} kt at a mass of
+      {{m1}} lb.
+
+
+      What is the VA at a mass of {{m2}} lb?
+    variables:
+      - id: va1
+        label: VA at reference mass
+        unit: kt
+      - id: m1
+        label: Reference mass
+        unit: lb
+      - id: m2
+        label: New mass
+        unit: lb
+    answer:
+      formula: va1 * sqrt(m2 / m1)
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: va1 * m2 / m1
+      - id: d2
+        formula: va1 * sqrt(m1 / m2)
+      - id: d3
+        formula: va1 * m1 / m2
+      - id: d4
+        formula: va1
+    presets:
+      - id: p1
+        values:
+          va1: 102
+          m1: 1550
+          m2: 2500
+      - id: p2
+        values:
+          va1: 95
+          m1: 1800
+          m2: 2600
+      - id: p3
+        values:
+          va1: 110
+          m1: 1400
+          m2: 2000
+    explanation: >-
+      The manoeuvring speed rises with the square root of the mass, because the
+      stall speed does and VA is a fixed multiple of it. A heavier aeroplane
+      therefore has a higher VA.
+
+
+      **Solution**
+
+
+      {{f: va1 * sqrt(m2 / m1)}} = {{n: va1 * sqrt(m2 / m1)}} = **{{answer}}
+      kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: scales VA directly with the mass, which overstates the
+      change.
+
+      - **{{d2}} kt**: uses the square root the wrong way round, so VA falls as
+      the mass rises.
+
+      - **{{d3}} kt**: scales VA inversely with the mass.
+
+      - **{{d4}} kt**: keeps VA unchanged, which ignores the change of mass.
+- id: Q24AIIBIN
+  docId: "081.06"
+  relatedQuestions:
+    - Q0BSJFTHU
+  externalIds:
+    - ATPLQ-815804
+    - BGS-810366
+    - ATPLGS-118395
+    - ATPLGS-118394
+    - BGS-811616
+    - BGS-811614
+    - BGS-811610
+    - ATPLGS-118397
+    - AVEXAM-51571
+    - ATPLGS-126414
+    - ATPLGS-126420
+    - ATPLGS-126538
+    - ATPLGS-118345
+    - ATPLGS-118393
+    - BGS-811368
+    - ATPLGS-118391
+    - ATPLGS-118399
+    - ATPLGS-118396
+    - AVEXAM-54991
+    - ATPLGS-625837
+    - AVEXAM-93087
+    - ATPLGS-126377
+    - BGS-811612
+    - ATPLGS-118347
+    - BGS-811617
+    - ATPLQ-813429
+    - ATPLQ-811789
+    - ATPLQ-816588
+    - ATPLQ-818345
+  annexes: []
+  learningObjectives:
+    - "081.03"
+    - "081.06"
+  template:
+    type: calculation
+    question: An aeroplane flying at {{v0}} kt in straight and level flight is
+      subjected to a disturbance that suddenly increases its speed by {{dv}} kt.
+      Assuming the angle of attack remains constant, what is the load factor
+      immediately after the disturbance?
+    variables:
+      - id: v0
+        label: Initial speed
+        unit: kt
+      - id: dv
+        label: Speed increase
+        unit: kt
+    answer:
+      formula: ((v0 + dv) / v0) ^ 2
+      unit: ""
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: "1"
+      - id: d2
+        formula: (v0 + dv) / v0
+      - id: d3
+        formula: sqrt((v0 + dv) / v0)
+      - id: d4
+        formula: ((v0 - dv) / v0) ^ 2
+    presets:
+      - id: p1
+        values:
+          v0: 200
+          dv: 60
+      - id: p2
+        values:
+          v0: 200
+          dv: 100
+      - id: p3
+        values:
+          v0: 200
+          dv: 80
+      - id: p4
+        values:
+          v0: 200
+          dv: 20
+      - id: p5
+        values:
+          v0: 100
+          dv: 20
+    explanation: >-
+      With the angle of attack unchanged, the lift coefficient stays the same,
+      so the lift depends only on the speed. Lift goes with the square of the
+      speed, so the load factor is the square of the speed ratio.
+
+
+      **Solution**
+
+
+      {{f: ((v0 + dv) / v0) ^ 2}} = {{n: ((v0 + dv) / v0) ^ 2}} = **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: assumes the load factor stays at 1, forgetting that the lift
+      rises with speed.
+
+      - **{{d2}}**: uses the speed ratio instead of its square.
+
+      - **{{d3}}**: uses the square root of the speed ratio instead of the
+      square.
+
+      - **{{d4}}**: uses a speed decrease instead of the increase.
+- id: Q5HON8ZOB
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812909
+    - AVEXAM-61628
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: As well as V**LE**, sometimes an aircraft may have another limitation
+      speed called V**LO**. This will be implemented if at the (1) \_\_\_\_\_
+      speed, the aerodynamic loads could make operation of the (2) \_\_\_\_\_
+      unsafe.
+    explanation: ""
+    options:
+      - id: ONQURJDBE
+        text: (1) VLO ; (2) landing gear
+        correct: false
+        why: ""
+      - id: OCGE0PNEK
+        text: (1) VLE ; (2) landing gear
+        correct: true
+        why: ""
+      - id: O4W15SMQX
+        text: (1) VLO ; (2) leading edge devices
+        correct: false
+        why: ""
+      - id: OFSDE1RIO
+        text: (1) VLE ; (2) leading edge devices
+        correct: false
+        why: ""
+- id: Q5IBWWSBL
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-813723
+    - ATPLGS-129340
+    - BGS-811411
+    - BGS-812075
+    - BGS-812638
+    - ATPLQ-819081
+    - AVEXAM-37014
+    - ATPLQ-816349
+    - BGS-811220
+    - ATPLGS-129429
+  annexes: []
+  learningObjectives:
+    - 081.03.01.01.15
+    - 081.05.01.01.03
+    - "081.06"
+  template:
+    type: definition
+    question: What is {term}?
+    explanation: ""
+    options:
+      - id: OYTZKM8VX
+        term: V**D
+        definition: The maximum tested airspeed where the aircraft is free from any
+          signs of dynamic pressure overload, flutter, and/or control reversal.
+      - id: OLHCC4JA7
+        term: Deterrent Buffet
+        definition: It is considered to be the stall limit on jet transport aircraft.
+      - id: OJKBFYWKM
+        term: pitching motion
+        definition: It is about the lateral axis, related to longitudinal stability.
+    fakeOptions:
+      - id: F5IBWWSBL0
+        definition: The highest speed at which sudden, full elevator deflection
+          (nose-up) can be made WITHOUT exceeding the design limit load factor.
+      - id: F5IBWWSBL1
+        definition: A speed selected by the designer and used to assess the strength
+          requirements in cruise.
+      - id: F5IBWWSBL2
+        definition: A specially recommended penetration speed for severe turbulence.
+      - id: F5IBWWSBL3
+        definition: It is normal on take-off when fully loaded.
+      - id: F5IBWWSBL4
+        definition: It is confirmation that the aircraft is in a full stall.
+      - id: F5IBWWSBL5
+        definition: It is an indication to jet transport crews that higher alpha should
+          be used with caution.
+      - id: F5IBWWSBL6
+        definition: It is about the longitudinal axis, related to longitudinal stability.
+      - id: F5IBWWSBL7
+        definition: It is about the lateral axis, related to lateral stability.
+      - id: F5IBWWSBL8
+        definition: It is about the longitudinal axis, related to lateral stability.
+- id: Q7JHLJEJV
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817666
+    - AVEXAM-34099
+    - ATPLGS-118129
+    - BGS-810733
+    - ATPLGS-125919
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: >-
+      Which of the following statements is correct?
+
+
+      I. A higher limit load factor allows the manufacturer to design for a
+      lower stick force per g.   
+       II. The stick force per g is a limitation on aeroplane's operation, which the pilot can determine from the Aeroplane Flight Manual.
+    explanation: ""
+    options:
+      - id: O9LGBVP1A
+        text: I. is incorrect, II. is incorrect.
+        correct: false
+        why: ""
+      - id: OA0V7MH4M
+        text: I. is correct, II. is correct.
+        correct: false
+        why: ""
+      - id: ONSJFHXWS
+        text: I. is correct, II. is incorrect.
+        correct: true
+        why: ""
+      - id: OBJQAUMPA
+        text: I. is incorrect, II. is correct.
+        correct: false
+        why: ""
+- id: Q7K71T0RS
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-814989
+    - ATPLGS-625836
+    - ATPLGS-126428
+    - ATPLGS-126422
+    - ATPLGS-126430
+    - ATPLGS-126424
+    - ATPLGS-126425
+    - ATPLGS-117883
+    - ATPLGS-126406
+    - BGS-811504
+    - ATPLGS-126426
+    - AVEXAM-2547
+    - ATPLGS-126429
+    - ATPLGS-126427
+    - AVEXAM-69690
+    - BGS-810156
+    - BGS-811505
+    - BGS-811503
+    - BGS-811507
+    - ATPLGS-126423
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: calculation
+    question: >-
+      An aeroplane in straight and level flight is subjected to a sudden
+      disturbance in speed. The angle of attack stays constant at first.
+
+
+      - Initial speed: {{v}} kt
+
+      - Load factor reached: {{n}}
+
+
+      By how many knots has the speed changed? Give a positive number for an
+      increase and a negative number for a decrease.
+    variables:
+      - id: v
+        label: Initial speed
+        unit: kt
+      - id: n
+        label: Load factor
+        unit: ""
+    answer:
+      formula: v * (sqrt(n) - 1)
+      unit: kt
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: v * (n - 1)
+      - id: d2
+        formula: v * (1 - sqrt(n))
+      - id: d3
+        formula: v * (1 / sqrt(n) - 1)
+      - id: d4
+        formula: v * (n ^ 2 - 1)
+    presets:
+      - id: p1
+        values:
+          v: 300
+          n: 1.69
+      - id: p2
+        values:
+          v: 250
+          n: 1.44
+    explanation: >-
+      At a constant angle of attack the lift is proportional to the speed
+      squared. The load factor is therefore the square of the speed ratio, and
+      the speed ratio is the square root of the load factor.
+
+
+      **Solution**
+
+
+      {{f: v * (sqrt(n) - 1)}} = {{n: v * (sqrt(n) - 1)}} = **{{answer}} kt**
+      (an increase)
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: uses the load factor minus one as the speed change.
+
+      - **{{d2}} kt**: reverses the sign, which describes a decrease.
+
+      - **{{d3}} kt**: inverts the speed ratio, so it gives a decrease.
+
+      - **{{d4}} kt**: squares the load factor instead of taking its square
+      root.
+- id: Q8ONMUTVL
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818750
+    - AVEXAM-4684
+    - BGS-810937
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: calculation
+    question: |-
+      An aeroplane's mass decreases by the amount below.
+
+      - Mass decrease: {{pct}} %
+
+      By what percentage does its VA (EAS) reduce?
+    variables:
+      - id: pct
+        label: Mass decrease
+        unit: "%"
+    answer:
+      formula: 100 * (1 - sqrt(1 - pct / 100))
+      unit: "%"
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: pct
+      - id: d2
+        formula: pct / 4
+      - id: d3
+        formula: 100 * (1 - (1 - pct / 100) ^ 2)
+      - id: d4
+        formula: 100 * (1 / sqrt(1 - pct / 100) - 1)
+    presets:
+      - id: p1
+        values:
+          pct: 19
+      - id: p2
+        values:
+          pct: 36
+    explanation: >-
+      VA (EAS) is proportional to the square root of the mass. A {{pct}} % mass
+      decrease leaves {{= 100 - pct}} % of the mass, and the square root of that
+      fraction gives the new VA.
+
+
+      **Solution**
+
+
+      {{f: 100 * (1 - sqrt(1 - pct / 100))}} = {{n: 100 * (1 - sqrt(1 - pct /
+      100))}} = **{{answer}} %**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} %**: applies the mass change directly to VA, forgetting the
+      square root.
+
+      - **{{d2}} %**: takes a quarter of the mass change, which has no basis in
+      the relationship.
+
+      - **{{d3}} %**: makes VA proportional to the square of the mass.
+
+      - **{{d4}} %**: inverts the mass ratio, so it shows the wrong size of
+      change.
+- id: Q9SZRSPQP
+  docId: "081.06"
+  relatedQuestions:
+    - QTHHVLXW
+  externalIds:
+    - ATPLQ-811758
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: calculation
+    question: |-
+      An aeroplane's mass decreases by {{pct}}%.
+
+      How does the stalling speed (VS) change? Give the approximate change in %.
+    variables:
+      - id: pct
+        label: Mass decrease
+        unit: "%"
+    answer:
+      formula: pct / 2
+      unit: "%"
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: pct
+      - id: d2
+        formula: pct * 2
+      - id: d3
+        formula: pct / 4
+      - id: d4
+        formula: pct * 0.8
+    presets:
+      - id: p1
+        values:
+          pct: 20
+      - id: p2
+        values:
+          pct: 30
+      - id: p3
+        values:
+          pct: 12
+    explanation: >-
+      Stall speed depends on the square root of the mass. For a moderate change
+      in mass, the stall speed changes by about half as much, in percent, as the
+      mass does. A 20 % reduction in mass therefore lowers the stall speed by
+      about 10 %.
+
+
+      **Solution**
+
+
+      {{f: pct / 2}} = {{n: pct / 2}} = the stall speed decreases by about
+      **{{answer}} %**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} %**: assumes the stall speed changes by the full mass change.
+
+      - **{{d2}} %**: doubles the mass change instead of halving it.
+
+      - **{{d3}} %**: divides the mass change by four, which is too small.
+
+      - **{{d4}} %**: uses the mass ratio directly and ignores the square root.
+- id: QABVJUVY
+  docId: "081.06"
+  relatedQuestions:
+    - QDMYXIBJ
+    - QKAUUSHM
+    - QMYTEFTH
+  externalIds:
+    - ATPLQ-819187
+    - BGS-811756
+    - ATPLGS-126391
+    - ATPLGS-125884
+    - ATPLGS-126392
+    - BGS-811755
+    - BGS-810922
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.06
+  template:
+    type: simple
+    question: "The positive manoeuvring limit load factor for a light aeroplane in
+      the utility category in the clean configuration may not be less than:"
+    explanation: ""
+    options:
+      - id: O1LUMBRIL
+        text: 4.4.
+        correct: true
+        why: ""
+      - id: OH3KJJE4D
+        text: 6.0.
+        correct: false
+        why: ""
+      - id: OZWHMPGHE
+        text: 3.8.
+        correct: false
+        why: ""
+      - id: OPR756XWY
+        text: 2.5.
+        correct: false
+        why: ""
+- id: QAIMSHPL
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817319
+    - AVEXAM-22872
+  annexes: []
+  learningObjectives:
+    - 081.06.01.03.03
+  template:
+    type: simple
+    question: "VFE means the:"
+    explanation: ""
+    options:
+      - id: OSNPLWWA3
+        text: Maximum flap extension or retraction speed.
+        correct: false
+        why: ""
+      - id: O8T0HNYSC
+        text: Design flap speed for procedure flight conditions.
+        correct: false
+        why: ""
+      - id: OWUNZBZCE
+        text: Speed at which the critical engine is assumed to fail during take-off.
+        correct: false
+        why: ""
+      - id: OQBYXRWNG
+        text: Maximum speed with flaps extended.
+        correct: true
+        why: ""
+- id: QAMKYCSG
+  docId: "081.06"
+  relatedQuestions:
+    - QQFFNXUA
+  externalIds:
+    - ATPLQ-812978
+    - ATPLGS-628127
+    - AVEXAM-44095
+    - AVEXAM-31483
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: calculation
+    question: >-
+      You are flying a crop duster in the utility category, with a VS0 of
+      {{vs0}} kt and a VS1 of {{vs1}} kt.
+
+
+      What is the VA speed?
+    variables:
+      - id: vs0
+        label: VS0
+        unit: kt
+      - id: vs1
+        label: VS1
+        unit: kt
+    answer:
+      formula: round(vs1 * sqrt(4.4))
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: round(vs0 * sqrt(4.4))
+      - id: d2
+        formula: round(vs1 * sqrt(6))
+      - id: d3
+        formula: round(vs1 * sqrt(3.8))
+      - id: d4
+        formula: round(vs1 * 4.4)
+    presets:
+      - id: p1
+        values:
+          vs0: 45
+          vs1: 58
+      - id: p2
+        values:
+          vs0: 50
+          vs1: 62
+      - id: p3
+        values:
+          vs0: 40
+          vs1: 55
+    explanation: >-
+      The manoeuvring speed is the flaps-up stall speed (VS1) multiplied by the
+      square root of the limit load factor of the category. A utility aeroplane
+      has a limit load factor of 4.4 G. VS0 is the landing configuration stall
+      speed and is not used here.
+
+
+      **Solution**
+
+
+      {{f: vs1 * sqrt(4.4)}} = {{n: vs1 * sqrt(4.4)}}, rounded to the nearest
+      knot, gives **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: uses VS0 instead of VS1.
+
+      - **{{d2}} kt**: uses the aerobatic limit load factor of 6 G.
+
+      - **{{d3}} kt**: uses the normal category limit load factor of 3.8 G.
+
+      - **{{d4}} kt**: forgets the square root.
+- id: QAMTCCIV
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-819649
+  annexes: []
+  learningObjectives:
+    - 081.06.01.05.01
+  template:
+    type: simple
+    question: To which category is M**MO** applicable?
+    explanation: ""
+    options:
+      - id: OAYMFJMXR
+        text: CS23 & CS25
+        correct: true
+        why: ""
+      - id: OCNVC94NC
+        text: Neither category
+        correct: false
+        why: ""
+      - id: O5XLK5MLX
+        text: CS23
+        correct: false
+        why: ""
+      - id: OON1PIP2W
+        text: CS25
+        correct: false
+        why: ""
+- id: QBFRZK6XE
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815217
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: calculation
+    question: >-
+      The VA speed of a light aircraft is {{va}} kt. Determine the aircraft's
+      limit load factor, given the following information from the airspeed
+      indicator:
+
+
+      - Green arc: {{vs1}} kt - 165 kt
+
+      - White arc: {{vs0}} kt - 85 kt
+
+      - VNE: 185 kt
+
+
+      What is the limit load factor?
+    variables:
+      - id: va
+        label: VA
+        unit: kt
+      - id: vs1
+        label: VS1
+        unit: kt
+      - id: vs0
+        label: VS0
+        unit: kt
+    answer:
+      formula: ceil((va / vs1) ^ 2 * 100) / 100
+      unit: G
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: ceil((va / vs0) ^ 2 * 100) / 100
+      - id: d2
+        formula: ceil(va / vs1 * 100) / 100
+      - id: d3
+        formula: ceil(sqrt(va / vs1) * 100) / 100
+      - id: d4
+        formula: "2.5"
+    presets:
+      - id: p1
+        values:
+          va: 147
+          vs1: 73
+          vs0: 55
+      - id: p2
+        values:
+          va: 130
+          vs1: 66
+          vs0: 52
+      - id: p3
+        values:
+          va: 155
+          vs1: 78
+          vs0: 60
+    explanation: >-
+      VA is the speed at which the aeroplane can reach its limit load factor.
+      VS1 is the stall speed at maximum mass, shown as the lower end of the
+      green arc. The stall speed rises with the square root of the load factor,
+      so the limit load factor is the square of the ratio VA / VS1, rounded up
+      to two decimals.
+
+
+      **Solution**
+
+
+      {{f: (va / vs1) ^ 2}} = **{{answer}} G**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} G**: uses VS0, the lower end of the white arc, instead of VS1.
+
+      - **{{d2}} G**: forgets to square the speed ratio.
+
+      - **{{d3}} G**: takes the square root of the ratio instead of the square.
+
+      - **{{d4}} G**: uses the normal category limit of 2.5 G, which does not
+      apply to this aeroplane.
+- id: QBI7XAEEI
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817387
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: During approach, ATC asks an aircraft to keep its speed high, and this
+      speed is near the maximum speed for the current configuration. Which of
+      the following speed limits may be broken if the pilots extend the trailing
+      edge flaps at this time?
+    explanation: ""
+    options:
+      - id: OEGM4FYWZ
+        text: VS
+        correct: false
+        why: ""
+      - id: OMWPJWCZX
+        text: VMO
+        correct: false
+        why: ""
+      - id: ONHFNAREE
+        text: VFE
+        correct: true
+        why: ""
+      - id: OZKXQPKNY
+        text: VLO
+        correct: false
+        why: ""
+- id: QCFBOLZD8
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812200
+    - ATPLGS-125927
+    - BGS-810914
+    - AVEXAM-46273
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: "When flutter damping of control surfaces is obtained by mass
+      balancing, these weights will be located with respect to the hinge of the
+      control surface:"
+    explanation: ""
+    options:
+      - id: OAI7KJASF
+        text: below the hinge.
+        correct: false
+        why: ""
+      - id: OH7AYXNMO
+        text: above the hinge.
+        correct: false
+        why: ""
+      - id: OUFT8AMBV
+        text: behind the hinge.
+        correct: false
+        why: ""
+      - id: ORMSRFMNO
+        text: in front of the hinge.
+        correct: true
+        why: ""
+- id: QCKQSVEU
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-816162
+    - AVEXAM-26410
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.06
+  template:
+    type: simple
+    question: Which statement is true regarding positive limit load factor on CS25
+      and CS23?
+    explanation: ""
+    options:
+      - id: OUQJPN4RX
+        text: CS23 and CS25 have the same value
+        correct: false
+        why: ""
+      - id: OHICLROAR
+        text: CS25 does not have a limiting load factor
+        correct: false
+        why: ""
+      - id: OMPGEMDVB
+        text: CS25 has a higher value
+        correct: false
+        why: ""
+      - id: ODULQK1O3
+        text: CS23 has a higher value
+        correct: true
+        why: ""
+- id: QCKTHBCB
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-819964
+    - ATPLGS-126161
+    - AVEXAM-91701
+    - BGS-810975
+    - AVEXAM-42993
+    - AVEXAM-32919
+    - BGS-810956
+    - BGS-810977
+    - ATPLGS-118273
+    - BGS-810295
+    - AVEXAM-48035
+    - AVEXAM-53022
+    - BGS-810969
+    - AVEXAM-10964
+    - AVEXAM-72536
+    - AVEXAM-10871
+    - BGS-810970
+    - BGS-810293
+    - BGS-810244
+    - BGS-810238
+    - ATPLGS-126124
+    - BGS-810955
+    - ATPLGS-126218
+    - BGS-810959
+    - BGS-810978
+    - ATPLGS-126083
+    - ATPLGS-126219
+    - ATPLGS-126123
+    - BGS-810303
+    - BGS-810306
+    - ATPLGS-126160
+    - BGS-810960
+    - BGS-810964
+    - BGS-810231
+    - BGS-810226
+    - ATPLGS-126230
+    - ATPLGS-126265
+    - ATPLGS-126122
+    - BGS-810308
+    - BGS-810968
+    - BGS-810957
+    - ATPLGS-126216
+    - ATPLGS-126081
+    - BGS-810280
+    - BGS-810285
+    - BGS-810279
+    - BGS-810966
+    - BGS-810287
+    - ATPLGS-126224
+    - ATPLGS-126119
+    - ATPLGS-125885
+    - BGS-810962
+    - ATPLGS-118272
+    - ATPLGS-126157
+    - ATPLGS-126162
+    - ATPLGS-126158
+    - ATPLGS-126163
+    - ATPLGS-126159
+    - ATPLGS-126217
+    - ATPLGS-126229
+    - ATPLGS-126125
+    - BGS-810237
+    - BGS-810243
+    - BGS-810971
+    - ATPLGS-126116
+    - ATPLGS-126222
+    - ATPLGS-126118
+    - BGS-810232
+    - BGS-810967
+    - BGS-810965
+    - BGS-810954
+    - BGS-810961
+    - BGS-810958
+  annexes: []
+  learningObjectives:
+    - 081.06.03.02.01
+  template:
+    type: one-two
+    question: Which of these statements about the gust load factor on an aeroplane
+      are correct or incorrect?
+    explanation: ""
+    firstCorrectStatements:
+      - When the slope of the lift versus angle of attack curve decreases, the
+        gust load factor decreases.
+    firstIncorrectStatements:
+      - When the slope of the lift versus angle of attack curve increases, the
+        gust load factor decreases.
+    secondCorrectStatements:
+      - When the wing loading decreases, the gust load factor increases.
+    secondIncorrectStatements:
+      - When the wing loading increases, the gust load factor increases.
+- id: QCOKGYHU
+  docId: "081.06"
+  relatedQuestions:
+    - QYKBWXLS
+  externalIds:
+    - ATPLQ-818521
+    - ATPLGS-126161
+    - BGS-810975
+    - BGS-810956
+    - BGS-810977
+    - ATPLGS-118273
+    - BGS-810295
+    - BGS-810969
+    - BGS-810970
+    - BGS-810307
+    - BGS-810305
+    - BGS-810293
+    - BGS-810244
+    - BGS-810238
+    - ATPLGS-126124
+    - ATPLGS-118505
+    - BGS-810955
+    - ATPLGS-126218
+    - BGS-810959
+    - ATPLGS-126082
+    - BGS-810978
+    - ATPLGS-126083
+    - BGS-810278
+    - ATPLGS-126219
+    - BGS-810289
+    - BGS-810284
+    - ATPLGS-126123
+    - BGS-810303
+    - BGS-810306
+    - ATPLGS-126160
+    - BGS-810960
+    - BGS-810964
+    - ATPLGS-126560
+    - BGS-810231
+    - BGS-810226
+    - ATPLGS-126230
+    - ATPLGS-126265
+    - ATPLGS-126122
+    - BGS-810290
+    - BGS-810308
+    - BGS-810968
+    - BGS-810957
+    - ATPLGS-126216
+    - ATPLGS-126081
+    - BGS-810280
+    - BGS-810285
+    - BGS-810279
+    - BGS-810966
+    - BGS-810287
+    - ATPLGS-126224
+    - ATPLGS-126119
+    - ATPLGS-125885
+    - AVEXAM-1006
+    - AVEXAM-72029
+    - AVEXAM-27605
+    - AVEXAM-81921
+    - AVEXAM-16059
+    - AVEXAM-64041
+    - ATPLGS-126136
+    - ATPLGS-126120
+    - ATPLGS-126121
+    - ATPLGS-125930
+    - BGS-810962
+    - ATPLGS-118272
+    - BGS-810277
+    - ATPLGS-126157
+    - ATPLGS-126162
+    - ATPLGS-126158
+    - ATPLGS-126163
+    - ATPLGS-126137
+    - ATPLGS-126135
+    - ATPLGS-126139
+    - ATPLGS-126134
+    - ATPLGS-126133
+    - ATPLGS-126129
+    - ATPLGS-126138
+    - ATPLGS-126159
+    - ATPLGS-126127
+    - ATPLGS-126131
+    - ATPLGS-126128
+    - ATPLGS-126132
+    - ATPLGS-126126
+    - ATPLGS-126130
+    - ATPLGS-126217
+    - ATPLGS-126229
+    - ATPLGS-126125
+    - BGS-810237
+    - BGS-810243
+    - BGS-810283
+    - BGS-810281
+    - BGS-810971
+    - ATPLGS-126116
+    - ATPLGS-126222
+    - ATPLGS-126118
+    - ATPLGS-126084
+    - BGS-810304
+    - BGS-810232
+    - ATPLGS-126117
+    - BGS-810967
+    - BGS-810965
+    - BGS-810954
+    - BGS-810961
+    - BGS-810958
+    - ATPLGS-126085
+  annexes: []
+  learningObjectives:
+    - 081.06.03.02.01
+  template:
+    type: simple
+    question: >-
+      Which of these statements about the gust load factor on an aeroplane are
+      correct or incorrect?
+
+
+      I. When the mass decreases, the gust load factor increases.   
+
+      II. When the altitude decreases, the gust load factor increases.
+    explanation: ""
+    options:
+      - id: OULBRBIYG
+        text: I is incorrect, II is incorrect.
+        correct: false
+        why: ""
+      - id: OZJQANFVD
+        text: I is correct, II is incorrect.
+        correct: false
+        why: ""
+      - id: ODPYFCIUH
+        text: I is correct, II is correct.
+        correct: true
+        why: ""
+      - id: OLXQNURN5
+        text: I is incorrect, II is correct.
+        correct: false
+        why: ""
+- id: QCXOFSZO
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817667
+    - AVEXAM-81177
+    - ATPLGS-126445
+    - AVEXAM-94845
+    - ATPLGS-126105
+    - AVEXAM-69508
+    - BGS-810929
+    - BGS-810928
+    - BGS-810942
+    - AVEXAM-72564
+    - BGS-810927
+    - BGS-812706
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.01
+  template:
+    type: simple
+    question: "The stall speed lines in the manoeuvring load diagram originate from
+      a point where the:"
+    explanation: ""
+    options:
+      - id: OBU8MOU5T
+        text: speed = 0, load factor = 0.
+        correct: true
+        why: ""
+      - id: OOOSDHTQD
+        text: speed = VA, load factor = +1.
+        correct: false
+        why: ""
+      - id: O2MCNXSBS
+        text: speed = 0, load factor = +1.
+        correct: false
+        why: ""
+      - id: OZAG28QJQ
+        text: speed = VS, load factor = 0.
+        correct: false
+        why: ""
+- id: QCYPGOIO
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812385
+    - ATPLGS-628127
+    - AVEXAM-31483
+    - AVEXAM-26479
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: calculation
+    question: |-
+      A crop duster utility aircraft has the following speeds:
+
+      - VSO (landing configuration): {{vso}} kt
+      - VS1 (clean): {{vs1}} kt
+      - Limit load factor (utility category): 4.4
+
+      What is the VA for this aircraft?
+    variables:
+      - id: vso
+        label: VSO
+        unit: kt
+      - id: vs1
+        label: VS1
+        unit: kt
+    answer:
+      formula: vs1 * sqrt(4.4)
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: vso * sqrt(4.4)
+      - id: d2
+        formula: vs1 * 4.4
+      - id: d3
+        formula: vs1 * sqrt(2.5)
+      - id: d4
+        formula: vs1 * sqrt(3.8)
+    presets:
+      - id: p1
+        values:
+          vso: 55
+          vs1: 70
+      - id: p2
+        values:
+          vso: 60
+          vs1: 75
+      - id: p3
+        values:
+          vso: 50
+          vs1: 65
+    explanation: >-
+      VA is the design manoeuvring speed: the highest speed at which the pilot
+      can make a full, abrupt control input without overstressing the aircraft.
+      It is found from the clean stall speed VS1 and the limit load factor,
+      which for a utility category aircraft is 4.4 g.
+
+
+      **Solution**
+
+
+      {{f: vs1 * sqrt(4.4)}} = {{n: vs1 * sqrt(4.4)}} = **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: uses the landing stall speed VSO instead of the clean
+      stall speed VS1.
+
+      - **{{d2}} kt**: leaves out the square root of the load factor.
+
+      - **{{d3}} kt**: uses a load factor of 2.5 g instead of 4.4 g.
+
+      - **{{d4}} kt**: uses the normal category load factor of 3.8 g instead of
+      4.4 g.
+- id: QDHOGUYR
+  docId: "081.06"
+  relatedQuestions:
+    - QDIIDDAG
+    - QONIDMJG
+  externalIds:
+    - ATPLQ-819533
+    - AVEXAM-96061
+    - AVEXAM-7521
+    - AVEXAM-92575
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: "The following is a correct design gust value factor applied in
+      certification under EASA CS-25:"
+    explanation: ""
+    options:
+      - id: OVJ3TP34L
+        text: 55 ft/sec at VB.
+        correct: false
+        why: ""
+      - id: OVV8PWBB9
+        text: 50 ft/sec at VD.
+        correct: false
+        why: ""
+      - id: ODHWTMKSZ
+        text: 25 ft/sec at VD.
+        correct: true
+        why: ""
+      - id: O2RUGHTZX
+        text: 66 ft/sec at VC.
+        correct: false
+        why: ""
+- id: QDIIDDAG
+  docId: "081.06"
+  relatedQuestions:
+    - QDHOGUYR
+    - QONIDMJG
+  externalIds:
+    - ATPLQ-812530
+    - AVEXAM-96061
+    - AVEXAM-7521
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: "The following is a correct design gust value factor applied in
+      certification under EASA CS-25:"
+    explanation: ""
+    options:
+      - id: O1F8W7WVP
+        text: 25 ft/sec at VB.
+        correct: false
+        why: ""
+      - id: O5QR67UZI
+        text: 50 ft/sec at VC.
+        correct: true
+        why: ""
+      - id: OQFZ6U0DU
+        text: 55 ft/sec at VC.
+        correct: false
+        why: ""
+      - id: O6K23DPRV
+        text: 66 ft/sec at VD.
+        correct: false
+        why: ""
+- id: QDLUOY6CS
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-813091
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: >-
+      For the given data, calculate the value of the manoeuvring speed VA for a
+      large transport jet aircraft with a maximum takeoff mass of 344 tonnes.
+
+
+      VS0 = 140 kt   
+       VS1 = 208 kt
+    explanation: ""
+    options:
+      - id: OLMWLF9YE
+        text: 328 kt
+        correct: true
+        why: ""
+      - id: OTVKHBWRB
+        text: 221 kt
+        correct: false
+        why: ""
+      - id: OMJJUYDY7
+        text: 294 kt
+        correct: false
+        why: ""
+      - id: OACFLZX8L
+        text: 198 kt
+        correct: false
+        why: ""
+- id: QDMYXIBJ
+  docId: "081.06"
+  relatedQuestions:
+    - QABVJUVY
+    - QKAUUSHM
+    - QMYTEFTH
+  externalIds:
+    - ATPLQ-818688
+    - BGS-811756
+    - ATPLGS-126391
+    - ATPLGS-125884
+    - ATPLGS-126392
+    - BGS-811755
+    - BGS-810922
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.06
+  template:
+    type: simple
+    question: "The positive manoeuvring limit load factor for a light aeroplane in
+      the aerobatic category in the clean configuration may not be less than:"
+    explanation: ""
+    options:
+      - id: OA76VKPEQ
+        text: 3.8.
+        correct: false
+        why: ""
+      - id: OUN8GZ0UI
+        text: 2.5.
+        correct: false
+        why: ""
+      - id: OVFYZORWT
+        text: 6.0.
+        correct: true
+        why: ""
+      - id: OUQ8UIOEH
+        text: 4.4.
+        correct: false
+        why: ""
+- id: QDYZNSQN
+  docId: "081.06"
+  relatedQuestions:
+    - QPXBPVCR
+  externalIds:
+    - ATPLQ-817384
+    - ATPLGS-626387
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: calculation
+    question: |-
+      The manoeuvring speed (VA) of a Cessna Skyhawk is known at one mass:
+
+      - Mass: {{m1}} lb
+      - VA: {{va1}} kt
+
+      What is the VA at a mass of {{m2}} lb?
+    variables:
+      - id: m1
+        label: Known mass
+        unit: lb
+      - id: va1
+        label: Known VA
+        unit: kt
+      - id: m2
+        label: New mass
+        unit: lb
+    answer:
+      formula: va1 * sqrt(m2 / m1)
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: va1
+      - id: d2
+        formula: va1 * m2 / m1
+      - id: d3
+        formula: va1 * sqrt(m1 / m2)
+      - id: d4
+        formula: va1 * (m2 / m1) ^ 2
+    presets:
+      - id: p1
+        values:
+          m1: 2550
+          va1: 102
+          m2: 1900
+      - id: p2
+        values:
+          m1: 2400
+          va1: 100
+          m2: 2000
+    explanation: >-
+      VA depends on the aircraft mass: a heavier aeroplane stalls at a higher
+      speed, and VA follows the same rule. VA rises with the square root of the
+      mass, so the known VA is scaled by the square root of the ratio between
+      the new mass and the known mass.
+
+
+      **Solution**
+
+
+      - Mass ratio = {{m2}} lb / {{m1}} lb = {{= m2 / m1}}
+
+      - {{f: va1 * sqrt(m2 / m1)}} = {{n: va1 * sqrt(m2 / m1)}} = **{{answer}}
+      kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: keeps the original VA and ignores the change in mass.
+
+      - **{{d2}} kt**: scales the VA directly with the mass instead of its
+      square root.
+
+      - **{{d3}} kt**: inverts the mass ratio, so the lighter aeroplane shows a
+      higher VA.
+
+      - **{{d4}} kt**: squares the mass ratio instead of taking its square root.
+- id: QERUSIZJY
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-819442
+    - BGS-810917
+    - AVEXAM-34874
+    - ATPLGS-125926
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: "Mass balancing of control surfaces is used to:"
+    explanation: ""
+    options:
+      - id: OZWDHKO0O
+        text: prevent flutter of control surfaces.
+        correct: true
+        why: ""
+      - id: OB1M2PO0H
+        text: increase the stick force stability.
+        correct: false
+        why: ""
+      - id: OCTOKNAOC
+        text: limit the stick forces.
+        correct: false
+        why: ""
+      - id: OURA4FI71
+        text: ensure that the control surfaces are in the mid-position during taxiing.
+        correct: false
+        why: ""
+- id: QF7GBJOTW
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818848
+  annexes:
+    - 081-graph-cl-versus-aoa-with-four-curves-1-4-showing
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Which of these curves would result in the greatest load factor for a
+      certain gust?
+    explanation: ""
+    options:
+      - id: OUZGP0HA8
+        text: Curve 4
+        correct: false
+        why: ""
+      - id: OYZPTMQLS
+        text: Curve 2
+        correct: false
+        why: ""
+      - id: OPIBW24NT
+        text: Curve 3
+        correct: false
+        why: ""
+      - id: OKEL6YWE8
+        text: Curve 1
+        correct: true
+        why: ""
+- id: QFECABAB
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-813993
+    - BGS-812166
+    - AVEXAM-93019
+  annexes: []
+  learningObjectives:
+    - 081.06.01.04.03
+  template:
+    type: simple
+    question: During an emergency descent, the pilot of an aeroplane inadvertently
+      exceeds VNE . In these conditions, what type of hazard should the pilot be
+      aware of?
+    explanation: ""
+    options:
+      - id: O7OLCWATF
+        text: Uncontrollable yaw moment towards the failed engine in case of an engine
+          failure.
+        correct: false
+        why: ""
+      - id: OFVDZZCKU
+        text: Mach tuck.
+        correct: false
+        why: ""
+      - id: OFZTWGHQ1
+        text: Structural damage.
+        correct: true
+        why: ""
+      - id: OPKXIOQGN
+        text: Structural damage if unexpected turbulence is encountered.
+        correct: false
+        why: ""
+- id: QGHMJDBI
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818563
+    - BGS-811558
+    - ATPLGS-126444
+    - AVEXAM-98523
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: "The speed VLE is the maximum speed to be flown:"
+    explanation: ""
+    options:
+      - id: OXZKZCWUN
+        text: With the leading edge devices extended.
+        correct: false
+        why: ""
+      - id: OAEQHTOOD
+        text: With the landing gear extended.
+        correct: true
+        why: ""
+      - id: O5JVYJFXS
+        text: During extension of the leading edge devices.
+        correct: false
+        why: ""
+      - id: OHG2KRN9T
+        text: During extension of the landing gear.
+        correct: false
+        why: ""
+- id: QGML2HOWZ
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-811220
+    - ATPLGS-126324
+    - BGS-810945
+    - BGS-811775
+    - AVEXAM-73761
+    - ATPLGS-125767
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: "Load factor is decreased by:"
+    explanation: ""
+    options:
+      - id: OKKMKAZLH
+        text: a decrease in aeroplane mass.
+        correct: false
+        why: ""
+      - id: OE8B42X6V
+        text: aft CG movement.
+        correct: false
+        why: ""
+      - id: OAOC6IA6J
+        text: downward gusts.
+        correct: true
+        why: ""
+      - id: OEMKXATNU
+        text: an increase in air density.
+        correct: false
+        why: ""
+- id: QHER4MIFG
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-811146
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: "The speeds VNE and VMO refer to, respectively:"
+    explanation: ""
+    options:
+      - id: OHXNOZ0XI
+        text: They both apply to piston jet aircraft only.
+        correct: false
+        why: ""
+      - id: OKYTRZZXD
+        text: VNE refers to jets and VMO refers to pistons.
+        correct: false
+        why: ""
+      - id: O3HU3CGYK
+        text: VNE refers to pistons and VMO refers to jets.
+        correct: true
+        why: ""
+      - id: OK7MV8PBH
+        text: They can both refer to piston and jet aircraft.
+        correct: false
+        why: ""
+- id: QHGZLYRJ
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815007
+    - ATPLGS-126161
+    - BGS-810977
+    - BGS-810110
+    - ATPLGS-126174
+    - BGS-810628
+    - BGS-810244
+    - BGS-810627
+    - BGS-810629
+    - ATPLGS-126561
+    - ATPLGS-126205
+    - BGS-810238
+    - ATPLGS-118505
+    - BGS-810233
+    - BGS-810245
+    - ATPLGS-126176
+    - ATPLGS-126276
+    - BGS-810727
+    - ATPLGS-126231
+    - BGS-810912
+    - BGS-810624
+    - BGS-810278
+    - BGS-810109
+    - BGS-810289
+    - BGS-810107
+    - BGS-811448
+    - BGS-811456
+    - BGS-810284
+    - BGS-810626
+    - BGS-810625
+    - BGS-811701
+    - BGS-810105
+    - ATPLGS-126175
+    - ATPLGS-126160
+    - BGS-810960
+    - ATPLGS-126232
+    - ATPLGS-126233
+    - ATPLGS-125535
+    - ATPLGS-118506
+    - BGS-810227
+    - ATPLGS-126560
+    - BGS-810231
+    - BGS-810226
+    - BGS-810290
+    - BGS-810104
+    - ATPLGS-126204
+    - BGS-810908
+    - BGS-810903
+    - BGS-811194
+    - BGS-810907
+    - ATPLGS-126077
+    - ATPLGS-126173
+    - BGS-810906
+    - ATPLGS-126202
+    - ATPLGS-126136
+    - BGS-810909
+    - BGS-810277
+    - ATPLGS-126157
+    - ATPLGS-126162
+    - ATPLGS-126158
+    - ATPLGS-126163
+    - ATPLGS-126137
+    - ATPLGS-126135
+    - ATPLGS-126139
+    - ATPLGS-126134
+    - ATPLGS-126133
+    - ATPLGS-126129
+    - ATPLGS-126138
+    - ATPLGS-126159
+    - ATPLGS-126127
+    - ATPLGS-126131
+    - ATPLGS-126128
+    - ATPLGS-126132
+    - ATPLGS-126126
+    - BGS-810108
+    - ATPLGS-126130
+    - BGS-811202
+    - BGS-810237
+    - BGS-810243
+    - BGS-810283
+    - BGS-810281
+    - BGS-810971
+    - BGS-810232
+    - BGS-810106
+    - BGS-810967
+    - BGS-810904
+    - ATPLGS-126076
+    - ATPLGS-126075
+    - BGS-810103
+    - BGS-810911
+    - ATPLGS-126236
+    - ATPLGS-126528
+    - ATPLGS-126074
+    - BGS-810239
+    - ATPLQ-811494
+    - BGS-811482
+    - ATPLGS-126234
+    - BGS-811205
+    - ATPLGS-126235
+    - BGS-811207
+    - ATPLGS-118274
+    - ATPLQ-818737
+    - BGS-811206
+  annexes: []
+  learningObjectives:
+    - 081.06.01.01.01
+  template:
+    type: one-two
+    question: Which of these statements about flutter are correct or incorrect?
+    explanation: ""
+    firstCorrectStatements:
+      - The risk of flutter increases as IAS increases.
+      - Occurrence of flutter is dependent on IAS.
+      - If flutter occurs, IAS should be reduced.
+    firstIncorrectStatements:
+      - The risk of flutter increases as IAS decreases.
+      - Occurrence of flutter is independent of IAS.
+      - If flutter occurs, IAS should be increased.
+    secondCorrectStatements:
+      - Aero-elastic coupling affects flutter characteristics.
+    secondIncorrectStatements:
+      - Aero-elastic coupling does not affect flutter characteristics.
+- id: QHNKOHCY
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812356
+    - BGS-812717
+  annexes: []
+  learningObjectives:
+    - 081.06.01.01.02
+  template:
+    type: simple
+    question: In order to prevent flight control surface flutter, the centre of mass
+      of the flight control should be…
+    explanation: ""
+    options:
+      - id: OKQVAKF4S
+        text: in front of the hinge line.
+        correct: true
+        why: ""
+      - id: OPD2P7LSC
+        text: behind the hinge line.
+        correct: false
+        why: ""
+      - id: OVIJFAHTI
+        text: in the middle of the flight control surface.
+        correct: false
+        why: ""
+      - id: ORWSV0TXI
+        text: at the hinge line.
+        correct: false
+        why: ""
+- id: QIDRACBE
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818886
+    - BGS-812700
+    - AVEXAM-22821
+    - ATPLQ-819180
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: calculation
+    question: >-
+      The design manoeuvring speed (VA) of an aircraft is known at one mass.
+      Given:
+
+
+      - Original mass: {{m1}} t
+
+      - VA at the original mass: {{va1}} kt
+
+      - New mass: {{m2}} t
+
+
+      What is the VA at the new mass?
+    variables:
+      - id: m1
+        label: Original mass
+        unit: t
+      - id: va1
+        label: VA at the original mass
+        unit: kt
+      - id: m2
+        label: New mass
+        unit: t
+    answer:
+      formula: va1 * sqrt(m2 / m1)
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: va1 * m2 / m1
+      - id: d2
+        formula: va1 * sqrt(m1 / m2)
+      - id: d3
+        formula: va1 * (m2 / m1)^2
+      - id: d4
+        formula: va1
+    presets:
+      - id: p1
+        values:
+          m1: 5.4
+          va1: 100
+          m2: 4.7
+      - id: p2
+        values:
+          m1: 5.7
+          va1: 181
+          m2: 4.1
+      - id: p3
+        values:
+          m1: 6
+          va1: 250
+          m2: 5
+    explanation: >-
+      VA depends on the stall speed of the aircraft, and the stall speed rises
+      with the square root of the mass. A lighter aircraft therefore has a lower
+      VA, and the change is the square root of the mass ratio, not the ratio
+      itself.
+
+
+      **Solution**
+
+
+      {{f: va1 * sqrt(m2 / m1)}} = {{n: va1 * sqrt(m2 / m1)}} = **{{answer}}
+      kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: assumes VA changes in direct proportion to the mass.
+
+      - **{{d2}} kt**: inverts the mass ratio, so a lighter aircraft would get a
+      higher VA.
+
+      - **{{d3}} kt**: uses the square of the mass ratio instead of its square
+      root.
+
+      - **{{d4}} kt**: keeps the original VA and ignores the change in mass.
+- id: QIRRPDMS
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818786
+    - BGS-812609
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.02
+  template:
+    type: simple
+    question: "The limiting load of a:"
+    explanation: ""
+    options:
+      - id: OFNMQMJUG
+        text: Light aircraft will be reached at a lower load factor as that of a heavier
+          aircraft.
+        correct: false
+        why: ""
+      - id: ONFL3WKXB
+        text: Light aircraft will be reached at the same value as that of a heavier
+          aircraft.
+        correct: true
+        why: ""
+      - id: OJ02GYNEX
+        text: Heavy aircraft will be reached at a lower value than that of a lighter
+          aircraft.
+        correct: false
+        why: ""
+      - id: OKUA8NQYT
+        text: Heavy aircraft will be reached at a higher value than that of a lighter
+          aircraft.
+        correct: false
+        why: ""
+- id: QIVXCADE
+  docId: "081.06"
+  relatedQuestions:
+    - QOLKGPQU
+  externalIds:
+    - ATPLQ-819423
+    - AVEXAM-81177
+    - ATPLGS-126445
+    - AVEXAM-94845
+    - ATPLGS-126105
+    - AVEXAM-69508
+    - BGS-810929
+    - BGS-810928
+    - BGS-810942
+    - AVEXAM-72564
+    - BGS-810927
+    - BGS-812706
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.01
+  template:
+    type: simple
+    question: "The stall speed line in the manoeuvring load diagram runs through a
+      point where the:"
+    explanation: ""
+    options:
+      - id: OHORPTF84
+        text: speed = 0, load factor = +1.
+        correct: false
+        why: ""
+      - id: ON3GGDTYA
+        text: speed = VB, load factor = gust load factor.
+        correct: false
+        why: ""
+      - id: OGZ74DM70
+        text: speed = VA, load factor = limit load factor.
+        correct: true
+        why: ""
+      - id: OMCD20XMO
+        text: speed = VS, load factor = 0.
+        correct: false
+        why: ""
+- id: QJIG3UVA8
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815378
+    - BGS-812406
+    - AVEXAM-45179
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: What is the relation of VMO and VC?
+    explanation: ""
+    options:
+      - id: OR7RE6RAR
+        text: VMO > VC
+        correct: false
+        why: ""
+      - id: OQWJMZQ0P
+        text: VMO < VC
+        correct: true
+        why: ""
+      - id: OZ5PHATRS
+        text: VMO ≤ VC
+        correct: false
+        why: ""
+      - id: OWSU7UHCU
+        text: VMO = VC
+        correct: false
+        why: ""
+- id: QKA8FAASP
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-814980
+    - BGS-812395
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: >-
+      A flight instructor is demonstrating stall and stall recovery during a
+      lesson. As a part of the exercise, the instructor demonstrates the use of
+      excessive pitch-down stick input during the initial portion of the
+      recovery. Recovering from the dive, the pilot applies excessive back force
+      on the stick, which forces the aeroplane to enter a secondary
+      (accelerated) stall. Considering the aeroplane limitations given below,
+      what speed range should the aeroplane be operated in order to safely carry
+      out this demonstration?
+
+
+      VS: 45 kt   
+       VA: 100 kt   
+       VNO: 125 kt   
+       VNE: 160 kt.
+    explanation: ""
+    options:
+      - id: OODN6XJEG
+        text: 100 kt to 160 kt.
+        correct: false
+        why: ""
+      - id: OJPHPDTSC
+        text: 45 kt to 125 kt.
+        correct: false
+        why: ""
+      - id: OGYATHJCO
+        text: 100 kt to 125 kt.
+        correct: false
+        why: ""
+      - id: O8VH2IG1Z
+        text: 45 kt to 100 kt.
+        correct: true
+        why: ""
+- id: QKAUUSHM
+  docId: "081.06"
+  relatedQuestions:
+    - QABVJUVY
+    - QDMYXIBJ
+    - QMYTEFTH
+  externalIds:
+    - ATPLQ-817903
+    - ATPLGS-126395
+    - ATPLGS-126393
+    - ATPLGS-126394
+    - ATPLGS-126396
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.06
+  template:
+    type: simple
+    question: "The negative manoeuvring limit load factor for a light aeroplane in
+      the normal category in the clean configuration may not be less than:"
+    explanation: ""
+    options:
+      - id: OQHTG4YAX
+        text: \-1.
+        correct: false
+        why: ""
+      - id: OGFUXELL7
+        text: \-3.0.
+        correct: false
+        why: ""
+      - id: OAXNBAIUL
+        text: \-1.52.
+        correct: true
+        why: ""
+      - id: OZZYFCCYM
+        text: \-1.76.
+        correct: false
+        why: ""
+- id: QKHRHZCQS
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-811544
+    - ATPLGS-118454
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: All other parameters remaining constant, what happens to VA (Design
+      Manoeuvring Speed) if the weight of an aeroplane reduces by 20%?
+    explanation: ""
+    options:
+      - id: OQSQ13TMA
+        text: VA will increase by approximately 20%.
+        correct: false
+        why: ""
+      - id: OGW4Q65SA
+        text: VA will increase by approximately 10%.
+        correct: false
+        why: ""
+      - id: OQR7MHTGV
+        text: VA will decrease by approximately 20%.
+        correct: false
+        why: ""
+      - id: OCZN2LNVU
+        text: VA will decrease by approximately 10%.
+        correct: true
+        why: ""
+- id: QKKYXVXI
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-814428
+    - ATPLGS-125969
+    - AVEXAM-8684
+    - BGS-810930
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.02
+  template:
+    type: simple
+    question: What may happen if the "ultimate load factor" is exceeded?
+    explanation: ""
+    options:
+      - id: OUBQEZWGS
+        text: Flutter.
+        correct: false
+        why: ""
+      - id: OOQPCGVIO
+        text: Elastic or temporary deformation only.
+        correct: false
+        why: ""
+      - id: O5VQRM94Y
+        text: No structural failure, only plastic or permanent deformation.
+        correct: false
+        why: ""
+      - id: OKJLQE8E1
+        text: Structural failure.
+        correct: true
+        why: ""
+- id: QKUARS2YU
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-814476
+    - BGS-810919
+    - AVEXAM-33513
+    - ATPLGS-125725
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: "For most jet transport aeroplanes, the maximum operating limit speed,
+      VMO:"
+    explanation: ""
+    options:
+      - id: OC4YRMSP1
+        text: is lower than VNE.
+        correct: false
+        why: ""
+      - id: OXTDWYREZ
+        text: is equal to VD.
+        correct: false
+        why: ""
+      - id: O8M5EWYNF
+        text: is replaced by MMO at higher altitudes.
+        correct: true
+        why: ""
+      - id: O9M2B6QAF
+        text: is expressed as a true air speed.
+        correct: false
+        why: ""
+- id: QKUPBXTB
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-814057
+    - ATPLGS-126346
+    - ATPLGS-126336
+    - ATPLGS-126349
+    - ATPLGS-126356
+    - ATPLGS-126404
+    - ATPLGS-126341
+    - ATPLGS-126351
+    - ATPLGS-126398
+    - ATPLGS-126403
+    - ATPLGS-126359
+    - ATPLGS-126354
+    - ATPLGS-126340
+    - ATPLGS-126344
+    - ATPLGS-627076
+    - ATPLGS-126401
+    - ATPLGS-126338
+    - ATPLGS-126335
+    - ATPLGS-118302
+    - ATPLGS-126339
+    - ATPLGS-126347
+    - AVEXAM-79687
+    - AVEXAM-79614
+    - AVEXAM-24540
+    - ATPLGS-126337
+    - ATPLGS-126345
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: calculation
+    question: >-
+      An aeroplane maintains straight and level flight at a speed of {{v1}} VS.
+      A vertical gust causes a load factor of {{n1}}.
+
+
+      Determine the load factor caused by the same gust at a speed of {{v2}} VS.
+    variables:
+      - id: v1
+        label: Speed before the gust
+        unit: VS
+      - id: n1
+        label: Load factor from the gust
+        unit: ""
+      - id: v2
+        label: Speed for the new gust
+        unit: VS
+    answer:
+      formula: 1 + (n1 - 1) * v2 / v1
+      unit: ""
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: n1
+      - id: d2
+        formula: 1 + (n1 - 1) * v1 / v2
+      - id: d3
+        formula: n1 * v2 / v1
+      - id: d4
+        formula: n1 * (v2 / v1) ^ 2
+    presets:
+      - id: p1
+        values:
+          v1: 1.8
+          n1: 1.9
+          v2: 2
+      - id: p2
+        values:
+          v1: 1.5
+          n1: 1.7
+          v2: 2
+      - id: p3
+        values:
+          v1: 2
+          n1: 2.4
+          v2: 1.6
+    explanation: >-
+      A gust adds lift on top of the lift of straight and level flight. The
+      extra lift grows with speed, so the same gust gives a bigger load factor
+      increase at a higher speed. The extra part of the load factor, n - 1, is
+      therefore multiplied by the speed ratio.
+
+
+      **Solution**
+
+
+      The load factor increase from the gust at the first speed is {{= n1 - 1}}.
+
+
+      {{f: 1 + (n1 - 1) * v2 / v1}} = {{n: 1 + (n1 - 1) * v2 / v1}} =
+      **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: keeps the load factor of the gust at the lower speed,
+      ignoring the speed change.
+
+      - **{{d2}}**: inverts the speed ratio.
+
+      - **{{d3}}**: scales the whole load factor, including the 1 g part.
+
+      - **{{d4}}**: squares the speed ratio, which the gust relationship does
+      not use.
+- id: QL33M6PIB
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815968
+    - AVEXAM-41530
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: During flight an aircraft experiences severe turbulence and the speed
+      increases to its design dive speed (VD). It is a design requirement that,
+      in these conditions, the aeroplane can withstand a vertical gust of
+      \_\_\_\_\_ feet/second.
+    explanation: ""
+    options:
+      - id: OEX2VYKRR
+        text: "56"
+        correct: false
+        why: ""
+      - id: OA0EHBMWS
+        text: "25"
+        correct: true
+        why: ""
+      - id: ODOAIILPZ
+        text: "66"
+        correct: false
+        why: ""
+      - id: OEIP27LFH
+        text: "50"
+        correct: false
+        why: ""
+- id: QLBVW0OM5
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812673
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: Which of the following statements is correct with regards to aircraft
+      certified under CS-23 and CS-25?
+    explanation: ""
+    options:
+      - id: OKFSWHRAF
+        text: VNE only applies to CS-23 aircraft but NOT to CS-25 aircraft.
+        correct: true
+        why: ""
+      - id: OCDHT0YND
+        text: Only jet aeroplanes have a VMO.
+        correct: false
+        why: ""
+      - id: O4GXH3SUP
+        text: VNE applies to all aircraft with an MTOW less than 5 670 kg.
+        correct: false
+        why: ""
+      - id: O7PRDQFFU
+        text: VMO only applies to CS-25 aircraft but NOT to CS-23 aircraft.
+        correct: false
+        why: ""
+- id: QLDYKYGO
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-811415
+    - ATPLGS-125929
+    - BGS-810920
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.06
+  template:
+    type: simple
+    question: "The positive manoeuvring limit load factor for an aeroplane with
+      flaps extended is:"
+    explanation: ""
+    options:
+      - id: OYVQDPXNN
+        text: 1.5.
+        correct: false
+        why: ""
+      - id: ON11RJ9N6
+        text: 2.5.
+        correct: false
+        why: ""
+      - id: O0U3V4X3S
+        text: 2.0.
+        correct: true
+        why: ""
+      - id: OQGYMQTUH
+        text: 3.75.
+        correct: false
+        why: ""
+- id: QLXWR4NF8
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-819868
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: With regard to the Centre of Gravity limits of an aircraft, which one
+      of the following statements is true?
+    explanation: ""
+    options:
+      - id: OHBZJI1MJ
+        text: The manufacturer’s CG limitations can be more restrictive than the
+          aircraft operator’s CG limitations.
+        correct: false
+        why: ""
+      - id: OCLUOVBZB
+        text: It depends on the state of registry whether the manufacturer’s or the
+          aircraft operator’s limitations on CG are more restrictive.
+        correct: false
+        why: ""
+      - id: OSEOYUQC3
+        text: The aircraft operator’s CG limitations can be more restrictive than the
+          manufacturer’s CG limitations.
+        correct: true
+        why: ""
+      - id: OEC5AV7WK
+        text: The CG limitations of the operator always have to be the same as the
+          manufacturer’s limitations.
+        correct: false
+        why: ""
+- id: QMCEPSSF
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-816427
+    - AVEXAM-19151
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: Which of the following is the design speed for maximum gust intensity?
+    explanation: ""
+    options:
+      - id: OLN59UZCB
+        text: VNE
+        correct: false
+        why: ""
+      - id: OZXEE72S8
+        text: VC
+        correct: false
+        why: ""
+      - id: OFGVSVGOG
+        text: VA
+        correct: false
+        why: ""
+      - id: OU22AYGCQ
+        text: VB
+        correct: true
+        why: ""
+- id: QMCMFOGV
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812479
+    - BGS-812608
+    - AVEXAM-37029
+  annexes: []
+  learningObjectives:
+    - 081.06.03.02.01
+  template:
+    type: simple
+    question: For a given gust speed and aircraft TAS, what is the impact of the
+      lift curve’s slope on the gust load factor?
+    explanation: ""
+    options:
+      - id: OIVGDW5KK
+        text: The shallower the lift curve’s slope, the greater the gust load factor.
+        correct: false
+        why: ""
+      - id: OZLLBOMRN
+        text: The steeper the lift curve’s slope, the greater the gust load factor.
+        correct: true
+        why: ""
+      - id: OXWTXRPDJ
+        text: The steeper the lift curve’s slope, the smaller the gust load factor.
+        correct: false
+        why: ""
+      - id: O1SFSCLMC
+        text: The lift curve’s slope has no impact on the gust load factor.
+        correct: false
+        why: ""
+- id: QMIVRBLZ
+  docId: "081.06"
+  relatedQuestions:
+    - QUMQRHIB
+  externalIds:
+    - ATPLQ-813263
+    - BGS-810943
+    - AVEXAM-26732
+    - BGS-810948
+    - ATPLGS-118247
+    - BGS-810946
+    - BGS-811765
+    - AVEXAM-59350
+    - AVEXAM-27419
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.03
+  template:
+    type: simple
+    question: Which of these statements concerning flight in turbulence is correct?
+    explanation: ""
+    options:
+      - id: OGSXIMVJB
+        text: Above VB the aeroplane can never be overstressed by a gust.
+        correct: false
+        why: ""
+      - id: OH5UQOMOJ
+        text: When encountering turbulence during flight, the speed should be adjusted
+          to the design speed for maximum gust intensity VB.
+        correct: false
+        why: ""
+      - id: ODX8PVPWQ
+        text: In severe turbulence, speed should be reduced to approximately 1.2 VS.
+        correct: false
+        why: ""
+      - id: OVXQNSKKV
+        text: The load factor in turbulence may fluctuate above and below 1 and can even
+          become negative.
+        correct: true
+        why: ""
+- id: QMMTZFOS
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815212
+    - ATPLGS-125967
+    - BGS-810916
+    - AVEXAM-81577
+  annexes: []
+  learningObjectives:
+    - 081.06.01.01.02
+  template:
+    type: simple
+    question: "Control surface flutter can be eliminated by:"
+    explanation: ""
+    options:
+      - id: OZAM13JH6
+        text: increasing airspeed.
+        correct: false
+        why: ""
+      - id: OO9IPFFO8
+        text: reducing structural stiffness of the control surface attachment structure.
+        correct: false
+        why: ""
+      - id: O07SOVOKJ
+        text: mass balancing of the control surface.
+        correct: true
+        why: ""
+      - id: OWSLM3NJI
+        text: aerodynamic balancing of the control surface.
+        correct: false
+        why: ""
+- id: QMSNAHVY
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-811520
+    - ATPLGS-117875
+    - AVEXAM-37884
+    - BGS-810933
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.07
+  template:
+    type: simple
+    question: "**Design Manoeuvring Speed (VA)** is:"
+    explanation: ""
+    options:
+      - id: OPW1XW9ZZ
+        text: the speed at which a heavy transport aeroplane should fly in turbulence.
+        correct: false
+        why: ""
+      - id: O0JFC6VJX
+        text: the maximum speed at which rolls are allowed.
+        correct: false
+        why: ""
+      - id: OPNYDFYED
+        text: the maximum speed at which maximum elevator deflection up is allowed.
+        correct: true
+        why: ""
+      - id: OSJNPBKS9
+        text: the speed that should not be exceeded in the climb.
+        correct: false
+        why: ""
+- id: QMYTEFTH
+  docId: "081.06"
+  relatedQuestions:
+    - QABVJUVY
+    - QDMYXIBJ
+    - QKAUUSHM
+  externalIds:
+    - ATPLQ-816932
+    - BGS-811756
+    - ATPLGS-126391
+    - ATPLGS-125884
+    - ATPLGS-126392
+    - BGS-811755
+    - BGS-810922
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.06
+  template:
+    type: simple
+    question: "The positive manoeuvring limit load factor for a light aeroplane in
+      the normal category in the clean configuration may not be less than:"
+    explanation: ""
+    options:
+      - id: OGTMZQG22
+        text: 6.0.
+        correct: false
+        why: ""
+      - id: OFQRCBAMT
+        text: 4.4.
+        correct: false
+        why: ""
+      - id: OXSWDU0VN
+        text: 3.8.
+        correct: true
+        why: ""
+      - id: OM9NDFK0A
+        text: 2.5.
+        correct: false
+        why: ""
+- id: QNS2IBGOU
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-816161
+    - BGS-812655
+    - BGS-812577
+    - AVEXAM-76940
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: Which of the following statements is correct regarding the speeds
+      V**MO** and V**C**?
+    explanation: ""
+    options:
+      - id: OCJGVKXIW
+        text: VMO must NOT be greater than 0.8 x VC.
+        correct: false
+        why: ""
+      - id: OYLZC9RNN
+        text: VMO must be equal to or greater than VC.
+        correct: false
+        why: ""
+      - id: OK43V0YY3
+        text: VMO must be equal to VC.
+        correct: false
+        why: ""
+      - id: OBNGMRYCZ
+        text: VMO must NOT be greater than VC.
+        correct: true
+        why: ""
+- id: QNUCNAFA
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812175
+    - AVEXAM-66124
+    - ATPLGS-125685
+    - BGS-810947
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: "The extreme right limitation for both gust and manoeuvre diagrams is
+      created by the speed:"
+    explanation: ""
+    options:
+      - id: OWFBGFVWI
+        text: VC.
+        correct: false
+        why: ""
+      - id: OXLI7YCJJ
+        text: VMO.
+        correct: false
+        why: ""
+      - id: OZ1NHG2CI
+        text: VD.
+        correct: true
+        why: ""
+      - id: OYMEDHL68
+        text: VFLUTTER.
+        correct: false
+        why: ""
+- id: QNYGGDEL
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-814766
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: The speed VC in gust diagram...
+    explanation: ""
+    options:
+      - id: ORAQEO07Z
+        text: equals 50 ft/s.
+        correct: true
+        why: ""
+      - id: OP49IADKR
+        text: equals 66 ft/s.
+        correct: false
+        why: ""
+      - id: OFQMDYMMC
+        text: equals 55 ft/s.
+        correct: false
+        why: ""
+      - id: OHISXHRA1
+        text: equals 25 ft/s.
+        correct: false
+        why: ""
+- id: QNYRANBJ
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817778
+    - ATPLGS-118675
+    - BGS-811559
+    - AVEXAM-80871
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: For an aeroplane certified under CS-23, VNE is the maximum speed...
+    explanation: ""
+    options:
+      - id: OMFRQ8J7U
+        text: which must not be exceeded in a dive.
+        correct: false
+        why: ""
+      - id: OMNVOJZ9W
+        text: at which the aeroplane may be flown.
+        correct: true
+        why: ""
+      - id: OTYO1BSUZ
+        text: at which the aeroplane may be flown in cruise.
+        correct: false
+        why: ""
+      - id: OIYOZCEFY
+        text: an aeroplane can be flown at with flaps extended.
+        correct: false
+        why: ""
+- id: QOE0N4JQ4
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-811237
+    - ATPLGS-117742
+    - ATPLGS-125564
+    - ATPLGS-125565
+    - ATPLQ-818479
+    - ATPLQ-819073
+  annexes: []
+  learningObjectives:
+    - 081.06.03.02.01
+  template:
+    type: calculation
+    question: >-
+      The lift coefficient (CL) of an aeroplane in steady horizontal flight is
+      {{cl}}.
+
+
+      An increase in angle of attack of 1 degree will increase CL by {{slope}}.
+
+
+      A vertical up gust instantly changes the angle of attack by {{dalpha}}
+      degrees.
+
+
+      The load factor will be:
+    variables:
+      - id: cl
+        label: CL in steady flight
+        unit: ""
+      - id: slope
+        label: CL increase per degree
+        unit: ""
+      - id: dalpha
+        label: Gust change of angle of attack
+        unit: °
+    answer:
+      formula: 1 + slope * dalpha / cl
+      unit: ""
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: 1 + slope * dalpha
+      - id: d2
+        formula: slope * dalpha / cl
+      - id: d3
+        formula: cl + slope * dalpha
+      - id: d4
+        formula: 1 + slope / cl
+    presets:
+      - id: p1
+        values:
+          cl: 0.4
+          slope: 0.09
+          dalpha: 5
+      - id: p2
+        values:
+          cl: 0.42
+          slope: 0.1
+          dalpha: 3
+      - id: p3
+        values:
+          cl: 0.35
+          slope: 0.079
+          dalpha: 2
+    explanation: >-
+      In steady flight the lift equals the weight. The gust changes the angle of
+      attack, which changes the lift coefficient in proportion. The load factor
+      is the new lift divided by the lift in steady flight, so the extra lift is
+      added to the 1 g of steady flight.
+
+
+      **Solution**
+
+
+      New CL = {{cl}} + {{slope}} x {{dalpha}} = {{= cl + slope * dalpha}}
+
+
+      {{f: 1 + slope * dalpha / cl}} = {{n: 1 + slope * dalpha / cl}} =
+      **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: adds the extra lift to 1 g but forgets to divide by the
+      original CL.
+
+      - **{{d2}}**: gives only the extra load factor and forgets the 1 g of
+      steady flight.
+
+      - **{{d3}}**: gives the new lift coefficient, which is not a load factor.
+
+      - **{{d4}}**: uses a change of 1 degree instead of the gust angle.
+- id: QOHQLMDM
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-811945
+    - ATPLGS-118096
+    - BGS-810932
+    - AVEXAM-98915
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.07
+  template:
+    type: simple
+    question: Which factor should be taken into account when determining VA?
+    explanation: ""
+    options:
+      - id: OOULNQUSO
+        text: The limit load factor.
+        correct: true
+        why: ""
+      - id: O9LM4GXYZ
+        text: The calculation factor.
+        correct: false
+        why: ""
+      - id: O0PWVO3DO
+        text: The safety factor.
+        correct: false
+        why: ""
+      - id: OMDUHHWN5
+        text: The ultimate load factor.
+        correct: false
+        why: ""
+- id: QOHWTNPT
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815785
+    - AVEXAM-51873
+    - BGS-810938
+    - ATPLGS-127891
+  annexes: []
+  learningObjectives:
+    - 081.06.02.02.03
+  template:
+    type: simple
+    question: "The significance of VA for jet transport aeroplanes is reduced at
+      high cruising altitudes because:"
+    explanation: ""
+    options:
+      - id: OVBOQZI5U
+        text: the elevator deflection is limited to prevent exceeding the limit load
+          factor.
+        correct: false
+        why: ""
+      - id: O1GWMAERM
+        text: the engine has insufficient thrust to reach the limit load factor.
+        correct: false
+        why: ""
+      - id: OLPOKRIIQ
+        text: at high altitudes the bank angle is normally limited to 15° to prevent
+          exceeding the limit load factor.
+        correct: false
+        why: ""
+      - id: O8NJ2LTSL
+        text: buffet onset limitations normally become limiting.
+        correct: true
+        why: ""
+- id: QOIGVTSBJ
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-816315
+    - AVEXAM-96178
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: VLO is the speed at which it is safe to fly with the...
+    explanation: ""
+    options:
+      - id: ODA4TDOPF
+        text: landing gear extended.
+        correct: false
+        why: ""
+      - id: OYHPJSKPJ
+        text: leading edge devices in transit.
+        correct: false
+        why: ""
+      - id: ODYK1R5QT
+        text: landing gear in transit.
+        correct: true
+        why: ""
+      - id: OXZYZVBNJ
+        text: leading edge devices extended.
+        correct: false
+        why: ""
+- id: QOLKGPQU
+  docId: "081.06"
+  relatedQuestions:
+    - QIVXCADE
+  externalIds:
+    - ATPLQ-814959
+    - AVEXAM-81177
+    - ATPLGS-126445
+    - AVEXAM-94845
+    - ATPLGS-126105
+    - AVEXAM-69508
+    - BGS-810929
+    - BGS-810928
+    - BGS-810942
+    - AVEXAM-72564
+    - BGS-810927
+    - BGS-812706
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.01
+  template:
+    type: simple
+    question: "The stall speed line in the manoeuvring load diagram runs through a
+      point where the:"
+    explanation: ""
+    options:
+      - id: OAGSVQVTA
+        text: speed = VB, load factor = +1.
+        correct: false
+        why: ""
+      - id: O7UJX7ZD9
+        text: speed = VS, load factor = +1.
+        correct: true
+        why: ""
+      - id: OSHSXO8AR
+        text: speed = 0, load factor = +1.
+        correct: false
+        why: ""
+      - id: O3UT4KDXK
+        text: speed = VA, load factor = +1.
+        correct: false
+        why: ""
+- id: QONIDMJG
+  docId: "081.06"
+  relatedQuestions:
+    - QDHOGUYR
+    - QDIIDDAG
+  externalIds:
+    - ATPLQ-812737
+    - AVEXAM-7521
+    - AVEXAM-92575
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: "The following is a correct design gust value factor applied in
+      certification under EASA CS-25:"
+    explanation: ""
+    options:
+      - id: OSN3AJN3H
+        text: 66 ft/sec at VB.
+        correct: true
+        why: ""
+      - id: OQ892EVGL
+        text: 55 ft/sec at VD.
+        correct: false
+        why: ""
+      - id: OTKNZ8PS8
+        text: 50 ft/sec at VD.
+        correct: false
+        why: ""
+      - id: OV1NDW4XR
+        text: 25 ft/sec at VB.
+        correct: false
+        why: ""
+- id: QOVA01GDF
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815168
+    - AVEXAM-71799
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: Your aircraft weight is reduced from 70 000 kg to 30 000 kg, how will
+      this affect the gust load?
+    explanation: ""
+    options:
+      - id: OSBT6ES2X
+        text: Initially increases and then decreases.
+        correct: false
+        why: ""
+      - id: ONMDWRJRT
+        text: It remains the same.
+        correct: false
+        why: ""
+      - id: OVY9KUZWL
+        text: It increases.
+        correct: true
+        why: ""
+      - id: OLEZVO6LL
+        text: It decreases.
+        correct: false
+        why: ""
+- id: QOXKSFZCE
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817378
+    - BGS-812453
+    - AVEXAM-79494
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: "During cruise Flight, an aircraft encounters severe turbulence. The
+      pilot promptly reduces the airspeed to the recommended rough air speed
+      (VRA). The expected speed variations due to turbulence will:"
+    explanation: ""
+    options:
+      - id: OHZZDT7HC
+        text: Cause deviation from flight path, but these will be within acceptable
+          limits.
+        correct: false
+        why: ""
+      - id: OHEBPETOP
+        text: Maintain the load factor between the positive and ultimate load limits.
+        correct: false
+        why: ""
+      - id: OUPHS6OW2
+        text: NOT cause frequent overspeed warnings.
+        correct: true
+        why: ""
+      - id: OROZMX0NI
+        text: NOT cause any stall warning.
+        correct: false
+        why: ""
+- id: QOYVJHKP
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818875
+    - ATPLGS-126397
+    - ATPLGS-126396
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.06
+  template:
+    type: simple
+    question: "The negative manoeuvring limit load factor for a transport aeroplane
+      in the clean configuration at VD may not be less than:"
+    explanation: ""
+    options:
+      - id: O1NVZV1WH
+        text: \-3.0.
+        correct: false
+        why: ""
+      - id: OEA2PWWO3
+        text: \-1.
+        correct: false
+        why: ""
+      - id: OUBPHWGCL
+        text: \-1.52.
+        correct: false
+        why: ""
+      - id: OAXXJRBVY
+        text: "0."
+        correct: true
+        why: ""
+- id: QP3O4VBWA
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-819612
+    - AVEXAM-5074
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: Which of the following statements best describes V**A**?
+    explanation: ""
+    options:
+      - id: OQQCWU9TB
+        text: The design manoeuvring speed, at or near which rapid, full control
+          reversal should be avoided due to risk of damage to aircraft.
+        correct: true
+        why: ""
+      - id: OH25276M6
+        text: A speed chosen by the manufacturer for evaluating performance criteria.
+        correct: false
+        why: ""
+      - id: OXZ7NOLOG
+        text: A specifically designated speed to use when penetrating turbulence.
+        correct: false
+        why: ""
+      - id: OKBRFSSNZ
+        text: The speed for maximum gust velocity.
+        correct: false
+        why: ""
+- id: QPFQ94BOT
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817449
+    - AVEXAM-93540
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: An aircraft is taking off, its VA is 260 kt. If weight decreases by
+      20%, the new VA will be…
+    explanation: ""
+    options:
+      - id: O7D9AYDDX
+        text: 234 kt
+        correct: true
+        why: ""
+      - id: OHJ3ABT1S
+        text: 286 kt
+        correct: false
+        why: ""
+      - id: OZPKM5SPM
+        text: 208 kt
+        correct: false
+        why: ""
+      - id: OTJ8950BP
+        text: 312 kt
+        correct: false
+        why: ""
+- id: QPGUWMDRB
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818911
+    - AVEXAM-43232
+    - BGS-812593
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: A light aircraft with mechanical flight controls occasionally
+      experiences uncomfortable pitch oscillations after encountering normal
+      turbulence. The pilot does not note any such oscillations when cruising in
+      smooth air at normal cruising speed, but does notice some excessive slack
+      or play in the elevator linkages after the flight. What potential hazards
+      could this situation cause if not addressed by maintenance?
+    explanation: ""
+    options:
+      - id: O5KDKON9R
+        text: The flutter may gradually worsen, and the elevator may vibrate so
+          vigorously that it comes off the hinges and separates from the
+          aeroplane in flight.
+        correct: true
+        why: ""
+      - id: OVNSQY9L0
+        text: A poorly balanced control surface is creating excessive restoring forces
+          and this short-period motion may cause excessive stress on the
+          airframe.
+        correct: false
+        why: ""
+      - id: OCHER6UFD
+        text: This phugoid-type oscillation is likely to increase in magnitude and the
+          aeroplane may enter a stall or encounter an overspeed situation if the
+          oscillation worsens.
+        correct: false
+        why: ""
+      - id: OCAE247DA
+        text: Compared to a phugoid, the short period motion leads to a change in pitch
+          and speed, which, if NOT corrected, may lead to a stall or overspeed
+          situation.
+        correct: false
+        why: ""
+- id: QPPVVIUT
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-811094
+    - AVEXAM-61628
+    - BGS-812432
+  annexes: []
+  learningObjectives:
+    - 081.06.01.03.02
+  template:
+    type: simple
+    question: In addition to VLE, a VLO limit may be added if at (1) \_\_\_\_\_ the
+      aerodynamic loads would make operation of the (2) \_\_\_\_\_ unsafe.
+    explanation: ""
+    options:
+      - id: OCJBZP9HF
+        text: (1) VLE; (2) landing gear
+        correct: true
+        why: ""
+      - id: OKUXGPSMU
+        text: (1) VLO; (2) leading edge
+        correct: false
+        why: ""
+      - id: OHAKIO1Q6
+        text: (1) VLO; (2) landing gear
+        correct: false
+        why: ""
+      - id: ONUODXMAY
+        text: (1) VLE; (2) leading edge
+        correct: false
+        why: ""
+- id: QQFFNXUA
+  docId: "081.06"
+  relatedQuestions:
+    - QAMKYCSG
+  externalIds:
+    - ATPLQ-812793
+    - BGS-812380
+    - ATPLQ-814550
+    - AVEXAM-51316
+    - AVEXAM-30998
+    - AVEXAM-85307
+    - AVEXAM-31483
+    - AVEXAM-26479
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: calculation
+    question: >-
+      An aerobatic aeroplane has a flaps-down stall speed (VS0) of {{vs0}} kt
+      and a flaps-up stall speed (VS1) of {{vs1}} kt.
+
+
+      What is the VA speed?
+    variables:
+      - id: vs0
+        label: VS0
+        unit: kt
+      - id: vs1
+        label: VS1
+        unit: kt
+    answer:
+      formula: round(vs1 * sqrt(6))
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: round(vs0 * sqrt(6))
+      - id: d2
+        formula: round(vs1 * sqrt(4.4))
+      - id: d3
+        formula: round(vs1 * sqrt(3.8))
+      - id: d4
+        formula: round(vs1 * 6)
+    presets:
+      - id: p1
+        values:
+          vs0: 48
+          vs1: 57
+      - id: p2
+        values:
+          vs0: 43
+          vs1: 58
+      - id: p3
+        values:
+          vs0: 50
+          vs1: 62
+    explanation: >-
+      The manoeuvring speed is the flaps-up stall speed (VS1) multiplied by the
+      square root of the limit load factor. An aerobatic aeroplane has a limit
+      load factor of 6 G. VS0 is the flaps-down stall speed and is not used
+      here.
+
+
+      **Solution**
+
+
+      {{f: vs1 * sqrt(6)}} = {{n: vs1 * sqrt(6)}}, rounded to the nearest knot,
+      gives **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: uses VS0 instead of VS1.
+
+      - **{{d2}} kt**: uses the utility limit load factor of 4.4 G instead of 6
+      G.
+
+      - **{{d3}} kt**: uses the normal category limit load factor of 3.8 G.
+
+      - **{{d4}} kt**: multiplies VS1 by the load factor without taking the
+      square root.
+- id: QQHYKHAG
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817167
+    - BGS-811609
+    - AVEXAM-72587
+    - ATPLGS-129342
+  annexes: []
+  learningObjectives:
+    - 081.06.01.04.01
+  template:
+    type: simple
+    question: Regarding the speeds VNO, VMO and VNE, which of the following answers
+      is correct?
+    explanation: ""
+    options:
+      - id: O0VDTLQCB
+        text: VNO is the maximum normal operating airspeed for an aeroplane certified
+          under CS-25\. It can only be exceeded in smooth air.
+        correct: false
+        why: ""
+      - id: O2UCZ7HV1
+        text: VMO is the maximum operating speed permitted in normal conditions for an
+          aeroplane certified under CS-25\. It may be exceeded by a maximum of
+          10% in an emergency descent.
+        correct: false
+        why: ""
+      - id: OUMG6ZKIB
+        text: For an aeroplane certified under CS-23, VNE is the maximum speed to be
+          flown with the flaps extended.
+        correct: false
+        why: ""
+      - id: OPSUGMR8P
+        text: For an aeroplane certified under CS-25, VMO is the maximum speed that must
+          not be deliberately exceeded in any regime, unless a higher speed has
+          been authorised for a particular flight.
+        correct: true
+        why: ""
+- id: QQLAASTZ
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-813637
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: The speed V**D** in gust diagram...
+    explanation: ""
+    options:
+      - id: OKY7NFO7Z
+        text: equals 66 ft/s.
+        correct: false
+        why: ""
+      - id: OGCCKRT1T
+        text: equals 55 ft/s.
+        correct: false
+        why: ""
+      - id: O93674AGB
+        text: equals 25 ft/s.
+        correct: true
+        why: ""
+      - id: O3LQJ058N
+        text: equals 50 ft /s.
+        correct: false
+        why: ""
+- id: QQPATRQT
+  docId: "081.06"
+  relatedQuestions:
+    - QREQNAOT
+  externalIds:
+    - ATPLQ-812292
+    - AVEXAM-61532
+    - BGS-811350
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: calculation
+    question: |-
+      An aircraft has the following data:
+
+      - 1 g stalling speed: {{vs1}} kt
+      - Limit load factor: {{n}} g
+
+      What is the manoeuvring speed VA?
+    variables:
+      - id: vs1
+        label: 1 g stalling speed
+        unit: kt
+      - id: n
+        label: Limit load factor
+        unit: g
+    answer:
+      formula: vs1 * sqrt(n)
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: vs1 / sqrt(n)
+      - id: d2
+        formula: vs1 * n
+      - id: d3
+        formula: vs1 * 1.5
+      - id: d4
+        formula: vs1 * n ^ 2
+    presets:
+      - id: p1
+        values:
+          vs1: 70
+          n: 2.5
+      - id: p2
+        values:
+          vs1: 60
+          n: 4
+    explanation: >-
+      The manoeuvring speed VA is the highest speed at which full control
+      deflection can be made without overstressing the aircraft. It is linked to
+      the stall speed: the stall speed rises with the square root of the load
+      factor, so VA is the 1 g stalling speed multiplied by the square root of
+      the limit load factor.
+
+
+      **Solution**
+
+
+      - VA = 1 g stalling speed × √(limit load factor)
+
+      - {{f: vs1 * sqrt(n)}} = {{n: vs1 * sqrt(n)}} = **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: divides the stalling speed by the square root of the load
+      factor, which lowers the speed instead of raising it.
+
+      - **{{d2}} kt**: multiplies the stalling speed by the load factor instead
+      of its square root.
+
+      - **{{d3}} kt**: uses a fixed 1.5 g instead of the given load factor.
+
+      - **{{d4}} kt**: squares the load factor instead of taking its square
+      root.
+- id: QQQIQCHF
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-819844
+    - ATPLGS-125856
+    - AVEXAM-11072
+    - BGS-810980
+  annexes: []
+  learningObjectives:
+    - 081.06.03.02.01
+  template:
+    type: simple
+    question: "The gust load factor due to a vertical upgust increases when:"
+    explanation: ""
+    options:
+      - id: ON9M9SHUP
+        text: wing loading increases.
+        correct: false
+        why: ""
+      - id: OWP21CF1L
+        text: altitude increases.
+        correct: false
+        why: ""
+      - id: OTAWSPMI9
+        text: weight increases.
+        correct: false
+        why: ""
+      - id: O9XIVA4E7
+        text: the gradient of the CL-alpha graph increases.
+        correct: true
+        why: ""
+- id: QRCZJTUY4
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-813519
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: In the context of CS-23 certification for aircraft, what is the design
+      manoeuvring speed (VA)?
+    explanation: ""
+    options:
+      - id: ORPVM7GOE
+        text: VA represents the maximum landing speed for the aircraft.
+        correct: false
+        why: ""
+      - id: OVZFRVVHA
+        text: VA is the maximum speed for normal cruise flight.
+        correct: false
+        why: ""
+      - id: OPAPY1ZAK
+        text: VA represents the stall speed with full flaps.
+        correct: false
+        why: ""
+      - id: ORF8BJV3X
+        text: VA is the maximum speed at which the aircraft can safely manoeuvre in
+          response to gusts without exceeding its structural limits.
+        correct: true
+        why: ""
+- id: QREAXH76H
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818408
+    - AVEXAM-55889
+    - BGS-812558
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: "An aeroplane is flying at its 1.3 g buffet margin maximum altitude
+      for a given mass, CG position and speed. If parameters remain unchanged
+      while maintaining level flight, the aeroplane will be able to:"
+    explanation: ""
+    options:
+      - id: OY2K1497K
+        text: Perform any manoeuvre with load factor of 2.0 g without experiencing low
+          speed of high speed buffet.
+        correct: false
+        why: ""
+      - id: OIJ4F1BQL
+        text: Perform a level turn with 45 of bank without experiencing low speed
+          buffet.
+        correct: false
+        why: ""
+      - id: OQWRP0HOM
+        text: Sustain a positive normal acceleration of 0.3 g without experiencing
+          either low or high speed buffet.
+        correct: true
+        why: ""
+      - id: OAYGEUQPW
+        text: Sustain a positive normal acceleration increment of 1.0 g without
+          experiencing high speed buffet.
+        correct: false
+        why: ""
+- id: QREQNAOT
+  docId: "081.06"
+  relatedQuestions:
+    - QQPATRQT
+  externalIds:
+    - ATPLQ-814977
+    - AVEXAM-51316
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: calculation
+    question: >-
+      An aerobatic aircraft has the following data:
+
+
+      - VS0 (landing configuration): {{vs0}} kt
+
+      - VS1 (clean): {{vs1}} kt
+
+
+      The limit load factor of the aerobatic category is +6 g. What is the VA
+      for this aircraft?
+    variables:
+      - id: vs0
+        label: VS0 (landing configuration)
+        unit: kt
+      - id: vs1
+        label: VS1 (clean)
+        unit: kt
+    answer:
+      formula: vs1 * sqrt(6)
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: vs0 * sqrt(6)
+      - id: d2
+        formula: vs1
+      - id: d3
+        formula: vs1 * 6
+      - id: d4
+        formula: vs1 * sqrt(7)
+    presets:
+      - id: p1
+        values:
+          vs0: 110
+          vs1: 123
+      - id: p2
+        values:
+          vs0: 90
+          vs1: 100
+    explanation: >-
+      VA is the manoeuvring speed of the clean aircraft, so it is based on the
+      clean stall speed VS1, not on the landing configuration. The stall speed
+      grows with the square root of the load factor, and the aerobatic category
+      limit load factor is +6 g.
+
+
+      **Solution**
+
+
+      - VA = VS1 × √6
+
+      - {{f: vs1 * sqrt(6)}} = {{n: vs1 * sqrt(6)}} = **{{answer}} kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: uses the landing configuration stall speed VS0 instead of
+      the clean VS1.
+
+      - **{{d2}} kt**: uses the stall speed without applying the load factor.
+
+      - **{{d3}} kt**: multiplies by the load factor instead of its square root.
+
+      - **{{d4}} kt**: adds 1 to the load factor before taking the square root.
+- id: QRLCRBAF
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818088
+    - AVEXAM-81177
+    - ATPLGS-126445
+    - AVEXAM-94845
+    - ATPLGS-126105
+    - AVEXAM-69508
+    - BGS-810929
+    - BGS-810928
+    - BGS-810942
+    - AVEXAM-72564
+    - BGS-810927
+    - BGS-812706
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: "All gust lines in the gust load diagram originate from a point where the:"
+    explanation: ""
+    options:
+      - id: O4RBDJ3IE
+        text: speed = 0, load factor = 0.
+        correct: false
+        why: ""
+      - id: OTZNY9Q3W
+        text: speed = VS, load factor = 0.
+        correct: false
+        why: ""
+      - id: O6B2C7U0P
+        text: speed = VB, load factor = +1.
+        correct: false
+        why: ""
+      - id: ORZOCAKVB
+        text: speed = 0, load factor = +1.
+        correct: true
+        why: ""
+- id: QS7SBBKYZ
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-811501
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: Maximum Operating Speed/Mach Number (VMO/MMO) is \_\_\_\_\_ the Design
+      Dive Speed/Mach Number (VD/MD) or Flight Demonstrated Design Dive
+      Speed/Mach Number (VDF/MDF).
+    explanation: ""
+    options:
+      - id: O9HVP9IPD
+        text: sufficiently greater than
+        correct: false
+        why: ""
+      - id: OX3GKL4ST
+        text: greater than or equal to
+        correct: false
+        why: ""
+      - id: OB5UQHREG
+        text: sufficiently less than
+        correct: true
+        why: ""
+      - id: OPFZBXUSA
+        text: less than or equal to
+        correct: false
+        why: ""
+- id: QSFXPWTN
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-814235
+    - ATPLGS-118678
+    - BGS-811763
+  annexes: []
+  learningObjectives:
+    - 081.06.03.02.01
+  template:
+    type: simple
+    question: For a given gust velocity, by how much would the gust load increase
+      for an aircraft flying at 40000 ft, compared to the same aircraft flying
+      at sea level, if the EAS remains the same? The gust load would increase
+      by...
+    explanation: ""
+    options:
+      - id: OHFVYYUBG
+        text: a quarter.
+        correct: false
+        why: ""
+      - id: OXC6ZGLXL
+        text: half as much.
+        correct: true
+        why: ""
+      - id: OVZY53HLR
+        text: twice as much.
+        correct: false
+        why: ""
+      - id: OYA6AQYIP
+        text: zero, there will be no increase at all.
+        correct: false
+        why: ""
+- id: QSGSZNCV
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812225
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.03
+  template:
+    type: simple
+    question: You are flying at FL 380 and encounter a thunderstorm up ahead. You
+      can’t fly around it, what do you do?
+    explanation: ""
+    options:
+      - id: ONDBPA46I
+        text: Fly at your VS1 speed
+        correct: false
+        why: ""
+      - id: OPGFW0DRP
+        text: Fly at your VA speed
+        correct: false
+        why: ""
+      - id: OKXXBG2LQ
+        text: Fly at your VRA speed
+        correct: true
+        why: ""
+      - id: O8J1VBUBA
+        text: Fly at your VNO speed
+        correct: false
+        why: ""
+- id: QSRDMA3FS
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815878
+    - AVEXAM-53763
+    - BGS-812675
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: The never exceed speed (VNE) is set so it never exceeds…
+    explanation: ""
+    options:
+      - id: OSCMOWL5N
+        text: (0.9) x VD
+        correct: true
+        why: ""
+      - id: ONLA5QVXZ
+        text: VD
+        correct: false
+        why: ""
+      - id: O6LHBAK35
+        text: VC
+        correct: false
+        why: ""
+      - id: OXLQI3CGO
+        text: (0.9) x VC
+        correct: false
+        why: ""
+- id: QTFIEMXK
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817344
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: simple
+    question: The speed VB in gust diagram...
+    explanation: ""
+    options:
+      - id: ORWWQXUOU
+        text: equals 50 ft/s.
+        correct: false
+        why: ""
+      - id: ODS3WQKLU
+        text: equals 55 ft/s.
+        correct: false
+        why: ""
+      - id: OOTDP7C6O
+        text: equals 25 ft/s.
+        correct: false
+        why: ""
+      - id: O8WDVSX0C
+        text: equals 66 ft/s.
+        correct: true
+        why: ""
+- id: QUMQRHIB
+  docId: "081.06"
+  relatedQuestions:
+    - QMIVRBLZ
+  externalIds:
+    - ATPLQ-812359
+    - BGS-810943
+    - AVEXAM-26732
+    - BGS-810948
+    - ATPLGS-118247
+    - BGS-810946
+    - BGS-811765
+    - AVEXAM-59350
+    - AVEXAM-27419
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.03
+  template:
+    type: simple
+    question: Which of these statements concerning flight in turbulence is correct?
+    explanation: ""
+    options:
+      - id: OAINURJYU
+        text: The load factor in turbulence may fluctuate above and below 1, but will
+          not become negative.
+        correct: false
+        why: ""
+      - id: OCVH20PSF
+        text: VB is the design speed for maximum gust intensity.
+        correct: true
+        why: ""
+      - id: OO0MPKWGL
+        text: The load factor in turbulence cannot exceed the ultimate load factor.
+        correct: false
+        why: ""
+      - id: OSHYHDQH9
+        text: In severe turbulence, speed should be reduced to approximately 1.2 VS.
+        correct: false
+        why: ""
+- id: QUPPMUGL
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818992
+    - ATPLGS-126161
+    - AVEXAM-91701
+    - BGS-810975
+    - AVEXAM-42993
+    - AVEXAM-32919
+    - BGS-810956
+    - BGS-810977
+    - ATPLGS-118273
+    - BGS-810295
+    - AVEXAM-48035
+    - AVEXAM-53022
+    - BGS-810969
+    - AVEXAM-10964
+    - AVEXAM-72536
+    - AVEXAM-10871
+    - BGS-810970
+    - BGS-810293
+    - BGS-810244
+    - BGS-810238
+    - BGS-810955
+    - ATPLGS-126218
+    - BGS-810959
+    - BGS-810978
+    - ATPLGS-126083
+    - ATPLGS-126219
+    - ATPLGS-126123
+    - BGS-810303
+    - BGS-810306
+    - ATPLGS-126160
+    - BGS-810960
+    - BGS-810964
+    - BGS-810231
+    - BGS-810226
+    - ATPLGS-126230
+    - ATPLGS-126265
+    - BGS-810968
+    - BGS-810957
+    - ATPLGS-126216
+    - ATPLGS-126081
+    - BGS-810280
+    - BGS-810285
+    - BGS-810279
+    - BGS-810966
+    - BGS-810287
+    - ATPLGS-126224
+    - ATPLGS-126119
+    - ATPLGS-125885
+    - BGS-810962
+    - ATPLGS-118272
+    - ATPLGS-126157
+    - ATPLGS-126162
+    - ATPLGS-126158
+    - ATPLGS-126163
+    - ATPLGS-126159
+    - ATPLGS-126217
+    - ATPLGS-126229
+    - ATPLGS-126125
+    - BGS-810237
+    - BGS-810243
+    - BGS-810971
+    - ATPLGS-126116
+    - ATPLGS-126222
+    - ATPLGS-126118
+    - BGS-810232
+    - BGS-810967
+    - BGS-810965
+    - BGS-810954
+    - BGS-810961
+    - BGS-810958
+  annexes: []
+  learningObjectives:
+    - 081.06.03.02.01
+  template:
+    type: one-two
+    question: Which of these statements about the gust load factor on an aeroplane
+      are correct or incorrect?
+    explanation: ""
+    firstCorrectStatements:
+      - When the slope of the lift versus angle of attack curve increases, the
+        gust load factor increases.
+    firstIncorrectStatements:
+      - When the slope of the lift versus angle of attack curve decreases, the
+        gust load factor increases.
+    secondCorrectStatements:
+      - When the wing loading decreases, the gust load factor increases.
+    secondIncorrectStatements:
+      - When the wing loading increases, the gust load factor decreases.
+- id: QUR0H7NFL
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815118
+    - BGS-812735
+    - AVEXAM-47891
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: CS23 and CS25 specify the requirements for an aircraft's design
+      manoeuvring speed (V**A**). Given that V**A** is an equivalent airspeed
+      (EAS), it remains relevant for aeroplanes with conventional flight
+      controls, however its value may become unreliable at high altitudes as…
+    explanation: ""
+    options:
+      - id: OQNMDT01T
+        text: the wings may enter a shock stall if flying at the low-altitude VA since
+          the aeroplane will exceed MCRIT.
+        correct: false
+        why: ""
+      - id: OTVRXER60
+        text: airspeed indication is invalid due to the compressibility effects at high
+          subsonic Mach numbers.
+        correct: false
+        why: ""
+      - id: OFWBAXNTR
+        text: higher stall speed and low control forces make it easier to produce a high
+          load factor at high altitudes.
+        correct: true
+        why: ""
+      - id: OTGJZESNR
+        text: airspeed indication is based on a Mach number at high altitude, making VA
+          as an EAS irrelevant.
+        correct: false
+        why: ""
+- id: QVLNDGQA
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-814314
+    - AVEXAM-96825
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.01
+  template:
+    type: simple
+    question: Consider a manoeuvring-load diagram. Which of the following can you
+      obtain from it?
+    explanation: ""
+    options:
+      - id: O0U09VIHO
+        text: Maximum gust load factor
+        correct: false
+        why: ""
+      - id: OVHQKFIY8
+        text: Maximum load factor at stall
+        correct: true
+        why: ""
+      - id: OJGV6LTQR
+        text: Best lift to drag ratio speed
+        correct: false
+        why: ""
+      - id: OCPGXNJJY
+        text: Best lift to drag ratio
+        correct: false
+        why: ""
+- id: QVLRJNQU
+  docId: "081.06"
+  relatedQuestions:
+    - QFNNLFLTS
+    - QRCTCUYZU
+  externalIds:
+    - ATPLQ-817994
+    - AVEXAM-77723
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: calculation
+    question: |-
+      A Cessna Skyhawk has a known VA at a known mass:
+
+      - Known VA: {{va1}} kt
+      - Known mass: {{m1}} lb
+      - New mass: {{m2}} lb
+
+      What is its VA at the new mass (in kt)?
+    variables:
+      - id: va1
+        label: Known VA
+        unit: kt
+      - id: m1
+        label: Known mass
+        unit: lb
+      - id: m2
+        label: New mass
+        unit: lb
+    answer:
+      formula: va1 * sqrt(m2 / m1)
+      unit: kt
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: va1 * m2 / m1
+      - id: d2
+        formula: va1 * m1 / m2
+      - id: d3
+        formula: va1 * sqrt(m1 / m2)
+      - id: d4
+        formula: va1 * (m2 / m1) ^ 2
+    presets:
+      - id: p1
+        values:
+          va1: 123
+          m1: 2300
+          m2: 1900
+      - id: p2
+        values:
+          va1: 110
+          m1: 2000
+          m2: 2400
+    explanation: >-
+      VA is proportional to the square root of the mass. The known VA is scaled
+      by the square root of the ratio of the new mass to the known mass.
+
+
+      **Solution**
+
+
+      {{f: va1 * sqrt(m2 / m1)}} = {{n: va1 * sqrt(m2 / m1)}} = **{{answer}}
+      kt**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} kt**: scales with the mass ratio instead of its square root.
+
+      - **{{d2}} kt**: inverts the mass ratio, so the speed rises when the mass
+      falls.
+
+      - **{{d3}} kt**: inverts the square root of the mass ratio.
+
+      - **{{d4}} kt**: uses the square of the mass ratio.
+- id: QVZACNOF
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812439
+    - BGS-810525
+    - AVEXAM-85084
+  annexes: []
+  learningObjectives:
+    - 081.06.01.01.03
+  template:
+    type: simple
+    question: "Wing flutter may be prevented by:"
+    explanation: ""
+    options:
+      - id: O1BCMUGNM
+        text: Installing the fuel tanks in the fuselage.
+        correct: false
+        why: ""
+      - id: O2DOYQ3GP
+        text: Mounting the engines on the fuselage.
+        correct: false
+        why: ""
+      - id: OLTNFHPOL
+        text: Increasing the aspect ratio of the wing.
+        correct: false
+        why: ""
+      - id: ORKOVGQTM
+        text: Locating mass in front of the torsion axis of the wing.
+        correct: true
+        why: ""
+- id: QWAQCJRBJ
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-813654
+    - AVEXAM-29312
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: An increase in aircraft mass causes the V**A** to (1)\_\_\_\_\_ and
+      the design limit load factor to (2)\_\_\_\_\_.
+    explanation: ""
+    options:
+      - id: OBFD62BDK
+        text: (1) remain the same; (2) remain the same.
+        correct: false
+        why: ""
+      - id: OQDOBT10A
+        text: (1) decrease; (2) increase
+        correct: false
+        why: ""
+      - id: ONNCJLAHI
+        text: (1) increase; (2) decrease
+        correct: false
+        why: ""
+      - id: OYEECH95X
+        text: (1) increase; (2) remain the same.
+        correct: true
+        why: ""
+- id: QWEZGNZMZ
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-813438
+    - BGS-812614
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: You are the pilot flying of an aircraft with normal speed, and the
+      load factor stable and constant. While climbing, you feel vibrations
+      through the fuselage and, in particular, the rudder pedals. In response,
+      you apply a very small and gentle pedal input, which stops the vibration.
+      This vibration is a result of...
+    explanation: ""
+    options:
+      - id: OJDRRMQNS
+        text: Slack in the control linkages, which, combined with the current speed,
+          causes the rudder to vibrate.
+        correct: true
+        why: ""
+      - id: OWACNIFOJ
+        text: Elasticity and vibration will reduce if the pilot increases the speed for
+          a faster airflow.
+        correct: false
+        why: ""
+      - id: O8CLUA3WJ
+        text: Elasticity, which is caused by the relatively flexible construction of, in
+          particular, the wings.
+        correct: false
+        why: ""
+      - id: O7ZF0CYJD
+        text: Flutter and, if the speed is maintained, the unstable vibration will
+          increase and the rudder will disintegrate.
+        correct: false
+        why: ""
+- id: QWFNHND4J
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-815992
+    - ATPLGS-125564
+    - ATPLGS-627077
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: calculation
+    question: |-
+      An aircraft is in steady, straight and level flight. Given:
+
+      - Initial coefficient of lift (CL): {{cl}}
+      - Increase in angle of attack from a vertical gust: {{aoa}}°
+      - Change in CL for each 1° change in angle of attack: {{dcl}}
+
+      Calculate the final load factor.
+    variables:
+      - id: cl
+        label: Initial CL
+        unit: ""
+      - id: aoa
+        label: Angle of attack increase
+        unit: °
+      - id: dcl
+        label: CL change per degree
+        unit: ""
+    answer:
+      formula: (cl + aoa * dcl) / cl
+      unit: ""
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: cl / (cl + aoa * dcl)
+      - id: d2
+        formula: cl + aoa * dcl
+      - id: d3
+        formula: (cl - aoa * dcl) / cl
+      - id: d4
+        formula: (cl + aoa) / cl
+    presets:
+      - id: p1
+        values:
+          cl: 0.47
+          aoa: 3
+          dcl: 0.1
+      - id: p2
+        values:
+          cl: 0.5
+          aoa: 2
+          dcl: 0.1
+      - id: p3
+        values:
+          cl: 0.4
+          aoa: 4
+          dcl: 0.1
+    explanation: >-
+      A gust changes the angle of attack and therefore the lift. In steady level
+      flight the lift equals the weight, so the load factor is the new lift
+      coefficient divided by the original one.
+
+
+      **Solution**
+
+
+      The gust adds {{= aoa * dcl}} to the coefficient of lift, so the new CL is
+      {{= cl + aoa * dcl}}.
+
+
+      {{f: (cl + aoa * dcl) / cl}} = {{n: (cl + aoa * dcl) / cl}} =
+      **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: inverts the ratio, so the load factor is given the wrong way
+      round.
+
+      - **{{d2}}**: gives the new lift coefficient instead of the load factor.
+
+      - **{{d3}}**: subtracts the change in CL, which has the wrong sign for an
+      increase in angle of attack.
+
+      - **{{d4}}**: adds the angle in degrees straight to the lift coefficient
+      instead of the change in CL.
+- id: QWJZODDH
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812671
+    - ATPLGS-125968
+    - AVEXAM-36447
+    - BGS-810918
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.03
+  template:
+    type: simple
+    question: "VLE is defined as the:"
+    explanation: ""
+    options:
+      - id: OYN3FKI7X
+        text: maximum landing gear extended speed.
+        correct: true
+        why: ""
+      - id: OOB5JZA0N
+        text: maximum authorised speed.
+        correct: false
+        why: ""
+      - id: OCXYLLS57
+        text: maximum speed at which the landing gear may be extended or retracted.
+        correct: false
+        why: ""
+      - id: OWJ7B0KTL
+        text: maximum flap extended speed.
+        correct: false
+        why: ""
+- id: QWSPNOSC
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818657
+    - BGS-810923
+    - AVEXAM-22719
+  annexes: []
+  learningObjectives:
+    - 081.06.03.01.01
+  template:
+    type: one-two
+    question: Which statement regarding the manoeuvre and gust load diagram in the
+      clean configuration is correct?
+    explanation: ""
+    firstCorrectStatements:
+      - The gust load diagram has a symmetrical shape with respect to the n = 1
+        line for speeds above VB.
+    firstIncorrectStatements:
+      - The gust load diagram has an asymmetrical shape with respect to the n =
+        1 line for speeds above VB.
+    secondCorrectStatements:
+      - The manoeuvre load diagram does not extend beyond the speed VC.
+    secondIncorrectStatements:
+      - The manoeuvre load diagram extends beyond the speed VC.
+- id: QXFMUMUHO
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817973
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: "The airframe structure must remain substantially intact after
+      experiencing:"
+    explanation: ""
+    options:
+      - id: OSLYJ5TAR
+        text: The design limit load plus the design ultimate load.
+        correct: false
+        why: ""
+      - id: O0GWOSOLX
+        text: Three times the safety factor.
+        correct: false
+        why: ""
+      - id: OVLSKLHVK
+        text: The design limit load times 150%.
+        correct: true
+        why: ""
+      - id: OBRNBBSRC
+        text: The design ultimate load times a 1.5 safety factor.
+        correct: false
+        why: ""
+- id: QXP5KEDTG
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-813518
+    - AVEXAM-36602
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: Aircraft can be certified under either CS-23 or CS-25 specifications.
+      How do the positive limiting manoeuvring load factors of these two
+      specifications compare to each other?
+    explanation: ""
+    options:
+      - id: OPDDLPJVE
+        text: They are the same for CS-23 and CS-25.
+        correct: false
+        why: ""
+      - id: OVCBTQKXH
+        text: CS-23 factors are higher.
+        correct: true
+        why: ""
+      - id: OMRBSX9MY
+        text: CS-25 factors are higher.
+        correct: false
+        why: ""
+      - id: OJQTKOVZF
+        text: They depend on the aeroplane's mass, NOT on the CS regulations.
+        correct: false
+        why: ""
+- id: QY1REURQC
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-817027
+    - AVEXAM-58650
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: The Never Exceed Speed (V**NE**) is set…
+    explanation: ""
+    options:
+      - id: OPNEFLFLX
+        text: never above VD.
+        correct: false
+        why: ""
+      - id: OVDKD23XP
+        text: at 0.9 of VD.
+        correct: false
+        why: ""
+      - id: OFFDAOMGD
+        text: equal to VD.
+        correct: false
+        why: ""
+      - id: O5AWLYUVY
+        text: below VD.
+        correct: true
+        why: ""
+- id: QYKBWXLS
+  docId: "081.06"
+  relatedQuestions:
+    - QCOKGYHU
+  externalIds:
+    - ATPLQ-813701
+    - ATPLGS-126161
+    - BGS-810975
+    - BGS-810956
+    - BGS-810977
+    - ATPLGS-118273
+    - BGS-810295
+    - BGS-810969
+    - BGS-810970
+    - BGS-810307
+    - BGS-810305
+    - BGS-810293
+    - BGS-810244
+    - BGS-810238
+    - ATPLGS-126124
+    - BGS-810955
+    - ATPLGS-126218
+    - BGS-810959
+    - ATPLGS-126082
+    - BGS-810978
+    - ATPLGS-126083
+    - BGS-810278
+    - ATPLGS-126219
+    - BGS-810289
+    - BGS-810284
+    - ATPLGS-126123
+    - BGS-810303
+    - BGS-810306
+    - ATPLGS-126160
+    - BGS-810960
+    - BGS-810964
+    - BGS-810231
+    - BGS-810226
+    - ATPLGS-126230
+    - ATPLGS-126265
+    - ATPLGS-126122
+    - BGS-810290
+    - BGS-810308
+    - BGS-810968
+    - BGS-810957
+    - ATPLGS-126216
+    - ATPLGS-126081
+    - BGS-810280
+    - BGS-810285
+    - BGS-810279
+    - BGS-810966
+    - BGS-810287
+    - ATPLGS-126224
+    - ATPLGS-126119
+    - ATPLGS-125885
+    - AVEXAM-1006
+    - AVEXAM-72029
+    - AVEXAM-27605
+    - AVEXAM-81921
+    - AVEXAM-16059
+    - AVEXAM-64041
+    - ATPLGS-126136
+    - ATPLGS-126120
+    - ATPLGS-126121
+    - ATPLGS-125930
+    - BGS-810962
+    - ATPLGS-118272
+    - BGS-810277
+    - ATPLGS-126157
+    - ATPLGS-126162
+    - ATPLGS-126158
+    - ATPLGS-126163
+    - ATPLGS-126137
+    - ATPLGS-126135
+    - ATPLGS-126139
+    - ATPLGS-126134
+    - ATPLGS-126133
+    - ATPLGS-126129
+    - ATPLGS-126138
+    - ATPLGS-126159
+    - ATPLGS-126127
+    - ATPLGS-126131
+    - ATPLGS-126128
+    - ATPLGS-126132
+    - ATPLGS-126126
+    - ATPLGS-126130
+    - ATPLGS-126217
+    - ATPLGS-126229
+    - ATPLGS-126125
+    - BGS-810237
+    - BGS-810243
+    - BGS-810283
+    - BGS-810281
+    - BGS-810971
+    - ATPLGS-126116
+    - ATPLGS-126222
+    - ATPLGS-126118
+    - ATPLGS-126084
+    - BGS-810304
+    - BGS-810232
+    - ATPLGS-126117
+    - BGS-810967
+    - BGS-810965
+    - BGS-810954
+    - BGS-810961
+    - BGS-810958
+    - ATPLGS-126085
+  annexes: []
+  learningObjectives:
+    - 081.06.03.02.01
+  template:
+    type: simple
+    question: >-
+      Which of these statements about the gust load factor on an aeroplane are
+      correct or incorrect?
+
+
+      I. When the mass decreases, the gust load factor increases.   
+
+      II. When the altitude increases, the gust load factor increases.
+    explanation: ""
+    options:
+      - id: OFCVZJ4XV
+        text: I is incorrect, II is incorrect.
+        correct: false
+        why: ""
+      - id: O6KYTHKJ1
+        text: I is correct, II is incorrect.
+        correct: true
+        why: ""
+      - id: OKGXIVNSV
+        text: I is correct, II is correct.
+        correct: false
+        why: ""
+      - id: OOKDGNHCU
+        text: I is incorrect, II is correct.
+        correct: false
+        why: ""
+- id: QYN7E8IS6
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-819534
+    - AVEXAM-53477
+    - ATPLGS-129340
+    - BGS-811411
+    - BGS-812075
+    - BGS-812638
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: V**C** is...
+    explanation: ""
+    options:
+      - id: OJK7T7WT1
+        text: the maximum tested airspeed where the aircraft is free from any signs of
+          dynamic pressure overload, flutter, and/or control reversal.
+        correct: false
+        why: ""
+      - id: OIGNA13ZR
+        text: the highest speed at which sudden, full elevator deflection (nose up) can
+          be made without exceeding the design limit load factor.
+        correct: false
+        why: ""
+      - id: OGJO7LX47
+        text: a specially recommended penetration speed for severe turbulence.
+        correct: false
+        why: ""
+      - id: O2WFHRMFM
+        text: a speed selected by the designer and used to assess the strength
+          requirements in cruise.
+        correct: true
+        why: ""
+- id: QYWEOEW8P
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-816429
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: How is the design manoeuvring speed (VA) affected by changes in
+      aircraft mass (weight)?
+    explanation: ""
+    options:
+      - id: O8WEMCJHF
+        text: An increase in aircraft mass results in a decrease in VA.
+        correct: false
+        why: ""
+      - id: O60WMB1NE
+        text: Aircraft mass has no effect on VA.
+        correct: false
+        why: ""
+      - id: OTMKM669B
+        text: A decrease in aircraft mass results in a decrease in VA.
+        correct: true
+        why: ""
+      - id: OMSBENIFM
+        text: A decrease in aircraft mass results in an increase in VA.
+        correct: false
+        why: ""
+- id: QZENECIXO
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-814478
+    - ATPLGS-126161
+    - AVEXAM-91701
+    - BGS-810975
+    - AVEXAM-42993
+    - AVEXAM-32919
+    - BGS-810956
+    - BGS-810977
+    - ATPLGS-118273
+    - BGS-810295
+    - AVEXAM-48035
+    - AVEXAM-53022
+    - BGS-810969
+    - AVEXAM-10964
+    - AVEXAM-72536
+    - AVEXAM-10871
+    - BGS-810970
+    - BGS-810293
+    - BGS-810244
+    - BGS-810238
+    - BGS-810955
+    - ATPLGS-126218
+    - BGS-810959
+    - BGS-810978
+    - ATPLGS-126083
+    - ATPLGS-126219
+    - ATPLGS-126123
+    - BGS-810303
+    - BGS-810306
+    - ATPLGS-126160
+    - BGS-810960
+    - BGS-810964
+    - BGS-810231
+    - BGS-810226
+    - ATPLGS-126230
+    - ATPLGS-126265
+    - ATPLGS-126122
+    - BGS-810968
+    - BGS-810957
+    - ATPLGS-126216
+    - ATPLGS-126081
+    - BGS-810280
+    - BGS-810285
+    - BGS-810279
+    - BGS-810966
+    - BGS-810287
+    - ATPLGS-126224
+    - ATPLGS-126119
+    - ATPLGS-125885
+    - BGS-810962
+    - ATPLGS-118272
+    - ATPLGS-126157
+    - ATPLGS-126162
+    - ATPLGS-126158
+    - ATPLGS-126163
+    - ATPLGS-126159
+    - ATPLGS-126217
+    - ATPLGS-126229
+    - ATPLGS-126125
+    - BGS-810237
+    - BGS-810243
+    - BGS-810971
+    - ATPLGS-126116
+    - ATPLGS-126222
+    - ATPLGS-126118
+    - BGS-810232
+    - BGS-810967
+    - BGS-810965
+    - BGS-810954
+    - BGS-810961
+    - BGS-810958
+  annexes: []
+  learningObjectives:
+    - 081.06.03.02.01
+  template:
+    type: simple
+    question: >-
+      Which of these statements about the gust load factor on an aeroplane are
+      correct or incorrect?
+
+
+      I. When the slope of the lift versus angle of attack curve decreases, the
+      gust load factor increases.   
+
+      II. When the wing loading decreases, the gust load factor increases.
+    explanation: ""
+    options:
+      - id: OHH6E3HZK
+        text: I is incorrect, II is incorrect.
+        correct: false
+        why: ""
+      - id: OXRMDQMSU
+        text: I is correct, II is correct.
+        correct: false
+        why: ""
+      - id: O7MLMLPEN
+        text: I is incorrect, II is correct.
+        correct: true
+        why: ""
+      - id: OHIYHQOBP
+        text: I is correct, II is incorrect.
+        correct: false
+        why: ""
+- id: QZFUHPUTP
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812417
+    - ATPLGS-126397
+    - ATPLGS-126393
+    - ATPLGS-126394
+    - ATPLGS-126396
+  annexes: []
+  learningObjectives:
+    - 081.06.02.01.06
+  template:
+    type: simple
+    question: "The negative manoeuvring limit load factor for a transport aeroplane
+      in the clean configuration up to VC may not be less than:"
+    explanation: ""
+    options:
+      - id: OKRC0K0PB
+        text: \-1.
+        correct: true
+        why: ""
+      - id: OCZSJQHM4
+        text: \-1.76.
+        correct: false
+        why: ""
+      - id: OPS6JOYQR
+        text: \-1.52.
+        correct: false
+        why: ""
+      - id: OLMFKOFQW
+        text: \-3.0.
+        correct: false
+        why: ""
+- id: QZGYXGZXX
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-813563
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: "Swept wings have the following properties:"
+    explanation: ""
+    options:
+      - id: OSWUZSBBX
+        text: Less affected by turbulence and shallower slope of lift curve vs AOA.
+        correct: true
+        why: ""
+      - id: OITFZDLRH
+        text: More affected by turbulence and shallower slope of lift curve vs AOA.
+        correct: false
+        why: ""
+      - id: ORCDZW3WP
+        text: Less affected by turbulence and steeper slope of lift curve vs AOA.
+        correct: false
+        why: ""
+      - id: OBGTVJW6A
+        text: More affected by turbulence and steeper slope of lift curve vs AOA.
+        correct: false
+        why: ""
+- id: QZIGXEOC
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-818446
+    - ATPLGS-125683
+    - AVEXAM-44197
+    - BGS-810924
+  annexes: []
+  learningObjectives:
+    - 081.06.01.04.03
+  template:
+    type: simple
+    question: What can happen to the aeroplane structure flying at a speed just
+      exceeding VA?
+    explanation: ""
+    options:
+      - id: OGLD8QLIF
+        text: It will collapse if a turn is made.
+        correct: false
+        why: ""
+      - id: OZU5KVLVS
+        text: It may suffer permanent deformation if the elevator is fully deflected
+          upwards.
+        correct: true
+        why: ""
+      - id: OGHYLGLOT
+        text: It may suffer permanent deformation because the flight is performed at too
+          large dynamic pressure.
+        correct: false
+        why: ""
+      - id: OJPLRWGXE
+        text: It may break if the elevator is fully deflected upwards.
+        correct: false
+        why: ""
+- id: QZSSTBDV3
+  docId: "081.06"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-812372
+    - BGS-812670
+    - AVEXAM-64499
+  annexes: []
+  learningObjectives:
+    - "081.06"
+  template:
+    type: simple
+    question: An aeroplane certified under the CS-25 flying WITHOUT failures,
+      malfunctions, or adverse conditions remains within the flutter-free flight
+      envelope if flown below an established speed limit. This speed is
+      expressed as a(n)…
+    explanation: ""
+    options:
+      - id: OOOUW1GRQ
+        text: TAS
+        correct: false
+        why: ""
+      - id: OLVYSIBOP
+        text: EAS
+        correct: true
+        why: ""
+      - id: OXTVEBF4R
+        text: Mach number
+        correct: false
+        why: ""
+      - id: OXBQCLJJX
+        text: IAS
+        correct: false
+        why: ""

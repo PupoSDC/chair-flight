@@ -1,0 +1,4466 @@
+- id: Q0O4VUFMO
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225695
+    - BGS-221746
+    - AVEXAM-6332
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.04
+  template:
+    type: simple
+    question: "The navigation database of an FMS is stored as read-only and the pilot:"
+    explanation: ""
+    options:
+      - id: OT1WQJZNY
+        text: Can update and adjust stored waypoints and SID/STAR data.
+        correct: false
+        why: ""
+      - id: OFWSYPAE7
+        text: Can NOT change or overwrite any of the navigation data.
+        correct: true
+        why: ""
+      - id: OB3TUMZUF
+        text: Can only change the performance related data in this database.
+        correct: false
+        why: ""
+      - id: OR7GDSFGI
+        text: Can only read the navigation data for 28 days. Afterwards, the memory is
+          erased automatically.
+        correct: false
+        why: ""
+- id: Q15LKZC5Y
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624941
+    - AVEXAM-55014
+    - ATPLGS-124778
+    - AVEXAM-55902
+    - BGS-620761
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.04
+  template:
+    type: simple
+    question: Which system is required in order for the FMS to control vertical
+      navigation?
+    explanation: ""
+    options:
+      - id: OOPNGIA7E
+        text: Pitch Controller
+        correct: false
+        why: ""
+      - id: OFFM3X4IC
+        text: Flight Director
+        correct: false
+        why: ""
+      - id: OSCQAUSOV
+        text: Auto-throttle
+        correct: true
+        why: ""
+      - id: OREXAWWVQ
+        text: Electronic Flight Bag
+        correct: false
+        why: ""
+- id: Q1PTENJWI
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226939
+    - BGS-221754
+    - AVEXAM-22362
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.03
+  template:
+    type: simple
+    question: One FMS is not in agreement with the other. What happens?
+    explanation: ""
+    options:
+      - id: OZMQLREH5
+        text: Nothing. The flight crew must keep cross-checking to ensure the FMSs stay
+          in agreement.
+        correct: false
+        why: ""
+      - id: OUN7RQ1DM
+        text: The FMS shuts down, and the flight crew must use alternative means of
+          navigation.
+        correct: false
+        why: ""
+      - id: OXZYAIM0Y
+        text: The functioning system overrides the other automatically.
+        correct: false
+        why: ""
+      - id: OCGDBZZAT
+        text: An error message is displayed to the flight crew.
+        correct: true
+        why: ""
+- id: Q2LJHTSTE
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222558
+    - AVEXAM-42946
+    - ATPLGS-120567
+    - BGS-220624
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.05
+  template:
+    type: simple
+    question: "Concerning the FMS, the cost index is computed by dividing:"
+    explanation: ""
+    options:
+      - id: O7C982S6U
+        text: aircraft operating cost by fuel cost.
+        correct: true
+        why: ""
+      - id: OBVLGPNGH
+        text: fuel cost by aircraft operating cost.
+        correct: false
+        why: ""
+      - id: OB5A0DMWS
+        text: aircraft cruise speed by fuel cost.
+        correct: false
+        why: ""
+      - id: OBIP9TFUQ
+        text: fuel cost by aircraft cruise speed.
+        correct: false
+        why: ""
+- id: Q2QKWFUCT
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624714
+    - AVEXAM-36241
+    - BGS-620490
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.01
+  template:
+    type: simple
+    question: "The Control and Display Unit (CDU) on an FMS is:"
+    explanation: ""
+    options:
+      - id: OP1ESIJJQ
+        text: used by the crew to input data into FMC.
+        correct: true
+        why: ""
+      - id: O5RZRI1FS
+        text: used on ground only to monitor the maintenance procedure.
+        correct: false
+        why: ""
+      - id: OY5YSA7FV
+        text: the system used to update the navigation database.
+        correct: false
+        why: ""
+      - id: ORARZLYE5
+        text: the Autopilot control panel.
+        correct: false
+        why: ""
+- id: Q2V1YVUB9
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221383
+    - BGS-222324
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.01
+  template:
+    type: simple
+    question: "What is the purpose of the aircraft performance database? It provides
+      the FMC with information:"
+    explanation: ""
+    options:
+      - id: OLCWXKV71
+        text: Required to calculate pitch and thrust commands, by including aircraft
+          drag and engine characteristics.
+        correct: true
+        why: ""
+      - id: OQX3EEO0C
+        text: Required to calculate take-off and landing performance, by including
+          aerodrome and runway-specific obstacles.
+        correct: false
+        why: ""
+      - id: OLUYLNACY
+        text: That would normally be determined by referring to the AFM, by including
+          performance penalties for flight control failures.
+        correct: false
+        why: ""
+      - id: OFRYYW6D8
+        text: That would normally be determined by referring to charts, by including the
+          location of navigation aids, aerodromes, and instrument procedures.
+        correct: false
+        why: ""
+- id: Q53A5HD9G
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224217
+    - BGS-222467
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.02
+  template:
+    type: simple
+    question: "The pilot notices that the aircraft type stored in the database for
+      aircraft performance is incorrect while performing the FMS performance
+      initialization procedure. Before flying, this issue must be resolved
+      because it could lead to inaccurate FMS outputs related to:"
+    explanation: ""
+    options:
+      - id: OWWECMHH7
+        text: automatic tuning of navigational aids and position updates.
+        correct: false
+        why: ""
+      - id: O8PQOH4LA
+        text: wind direction and speed, OAT, and freezing level.
+        correct: false
+        why: ""
+      - id: O1W43PVIE
+        text: waypoints, airways, and lateral flight profile.
+        correct: false
+        why: ""
+      - id: OUGDL922S
+        text: fuel management, optimum altitudes, and vertical flight profile.
+        correct: true
+        why: ""
+- id: Q6FA3MG54
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226522
+    - BGS-221919
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.09
+  template:
+    type: simple
+    question: All GPS signal inputs to the FMS are lost. What is one implication of this?
+    explanation: ""
+    options:
+      - id: O6SQDKAJT
+        text: The system will be unable to navigate directly by using great circles.
+        correct: false
+        why: ""
+      - id: O3NV1TEWT
+        text: The IRS position will be slower to update.
+        correct: false
+        why: ""
+      - id: OMFK5RXML
+        text: The integrity monitoring (RAIM) for RNP approaches will be lost.
+        correct: true
+        why: ""
+      - id: OITTLGLFZ
+        text: The displayed position will be offset.
+        correct: false
+        why: ""
+- id: Q7JR4PDYT
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621781
+    - AVEXAM-43059
+    - BGS-620478
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.08
+  template:
+    type: simple
+    question: The Flight Management Computer (FMC) position is..
+    explanation: ""
+    options:
+      - id: O0QC5XVR1
+        text: the same as that given on the No. 1 IRS.
+        correct: false
+        why: ""
+      - id: OGNXK8ARR
+        text: the computed position based on a number of sources, e.g. IRS, VOR/DME, ILS
+          and GPS.
+        correct: true
+        why: ""
+      - id: OIERLRBCD
+        text: the actual position of the aircraft at any point in time.
+        correct: false
+        why: ""
+      - id: O7ZKUCPET
+        text: independent of other navigation sources.
+        correct: false
+        why: ""
+- id: Q8GFDFRYA
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626923
+    - AVEXAM-93432
+    - BGS-620481
+    - AVEXAM-33858
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.03
+    - 022.11.02.01.04
+  template:
+    type: simple
+    question: The Flight Management System (FMS) is organised in such a way that the..
+    explanation: ""
+    options:
+      - id: OQQTHZFRH
+        text: navigation database in the FMC is “read only”, but the pilot is able to
+          add other navigational data.
+        correct: true
+        why: ""
+      - id: OCV7E86YZ
+        text: navigation database in the FMC is valid for one year.
+        correct: false
+        why: ""
+      - id: OMEETNSDE
+        text: pilot cannot modify the navigation database once it is installed in the
+          FMC.
+        correct: false
+        why: ""
+      - id: OPCDQ3PDN
+        text: navigation database in the FMC is created by the pilot.
+        correct: false
+        why: ""
+- id: Q8PMFCTYM
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223524
+    - BGS-222326
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.05
+  template:
+    type: simple
+    question: "At the beginning of the flight, when initialising the FMS, you have
+      the option to choose between the current and the upcoming version of the
+      navigation database. You confirm the upcoming version of the database, by
+      accident and without noticing. This decision:"
+    explanation: ""
+    options:
+      - id: OYGUUAF8S
+        text: Has no further implications. In the background logic the FMS will use the
+          current database.
+        correct: false
+        why: ""
+      - id: OPDNSZMVK
+        text: Could lead to an unsafe situation by including waypoints, SID and STAR
+          data that are only available at a later date.
+        correct: true
+        why: ""
+      - id: OTU1F7DTZ
+        text: Will lead to a blockage of the FMS computer. The screen will be frozen and
+          the computer has to be reset by the pilot.
+        correct: false
+        why: ""
+      - id: OYROZ4BXV
+        text: Will be announced by the FMS as WRONG DATABASE VERSION so that the pilot
+          can correct the situation.
+        correct: false
+        why: ""
+- id: Q9B0SCF0Z
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221775
+    - ATPLGS-106623
+    - AVEXAM-58263
+    - ATPLGS-106624
+    - AVEXAM-32248
+    - AVEXAM-88748
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+  template:
+    type: multiple-correct
+    question: "The FMS navigation database includes the following data:"
+    explanation: ""
+    options:
+      - text: – obstacles
+        correct: false
+        why: ""
+      - text: – waypoints
+        correct: true
+        why: ""
+      - text: – SID, STAR
+        correct: true
+        why: ""
+      - text: – terrain
+        correct: false
+        why: ""
+      - text: – magnetic variation
+        correct: true
+        why: ""
+- id: QAHVFAHL
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222364
+    - ATPLGS-627830
+    - AVEXAM-65051
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.05
+  template:
+    type: simple
+    question: Due to a drive failure, the slats of a transport category aircraft do
+      not retract properly after take-off. How will this impact the FMS in terms
+      of ETA and fuel predictions?
+    explanation: ""
+    options:
+      - id: OKILO1DWD
+        text: ETA will no longer be accurate, and fuel prediction will be accurately
+          calculated.
+        correct: false
+        why: ""
+      - id: O4HM3HVR5
+        text: ETA or fuel prediction indications remain reliable.
+        correct: false
+        why: ""
+      - id: OARCYIU75
+        text: ETA and fuel prediction will no longer be accurate.
+        correct: false
+        why: ""
+      - id: OS6TIMW9P
+        text: ETA will be calculated accurately but fuel prediction will no longer be
+          accurate.
+        correct: true
+        why: ""
+- id: QAJV3I3AX
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-625627
+    - BGS-620771
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.03
+    - 022.11.02.01.04
+  template:
+    type: simple
+    question: Which statement is true about the navigational database of a FMS?
+    explanation: ""
+    options:
+      - id: OT3AXEAC6
+        text: The crew can overwrite existing database-data in the navigational
+          database.
+        correct: false
+        why: ""
+      - id: OZWPBWDQ7
+        text: The navigational database is write-protected and it is not possible to
+          otherwise save crew created navigational data.
+        correct: false
+        why: ""
+      - id: OMQJPC7GJ
+        text: Crew-inserted navigational data is deleted automatically after each
+          flight.
+        correct: false
+        why: ""
+      - id: O02PJMLHN
+        text: Crew created navigational data may be saved in additional space in the
+          database.
+        correct: true
+        why: ""
+- id: QAQLJW6QE
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225227
+    - AVEXAM-50617
+    - ATPLGS-106639
+    - ATPLGS-106644
+    - BGS-220656
+    - BGS-221038
+    - AVEXAM-22065
+    - AVEXAM-29078
+    - BGS-221039
+    - ATPLGS-106653
+    - BGS-221042
+    - AVEXAM-27127
+    - AVEXAM-55810
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.07
+  template:
+    type: multiple-correct
+    question: "The most common sensors interfacing a FMS to compute the aircraft
+      position along the flight plan are:"
+    explanation: ""
+    options:
+      - text: – GPS
+        correct: true
+        why: ""
+      - text: – NDB
+        correct: false
+        why: ""
+      - text: – DME
+        correct: true
+        why: ""
+      - text: – LORAN-C
+        correct: false
+        why: ""
+- id: QAWHGROE
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227622
+    - AVEXAM-8891
+    - BGS-221657
+    - BGS-221844
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.06
+  template:
+    type: simple
+    question: Some Flight Management Systems have dedicated navigation receivers
+      (for example, DME) allowing for the automatic tune function. The main
+      advantage of the automatic tuning is that...
+    explanation: ""
+    options:
+      - id: OKVYWJTBS
+        text: it provides the best available signals for position calculation.
+        correct: true
+        why: ""
+      - id: OAHIS0KSC
+        text: tuning occurs much quicker than with manual selection.
+        correct: false
+        why: ""
+      - id: O7HUJFQGT
+        text: tuning is also possible outside the Designated Operational Coverage (DOC).
+        correct: false
+        why: ""
+      - id: O1ZSXCE1L
+        text: the calculated position is more correct than with manual selection.
+        correct: false
+        why: ""
+- id: QB3RON4WS
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222538
+    - AVEXAM-14910
+    - BGS-221886
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.05
+  template:
+    type: simple
+    question: A flight is performed with a higher "Cost Index" at a given mass.
+      Which of the following will occur?
+    explanation: ""
+    options:
+      - id: OQSUNZJ0J
+        text: A better maximum range.
+        correct: false
+        why: ""
+      - id: OLYPZBVYA
+        text: A higher cruise Mach number.
+        correct: true
+        why: ""
+      - id: ONIAJM0VZ
+        text: A better long range.
+        correct: false
+        why: ""
+      - id: OT5COVBD4
+        text: A lower cruise Mach number.
+        correct: false
+        why: ""
+- id: QBHWSWRS
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229856
+    - AVEXAM-51310
+    - BGS-221668
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.08
+  template:
+    type: simple
+    question: FMS calculations are based on…
+    explanation: ""
+    options:
+      - id: OUZAUTJGE
+        text: VOR/DME data
+        correct: false
+        why: ""
+      - id: ODORKLY0Z
+        text: a GNSS position
+        correct: false
+        why: ""
+      - id: OSVHYPE52
+        text: the IRS/INS position
+        correct: false
+        why: ""
+      - id: OFOWQZF2K
+        text: the FMS position
+        correct: true
+        why: ""
+- id: QBJPTSNE
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223679
+    - BGS-221771
+    - BGS-221917
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.01
+  template:
+    type: simple
+    question: What is one of the main purposes of a CDU?
+    explanation: ""
+    options:
+      - id: OYJXV90ZX
+        text: To automatically tune the aircraft radio(s).
+        correct: false
+        why: ""
+      - id: OHXMHIL99
+        text: To control the electrical system of an aircraft.
+        correct: false
+        why: ""
+      - id: OG0AJQLCD
+        text: To input data into the FMS.
+        correct: true
+        why: ""
+      - id: OGNCS5O9I
+        text: To monitor the engine(s) of an aircraft.
+        correct: false
+        why: ""
+- id: QBSDJBNH
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229066
+    - BGS-221863
+    - AVEXAM-43800
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.10
+  template:
+    type: simple
+    question: "The pilot wants to use the FMS to fly an RNAV approach, but gets the
+      message: ‘NO RAIM’. The pilot also detects that the ground course and
+      ground speed data reported by the IRS are invalid. The pilot…"
+    explanation: ""
+    options:
+      - id: OJ1XDS38F
+        text: can still use the FMS to fly the RNAV approach, RAIM is only applicable to
+          GPS approaches and ground track and speed information is NOT needed
+          for an RNAV approach.
+        correct: false
+        why: ""
+      - id: OHI7W7PUM
+        text: must fly the approach using raw data from ground-based navigation aids
+          (e.g, ILS).
+        correct: true
+        why: ""
+      - id: OOPGZCCYQ
+        text: can still use the FMS to fly the RNAV approach, RAIM is only applicable to
+          GPS approaches.
+        correct: false
+        why: ""
+      - id: OBD8OISTU
+        text: must use the ground speed information from the GPS and calculate the
+          approach path by means of performance tables in the Flight Manual.
+        correct: false
+        why: ""
+- id: QBTJSWFP
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223894
+    - AVEXAM-18767
+    - BGS-222106
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.06
+  template:
+    type: simple
+    question: The FMS automatically tunes radio navigation facilities in the
+      database based on the
+    explanation: ""
+    options:
+      - id: O5NFGITH5
+        text: best available signals in terms of geometry and strength.
+        correct: true
+        why: ""
+      - id: OEVHKCOPW
+        text: performance factor of the aircraft database.
+        correct: false
+        why: ""
+      - id: OF0Q10AZG
+        text: radio navigation facility with the highest frequency.
+        correct: false
+        why: ""
+      - id: OVDSFP7KT
+        text: closest radio facility.
+        correct: false
+        why: ""
+- id: QBXEVWHU
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222656
+    - BGS-220628
+    - AVEXAM-36481
+    - AVEXAM-40430
+    - BGS-222104
+    - BGS-222102
+    - ATPLGS-628043
+    - BGS-220629
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.04
+  template:
+    type: multiple-correct
+    question: "For most FMS the fuel prediction function, which computes the
+      remaining fuel along the flight plan, takes into account the following
+      situations:"
+    explanation: ""
+    options:
+      - text: the gross weight of the aircraft
+        correct: true
+        why: ""
+      - text: the current wind computed or the resulting ground speed
+        correct: true
+        why: ""
+      - text: the additional drag in case the landing gear remains extended
+        correct: false
+        why: ""
+      - text: the additional drag resulting in a missing fuselage or wing element in
+          compliance with the CDL (Configuration Deviation List)
+        correct: false
+        why: ""
+- id: QBYGWPGW
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225866
+    - BGS-222103
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.05
+  template:
+    type: multiple-correct
+    question: "A FMS can correct its fuel computations for the following
+      non-standard configurations:"
+    explanation: ""
+    options:
+      - text: – landing gear down.
+        correct: false
+        why: ""
+      - text: – speed brakes extended.
+        correct: false
+        why: ""
+      - text: – one engine out.
+        correct: true
+        why: ""
+      - text: – slats / flaps not fully retracted.
+        correct: false
+        why: ""
+- id: QCCUIDQI1
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226984
+    - AVEXAM-47904
+    - AVEXAM-46244
+    - AVEXAM-22934
+    - ATPLGS-106620
+    - ATPLGS-106607
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.07
+    - 022.11.03.01.08
+  template:
+    type: multiple-correct
+    question: "The FMC determines and update present aircraft position from the
+      following systems:"
+    explanation: ""
+    options:
+      - text: – GPS
+        correct: true
+        why: ""
+      - text: – IRS
+        correct: true
+        why: ""
+      - text: – Radio aids
+        correct: true
+        why: ""
+      - text: – ACARS
+        correct: false
+        why: ""
+- id: QCIDCOL0M
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223629
+    - AVEXAM-89816
+    - BGS-221753
+    - AVEXAM-81226
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.01
+  template:
+    type: simple
+    question: "The purpose of a performance database is:"
+    explanation: ""
+    options:
+      - id: OIYKTZ0A6
+        text: To adjust the route depending on the performance of the aircraft.
+        correct: false
+        why: ""
+      - id: OJ9U7TXUF
+        text: To track the performance of the aircraft over time and make adjustments
+          due to age and wear.
+        correct: false
+        why: ""
+      - id: OUNYU07ZJ
+        text: To monitor the performance of the crew.
+        correct: false
+        why: ""
+      - id: OLQK2WFYD
+        text: To provide information for the FMS regarding the performance
+          characteristics of a given aircraft.
+        correct: true
+        why: ""
+- id: QCPVMXSYT
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228162
+    - ATPLGS-106618
+    - AVEXAM-13703
+    - ATPLGS-106615
+    - BGS-220651
+    - ATPLGS-106610
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.05
+    - 022.11.03.01.08
+  template:
+    type: multiple-correct
+    question: "The FMS can provide the following functions:"
+    explanation: ""
+    options:
+      - text: – lateral and vertical flight plan management
+        correct: true
+        why: ""
+      - text: – de icing management
+        correct: false
+        why: ""
+      - text: – aircraft position computation
+        correct: true
+        why: ""
+      - text: – terrain awareness and warning
+        correct: false
+        why: ""
+- id: QCVOIFFI
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225975
+    - AVEXAM-32958
+    - BGS-220623
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.05
+  template:
+    type: simple
+    question: "Concerning the FMS, entering a high cost index results in:"
+    explanation: ""
+    options:
+      - id: OBNRDYPGD
+        text: minimum trip fuel.
+        correct: false
+        why: ""
+      - id: O7TRIF20C
+        text: minimum airspeed.
+        correct: false
+        why: ""
+      - id: OTBHYHFDO
+        text: maximum range airspeed.
+        correct: false
+        why: ""
+      - id: OM5I7ALE4
+        text: high airspeed and high fuel consumption.
+        correct: true
+        why: ""
+- id: QCXRGMTF
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621201
+    - ATPLGS-124628
+    - BGS-620484
+    - AVEXAM-82359
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+  template:
+    type: multiple-correct
+    question: "The FMS navigation data base usually contains:"
+    explanation: ""
+    options:
+      - text: airport reference data.
+        correct: true
+        why: ""
+      - text: ATC frequencies.
+        correct: false
+        why: ""
+      - text: Company routes.
+        correct: true
+        why: ""
+      - text: Nav. Aid. frequencies.
+        correct: true
+        why: ""
+- id: QDLUNGEJ
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221499
+    - AVEXAM-89816
+    - BGS-221753
+    - AVEXAM-81226
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.01
+  template:
+    type: simple
+    question: "The purpose of the performance database in the FMC is:"
+    explanation: ""
+    options:
+      - id: OFXFTX17M
+        text: To let the FMC know the optimum performance data for the aircraft in
+          question.
+        correct: true
+        why: ""
+      - id: OZOKA8YR7
+        text: To tell the FMC the required performance to be able to fly a certain
+          route.
+        correct: false
+        why: ""
+      - id: OZ7ILZJUO
+        text: To record the performance of the aircraft over time and to adapt the
+          flight routes accordingly.
+        correct: false
+        why: ""
+      - id: OEB1ZZQ3A
+        text: To keep track of the performance of the flight crew.
+        correct: false
+        why: ""
+- id: QDVHNMEO
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224327
+    - BGS-222296
+    - ATPLGS-625733
+    - AVEXAM-31499
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.02
+  template:
+    type: simple
+    question: "In a dual FMS architecture, when an incompatibility between the two
+      FMC's occurs: NB: FMC = Flight Management Computer"
+    explanation: ""
+    options:
+      - id: O3XLMV6UY
+        text: both FMC's are working independently; they are linked only to their own
+          peripherals.
+        correct: true
+        why: ""
+      - id: OXWISPVO3
+        text: the left FMC becomes the master FMC.
+        correct: false
+        why: ""
+      - id: OMXIFDN8I
+        text: one FMC is automatically switched OFF.
+        correct: false
+        why: ""
+      - id: OJHIAKIJ9
+        text: both FMC's are automatically switched OFF.
+        correct: false
+        why: ""
+- id: QDZWXAZL9
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-623517
+    - BGS-620487
+    - BGS-620482
+    - AVEXAM-20141
+    - BGS-620486
+    - BGS-620488
+    - AVEXAM-90164
+    - BGS-620479
+    - AVEXAM-79320
+    - AVEXAM-15979
+    - AVEXAM-13459
+    - AVEXAM-91943
+    - AVEXAM-44874
+    - BGS-620480
+    - AVEXAM-46584
+    - AVEXAM-73319
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+  template:
+    type: simple
+    question: "In the Flight Management Computer (FMC) of the Flight Management
+      System (FMS), data relating to waypoints is stored in the:"
+    explanation: ""
+    options:
+      - id: OX4YPLSK5
+        text: auto flight computers
+        correct: false
+        why: ""
+      - id: OLLUIFDWX
+        text: air data computer
+        correct: false
+        why: ""
+      - id: OTUIMAHNI
+        text: navigation database
+        correct: true
+        why: ""
+      - id: OFYMIQFON
+        text: performance database
+        correct: false
+        why: ""
+- id: QE7RK0AAK
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228255
+    - BGS-222458
+    - AVEXAM-72216
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.03
+  template:
+    type: simple
+    question: After the failure of MCDU 1, an aircraft equipped with dual FMS
+      architecture will operate in (1) \_\_\_ mode. Using MCDU 2, the crew can
+      program (2) \_\_\_.
+    explanation: ""
+    options:
+      - id: O5WQX2UOZ
+        text: (1) independent; (2) FMS 2 only.
+        correct: false
+        why: ""
+      - id: OND83872C
+        text: (1) dual; (2) either FMS.
+        correct: true
+        why: ""
+      - id: OHJKEGAVD
+        text: (1) single; (2) FMS 2 only.
+        correct: false
+        why: ""
+      - id: O9CDRKAF7
+        text: (1) single; (2) FMS 1 only.
+        correct: false
+        why: ""
+- id: QEBDKVOBM
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226610
+    - BGS-221776
+    - AVEXAM-96406
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.07
+  template:
+    type: simple
+    question: What kind of data does the IRS provide to the FMS?
+    explanation: ""
+    options:
+      - id: OKYJLRUVV
+        text: The IRS cannot provide the FMS with any data.
+        correct: false
+        why: ""
+      - id: O3ZIBDXX2
+        text: Fuel consumption data.
+        correct: false
+        why: ""
+      - id: OSKJV6E8N
+        text: Navigation data.
+        correct: true
+        why: ""
+      - id: OYHW97NMN
+        text: Engine data.
+        correct: false
+        why: ""
+- id: QEDAHUEO
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223467
+    - BGS-221710
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.02
+  template:
+    type: simple
+    question: During the pre-flight checks, you notice that the performance database
+      is for the wrong aircraft type. What should you do?
+    explanation: ""
+    options:
+      - id: O1HFHCGA9
+        text: Fly the aircraft.
+        correct: false
+        why: ""
+      - id: OPRBWFWFL
+        text: Update the database manually.
+        correct: false
+        why: ""
+      - id: OXXFJOHKS
+        text: Fly the flight but report it to maintenance on completion for
+          rectification.
+        correct: false
+        why: ""
+      - id: OTBZJINFG
+        text: Report to maintenance as this is a maintenance task to fix this fault.
+        correct: true
+        why: ""
+- id: QEIANYSWX
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221000
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.03
+  template:
+    type: simple
+    question: While programming the FMS, the flight crew enters the wrong cruising
+      level. What are the possible consequences?
+    explanation: ""
+    options:
+      - id: OJJPR0BXM
+        text: It is not possible to enter a new cruising flight level once in flight.
+        correct: false
+        why: ""
+      - id: OQ46L1MX7
+        text: The FMS will show a "DATA ERROR" message.
+        correct: false
+        why: ""
+      - id: OUPTCGBS3
+        text: The FMS predictions will give bad results to the flight crew.
+        correct: true
+        why: ""
+      - id: ONPLOOSAW
+        text: Speed, fuel burn, and time will not be updated.
+        correct: false
+        why: ""
+- id: QER2PBHQR
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226454
+    - AVEXAM-33071
+    - AVEXAM-49168
+    - BGS-220660
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.05
+  template:
+    type: simple
+    question: "When two waypoints are entered on the FMS flight plan page, a track
+      between the two fixes is computed and can be displayed on the Navigation
+      map display (ND). This leg created is:"
+    explanation: ""
+    options:
+      - id: OS2KDGZ8W
+        text: a rhumb-line.
+        correct: false
+        why: ""
+      - id: O3LKR3ADC
+        text: a great circle arc.
+        correct: true
+        why: ""
+      - id: OKTRJYHWY
+        text: two great circle arcs joined by a straight segment.
+        correct: false
+        why: ""
+      - id: OBM8HRNDJ
+        text: two rhumb-lines joined by a straight segment.
+        correct: false
+        why: ""
+- id: QEV85CG4Z
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628787
+    - BGS-620487
+    - BGS-620482
+    - AVEXAM-20141
+    - BGS-620486
+    - BGS-620488
+    - AVEXAM-90164
+    - BGS-620479
+    - AVEXAM-79320
+    - AVEXAM-15979
+    - AVEXAM-13459
+    - AVEXAM-91943
+    - AVEXAM-44874
+    - BGS-620480
+    - AVEXAM-46584
+    - AVEXAM-73319
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.01
+  template:
+    type: simple
+    question: "In the Flight Management Computer (FMC) of the Flight Management
+      System (FMS), data relating to cruising speeds is stored in the:"
+    explanation: ""
+    options:
+      - id: OEBO1EY84
+        text: performance database
+        correct: true
+        why: ""
+      - id: OXLF2IG7B
+        text: navigation database
+        correct: false
+        why: ""
+      - id: OKKTAYW2X
+        text: air data computer
+        correct: false
+        why: ""
+      - id: O1EIZPJUZ
+        text: auto flight computers
+        correct: false
+        why: ""
+- id: QEZM4P9YM
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227239
+    - AVEXAM-91526
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.07
+  template:
+    type: simple
+    question: From the options below, which is the most complete regarding
+      navigation receivers for FMC position updates?
+    explanation: ""
+    options:
+      - id: OH7ZTOL7H
+        text: GPS, INS, DME, NDB, ILS
+        correct: false
+        why: ""
+      - id: OCKAZVN7H
+        text: GPS, INS, DME, ILS
+        correct: false
+        why: ""
+      - id: OGRMAYCB5
+        text: GPS, INS, DME, NDB
+        correct: false
+        why: ""
+      - id: O7HUAMRSH
+        text: GPS, INS, DME, VOR, LOC
+        correct: true
+        why: ""
+- id: QFDURIYK
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227955
+    - ATPLGS-106623
+    - AVEXAM-58263
+    - ATPLGS-106624
+    - AVEXAM-14619
+    - AVEXAM-5328
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+  template:
+    type: multiple-correct
+    question: The FMS navigation database includes the following data
+    explanation: ""
+    options:
+      - text: – airports
+        correct: true
+        why: ""
+      - text: – obstacles
+        correct: false
+        why: ""
+      - text: – navaids
+        correct: true
+        why: ""
+      - text: – airways
+        correct: true
+        why: ""
+      - text: – terrain.
+        correct: false
+        why: ""
+- id: QFGFPVCF
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228322
+    - AVEXAM-47513
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.09
+  template:
+    type: simple
+    question: What is correct for aircraft equipment which operates to RNP 1 and better?
+    explanation: ""
+    options:
+      - id: OQE0IK5CU
+        text: The equipment should be able to compute an estimated value of the
+          aircraft’s position error.
+        correct: true
+        why: ""
+      - id: OFIRAIHSQ
+        text: The equipment should be able to correct for an estimated value of the
+          aircraft’s position error.
+        correct: false
+        why: ""
+      - id: OOWAEM8XC
+        text: The equipment should be able to compute the exact value of the aircraft’s
+          position error.
+        correct: false
+        why: ""
+      - id: OGC63WPKU
+        text: The equipment should be able to correct for the exact value of the
+          aircraft’s position error.
+        correct: false
+        why: ""
+- id: QFPGIIDL
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-628444
+    - BGS-620477
+    - AVEXAM-38053
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.05
+  template:
+    type: simple
+    question: "On a modern commercial aircraft, the FMS provides:"
+    explanation: ""
+    options:
+      - id: O1HRT0BSC
+        text: traffic alert information.
+        correct: false
+        why: ""
+      - id: OW6HPWS8A
+        text: an air ground/data link.
+        correct: false
+        why: ""
+      - id: OOQZXLGO0
+        text: a 3D area navigation and an air/ground datalink.
+        correct: false
+        why: ""
+      - id: OFRRH4DRR
+        text: lateral and vertical navigation, and guidance and performance management.
+        correct: true
+        why: ""
+- id: QFQRVGOO
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228743
+    - ATPLGS-127558
+    - BGS-222095
+    - AVEXAM-93142
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.02
+    - 022.11.02.02.03
+  template:
+    type: simple
+    question: Which Flight Management System databases are typically loadable?
+    explanation: ""
+    options:
+      - id: OP9DVZZTJ
+        text: The navigation database and the operating system.
+        correct: false
+        why: ""
+      - id: OXEUY49KE
+        text: The performance database and the user database.
+        correct: false
+        why: ""
+      - id: OJNMBXJY4
+        text: The navigation database and the performance database.
+        correct: true
+        why: ""
+      - id: OGXBFDSZT
+        text: The navigation database and the user database.
+        correct: false
+        why: ""
+- id: QFW0ICM49
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221687
+    - BGS-222099
+    - BGS-221405
+    - AVEXAM-23635
+    - ATPLGS-127564
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.02
+  template:
+    type: simple
+    question: The display of the FMS CDU (Control Display Unit) shows
+    explanation: ""
+    options:
+      - id: OIJS0LVKP
+        text: an alphabetical performance and navigation database.
+        correct: false
+        why: ""
+      - id: OHSW1YLFS
+        text: a title, a number of selectable lines, and a scratchpad.
+        correct: true
+        why: ""
+      - id: O9SWARBAC
+        text: a combined weather radar, collision avoidance, and terrain indicator.
+        correct: false
+        why: ""
+      - id: OYGTSAKCQ
+        text: an integrated DME and Horizontal Situation Indicator.
+        correct: false
+        why: ""
+- id: QFYPKYCT
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225980
+    - BGS-221595
+    - AVEXAM-29238
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.05
+  template:
+    type: simple
+    question: >-
+      A CDU/MCDU is used for the pre-flight set-up process of an FMS. The
+      typical process for covering the most basic information uses which of the
+      following steps and in what sequence?
+
+
+      1\. alternate page   
+       2\. GPS monitor page   
+       3\. ident page   
+       4\. performance initialisation   
+       5\. position initialisation   
+       6\. route initialisation   
+       7\. route programming   
+       8\. runways page
+    explanation: ""
+    options:
+      - id: OB9X5SVF9
+        text: 5, 2, 6, 7 and 4.
+        correct: false
+        why: ""
+      - id: O8F2RLV1G
+        text: 3, 5, 6, 1 and 4.
+        correct: false
+        why: ""
+      - id: OQQ5PUTGR
+        text: 5, 8, 7 and 4.
+        correct: false
+        why: ""
+      - id: OHFY8YFU4
+        text: 3, 5, 6, 7 and 4.
+        correct: true
+        why: ""
+- id: QGFUPFYHK
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226216
+    - BGS-221327
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.04
+  template:
+    type: simple
+    question: "The following is an air data input into the Flight Management System:"
+    explanation: ""
+    options:
+      - id: OAOXPDGIN
+        text: Autothrottle.
+        correct: false
+        why: ""
+      - id: OKOMYENFU
+        text: VOR/DME.
+        correct: false
+        why: ""
+      - id: OK6JUMYTO
+        text: TAS.
+        correct: true
+        why: ""
+      - id: O7HCYFQBG
+        text: IRS.
+        correct: false
+        why: ""
+- id: QGGVIGYW
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225417
+    - AVEXAM-85302
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.09
+  template:
+    type: simple
+    question: What are the consequences if the GPS position inputs to the FMS are
+      reduced?
+    explanation: ""
+    options:
+      - id: O4V7Q7WJN
+        text: The FMS will become inoperative.
+        correct: false
+        why: ""
+      - id: OMG1VIC0O
+        text: The FMS will become inoperative but the RNAV approaches will still be
+          available.
+        correct: false
+        why: ""
+      - id: ONUELQPUN
+        text: Position computation is less accurate and RNAV approaches are not
+          available anymore.
+        correct: true
+        why: ""
+      - id: OWIIHHWWB
+        text: The aircraft might experience position computation problems and
+          potentially a map shift on the ND.
+        correct: false
+        why: ""
+- id: QGWZGWOR
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221717
+    - BGS-221498
+    - AVEXAM-39151
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.02
+  template:
+    type: simple
+    question: During FMS initialization, the crew must verify that the aircraft
+      performance database is correct This is because the FMS uses the data
+      to...
+    explanation: ""
+    options:
+      - id: OTW14R2Y8
+        text: calculate an optimum vertical profile.
+        correct: true
+        why: ""
+      - id: OSN0FHBAB
+        text: determine which mass and balance requirements apply.
+        correct: false
+        why: ""
+      - id: OLJWNQ91Z
+        text: determine the Regulated Take-Off Mass restrictions.
+        correct: false
+        why: ""
+      - id: OIYIWSJH4
+        text: calculate an optimum lateral profile.
+        correct: false
+        why: ""
+- id: QHAJRDHU
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222384
+    - BGS-221881
+    - AVEXAM-25814
+    - ATPLGS-106621
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.02
+  template:
+    type: simple
+    question: "The validity period of the navigation data base of a FMS is:"
+    explanation: ""
+    options:
+      - id: O1FPRCWWZ
+        text: 28 days.
+        correct: true
+        why: ""
+      - id: OG0LIITJ2
+        text: 3 calendar months.
+        correct: false
+        why: ""
+      - id: OYAMYTH4A
+        text: one calendar month.
+        correct: false
+        why: ""
+      - id: OQT1MWRYU
+        text: 14 days.
+        correct: false
+        why: ""
+- id: QHEMIYLP3
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226324
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.02
+  template:
+    type: one-two
+    question: "In order to calculate the optimum vertical profile, the FMS uses the
+      performance database. Before the flight, during the FMS preparation, the
+      performance database has to be checked for:"
+    explanation: ""
+    firstCorrectStatements:
+      - Correct engines types and configuration
+    firstIncorrectStatements:
+      - Incorrect engines types and configuration
+    secondCorrectStatements:
+      - Correct aircraft type and variant
+    secondIncorrectStatements:
+      - Incorrect aircraft type and variant
+- id: QHLTFKXB
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225682
+    - AVEXAM-36481
+    - AVEXAM-40430
+    - BGS-222104
+    - BGS-222102
+    - ATPLGS-628043
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.04
+  template:
+    type: multiple-correct
+    question: "For most FMS the fuel prediction function, which computes the
+      remaining fuel along the flight plan, takes into account the following
+      parameters:"
+    explanation: ""
+    options:
+      - text: – the additional drag in case the landing gear can not be retracted
+        correct: false
+        why: ""
+      - text: – the cruise flight level
+        correct: true
+        why: ""
+      - text: – the additional drag in case the flaps are blocked and partly extended
+        correct: false
+        why: ""
+      - text: – the current wind computed or the resulting ground speed
+        correct: true
+        why: ""
+- id: QHRX5AGTA
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228592
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.02
+  template:
+    type: simple
+    question: An aeroplane departs for a 12 hour long flight at 20:00 UTC on the 8th
+      of the Month. During the preparation, the flight crew notices that their
+      navigation database is only valid until the 8th of the month. What should
+      they do?
+    explanation: ""
+    options:
+      - id: O1F7KH6YG
+        text: Load the new database prior to departure.
+        correct: false
+        why: ""
+      - id: OOG11C44U
+        text: They do not have to do anything, it is activated automatically.
+        correct: false
+        why: ""
+      - id: OPGHMOFKE
+        text: They should manually change to the new database at 00:00 UTC on the 9th,
+          in flight.
+        correct: false
+        why: ""
+      - id: OWTSVPPGI
+        text: Use current data.
+        correct: true
+        why: ""
+- id: QHTMMHZD
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-621555
+    - AVEXAM-67221
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.03
+  template:
+    type: simple
+    question: "The navigational database of the FMS:"
+    explanation: ""
+    options:
+      - id: OXWNDNBDH
+        text: Has to be updated by the flight-crew when the performance database is
+          updated.
+        correct: false
+        why: ""
+      - id: OND3NA0IG
+        text: Contains some additional space so that the crew may create navigational
+          data.
+        correct: true
+        why: ""
+      - id: ONQI3RGWG
+        text: Can be edited by the crew so that navigation aids, airways and waypoints
+          may be deleted.
+        correct: false
+        why: ""
+      - id: OKP89AMCJ
+        text: Is updated with datalink continuously to contain the actual NOTAMs.
+        correct: false
+        why: ""
+- id: QHVBL4YCB
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626697
+    - AVEXAM-5387
+    - BGS-621140
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.02
+  template:
+    type: simple
+    question: On a typical Navigation Display (ND) the current in-flight Wind
+      Velocity (W/V) is displayed. Where is the W/V information derived from?
+    explanation: ""
+    options:
+      - id: OKDJIKBEF
+        text: It is manually entered by the pilots, based on the latest information
+          available.
+        correct: false
+        why: ""
+      - id: OIKYVIPLS
+        text: It is determined by the FMC from inputs of heading, drift, True Airspeed
+          (TAS) and ground speed.
+        correct: true
+        why: ""
+      - id: OFUODFCOX
+        text: It is entered into the FMC by either the pilots or dispatch/operations.
+        correct: false
+        why: ""
+      - id: O8UXUNU7V
+        text: It is uploaded by data link from the latest available meteorological
+          forecasts.
+        correct: false
+        why: ""
+- id: QHWDGLLN
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223947
+    - ATPLGS-627836
+    - AVEXAM-53988
+    - BGS-221613
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.04
+  template:
+    type: simple
+    question: "In order for the FMS to function properly, it is compulsory for
+      certain data to be entered. How is the compulsory data identified on the
+      display of the CDU/MCDU? By using:"
+    explanation: ""
+    options:
+      - id: OGVWXVJPF
+        text: Shaded white characters.
+        correct: false
+        why: ""
+      - id: OQOLLK5GQ
+        text: Dashed lines.
+        correct: false
+        why: ""
+      - id: OKHHVABTL
+        text: Magenta characters.
+        correct: false
+        why: ""
+      - id: O1KYRMPMX
+        text: Rectangular boxes.
+        correct: true
+        why: ""
+- id: QIBPRPQO
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226509
+    - AVEXAM-19876
+    - BGS-221708
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.03
+  template:
+    type: simple
+    question: What would be a likely purpose for user-defined waypoints based on
+      latitude/longitude coordinates?
+    explanation: ""
+    options:
+      - id: OGEVXLIWD
+        text: Planning routes that are far from fixed waypoints or navigation aids.
+        correct: true
+        why: ""
+      - id: OBXHO2QCR
+        text: Planning routes that cross the borders between two or more different
+          States.
+        correct: false
+        why: ""
+      - id: OUHVWTJJU
+        text: Marking points of interest that lie close to the planned flight in order
+          to inform the passengers on board.
+        correct: false
+        why: ""
+      - id: OHBBCQ3MX
+        text: Inserting, into the navigation system, new radio navigation aids for which
+          the information in the AIP still needs to be updated.
+        correct: false
+        why: ""
+- id: QJAEYVGD
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225994
+    - AVEXAM-43147
+    - BGS-222080
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.06
+  template:
+    type: simple
+    question: Some FMS have an autotuning function. Which parameters can be
+      automatically tuned?
+    explanation: ""
+    options:
+      - id: OC0G5ORHJ
+        text: HF frequencies.
+        correct: false
+        why: ""
+      - id: OFXYGMMO4
+        text: VHF communication and navigation frequencies.
+        correct: false
+        why: ""
+      - id: OSATPV7UG
+        text: VHF communication frequencies.
+        correct: false
+        why: ""
+      - id: OLXOTJWIP
+        text: Radio navigation frequencies.
+        correct: true
+        why: ""
+- id: QJLEHKIX
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224218
+    - BGS-220625
+    - AVEXAM-79162
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.02
+  template:
+    type: multiple-correct
+    question: "Concerning the FMS, the parameters used to work out the vertical
+      flight profile are:"
+    explanation: ""
+    options:
+      - text: – zero fuel weight
+        correct: true
+        why: ""
+      - text: – cost index
+        correct: true
+        why: ""
+      - text: – fuel quantity
+        correct: true
+        why: ""
+      - text: – oxygen quantity available for flight crew
+        correct: false
+        why: ""
+      - text: – minimum safe enroute altitude
+        correct: false
+        why: ""
+- id: QJMSUZFN
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227914
+    - AVEXAM-47720
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.02
+  template:
+    type: simple
+    question: During the cockpit preparation phase, the flight crew notices that the
+      Performance Database is incorrect on the FMS, being for a different
+      aircraft and engine type. What must they do in this case?
+    explanation: ""
+    options:
+      - id: OTRTSIHZC
+        text: The mechanics must change the database.
+        correct: true
+        why: ""
+      - id: O70JHSOK8
+        text: Manually select the correct database.
+        correct: false
+        why: ""
+      - id: OMQMJNOUO
+        text: Proceed with the flight but notify the maintenance crew.
+        correct: false
+        why: ""
+      - id: ON3ALJ23P
+        text: Nothing, this is not an issue.
+        correct: false
+        why: ""
+- id: QJPTETBA7
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221798
+    - AVEXAM-1888
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.03
+  template:
+    type: simple
+    question: User-defined waypoints can be inserted using different formats. What
+      formats can be used in the B737-400 FMS?
+    explanation: ""
+    options:
+      - id: OOMPIVDZQ
+        text: Place Bearing/Distance, Place Distance/Place Distance, Along-Track
+          Displacement, Latitude and Longitude
+        correct: false
+        why: ""
+      - id: OMD98MYR0
+        text: Place Bearing/Distance, Place Bearing/Place Bearing, Across-Track
+          Displacement, Latitude and Longitude
+        correct: false
+        why: ""
+      - id: OW9BZLA2V
+        text: Place Bearing/Distance, Place Bearing/Place Bearing, Along-Track
+          Displacement, Latitude and Longitude
+        correct: true
+        why: ""
+      - id: OBSKP45GP
+        text: Place, Place Bearing/Distance, Along-Track Displacement, Latitude and
+          Longitude
+        correct: false
+        why: ""
+- id: QKOOOPSK
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222253
+    - AVEXAM-79549
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+  template:
+    type: simple
+    question: Which method is used by the pilot to insert RNAV waypoints into an
+      aircraft’s FMS?
+    explanation: ""
+    options:
+      - id: OFJIQXXOF
+        text: Automatically loaded into the FMS using a company route
+          registration/airport pairing from the navigation database.
+        correct: true
+        why: ""
+      - id: OMHXCSPQY
+        text: Automatically sent from the pilot’s electronic flight bag (EFB) to the
+          FMS.
+        correct: false
+        why: ""
+      - id: OKK2ZD01Z
+        text: Manually by inserting one waypoint at a time, during the flight.
+        correct: false
+        why: ""
+      - id: OV29XUQ2X
+        text: Manually by selecting the CRS/DISTANCE on an HSI.
+        correct: false
+        why: ""
+- id: QKTQW2XKD
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221863
+    - BGS-222334
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.02
+  template:
+    type: simple
+    question: "When performing the FMS pre-flight set-up, the pilot notices that the
+      current navigation database is out of date. Which of the following is the
+      action they should take before continuing the FMS initialisation? The
+      pilot should:"
+    explanation: ""
+    options:
+      - id: OS3IX660L
+        text: Change the date via the on-board clock.
+        correct: false
+        why: ""
+      - id: OSWCREFOW
+        text: Download a new database via ACARS.
+        correct: false
+        why: ""
+      - id: OOZJGDUB0
+        text: Select a new database from the EFB.
+        correct: false
+        why: ""
+      - id: OBOHSO1QZ
+        text: Select the valid database.
+        correct: true
+        why: ""
+- id: QKYVUYCT
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229017
+    - BGS-220633
+    - ATPLGS-106625
+    - AVEXAM-8630
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+    - 022.11.02.02.01
+  template:
+    type: simple
+    question: "The data base of a FMC (flight management computer) is divided into
+      two major sections:"
+    explanation: ""
+    options:
+      - id: OXHAH2ZMQ
+        text: inertial and navigation.
+        correct: false
+        why: ""
+      - id: O6SQSOJ20
+        text: aeroplane performance and fuel saving.
+        correct: false
+        why: ""
+      - id: OIBY4NLKE
+        text: aeroplane performance and navigation.
+        correct: true
+        why: ""
+      - id: OWSYQJHMC
+        text: navigation and meteorology.
+        correct: false
+        why: ""
+- id: QLHCBO51R
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-211667
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.03
+  template:
+    type: simple
+    question: During the flight one CDU fails, what happens to the associated FMS?
+    explanation: ""
+    options:
+      - id: O32VHXBBN
+        text: Cannot be used and must be shut off for the remaining part of the flight.
+        correct: false
+        why: ""
+      - id: OJ6LVHCF4
+        text: Can be used by inserting data VOR/LOC receiver.
+        correct: false
+        why: ""
+      - id: OOKJX5JAK
+        text: Can be used by inserting data via datalink.
+        correct: false
+        why: ""
+      - id: OMWNBEH52
+        text: Can be used by inserting data using the other CDU.
+        correct: true
+        why: ""
+- id: QLJSEPKQ
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229688
+    - BGS-221647
+    - ATPLGS-628543
+    - ATPLGS-628377
+    - AVEXAM-36224
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.02
+  template:
+    type: simple
+    question: In a typical FMS architecture including two FMCs, two CDUs and one
+      cross-talk bus when the system operates in the normal DUAL mode, one (1)
+      \_\_\_\_\_ is the master and the other is the slave. Both (2) \_\_\_\_\_
+      exchange data together and synchronise via a cross-talk bus.
+    explanation: ""
+    options:
+      - id: OVXGHF004
+        text: (1) CDU; (2) FMCS
+        correct: false
+        why: ""
+      - id: O9S6QPLMY
+        text: (1) FMC; (2) FMCS
+        correct: true
+        why: ""
+      - id: O5JWOTWJZ
+        text: (1) CDU; (2) CDUS
+        correct: false
+        why: ""
+      - id: OIUDTMAII
+        text: (1) FMC; (2) CDUS
+        correct: false
+        why: ""
+- id: QLPWSXNS
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226406
+    - AVEXAM-75821
+    - BGS-220649
+    - ATPLGS-106609
+    - ATPLGS-106617
+    - ATPLQ-225229
+    - ATPLGS-106618
+    - BGS-220648
+    - AVEXAM-49764
+    - AVEXAM-67614
+    - ATPLGS-106615
+    - AVEXAM-26741
+    - AVEXAM-95659
+    - BGS-220650
+    - BGS-221040
+    - ATPLGS-106614
+    - AVEXAM-57474
+    - ATPLQ-226701
+    - AVEXAM-13703
+    - BGS-220652
+    - ATPLGS-106610
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.05
+  template:
+    type: multiple-correct
+    question: "The FMS provides the following functions:"
+    explanation: ""
+    options:
+      - text: – traffic advisories emission
+        correct: false
+        why: ""
+      - text: – resolution advisories emission
+        correct: false
+        why: ""
+      - text: – aid for fuel management
+        correct: true
+        why: ""
+      - text: – lateral flight plan management
+        correct: true
+        why: ""
+      - text: – check-list completion
+        correct: false
+        why: ""
+      - text: – aircraft position computation
+        correct: true
+        why: ""
+      - text: – vertical flight plan management
+        correct: true
+        why: ""
+      - text: – terrain awareness and warning
+        correct: false
+        why: ""
+- id: QLQHLJVB
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227716
+    - ATPLGS-627846
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.08
+  template:
+    type: simple
+    question: "The position shown on FMS is:"
+    explanation: ""
+    options:
+      - id: OBCTAY9NE
+        text: ADC position.
+        correct: false
+        why: ""
+      - id: OSBUUSXMO
+        text: IRS.
+        correct: false
+        why: ""
+      - id: OAIH7B8WI
+        text: INS.
+        correct: false
+        why: ""
+      - id: OEL30AKOZ
+        text: FMS position.
+        correct: true
+        why: ""
+- id: QLYWMUWE
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223309
+    - BGS-222491
+    - AVEXAM-24495
+    - BGS-222476
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.04
+  template:
+    type: simple
+    question: During pre-flight, while checking the route entered in the FMS by the
+      pilot, it is noticed that the FMS navigation database is out-of-date. The
+      decision is taken to change the FMS navigation database cycle to the
+      current cycle. After changing the navigation database cycle...
+    explanation: ""
+    options:
+      - id: OWRQOFLZH
+        text: The FMS will restart, deleting all entered information.
+        correct: false
+        why: ""
+      - id: OKMRGXGWB
+        text: There will be data missing on some of the sector legs.
+        correct: false
+        why: ""
+      - id: ONNMSA6N8
+        text: The previously entered route data will remain unaffected.
+        correct: false
+        why: ""
+      - id: OJVZS0XHS
+        text: All previously entered route data will be deleted.
+        correct: true
+        why: ""
+- id: QM4TTM4CL
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222352
+    - BGS-222468
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.02
+    - 022.11.02.02.03
+  template:
+    type: simple
+    question: You discover that the aircraft performance database for FMS is based
+      on incorrect aircraft and engine configurations during pre-flight
+      preparation. Which of the following statements is correct?
+    explanation: ""
+    options:
+      - id: OOWQEBNOM
+        text: Leave the database unchanged because modifying the contents is a lengthy
+          procedure.
+        correct: false
+        why: ""
+      - id: OFVN0TORC
+        text: You can manually select the correct configuration by using the list on the
+          initialisation page.
+        correct: false
+        why: ""
+      - id: OLD8J85TT
+        text: Engineering must be notified, as flight crew are prohibited from making
+          any changes.
+        correct: true
+        why: ""
+      - id: O4FKOM7MN
+        text: The correct configuration can be uploaded via ACARS by Operations control.
+        correct: false
+        why: ""
+- id: QMHDFYPV
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224711
+    - AVEXAM-91837
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.01
+  template:
+    type: simple
+    question: When is the FMS aircraft database updated?
+    explanation: ""
+    options:
+      - id: OWNV4H1E1
+        text: Monthly
+        correct: false
+        why: ""
+      - id: OWV2FUJ09
+        text: Manually by the pilot
+        correct: false
+        why: ""
+      - id: OQNME8DIM
+        text: After an FMS software update
+        correct: true
+        why: ""
+      - id: OZE2LCNUQ
+        text: Weekly
+        correct: false
+        why: ""
+- id: QMICGP9MI
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226772
+    - AVEXAM-8207
+    - BGS-221918
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.05
+    - 022.11.03.01.01
+  template:
+    type: multiple-correct
+    question: "The following are functions of an FMS:"
+    explanation: ""
+    options:
+      - text: Calculation of the aircraft position.
+        correct: true
+        why: ""
+      - text: Calculation of resolution advisories.
+        correct: false
+        why: ""
+      - text: Lateral and vertical guidance.
+        correct: true
+        why: ""
+      - text: Flight path prediction.
+        correct: true
+        why: ""
+      - text: Terrain awareness.
+        correct: false
+        why: ""
+- id: QMRFYKFN
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225129
+    - BGS-221035
+    - AVEXAM-90435
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.05
+  template:
+    type: simple
+    question: What does the FMS Overfly function consist of?
+    explanation: ""
+    options:
+      - id: ODZVXQDQP
+        text: Manually selecting a flight plan waypoint to fly over when sequencing it
+          instead of flying by at the transition.
+        correct: true
+        why: ""
+      - id: OFEFZW82R
+        text: Manually selecting a flight plan to fly over each of the waypoints at the
+          transitions along the route.
+        correct: false
+        why: ""
+      - id: OPRASLFF4
+        text: Manually selecting a flight plan waypoint to hold over for a selected
+          time.
+        correct: false
+        why: ""
+      - id: ODFAGVL0M
+        text: Selecting the secondary flight plan making it active to fly over the legs.
+        correct: false
+        why: ""
+- id: QMYMOVZF
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225880
+    - AVEXAM-79395
+    - ATPLGS-628339
+    - BGS-222463
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.01
+  template:
+    type: simple
+    question: The data stored in the performance database of an FMS is mainly used..
+    explanation: ""
+    options:
+      - id: OUFFJF9WR
+        text: to calculate engine thrust settings.
+        correct: true
+        why: ""
+      - id: OEMHONOQG
+        text: for LNAV calculations
+        correct: false
+        why: ""
+      - id: ORYCPVVTX
+        text: to validate GNSS position and satellite data.
+        correct: false
+        why: ""
+      - id: OMNWYH7F6
+        text: to calculate IRS positions.
+        correct: false
+        why: ""
+- id: QMZKTLNB
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224109
+    - AVEXAM-37216
+    - ATPLGS-106657
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.08
+  template:
+    type: simple
+    question: "An FMS with only a multiple DME sensor operating shall have an
+      estimated position error, 95% of the time, in a non-precision approach
+      equal or less than:"
+    explanation: ""
+    options:
+      - id: OOCYQ10BU
+        text: 0,5 NM
+        correct: false
+        why: ""
+      - id: ORXPQMLYN
+        text: 0,3 NM
+        correct: true
+        why: ""
+      - id: OZ9QACPFU
+        text: 0,06 NM
+        correct: false
+        why: ""
+      - id: OM7BYQ4LE
+        text: 1 NM
+        correct: false
+        why: ""
+- id: QNEKICI9R
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222586
+    - BGS-222335
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.07
+  template:
+    type: simple
+    question: May an FMS receive position inputs from the GPS system (if installed)?
+    explanation: ""
+    options:
+      - id: O7NWMS3O4
+        text: Yes, but only if a dual GPS system is installed.
+        correct: false
+        why: ""
+      - id: OBREMFX5Y
+        text: Yes, this is common.
+        correct: true
+        why: ""
+      - id: OUGYKICWN
+        text: No, GPS is considered too inaccurate and unsecure for this.
+        correct: false
+        why: ""
+      - id: OPMHLBKDW
+        text: Yes, but only for horizontal position data, not vertical position data.
+        correct: false
+        why: ""
+- id: QNGAPMQZB
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624805
+    - AVEXAM-10747
+    - BGS-620495
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+  template:
+    type: simple
+    question: "What is true about the FMC databases:"
+    explanation: ""
+    options:
+      - id: OGWKMFPMK
+        text: the performance database contains aeronautical information for the planned
+          area of operations of the aircraft.
+        correct: false
+        why: ""
+      - id: OHGJVCCZ1
+        text: the data can not be customized for the specific airline operations.
+        correct: false
+        why: ""
+      - id: OXZ1IZY5Q
+        text: the data includes SIDs, STARS and runway approaches.
+        correct: true
+        why: ""
+      - id: OLACYAQ0H
+        text: the navigation database contains the company’s cost index strategy.
+        correct: false
+        why: ""
+- id: QNHRCMKF
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225034
+    - BGS-221466
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.03
+  template:
+    type: simple
+    question: When the pilot uses the alphanumeric keyboard on a MCDU/CDU, each
+      character appears in the...
+    explanation: ""
+    options:
+      - id: OE7OOPMNT
+        text: line selected.
+        correct: false
+        why: ""
+      - id: OVDIOLJHX
+        text: scratchpad.
+        correct: true
+        why: ""
+      - id: OUZQISATR
+        text: title field.
+        correct: false
+        why: ""
+      - id: O5QC5ST5S
+        text: ACARS menu.
+        correct: false
+        why: ""
+- id: QNIXWIM92
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222446
+    - BGS-221646
+    - ATPLGS-628544
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.03
+  template:
+    type: simple
+    question: In the navigation database, waypoint 'EASAT' is defined by the
+      intersection of 'HSBJ' VOR radial 320 and radial 263 from 'HSBM' VOR. This
+      waypoint is a...
+    explanation: ""
+    options:
+      - id: OQS3LYF8R
+        text: place/bearing - place/bearing (PBX) waypoint.
+        correct: true
+        why: ""
+      - id: OQKC5CVVT
+        text: place/distance (PD) waypoint.
+        correct: false
+        why: ""
+      - id: O1KFCEDVP
+        text: place/bearing/distance (PBD) waypoint.
+        correct: false
+        why: ""
+      - id: OLEMDJLZT
+        text: latitude/longitude coordinates waypoint.
+        correct: false
+        why: ""
+- id: QNMSZPPX
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224118
+    - AVEXAM-80162
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.05
+  template:
+    type: simple
+    question: >-
+      A typical FMS pre-flight set-up includes all of the elements below. Place
+      them in the correct sequence:
+
+
+      1\. Position Initialisation   
+       2\. Route Programming   
+       3\. Route Initialisation   
+       4\. Performance Initialisation   
+       5\. Ident
+    explanation: ""
+    options:
+      - id: OKBS3I9HJ
+        text: 4, 3, 5, 1, 2
+        correct: false
+        why: ""
+      - id: OZRRTO8QD
+        text: 1, 2, 3, 4, 5
+        correct: false
+        why: ""
+      - id: OTZ2XHOKH
+        text: 3, 5, 2, 1, 4
+        correct: false
+        why: ""
+      - id: OQ40OCW9A
+        text: 5, 1, 3, 2, 4
+        correct: true
+        why: ""
+- id: QNNWYIUH
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223572
+    - AVEXAM-96775
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.03
+  template:
+    type: simple
+    question: In a dual FMS architecture, what happens if one of the FMS fails?
+    explanation: ""
+    options:
+      - id: OZ2TDBZ9Y
+        text: The operative FMS will continue sending inputs to the failed FMS in order
+          to recover it.
+        correct: false
+        why: ""
+      - id: OPYXRUKNM
+        text: If one FMS fails, the second will be lost as well.
+        correct: false
+        why: ""
+      - id: OKTGQK47X
+        text: Pilots have to make an FMS reset as soon as possible.
+        correct: false
+        why: ""
+      - id: O86LW9IBM
+        text: Redundancy is lost, the operative FMS will fully take over.
+        correct: true
+        why: ""
+- id: QNRZABWQ
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228033
+    - AVEXAM-49532
+    - BGS-221584
+    - AVEXAM-13622
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.02
+  template:
+    type: simple
+    question: What does the pilot need to do regarding the performance database in
+      the FMC before taking off?
+    explanation: ""
+    options:
+      - id: O7JIW5Z9T
+        text: Enter the correct number index of load sheet.
+        correct: false
+        why: ""
+      - id: OI76RD1MQ
+        text: Download to maintenance staff and erase it.
+        correct: false
+        why: ""
+      - id: OGU0HOKFG
+        text: Nothing needs to be done by the pilot.
+        correct: false
+        why: ""
+      - id: OQASTGVCF
+        text: Check that it is up to date.
+        correct: true
+        why: ""
+- id: QNSBERJ6W
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228723
+    - BGS-221878
+    - AVEXAM-6667
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.09
+  template:
+    type: simple
+    question: What can be expected when there's a complete loss of GPS signal?
+    explanation: ""
+    options:
+      - id: OQCWYLQWR
+        text: Calculated position deviation.
+        correct: false
+        why: ""
+      - id: ODL5WTKXD
+        text: Position uncertainty due to ND units shutdown.
+        correct: false
+        why: ""
+      - id: OA02C5BPK
+        text: Loss of radio navigation signals.
+        correct: false
+        why: ""
+      - id: OQOX6UNC1
+        text: Loss of integrity monitoring (RAIM) and RNP APCH capability.
+        correct: true
+        why: ""
+- id: QOSJJHTV
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228476
+    - AVEXAM-71861
+    - BGS-221857
+    - ATPLGS-628382
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.05
+  template:
+    type: simple
+    question: During a ground stop the Commander notices that the FMS position is
+      NOT in agreement with the actual aircraft position. What is the correct
+      procedure to rectify this error? The Commander needs to…
+    explanation: ""
+    options:
+      - id: OKFI4NHDE
+        text: activate the GNSS to allow the position to be automatically corrected
+        correct: false
+        why: ""
+      - id: OROAXSMEH
+        text: use the CDU to enter the correct position into the system.
+        correct: true
+        why: ""
+      - id: OE6YOO2F2
+        text: contact maintenance personnel to recalibrate the system.
+        correct: false
+        why: ""
+      - id: OIGG8AEZV
+        text: note the difference and manually correct calculations for the rest of the
+          flight.
+        correct: false
+        why: ""
+- id: QOT3WIB5Z
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224009
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.05
+  template:
+    type: simple
+    question: For polar navigation, aircraft manufacturers recommend navigation using...
+    explanation: ""
+    options:
+      - id: OEFM1BIVV
+        text: LNAV to follow rhumb line
+        correct: false
+        why: ""
+      - id: OIP5TRMG9
+        text: HDG to follow great circle
+        correct: false
+        why: ""
+      - id: OT4AL2IXQ
+        text: HDG to follow Rhumb line
+        correct: false
+        why: ""
+      - id: OH4OTCZ5K
+        text: LNAV to follow great circle
+        correct: true
+        why: ""
+- id: QP2I1RIL9
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624735
+    - BGS-620777
+    - AVEXAM-15814
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.08
+  template:
+    type: simple
+    question: Which of the following uses Kalman filtering?
+    explanation: ""
+    options:
+      - id: O1TL3BKXU
+        text: Navigation Computer
+        correct: true
+        why: ""
+      - id: OMTTRFWAX
+        text: DME receiver
+        correct: false
+        why: ""
+      - id: OZZNLXQJT
+        text: VOR receiver
+        correct: false
+        why: ""
+      - id: ONMHXEJDZ
+        text: Electronic Flight Instrument System (EFIS)
+        correct: false
+        why: ""
+- id: QPBQERJJ
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225962
+    - AVEXAM-16253
+    - BGS-222265
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.04
+  template:
+    type: simple
+    question: Which of the following statements regarding the "performance factor"
+      is correct? It is a…
+    explanation: ""
+    options:
+      - id: OZPGLKFC4
+        text: positive or negative factor that is used to correct the predicted fuel
+          flow.
+        correct: true
+        why: ""
+      - id: OCYXG5D91
+        text: positive or negative factor that is used to calculate the percentage error
+          in fuel consumption due to differences between nominal and icing
+          conditions.
+        correct: false
+        why: ""
+      - id: OZLJT57N1
+        text: positive factor that is used to show the percentage increase in fuel
+          consumption when there is an abnormal increase in drag.
+        correct: false
+        why: ""
+      - id: OW5WIT3AA
+        text: cost index used to show the efficiency of the aircraft as a percentage of
+          the nominal performance.
+        correct: false
+        why: ""
+- id: QPHZNF3LV
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-624842
+    - AVEXAM-24391
+    - AVEXAM-45846
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.04
+  template:
+    type: simple
+    question: Which of the following are typical inputs to a Flight Management
+      System (FMS)?
+    explanation: ""
+    options:
+      - id: OT1LVPUH2
+        text: Air Data Computer (ADC) data.
+        correct: true
+        why: ""
+      - id: OR5U9YJEC
+        text: Flight Director indications.
+        correct: false
+        why: ""
+      - id: OWPYHL7ND
+        text: Autopilot command signals.
+        correct: false
+        why: ""
+      - id: OAIELWK69
+        text: Messages on the Control Display Unit (CDU).
+        correct: false
+        why: ""
+- id: QPLATNEC
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228044
+    - BGS-220620
+    - ATPLGS-106613
+    - AVEXAM-82648
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.02
+  template:
+    type: multiple-correct
+    question: "Components of the FMS are:"
+    explanation: ""
+    options:
+      - text: – CDU (Control and Display Unit)
+        correct: true
+        why: ""
+      - text: – Database
+        correct: true
+        why: ""
+      - text: – FMC (Flight Management Computer)
+        correct: true
+        why: ""
+      - text: – electronic check-lists.
+        correct: false
+        why: ""
+      - text: – GPWS mode controller.
+        correct: false
+        why: ""
+- id: QPLTDANJK
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221832
+    - BGS-221924
+    - AVEXAM-3441
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.05
+  template:
+    type: simple
+    question: "A crew performed a go around at the destination aerodrome and
+      diverted to the primary alternate aerodrome. During the go around, the
+      crew forgets to retract the landing gear. What will happen to the fuel
+      required? It will:"
+    explanation: ""
+    options:
+      - id: OWXAJ03KV
+        text: Remain unchanged as the crew fly at lower altitude and at a lower speed.
+        correct: false
+        why: ""
+      - id: O8ISATNPL
+        text: Increase, but this will not be correctly displayed on the FMC fuel
+          prediction pages.
+        correct: true
+        why: ""
+      - id: OXSILK42R
+        text: Remain unchanged as the diversion is calculated with the gear extended
+          and/or flaps down.
+        correct: false
+        why: ""
+      - id: OC4DSFQDB
+        text: Increase, and this will be correctly displayed on the FMC fuel prediction
+          pages.
+        correct: false
+        why: ""
+- id: QPMDS747N
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228769
+    - AVEXAM-84801
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.01
+  template:
+    type: simple
+    question: Considering the performance database, what does it contain?
+    explanation: ""
+    options:
+      - id: OEBVFR9KY
+        text: Navigational database, fuel consumption, and engine performance data.
+        correct: false
+        why: ""
+      - id: OTAGCPC5J
+        text: Radio frequencies, landing system data, and navigational database.
+        correct: false
+        why: ""
+      - id: OWOLBPZ4C
+        text: Aircraft performance data include takeoff and landing distances, climb
+          rates, and cruise speeds.
+        correct: true
+        why: ""
+      - id: ONDIUCYLK
+        text: Aircraft weight and balance, navigational database, and engine fuel flow
+          data.
+        correct: false
+        why: ""
+- id: QPO8K4DBY
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229714
+    - BGS-222298
+    - AVEXAM-90783
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.07
+  template:
+    type: simple
+    question: In flight, which navigation receivers are typically used for flight
+      management position updating?
+    explanation: ""
+    options:
+      - id: OBAXJIOCY
+        text: DME, VOR, LOC, and LORAN receivers.
+        correct: false
+        why: ""
+      - id: O18AEYAYK
+        text: DME, VOR, LOC, and INS receivers.
+        correct: false
+        why: ""
+      - id: OYFDBL5ML
+        text: DME, VOR, LOC, and GPS receivers.
+        correct: true
+        why: ""
+      - id: OH6YURTG4
+        text: DME, NDB, and GPS receivers.
+        correct: false
+        why: ""
+- id: QPZA0TGIW
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221328
+    - AVEXAM-1966
+    - BGS-221720
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.03
+  template:
+    type: simple
+    question: At the beginning of a flight, the pilot initiates the FMS. they
+      confirm the current aircraft type and model, and wants to go into the
+      sub-menu of the performance database to change a few parameters. Which of
+      the following statements is correct?
+    explanation: ""
+    options:
+      - id: OG2IKM35D
+        text: An aircraft engineer must be present when the pilot is changing
+          parameters, due to the safety critical data.
+        correct: false
+        why: ""
+      - id: O1GRMAV3M
+        text: Only parameters related to the engine power output can be changed by the
+          pilot.
+        correct: false
+        why: ""
+      - id: ORCRQM3LC
+        text: Only parameters related to the fuel consumption can be changed by the
+          pilot.
+        correct: false
+        why: ""
+      - id: OO6PXBX5Q
+        text: The performance database can only be changed by maintenance personnel.
+        correct: true
+        why: ""
+- id: QQCGGBMO
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225076
+    - AVEXAM-72592
+    - BGS-221229
+    - ATPLGS-129527
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.05
+  template:
+    type: simple
+    question: "The factor(s) which are considered by the FMS for Cost Index (CI) is/are:"
+    explanation: ""
+    options:
+      - id: OUPAKZZTZ
+        text: Landing gear stuck down.
+        correct: false
+        why: ""
+      - id: O4LZNFK9E
+        text: One engine inoperative.
+        correct: true
+        why: ""
+      - id: OYWIKM7KD
+        text: Air brakes stuck partially deployed.
+        correct: false
+        why: ""
+      - id: OIWT0SFR6
+        text: One engine inoperative and flaps stuck partially deployed.
+        correct: false
+        why: ""
+- id: QQCQQFRO
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222879
+    - AVEXAM-81625
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.05
+  template:
+    type: simple
+    question: An MEL item is found before start-up. Due to possible performance
+      changes, the flight crew wants to correctly consider this when on the FMS
+      “INIT” page. How can they do this?
+    explanation: ""
+    options:
+      - id: OASVLMN8Z
+        text: FMS only accounts for fuel related items.
+        correct: false
+        why: ""
+      - id: ODYXVHW6I
+        text: They can insert the MEL item and the FMS will automatically account for
+          it.
+        correct: false
+        why: ""
+      - id: OBG8VFVH0
+        text: They can only choose the aircraft type and model.
+        correct: false
+        why: ""
+      - id: OIYZLPZNP
+        text: The FMS doesn’t take into account the MEL items.
+        correct: true
+        why: ""
+- id: QQHLNUUN
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225117
+    - AVEXAM-30670
+    - BGS-221632
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.03
+  template:
+    type: simple
+    question: During start-up, the pilot notices the unserviceability of an item
+      mentioned in the Minimum Equipment List (MEL). He/she wrongly concludes
+      that this has an impact on the performance of the aircraft. Because of
+      this, the pilot wants to change aircraft settings in the performance
+      database on the FMS. On the INIT page, the pilot...
+    explanation: ""
+    options:
+      - id: OS6LXQLE6
+        text: can select the sub-menu of the performance database and can whatever data
+          they think is needed.
+        correct: false
+        why: ""
+      - id: OWXWTA741
+        text: can select the MEL items that are unserviceable and the FMS will take this
+          into account.
+        correct: false
+        why: ""
+      - id: O4U8FF9VC
+        text: can only confirm the current aircraft model and type.
+        correct: true
+        why: ""
+      - id: OPTTZDMBQ
+        text: can only change parameters related to the fuel consumption.
+        correct: false
+        why: ""
+- id: QQNIKIYR
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225648
+    - BGS-221892
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.02
+  template:
+    type: multiple-correct
+    question: Which of the following are part of an FMS CDU (Control Display Unit)
+    explanation: ""
+    options:
+      - text: Printer
+        correct: false
+        why: ""
+      - text: Display
+        correct: true
+        why: ""
+      - text: Line select keys
+        correct: true
+        why: ""
+      - text: Circuit breaker
+        correct: false
+        why: ""
+      - text: Function and execute keys.
+        correct: true
+        why: ""
+      - text: Alphanumeric and miscellaneous keys
+        correct: true
+        why: ""
+- id: QQSURCCM
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226915
+    - AVEXAM-89334
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.07
+  template:
+    type: simple
+    question: Can GPS position be supplied to FMS?
+    explanation: ""
+    options:
+      - id: OCTTTMPAT
+        text: Yes, but only if the signal is calibrated with caution.
+        correct: false
+        why: ""
+      - id: OJAACJSX8
+        text: Yes, it’s one of the primary position information sources.
+        correct: true
+        why: ""
+      - id: OW2KRZ4I7
+        text: No, only IRS or INS position information is used.
+        correct: false
+        why: ""
+      - id: OWNG2NAXB
+        text: No, GPS position is not accurate enough.
+        correct: false
+        why: ""
+- id: QR4VPWD9I
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228927
+    - AVEXAM-9982
+    - BGS-220631
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.02
+  template:
+    type: simple
+    question: 'The "overfly" symbol related to a waypoint on an FMS page indicates that:'
+    explanation: ""
+    options:
+      - id: OU8UGRRFE
+        text: the aircraft is required to pass directly over this waypoint.
+        correct: true
+        why: ""
+      - id: OSAA4Q3ZT
+        text: time estimate is given for this waypoint.
+        correct: false
+        why: ""
+      - id: O7N3QHKIL
+        text: turn anticipation is permitted.
+        correct: false
+        why: ""
+      - id: OWCSSGTJX
+        text: fuel prediction is given for this waypoint.
+        correct: false
+        why: ""
+- id: QRHUFOES
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226091
+    - AVEXAM-55621
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.03
+  template:
+    type: simple
+    question: How is the data inserted in the MCDU displayed?
+    explanation: ""
+    options:
+      - id: OSAVCLDEW
+        text: It will be shown as a green text on the Navigation Display (ND).
+        correct: false
+        why: ""
+      - id: OD5SMQ4XX
+        text: It will be shown as a white text on the Primary Flight Display (PFD).
+        correct: false
+        why: ""
+      - id: OHHBXKMGM
+        text: It will be displayed as white text in the scratchpad.
+        correct: true
+        why: ""
+      - id: O2G4GIF3N
+        text: It will be shown as a magenta line.
+        correct: false
+        why: ""
+- id: QRIZ66FUZ
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223913
+    - AVEXAM-8422
+    - ATPLGS-106664
+    - ATPLGS-106667
+    - ATPLGS-106666
+    - ATPLGS-106668
+    - ATPLGS-106662
+    - AVEXAM-58986
+    - BGS-220641
+    - AVEXAM-38575
+    - ATPLGS-106661
+    - AVEXAM-63666
+    - BGS-220642
+    - AVEXAM-74363
+    - AVEXAM-22263
+    - ATPLGS-106663
+    - ATPLQ-224413
+    - AVEXAM-96591
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.01
+  template:
+    type: multiple-correct
+    question: "The FMS FLIGHT PLAN or LEG page displays the following parameters
+      relative to the flight plan legs or waypoints:"
+    explanation: ""
+    options:
+      - text: – track
+        correct: true
+        why: ""
+      - text: – magnetic variation
+        correct: false
+        why: ""
+      - text: – waypoint elevation
+        correct: false
+        why: ""
+      - text: – speed.
+        correct: true
+        why: ""
+      - text: – distance
+        correct: true
+        why: ""
+      - text: – altitude constraint or prediction
+        correct: true
+        why: ""
+- id: QRJOOJQQ
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224223
+    - AVEXAM-47923
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.09
+  template:
+    type: simple
+    question: What is the Required Navigation Performance (RNP) based on?
+    explanation: ""
+    options:
+      - id: ORF0GSO7F
+        text: The accuracy of commercially available Inertial Navigation Systems.
+        correct: false
+        why: ""
+      - id: OC8UCIXZY
+        text: The horizontal position accuracy to be achieved within an airspace.
+        correct: true
+        why: ""
+      - id: OILMN85F0
+        text: The number of available flight levels within the airspace.
+        correct: false
+        why: ""
+      - id: O9XXEXUZE
+        text: The number of satellites available to perform RAIM.
+        correct: false
+        why: ""
+- id: QRQVKMVI
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223677
+    - BGS-221901
+    - AVEXAM-88853
+    - AVEXAM-55918
+    - ATPLGS-628397
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.03
+  template:
+    type: simple
+    question: One FMS is in disagreement with another, what happens?
+    explanation: ""
+    options:
+      - id: O3KTAESHJ
+        text: FMS will show an alert message.
+        correct: true
+        why: ""
+      - id: OXD4N83WC
+        text: The correct FMS overrides the faulty one automatically.
+        correct: false
+        why: ""
+      - id: OEBJSZFRT
+        text: The FMS shuts down automatically, forcing the pilots to navigate without
+          it.
+        correct: false
+        why: ""
+      - id: OEOCHFS5E
+        text: Nothing, the FMS will continue as normal with frequent cross-checks.
+        correct: false
+        why: ""
+- id: QRZMFMFCI
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222688
+    - BGS-222267
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.04
+  template:
+    type: simple
+    question: On the CDU of an FMS, the message "Insufficient Fuel" is displayed if…
+    explanation: ""
+    options:
+      - id: OEKJBF6LB
+        text: the calculated estimated fuel at the destination airport is less than the
+          fuel reserve value entered.
+        correct: true
+        why: ""
+      - id: OMJUETQXN
+        text: too little fuel is on board for diversion when the flight crew initiates a
+          go-around procedure.
+        correct: false
+        why: ""
+      - id: OTO0QCNWA
+        text: the fuel quantity falls to 25 % of the total capacity of the fuel tanks.
+        correct: false
+        why: ""
+      - id: OEUBQW7MU
+        text: the refuelling process on the ground is stopped before the required amount
+          of fuel is on board.
+        correct: false
+        why: ""
+- id: QRZMLCQF
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229412
+    - AVEXAM-7028
+    - BGS-221489
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.05
+  template:
+    type: simple
+    question: After an approach at your destination, the weather is found to be
+      below limits, and you decide to divert to your alternate aerodrome. During
+      initial climb you notice that the leading-edge devices are not completely
+      retracted. After completing all necessary actions to deal with this
+      abnormal condition, you check the FMS for ETA and fuel remaining at the
+      diversion aerodrome. Based on the above, you can..
+    explanation: ""
+    options:
+      - id: OJ4MR1OFY
+        text: Use both the FMS time and fuel predictions.
+        correct: false
+        why: ""
+      - id: OPFVML4HR
+        text: NOT use any of the FMS time or fuel predictions.
+        correct: false
+        why: ""
+      - id: OTT5SNAZA
+        text: NOT use the FMS time predictions, but you can use the FMS fuel
+          predictions.
+        correct: false
+        why: ""
+      - id: OVNJ9ROTD
+        text: Use the FMS time predictions, but you can NOT use the fuel predictions.
+        correct: true
+        why: ""
+- id: QSFPSKQR
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221773
+    - BGS-220622
+    - AVEXAM-9329
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.05
+  template:
+    type: simple
+    question: "Concerning the FMS, entering a cost index of zero:"
+    explanation: ""
+    options:
+      - id: OIZF4BOW5
+        text: does not influence fuel consumption.
+        correct: false
+        why: ""
+      - id: OWPYOKR1Z
+        text: results in maximum trip fuel.
+        correct: false
+        why: ""
+      - id: OOKSA3WKA
+        text: does not influence the FMS cruising speed.
+        correct: false
+        why: ""
+      - id: O47GH4S43
+        text: results in minimum trip fuel.
+        correct: true
+        why: ""
+- id: QSRLIAQYL
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626561
+    - AVEXAM-28038
+    - BGS-620494
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+  template:
+    type: simple
+    question: "Concerning FMC databases:"
+    explanation: ""
+    options:
+      - id: OTZ85KXHU
+        text: only the performance database may be customized by the company.
+        correct: false
+        why: ""
+      - id: ODXSU3W0W
+        text: the navigation database may be customized for the specific airline
+          operations.
+        correct: true
+        why: ""
+      - id: OVRBTH5QJ
+        text: only the navigation database may be customized by the company’s cost index
+          strategy.
+        correct: false
+        why: ""
+      - id: OTA26GKAH
+        text: company database and FMC databases can not be used at the same time.
+        correct: false
+        why: ""
+- id: QSSHOIZL
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228022
+    - AVEXAM-29624
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.03
+  template:
+    type: simple
+    question: What information must the pilots input/check with regards to the FMS
+      before take-off?
+    explanation: ""
+    options:
+      - id: OLOFGF2EP
+        text: Input data from the load sheet.
+        correct: true
+        why: ""
+      - id: OBT4IHTI8
+        text: Destination weather input.
+        correct: false
+        why: ""
+      - id: OGSZJRFMW
+        text: Ensure the performance database is up to date.
+        correct: false
+        why: ""
+      - id: OHNJBBIE9
+        text: Input the alternate airport routing.
+        correct: false
+        why: ""
+- id: QSZHPSVQL
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622958
+    - ATPLGS-124629
+    - BGS-620485
+    - AVEXAM-10343
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+  template:
+    type: simple
+    question: "On modern passenger aircraft, the navigation data base usually contains:"
+    explanation: ""
+    options:
+      - id: OBNIABHZN
+        text: ATC frequencies.
+        correct: false
+        why: ""
+      - id: OJVTQPQTL
+        text: aircraft performance data.
+        correct: false
+        why: ""
+      - id: OV2QPBXUU
+        text: airport reference data.
+        correct: true
+        why: ""
+      - id: OTDYAY8DN
+        text: obstacle altitudes.
+        correct: false
+        why: ""
+- id: QSZQQJPLA
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226117
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.02
+  template:
+    type: simple
+    question: While preparing the FMGS for the first flight of the day, the pilots
+      notice that the navigation database is out of date. What should they do?
+    explanation: ""
+    options:
+      - id: OF3W3RUAS
+        text: Download the up to date database via ACARS and select it.
+        correct: false
+        why: ""
+      - id: O9WXAPLSR
+        text: Use the current database.
+        correct: false
+        why: ""
+      - id: OPYWSTXGN
+        text: Download a valid database from EFB and select it.
+        correct: false
+        why: ""
+      - id: O6CZZ7QO2
+        text: Select the valid database.
+        correct: true
+        why: ""
+- id: QTCRXZUQ
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226628
+    - AVEXAM-65432
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.03
+  template:
+    type: simple
+    question: >-
+      An aircraft is equipped with a dual FMS configuration. through their
+      Multifunction Control and Display Unit (MCDU) Soon after, the crew
+      realises that those data are NOT shown on the cross-side MCDU, and the PM
+      reads an alerting message concerning the operational mode of the FMSs.
+
+
+      The FMS operate in (1) \_\_\_\_\_ mode, there is a problem with data
+      transferring over the (2) \_\_\_\_\_ bus, and each MCDU communicates only
+      with the (3) \_\_\_\_\_ FMS.
+    explanation: ""
+    options:
+      - id: OLPMAMGRP
+        text: (1) dual; (2) performance data; (3) cross-side
+        correct: false
+        why: ""
+      - id: ONOZ069G3
+        text: (1) independent; (2) navigation data; (3) cross-side
+        correct: false
+        why: ""
+      - id: OQ7RUBNNP
+        text: (1) single; (2) flight plan data; (3) on-side
+        correct: false
+        why: ""
+      - id: OKOGLB3OB
+        text: (1) independent; (2) cross-talk; (3) on-side
+        correct: true
+        why: ""
+- id: QTOSELV0D
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224463
+    - ATPLGS-627840
+    - BGS-222115
+    - AVEXAM-74288
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.09
+  template:
+    type: simple
+    question: During a loss of GPS signal, the FMS position..
+    explanation: ""
+    options:
+      - id: OTO9Z7TMG
+        text: will remain stable because GPS is only a secondary sensor for normal
+          operations.
+        correct: false
+        why: ""
+      - id: OKGMRGFYB
+        text: may deviate from the actual position.
+        correct: true
+        why: ""
+      - id: OHYUYDYNH
+        text: will be completely reset.
+        correct: false
+        why: ""
+      - id: OTPU2XVJ3
+        text: will be calculated using the data from the current navigation database.
+        correct: false
+        why: ""
+- id: QTPENZGW
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222472
+    - AVEXAM-69552
+    - BGS-221305
+    - ATPLGS-127562
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.05
+  template:
+    type: simple
+    question: The FMS Cost Index is used to adapt the
+    explanation: ""
+    options:
+      - id: ODCCVL5G0
+        text: take-off thrust to the Outside Air Temperature.
+        correct: false
+        why: ""
+      - id: OYYRLSLED
+        text: flight path to the direct operating cost.
+        correct: true
+        why: ""
+      - id: OF5CHOXY0
+        text: Specific Fuel Consumption to the fuel density.
+        correct: false
+        why: ""
+      - id: OJO9IXMIH
+        text: performance index to the actual wind.
+        correct: false
+        why: ""
+- id: QTSGZR8TL
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226573
+    - BGS-221636
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.01
+  template:
+    type: multiple-correct
+    question: Which of the following data is typically uploaded into the performance
+      database of an FMS?
+    explanation: ""
+    options:
+      - text: SIDs and STARs
+        correct: false
+        why: ""
+      - text: Aircraft drag characteristics
+        correct: true
+        why: ""
+      - text: Maximum and minimum speeds
+        correct: true
+        why: ""
+      - text: Company routes
+        correct: false
+        why: ""
+      - text: Engine characteristics
+        correct: true
+        why: ""
+- id: QTVQOSYL
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-626010
+    - BGS-221567
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.07
+  template:
+    type: simple
+    question: Sources of navigation data outputs of the FMC that are displayed on an
+      EFIS are..
+    explanation: ""
+    options:
+      - id: OXPPQHW8O
+        text: IRS, AWR, and navigation radios.
+        correct: false
+        why: ""
+      - id: OEWYJT8VR
+        text: IRS, navigation radios, and TCAS.
+        correct: false
+        why: ""
+      - id: OTEHYXBJY
+        text: GPS, AWR, and navigation radios.
+        correct: false
+        why: ""
+      - id: OHZXQL1NP
+        text: navigation radios, GPS, and IRS.
+        correct: true
+        why: ""
+- id: QTZZBZIO
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228599
+    - AVEXAM-97370
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.03
+  template:
+    type: simple
+    question: Is it possible for the flight crew to change data in the performance
+      database?
+    explanation: ""
+    options:
+      - id: OLAVLFHAN
+        text: No, it can only be done by maintenance.
+        correct: true
+        why: ""
+      - id: OL2I74H9K
+        text: Yes, it can only change engine thrust rating.
+        correct: false
+        why: ""
+      - id: O9TPJWMCK
+        text: Yes, it can only change the fuel consumption.
+        correct: false
+        why: ""
+      - id: OFCNLM8FJ
+        text: No, because the performance database that can be accessed by the flight
+          crew.
+        correct: false
+        why: ""
+- id: QUFFIYOUL
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227627
+    - ATPLGS-628049
+    - BGS-221576
+    - AVEXAM-79080
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.01
+  template:
+    type: simple
+    question: What does the FMS compute during normal LNAV mode?
+    explanation: ""
+    options:
+      - id: OF3H3BXVG
+        text: The great circle track between two or more waypoints, based on IRS, VOR,
+          DME and GNSS information.
+        correct: true
+        why: ""
+      - id: O0T2JH2VH
+        text: The optimum vertical flight profile, taking into account efficient fuel
+          consumption based on the cost index.
+        correct: false
+        why: ""
+      - id: OE8VND9GP
+        text: The altitude restrictions of the airspace above, and the minimum crossing
+          altitude of a waypoint.
+        correct: false
+        why: ""
+      - id: O4LRHFGXT
+        text: The lateral flight path with regard to the theoretical performance of the
+          aircraft from the performance database.
+        correct: false
+        why: ""
+- id: QVGYB9VFM
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228341
+    - AVEXAM-9959
+    - BGS-221713
+  annexes: []
+  learningObjectives:
+    - 022.11.04.01.01
+  template:
+    type: simple
+    question: "The purpose of a CDU/MCDU is:"
+    explanation: ""
+    options:
+      - id: OLHVNVQ8A
+        text: To engage or disengage the aircraft APU and monitor its status.
+        correct: false
+        why: ""
+      - id: OQJT1DGWV
+        text: To engage the alignment procedure for the INS/IRS and to switch between
+          NAV mode and ATT mode.
+        correct: false
+        why: ""
+      - id: OZCUXTJNE
+        text: To extract information stored in or processed by the FMS and load new or
+          updated information into the FMS.
+        correct: true
+        why: ""
+      - id: OAV8CGZVO
+        text: To engage or disengage the autopilot, set different modes, and choose
+          between armed modes and engaged modes.
+        correct: false
+        why: ""
+- id: QVHVAZXE
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223441
+    - BGS-220638
+    - AVEXAM-92047
+    - ATPLGS-120645
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.01
+  template:
+    type: simple
+    question: "The FMS cross track (XTK) is:"
+    explanation: ""
+    options:
+      - id: OC2RVGI69
+        text: the abeam distance error, to the left or right from the desired flight
+          plan leg to the aircraft position.
+        correct: true
+        why: ""
+      - id: OY0P5CDTJ
+        text: the distance error between the FMS computed position and the IRS computed
+          position.
+        correct: false
+        why: ""
+      - id: OVMJ96ZUP
+        text: the distance error between the FMS computed position and the GPS computed
+          position.
+        correct: false
+        why: ""
+      - id: OAQRYRPXA
+        text: the angular distance error, to the left or right from the desired track
+          (DT) to the aircraft track (TK).
+        correct: false
+        why: ""
+- id: QVOVQJJN
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221604
+    - ATPLGS-625732
+    - AVEXAM-19846
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.02
+  template:
+    type: simple
+    question: >-
+      With regard to a dual Flight Management System (FMS), which statement is
+      correct?
+
+
+      FMC = Flight Management Computer
+    explanation: ""
+    options:
+      - id: OG0IB3IQ1
+        text: In 'Single Mode' both FMCs are decoupled, and there is zero cross-checking
+          between them.
+        correct: false
+        why: ""
+      - id: OSLJFOVLV
+        text: In 'Independent Mode' both FMCs are decoupled, and there is zero
+          cross-checking between them.
+        correct: true
+        why: ""
+      - id: O6CE281HA
+        text: Both FMS independently process the respective pilot’s inputs in “dual
+          mode”, and cross-checking between them does not occur.
+        correct: false
+        why: ""
+      - id: OT15EIKWU
+        text: In 'Dual Mode' both FMCs independently process the pilots' inputs, there
+          is zero cross-checking between the FMCs.
+        correct: false
+        why: ""
+- id: QVPPOGEU
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228156
+    - BGS-222490
+    - AVEXAM-82413
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.02
+  template:
+    type: simple
+    question: >-
+      The FMS navigation database is updated (1) \_\_\_\_\_, loaded (2)
+      \_\_\_\_\_ and activated (3) \_\_\_\_\_.
+
+
+      The combination that completes the sentence is:
+    explanation: ""
+    options:
+      - id: OY4Q0UUWS
+        text: (1) manually; (2) manually; (3) manually
+        correct: true
+        why: ""
+      - id: OLD5H3HMM
+        text: (1) automatically; (2) manually; (3) automatically
+        correct: false
+        why: ""
+      - id: OCR7XHTUA
+        text: (1) manually; (2) automatically; (3) manually
+        correct: false
+        why: ""
+      - id: OOUFCUK4S
+        text: (1) automatically; (2) automatically; (3) manually
+        correct: false
+        why: ""
+- id: QVROOCMN
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227171
+    - BGS-220654
+    - AVEXAM-54151
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.04
+  template:
+    type: simple
+    question: "The FMS vertical navigation management is generally performed based on:"
+    explanation: ""
+    options:
+      - id: OJXVFHMYI
+        text: the GPS altitude computed by the GPS receiver.
+        correct: false
+        why: ""
+      - id: OQYMSLGYO
+        text: the geometric altitude input from the Terrain Awareness and Warning System
+          (TAWS).
+        correct: false
+        why: ""
+      - id: OFNTVIJLD
+        text: the baro altitude input from the ADC.
+        correct: true
+        why: ""
+      - id: OB8J1FY6M
+        text: a mix of baro and GPS altitudes.
+        correct: false
+        why: ""
+- id: QWQHCOKX3
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226736
+    - BGS-221853
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.03
+  template:
+    type: simple
+    question: After the pilot has set up the FMS and inserted an initial fuel
+      quantity, the aircraft is still being refuelled. After refuelling, there's
+      a big difference between the actual fuel and the fuel quantity inserted
+      into the FMS. Which option is correct?
+    explanation: ""
+    options:
+      - id: OSYIDFFKW
+        text: The calculations for the flight will be wrong and can only be corrected by
+          re-initialising the FMS.
+        correct: false
+        why: ""
+      - id: OJWEO5M6Z
+        text: A significant difference between the measured and inserted values will
+          trigger an error caption.
+        correct: true
+        why: ""
+      - id: OJWBTU0AR
+        text: Since the fuel quantity is critical data, the FMS computer will freeze and
+          stop to calculate VNAV and LNAV data and must be reset.
+        correct: false
+        why: ""
+      - id: OX8Z3VTTQ
+        text: There is NO problem as the inserted quantity will be automatically updated
+          to the actual value.
+        correct: false
+        why: ""
+- id: QWXPBJSY
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227732
+    - AVEXAM-17169
+    - BGS-221611
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.04
+    - 022.11.02.01.05
+  template:
+    type: simple
+    question: "During initialisation of the FMS, the pilot selects the current
+      database. He/she enters the route and waypoints for the flight. After
+      being distracted during start-up, the pilot is confused and changes some
+      data. They also select the second navigation database of the FMS. This
+      is:"
+    explanation: ""
+    options:
+      - id: OQZW84CY3
+        text: NOT a problem. The route and waypoints remain active.
+        correct: false
+        why: ""
+      - id: OMVGOVNXW
+        text: NOT possible as there only is one navigation database available for
+          selection.
+        correct: false
+        why: ""
+      - id: OCMOTLOZU
+        text: NOT a problem. The FMS will automatically switch to the current database.
+        correct: false
+        why: ""
+      - id: O5XIECH4M
+        text: A problem as it will erase the current route and waypoints already put in.
+        correct: true
+        why: ""
+- id: QWYKVAJY
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228274
+    - BGS-221348
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.09
+  template:
+    type: simple
+    question: What effect could the loss of GPS signal have on the FMS?
+    explanation: ""
+    options:
+      - id: ONAHTI1IK
+        text: None as it uses radio aids for position, not GPS.
+        correct: false
+        why: ""
+      - id: OXVJAYOWR
+        text: No effect.
+        correct: false
+        why: ""
+      - id: OMNY8NMGQ
+        text: The aircraft position could be different from what is calculated.
+        correct: true
+        why: ""
+      - id: OSKAHVG5G
+        text: It will use the IRS position.
+        correct: false
+        why: ""
+- id: QXS0I9XXO
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222410
+    - AVEXAM-12932
+    - BGS-221717
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.01
+  template:
+    type: simple
+    question: "The Flight Management Computer (FMC) contains two primary databases:
+      the navigation database and the performance database. What is the purpose
+      of the navigation database?"
+    explanation: ""
+    options:
+      - id: OUHJYR9MN
+        text: It contains data used to calculate predictions for fuel used and estimated
+          remaining fuel throughout a flight.
+        correct: false
+        why: ""
+      - id: OLL2RIJ8S
+        text: and enables the aircraft to follow
+        correct: false
+        why: ""
+      - id: O6OLIWJMS
+        text: It integrates FMS positions with navigation data to provide navigational
+          guidance during flight.
+        correct: false
+        why: ""
+      - id: OV818KCYM
+        text: It stores route and instrument flight procedure information in the
+          appropriate data format.
+        correct: true
+        why: ""
+- id: QXTAZV8SG
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226891
+    - ATPLGS-627845
+    - AVEXAM-93512
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.04
+  template:
+    type: multiple-correct
+    question: What are the systems which provide input data into the FMS?
+    explanation: ""
+    options:
+      - text: AFCS
+        correct: false
+        why: ""
+      - text: IRS
+        correct: true
+        why: ""
+      - text: ADC
+        correct: true
+        why: ""
+      - text: ATS
+        correct: false
+        why: ""
+- id: QXXGGEVE
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227319
+    - AVEXAM-39305
+    - BGS-221902
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.05
+  template:
+    type: simple
+    question: The flight crew accidentally changes the active navigation database
+      with the standby database. What is the main threat that may arise from
+      such action?
+    explanation: ""
+    options:
+      - id: OK39GCA88
+        text: The only threat is the computed airport approaches, however, the flight
+          crew can refer to the paper approach charts always present onboard the
+          aircraft.
+        correct: false
+        why: ""
+      - id: OIKDRHQJD
+        text: Nothing, it is impossible to change the navigation database in flight.
+        correct: false
+        why: ""
+      - id: OECQCWNDD
+        text: The main threat is related to the loss of magnetic variation.
+        correct: false
+        why: ""
+      - id: OOPNP1CEG
+        text: The aircraft may continue flying along an incorrect flight plan route
+          leading to a loss of separation with other traffic.
+        correct: true
+        why: ""
+- id: QXZXOLEY
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221586
+    - BGS-220659
+    - AVEXAM-67498
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.01
+  template:
+    type: multiple-correct
+    question: "The role of the FMS is to:"
+    explanation: ""
+    options:
+      - text: – aid the crew with navigation
+        correct: true
+        why: ""
+      - text: – shut down the engine in case of a malfunction
+        correct: false
+        why: ""
+      - text: – automatically avoid conflicting traffic when autopilot engaged
+        correct: false
+        why: ""
+      - text: – reduce crew workload
+        correct: true
+        why: ""
+      - text: – aid fuel efficiency
+        correct: true
+        why: ""
+- id: QYFI6NXQM
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229800
+    - AVEXAM-89426
+    - BGS-220639
+  annexes: []
+  learningObjectives:
+    - 022.11.03.01.02
+  template:
+    type: multiple-correct
+    question: "The FMS enables to fly an optimum flight profile. For this, the FMC
+      (Flight Management Computer) uses:"
+    explanation: ""
+    options:
+      - text: – flight-crew entered flight plan data
+        correct: true
+        why: ""
+      - text: – data from ADC
+        correct: true
+        why: ""
+      - text: – aircraft position
+        correct: true
+        why: ""
+      - text: – a memorised relief world data base
+        correct: false
+        why: ""
+      - text: – data from the FMC navigation data base.
+        correct: true
+        why: ""
+- id: QYKMJVIX
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223658
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.03
+  template:
+    type: simple
+    question: What should be done in case of failure of one FMC unit?
+    explanation: ""
+    options:
+      - id: OUJX5PNEW
+        text: There’s a quick recovery procedure of the failed FMC in the QRH.
+        correct: false
+        why: ""
+      - id: O3OLAMLE0
+        text: The failed FMC is not usable anymore for the remainder of the flight.
+        correct: false
+        why: ""
+      - id: OTK6HDQHO
+        text: The airline MOC will give you instructions via ACARS.
+        correct: false
+        why: ""
+      - id: OI8GLQHRH
+        text: The failed FMS data should be replaced by the data from the operative FMS.
+        correct: true
+        why: ""
+- id: QYPMYPEBK
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221245
+    - BGS-222109
+    - BGS-221417
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.02
+  template:
+    type: simple
+    question: "A new data base should be downloaded to the Flight Management System
+      (FMS) on a cycle of every:"
+    explanation: ""
+    options:
+      - id: OFQBKFONL
+        text: 30 days.
+        correct: false
+        why: ""
+      - id: OIK26BQ1F
+        text: 14 days.
+        correct: false
+        why: ""
+      - id: OC2AZKBLG
+        text: 90 days.
+        correct: false
+        why: ""
+      - id: OGHTTOORG
+        text: 28 days.
+        correct: true
+        why: ""
+- id: QZJKOKQA
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221184
+    - AVEXAM-22055
+    - ATPLGS-120695
+  annexes: []
+  learningObjectives:
+    - 022.11.02.01.02
+  template:
+    type: simple
+    question: "The duration of a FMS navigation database loaded before expiring is:"
+    explanation: ""
+    options:
+      - id: O7JQOV8OE
+        text: 28 days.
+        correct: true
+        why: ""
+      - id: O1O27RYKG
+        text: 2 months.
+        correct: false
+        why: ""
+      - id: OYTXBLEOT
+        text: 15 days.
+        correct: false
+        why: ""
+      - id: ONOYUS7CA
+        text: 3 months.
+        correct: false
+        why: ""
+- id: QZPMKGHS
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224314
+    - ATPLGS-120568
+    - BGS-220621
+    - AVEXAM-27480
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.05
+  template:
+    type: simple
+    question: "Concerning the FMS, entering a cost index of zero results in:"
+    explanation: ""
+    options:
+      - id: OFTWHOBFO
+        text: maximum range airspeed.
+        correct: true
+        why: ""
+      - id: OAHTXCTJU
+        text: minimum airspeed.
+        correct: false
+        why: ""
+      - id: OVL6E1JG8
+        text: maximum cruising airspeed.
+        correct: false
+        why: ""
+      - id: OPREQXTCS
+        text: minimum range airspeed.
+        correct: false
+        why: ""
+- id: QZPUCPMV
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229673
+    - BGS-221724
+    - ATPLGS-628406
+    - AVEXAM-61088
+  annexes: []
+  learningObjectives:
+    - 022.11.01.01.03
+  template:
+    type: multiple-correct
+    question: An aircraft with a dual FMS configuration is ready to descend,
+      according to the profile of an instrument approach procedure. An amber
+      message is generated on the Crew Alerting System (CAS) concerning the
+      failure of No.1 (Flight Management Computer FMC1). Following the failure
+      of FMC1, which of the following are correct?
+    explanation: ""
+    options:
+      - text: Both FMS units operate in independent mode (degraded operation)
+        correct: false
+        why: ""
+      - text: FMS2 operates in single mode, while FMS1 has failed
+        correct: true
+        why: ""
+      - text: FMS2 computations are unreliable due to faulty data sent from FMS1
+        correct: false
+        why: ""
+      - text: The crew shall revert to other navigational sources, if required.
+        correct: true
+        why: ""
+- id: QZUUZCJES
+  docId: "022.11"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221500
+    - BGS-222101
+    - ATPLGS-127559
+  annexes: []
+  learningObjectives:
+    - 022.11.02.02.01
+    - 022.11.02.02.03
+  template:
+    type: simple
+    question: The aircraft database of the Flight Management Computer is updated
+    explanation: ""
+    options:
+      - id: OIEF2YEWU
+        text: manually every month.
+        correct: false
+        why: ""
+      - id: OPYI2OZLU
+        text: automatically after touchdown.
+        correct: false
+        why: ""
+      - id: OAWRI63J7
+        text: continuously during flight.
+        correct: false
+        why: ""
+      - id: OU3KOB5JJ
+        text: after a software update.
+        correct: true
+        why: ""

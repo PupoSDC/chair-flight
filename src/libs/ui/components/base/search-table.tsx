@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useMediaQuery } from "../../hooks/use-media-query";
 import { cn } from "../../utils/cn";
-import { SearchHighlightProvider } from "./search-highlight";
+import { SearchHighlightContext } from "./search-highlight-context";
 import type { ReactNode } from "react";
 
 export type SearchTableColumn<T> = {
@@ -45,15 +45,21 @@ export const SearchTable = <T extends { id: string }>({
   useEffect(loadMoreIfNeeded);
 
   return (
-    <SearchHighlightProvider value={correctedQuery ?? query}>
+    <SearchHighlightContext value={correctedQuery ?? query}>
       <div className="min-h-0 flex-1 px-3 pb-3">
         <div
           ref={scrollRef}
           onScroll={loadMoreIfNeeded}
-          className="h-full overflow-auto rounded-lg border border-rule bg-paper"
+          className={cn(
+            "h-full overflow-auto rounded-lg border border-rule bg-paper",
+          )}
         >
           {correctedQuery && (
-            <p className="m-0 border-b border-rule px-3 py-2 text-xs text-muted">
+            <p
+              className={cn(
+                "m-0 border-b border-rule px-3 py-2 text-xs text-muted",
+              )}
+            >
               No results for &ldquo;{query}&rdquo;. Showing results for{" "}
               <strong className="text-ink">{correctedQuery}</strong>.
             </p>
@@ -62,7 +68,11 @@ export const SearchTable = <T extends { id: string }>({
             <p className="p-8 text-center text-sm text-muted">{emptyMessage}</p>
           )}
           {items.length > 0 && isDesktop && (
-            <table className="w-full border-separate border-spacing-0 text-[13px]">
+            <table
+              className={cn(
+                "w-full border-separate border-spacing-0 text-[13px]",
+              )}
+            >
               <thead>
                 <tr>
                   {columns.map((column) => (
@@ -119,6 +129,6 @@ export const SearchTable = <T extends { id: string }>({
           )}
         </div>
       </div>
-    </SearchHighlightProvider>
+    </SearchHighlightContext>
   );
 };

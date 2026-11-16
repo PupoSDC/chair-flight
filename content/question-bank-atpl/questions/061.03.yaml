@@ -1,0 +1,4000 @@
+- id: Q1SFIPPTE
+  docId: "061.03"
+  relatedQuestions:
+    - QX6BTISKG
+  externalIds:
+    - ATPLQ-613397
+    - ATPLGS-625634
+    - AVEXAM-92225
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: |-
+      Two waypoints lie on the same parallel of latitude:
+
+      - Waypoint X: {{lat_d}}°{{lat_m}}'N, {{lon_a_d}}°{{lon_a_m}}'E
+      - Waypoint Y: {{lat_d}}°{{lat_m}}'N, {{lon_b_d}}°{{lon_b_m}}'W
+
+      What is the final great circle track at Y in °T?
+    variables:
+      - id: lat_d
+        label: Latitude, degrees
+        unit: °
+      - id: lat_m
+        label: Latitude, minutes
+        unit: "'"
+      - id: lon_a_d
+        label: Longitude of X, degrees
+        unit: °
+      - id: lon_a_m
+        label: Longitude of X, minutes
+        unit: "'"
+      - id: lon_b_d
+        label: Longitude of Y, degrees
+        unit: °
+      - id: lon_b_m
+        label: Longitude of Y, minutes
+        unit: "'"
+    answer:
+      formula: atan2(sin(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60))),
+        sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60) +
+        (lon_b_d + lon_b_m / 60))))) + 180
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: ((atan2(sin((0 - ((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m /
+          60)))), sin((lat_d + lat_m / 60)) * (1 - cos((0 - ((lon_a_d + lon_a_m
+          / 60) + (lon_b_d + lon_b_m / 60))))))) - 360 * floor((atan2(sin((0 -
+          ((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60)))), sin((lat_d +
+          lat_m / 60)) * (1 - cos((0 - ((lon_a_d + lon_a_m / 60) + (lon_b_d +
+          lon_b_m / 60))))))) / 360))
+      - id: d2
+        formula: 360 - (atan2(sin(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m /
+          60))), sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60)
+          + (lon_b_d + lon_b_m / 60))))) + 180)
+      - id: d3
+        formula: ((atan2(sin(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60))),
+          sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60) +
+          (lon_b_d + lon_b_m / 60)))))) - 360 * floor((atan2(sin(((lon_a_d +
+          lon_a_m / 60) + (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60))
+          * (1 - cos(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60)))))) /
+          360))
+      - id: d4
+        formula: "90"
+    presets:
+      - id: p1
+        values:
+          lat_d: 53
+          lat_m: 0
+          lon_a_d: 175
+          lon_a_m: 0
+          lon_b_d: 175
+          lon_b_m: 0
+      - id: p2
+        values:
+          lat_d: 58
+          lat_m: 30
+          lon_a_d: 160
+          lon_a_m: 0
+          lon_b_d: 170
+          lon_b_m: 0
+      - id: p3
+        values:
+          lat_d: 48
+          lat_m: 0
+          lon_a_d: 170
+          lon_a_m: 0
+          lon_b_d: 160
+          lon_b_m: 15
+    explanation: >-
+      The track changes along a great circle, so the final track at Y is the
+      direction of the great circle as it arrives at Y. It is the reciprocal of
+      the track from Y back towards X. The longitude difference across the date
+      line is found by adding the two longitudes, as one is east and one is
+      west.
+
+
+      **Solution**
+
+
+      Track from Y back towards X: {{= atan2(sin(((lon_a_d + lon_a_m / 60) +
+      (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d
+      + lon_a_m / 60) + (lon_b_d + lon_b_m / 60)))))}}°
+
+
+      {{f: atan2(sin(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60))),
+      sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60) + (lon_b_d
+      + lon_b_m / 60))))) + 180}} = {{n: atan2(sin(((lon_a_d + lon_a_m / 60) +
+      (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d
+      + lon_a_m / 60) + (lon_b_d + lon_b_m / 60))))) + 180}} = **{{answer}}°T**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the initial track at X is used instead of the final track
+      at Y.
+
+      - **{{d2}}°**: the reciprocal of the correct track is used.
+
+      - **{{d3}}°**: the direction back towards X is used.
+
+      - **{{d4}}°**: due east (the rhumb line track along a parallel) is used
+      instead of the great circle track.
+- id: Q2Z1XQKCS
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615508
+    - ATPLGS-625400
+    - BGS-610033
+    - AVEXAM-28021
+  annexes: []
+  learningObjectives:
+    - 061.03.02.01.01
+  template:
+    type: calculation
+    question: >-
+      In the Northern Hemisphere the rhumb line track from position A to
+      position B is {{track}}°. The convergency is {{conv}}° and the difference
+      in longitude is {{dlon}}°.
+
+
+      What is the initial rhumb line track from B to A?
+    variables:
+      - id: track
+        label: Rhumb line track from A to B
+        unit: °
+      - id: conv
+        label: Convergency
+        unit: °
+      - id: dlon
+        label: Difference in longitude
+        unit: °
+    answer:
+      formula: track - 180
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: track - 180 + conv
+      - id: d2
+        formula: track - 180 + conv / 2
+      - id: d3
+        formula: track - 180 - conv / 2
+      - id: d4
+        formula: track - 180 - conv
+    presets:
+      - id: p1
+        values:
+          track: 230
+          conv: 6
+          dlon: 10
+      - id: p2
+        values:
+          track: 310
+          conv: 4
+          dlon: 15
+      - id: p3
+        values:
+          track: 200
+          conv: 2
+          dlon: 5
+    explanation: >-
+      A rhumb line has one constant track. The track back from B to A is
+      therefore the reciprocal of the track from A to B, which is 180 degrees
+      different. The convergency only matters for great circles and does not
+      change a rhumb line track.
+
+
+      **Solution**
+
+
+      Reciprocal of {{track}}°: {{track}}° − 180° = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the convergency is added to the reciprocal.
+
+      - **{{d2}}°**: half the convergency is added.
+
+      - **{{d3}}°**: half the convergency is subtracted.
+
+      - **{{d4}}°**: the full convergency is subtracted.
+- id: Q2ZLJ8J0L
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617893
+    - ATPLGS-627955
+    - AVEXAM-6562
+    - BGS-611300
+    - ATPLGS-625479
+    - BGS-611594
+    - AVEXAM-40944
+  annexes: []
+  learningObjectives:
+    - 061.03.02.01.01
+  template:
+    type: simple
+    question: Two positions at the same latitude are marked on an aeronautical chart
+      and the meridians at those positions converge with an angle of 30°. The
+      effect of this convergence is that the true track of…
+    explanation: ""
+    options:
+      - id: OETVZGTOL
+        text: the great circle route between those two positions will change by 30°.
+        correct: false
+        why: ""
+      - id: OVYTJGQMB
+        text: the rhumb line route between those two positions will change by 30°.
+        correct: false
+        why: ""
+      - id: O56IDDOXX
+        text: the rhumb line and great circle route between those two positions will
+          differ by 30° at either position.
+        correct: false
+        why: ""
+      - id: OXESBLHZS
+        text: rhumb line track between both positions will be either 090º (T) or 270º
+          (T).
+        correct: true
+        why: ""
+- id: Q3KLN6DGP
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614379
+  annexes: []
+  learningObjectives:
+    - 061.03.03.01.01
+  template:
+    type: simple
+    question: The greatest difference between a Rhumb Line and a Great Circle track
+      may occur when there is…
+    explanation: ""
+    options:
+      - id: OPJK7WXYD
+        text: High change in longitude and high mean latitude.
+        correct: true
+        why: ""
+      - id: OUSUO5Y71
+        text: High change in longitude and high change in latitude.
+        correct: false
+        why: ""
+      - id: OKGB65SAN
+        text: High mean latitude and low mean longitude.
+        correct: false
+        why: ""
+      - id: OR9OVRFRX
+        text: Low change in longitude and low mean latitude.
+        correct: false
+        why: ""
+- id: Q3KVSXAEJ
+  docId: "061.03"
+  relatedQuestions:
+    - QAWGPLTE
+    - QBXBILBU
+  externalIds:
+    - ATPLQ-618623
+    - BGS-611452
+    - AVEXAM-61516
+    - AVEXAM-18863
+  annexes: []
+  learningObjectives:
+    - 061.04.02.04.02
+  template:
+    type: calculation
+    question: >-
+      Crossing the North Atlantic on a westbound track from position X to
+      position Y, which lies {{dlon}}° of longitude further west, the average
+      true track is {{avg}}°.
+
+
+      The Lambert chart has standard parallels at 30°N and 75°N.
+
+
+      What is the approximate true track of the straight line at X?
+    variables:
+      - id: avg
+        label: Average true track
+        unit: °
+      - id: dlon
+        label: Longitude difference
+        unit: °
+    answer:
+      formula: avg + dlon * sin((30 + 75) / 2) / 2
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: avg - dlon * sin((30 + 75) / 2) / 2
+      - id: d2
+        formula: avg
+      - id: d3
+        formula: avg + dlon * sin((30 + 75) / 2)
+      - id: d4
+        formula: avg + dlon / 2
+    presets:
+      - id: p1
+        values:
+          avg: 282.2
+          dlon: 10
+      - id: p2
+        values:
+          avg: 270
+          dlon: 20
+    explanation: >-
+      On a Lambert chart a straight line keeps a constant angle to the chart
+      grid, while the meridians converge. The track at the ends of the line
+      differs from the average track by half the convergency. Convergency is
+      approximately the longitude difference times the sine of the mean standard
+      parallel, here (30 + 75) / 2 = 52.5°.
+
+
+      **Solution**
+
+
+      - Convergency = {{dlon}}° × sin 52.5° = {{= dlon * sin((30 + 75) / 2)}}°
+
+      - Track at X = {{avg}}° + half the convergency = {{avg}}° + {{= dlon *
+      sin((30 + 75) / 2) / 2}}° = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: gives the track at Y, which has the opposite change.
+
+      - **{{d2}}°**: ignores the convergency.
+
+      - **{{d3}}°**: uses the full convergency instead of half of it.
+
+      - **{{d4}}°**: adds half the longitude difference in degrees instead of
+      the convergency.
+- id: Q67B8JGJS
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618579
+    - ATPLGS-124476
+    - BGS-611262
+    - ATPLGS-124475
+    - AVEXAM-46948
+    - BGS-611478
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.02
+  template:
+    type: simple
+    question: Which formula is used to calculate the convergency between two
+      positions relatively close to each other? Convergency = Difference in
+      longitude in..
+    explanation: ""
+    options:
+      - id: ODC0VFEF8
+        text: degrees x cos (mean latitude).
+        correct: false
+        why: ""
+      - id: OCCR5S4FQ
+        text: degrees x sin (mean latitude).
+        correct: true
+        why: ""
+      - id: OTLVC5DZT
+        text: minutes x sin (mean latitude).
+        correct: false
+        why: ""
+      - id: OQDTGIQWF
+        text: minutes x cos (mean latitude).
+        correct: false
+        why: ""
+- id: Q6JJOU3KO
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615302
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.02
+  template:
+    type: simple
+    question: >-
+      Consider the points A (40°S 173°E) and B (60°S 169°W). Which formula gives
+      the Earth convergence between these two positions?   
+       (Convergency = change in)
+    explanation: ""
+    options:
+      - id: OJMTLY8OS
+        text: longitude (18°) x sin (50°)
+        correct: true
+        why: ""
+      - id: OVZ4ENA5X
+        text: longitude (20°) x sin (40°)
+        correct: false
+        why: ""
+      - id: OGFTXLS0S
+        text: longitude (20°) x cos (171°)
+        correct: false
+        why: ""
+      - id: O0KYD5RZT
+        text: longitude (4°) x cos (60°)
+        correct: false
+        why: ""
+- id: Q8CRJUFZJ
+  docId: "061.03"
+  relatedQuestions:
+    - QVGAEEAE
+  externalIds:
+    - ATPLQ-615349
+    - ATPLQ-616233
+    - ATPLGS-625438
+    - ATPLGS-625353
+    - ATPLQ-613465
+    - ATPLGS-626203
+    - AVEXAM-3625
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: >-
+      Two positions are given in decimal degrees (north and east positive, south
+      and west negative):
+
+
+      - Position A: latitude {{lat1}}, longitude {{lon1}}
+
+      - Position B: latitude {{lat2}}, longitude {{lon2}}
+
+      - Rhumb line track from A to B: {{rhumb}}°
+
+
+      What is the initial true track of the great circle at A?
+    variables:
+      - id: lat1
+        label: Latitude of A
+        unit: °
+      - id: lon1
+        label: Longitude of A
+        unit: °
+      - id: lat2
+        label: Latitude of B
+        unit: °
+      - id: lon2
+        label: Longitude of B
+        unit: °
+      - id: rhumb
+        label: Rhumb line track
+        unit: °
+    answer:
+      formula: atan2(sin(lon2 - lon1) * cos(lat2), cos(lat1) * sin(lat2) - sin(lat1) *
+        cos(lat2) * cos(lon2 - lon1)) - 360 * floor(atan2(sin(lon2 - lon1) *
+        cos(lat2), cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(lon2 -
+        lon1)) / 360)
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: rhumb + (lon2 - lon1) * sin((lat1 + lat2) / 2) / 2
+      - id: d2
+        formula: rhumb
+      - id: d3
+        formula: rhumb - (lon2 - lon1) * sin((lat1 + lat2) / 2)
+      - id: d4
+        formula: rhumb + (lon2 - lon1) * sin((lat1 + lat2) / 2)
+    presets:
+      - id: p1
+        values:
+          lat1: 53.833333
+          lon1: 6.916667
+          lat2: 53
+          lon2: 15.666667
+          rhumb: 99
+      - id: p2
+        values:
+          lat1: -60
+          lon1: 11
+          lat2: -60
+          lon2: -9
+          rhumb: 270
+      - id: p3
+        values:
+          lat1: 40
+          lon1: -30
+          lat2: 45
+          lon2: -10
+          rhumb: 60
+    explanation: >-
+      A great circle leaves a point at a different angle from the rhumb line
+      between the same two points. The track at A follows exactly from the two
+      positions, using the spherical bearing formula. The rhumb track is only
+      given for context, and the great circle track differs from it by about
+      half the convergency.
+
+
+      **Solution**
+
+
+      The spherical bearing formula applied to the positions of A and B gives
+      **{{answer}}°**.
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: adds half the convergency to the rhumb track, which is the
+      wrong direction for this route.
+
+      - **{{d2}}°**: copies the rhumb line track, ignoring the convergence of
+      the meridians.
+
+      - **{{d3}}°**: subtracts the full convergency from the rhumb track.
+
+      - **{{d4}}°**: adds the full convergency to the rhumb track.
+- id: Q8GKQWOYW
+  docId: "061.03"
+  relatedQuestions:
+    - QCKISDZY
+  externalIds:
+    - ATPLQ-619612
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.03
+  template:
+    type: calculation
+    question: >-
+      Calculate the earth convergency between two positions, giving the answer
+      in degrees to two decimal places.
+
+
+      - Position A: {{ad}}°{{am}}' S, {{ald}}°{{alm}}' W
+
+      - Position B: {{bd}}°{{bm}}' S, {{bld}}°{{blm}}' E
+
+
+      What is the earth convergency for a straight line between A and B?
+    variables:
+      - id: ad
+        label: Latitude A
+        unit: °
+      - id: am
+        label: Latitude A minutes
+        unit: "'"
+      - id: ald
+        label: Longitude A
+        unit: °
+      - id: alm
+        label: Longitude A minutes
+        unit: "'"
+      - id: bd
+        label: Latitude B
+        unit: °
+      - id: bm
+        label: Latitude B minutes
+        unit: "'"
+      - id: bld
+        label: Longitude B
+        unit: °
+      - id: blm
+        label: Longitude B minutes
+        unit: "'"
+    answer:
+      formula: min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm / 60 + bld + blm
+        / 60)) * sin((ad + am / 60 + bd + bm / 60) / 2)
+      unit: °
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm / 60 + bld + blm
+          / 60)) * cos((ad + am / 60 + bd + bm / 60) / 2)
+      - id: d2
+        formula: min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm / 60 + bld + blm
+          / 60))
+      - id: d3
+        formula: (ald + alm / 60 + bld + blm / 60) * sin((ad + am / 60 + bd + bm / 60) /
+          2)
+      - id: d4
+        formula: min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm / 60 + bld + blm
+          / 60)) * sin((ad + am / 60 + bd + bm / 60) / 2) / 2
+    presets:
+      - id: p1
+        values:
+          ad: 37
+          am: 45
+          ald: 170
+          alm: 25
+          bd: 37
+          bm: 45
+          bld: 168
+          blm: 35
+      - id: p2
+        values:
+          ad: 40
+          am: 10
+          ald: 150
+          alm: 20
+          bd: 30
+          bm: 5
+          bld: 175
+          blm: 30
+    explanation: >-
+      Earth convergency is the angle between the meridians at the two positions.
+      It equals the longitude difference, taken the short way round the globe,
+      multiplied by the sine of the mean latitude.
+
+
+      **Solution**
+
+
+      Longitude difference (short way): {{= min(ald + alm / 60 + bld + blm / 60,
+      360 - (ald + alm / 60 + bld + blm / 60))}}°
+
+
+      Mean latitude: {{= (ad + am / 60 + bd + bm / 60) / 2}}°
+
+
+      Convergency: {{= min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm /
+      60 + bld + blm / 60)) * sin((ad + am / 60 + bd + bm / 60) / 2)}}° =
+      **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: uses the cosine of the mean latitude instead of the sine.
+
+      - **{{d2}}°**: forgets to multiply by the sine of the mean latitude.
+
+      - **{{d3}}°**: uses the long way round the globe for the longitude
+      difference.
+
+      - **{{d4}}°**: halves the result.
+- id: Q8MKPAQUS
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614976
+    - AVEXAM-92253
+    - BGS-610752
+  annexes: []
+  learningObjectives:
+    - 061.01.03.01.04
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: >-
+      Given the following information, which radial is the aircraft on?
+
+
+      - Initial magnetic track of the great circle from the aircraft to the VOR:
+      {{track}}°M
+
+      - Variation at the aircraft: {{var_ac}}°W
+
+      - Latitude of the aircraft: {{lat_ac}}°N
+
+      - Latitude of the VOR: {{lat_vor}}°N
+
+      - Variation at the VOR: {{var_vor}}°W
+
+      - Longitude difference between the aircraft and the VOR: {{dlon}}°
+
+
+      Which radial is the aircraft on?
+    variables:
+      - id: track
+        label: Initial magnetic track, aircraft to VOR
+        unit: °M
+      - id: var_ac
+        label: Variation at the aircraft (west)
+        unit: °W
+      - id: lat_ac
+        label: Latitude of the aircraft
+        unit: °N
+      - id: lat_vor
+        label: Latitude of the VOR
+        unit: °N
+      - id: var_vor
+        label: Variation at the VOR (west)
+        unit: °W
+      - id: dlon
+        label: Longitude difference
+        unit: °
+    answer:
+      formula: track - var_ac + 180 + dlon * sin((lat_ac + lat_vor) / 2) + var_vor
+      unit: radial
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: track
+      - id: d2
+        formula: track - var_ac + 180
+      - id: d3
+        formula: track + var_ac + 180 + var_vor
+      - id: d4
+        formula: track - var_ac + 180 - dlon * sin((lat_ac + lat_vor) / 2) + var_vor
+    presets:
+      - id: p1
+        values:
+          track: 168
+          var_ac: 21
+          lat_ac: 55
+          lat_vor: 50
+          var_vor: 19
+          dlon: 5
+      - id: p2
+        values:
+          track: 120
+          var_ac: 15
+          lat_ac: 45
+          lat_vor: 37
+          var_vor: 12
+          dlon: 4
+      - id: p3
+        values:
+          track: 150
+          var_ac: 18
+          lat_ac: 40
+          lat_vor: 32
+          var_vor: 14
+          dlon: 8
+    explanation: >-
+      The radial is the magnetic bearing of the aircraft from the VOR. The track
+      from the aircraft to the VOR is turned around to give the bearing back
+      from the VOR, a correction is made for the convergence of the meridians
+      between the two positions, and the result is converted to a magnetic
+      bearing using the variation at the VOR.
+
+
+      **Solution**
+
+
+      - Reversed true track: {{= track - var_ac + 180}}°T
+
+      - Convergence correction: {{n: dlon * sin((lat_ac + lat_vor) / 2)}}°
+
+      - Magnetic radial: {{f: track - var_ac + 180 + dlon * sin((lat_ac +
+      lat_vor) / 2) + var_vor}} = {{n: track - var_ac + 180 + dlon * sin((lat_ac
+      + lat_vor) / 2) + var_vor}} = **{{answer}} radial**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} radial**: uses the track from the aircraft to the VOR without
+      reversing it.
+
+      - **{{d2}} radial**: forgets the convergence correction and the variation
+      at the VOR.
+
+      - **{{d3}} radial**: adds the variation at the aircraft instead of taking
+      it away.
+
+      - **{{d4}} radial**: takes the convergence correction away instead of
+      adding it.
+- id: Q8NWLTDYU
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616823
+    - ATPLGS-124476
+    - ATPLGS-124475
+    - AVEXAM-46948
+    - BGS-611478
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.02
+  template:
+    type: simple
+    question: What is the formula used to calculate convergency between two
+      positions relatively close to each other? Convergency = Difference in..
+    explanation: ""
+    options:
+      - id: ORUYEP2RQ
+        text: longitude x sin (mean latitude)
+        correct: true
+        why: ""
+      - id: O5TTQVOAU
+        text: latitude x cos (mean longitude)
+        correct: false
+        why: ""
+      - id: OMSCSIF8W
+        text: latitude x sin (mean longitude)
+        correct: false
+        why: ""
+      - id: OJM1FW2S5
+        text: longitude x cos (mean latitude)
+        correct: false
+        why: ""
+- id: QAGZTXKY
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611865
+    - BGS-610158
+    - AVEXAM-97948
+  annexes: []
+  learningObjectives:
+    - 061.03.03.01.01
+  template:
+    type: simple
+    question: "You proceed along a great circle from point A to point B. The maximum
+      difference between your great circle track and the corresponding rhumb
+      line track will occur on:"
+    explanation: ""
+    options:
+      - id: OZBU6NECR
+        text: east-west tracks at high latitudes.
+        correct: true
+        why: ""
+      - id: OCTOJQ12Z
+        text: east-west tracks at low latitudes.
+        correct: false
+        why: ""
+      - id: OLU1SG3SD
+        text: north-south tracks at low latitudes.
+        correct: false
+        why: ""
+      - id: OHQT2FYBB
+        text: north-south tracks at high latitudes.
+        correct: false
+        why: ""
+- id: QAHUDVVX
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613180
+    - AVEXAM-55338
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.01
+  template:
+    type: simple
+    question: How many small circles can be drawn between any two points on a sphere?
+    explanation: ""
+    options:
+      - id: OKOQPF4OQ
+        text: Two.
+        correct: false
+        why: ""
+      - id: OAZQJ1QQ7
+        text: None.
+        correct: false
+        why: ""
+      - id: ORQ9SXOG2
+        text: An unlimited number.
+        correct: true
+        why: ""
+      - id: O6QVOUQTO
+        text: One.
+        correct: false
+        why: ""
+- id: QAIPAFDF
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617686
+    - AVEXAM-70581
+    - ATPLQ-619990
+    - AVEXAM-11679
+    - BGS-611671
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: >-
+      A pilot is planning a flight from position C to position D. Given the
+      following information (decimal degrees, north and east positive, south and
+      west negative):
+
+
+      - Position C: latitude {{lat_c}}, longitude {{lon_c}}
+
+      - Position D: latitude {{lat_d}}, longitude {{lon_d}}
+
+      - Great circle initial true track: {{gc}}°
+
+
+      What is the rhumb line true track between the two positions?
+    variables:
+      - id: lat_c
+        label: Latitude of C
+        unit: °
+      - id: lon_c
+        label: Longitude of C
+        unit: °
+      - id: lat_d
+        label: Latitude of D
+        unit: °
+      - id: lon_d
+        label: Longitude of D
+        unit: °
+      - id: gc
+        label: Great circle initial track
+        unit: °
+    answer:
+      formula: gc + (lon_d - lon_c) * sin((lat_c + lat_d) / 2) / 2
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: gc + (lon_d - lon_c) * sin((lat_c + lat_d) / 2)
+      - id: d2
+        formula: gc - (lon_d - lon_c) * sin((lat_c + lat_d) / 2) / 2
+      - id: d3
+        formula: gc - (lon_d - lon_c) * sin((lat_c + lat_d) / 2)
+      - id: d4
+        formula: gc
+    presets:
+      - id: p1
+        values:
+          lat_c: 20
+          lon_c: 12
+          lat_d: 26
+          lon_d: 30
+          gc: 67
+      - id: p2
+        values:
+          lat_c: -50
+          lon_c: -40
+          lat_d: -60
+          lon_d: -50
+          gc: 206
+      - id: p3
+        values:
+          lat_c: 20
+          lon_c: 0
+          lat_d: 50
+          lon_d: 14
+          gc: 45
+    explanation: >-
+      The rhumb line track is the great circle track plus half the convergency.
+      The convergency is the difference in longitude multiplied by the sine of
+      the mean latitude.
+
+
+      **Solution**
+
+
+      Convergency: {{= (lon_d - lon_c) * sin((lat_c + lat_d) / 2)}}°, so the
+      conversion angle is half of it: {{= (lon_d - lon_c) * sin((lat_c + lat_d)
+      / 2) / 2}}°
+
+
+      Rhumb line track: {{gc}}° plus the conversion angle = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the full convergency is added instead of half.
+
+      - **{{d2}}°**: the conversion angle is subtracted instead of added.
+
+      - **{{d3}}°**: the full convergency is subtracted.
+
+      - **{{d4}}°**: the great circle track is taken as the rhumb line track.
+- id: QALESKFO
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613249
+    - ATPLGS-625363
+  annexes: []
+  learningObjectives:
+    - 061.03.02.01.01
+  template:
+    type: simple
+    question: Parallels of latitude are special cases of rhumb lines because of
+      which property?
+    explanation: ""
+    options:
+      - id: OTNHGXBSZ
+        text: They intersect all meridians at the same angle of 90°.
+        correct: true
+        why: ""
+      - id: OXDFAGR0M
+        text: The parallels run from the North pole to the South pole.
+        correct: false
+        why: ""
+      - id: OZYIKKXXU
+        text: The radius of the parallels is always less than the Earth’s radius.
+        correct: false
+        why: ""
+      - id: OS1D87HID
+        text: The centre of the parallels is situated on the Earth’s axis.
+        correct: false
+        why: ""
+- id: QAYUMVIL
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614231
+    - ATPLGS-625471
+    - AVEXAM-94169
+    - BGS-611446
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.01
+  template:
+    type: simple
+    question: Which statement about the vertex of a great circle is always true? In
+      the vertex the True Track...
+    explanation: ""
+    options:
+      - id: OEJIMFQF0
+        text: is equal to TT departure + TT arrival / 2.
+        correct: false
+        why: ""
+      - id: OJXOLYGG9
+        text: is 090° or 270°.
+        correct: true
+        why: ""
+      - id: ORZYTIYD3
+        text: can be 090º, 180º, 270º or 360º.
+        correct: false
+        why: ""
+      - id: OKWA0BYPC
+        text: reaches its minimum value.
+        correct: false
+        why: ""
+- id: QCC7HEUJG
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615272
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.03
+  template:
+    type: simple
+    question: "In the absence of wind and without the astronomic precession effect,
+      an aircraft would, at a constant gyro heading, follow a:"
+    explanation: ""
+    options:
+      - id: ORQ3AFYMS
+        text: straight map line
+        correct: false
+        why: ""
+      - id: OG1KHNQ98
+        text: spherical flight segment
+        correct: false
+        why: ""
+      - id: OP12XNTLC
+        text: great circle line
+        correct: true
+        why: ""
+      - id: O79L1AIFQ
+        text: rhumb line
+        correct: false
+        why: ""
+- id: QCIBYHIO
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619775
+    - ATPLGS-625432
+    - AVEXAM-76964
+    - AVEXAM-10582
+    - AVEXAM-93068
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.01
+  template:
+    type: simple
+    question: >-
+      An aircraft is flying directly from A 55°N, 005°E to B 45°N, 055°W. At a
+      certain moment in time the true track of the aircraft is 275°. The
+      aircraft is on track and the track angle error is 0°.
+
+
+      Which statement about this situation is correct?
+    explanation: ""
+    options:
+      - id: OZATKHNQO
+        text: The aircraft is flying along the great circle from A to B and will not
+          pass the vertex of this great circle as it is not situated on the leg
+          A to B.
+        correct: false
+        why: ""
+      - id: O0UUZR5HZ
+        text: The aircraft is flying along the great circle from A to B and has not yet
+          passed the vertex of this great circle.
+        correct: true
+        why: ""
+      - id: OLIFOHJ47
+        text: The aircraft is flying along the great circle from A to B and has already
+          passed the vertex of this great circle.
+        correct: false
+        why: ""
+      - id: OCYQNU3LK
+        text: The aircraft is flying along the rhumb line from A to B and the true track
+          angle of the rhumb line is 275°.
+        correct: false
+        why: ""
+- id: QCKISDZY
+  docId: "061.03"
+  relatedQuestions:
+    - Q8GKQWOYW
+  externalIds:
+    - ATPLQ-617794
+    - AVEXAM-3120
+    - ATPLQ-614589
+    - AVEXAM-77578
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.03
+  template:
+    type: calculation
+    question: >-
+      Calculate the earth convergency, to the nearest whole degree, between two
+      positions.
+
+
+      - Position A: {{ad}}°{{am}}' N, {{ald}}°{{alm}}' W
+
+      - Position B: {{bd}}°{{bm}}' N, {{bld}}°{{blm}}' E
+
+
+      What is the earth convergency?
+    variables:
+      - id: ad
+        label: Latitude A
+        unit: °
+      - id: am
+        label: Latitude A minutes
+        unit: "'"
+      - id: ald
+        label: Longitude A
+        unit: °
+      - id: alm
+        label: Longitude A minutes
+        unit: "'"
+      - id: bd
+        label: Latitude B
+        unit: °
+      - id: bm
+        label: Latitude B minutes
+        unit: "'"
+      - id: bld
+        label: Longitude B
+        unit: °
+      - id: blm
+        label: Longitude B minutes
+        unit: "'"
+    answer:
+      formula: min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm / 60 + bld + blm
+        / 60)) * sin((ad + am / 60 + bd + bm / 60) / 2)
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm / 60 + bld + blm
+          / 60)) * cos((ad + am / 60 + bd + bm / 60) / 2)
+      - id: d2
+        formula: min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm / 60 + bld + blm
+          / 60))
+      - id: d3
+        formula: min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm / 60 + bld + blm
+          / 60)) * sin(ad + am / 60)
+      - id: d4
+        formula: 2 * min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm / 60 + bld +
+          blm / 60)) * sin((ad + am / 60 + bd + bm / 60) / 2)
+    presets:
+      - id: p1
+        values:
+          ad: 46
+          am: 20
+          ald: 5
+          alm: 40
+          bd: 62
+          bm: 40
+          bld: 13
+          blm: 55
+      - id: p2
+        values:
+          ad: 53
+          am: 45
+          ald: 177
+          alm: 5
+          bd: 65
+          bm: 5
+          bld: 161
+          blm: 10
+      - id: p3
+        values:
+          ad: 30
+          am: 0
+          ald: 40
+          alm: 0
+          bd: 50
+          bm: 0
+          bld: 10
+          blm: 0
+    explanation: >-
+      Earth convergency is the angle between the meridians at the two positions.
+      It equals the longitude difference, taken the short way round the globe,
+      multiplied by the sine of the mean latitude.
+
+
+      **Solution**
+
+
+      Longitude difference (short way): {{= min(ald + alm / 60 + bld + blm / 60,
+      360 - (ald + alm / 60 + bld + blm / 60))}}°
+
+
+      Mean latitude: {{= (ad + am / 60 + bd + bm / 60) / 2}}°
+
+
+      Convergency: {{= min(ald + alm / 60 + bld + blm / 60, 360 - (ald + alm /
+      60 + bld + blm / 60)) * sin((ad + am / 60 + bd + bm / 60) / 2)}}° =
+      **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: uses the cosine of the mean latitude instead of the sine.
+
+      - **{{d2}}°**: forgets to multiply by the sine of the mean latitude.
+
+      - **{{d3}}°**: uses the latitude of A only instead of the mean latitude.
+
+      - **{{d4}}°**: doubles the result.
+- id: QCOLJRDX
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611878
+    - AVEXAM-86104
+  annexes:
+    - 061-diagram-of-meridians-10w-and-30e-converging-parallel-50n-great
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      With reference to the attached annex, which of the given angles depicts
+      the conversion angle?
+    explanation: ""
+    options:
+      - id: OJAUAFWYU
+        text: "1"
+        correct: false
+        why: ""
+      - id: O5Q7FIF5B
+        text: "2"
+        correct: false
+        why: ""
+      - id: OFYG8CGBC
+        text: "3"
+        correct: true
+        why: ""
+      - id: OLOAZZVIK
+        text: "4"
+        correct: false
+        why: ""
+- id: QCSBRZHD
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614909
+    - ATPLGS-124449
+    - BGS-610059
+    - AVEXAM-57145
+  annexes: []
+  learningObjectives:
+    - 061.03.02.01.02
+  template:
+    type: simple
+    question: Where on the surface of the Earth do rhumb line tracks and great
+      circle tracks coincide?
+    explanation: ""
+    options:
+      - id: OUKTUR1XG
+        text: On high latitude tracks directly east to west.
+        correct: false
+        why: ""
+      - id: OWB6TEISP
+        text: On tracks directly north to south and on east to west tracks along the
+          Equator.
+        correct: true
+        why: ""
+      - id: OU9T1L8OO
+        text: On east to west tracks in the northern hemisphere north of the Magnetic
+          Equator.
+        correct: false
+        why: ""
+      - id: O18GP5GGP
+        text: On east to west tracks in polar areas.
+        correct: false
+        why: ""
+- id: QCXZZAIJ8
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615035
+    - ATPLGS-625438
+    - ATPLGS-625353
+    - ATPLQ-611120
+    - ATPLGS-625420
+    - BGS-610068
+    - AVEXAM-21552
+    - AVEXAM-49752
+    - BGS-610037
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: calculation
+    question: >-
+      Two positions are given in decimal degrees (north and east positive, south
+      and west negative):
+
+
+      - Position A: latitude {{lat1}}, longitude {{lon1}}
+
+      - Position B: latitude {{lat2}}, longitude {{lon2}}
+
+
+      What is the true track of the great circle at B, in the direction of
+      travel from A to B?
+    variables:
+      - id: lat1
+        label: Latitude of A
+        unit: °
+      - id: lon1
+        label: Longitude of A
+        unit: °
+      - id: lat2
+        label: Latitude of B
+        unit: °
+      - id: lon2
+        label: Longitude of B
+        unit: °
+    answer:
+      formula: (atan2(sin(lon1 - lon2) * cos(lat1), cos(lat2) * sin(lat1) - sin(lat2)
+        * cos(lat1) * cos(lon1 - lon2)) + 180) - 360 * floor((atan2(sin(lon1 -
+        lon2) * cos(lat1), cos(lat2) * sin(lat1) - sin(lat2) * cos(lat1) *
+        cos(lon1 - lon2)) + 180) / 360)
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: atan2(sin(lon1 - lon2) * cos(lat1), cos(lat2) * sin(lat1) - sin(lat2) *
+          cos(lat1) * cos(lon1 - lon2)) - 360 * floor(atan2(sin(lon1 - lon2) *
+          cos(lat1), cos(lat2) * sin(lat1) - sin(lat2) * cos(lat1) * cos(lon1 -
+          lon2)) / 360)
+      - id: d2
+        formula: atan2(sin(lon2 - lon1) * cos(lat2), cos(lat1) * sin(lat2) - sin(lat1) *
+          cos(lat2) * cos(lon2 - lon1)) - 360 * floor(atan2(sin(lon2 - lon1) *
+          cos(lat2), cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(lon2 -
+          lon1)) / 360)
+      - id: d3
+        formula: (atan2(sin(lon1 - lon2) * cos(lat1), cos(lat2) * sin(lat1) - sin(lat2)
+          * cos(lat1) * cos(lon1 - lon2)) + 180) - (lon1 - lon2) * sin((lat1 +
+          lat2) / 2) / 2
+    presets:
+      - id: p1
+        values:
+          lat1: -56
+          lon1: 163.953333
+          lat2: -56
+          lon2: -171.79
+      - id: p2
+        values:
+          lat1: 53.833333
+          lon1: 6.916667
+          lat2: 53
+          lon2: 15.666667
+      - id: p3
+        values:
+          lat1: 45
+          lon1: -30
+          lat2: 50
+          lon2: -10
+    explanation: >-
+      The track at B is the bearing of A seen from B, turned round by 180
+      degrees. Both come from the two positions alone, using the spherical
+      bearing formula.
+
+
+      **Solution**
+
+
+      The spherical bearing formula gives the bearing of A seen from B, and
+      adding 180° gives the track at B: **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the bearing of A seen from B is given, without turning it
+      round.
+
+      - **{{d2}}°**: the track at A is given instead of the track at B.
+
+      - **{{d3}}°**: uses half the convergency, without the correction for the
+      route crossing the 180° meridian.
+- id: QD7ENRD4M
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615654
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: |-
+      An aircraft is flying from A to B. Given the following information:
+
+      - Position A: {{la_a_d}}°{{la_a_m}}’N, {{lo_a_d}}°{{lo_a_m}}’W
+      - Position B: {{la_b_d}}°{{la_b_m}}’N, {{lo_b_d}}°{{lo_b_m}}’E
+      - Rhumb line track: {{rhumb}}° (T)
+
+      Determine the initial great circle track (°T).
+    variables:
+      - id: la_a_d
+        label: Latitude A (degrees)
+        unit: °
+      - id: la_a_m
+        label: Latitude A (minutes)
+        unit: "'"
+      - id: lo_a_d
+        label: Longitude A (degrees)
+        unit: °
+      - id: lo_a_m
+        label: Longitude A (minutes)
+        unit: "'"
+      - id: la_b_d
+        label: Latitude B (degrees)
+        unit: °
+      - id: la_b_m
+        label: Latitude B (minutes)
+        unit: "'"
+      - id: lo_b_d
+        label: Longitude B (degrees)
+        unit: °
+      - id: lo_b_m
+        label: Longitude B (minutes)
+        unit: "'"
+      - id: rhumb
+        label: Rhumb line track
+        unit: °T
+    answer:
+      formula: rhumb + (0.5 * (360 - (lo_a_d + lo_a_m / 60 + lo_b_d + lo_b_m / 60)) *
+        sin(((la_a_d + la_a_m / 60 + la_b_d + la_b_m / 60) / 2)))
+      unit: °T
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: rhumb - (0.5 * (360 - (lo_a_d + lo_a_m / 60 + lo_b_d + lo_b_m / 60)) *
+          sin(((la_a_d + la_a_m / 60 + la_b_d + la_b_m / 60) / 2)))
+      - id: d2
+        formula: rhumb + (360 - (lo_a_d + lo_a_m / 60 + lo_b_d + lo_b_m / 60)) *
+          sin(((la_a_d + la_a_m / 60 + la_b_d + la_b_m / 60) / 2))
+      - id: d3
+        formula: rhumb - (360 - (lo_a_d + lo_a_m / 60 + lo_b_d + lo_b_m / 60)) *
+          sin(((la_a_d + la_a_m / 60 + la_b_d + la_b_m / 60) / 2))
+      - id: d4
+        formula: rhumb
+    presets:
+      - id: p1
+        values:
+          la_a_d: 24
+          la_a_m: 32
+          lo_a_d: 166
+          lo_a_m: 36
+          la_b_d: 32
+          la_b_m: 46
+          lo_b_d: 173
+          lo_b_m: 20
+          rhumb: 295
+      - id: p2
+        values:
+          la_a_d: 45
+          la_a_m: 10
+          lo_a_d: 160
+          lo_a_m: 20
+          la_b_d: 52
+          la_b_m: 30
+          lo_b_d: 175
+          lo_b_m: 40
+          rhumb: 280
+      - id: p3
+        values:
+          la_a_d: 15
+          la_a_m: 10
+          lo_a_d: 150
+          lo_a_m: 45
+          la_b_d: 22
+          la_b_m: 50
+          lo_b_d: 170
+          lo_b_m: 10
+          rhumb: 305
+    explanation: >-
+      A rhumb line keeps a constant compass heading, but it is not the shortest
+      route. The great circle is the shortest route, and its initial track
+      differs from the rhumb track by half the longitude difference, multiplied
+      by the sine of the mean latitude.
+
+
+      **Solution**
+
+
+      Longitude difference, the short way across the 180° meridian: {{= 360 -
+      (lo_a_d + lo_a_m / 60 + lo_b_d + lo_b_m / 60)}}°
+
+
+      Mean latitude: {{= (la_a_d + la_a_m / 60 + la_b_d + la_b_m / 60) / 2}}°
+
+
+      Correction: {{= 0.5 * (360 - (lo_a_d + lo_a_m / 60 + lo_b_d + lo_b_m /
+      60)) * sin((la_a_d + la_a_m / 60 + la_b_d + la_b_m / 60) / 2)}}°
+
+
+      Great circle track = rhumb track + correction = {{rhumb}}° + {{= 0.5 *
+      (360 - (lo_a_d + lo_a_m / 60 + lo_b_d + lo_b_m / 60)) * sin((la_a_d +
+      la_a_m / 60 + la_b_d + la_b_m / 60) / 2)}}° = **{{answer}} °T**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} °T**: subtracts the correction instead of adding it, so the
+      track turns the wrong way.
+
+      - **{{d2}} °T**: applies the correction in full instead of half.
+
+      - **{{d3}} °T**: applies the full correction in the wrong direction.
+
+      - **{{d4}} °T**: is the rhumb line track, with no correction at all.
+- id: QDGUKNKO
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618271
+    - AVEXAM-63587
+  annexes:
+    - north-polar-chart-parallels-60-n-70-n-80-n
+  learningObjectives:
+    - 061.03.03.01.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      Which one of the following routes represents the greatest difference
+      between the rhumb line and the great circle on a Polar Stereographic
+      chart?
+    explanation: ""
+    options:
+      - id: OWQUYT1HQ
+        text: CD
+        correct: false
+        why: ""
+      - id: OUFZAVRGQ
+        text: AB
+        correct: false
+        why: ""
+      - id: OVLLVF1DI
+        text: EF
+        correct: false
+        why: ""
+      - id: OGMPFOJA9
+        text: GH
+        correct: true
+        why: ""
+- id: QEGAEPOR
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616349
+    - ATPLGS-127753
+    - AVEXAM-69917
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.01
+  template:
+    type: simple
+    question: Which statement is true about small circles?
+    explanation: ""
+    options:
+      - id: OMUTHAQ3O
+        text: All rhumb lines are special cases of small circles.
+        correct: false
+        why: ""
+      - id: OH95UJ6BK
+        text: The centre of a small circle does not coincide with the centre of the
+          Earth.
+        correct: true
+        why: ""
+      - id: OWUPX0PWW
+        text: The centre of each small circle is situated on the Earth’s axis.
+        correct: false
+        why: ""
+      - id: OESUQPKF5
+        text: The largest small circle possible has a radius which equals the Earth’s
+          radius.
+        correct: false
+        why: ""
+- id: QF8YJL4XU
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615903
+  annexes: []
+  learningObjectives:
+    - 061.03.03.01.01
+  template:
+    type: simple
+    question: "Which two factors together will influence the difference in distance
+      between the rhumb line route and the great circle route between two
+      positions? "
+    explanation: ""
+    options:
+      - id: OSR0ZQB7C
+        text: Mean latitude and mean longitude.
+        correct: false
+        why: ""
+      - id: O6VMRVKMR
+        text: Mean latitude and change of longitude.
+        correct: true
+        why: ""
+      - id: OIFITYMTZ
+        text: Change of latitude and mean longitude.
+        correct: false
+        why: ""
+      - id: OL3FMM0B8
+        text: Change of latitude and change of longitude.
+        correct: false
+        why: ""
+- id: QFBBJTMC
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617041
+    - AVEXAM-21546
+    - BGS-611474
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.01
+  template:
+    type: simple
+    question: What statement is correct as regards the properties of a Great Circle?
+    explanation: ""
+    options:
+      - id: OJREABN9C
+        text: The intersection point of a great circle and the Equator are named "the
+          vertices", which are positioned 180° apart in longitude.
+        correct: false
+        why: ""
+      - id: O2SEZKUWG
+        text: Both vertices of a great circle are positioned at the same latitude and
+          180° apart in longitude on the same hemisphere.
+        correct: false
+        why: ""
+      - id: OELOBZVUD
+        text: The latitudes of both vertices are of different values, the longitudes are
+          equal although respectively East and West.
+        correct: false
+        why: ""
+      - id: OH2LYHSLO
+        text: Both vertices of a great circle are situated at the same distance
+          respectively North and South of the Equator and 180° apart in
+          longitude.
+        correct: true
+        why: ""
+- id: QFKKBJPG0
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618627
+    - BGS-610352
+    - AVEXAM-2089
+    - BGS-610671
+    - ATPLGS-625553
+  annexes: []
+  learningObjectives:
+    - 061.01.03.01.04
+    - 061.04.03.02.03
+  template:
+    type: calculation
+    question: >-
+      Given the following information, what is the magnetic bearing of the NDB
+      from the aircraft?
+
+
+      - Great circle track from the aircraft to the NDB: {{track}}°T
+
+      - Variation at the aircraft: {{var_ac}}°W
+
+      - Variation at the NDB: {{var_ndb}}°W
+
+
+      What is the magnetic bearing in degrees?
+    variables:
+      - id: track
+        label: Great circle track, aircraft to NDB
+        unit: °
+      - id: var_ac
+        label: Variation at the aircraft (west)
+        unit: °
+      - id: var_ndb
+        label: Variation at the NDB (west)
+        unit: °
+    answer:
+      formula: track + var_ac
+      unit: °
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: track + var_ndb
+      - id: d2
+        formula: track - var_ac
+      - id: d3
+        formula: track + 180 + var_ac
+      - id: d4
+        formula: track - var_ndb
+    presets:
+      - id: p1
+        values:
+          track: 101.5
+          var_ac: 11
+          var_ndb: 9
+      - id: p2
+        values:
+          track: 145
+          var_ac: 6
+          var_ndb: 4
+      - id: p3
+        values:
+          track: 27.5
+          var_ac: 14
+          var_ndb: 10
+    explanation: >-
+      The magnetic bearing is the true bearing corrected for variation. Westerly
+      variation is added to a true bearing to give a magnetic bearing. The
+      bearing is taken at the aircraft, so the variation at the aircraft is
+      used.
+
+
+      **Solution**
+
+
+      {{f: track + var_ac}} = {{n: track + var_ac}} = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the variation at the NDB is used instead of the variation
+      at the aircraft.
+
+      - **{{d2}}°**: the westerly variation is subtracted instead of added.
+
+      - **{{d3}}°**: the reciprocal track is used.
+
+      - **{{d4}}°**: the variation at the NDB is subtracted instead of added.
+- id: QG7UNDCIV
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619394
+    - BGS-610032
+    - ATPLGS-124283
+    - AVEXAM-67911
+    - ATPLGS-110083
+    - AVEXAM-8051
+    - BGS-610226
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.02
+  template:
+    type: simple
+    question: How does the convergency of any two meridians on the Earth change with
+      varying latitude?
+    explanation: ""
+    options:
+      - id: OZBCJ5074
+        text: It is of constant value and does not change with latitude.
+        correct: false
+        why: ""
+      - id: ORSSLWQAF
+        text: It changes as cosine of latitude.
+        correct: false
+        why: ""
+      - id: OAQQXJXFT
+        text: It changes as sine of latitude.
+        correct: true
+        why: ""
+      - id: OUDUCPLEO
+        text: It increases with decrease of latitude.
+        correct: false
+        why: ""
+- id: QGORLTZU
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613171
+    - ATPLGS-625543
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: simple
+    question: The great circle bearing from A (70°S, 030°W) to B (70°S, 060°E) is
+      approximately…
+    explanation: ""
+    options:
+      - id: OHI8IFTGD
+        text: 312°
+        correct: false
+        why: ""
+      - id: OY5UZ97ZY
+        text: 090°
+        correct: false
+        why: ""
+      - id: OT9CMO0WH
+        text: 132°
+        correct: true
+        why: ""
+      - id: ORA1N27GO
+        text: 048°
+        correct: false
+        why: ""
+- id: QHD3JFS8K
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619416
+  annexes: []
+  learningObjectives:
+    - 061.03.03.01.01
+  template:
+    type: simple
+    question: Between points A (N60°, W030°) and B (N60°, W010°), the Great Circle
+      distance is measured as 597.7 nm. Between points C (N50°, W030°) and D
+      (N50°, W010°), the Great Circle distance and Rhumb Line distance will vary
+      by...
+    explanation: ""
+    options:
+      - id: ORJ0J8FNO
+        text: less than 2.3 nm.
+        correct: true
+        why: ""
+      - id: OYJC3ILZD
+        text: 2.3 nm.
+        correct: false
+        why: ""
+      - id: OBR5GXMLE
+        text: 0 nm.
+        correct: false
+        why: ""
+      - id: OAYYMVIBL
+        text: more than 2.3 nm.
+        correct: false
+        why: ""
+- id: QHPRNZGNP
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614997
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: simple
+    question: |-
+      Given the following information, what is the approximate position of B?
+
+      Position A: 31°00’S, 176 17’W   
+       Rhumb line track from A to B: 270° TT   
+       Initial great circle track from A to B: 266.2° TT
+    explanation: ""
+    options:
+      - id: OPAIKV1CN
+        text: 31°'00’S, 173°24’W
+        correct: false
+        why: ""
+      - id: OW7JMC05A
+        text: 31°00’S, 161°32’W
+        correct: false
+        why: ""
+      - id: OPPLNWK5K
+        text: 31°00’S, 173°24’E
+        correct: false
+        why: ""
+      - id: ONAXRODP1
+        text: 31°00’S, 168°58’E
+        correct: true
+        why: ""
+- id: QITGR6KYT
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618657
+    - BGS-610035
+    - ATPLGS-110067
+    - AVEXAM-34195
+    - ATPLQ-618990
+    - ATPLGS-625404
+    - BGS-610036
+    - AVEXAM-52595
+    - ATPLQ-618406
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.03
+  template:
+    type: calculation
+    question: >-
+      An aeroplane flies a great circle track from position A to position B. The
+      positions are:
+
+
+      - A: latitude {{lat1}}°, longitude {{lon1}}°
+
+      - B: latitude {{lat2}}°, longitude {{lon2}}°
+
+
+      Negative latitudes are south and negative longitudes are west.
+
+
+      By how many degrees does the true track change between A and B?
+    variables:
+      - id: lat1
+        label: Latitude A
+        unit: °
+      - id: lon1
+        label: Longitude A
+        unit: °
+      - id: lat2
+        label: Latitude B
+        unit: °
+      - id: lon2
+        label: Longitude B
+        unit: °
+    answer:
+      formula: abs(atan2(sin(((atan2(sin(lon1 - lon2) * cos(lat1), cos(lat2) *
+        sin(lat1) - sin(lat2) * cos(lat1) * cos(lon1 - lon2)) + 180)) -
+        (atan2(sin(lon2 - lon1) * cos(lat2), cos(lat1) * sin(lat2) - sin(lat1) *
+        cos(lat2) * cos(lon2 - lon1)))), cos(((atan2(sin(lon1 - lon2) *
+        cos(lat1), cos(lat2) * sin(lat1) - sin(lat2) * cos(lat1) * cos(lon1 -
+        lon2)) + 180)) - (atan2(sin(lon2 - lon1) * cos(lat2), cos(lat1) *
+        sin(lat2) - sin(lat1) * cos(lat2) * cos(lon2 - lon1))))))
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: abs(lon2 - lon1)
+      - id: d2
+        formula: abs(lon2 - lon1) * cos((lat1 + lat2) / 2)
+      - id: d3
+        formula: abs(lat2 - lat1)
+      - id: d4
+        formula: abs(atan2(sin(lon2 - lon1) * cos(lat2), cos(lat1) * sin(lat2) -
+          sin(lat1) * cos(lat2) * cos(lon2 - lon1)))
+    presets:
+      - id: p1
+        values:
+          lat1: -59
+          lon1: -141
+          lat2: -61
+          lon2: -148
+      - id: p2
+        values:
+          lat1: -59
+          lon1: -142
+          lat2: -61
+          lon2: -148
+      - id: p3
+        values:
+          lat1: 48
+          lon1: 120
+          lat2: 51
+          lon2: 111
+    explanation: >-
+      A great circle is the shortest route between two points on the Earth. Its
+      track changes continuously along the route, so the change in track is the
+      difference between the track at B and the track at A.
+
+
+      **Solution**
+
+
+      Change in track = {{= abs(atan2(sin(((atan2(sin(lon1 - lon2) * cos(lat1),
+      cos(lat2) * sin(lat1) - sin(lat2) * cos(lat1) * cos(lon1 - lon2)) + 180))
+      - (atan2(sin(lon2 - lon1) * cos(lat2), cos(lat1) * sin(lat2) - sin(lat1) *
+      cos(lat2) * cos(lon2 - lon1)))), cos(((atan2(sin(lon1 - lon2) * cos(lat1),
+      cos(lat2) * sin(lat1) - sin(lat2) * cos(lat1) * cos(lon1 - lon2)) + 180))
+      - (atan2(sin(lon2 - lon1) * cos(lat2), cos(lat1) * sin(lat2) - sin(lat1) *
+      cos(lat2) * cos(lon2 - lon1))))))}}° = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: uses only the longitude difference and ignores that
+      meridians converge towards the poles.
+
+      - **{{d2}}°**: scales the longitude difference by the cosine of the mean
+      latitude, a rhumb line shortcut that does not give the great circle track
+      change.
+
+      - **{{d3}}°**: uses the latitude difference instead of the track change.
+
+      - **{{d4}}°**: gives the track at A instead of the change in track.
+- id: QJ0MNJ1B1
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612066
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: simple
+    question: >-
+      Given the following positions, calculate the true track of the great
+      circle route on arrival at B (to the nearest whole degree).
+
+
+      A: 50º00'N, 030º30'W   
+       B: 52º15'N, 038º45'W   
+       Rhumb line track from A to B: 298º(T)
+    explanation: ""
+    options:
+      - id: OIVE7R2SO
+        text: 298º (T)
+        correct: false
+        why: ""
+      - id: ONAIDESGM
+        text: 301º (T)
+        correct: false
+        why: ""
+      - id: OE16OCDQL
+        text: 295º (T)
+        correct: true
+        why: ""
+      - id: OOP2UMRZJ
+        text: 304º (T)
+        correct: false
+        why: ""
+- id: QK4X2L3TQ
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617733
+    - BGS-610039
+    - AVEXAM-98478
+  annexes: []
+  learningObjectives:
+    - 061.03.02.01.01
+  template:
+    type: simple
+    question: In order to fly from position A 10°00’N, 030°00’W to position B
+      30°00’N, 050°00’W, maintaining a constant true course, it is necessary to
+      fly..
+    explanation: ""
+    options:
+      - id: O7ENUVS1W
+        text: the great circle route.
+        correct: false
+        why: ""
+      - id: OMYV7JZOK
+        text: a straight line plotted on a Lambert chart.
+        correct: false
+        why: ""
+      - id: O0JNQHML2
+        text: the constant average drift route.
+        correct: false
+        why: ""
+      - id: OFHRAR5P7
+        text: a rhumb line track.
+        correct: true
+        why: ""
+- id: QK5EEREV9
+  docId: "061.03"
+  relatedQuestions:
+    - QUOZQ4CWC
+  externalIds:
+    - ATPLQ-613387
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: |-
+      You fly from point A to point B. The positions in decimal degrees are:
+
+      - A: latitude {{lat_a}}° N, longitude {{lone_a}}° E
+      - B: latitude {{lat_b}}° N, longitude {{lonw_b}}° W
+
+      What is the angle between the great circle and the rhumb line at point A?
+    variables:
+      - id: lat_a
+        label: Latitude of A
+        unit: °
+      - id: lat_b
+        label: Latitude of B
+        unit: °
+      - id: lone_a
+        label: East longitude of A
+        unit: °
+      - id: lonw_b
+        label: West longitude of B
+        unit: °
+    answer:
+      formula: (360 - lone_a - lonw_b) / 2 * sin((lat_a + lat_b) / 2)
+      unit: °
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: (360 - lone_a - lonw_b) * sin((lat_a + lat_b) / 2)
+      - id: d2
+        formula: (360 - lone_a - lonw_b) * cos((lat_a + lat_b) / 2)
+      - id: d3
+        formula: (360 - lone_a - lonw_b) / 2 * sin(lat_a)
+      - id: d4
+        formula: (360 - lone_a - lonw_b) / 2 * cos((lat_a + lat_b) / 2)
+    presets:
+      - id: p1
+        values:
+          lat_a: 25.58
+          lat_b: 32.75
+          lone_a: 178.42
+          lonw_b: 165.43
+      - id: p2
+        values:
+          lat_a: 30
+          lat_b: 50
+          lone_a: 170
+          lonw_b: 150
+      - id: p3
+        values:
+          lat_a: 60
+          lat_b: 70
+          lone_a: 100
+          lonw_b: 80
+    explanation: >-
+      The angle between the great circle and the rhumb line is half the
+      convergency. The convergency is the longitude difference multiplied by the
+      sine of the mean latitude of the two points. The longitude difference is
+      360 minus the east longitude of A and the west longitude of B, because the
+      shorter route crosses the 180 degree meridian.
+
+
+      **Solution**
+
+
+      Longitude difference: 360 - {{lone_a}} - {{lonw_b}} = {{= 360 - lone_a -
+      lonw_b}}°
+
+
+      Mean latitude: ({{lat_a}} + {{lat_b}}) / 2 = {{= (lat_a + lat_b) / 2}}°
+
+
+      Angle: {{f: (360 - lone_a - lonw_b) / 2 * sin((lat_a + lat_b) / 2)}} =
+      {{n: (360 - lone_a - lonw_b) / 2 * sin((lat_a + lat_b) / 2)}} =
+      **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the full convergency is used, without halving it.
+
+      - **{{d2}}°**: the cosine of the mean latitude is used instead of the
+      sine.
+
+      - **{{d3}}°**: the latitude of A is used instead of the mean latitude.
+
+      - **{{d4}}°**: the cosine of the mean latitude is used instead of the
+      sine.
+- id: QLGOYUGO
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611491
+    - AVEXAM-74668
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: simple
+    question: >-
+      An aircraft is flying along a great circle from A to B on the eastern
+      hemisphere.
+
+
+      Which of the following is correct concerning the difference between the
+      great circle course at A to the great circle course at B? It corresponds
+      to...
+    explanation: ""
+    options:
+      - id: OSYXGGDXE
+        text: The conversion angle.
+        correct: false
+        why: ""
+      - id: OJCVDFQW9
+        text: The meridian convergence.
+        correct: true
+        why: ""
+      - id: OXF7VYFEX
+        text: Half of the meridian convergence.
+        correct: false
+        why: ""
+      - id: OGWPUH6AJ
+        text: Half of the conversion angle.
+        correct: false
+        why: ""
+- id: QLMBLWBA
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611158
+    - AVEXAM-5871
+    - ATPLGS-628530
+  annexes: []
+  learningObjectives:
+    - 061.03.03.01.01
+  template:
+    type: simple
+    question: The distance of the great circle track between the positions (60ºN
+      010ºE) and (60ºN 010ºW) is 597.5 NM. Which statement is true concerning
+      the difference in distance of the great circle track and the rhumb line
+      track between the positions (50ºS 170ºE) and (50ºS 170ºW)?
+    explanation: ""
+    options:
+      - id: OJVB2Z2SW
+        text: Less than 2.5 NM
+        correct: true
+        why: ""
+      - id: O1CX8JEWA
+        text: Equal to 2.5 NM
+        correct: false
+        why: ""
+      - id: OJ1YLWFLR
+        text: Equal to 0
+        correct: false
+        why: ""
+      - id: O4QC0MF5K
+        text: More than 2.5 NM
+        correct: false
+        why: ""
+- id: QLUNCFGB
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616006
+    - BGS-611276
+    - BGS-610062
+    - AVEXAM-96843
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: simple
+    question: An aircraft follows a great circle in the Northern Hemisphere. At a
+      certain moment the aircraft is in the position on the great circle where
+      the great circle direction is 270°(T). Continuing on the great circle the
+    explanation: ""
+    options:
+      - id: OOAUMJABL
+        text: track angle will decrease and the latitude will decrease.
+        correct: true
+        why: ""
+      - id: OQ7EPULQZ
+        text: track angle will decrease and the latitude will increase.
+        correct: false
+        why: ""
+      - id: OMDD6CTDB
+        text: track angle will increase and the latitude will increase.
+        correct: false
+        why: ""
+      - id: OEBJ5BWQU
+        text: track angle will increase and the latitude will decrease.
+        correct: false
+        why: ""
+- id: QLWODQHA
+  docId: "061.03"
+  relatedQuestions:
+    - Q8CRJUFZJ
+  externalIds:
+    - ATPLQ-613565
+  annexes: []
+  learningObjectives:
+    - 061.03.02.01.01
+  template:
+    type: calculation
+    question: |-
+      Given the following information:
+
+      - Position A: latitude {{lat_a}}°N, longitude {{lon_a}}°E
+      - Position B: latitude {{lat_b}}°N, longitude {{lon_b}}°E
+      - Average true course of the great circle: {{gc}}°
+
+      What is the true course of the rhumb line at point A?
+    variables:
+      - id: lat_a
+        label: Latitude of A
+        unit: °
+      - id: lon_a
+        label: Longitude of A
+        unit: °
+      - id: lat_b
+        label: Latitude of B
+        unit: °
+      - id: lon_b
+        label: Longitude of B
+        unit: °
+      - id: gc
+        label: Average great circle course
+        unit: °
+    answer:
+      formula: atan2((lon_b - lon_a) * pi / 180, ln(tan(45 + lat_b / 2)) - ln(tan(45 +
+        lat_a / 2))) - 360 * floor(atan2((lon_b - lon_a) * pi / 180, ln(tan(45 +
+        lat_b / 2)) - ln(tan(45 + lat_a / 2))) / 360)
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: atan2(lon_b - lon_a, lat_b - lat_a)
+      - id: d2
+        formula: atan2((lon_b - lon_a) * pi / 180, ln(tan(45 + lat_b / 2)) - ln(tan(45 +
+          lat_a / 2))) + 180
+      - id: d3
+        formula: atan2((lon_b - lon_a) * 60 * cos((lat_a + lat_b) / 2), lat_b - lat_a)
+    presets:
+      - id: p1
+        values:
+          lat_a: 55
+          lon_a: 0
+          lat_b: 54
+          lon_b: 10
+          gc: 100
+      - id: p2
+        values:
+          lat_a: 40
+          lon_a: 0
+          lat_b: 35
+          lon_b: 15
+          gc: 110
+      - id: p3
+        values:
+          lat_a: 60
+          lon_a: 20
+          lat_b: 65
+          lon_b: 35
+          gc: 60
+    explanation: >-
+      On a Mercator chart a rhumb line is a straight line. Its track follows
+      from the difference in longitude and the difference in stretched latitude
+      between the two points. The great circle course is not needed for this.
+
+
+      **Solution**
+
+
+      Longitude difference: {{= lon_b - lon_a}}°
+
+
+      Rhumb line track from A towards B, measured from north: **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: uses the plain latitude and longitude differences, without
+      the Mercator stretch.
+
+      - **{{d2}}°**: gives the reciprocal, which points the wrong way.
+
+      - **{{d3}}°**: the longitude difference is not converted to distance at
+      the mean latitude.
+- id: QM4RXZXST
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612229
+    - ATPLGS-625533
+    - AVEXAM-66068
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: calculation
+    question: >-
+      An aircraft passes position A on its route to position B. Both positions
+      are on the same latitude:
+
+
+      - Latitude: {{lat_d}}°{{lat_m}}'N
+
+      - Longitude of A: {{lon_a_d}}°{{lon_a_m}}'W
+
+      - Longitude of B: {{lon_b_d}}°{{lon_b_m}}'W
+
+
+      What is the great circle track on departure from A in °T?
+    variables:
+      - id: lat_d
+        label: Latitude, degrees
+        unit: °
+      - id: lat_m
+        label: Latitude, minutes
+        unit: "'"
+      - id: lon_a_d
+        label: Longitude of A, degrees
+        unit: °
+      - id: lon_a_m
+        label: Longitude of A, minutes
+        unit: "'"
+      - id: lon_b_d
+        label: Longitude of B, degrees
+        unit: °
+      - id: lon_b_m
+        label: Longitude of B, minutes
+        unit: "'"
+    answer:
+      formula: ((atan2(sin(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m / 60))),
+        sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60) -
+        (lon_b_d + lon_b_m / 60)))))) - 360 * floor((atan2(sin(((lon_a_d +
+        lon_a_m / 60) - (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60)) *
+        (1 - cos(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m / 60)))))) /
+        360))
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: "270"
+      - id: d2
+        formula: 360 - ((atan2(sin(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m /
+          60))), sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60)
+          - (lon_b_d + lon_b_m / 60)))))) - 360 * floor((atan2(sin(((lon_a_d +
+          lon_a_m / 60) - (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60))
+          * (1 - cos(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m / 60)))))) /
+          360))
+      - id: d3
+        formula: ((((atan2(sin(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m / 60))),
+          sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60) -
+          (lon_b_d + lon_b_m / 60)))))) - 360 * floor((atan2(sin(((lon_a_d +
+          lon_a_m / 60) - (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60))
+          * (1 - cos(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m / 60)))))) /
+          360)) + 180) - 360 * floor((((atan2(sin(((lon_a_d + lon_a_m / 60) -
+          (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60)) * (1 -
+          cos(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m / 60)))))) - 360 *
+          floor((atan2(sin(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m /
+          60))), sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60)
+          - (lon_b_d + lon_b_m / 60)))))) / 360)) + 180) / 360))
+      - id: d4
+        formula: atan2(sin(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m / 60))),
+          sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60) -
+          (lon_b_d + lon_b_m / 60)))))
+    presets:
+      - id: p1
+        values:
+          lat_d: 60
+          lat_m: 0
+          lon_a_d: 120
+          lon_a_m: 0
+          lon_b_d: 140
+          lon_b_m: 30
+      - id: p2
+        values:
+          lat_d: 50
+          lat_m: 0
+          lon_a_d: 130
+          lon_a_m: 15
+          lon_b_d: 150
+          lon_b_m: 0
+      - id: p3
+        values:
+          lat_d: 45
+          lat_m: 0
+          lon_a_d: 160
+          lon_a_m: 0
+          lon_b_d: 170
+          lon_b_m: 30
+    explanation: >-
+      The great circle track leaves the route at an angle that changes along the
+      way. For two positions on the same latitude, the initial track follows
+      from the longitude difference and the latitude. The result is given from 0
+      to 360°.
+
+
+      **Solution**
+
+
+      Longitude difference: {{= (lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m /
+      60)}}°
+
+
+      Track before correction: {{= atan2(sin(((lon_a_d + lon_a_m / 60) -
+      (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d
+      + lon_a_m / 60) - (lon_b_d + lon_b_m / 60)))))}}°
+
+
+      {{f: ((atan2(sin(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m / 60))),
+      sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60) - (lon_b_d
+      + lon_b_m / 60)))))) - 360 * floor((atan2(sin(((lon_a_d + lon_a_m / 60) -
+      (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d
+      + lon_a_m / 60) - (lon_b_d + lon_b_m / 60)))))) / 360))}} = {{n:
+      ((atan2(sin(((lon_a_d + lon_a_m / 60) - (lon_b_d + lon_b_m / 60))),
+      sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d + lon_a_m / 60) - (lon_b_d
+      + lon_b_m / 60)))))) - 360 * floor((atan2(sin(((lon_a_d + lon_a_m / 60) -
+      (lon_b_d + lon_b_m / 60))), sin((lat_d + lat_m / 60)) * (1 - cos(((lon_a_d
+      + lon_a_m / 60) - (lon_b_d + lon_b_m / 60)))))) / 360))}} =
+      **{{answer}}°T**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: due west is assumed instead of the great circle track.
+
+      - **{{d2}}°**: the track is measured from the other side (360° minus the
+      track).
+
+      - **{{d3}}°**: the reciprocal track is used.
+
+      - **{{d4}}°**: the negative angle is not converted to the range 0° to
+      360°.
+- id: QMYDT0CZ4
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619591
+    - AVEXAM-32930
+    - BGS-610034
+    - ATPLGS-625596
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: >-
+      In the Northern Hemisphere, the great circle bearing of position B from
+      position A is {{gc}}°. The conversion angle is {{ca}}°.
+
+
+      What is the great circle bearing of A from B?
+    variables:
+      - id: gc
+        label: Great circle bearing of B from A
+        unit: °
+      - id: ca
+        label: Conversion angle
+        unit: °
+    answer:
+      formula: gc + 180 + 2 * ca
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: gc + 180
+      - id: d2
+        formula: gc + 180 + ca
+      - id: d3
+        formula: gc + 180 - ca
+      - id: d4
+        formula: gc + 180 - 2 * ca
+    presets:
+      - id: p1
+        values:
+          gc: 40
+          ca: 4
+      - id: p2
+        values:
+          gc: 90
+          ca: 5
+      - id: p3
+        values:
+          gc: 120
+          ca: 2
+    explanation: >-
+      In the Northern Hemisphere the great circle track changes along the route.
+      The bearing back from B to A is the reciprocal of the track at B, and the
+      track at B differs from the track at A by twice the conversion angle.
+
+
+      **Solution**
+
+
+      Reciprocal of the bearing: {{gc}}° + 180° = {{= gc + 180}}°
+
+
+      Add twice the conversion angle: {{= gc + 180}}° + 2 × {{ca}}° =
+      **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the conversion angle is forgotten.
+
+      - **{{d2}}°**: the conversion angle is added once instead of twice.
+
+      - **{{d3}}°**: the conversion angle is subtracted once.
+
+      - **{{d4}}°**: the conversion angle is subtracted twice.
+- id: QOKTXOHOB
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614173
+    - AVEXAM-31993
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.01
+  template:
+    type: simple
+    question: >-
+      Given the following information, what is the position of the other vertex
+      of the great circle between A and B?
+
+
+      Point A: 50°N, 070°W   
+
+      Point B: 50°N, 080°W   
+
+      Position of one of the vertices of the great circle between A and B:
+      50°06.4’N, 075°00.0’W
+    explanation: ""
+    options:
+      - id: ORON7AVYC
+        text: 00°00.0’N, 075°00.0’W
+        correct: false
+        why: ""
+      - id: OO4UZZ8UY
+        text: 00°00.0’N, 105°00.0’E
+        correct: false
+        why: ""
+      - id: OFWSRO6R0
+        text: 50°06.4’S, 105°00.0’E
+        correct: true
+        why: ""
+      - id: OGYOY5HBD
+        text: 50°06.4’S, 075°00.0’W
+        correct: false
+        why: ""
+- id: QOMXIDLFM
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615210
+    - AVEXAM-41489
+    - BGS-611621
+  annexes: []
+  learningObjectives:
+    - 061.04.02.02.02
+  template:
+    type: simple
+    question: What is the initial track direction of a straight line on a Polar
+      Stereographic chart when flying from position A (83°N,130°E) to position B
+      (83°N, 160°W).
+    explanation: ""
+    options:
+      - id: OHHX6U3EL
+        text: 090°(T)
+        correct: false
+        why: ""
+      - id: OIHHB9J3B
+        text: 020° (T)
+        correct: false
+        why: ""
+      - id: OFSLEDGEJ
+        text: 125° (T)
+        correct: false
+        why: ""
+      - id: OG8MN6CEO
+        text: 055°(T)
+        correct: true
+        why: ""
+- id: QPPBSAEH
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612069
+    - BGS-611494
+    - AVEXAM-28812
+    - BGS-611280
+  annexes: []
+  learningObjectives:
+    - 061.03.03.01.01
+  template:
+    type: simple
+    question: The great-circle distance between A (30°N, 010°W) and B (30°N, 020°E)
+      is 1554.3 NM. What is the difference between the great-circle distance and
+      the rhumb-line distance between C (40°N, 010°W) and D (40°N, 020°E)?
+    explanation: ""
+    options:
+      - id: O5IEJZP2W
+        text: less than 4.5 NM.
+        correct: false
+        why: ""
+      - id: O47RTTK0U
+        text: greater than 4.5 NM.
+        correct: true
+        why: ""
+      - id: OTUVQTYBW
+        text: 0 NM.
+        correct: false
+        why: ""
+      - id: OIZ9L4K9F
+        text: 4.5 NM.
+        correct: false
+        why: ""
+- id: QQ5U6NKQ0
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615875
+    - AVEXAM-17548
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: calculation
+    question: >-
+      The aircraft flies a great circle from point A to point B.
+
+
+      - Latitude of both points: {{lat}}°S
+
+      - Longitude difference: {{dlon}}° (B is west of A)
+
+
+      What is the true course of the aircraft on its arrival at B, to the
+      nearest degree?
+    variables:
+      - id: lat
+        label: latitude (south)
+        unit: °
+      - id: dlon
+        label: longitude difference
+        unit: °
+    answer:
+      formula: atan2(sin(dlon) * cos(lat), -sin(lat) * cos(lat) * (1 - cos(dlon))) + 180
+      unit: °(T)
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: "270"
+      - id: d2
+        formula: atan2(sin(dlon) * cos(lat), -sin(lat) * cos(lat) * (1 - cos(dlon)))
+      - id: d3
+        formula: 360 - atan2(sin(dlon) * cos(lat), -sin(lat) * cos(lat) * (1 -
+          cos(dlon)))
+      - id: d4
+        formula: "284"
+    presets:
+      - id: p1
+        values:
+          lat: 45
+          dlon: 20
+      - id: p2
+        values:
+          lat: 60
+          dlon: 30
+      - id: p3
+        values:
+          lat: 30
+          dlon: 40
+    explanation: >-
+      Between two points of the same latitude a great circle bends towards the
+      pole, so its course on arrival differs from the rhumb line course of 270°.
+      The course on arrival at B is the reciprocal of the course from B back to
+      A.
+
+
+      **Solution**
+
+
+      Course from B back to A = {{= atan2(sin(dlon) * cos(lat), -sin(lat) *
+      cos(lat) * (1 - cos(dlon)))}}°
+
+
+      Course on arrival at B = {{f: atan2(sin(dlon) * cos(lat), -sin(lat) *
+      cos(lat) * (1 - cos(dlon))) + 180}} = **{{answer}}°(T)**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the rhumb line course, which is a straight line on a
+      Mercator chart and not the great circle.
+
+      - **{{d2}}°**: the course from B back to A, i.e. the reciprocal of the
+      course on arrival.
+
+      - **{{d3}}°**: the initial course at A, not the course on arrival at B.
+
+      - **{{d4}}°**: not produced by the great circle calculation.
+- id: QQQWG9NXN
+  docId: "061.03"
+  relatedQuestions:
+    - QYLZDRJ1M
+  externalIds:
+    - ATPLQ-612053
+    - ATPLGS-625897
+    - AVEXAM-59321
+    - AVEXAM-8147
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: >-
+      The rhumb line track from A to B is {{track}}°. Use the positions below to
+      find the final true track along the great circle from A to B.
+
+
+      - A: {{ad}}°{{am}}' N, {{ald}}°{{alm}}' E
+
+      - B: {{bd}}°{{bm}}' N, {{bld}}°{{blm}}' E
+
+
+      Give the final true track to the nearest whole degree.
+    variables:
+      - id: track
+        label: rhumb line track
+        unit: °
+      - id: ad
+        label: Latitude A
+        unit: °
+      - id: am
+        label: Latitude A minutes
+        unit: "'"
+      - id: ald
+        label: Longitude A
+        unit: °
+      - id: alm
+        label: Longitude A minutes
+        unit: "'"
+      - id: bd
+        label: Latitude B
+        unit: °
+      - id: bm
+        label: Latitude B minutes
+        unit: "'"
+      - id: bld
+        label: Longitude B
+        unit: °
+      - id: blm
+        label: Longitude B minutes
+        unit: "'"
+    answer:
+      formula: track - abs((ald + alm / 60) - (bld + blm / 60)) * sin((ad + am / 60 +
+        bd + bm / 60) / 2) / 2
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: track + abs((ald + alm / 60) - (bld + blm / 60)) * sin((ad + am / 60 +
+          bd + bm / 60) / 2) / 2
+      - id: d2
+        formula: track - abs((ald + alm / 60) - (bld + blm / 60)) * sin((ad + am / 60 +
+          bd + bm / 60) / 2)
+      - id: d3
+        formula: track + abs((ald + alm / 60) - (bld + blm / 60)) * sin((ad + am / 60 +
+          bd + bm / 60) / 2)
+      - id: d4
+        formula: track - abs((ald + alm / 60) - (bld + blm / 60)) * cos((ad + am / 60 +
+          bd + bm / 60) / 2) / 2
+    presets:
+      - id: p1
+        values:
+          track: 250
+          ad: 53
+          am: 50
+          ald: 6
+          alm: 55
+          bd: 53
+          bm: 0
+          bld: 3
+          blm: 0
+      - id: p2
+        values:
+          track: 280
+          ad: 45
+          am: 30
+          ald: 20
+          alm: 0
+          bd: 40
+          bm: 0
+          bld: 10
+          blm: 0
+      - id: p3
+        values:
+          track: 310
+          ad: 60
+          am: 0
+          ald: 5
+          alm: 0
+          bd: 58
+          bm: 30
+          bld: 25
+          blm: 30
+    explanation: >-
+      On a great circle the track changes along the route. The rhumb line track
+      lies midway between the initial and final great circle tracks, so the
+      final track differs from the rhumb line track by half of the convergency.
+      The convergency is the longitude difference multiplied by the sine of the
+      mean latitude.
+
+
+      **Solution**
+
+
+      - Longitude difference = {{= abs((ald + alm / 60) - (bld + blm / 60))}}°
+
+      - Mean latitude = {{= (ad + am / 60 + bd + bm / 60) / 2}}°
+
+      - Convergency = {{= abs((ald + alm / 60) - (bld + blm / 60)) * sin((ad +
+      am / 60 + bd + bm / 60) / 2)}}°
+
+      - Final true track = {{f: track - abs((ald + alm / 60) - (bld + blm / 60))
+      * sin((ad + am / 60 + bd + bm / 60) / 2) / 2}} = {{n: track - abs((ald +
+      alm / 60) - (bld + blm / 60)) * sin((ad + am / 60 + bd + bm / 60) / 2) /
+      2}} = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: half the convergency was added instead of subtracted.
+
+      - **{{d2}}°**: the full convergency was subtracted instead of half of it.
+
+      - **{{d3}}°**: the full convergency was added to the rhumb line track.
+
+      - **{{d4}}°**: the cosine of the mean latitude was used instead of the
+      sine.
+- id: QRJIGKUH
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618733
+    - AVEXAM-33335
+    - BGS-611447
+  annexes: []
+  learningObjectives:
+    - 061.03.03.01.01
+  template:
+    type: simple
+    question: Consider any two positions with a difference in Longitude of 7º. The
+      proportional difference between the rhumb line distance and the great
+      circle distance between the two positions increases with…
+    explanation: ""
+    options:
+      - id: OGHLEDTTG
+        text: decreasing Latitude.
+        correct: false
+        why: ""
+      - id: O3G8U3ZIN
+        text: increasing altitude.
+        correct: false
+        why: ""
+      - id: OQCCBDZIR
+        text: increasing Latitude.
+        correct: true
+        why: ""
+      - id: ORN5IIFTM
+        text: decreasing convergence.
+        correct: false
+        why: ""
+- id: QRODEDCKW
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612197
+    - AVEXAM-73333
+  annexes: []
+  learningObjectives:
+    - 061.03.02.01.01
+  template:
+    type: simple
+    question: "If you wish to follow a constant true track value:"
+    explanation: ""
+    options:
+      - id: OQPCYNKYG
+        text: You, in most cases, will also fly the shortest track.
+        correct: false
+        why: ""
+      - id: OBLP5PU1Y
+        text: You must fly East/West or North/South.
+        correct: false
+        why: ""
+      - id: OLS6RYVGW
+        text: A great circle must be flown.
+        correct: false
+        why: ""
+      - id: OVU9E5LJA
+        text: A rhumb line must be flown.
+        correct: true
+        why: ""
+- id: QRYDBYUJ
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614132
+    - BGS-610028
+    - AVEXAM-61883
+    - ATPLGS-625423
+    - ATPLGS-110069
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.01
+  template:
+    type: chart
+    question: A great circle intersects the Equator in 030°W with a great circle
+      direction of 035°(T). An aircraft tracking the great circle will reach the
+      maximum Northern/Southern latitude at position…
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 55°N, 060°E.
+        wrongAnswers:
+          - 35°S, 120°W.
+          - 55°S, 060°E.
+          - 35°N, 120°W.
+        explanation: >-
+          The great circle reaches its highest latitude when its track is east
+          or west. The sine of the highest latitude's complement equals sin 035°
+          times cos 0°, so cos(latitude) = sin 35° = 0.574, which is 55° of
+          latitude.
+
+
+          The track is heading north-east, so the vertex is **55°N**, and it
+          lies 90° of longitude from the equator crossing: 30°W + 90° =
+          **060°E**.
+- id: QSMJ9LSOG
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612208
+    - BGS-611634
+    - ATPLGS-124485
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.01
+  template:
+    type: simple
+    question: Which statement about the vertex of a great circle is true? In the
+      vertex the..
+    explanation: ""
+    options:
+      - id: OUJE9LITX
+        text: great circle reaches its highest latitude.
+        correct: true
+        why: ""
+      - id: ODYPVZZVU
+        text: True Track reaches its minimum value.
+        correct: false
+        why: ""
+      - id: OLMLHEQVP
+        text: True Track reaches its maximum value.
+        correct: false
+        why: ""
+      - id: O3LHT37WI
+        text: great circle reaches its highest longitude.
+        correct: false
+        why: ""
+- id: QSMRN8FYT
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619391
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: calculation
+    question: >-
+      A pilot plans a flight from position A to position B via the shortest
+      distance (great circle).
+
+
+      - Position A: {{lat}}°N, {{lonA}}°E
+
+      - Position B: {{lat}}°N, {{lonB}}°W
+
+
+      What is the initial true track from A to B?
+    variables:
+      - id: lat
+        label: Latitude
+        unit: °
+      - id: lonA
+        label: Longitude of A (east)
+        unit: °
+      - id: lonB
+        label: Longitude of B (west)
+        unit: °
+    answer:
+      formula: 360 + atan2(0 - sin(lonA + lonB) * cos(lat), sin(lat) * cos(lat) * (1 -
+        cos(lonA + lonB)))
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: "270"
+      - id: d2
+        formula: 0 - atan2(0 - sin(lonA + lonB) * cos(lat), sin(lat) * cos(lat) * (1 -
+          cos(lonA + lonB)))
+      - id: d3
+        formula: atan2(0 - sin(lonA + lonB) * cos(lat), sin(lat) * cos(lat) * (1 -
+          cos(lonA + lonB))) + 180
+      - id: d4
+        formula: 180 - atan2(0 - sin(lonA + lonB) * cos(lat), sin(lat) * cos(lat) * (1 -
+          cos(lonA + lonB)))
+    presets:
+      - id: p1
+        values:
+          lat: 37
+          lonA: 10
+          lonB: 10
+      - id: p2
+        values:
+          lat: 50
+          lonA: 20
+          lonB: 5
+      - id: p3
+        values:
+          lat: 60
+          lonA: 5
+          lonB: 15
+    explanation: >-
+      Along a parallel, the rhumb line runs due west (270°). The great circle
+      between two points on the same parallel bends towards the nearer pole, so
+      its initial track is north of west.
+
+
+      **Solution**
+
+
+      - Longitude difference from A to B: {{lonA}}° E to {{lonB}}° W, a total of
+      {{= lonA + lonB}}° west
+
+      - Great circle initial track at latitude {{lat}}°N: **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the rhumb line along the parallel, which ignores the bend
+      of the great circle.
+
+      - **{{d2}}°**: the reciprocal bend, measured the wrong way round the
+      compass.
+
+      - **{{d3}}°**: the bend is added to the wrong half of the compass.
+
+      - **{{d4}}°**: the mirror image of the true track about due north.
+- id: QSWVPRAO
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619472
+    - BGS-610053
+    - AVEXAM-34851
+  annexes: []
+  learningObjectives:
+    - 061.03.02.01.01
+  template:
+    type: simple
+    question: If an aircraft follows a rhumb line track of 085°TT from the position
+      86°N, 020°E, it will…
+    explanation: ""
+    options:
+      - id: O4VOK0PRZ
+        text: fly an undetermined track to the north.
+        correct: false
+        why: ""
+      - id: OEUE72RPP
+        text: follow a small circle track north of the 86°N parallel.
+        correct: false
+        why: ""
+      - id: OSJOUNJW2
+        text: follow a line which lies at first to the north of the 86°N parallel until
+          reaching a point where the longitude has changed by 180°, when it will
+          turn to the south.
+        correct: false
+        why: ""
+      - id: O1DCSD2BS
+        text: fly a spiral track to the North Pole.
+        correct: true
+        why: ""
+- id: QUEIOE8SR
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614575
+    - BGS-611489
+    - ATPLGS-124282
+  annexes: []
+  learningObjectives:
+    - 061.03.01.01.04
+  template:
+    type: simple
+    question: "If an aircraft flies along a VOR radial it will follow a:"
+    explanation: ""
+    options:
+      - id: OGOG7KTKU
+        text: rhumb line track
+        correct: false
+        why: ""
+      - id: OR6VQESWU
+        text: constant magnetic track
+        correct: false
+        why: ""
+      - id: OFIPTFKLH
+        text: line of constant bearing
+        correct: false
+        why: ""
+      - id: OUYAFJTAF
+        text: great circle track
+        correct: true
+        why: ""
+- id: QUOZQ4CWC
+  docId: "061.03"
+  relatedQuestions:
+    - QK5EEREV9
+  externalIds:
+    - ATPLQ-612721
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: A pilot is flying from A {{lat}}°S, {{lonw}}°W to B {{lat}}°S,
+      {{lone}}°E. What is the angle between the initial true great circle track
+      and the true rhumb line track?
+    variables:
+      - id: lat
+        label: latitude
+        unit: °
+      - id: lonw
+        label: west longitude of A
+        unit: °
+      - id: lone
+        label: east longitude of B
+        unit: °
+    answer:
+      formula: (360 - lonw - lone) / 2 * sin(lat)
+      unit: °
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: (360 - lonw - lone) * sin(lat)
+      - id: d2
+        formula: (360 - lonw - lone) / 2
+      - id: d3
+        formula: (360 - lonw - lone) / 2 * cos(lat)
+      - id: d4
+        formula: (lone - lonw) / 2 * sin(lat)
+    presets:
+      - id: p1
+        values:
+          lat: 60
+          lonw: 165
+          lone: 177
+      - id: p2
+        values:
+          lat: 50
+          lonw: 170
+          lone: 160
+      - id: p3
+        values:
+          lat: 40
+          lonw: 150
+          lone: 170
+    explanation: >-
+      The angle between the great circle and the rhumb line is half the
+      convergency. The convergency is the longitude difference multiplied by the
+      sine of the latitude. Here the route crosses the date line, so the
+      longitude difference is 360 minus the two longitudes.
+
+
+      **Solution**
+
+
+      Longitude difference: 360 - {{lonw}} - {{lone}} = {{= 360 - lonw - lone}}°
+
+
+      Angle: {{f: (360 - lonw - lone) / 2 * sin(lat)}} = {{n: (360 - lonw -
+      lone) / 2 * sin(lat)}} = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the full convergency is used, without halving it.
+
+      - **{{d2}}°**: the latitude factor is forgotten.
+
+      - **{{d3}}°**: the cosine of the latitude is used instead of the sine.
+
+      - **{{d4}}°**: the difference between the two longitudes is used instead
+      of the distance across the date line.
+- id: QURYFHTA
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619541
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: simple
+    question: An aircraft is flying from A(60°N, 060°W) to B(60°N,070°W). The true
+      great circle track, when passing 064°W will be…
+    explanation: ""
+    options:
+      - id: O0TFQTLLE
+        text: 270.0°
+        correct: false
+        why: ""
+      - id: OG770N25H
+        text: 270.8°
+        correct: true
+        why: ""
+      - id: ONJKJNCZA
+        text: 265.7°
+        correct: false
+        why: ""
+      - id: OUOO8FMVR
+        text: 277.8°
+        correct: false
+        why: ""
+- id: QVGAEEAE
+  docId: "061.03"
+  relatedQuestions:
+    - Q8CRJUFZJ
+  externalIds:
+    - ATPLQ-613858
+    - ATPLGS-625521
+    - AVEXAM-97242
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: calculation
+    question: >-
+      A straight line route is drawn on a Direct Mercator chart from position A
+      to position B. Positions are given in decimal degrees (north and east
+      positive, south and west negative):
+
+
+      - Position A: latitude {{lat1}}, longitude {{lon1}}
+
+      - Position B: latitude {{lat2}}, longitude {{lon2}}
+
+      - Rhumb line track measured at A: {{rhumb}}° T
+
+
+      What is approximately the great circle track from A to B, measured at
+      position A?
+    variables:
+      - id: lat1
+        label: Latitude of A
+        unit: °
+      - id: lon1
+        label: Longitude of A
+        unit: °
+      - id: lat2
+        label: Latitude of B
+        unit: °
+      - id: lon2
+        label: Longitude of B
+        unit: °
+      - id: rhumb
+        label: Rhumb line track at A
+        unit: °T
+    answer:
+      formula: rhumb - (lon2 - lon1) * sin((lat1 + lat2) / 2) / 2
+      unit: ° T
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: rhumb + (lon2 - lon1) * sin((lat1 + lat2) / 2) / 2
+      - id: d2
+        formula: rhumb - (lon2 - lon1) * sin((lat1 + lat2) / 2)
+      - id: d3
+        formula: rhumb
+    presets:
+      - id: p1
+        values:
+          lat1: 45.5
+          lon1: -13.416667
+          lat2: 41.7
+          lon2: 3.95
+          rhumb: 129
+      - id: p2
+        values:
+          lat1: 40
+          lon1: -10
+          lat2: 35
+          lon2: 5
+          rhumb: 100
+    explanation: >-
+      The great circle track differs from the rhumb line track by the conversion
+      angle, which is half the convergency. The convergency is the difference in
+      longitude multiplied by the sine of the mean latitude.
+
+
+      **Solution**
+
+
+      Convergency: {{= (lon2 - lon1) * sin((lat1 + lat2) / 2)}}°, so the
+      conversion angle is half of it: {{= (lon2 - lon1) * sin((lat1 + lat2) / 2)
+      / 2}}°
+
+
+      Great circle track at A: {{rhumb}}° minus the conversion angle =
+      **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: the conversion angle is added instead of subtracted.
+
+      - **{{d2}}**: the full convergency is subtracted instead of half.
+
+      - **{{d3}}**: the rhumb line track is taken as the great circle track.
+- id: QVM4MVNYV
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613123
+    - ATPLGS-124465
+    - BGS-611623
+    - AVEXAM-46721
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: simple
+    question: The difference between the initial true track of the great circle on
+      the surface of the Earth joining two positions A and B (of unequal
+      northern latitude and eastern longitude) and the true track of arrival at
+      B is equal to..
+    explanation: ""
+    options:
+      - id: OZH6M07JU
+        text: the conversion angle of the meridians at A and B.
+        correct: false
+        why: ""
+      - id: OGIEEUBZL
+        text: the earth convergency of the meridians at A and B.
+        correct: true
+        why: ""
+      - id: OT23BKLZR
+        text: half of the conversion angle of the meridians at A and B.
+        correct: false
+        why: ""
+      - id: OGUNXIZJT
+        text: half of the earth convergency of the meridians at A and B.
+        correct: false
+        why: ""
+- id: QVTGKIJN
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614809
+    - BGS-610057
+    - ATPLGS-110057
+    - AVEXAM-42821
+    - BGS-610051
+    - ATPLGS-124447
+    - AVEXAM-83902
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: simple
+    question: When flying on a westerly great circle track in the southern
+      hemisphere, the..
+    explanation: ""
+    options:
+      - id: ORUWVNZEP
+        text: rhumb line track between the departure point and the destination will
+          always be on the left.
+        correct: false
+        why: ""
+      - id: O32HT4YGY
+        text: true track will decrease.
+        correct: false
+        why: ""
+      - id: OGPUQBKYD
+        text: track will spiral and finally end up at the South Pole.
+        correct: false
+        why: ""
+      - id: OXKYEEOZ5
+        text: true track will increase.
+        correct: true
+        why: ""
+- id: QVZTTEST
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614357
+    - ATPLGS-626322
+    - ATPLQ-612021
+    - AVEXAM-37796
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.02
+  template:
+    type: calculation
+    question: |-
+      Two positions lie on the same parallel of latitude:
+
+      - Latitude of both positions: {{lat}}°N
+      - Difference in longitude: {{dlon}}°
+
+      What is the Earth convergency between the two positions?
+    variables:
+      - id: lat
+        label: Latitude
+        unit: °
+      - id: dlon
+        label: Difference in longitude
+        unit: °
+    answer:
+      formula: dlon * sin(lat)
+      unit: °
+      decimals: 2
+    distractors:
+      - id: d1
+        formula: dlon * cos(lat)
+      - id: d2
+        formula: dlon / sin(lat)
+      - id: d3
+        formula: lat * sin(dlon)
+      - id: d4
+        formula: dlon * sin(lat / 2)
+    presets:
+      - id: p1
+        values:
+          lat: 65.5
+          dlon: 25
+      - id: p2
+        values:
+          lat: 25.25
+          dlon: 15.75
+      - id: p3
+        values:
+          lat: 50
+          dlon: 10
+    explanation: >-
+      The Earth convergency between two meridians is the difference in longitude
+      multiplied by the sine of the latitude. Both positions lie on the same
+      parallel, so the convergency depends only on the longitude difference and
+      that latitude.
+
+
+      **Solution**
+
+
+      {{f: dlon * sin(lat)}}
+
+
+      {{n: dlon * sin(lat)}} = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: uses the cosine instead of the sine of the latitude
+
+      - **{{d2}}°**: divides by the sine of the latitude instead of multiplying
+
+      - **{{d3}}°**: swaps the latitude and the longitude difference
+
+      - **{{d4}}°**: uses half of the latitude
+- id: QX6BTISKG
+  docId: "061.03"
+  relatedQuestions:
+    - Q1SFIPPTE
+  externalIds:
+    - ATPLQ-619640
+    - BGS-611658
+    - AVEXAM-96856
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: calculation
+    question: >-
+      An aircraft flies from waypoint A to waypoint B along a great circle. Both
+      waypoints lie on the same parallel of latitude:
+
+
+      - Waypoint A: {{lat_d}}°{{lat_m}}'S, {{lon_a_d}}°{{lon_a_m}}'E
+
+      - Waypoint B: {{lat_d}}°{{lat_m}}'S, {{lon_b_d}}°{{lon_b_m}}'W
+
+
+      What is the great circle track on arrival at waypoint B in °T?
+    variables:
+      - id: lat_d
+        label: Latitude, degrees
+        unit: °
+      - id: lat_m
+        label: Latitude, minutes
+        unit: "'"
+      - id: lon_a_d
+        label: Longitude of A, degrees
+        unit: °
+      - id: lon_a_m
+        label: Longitude of A, minutes
+        unit: "'"
+      - id: lon_b_d
+        label: Longitude of B, degrees
+        unit: °
+      - id: lon_b_m
+        label: Longitude of B, minutes
+        unit: "'"
+    answer:
+      formula: atan2(sin(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60))),
+        sin((0 - (lat_d + lat_m / 60))) * (1 - cos(((lon_a_d + lon_a_m / 60) +
+        (lon_b_d + lon_b_m / 60))))) + 180
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: ((atan2(sin((0 - ((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m /
+          60)))), sin((0 - (lat_d + lat_m / 60))) * (1 - cos((0 - ((lon_a_d +
+          lon_a_m / 60) + (lon_b_d + lon_b_m / 60))))))) - 360 *
+          floor((atan2(sin((0 - ((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m /
+          60)))), sin((0 - (lat_d + lat_m / 60))) * (1 - cos((0 - ((lon_a_d +
+          lon_a_m / 60) + (lon_b_d + lon_b_m / 60))))))) / 360))
+      - id: d2
+        formula: 360 - (atan2(sin(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m /
+          60))), sin((0 - (lat_d + lat_m / 60))) * (1 - cos(((lon_a_d + lon_a_m
+          / 60) + (lon_b_d + lon_b_m / 60))))) + 180)
+      - id: d3
+        formula: ((atan2(sin(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60))),
+          sin((0 - (lat_d + lat_m / 60))) * (1 - cos(((lon_a_d + lon_a_m / 60) +
+          (lon_b_d + lon_b_m / 60)))))) - 360 * floor((atan2(sin(((lon_a_d +
+          lon_a_m / 60) + (lon_b_d + lon_b_m / 60))), sin((0 - (lat_d + lat_m /
+          60))) * (1 - cos(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m /
+          60)))))) / 360))
+      - id: d4
+        formula: "90"
+    presets:
+      - id: p1
+        values:
+          lat_d: 32
+          lat_m: 35
+          lon_a_d: 168
+          lon_a_m: 12
+          lon_b_d: 165
+          lon_b_m: 48
+      - id: p2
+        values:
+          lat_d: 40
+          lat_m: 0
+          lon_a_d: 150
+          lon_a_m: 0
+          lon_b_d: 170
+          lon_b_m: 0
+      - id: p3
+        values:
+          lat_d: 25
+          lat_m: 30
+          lon_a_d: 160
+          lon_a_m: 0
+          lon_b_d: 175
+          lon_b_m: 0
+    explanation: >-
+      The track changes along a great circle, so the track on arrival at B is
+      the direction of the great circle as it reaches B. It is the reciprocal of
+      the track from B back towards A. The longitude difference across the date
+      line is found by adding the two longitudes, as one is east and one is
+      west.
+
+
+      **Solution**
+
+
+      Track from B back towards A: {{= atan2(sin(((lon_a_d + lon_a_m / 60) +
+      (lon_b_d + lon_b_m / 60))), sin((0 - (lat_d + lat_m / 60))) * (1 -
+      cos(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60)))))}}°
+
+
+      {{f: atan2(sin(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60))),
+      sin((0 - (lat_d + lat_m / 60))) * (1 - cos(((lon_a_d + lon_a_m / 60) +
+      (lon_b_d + lon_b_m / 60))))) + 180}} = {{n: atan2(sin(((lon_a_d + lon_a_m
+      / 60) + (lon_b_d + lon_b_m / 60))), sin((0 - (lat_d + lat_m / 60))) * (1 -
+      cos(((lon_a_d + lon_a_m / 60) + (lon_b_d + lon_b_m / 60))))) + 180}} =
+      **{{answer}}°T**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the initial track at A is used instead of the track on
+      arrival at B.
+
+      - **{{d2}}°**: the reciprocal of the correct track is used.
+
+      - **{{d3}}°**: the direction back towards A is used.
+
+      - **{{d4}}°**: due east (the rhumb line track along a parallel) is used
+      instead of the great circle track.
+- id: QXLAEZYL
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612026
+    - AVEXAM-68351
+    - BGS-611484
+  annexes: []
+  learningObjectives:
+    - 061.03.03.02.01
+  template:
+    type: simple
+    question: An aircraft is flying from (60°N, 050°W) to (50°N, 060°W) with a rhumb
+      line track of 209.7°. The initial great circle track is (1) \_\_\_\_\_ and
+      the final great circle track is (2) \_\_\_\_\_.
+    explanation: ""
+    options:
+      - id: OTVNMQB9B
+        text: (1) 205.6°; (2) 213.8°
+        correct: false
+        why: ""
+      - id: O1UMTADXR
+        text: (1) 217.9°; (2) 201.5°
+        correct: false
+        why: ""
+      - id: OBJHIIT86
+        text: (1) 213.8°; (2) 205.6°
+        correct: true
+        why: ""
+      - id: OB80HKX25
+        text: (1) 201.5°; (2) 217.9°
+        correct: false
+        why: ""
+- id: QYLZDRJ1M
+  docId: "061.03"
+  relatedQuestions:
+    - QQQWG9NXN
+  externalIds:
+    - ATPLQ-612716
+    - AVEXAM-56628
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: calculation
+    question: >-
+      A pilot flies the great circle (shortest distance) from position X to
+      position Z. Position Z is in the northern hemisphere, and its exact
+      coordinates are not needed. The data are:
+
+
+      - Initial true track at X: {{trk}}°
+
+      - Convergency between X and Z: {{conv}}°
+
+
+      What is the final true track at Z?
+    variables:
+      - id: trk
+        label: initial true track
+        unit: °
+      - id: conv
+        label: convergency
+        unit: °
+    answer:
+      formula: trk + conv
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: trk + conv / 2
+      - id: d2
+        formula: trk - conv / 2
+      - id: d3
+        formula: trk - conv
+      - id: d4
+        formula: trk
+    presets:
+      - id: p1
+        values:
+          trk: 122
+          conv: 20
+      - id: p2
+        values:
+          trk: 275
+          conv: 12
+      - id: p3
+        values:
+          trk: 60
+          conv: 8
+    explanation: >-
+      Convergency is the angle by which the track changes between two positions
+      along a great circle. The final track is the initial track changed by the
+      full convergency. Here the convergency is positive, so it is added to the
+      initial track.
+
+
+      **Solution**
+
+
+      - Final true track = initial track + convergency = {{f: trk + conv}} =
+      {{n: trk + conv}} = **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: only half the convergency was applied.
+
+      - **{{d2}}°**: half the convergency was subtracted, so the track turned
+      the wrong way.
+
+      - **{{d3}}°**: the convergency was subtracted instead of added.
+
+      - **{{d4}}°**: the convergency was ignored and the initial track was kept.
+- id: QYNRRXIR
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617837
+    - BGS-611412
+    - AVEXAM-89586
+  annexes: []
+  learningObjectives:
+    - 061.03.01.02.01
+  template:
+    type: simple
+    question: An aircraft flies on the Northern Hemisphere following an easterly
+      direction to a destination aerodrome with a higher latitude than the
+      departure aerodrome. A straight line is plotted between the departure and
+      destination aerodrome to determine the shortest ground distance and the
+      desired track. Which of the following statements is correct regarding this
+      flight?
+    explanation: ""
+    options:
+      - id: OVU9CI5NA
+        text: Convergency decreases with increasing latitude.
+        correct: false
+        why: ""
+      - id: OFNDBMN3O
+        text: As great circle tracks are plotted as straight lines, they do NOT have a
+          changing track direction.
+        correct: false
+        why: ""
+      - id: OHOL4YIZU
+        text: Due to the increase in latitude, the final track angle at the destination
+          will be higher than at the departure.
+        correct: false
+        why: ""
+      - id: O1916JGYM
+        text: Due to Earth convergency, the track direction will continuously increase
+          during the flight.
+        correct: true
+        why: ""
+- id: QZVHIKXTT
+  docId: "061.03"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615364
+    - BGS-611267
+    - ATPLGS-627949
+    - AVEXAM-50049
+  annexes: []
+  learningObjectives:
+    - 061.04.02.04.02
+  template:
+    type: calculation
+    question: On a Lambert Conformal Chart with standard parallels at {{p1}}°N and
+      {{p2}}°N, the initial track angle of an airway from point A ({{lat}}°N
+      {{lonw}}°W) to a point B ({{lat2}}°N {{lone}}°E) is {{trk}}°(T). Determine
+      the arrival track at B.
+    variables:
+      - id: p1
+        label: first standard parallel
+        unit: °
+      - id: p2
+        label: second standard parallel
+        unit: °
+      - id: lat
+        label: latitude of A
+        unit: °
+      - id: lonw
+        label: west longitude of A
+        unit: °
+      - id: lat2
+        label: latitude of B
+        unit: °
+      - id: lone
+        label: east longitude of B
+        unit: °
+      - id: trk
+        label: initial track
+        unit: °
+    answer:
+      formula: trk + (lonw + lone) * sin((p1 + p2) / 2)
+      unit: °(T)
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: trk - (lonw + lone) * sin((p1 + p2) / 2)
+      - id: d2
+        formula: trk + lonw + lone
+      - id: d3
+        formula: trk + (lonw + lone) * sin(lat2)
+    presets:
+      - id: p1
+        values:
+          p1: 40
+          p2: 55
+          lat: 54
+          lonw: 15
+          lat2: 57
+          lone: 10
+          trk: 68
+      - id: p2
+        values:
+          p1: 40
+          p2: 55
+          lat: 52
+          lonw: 10
+          lat2: 55
+          lone: 12
+          trk: 75
+      - id: p3
+        values:
+          p1: 40
+          p2: 55
+          lat: 50
+          lonw: 20
+          lat2: 53
+          lone: 5
+          trk: 60
+    explanation: >-
+      On a Lambert chart meridians converge with the cone constant n, so the
+      track changes along the route by convergency = change of longitude x n,
+      with n = ln(cos p1 / cos p2) / ln(tan(45 - p1/2) / tan(45 - p2/2)). Flying
+      east in the northern hemisphere the track increases.
+
+
+      **Solution**
+
+
+      Change of longitude = {{= lonw + lone}}°, n = {{= sin((p1 + p2) / 2)}}
+
+
+      Arrival track = {{trk}} + {{= (lonw + lone) * sin((p1 + p2) / 2)}} =
+      **{{answer}}°(T)**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°(T)**: the convergency is subtracted instead of added.
+
+      - **{{d2}}°(T)**: the full change of longitude is used (n = 1).
+
+      - **{{d3}}°(T)**: the sine of the latitude of B is used as the cone
+      constant instead of the chart's n.

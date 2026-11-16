@@ -1,0 +1,909 @@
+- id: Q3TCECCGQ
+  docId: "022.10"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228419
+    - AVEXAM-2487
+  annexes: []
+  learningObjectives:
+    - 022.10.01.02.04
+  template:
+    type: simple
+    question: During the cruise phase, how may a pilot compare the actual winds to
+      those forecasted on the flight plan?
+    explanation: ""
+    options:
+      - id: OTCTIXKVP
+        text: From the altimeter setting.
+        correct: false
+        why: ""
+      - id: OXBYSAHG0
+        text: From the VOR/DME information.
+        correct: false
+        why: ""
+      - id: OK1BKKKFP
+        text: Via data uplink on the MCDU.
+        correct: true
+        why: ""
+      - id: OZXHRU7CO
+        text: ​Using the FMS wind data.
+        correct: false
+        why: ""
+- id: QAGTKLAF
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223538
+    - AVEXAM-81925
+    - BGS-221620
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.02
+  template:
+    type: simple
+    question: You are in the cruise, and approaching a FIR in which CPDLC is
+      available but NOT compulsory. What factors influence whether to use the
+      data link or rely on voice communications?
+    explanation: ""
+    options:
+      - id: OIUFYJQQQ
+        text: Voice communications are more reliable and easier for the controller.
+        correct: false
+        why: ""
+      - id: OSN8ICXKS
+        text: Short-cuts and direct routings are easier for both pilots and controllers
+          using voice communications.
+        correct: false
+        why: ""
+      - id: OLUZNWUFP
+        text: Pilot errors and workload are reduced, and ATC workload is reduced, by
+          using datalink communications.
+        correct: true
+        why: ""
+      - id: OWCHH3ZIV
+        text: In remote areas, with datalink there is a greater risk of being out of
+          range of the current controller WITHOUT being handed over to the next
+          controller.
+        correct: false
+        why: ""
+- id: QBJBCWCR
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225230
+    - ATPLGS-127556
+    - AVEXAM-4159
+    - BGS-221245
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.01
+  template:
+    type: simple
+    question: FANS was developed by ICAO..
+    explanation: ""
+    options:
+      - id: ORMSFMHMH
+        text: to allow more aircraft to safely and efficiently utilise a given volume of
+          airspace.
+        correct: true
+        why: ""
+      - id: OIWVVNFKI
+        text: in order to automate and distribute departure slots.
+        correct: false
+        why: ""
+      - id: OUHM2EX0L
+        text: to effectively monitor aircraft systems' status information and fuel
+          consumption.
+        correct: false
+        why: ""
+      - id: OXRMPCF8Z
+        text: to provide a more efficient, safe, and cost-effective system for
+          communication.
+        correct: false
+        why: ""
+- id: QCYDDGTN
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226682
+    - AVEXAM-94237
+    - AVEXAM-38665
+    - BGS-220598
+    - BGS-220602
+    - ATPLGS-120769
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.03
+  template:
+    type: simple
+    question: "The ADS is a FANS application which consists in:"
+    explanation: ""
+    options:
+      - id: OATPDBUXQ
+        text: exchanging messages relative to route modifications and transfer of ATC
+          centre.
+        correct: false
+        why: ""
+      - id: ORC7ZDEIY
+        text: connecting the aircraft to the appropriate ATC centre.
+        correct: false
+        why: ""
+      - id: OCWSYMMIM
+        text: sending automatically aircraft surveillance data to the air traffic
+          controller.
+        correct: true
+        why: ""
+      - id: OIZYIBXKR
+        text: establishing automatic air/ground connection to verify if the datalink
+          communication can be performed.
+        correct: false
+        why: ""
+- id: QDDIRCQW
+  docId: "022.10"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-229762
+    - BGS-220608
+    - ATPLGS-106598
+    - AVEXAM-79898
+  annexes: []
+  learningObjectives:
+    - 022.10.01.02.05
+  template:
+    type: simple
+    question: Which of the following ATC clearances can be received via the datalink
+      application?
+    explanation: ""
+    options:
+      - id: OLVDPHGDW
+        text: Departure, Take off, En route.
+        correct: false
+        why: ""
+      - id: ONO75QEEB
+        text: Take off, En route, Landing.
+        correct: false
+        why: ""
+      - id: O2ZD7YKN9
+        text: Departure, En route, Landing.
+        correct: false
+        why: ""
+      - id: OHBV80FC4
+        text: Departure, Oceanic.
+        correct: true
+        why: ""
+- id: QDFLCUQK
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225581
+    - AVEXAM-2438
+    - BGS-220619
+    - ATPLGS-113292
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.09
+  template:
+    type: simple
+    question: "When sent, a MAYDAY datalink message to the ATC has the following
+      effect on ADS:"
+    explanation: ""
+    options:
+      - id: OZBLN6PMN
+        text: the ADS current contract is stopped.
+        correct: false
+        why: ""
+      - id: O89PG5KFF
+        text: the ADS current contract reporting rate is unchanged but includes more
+          data.
+        correct: false
+        why: ""
+      - id: ORKD1OTSC
+        text: no change to the current contract in process.
+        correct: false
+        why: ""
+      - id: OKDSJY4F9
+        text: the ADS contract is switched to high periodic reporting rate.
+        correct: true
+        why: ""
+- id: QEWGEHXD
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225449
+    - BGS-221699
+    - ATPLGS-628399
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.05
+  template:
+    type: simple
+    question: A message or data downlink means…
+    explanation: ""
+    options:
+      - id: OXQIPGZGX
+        text: downloading ATIS / weather / maintenance data from a ground control unit
+          via the onboard Internet connection.
+        correct: false
+        why: ""
+      - id: OI7WKM9VI
+        text: downloading and printing the ATC clearance from the Controller Pilot Data
+          Link Communication (CPDLC).
+        correct: false
+        why: ""
+      - id: OVVENXD4G
+        text: uploading ATIS / weather / maintenance data to an airborne unit
+        correct: false
+        why: ""
+      - id: O3A6AUFLP
+        text: a transmission of signals from an aircraft in flight to a station on the
+          Earth
+        correct: true
+        why: ""
+- id: QEZAMLNC
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226366
+    - AVEXAM-17223
+    - BGS-220618
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.07
+  template:
+    type: simple
+    question: 'The uplink datalink messages "CLIMB TO REACH [altitude] BY [time]" means:'
+    explanation: ""
+    options:
+      - id: OEPLZZIYN
+        text: a climb is to commence at a rate such that the specified level is reached
+          at or after the specified time.
+        correct: false
+        why: ""
+      - id: O1ZUOIRRW
+        text: a climb is to commence at or after the specified time.
+        correct: false
+        why: ""
+      - id: O85UPQ5VW
+        text: a climb is to commence at a rate such that the specified level is reached
+          at or before the specified time.
+        correct: true
+        why: ""
+      - id: OUVSF8ZSJ
+        text: a climb is to commence at or before the specified time.
+        correct: false
+        why: ""
+- id: QFQGTLBO
+  docId: "022.10"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227016
+    - BGS-221873
+    - AVEXAM-87917
+  annexes: []
+  learningObjectives:
+    - 022.10.01.02.05
+  template:
+    type: simple
+    question: Which statement is correct regarding D-ATIS?
+    explanation: ""
+    options:
+      - id: OLAZTKQV1
+        text: It is an ATIS with the identifier ‘D’.
+        correct: false
+        why: ""
+      - id: OCLUBASOD
+        text: ATIS is available only for German airfields, usually used by military
+          traffic.
+        correct: false
+        why: ""
+      - id: OM5U3I8SS
+        text: It’s a new weather report provider in Europe.
+        correct: false
+        why: ""
+      - id: OU1HNBLPL
+        text: ATIS received via datalink.
+        correct: true
+        why: ""
+- id: QGPHLNYR
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227992
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.02
+  template:
+    type: simple
+    question: >-
+      Why is data link useful?
+
+
+      a) It can be used for departure clearances.   
+
+      b) It is used in oceanic flights in remote areas   
+
+      c) It is more efficient for controllers and eliminates possible
+      interpretation errors.   
+
+      d) ATC prefer Voice transmissions because they are more clear.
+    explanation: ""
+    options:
+      - id: OXYIVELTW
+        text: c).
+        correct: false
+        why: ""
+      - id: OJUV7D6RN
+        text: a), b) and c).
+        correct: true
+        why: ""
+      - id: OCDVVB3BJ
+        text: a), b) and d).
+        correct: false
+        why: ""
+      - id: OHQ7DTBBF
+        text: b) and c).
+        correct: false
+        why: ""
+- id: QHIGDHUA
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227467
+    - ATPLGS-120766
+    - AVEXAM-41004
+    - BGS-220594
+    - AVEXAM-54766
+    - BGS-220595
+    - ATPLGS-120767
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.05
+  template:
+    type: simple
+    question: "In a datalink system, the uplink communications consist in
+      transmitting data:"
+    explanation: ""
+    options:
+      - id: OXLQ3PIF1
+        text: from the ground to the aircraft.
+        correct: true
+        why: ""
+      - id: OP8Z4GFPV
+        text: from the aircraft to the airline maintenance.
+        correct: false
+        why: ""
+      - id: OGC8FJYH6
+        text: from the flight deck to the cabin.
+        correct: false
+        why: ""
+      - id: OZKFJW4XV
+        text: from the aircraft to the ground.
+        correct: false
+        why: ""
+- id: QISZVNEG
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225309
+    - BGS-220593
+    - AVEXAM-35112
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.04
+  template:
+    type: simple
+    question: "Comparing the media used to transmit datalink communications, the
+      appropriate classification from the slowest to the fastest data
+      transmission rate is:"
+    explanation: ""
+    options:
+      - id: OKWBBY23H
+        text: SATCOM, VHF datalink, HF datalink.
+        correct: false
+        why: ""
+      - id: OQAJ7PU7L
+        text: HF datalink, VHF datalink, SATCOM.
+        correct: true
+        why: ""
+      - id: OAGEO3SXR
+        text: SATCOM, HF datalink, VHF datalink.
+        correct: false
+        why: ""
+      - id: O2W1F8G7Y
+        text: HF datalink, SATCOM, VHF datalink.
+        correct: false
+        why: ""
+- id: QKZYJOYN
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-221295
+    - AVEXAM-95241
+    - BGS-220607
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.01
+  template:
+    type: simple
+    question: "The FANS concept includes:"
+    explanation: ""
+    options:
+      - id: ORJSLYCZA
+        text: an improvement in the accuracy of the navigation systems aiming to carry
+          out RNAV approaches.
+        correct: false
+        why: ""
+      - id: OV0OSIENO
+        text: a datalink communication between the aircraft and the ATC centres to
+          replace the voice communication.
+        correct: true
+        why: ""
+      - id: OJVUDBBPH
+        text: an enhanced detection of the nearby terrain.
+        correct: false
+        why: ""
+      - id: OQEWFX0DF
+        text: an enhanced detection of the Clear Air Turbulence.
+        correct: false
+        why: ""
+- id: QLVDDQLX
+  docId: "022.10"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225416
+    - AVEXAM-37442
+    - BGS-220596
+    - ATPLGS-628044
+  annexes: []
+  learningObjectives:
+    - 022.10.01.02.02
+  template:
+    type: simple
+    question: "The ACARS allows air/ground datalink communications for:"
+    explanation: ""
+    options:
+      - id: O0CCAXWF6
+        text: Airline Operational and Public Communications (AOC & PC).
+        correct: false
+        why: ""
+      - id: OMYML6RTG
+        text: Airline Operational and Air Traffic Communications (AOC & ATC).
+        correct: true
+        why: ""
+      - id: OGEGQBWH7
+        text: Air Traffic Control Communication only (ATC).
+        correct: false
+        why: ""
+      - id: OSYI4AHKK
+        text: Airline Operational Communication only (AOC).
+        correct: false
+        why: ""
+- id: QMPPAHHAC
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225711
+    - ATPLGS-120766
+    - AVEXAM-41004
+    - BGS-220594
+    - AVEXAM-54766
+    - BGS-220595
+    - ATPLGS-120767
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.05
+  template:
+    type: simple
+    question: "In a datalink system, the downlink communications consist in
+      transmitting data:"
+    explanation: ""
+    options:
+      - id: OQSWTB3I4
+        text: from the ground to the aircraft.
+        correct: false
+        why: ""
+      - id: O4Y8TSAAZ
+        text: from the airline maintenance to the aircraft.
+        correct: false
+        why: ""
+      - id: OHYZBLJC3
+        text: from the aircraft to the ground.
+        correct: true
+        why: ""
+      - id: OUTGKXGMS
+        text: from the flight deck to the cabin.
+        correct: false
+        why: ""
+- id: QMYNCQJY
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-222403
+    - BGS-220610
+    - AVEXAM-83635
+    - ATPLGS-627831
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.06
+  template:
+    type: simple
+    question: "The notification phase (LOG ON) is a FANS application which consists
+      in transmitting aircraft information and:"
+    explanation: ""
+    options:
+      - id: ODGUZMR8Z
+        text: aircraft position to request the datalink clearance to enter an airspace.
+        correct: false
+        why: ""
+      - id: OHKGH5LQR
+        text: associated datalink capability, prior to operating any datalink
+          communications with ATC.
+        correct: true
+        why: ""
+      - id: OBSKSOH5M
+        text: park stand to the airport pre-flight controller to request the datalink
+          pre-departure clearance (PDC).
+        correct: false
+        why: ""
+      - id: OHJCNSXRN
+        text: aircraft position to the airport ground controller to request the datalink
+          taxi clearance.
+        correct: false
+        why: ""
+- id: QOFLWEXO
+  docId: "022.10"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227172
+    - ATPLGS-106593
+    - AVEXAM-6104
+  annexes: []
+  learningObjectives:
+    - 022.10.01.02.03
+  template:
+    type: multiple-correct
+    question: "The systems that can be connected to the Communication Management
+      Unit (CMU), are:"
+    explanation: ""
+    options:
+      - text: – Flight Director
+        correct: false
+        why: ""
+      - text: – VHF
+        correct: true
+        why: ""
+      - text: – HF
+        correct: true
+        why: ""
+      - text: – SATCOM
+        correct: true
+        why: ""
+- id: QOKYTQEM
+  docId: "022.10"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228488
+    - ATPLGS-627230
+    - AVEXAM-2933
+    - BGS-221334
+  annexes: []
+  learningObjectives:
+    - 022.10.01.02.03
+  template:
+    type: simple
+    question: What are the functions of the on-board ATSU (Air Traffic Services
+      Unit)? To enable access to all available communications media,
+    explanation: ""
+    options:
+      - id: OCNCN7O4L
+        text: manage the HMI (Human Machine Interface), and manage engine thrust.
+        correct: false
+        why: ""
+      - id: OUZUVWDIO
+        text: manage the HMI (Human Machine Interface), and select the appropriate ATC
+          centre for datalink throughout the flight.
+        correct: true
+        why: ""
+      - id: ONXS5R5SE
+        text: select the appropriate ATC centre for data link throughout the flight, and
+          manage EGPWS warnings.
+        correct: false
+        why: ""
+      - id: OBGPIMMT4
+        text: select the appropriate ATC centre for data link throughout the flight, and
+          manage engine thrust.
+        correct: false
+        why: ""
+- id: QPFHAKDP
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226358
+    - BGS-222097
+    - AVEXAM-76820
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.03
+  template:
+    type: simple
+    question: Which channels are currently used for datalink transmissions by Air
+      Traffic Services?
+    explanation: ""
+    options:
+      - id: OV4DSDASP
+        text: VHF and SATCOM only.
+        correct: false
+        why: ""
+      - id: OWCNYMBIQ
+        text: SATCOM, HF and UHF.
+        correct: false
+        why: ""
+      - id: OFC6YHLHF
+        text: VHF, SATCOM and UHF.
+        correct: false
+        why: ""
+      - id: OIDSEY9TM
+        text: VHF, SATCOM and HF.
+        correct: true
+        why: ""
+- id: QQTHXHBTD
+  docId: "022.10"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-228006
+    - ATPLGS-106593
+    - AVEXAM-6104
+    - AVEXAM-80998
+    - ATPLGS-106589
+  annexes: []
+  learningObjectives:
+    - 022.10.01.02.03
+  template:
+    type: multiple-correct
+    question: "The units that can be connected to the Communication Management Unit
+      (CMU) are:"
+    explanation: ""
+    options:
+      - text: – EGPWS
+        correct: false
+        why: ""
+      - text: – HF Communication Unit
+        correct: true
+        why: ""
+      - text: – Multipurpose Control and Display Unit (MCDU)
+        correct: true
+        why: ""
+      - text: – VHF Communication Unit
+        correct: true
+        why: ""
+      - text: – Satcom
+        correct: true
+        why: ""
+- id: QTRZJFWD
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224944
+    - AVEXAM-94237
+    - BGS-220611
+    - AVEXAM-31783
+    - BGS-220602
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.06
+  template:
+    type: simple
+    question: "The Notification phase (LOG ON) is a FANS application which consists in:"
+    explanation: ""
+    options:
+      - id: OFEVATQPB
+        text: transmitting datalink messages between the pilot and ATC controller.
+        correct: false
+        why: ""
+      - id: OI6XIXLNK
+        text: sending automatically aircraft surveillance data to the ATS facility.
+        correct: false
+        why: ""
+      - id: O5UKEYVTR
+        text: establishing air/ground connection to verify if the datalink communication
+          can be performed.
+        correct: true
+        why: ""
+      - id: O2XTXHPVS
+        text: requesting to transfer datalink communication to the next ATC centre on
+          the route.
+        correct: false
+        why: ""
+- id: QTZCUFUM
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223824
+    - AVEXAM-99830
+    - BGS-220606
+    - ATPLGS-106603
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.08
+  template:
+    type: multiple-correct
+    question: "The different types of ADS contracts can be:"
+    explanation: ""
+    options:
+      - text: "– periodic: at periodic time intervals"
+        correct: true
+        why: ""
+      - text: "– on demand: when asked for by the ATC"
+        correct: true
+        why: ""
+      - text: "– on event: whenever a specified event occurs"
+        correct: true
+        why: ""
+- id: QW2TCSYTA
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-225741
+    - AVEXAM-78136
+    - BGS-220616
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.07
+  template:
+    type: simple
+    question: 'The uplink datalink message " AT [time] CLIMB TO AND MAINTAIN
+      [altitude]" means:'
+    explanation: ""
+    options:
+      - id: OIEINBSID
+        text: after the climb the specified altitude is to be maintained from the
+          specified time.
+        correct: false
+        why: ""
+      - id: OHJL3TZD2
+        text: at the specified time a climb to the specified altitude is to be started
+          and the specified altitude is to be maintained.
+        correct: true
+        why: ""
+      - id: ORCLQUDOB
+        text: after the climb the specified altitude is to be maintained until the
+          specified time.
+        correct: false
+        why: ""
+      - id: OAOEBDHBS
+        text: at the specified time the specified altitude is to be reached.
+        correct: false
+        why: ""
+- id: QYXENIMM
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-226120
+    - BGS-221883
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.05
+  template:
+    type: simple
+    question: "The following ‘The transmission of a digital message from a station
+      on Earth to an aircraft in flight’ is a definition of a:"
+    explanation: ""
+    options:
+      - id: OLZGG9ZTS
+        text: 2-way VHF radio-communication message.
+        correct: false
+        why: ""
+      - id: ODE5FYWIE
+        text: message/data uplink.
+        correct: true
+        why: ""
+      - id: OH321SKQI
+        text: 2-way HF radio-communication message.
+        correct: false
+        why: ""
+      - id: OZ6HY0PY9
+        text: message/data downlink.
+        correct: false
+        why: ""
+- id: QYZDJHQX
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-227201
+    - ATPLGS-106592
+    - AVEXAM-47484
+    - BGS-220612
+    - AVEXAM-99515
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.03
+  template:
+    type: multiple-correct
+    question: "The on-board devices that can transmit and receive datalink
+      communication can be:"
+    explanation: ""
+    options:
+      - text: – VHF COM
+        correct: true
+        why: ""
+      - text: – HF COM
+        correct: true
+        why: ""
+      - text: – SATCOM
+        correct: true
+        why: ""
+- id: QZFDNIVS
+  docId: 022.10.01.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-223188
+    - AVEXAM-48108
+    - BGS-220600
+  annexes: []
+  learningObjectives:
+    - 022.10.01.01.04
+  template:
+    type: simple
+    question: "The characteristics of the SATCOM transmissions, used for datalink
+      communications are:"
+    explanation: ""
+    options:
+      - id: O1BPLHZPN
+        text: line of sight limitation, variable quality of signals depending on
+          ionospheric conditions.
+        correct: false
+        why: ""
+      - id: OM22G6JCV
+        text: line of sight limitation, no variable quality of signals disturbed by
+          ionospheric conditions.
+        correct: false
+        why: ""
+      - id: O8ZY8HPOO
+        text: no line of sight limitation, no variable quality of signals disturbed by
+          ionospheric conditions.
+        correct: true
+        why: ""
+      - id: OMOACRH68
+        text: no line of sight limitation, variable quality of signals depending on
+          ionospheric conditions.
+        correct: false
+        why: ""
+- id: QZXGCAOJZ
+  docId: 022.10.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-224926
+    - AVEXAM-94237
+    - AVEXAM-38665
+    - BGS-220598
+    - BGS-220611
+    - AVEXAM-31783
+    - BGS-220602
+    - ATPLGS-120769
+  annexes: []
+  learningObjectives:
+    - 022.10.02.01.03
+  template:
+    type: simple
+    question: "The CPDLC is a FANS application that consists in:"
+    explanation: ""
+    options:
+      - id: ONTF9HE4D
+        text: transmitting datalink formatted messages between the pilot and ATC
+          controller.
+        correct: true
+        why: ""
+      - id: OGBSP7VP2
+        text: sending automatically aircraft surveillance data to the air traffic
+          controller.
+        correct: false
+        why: ""
+      - id: OBJDXCIJF
+        text: establishing air/ground connection to verify if the datalink communication
+          can be performed.
+        correct: false
+        why: ""
+      - id: OSFTOHDH9
+        text: connecting the aircraft to the appropriate ATC centre.
+        correct: false
+        why: ""

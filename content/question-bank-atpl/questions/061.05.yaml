@@ -1,0 +1,3536 @@
+- id: Q1HCBPVV7
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614388
+    - ATPLGS-625483
+    - AVEXAM-63178
+    - ATPLQ-616211
+    - AVEXAM-1148
+    - ATPLGS-626201
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: calculation
+    question: A time difference of {{hours}} hours, {{minutes}} minutes and
+      {{seconds}} seconds corresponds to a longitude difference of how many
+      degrees and minutes?
+    variables:
+      - id: hours
+        label: Hours
+        unit: h
+      - id: minutes
+        label: Minutes
+        unit: min
+      - id: seconds
+        label: Seconds
+        unit: s
+    answer:
+      formula: round((hours * 3600 + minutes * 60 + seconds) / 4)
+      unit: minutes
+      decimals: 0
+      format: h'°'mm'′'
+    distractors:
+      - id: d1
+        formula: round((hours * 3600 + minutes * 60 + seconds) / 3.75)
+      - id: d2
+        formula: round((hours * 3600 + minutes * 60 + seconds) / 4.5)
+      - id: d3
+        formula: round((hours * 3600 + minutes * 60 + seconds) / 4 + 60)
+      - id: d4
+        formula: round((hours * 3600 + minutes * 60 + seconds) / 240)
+    presets:
+      - id: p1
+        values:
+          hours: 5
+          minutes: 20
+          seconds: 20
+      - id: p2
+        values:
+          hours: 9
+          minutes: 17
+          seconds: 0
+      - id: p3
+        values:
+          hours: 3
+          minutes: 10
+          seconds: 40
+    explanation: >-
+      The Earth turns 15° every hour, so each hour of time difference
+      corresponds to 15° of longitude. Each minute of time is therefore 15
+      minutes of arc, and each second of time is a quarter of a minute of arc.
+      The time is turned into seconds and then into minutes of arc, which are
+      shown as degrees and minutes.
+
+
+      **Solution**
+
+
+      - Time in seconds: {{n: hours * 3600 + minutes * 60 + seconds}} s
+
+      - Longitude difference: {{n: (hours * 3600 + minutes * 60 + seconds) / 4}}
+      minutes of arc, which is **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: the time has been divided by 3.75 instead of 4, which is the
+      wrong rate of turn.
+
+      - **{{d2}}**: the time has been divided by 4.5, which is the wrong rate of
+      turn.
+
+      - **{{d3}}**: one degree (60 minutes of arc) has been added to the result.
+
+      - **{{d4}}**: the result in degrees has been read as minutes of arc, so
+      the answer is far too small.
+- id: Q4HBGEDRE
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613541
+  annexes: []
+  learningObjectives:
+    - 061.01.05.04.05
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: An aircraft is flying from Position A (53°N, 10°35’W) to Position B
+      (53°N, 51°45'E). Its average ground speed is equal to 375 kt. The time
+      difference to UTC is 1 hour for Position A and 4 hours for Position B.
+      Assuming the aircraft arrives at Position B on August 5th, 15:00 ST, what
+      is its time of departure from Position A?
+    explanation: ""
+    options:
+      - id: OASCY4PQU
+        text: August 5th, 04:00 ST
+        correct: true
+        why: ""
+      - id: OC6NJDMIZ
+        text: August 4th, 06:00 ST
+        correct: false
+        why: ""
+      - id: OQ19UGT6G
+        text: August 5th, 14:00 ST
+        correct: false
+        why: ""
+      - id: OHJ6EVBPN
+        text: August 4th, 16:00 ST
+        correct: false
+        why: ""
+- id: Q6QQCQXOX
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617736
+    - BGS-610086
+    - AVEXAM-72297
+    - ATPLGS-625562
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: simple
+    question: "The local mean time at longitude 095°20'W, at 00:00 UTC, is:"
+    explanation: ""
+    options:
+      - id: O2LFQNYWA
+        text: 17:38:40 same day.
+        correct: false
+        why: ""
+      - id: O1KE1IBQF
+        text: 17:38:40 previous day.
+        correct: true
+        why: ""
+      - id: OBVONQILN
+        text: 06:21:20 same day.
+        correct: false
+        why: ""
+      - id: OYCTJRXLI
+        text: 06:21:20 previous day.
+        correct: false
+        why: ""
+- id: Q9BLV4YS8
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618864
+    - ATPLGS-625354
+    - ATPLGS-625564
+  annexes: []
+  learningObjectives:
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: Which statement is true about crossing the date line? When approaching
+      the date line from the east on a westerly heading..
+    explanation: ""
+    options:
+      - id: OZY7TEXO9
+        text: one day is gained.
+        correct: true
+        why: ""
+      - id: OGZXT53TJ
+        text: 12 hours are lost.
+        correct: false
+        why: ""
+      - id: OMBXHXOPP
+        text: 12 hours are gained.
+        correct: false
+        why: ""
+      - id: OAZMGSWZD
+        text: one day is lost.
+        correct: false
+        why: ""
+- id: QA08QNU35
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615556
+    - BGS-610086
+    - AVEXAM-72297
+    - ATPLGS-625562
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: calculation
+    question: >-
+      The Local Mean Time at longitude {{lon_d}}°{{lon_m}}'E, at 00:00 UTC,
+      is...
+
+
+      Give the time as hh:mm on the same day.
+    variables:
+      - id: lon_d
+        label: Longitude, degrees
+        unit: °
+      - id: lon_m
+        label: Longitude, minutes
+        unit: "'"
+    answer:
+      formula: round((lon_d + lon_m / 60) * 4)
+      unit: minutes
+      decimals: 0
+      format: hh:mm
+    distractors:
+      - id: d1
+        formula: 1440 - round((lon_d + lon_m / 60) * 4)
+      - id: d2
+        formula: round(lon_d * 4)
+      - id: d3
+        formula: round((lon_d + lon_m / 60) * 4) + 720
+      - id: d4
+        formula: round((lon_d + lon_m / 60) / 15) * 60
+    presets:
+      - id: p1
+        values:
+          lon_d: 85
+          lon_m: 20
+      - id: p2
+        values:
+          lon_d: 100
+          lon_m: 10
+      - id: p3
+        values:
+          lon_d: 40
+          lon_m: 30
+    explanation: >-
+      Local Mean Time follows the sun at a place. The Earth turns 15° each hour,
+      so every degree of longitude is 4 minutes of time. East of Greenwich the
+      local time is ahead of UTC, so the time is found by adding the longitude,
+      converted to minutes, to 00:00 UTC.
+
+
+      **Solution**
+
+
+      Time added to 00:00 UTC = {{= (lon_d + lon_m / 60) * 4}} minutes
+
+
+      Local Mean Time = 00:00 + {{= (lon_d + lon_m / 60) * 4}} min =
+      **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: the longitude is treated as west, so the time is behind UTC
+      and falls on the previous day.
+
+      - **{{d2}}**: only the whole degrees are used and the minutes of arc are
+      ignored.
+
+      - **{{d3}}**: 12 hours are added, as if the place were on the opposite
+      side of the world.
+
+      - **{{d4}}**: the longitude is rounded to the nearest hour (15 degrees)
+      before converting.
+- id: QA2PO9IJA
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617303
+    - AVEXAM-58965
+    - AVEXAM-2837
+  annexes: []
+  learningObjectives:
+    - 061.01.05.04.05
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: >-
+      Calculate the ETA at the destination, given:
+
+
+      An aircraft departing from the western hemisphere, flying along the
+      equator to the eastern hemisphere, crossing the date line on a westerly
+      heading. The difference between the location and the destination is 15° of
+      longitude. Date and time of departure is 12:00 LMT on the 14th of August.
+      Aircraft travels at an average ground speed of 300 kt.
+    explanation: ""
+    options:
+      - id: ON2X05LTL
+        text: 10:00 LMT, 15th of August
+        correct: false
+        why: ""
+      - id: ODQ03KGPX
+        text: 14:00 LMT, 15th of August
+        correct: true
+        why: ""
+      - id: OJNJLDZ03
+        text: 10:00 LMT, 14th of August
+        correct: false
+        why: ""
+      - id: OXDP9TBOJ
+        text: 14:00 LMT, 14th of August
+        correct: false
+        why: ""
+- id: QAF1ARAGE
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611428
+    - ATPLGS-626202
+    - AVEXAM-22036
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: calculation
+    question: >-
+      Calculate the time difference between the Local Mean Times (LMT) of two
+      points:
+
+
+      - Point A: longitude {{lon_a}}° (east positive, west negative)
+
+      - Point B: longitude {{lon_b}}° (east positive, west negative)
+
+
+      Give the time difference as hours and minutes.
+    variables:
+      - id: lon_a
+        label: Longitude of A
+        unit: °
+      - id: lon_b
+        label: Longitude of B
+        unit: °
+    answer:
+      formula: abs(lon_a - lon_b) * 4
+      unit: minutes
+      decimals: 2
+      format: h 'h' mm 'min'
+    distractors:
+      - id: d1
+        formula: abs(lon_a - lon_b) * 4 + 3
+      - id: d2
+        formula: abs(lon_a - lon_b) * 4.2
+      - id: d3
+        formula: abs(lon_a - lon_b) * 4 - 1
+      - id: d4
+        formula: abs(lon_a - lon_b)
+    presets:
+      - id: p1
+        values:
+          lon_a: -105.3333
+          lon_b: -86.5
+      - id: p2
+        values:
+          lon_a: -60
+          lon_b: -40
+      - id: p3
+        values:
+          lon_a: -150
+          lon_b: -140
+    explanation: >-
+      The sun moves 15° in one hour, so each degree of longitude is 4 minutes of
+      local time. The time difference between two LMTs is four minutes times the
+      number of degrees between the two meridians, whichever side of the other
+      they are on.
+
+
+      **Solution**
+
+
+      - Longitude difference: |{{lon_a}}° − {{lon_b}}°| = {{= abs(lon_a -
+      lon_b)}}°
+
+      - Time difference: {{= abs(lon_a - lon_b)}}° × 4 min = {{= abs(lon_a -
+      lon_b) * 4}} min = **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: adds 3 minutes to the correct result
+
+      - **{{d2}}**: uses 4.2 minutes per degree instead of 4
+
+      - **{{d3}}**: subtracts one minute from the correct result
+
+      - **{{d4}}**: forgets to convert degrees of longitude into minutes of time
+- id: QB1R40UON
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612352
+  annexes: []
+  learningObjectives:
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: You are flying continuously during daylight on an eastbound track on
+      the 10th of the month. What is the date after crossing the International
+      Date Line?
+    explanation: ""
+    options:
+      - id: OSOV8SQYG
+        text: 10th of the month
+        correct: false
+        why: ""
+      - id: OGWTUTCRT
+        text: 11th of the month
+        correct: false
+        why: ""
+      - id: O51HZ0DSW
+        text: 9th of the month
+        correct: true
+        why: ""
+      - id: OJXHKJPBW
+        text: 12th of the month
+        correct: false
+        why: ""
+- id: QBFFVCB80
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612384
+  annexes: []
+  learningObjectives:
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: You are traveling westward towards your destination and during cruise
+      you cross the International Date Line. At the destination, the calendar
+      date will (1) \_\_\_\_\_, and the clock time should (2) \_\_\_\_\_.
+    explanation: ""
+    options:
+      - id: OXOGH3PSC
+        text: (1) go back one day, (2) increase by 12 hours.
+        correct: false
+        why: ""
+      - id: OINXVOLA6
+        text: (1) go forward one day, (2) decrease by 12 hours.
+        correct: true
+        why: ""
+      - id: OUGFJWEDN
+        text: (1) not change, (2) increase by 12 hours.
+        correct: false
+        why: ""
+      - id: OVMCATP0O
+        text: (1) not change, (2) not change.
+        correct: false
+        why: ""
+- id: QBPMBLOV
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614446
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+    - 061.05.03.01.01
+  template:
+    type: simple
+    question: >-
+      Given:
+
+
+      Estimated Time of Departure A 15° 15.0’N, 072° 06.0’W on 12 March is 01:00
+      ST ST = UTC -5hr   
+
+      Estimated Time of Arrival B 55° 18.0’N, 005° 45.0’E 16:15 ST on the same
+      date ST = UTC +1hr
+
+
+      According to the Jeppesen table sunset at B takes place at 18:20.Calculate
+      the flight time from A to B and the time between arrival and sunset at B.
+    explanation: ""
+    options:
+      - id: O7VEEQ8F0
+        text: 09h15m and 03h28m.
+        correct: false
+        why: ""
+      - id: O8NVWFEVD
+        text: 09h15m and 02h42m.
+        correct: true
+        why: ""
+      - id: O4TRAD2UE
+        text: 21h15m and 03h28m.
+        correct: false
+        why: ""
+      - id: OIYGZLXWJ
+        text: 21h15m and 02h42m.
+        correct: false
+        why: ""
+- id: QCCBRDLY
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614673
+    - BGS-610107
+    - ATPLGS-110147
+    - AVEXAM-44318
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: The time difference in Local Mean Time between sunset at positions A
+      50°N, 120°E and B 50°S, 120°E on the 21st of November is…
+    explanation: ""
+    options:
+      - id: OQFRNBFAR
+        text: some hours and the Sun rises earlier in B than in A.
+        correct: true
+        why: ""
+      - id: O1ORSP0S5
+        text: negligible small because A and B are located symmetrically to the Equator.
+        correct: false
+        why: ""
+      - id: OEDBH0RUW
+        text: some hours and the Sun rises earlier in A than in B.
+        correct: false
+        why: ""
+      - id: OKJPTXOBI
+        text: negligible small because A and B are located at the same meridian.
+        correct: false
+        why: ""
+- id: QCCVMYER
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617424
+    - ATPLGS-628526
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.03
+  template:
+    type: simple
+    question: "On the 30°N parallel, variations in the duration of a daylight period
+      will be greatest when the Sun is:"
+    explanation: ""
+    options:
+      - id: O67R4OMHL
+        text: Over the 30°N parallel.
+        correct: false
+        why: ""
+      - id: OKDX1IAZ0
+        text: Halfway between the Equator and the tropic of Cancer.
+        correct: false
+        why: ""
+      - id: OMPG3GSHU
+        text: Over the tropic of Capricorn.
+        correct: false
+        why: ""
+      - id: O5I1E9ZPQ
+        text: Over the Equator.
+        correct: true
+        why: ""
+- id: QCPOPDPGW
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613318
+    - ATPLGS-625431
+    - AVEXAM-86197
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: calculation
+    question: >-
+      Your position is latitude {{lat}}° N, longitude {{lon}}° (east positive,
+      west negative). The local mean time (LMT) at this position is
+      {{lmt_h}}:{{lmt_m}}.
+
+
+      What is the Coordinated Universal Time (UTC) at this moment? Give the
+      answer as hh:mm.
+    variables:
+      - id: lat
+        label: Latitude
+        unit: °
+      - id: lon
+        label: Longitude
+        unit: °
+      - id: lmt_h
+        label: LMT hour
+        unit: h
+      - id: lmt_m
+        label: LMT minute
+        unit: min
+    answer:
+      formula: (lmt_h * 60 + lmt_m - 4 * lon) - 1440 * floor((lmt_h * 60 + lmt_m - 4 *
+        lon) / 1440)
+      unit: minutes
+      decimals: 2
+      format: hh:mm
+    distractors:
+      - id: d1
+        formula: (lmt_h * 60 + lmt_m + 4 * lon) - 1440 * floor((lmt_h * 60 + lmt_m + 4 *
+          lon) / 1440)
+      - id: d2
+        formula: lmt_h * 60 + lmt_m
+      - id: d3
+        formula: (lmt_h * 60 + lmt_m - 4 * lon) + 60
+      - id: d4
+        formula: lmt_h * 60 + lmt_m - lon
+    presets:
+      - id: p1
+        values:
+          lat: 45.25
+          lon: 75.5
+          lmt_h: 7
+          lmt_m: 40
+      - id: p2
+        values:
+          lat: 52
+          lon: -60
+          lmt_h: 12
+          lmt_m: 30
+      - id: p3
+        values:
+          lat: -33
+          lon: -120
+          lmt_h: 3
+          lmt_m: 20
+    explanation: >-
+      Local Mean Time moves by 4 minutes for every degree of longitude. East of
+      Greenwich the local clock is ahead of UTC, and west of Greenwich it is
+      behind. To find UTC, take the longitude correction away from the local
+      time, and keep the result within one day.
+
+
+      **Solution**
+
+
+      - Local time in minutes after midnight: {{lmt_h}}:{{lmt_m}} = {{= lmt_h *
+      60 + lmt_m}} min
+
+      - Longitude correction: {{lon}}° × 4 min = {{= 4 * lon}} min
+
+      - UTC in minutes: {{= lmt_h * 60 + lmt_m}} − ({{= 4 * lon}}) = {{= lmt_h *
+      60 + lmt_m - 4 * lon}} min, within one day **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: adds the longitude correction instead of subtracting it
+
+      - **{{d2}}**: ignores the longitude completely
+
+      - **{{d3}}**: adds one hour to the result
+
+      - **{{d4}}**: subtracts the longitude in degrees as if it were minutes
+- id: QCTIJBGW
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617225
+    - BGS-610093
+    - AVEXAM-83091
+  annexes:
+    - 061-standard-times-list-i-places-fast-on-utc
+  learningObjectives:
+    - 061.05.02.01.01
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: >-
+      Refer to figures.   
+       An aircraft takes off from Guam at 23:00 Standard Time on 30 April local date. After a flight of 11 hrs 15 min it lands at Los Angeles (California). What is the Standard Time and local date of arrival (assume summer time rules apply)?
+    explanation: ""
+    options:
+      - id: OJT2M2GEC
+        text: 17:15 on 30 April.
+        correct: true
+        why: ""
+      - id: OBQJWMA0D
+        text: 13:15 on 1 May.
+        correct: false
+        why: ""
+      - id: OWNMVQ2TX
+        text: 16:15 on 30 April.
+        correct: false
+        why: ""
+      - id: O19C30ALM
+        text: 12:15 on 1 May.
+        correct: false
+        why: ""
+- id: QCV75SI9I
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617087
+    - BGS-611648
+  annexes: []
+  learningObjectives:
+    - 061.01.01.02.02
+  template:
+    type: simple
+    question: What effect does the inclination of the Earth's spin axis have on the
+      average daytime temperatures in January and July over inland areas of
+      Country A (25°N) and Country B (25°S)?
+    explanation: ""
+    options:
+      - id: OERYXE0RT
+        text: Country A will be colder than Country B in July and hotter in January.
+        correct: false
+        why: ""
+      - id: OMKMNHNBA
+        text: Country A will be hotter than Country B in July and colder in January.
+        correct: true
+        why: ""
+      - id: OUPDCQDI9
+        text: Average temperatures in Country A will be similar to those in Country B in
+          both months.
+        correct: false
+        why: ""
+      - id: OQB3IOHE2
+        text: Country A will be hotter than Country B in July and also in January.
+        correct: false
+        why: ""
+- id: QDAZEFHO
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616802
+    - AVEXAM-84027
+    - BGS-610112
+  annexes:
+    - 061-061-600415-sunrise-and-morning-civil-twilight-table-latitudes-n72
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: simple
+    question: |-
+      _(For this question use Annex 061-600415)._   
+       What is the UTC of sunrise at 66°48’N, 095°26’W on 27th of January?
+    explanation: ""
+    options:
+      - id: O0PRJZZBS
+        text: 15:47 UTC
+        correct: true
+        why: ""
+      - id: OAYH5JWGW
+        text: 09:27 UTC
+        correct: false
+        why: ""
+      - id: OZGTGFDPO
+        text: 15:41 UTC
+        correct: false
+        why: ""
+      - id: OUUE3NKS9
+        text: 08:14 UTC
+        correct: false
+        why: ""
+- id: QECSW97RC
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616146
+    - ATPLGS-626323
+    - BGS-611491
+    - ATPLQ-617178
+    - BGS-611426
+    - AVEXAM-8704
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: calculation
+    question: >-
+      An aircraft flies between two positions. Determine the arc-to-time
+      difference between them, given:
+
+
+      - Longitude of position A: {{lon_a}}° (east positive, west negative)
+
+      - Longitude of position B: {{lon_b}}° (east positive, west negative)
+
+
+      What is the arc-to-time difference?
+    variables:
+      - id: lon_a
+        label: longitude A
+        unit: °
+      - id: lon_b
+        label: longitude B
+        unit: °
+    answer:
+      formula: round(min(abs(lon_a - lon_b), 360 - abs(lon_a - lon_b)) * 4)
+      unit: minutes
+      decimals: 2
+      format: h 'hours' m 'minutes'
+    distractors:
+      - id: d1
+        formula: round(min(abs(lon_a - lon_b), 360 - abs(lon_a - lon_b)) * 15)
+      - id: d2
+        formula: round(min(abs(lon_a - lon_b), 360 - abs(lon_a - lon_b)))
+      - id: d3
+        formula: round(min(abs(lon_a - lon_b), 360 - abs(lon_a - lon_b)) / 4)
+      - id: d4
+        formula: round(min(abs(lon_a - lon_b), 360 - abs(lon_a - lon_b)) * 4 + 60)
+    presets:
+      - id: p1
+        values:
+          lon_a: 139.83
+          lon_b: -149.87
+      - id: p2
+        values:
+          lon_a: -0.46
+          lon_b: -73.78
+      - id: p3
+        values:
+          lon_a: 15
+          lon_b: -100
+    explanation: >-
+      The Earth turns through 360° of longitude in 24 hours, so every degree of
+      longitude corresponds to 4 minutes of time. The arc-to-time difference
+      uses the shorter arc between the two meridians, which is never more than
+      180°.
+
+
+      **Solution**
+
+
+      Longitude difference: {{= abs(lon_a - lon_b)}}°, shorter arc: {{=
+      min(abs(lon_a - lon_b), 360 - abs(lon_a - lon_b))}}°
+
+
+      {{f: round(min(abs(lon_a - lon_b), 360 - abs(lon_a - lon_b)) * 4)}} = {{n:
+      round(min(abs(lon_a - lon_b), 360 - abs(lon_a - lon_b)) * 4)}} =
+      **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: multiplies the shorter arc by 15, the rate for one hour,
+      instead of 4 minutes per degree.
+
+      - **{{d2}}**: uses the degrees directly as minutes, forgetting the factor
+      of 4.
+
+      - **{{d3}}**: divides by 4 instead of multiplying, which inverts the
+      conversion.
+
+      - **{{d4}}**: adds an extra hour to the correct value.
+- id: QEIFJFRU
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619736
+    - BGS-610105
+  annexes:
+    - 061-sunrise-and-morning-civil-twilight-table-dec-30-and-january
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: simple
+    question: |-
+      (For this question use Annex 061-600415).   
+       The GMT of Sunrise at (66º48'N, 095º26'W) on 27th of January is?
+    explanation: ""
+    options:
+      - id: OAZJS8N8J
+        text: 15:49 GMT
+        correct: true
+        why: ""
+      - id: OIBXC0UMU
+        text: 08:14 GMT
+        correct: false
+        why: ""
+      - id: OWZEJ9PYT
+        text: 15:41 GMT
+        correct: false
+        why: ""
+      - id: OIXJ0TZ4Q
+        text: 09:27 GMT
+        correct: false
+        why: ""
+- id: QELWPNUA
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617356
+    - AVEXAM-11528
+    - AVEXAM-51814
+    - BGS-611463
+    - BGS-611471
+    - ATPLQ-618211
+  annexes:
+    - 061-sunset-and-evening-civil-twilight-2017-table-october-dates-2
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: chart
+    question: Refer to figure. At what UTC time is the end of the Evening Civil
+      Twilight on the {{day}}th of October 2017 at Bodo airport in Norway (N67°
+      16', E014° 22')?
+    explanation: ""
+    variables:
+      - id: day
+        label: Day of October 2017
+        unit: ""
+    entries:
+      - id: e1
+        values:
+          day: 12
+        answer: 16:39 UTC
+        wrongAnswers:
+          - 15:43 UTC
+          - 18:39 UTC
+          - 17:36 UTC
+        explanation: >-
+          The end of evening civil twilight is read from the figure for the Bodo
+          airport on the given date.
+
+
+          **Solution**
+
+
+          - Find the 12th of October 2017 in the figure for Bodo
+
+          - Read the end of evening civil twilight: **16:39 UTC**
+
+
+          **Why the other answers are wrong**
+
+
+          - **15:43 UTC**: a value from the wrong row or column of the figure.
+
+          - **18:39 UTC**: the hour is misread.
+
+          - **17:36 UTC**: the value is read from a different date.
+      - id: e2
+        values:
+          day: 19
+        answer: 16:13 UTC
+        wrongAnswers:
+          - 18:07 UTC
+          - 15:43 UTC
+          - 16:39 UTC
+        explanation: >-
+          The end of evening civil twilight is read from the figure for the Bodo
+          airport on the given date.
+
+
+          **Solution**
+
+
+          - Find the 19th of October 2017 in the figure for Bodo
+
+          - Read the end of evening civil twilight: **16:13 UTC**
+
+
+          **Why the other answers are wrong**
+
+
+          - **18:07 UTC**: the value is read from a different date.
+
+          - **15:43 UTC**: a value from the wrong row or column of the figure.
+
+          - **16:39 UTC**: the value for 12 October is used instead.
+- id: QEPNDSDP
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612081
+    - AVEXAM-81005
+    - AVEXAM-94263
+    - AVEXAM-34951
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: >-
+      An aircraft departs from A and flies to location B. The flight involves
+      crossing the International Date Line. Determine the Local Mean Time (LMT)
+      and date upon arrival at B, given:   
+        
+       Flight time: 1 hour   
+       Change of longitude between A and B: 15 degrees   
+       Track direction: West   
+       Departure time and date from A: 12:00 LMT, 5th August
+    explanation: ""
+    options:
+      - id: OV7AKAD7X
+        text: 12:00, 4th August
+        correct: false
+        why: ""
+      - id: OFSKBOQSN
+        text: 12:00, 6th August
+        correct: true
+        why: ""
+      - id: OVPPVUCVO
+        text: 14:00, 5th August
+        correct: false
+        why: ""
+      - id: OQHLUB1MP
+        text: 14:00, 6th August
+        correct: false
+        why: ""
+- id: QERVCAETH
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611909
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+    - 061.05.03.01.03
+  template:
+    type: simple
+    question: Given that you are to travel from location A (30°S, 168°E) to location
+      B (8°S, 175°W) in October, you expect the duration of daylight at location
+      B to be (1) \_\_\_\_\_ than at location A, and the rate of change of
+      apparent solar day to be (2) \_\_\_\_\_.
+    explanation: ""
+    options:
+      - id: OM0VFZ5XI
+        text: (1) longer; (2) faster.
+        correct: false
+        why: ""
+      - id: ORIAAUWYJ
+        text: (1) longer; (2) slower.
+        correct: false
+        why: ""
+      - id: OV7ZAI73U
+        text: (1) shorter; (2) faster.
+        correct: false
+        why: ""
+      - id: OEP2CQMTQ
+        text: (1) shorter; (2) slower.
+        correct: true
+        why: ""
+- id: QEWLHFWPT
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619086
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: multiple-correct
+    question: Which of the following factors influence the duration of day and night
+      at a location?
+    explanation: ""
+    options:
+      - text: The location's longitude.
+        correct: false
+        why: ""
+      - text: The location's latitude.
+        correct: true
+        why: ""
+      - text: The time of year.
+        correct: true
+        why: ""
+      - text: The location of the Moon in its orbit of the Earth.
+        correct: false
+        why: ""
+      - text: The location's elevation.
+        correct: true
+        why: ""
+- id: QFBHWQTM
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612852
+    - AVEXAM-69482
+    - AVEXAM-25355
+  annexes:
+    - 061-sunset-and-evening-civil-twilight-tables-october-2-29-and
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: chart
+    question: >-
+      Refer to figure.
+
+
+      Hobart International Airport is located in the Standard Time (ST) zone of
+      Tasmania, which is UTC + 10 hours.
+
+
+      What is the standard time (ST) of sunset at Hobart International Airport,
+      Australia (S42°50', E147°31') on the 11th October 2017?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 18:29 ST
+        wrongAnswers:
+          - 18:33 ST
+          - 18:19 ST
+          - 18:23 ST
+        explanation: >-
+          Sunset is read from the figure for the date and the position of the
+          airport. The time must then be given in the standard time of Tasmania,
+          which is UTC + 10 hours.
+
+
+          **Solution**
+
+
+          - Find 11 October for the airport position in the figure.
+
+          - Read the standard time of sunset: **18:29 ST**.
+
+
+          **Why the other answers are wrong**
+
+
+          - **18:33 ST**, **18:19 ST** and **18:23 ST**: misreadings of the
+          figure, such as a neighbouring line or a different date, or a wrong
+          conversion between UTC and ST.
+- id: QFI4XOPUF
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617763
+    - ATPLGS-625354
+    - ATPLGS-625564
+  annexes: []
+  learningObjectives:
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: Which statement is true about crossing the date line? When approaching
+      the date line from the west on an easterly heading..
+    explanation: ""
+    options:
+      - id: ODBMTQAH0
+        text: one day is gained.
+        correct: false
+        why: ""
+      - id: OAVW3ARII
+        text: 12 hours are lost.
+        correct: false
+        why: ""
+      - id: OH0HDPT9E
+        text: 12 hours are gained.
+        correct: false
+        why: ""
+      - id: OXMVN04BR
+        text: one day is lost.
+        correct: true
+        why: ""
+- id: QFLIARQC
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618298
+    - BGS-611483
+    - AVEXAM-78647
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: The headquarters (HQ) of an airline is located at Schiphol,
+      Netherlands (52°19'N, 004°46'E, UTC+2 hours). One of its aircraft departs
+      from Quito, Ecuador (00°08'S, 078°21'W, UTC-5 hours) at 22:30 ST on the
+      26th August local date and flies to Nairobi, Kenya (01°19'S, 036°56′E, UTC
+      + 3 hours). The flight time is 11 hours 14 minutes. What is the Standard
+      Time (ST) and local date at the airline HQ when the aircraft arrives at
+      its destination?
+    explanation: ""
+    options:
+      - id: OCQZ8ETN3
+        text: 16:44 ST on the 27th August
+        correct: true
+        why: ""
+      - id: O3BIQEQ6B
+        text: 17:44 ST on the 27th August
+        correct: false
+        why: ""
+      - id: OFBBUSB0X
+        text: 06:44 ST on the 26th August
+        correct: false
+        why: ""
+      - id: OVIJBNUJG
+        text: 09:44 ST on the 27th August
+        correct: false
+        why: ""
+- id: QFPMEZVV
+  docId: 061.05.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612575
+    - BGS-610758
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: calculation
+    question: >-
+      An aircraft departs from an airport and, after a flight, lands at a
+      destination airport. Determine the Local Mean Time (LMT) on landing,
+      given:
+
+
+      - Departure time: {{dep_h}}:{{dep_m}} LMT
+
+      - Longitude of departure airport: {{dep_lon}}° (east positive, west
+      negative)
+
+      - Flight time: {{flight_h}} hours
+
+      - Longitude of destination airport: {{dest_lon}}° (east positive, west
+      negative)
+
+
+      What is the Local Mean Time on landing?
+    variables:
+      - id: dep_h
+        label: departure hour
+        unit: h
+      - id: dep_m
+        label: departure minutes
+        unit: min
+      - id: dep_lon
+        label: departure longitude
+        unit: °
+      - id: flight_h
+        label: flight time
+        unit: h
+      - id: dest_lon
+        label: destination longitude
+        unit: °
+    answer:
+      formula: ((dep_h * 60 + dep_m + flight_h * 60 + 4 * (dest_lon - dep_lon - 360 *
+        floor((dest_lon - dep_lon) / 360))) - 1440 * floor((dep_h * 60 + dep_m +
+        flight_h * 60 + 4 * (dest_lon - dep_lon - 360 * floor((dest_lon -
+        dep_lon) / 360))) / 1440))
+      unit: minutes
+      decimals: 0
+      format: hh:mm
+    distractors:
+      - id: d1
+        formula: dep_h * 60 + dep_m + flight_h * 60
+      - id: d2
+        formula: ((dep_h * 60 + dep_m + flight_h * 60 - 4 * (dest_lon - dep_lon - 360 *
+          floor((dest_lon - dep_lon) / 360))) - 1440 * floor((dep_h * 60 + dep_m
+          + flight_h * 60 - 4 * (dest_lon - dep_lon - 360 * floor((dest_lon -
+          dep_lon) / 360))) / 1440))
+      - id: d3
+        formula: ((dep_h * 60 + dep_m + 4 * (dest_lon - dep_lon - 360 * floor((dest_lon
+          - dep_lon) / 360))) - 1440 * floor((dep_h * 60 + dep_m + 4 * (dest_lon
+          - dep_lon - 360 * floor((dest_lon - dep_lon) / 360))) / 1440))
+      - id: d4
+        formula: ((dep_h * 60 + dep_m + 2 * flight_h * 60 + 4 * (dest_lon - dep_lon -
+          360 * floor((dest_lon - dep_lon) / 360))) - 1440 * floor((dep_h * 60 +
+          dep_m + 2 * flight_h * 60 + 4 * (dest_lon - dep_lon - 360 *
+          floor((dest_lon - dep_lon) / 360))) / 1440))
+    presets:
+      - id: p1
+        values:
+          dep_h: 2
+          dep_m: 43
+          dep_lon: 160
+          flight_h: 3
+          dest_lon: -170
+      - id: p2
+        values:
+          dep_h: 9
+          dep_m: 20
+          dep_lon: -75
+          flight_h: 4
+          dest_lon: -150
+      - id: p3
+        values:
+          dep_h: 6
+          dep_m: 15
+          dep_lon: 20
+          flight_h: 2
+          dest_lon: 65
+    explanation: >-
+      Local Mean Time depends on longitude. The sun moves 15° per hour, so each
+      degree of longitude travelled eastward adds 4 minutes to the clock and
+      each degree travelled westward takes 4 minutes away. The longitude change
+      is taken as the eastward distance from the departure meridian to the
+      destination meridian, and the result is kept within one day.
+
+
+      **Solution**
+
+
+      Departure time plus flight time: {{= dep_h * 60 + dep_m + flight_h * 60}}
+      minutes after midnight
+
+
+      Eastward longitude change: {{= dest_lon - dep_lon - 360 * floor((dest_lon
+      - dep_lon) / 360)}}° = {{= (dest_lon - dep_lon - 360 * floor((dest_lon -
+      dep_lon) / 360)) * 4}} minutes
+
+
+      Total: {{= dep_h * 60 + dep_m + flight_h * 60 + 4 * (dest_lon - dep_lon -
+      360 * floor((dest_lon - dep_lon) / 360))}} minutes, within one day:
+      **{{answer}} LMT**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: forgets the change of longitude and uses the departure time
+      plus flight time only.
+
+      - **{{d2}}**: subtracts the eastward change instead of adding it, which
+      moves the clock the wrong way.
+
+      - **{{d3}}**: leaves out the flight time.
+
+      - **{{d4}}**: counts the flight time twice.
+- id: QFWJUIHO
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615261
+    - BGS-610109
+    - AVEXAM-7725
+  annexes:
+    - 061-sunrise-and-sunset-tables-november-19-22-25-28-and
+  learningObjectives:
+    - 061.05.02.01.01
+    - 061.05.03.01.01
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to the figure. Find the UTC of sunrise on 6 December at Winnipeg,
+      Canada (49°50'N, 097°30'W). The local time of sunrise and the UTC offset
+      of the local time zone are read from the figure.
+
+
+      Give the answer in hours and minutes.
+
+
+      What is the UTC of sunrise?
+    variables:
+      - id: sunrise_min
+        label: Local sunrise time (read from the figure, in minutes after midnight)
+        unit: min
+      - id: utc_offset
+        label: UTC offset of the local time zone (read from the figure)
+        unit: h
+    chartInputs:
+      - sunrise_min
+      - utc_offset
+    answer:
+      formula: sunrise_min - utc_offset * 60
+      unit: minutes
+      decimals: 0
+      format: hh:mm
+    distractors:
+      - id: d1
+        formula: sunrise_min
+      - id: d2
+        formula: sunrise_min + utc_offset * 60
+      - id: d3
+        formula: sunrise_min - utc_offset * 60 - 60
+      - id: d4
+        formula: sunrise_min - utc_offset * 30
+    presets:
+      - id: p1
+        values:
+          sunrise_min: 491
+          utc_offset: -6
+      - id: p2
+        values:
+          sunrise_min: 425
+          utc_offset: 1
+    explanation: >-
+      Local time is converted to UTC by subtracting the UTC offset of the time
+      zone. The sunrise time and the offset are both read from the figure.
+
+
+      **Solution**
+
+
+      - UTC = local time - UTC offset = local time - ({{utc_offset}} h)
+
+      - UTC of sunrise = **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: the local time is given without any conversion.
+
+      - **{{d2}}**: the offset is added instead of subtracted.
+
+      - **{{d3}}**: an extra hour is subtracted.
+
+      - **{{d4}}**: only half of the offset is applied.
+- id: QFXVAJEM
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616379
+    - AVEXAM-21349
+    - BGS-610096
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: >-
+      An aircraft departs from Schiphol airport and flies to Santa Cruz in
+      Bolivia (South America) via Miami in Florida. The departure time (off
+      blocks) is 07:45 ST on the 10th of November, and taxi time before take off
+      at Schiphol is 25 minutes. The flight time to Miami over the Atlantic
+      Ocean is 09h 20m. The total taxi time in Miami to and from the gate is 25
+      minutes. The time spend at the gate is 02h 40m. From Miami to Santa Cruz
+      the airborne time is 06h 30m.
+
+
+      Calculate the time and date of touch down in Santa Cruz in ST Bolivia if
+      the difference between ST and UTC is 5 hours.
+    explanation: ""
+    options:
+      - id: OKML9165E
+        text: 22:05 10th Nov.
+        correct: false
+        why: ""
+      - id: OXONRZAIY
+        text: 07:05 11th Nov.
+        correct: false
+        why: ""
+      - id: ONZNNQBHB
+        text: 21:05 10th Nov.
+        correct: true
+        why: ""
+      - id: OQDKMPCBS
+        text: 09:05 11th Nov.
+        correct: false
+        why: ""
+- id: QGAWTJRO
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611082
+    - AVEXAM-48940
+    - BGS-611413
+    - BGS-611659
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: >-
+      Given the following information from an Air Almanac, what is the daylight
+      saving time and date in country B if the time and date in country A is
+      01:50 standard Time (ST) 20th June?
+
+
+      ST in country A is UTC +13 hours   
+       ST in country B is UTC -11 hours.
+
+      Daylight saving times (ST +1 hour) is kept in country B from March to
+      October.
+    explanation: ""
+    options:
+      - id: OZ9ULDN6O
+        text: 01:50 21st June
+        correct: false
+        why: ""
+      - id: OPEIJVTSP
+        text: 02:50 19th June
+        correct: true
+        why: ""
+      - id: OS2PA7HBN
+        text: 01:50 19th June
+        correct: false
+        why: ""
+      - id: OSQ4JKKRN
+        text: 00:50 19th June
+        correct: false
+        why: ""
+- id: QHCTQWELT
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613571
+    - AVEXAM-47159
+    - BGS-611607
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: On the 15th October, a pilot is departing from Auckland, New Zealand
+      (37°00’S,174°47’E position west of the international to Honolulu in
+      Hawaii, US ( 21°19’N,157°55’W position east of the international Date line
+      LT = UTC - 10 hours). When departing the aircrafts master clock displays
+      08:15 UTC. After landing, the pilot records a flight time of 8 hours and
+      37 minutes. Which of the below statements is correct?
+    explanation: ""
+    options:
+      - id: OH6ADI1X4
+        text: Upon arrival the master clock of the aircraft displays 16:52 UTC and the
+          local dates in the 16th October.
+        correct: false
+        why: ""
+      - id: OYGB0LG8W
+        text: The aircraft arrives in Honolulu at 16:52 LT on the 15th October.
+        correct: false
+        why: ""
+      - id: OO2ZRZDAR
+        text: The aircraft arrives in Honolulu at 06:52 LT on the 15th October.
+        correct: true
+        why: ""
+      - id: OQKJOKKY6
+        text: When the aircraft arrives in Honolulu, the local date in Auckland is still
+          the 15th October.
+        correct: false
+        why: ""
+- id: QHLTBQLY
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618372
+    - ATPLGS-110130
+    - BGS-610078
+    - AVEXAM-39480
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: >-
+      In a sunrise/sunset table given for the 28th of June at a certain
+      latitude, sunrise is given as 02:39 and sunset is given as 21:27.
+
+
+      What is the latitude?
+    explanation: ""
+    options:
+      - id: OWGLI4E7F
+        text: 60°N
+        correct: true
+        why: ""
+      - id: O1INFPEN7
+        text: 80°N
+        correct: false
+        why: ""
+      - id: OTVQV78TL
+        text: 00°N/S
+        correct: false
+        why: ""
+      - id: OYDAVR9JC
+        text: 55°S
+        correct: false
+        why: ""
+- id: QIVRGPRI
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614664
+    - AVEXAM-59529
+    - ATPLGS-625878
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: The time of sunrise and sunset expressed in LMT varies with the
+      observer’s latitude and..
+    explanation: ""
+    options:
+      - id: OSYJODJ5D
+        text: The time of year because of the Earth axis’ perpendicularity with respect
+          to the plane of its orbit.
+        correct: false
+        why: ""
+      - id: OT1LRG5C0
+        text: Longitude because of the Earth axis’ inclination with respect to the plane
+          of its orbit.
+        correct: false
+        why: ""
+      - id: OEJZUHCGI
+        text: The time of year because of the Earth axis’ inclination with respect to
+          the plane of its orbit.
+        correct: true
+        why: ""
+      - id: OP4RMC0XY
+        text: Longitude because of the Earth axis’ perpendicularity with respect to the
+          plane of its orbit.
+        correct: false
+        why: ""
+- id: QJERIDOC
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619392
+    - AVEXAM-18157
+  annexes:
+    - 061-standard-times-list-i-places-fast-on-utc
+    - 061-standard-times-list-iii-places-slow-on-utc-01
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: >-
+      Refer to figures.   
+       If the Standard Time (ST) in Queensland, Australia, is 12:00 on the 10th of July, what is the Standard Time in Hawaii, USA?
+    explanation: ""
+    options:
+      - id: OZBGP9SMB
+        text: 12:00 ST 10 July.
+        correct: false
+        why: ""
+      - id: ORMYD8WZE
+        text: 02:00 ST 10 July.
+        correct: false
+        why: ""
+      - id: OU9AM5IXV
+        text: 10:00 ST 10 July.
+        correct: false
+        why: ""
+      - id: OPB7TWEUK
+        text: 16:00 ST 09 July.
+        correct: true
+        why: ""
+- id: QJIIWRJJY
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614498
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: For an aircraft flying from a departure aerodrome with latitude 37°S
+      to a destination aerodrome with latitude 08°S during October, the length
+      of the daylight is (1) \_\_\_\_\_ and the twilight lasts (2) \_\_\_\_\_ at
+      the destination.
+    explanation: ""
+    options:
+      - id: ONMRDUPOP
+        text: (1) shorter; (2) less
+        correct: true
+        why: ""
+      - id: OG21LRYSV
+        text: (1) longer; (2) less
+        correct: false
+        why: ""
+      - id: OZVQCRWXH
+        text: (1) longer; (2) more
+        correct: false
+        why: ""
+      - id: OE6HUOU11
+        text: (1) shorter; (2) more
+        correct: false
+        why: ""
+- id: QKK7DVOMZ
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616108
+    - AVEXAM-11528
+    - BGS-611463
+    - BGS-611471
+  annexes:
+    - 061-sunset-2017-table-october-2-29-and-november-1-19
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: chart
+    question: Refer to figure. At what UTC time does the sunset occur on the 3rd of
+      October 2017 at Bodo airport in Norway (N67°16', E014°22')?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 16:20 UTC
+        wrongAnswers:
+          - 17:26 UTC
+          - 17:29 UTC
+          - 18:23 UTC
+        explanation: >-
+          Sunset is read from the sunset figure for the date and the latitude of
+          Bodo. The figure gives the time directly, so no calculation is needed.
+
+
+          **Solution**
+
+
+          - Find 3 October on the sunset line for Bodo in the figure.
+
+          - Read the UTC time: **16:20 UTC**.
+
+
+          **Why the other answers are wrong**
+
+
+          - **17:26 UTC** and **17:29 UTC**: sunset times read a few minutes
+          later on the same line, which means a misreading of the figure.
+
+          - **18:23 UTC**: a time read from a different date or latitude line.
+- id: QKUYRFBQ
+  docId: 061.05.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611430
+    - AVEXAM-5524
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: simple
+    question: What is the UTC and date when it is 23:00 LMT on the 21st August at
+      position A(11°00’N, 067°30’W)?
+    explanation: ""
+    options:
+      - id: O9AG2SJL6
+        text: 18:30 UTC 21st August
+        correct: false
+        why: ""
+      - id: O9XJCS9SF
+        text: 18:30 UTC 22nd August
+        correct: false
+        why: ""
+      - id: O5VYVPTTX
+        text: 03:30 UTC 21st August
+        correct: false
+        why: ""
+      - id: OLOFUV0NE
+        text: 03:30 UTC 22nd August
+        correct: true
+        why: ""
+- id: QLFJJWMB
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611140
+    - AVEXAM-40116
+    - BGS-610724
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: "The time of sunrise at N45° W030° on 15th February is 09.01 UTC. The
+      time of sunrise (UTC) at a lower latitude at W030° is:"
+    explanation: ""
+    options:
+      - id: OCBRPLBAY
+        text: 09.01 LT.
+        correct: false
+        why: ""
+      - id: OGTQBTTTD
+        text: 09.01 UTC.
+        correct: false
+        why: ""
+      - id: OSY53XLDM
+        text: Later than 09.01 UTC.
+        correct: false
+        why: ""
+      - id: OPWHBCOXC
+        text: Earlier than 09.01 UTC.
+        correct: true
+        why: ""
+- id: QLJCUDWZ
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614623
+    - BGS-610095
+    - AVEXAM-59476
+    - ATPLGS-110139
+    - ATPLGS-124495
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: What is the meaning of the term "standard time"?
+    explanation: ""
+    options:
+      - id: OITY89JCP
+        text: It is the time set by the legal authorities for a (part of a) country.
+        correct: true
+        why: ""
+      - id: O8XRM429I
+        text: It is the time zone system and is applicable only in the Unites States of
+          America.
+        correct: false
+        why: ""
+      - id: OPFO34KYY
+        text: It is an expression for Local Mean Time.
+        correct: false
+        why: ""
+      - id: OS3EWT5EK
+        text: It is another term for UTC.
+        correct: false
+        why: ""
+- id: QMEOMZBI9
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615585
+    - ATPLGS-625556
+    - AVEXAM-80708
+    - ATPLQ-611770
+    - AVEXAM-37122
+    - AVEXAM-79540
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: calculation
+    question: >-
+      Determine the Local Mean Time (LMT) at the following position:
+
+
+      - Latitude: {{lat}}° N
+
+      - Longitude: {{lon}}° (east positive, west negative)
+
+      - Coordinated Universal Time (UTC): {{utc}} h (decimal hours, so 14.5
+      means 14:30)
+
+
+      What is the LMT? Give the answer as hh:mm.
+    variables:
+      - id: lat
+        label: Latitude
+        unit: °
+      - id: lon
+        label: Longitude
+        unit: °
+      - id: utc
+        label: UTC
+        unit: h
+    answer:
+      formula: (utc * 60 + 4 * lon) - 1440 * floor((utc * 60 + 4 * lon) / 1440)
+      unit: minutes
+      decimals: 2
+      format: hh:mm
+    distractors:
+      - id: d1
+        formula: (utc * 60 - 4 * lon) - 1440 * floor((utc * 60 - 4 * lon) / 1440)
+      - id: d2
+        formula: utc * 60
+      - id: d3
+        formula: utc * 60 + lon
+      - id: d4
+        formula: utc * 60 + 4 * lon - 60
+    presets:
+      - id: p1
+        values:
+          lat: 46
+          lon: -94.5
+          utc: 14
+      - id: p2
+        values:
+          lat: 65.25
+          lon: -161.25
+          utc: 19
+      - id: p3
+        values:
+          lat: -20
+          lon: 120
+          utc: 3.5
+    explanation: >-
+      Local Mean Time moves by 4 minutes for every degree of longitude. East of
+      Greenwich the local clock is ahead of UTC, and west of Greenwich it is
+      behind. Convert the UTC time into minutes, add the longitude correction,
+      and keep the result within one day.
+
+
+      **Solution**
+
+
+      - UTC in minutes: {{utc}} h × 60 = {{= utc * 60}} min
+
+      - Longitude correction: {{lon}}° × 4 min = {{= 4 * lon}} min
+
+      - LMT in minutes: {{= utc * 60}} + ({{= 4 * lon}}) = {{= utc * 60 + 4 *
+      lon}} min, within one day **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}**: applies the longitude correction with the wrong sign
+
+      - **{{d2}}**: ignores the longitude completely
+
+      - **{{d3}}**: adds the longitude in degrees as if it were minutes
+
+      - **{{d4}}**: subtracts one hour from the result
+- id: QMNHHKMI
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615115
+    - AVEXAM-52981
+    - ATPLGS-110110
+    - BGS-610100
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: simple
+    question: The duration of civil twilight is the time…
+    explanation: ""
+    options:
+      - id: O2ANCSHUQ
+        text: needed by the Sun to move from the apparent height of 0° to the apparent
+          height of 6°.
+        correct: false
+        why: ""
+      - id: OO45JOP4P
+        text: between sunset and when the centre of the Sun is 6° below the celestial
+          horizon.
+        correct: true
+        why: ""
+      - id: ORDADLJXT
+        text: between sunset and when the centre of the Sun is 12° below the celestial
+          horizon.
+        correct: false
+        why: ""
+      - id: OLFW5KZHZ
+        text: agreed by the international aeronautical authorities, which is 12 minutes.
+        correct: false
+        why: ""
+- id: QN5SI8254
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614780
+    - AVEXAM-97531
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: Point A is at Sea Level and point B is at 10 000 ft. Which one of the
+      following statements is true?
+    explanation: ""
+    options:
+      - id: ONTZJJOOW
+        text: The sunrise is earlier at point B because of the greater refraction of
+          sunlight at point A.
+        correct: false
+        why: ""
+      - id: OC5NPFYYE
+        text: The sunrise is earlier at point A because of the greater diffraction of
+          sunlight at point B.
+        correct: false
+        why: ""
+      - id: OBIZZEUAE
+        text: The sunrise is earlier at point B because of the greater horizontal
+          visibility at point B.
+        correct: true
+        why: ""
+      - id: ONES2W6OG
+        text: The sunrise is earlier at point A because of the greater reflection of
+          sunlight at point A.
+        correct: false
+        why: ""
+- id: QNGTXKTD
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612035
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: An airline company has its headquarters at Schiphol (UTC+2h). An
+      aircraft takes off from Quito at 4th September ST 22:30 (UTC-5h) and flies
+      to Lagos (UTC+3h). Flight time is 11:14\. What is the ST at the
+      headquarters at the time of arrival of the aircraft?
+    explanation: ""
+    options:
+      - id: OOW56JMMM
+        text: 5th of September 16:44 ST.
+        correct: true
+        why: ""
+      - id: OYELUHGOZ
+        text: 5th of September 17:44 ST.
+        correct: false
+        why: ""
+      - id: OJPUFJFUF
+        text: 4th of September 13:15 ST.
+        correct: false
+        why: ""
+      - id: OKUZRPCKC
+        text: 4th of September 16:44 ST.
+        correct: false
+        why: ""
+- id: QNOCDPUW
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616421
+    - BGS-610084
+    - BGS-611611
+    - AVEXAM-49396
+    - ATPLGS-625879
+  annexes: []
+  learningObjectives:
+    - 061.01.01.02.02
+  template:
+    type: simple
+    question: "The main reason that day and night, throughout the year, have
+      different duration, is due to the:"
+    explanation: ""
+    options:
+      - id: OYK9WXHCH
+        text: gravitational effect of the Sun and Moon on the speed of rotation of the
+          Earth.
+        correct: false
+        why: ""
+      - id: OA1Y1B1FM
+        text: inclination of the ecliptic to the equator.
+        correct: true
+        why: ""
+      - id: OA1VG37WF
+        text: relative speed of the Sun along the ecliptic.
+        correct: false
+        why: ""
+      - id: OH0IGZE4A
+        text: Earth's rotation.
+        correct: false
+        why: ""
+- id: QNYNCCKYI
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615676
+  annexes: []
+  learningObjectives:
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: While flying on an easterly track and crossing the dateline, the Local
+      Time (LT) will (1)\_\_\_\_\_ and the date (2)\_\_\_\_\_.
+    explanation: ""
+    options:
+      - id: OMEZ33JT9
+        text: (1) Stay unchanged; (2) go back one day.
+        correct: true
+        why: ""
+      - id: ONYHK94HC
+        text: (1) Stay unchanged; (2) go forward by one day.
+        correct: false
+        why: ""
+      - id: OZAYG0JEX
+        text: (1) Move backward by 12 hours; (2) go back one day.
+        correct: false
+        why: ""
+      - id: O8L3WTD8I
+        text: (1) Move forward by 12 hours; (2) go back one day.
+        correct: false
+        why: ""
+- id: QOFFGYVT
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618980
+    - AVEXAM-87608
+    - BGS-610012
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: The time interval between sunrise and sunset is dependent on the..
+    explanation: ""
+    options:
+      - id: OGSPPFUVD
+        text: inclination of the axis of the Earth and the longitude of the observer.
+        correct: false
+        why: ""
+      - id: O4P4LOYCG
+        text: latitude and the longitude of the observer.
+        correct: false
+        why: ""
+      - id: OX7FNMX7W
+        text: date and the longitude of the observer.
+        correct: false
+        why: ""
+      - id: OYHQIWFO5
+        text: declination of the Sun and the latitude of the observer.
+        correct: true
+        why: ""
+- id: QOIOGOGVE
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618673
+  annexes:
+    - 061-sunset-and-evening-civil-twilight-tables-october-2-29-and
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      What is the duration of the Evening Civil Twilight (ECT) on the 11th of
+      October 2017 at Jinzhou Xiaolin Zi Airport, China (N41°06', E121°04')?
+    explanation: ""
+    options:
+      - id: O3RRXBMYA
+        text: 25 minutes
+        correct: false
+        why: ""
+      - id: OQLY8O4HJ
+        text: 28 minutes
+        correct: true
+        why: ""
+      - id: O9O6LS2EK
+        text: 23 minutes
+        correct: false
+        why: ""
+      - id: OB5EPWQWI
+        text: 32 minutes
+        correct: false
+        why: ""
+- id: QOQSALIY
+  docId: 061.05.03
+  relatedQuestions:
+    - QSUERWUP
+  externalIds:
+    - ATPLQ-612820
+    - ATPLGS-626383
+    - AVEXAM-1810
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: calculation
+    question: "Given that sunrise occurs at {{pick: rise_h | 00 | 01 | 02 | 03 | 04
+      | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19
+      | 20 | 21 | 22 | 23}}:{{pick: rise_m | 00 | 01 | 02 | 03 | 04 | 05 | 06 |
+      07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 |
+      22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 | 36 |
+      37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 | 51 |
+      52 | 53 | 54 | 55 | 56 | 57 | 58 | 59}} ST at Guilin Liangjiang
+      International Airport (N25°00’, E{{lon_ref_d}}°{{pick: lon_ref_m | 00 | 01
+      | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16
+      | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31
+      | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46
+      | 47 | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59}}’), what
+      is the time of sunrise in ST at Kunming Changshui International Airport
+      (N25°00’, E{{lon_new_d}}°{{pick: lon_new_m | 00 | 01 | 02 | 03 | 04 | 05 |
+      06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
+      21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35 |
+      36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 50 |
+      51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59}}’), assuming that they are in
+      the same time zone?"
+    variables:
+      - id: rise_h
+        label: Sunrise at Guilin (hours)
+        unit: h
+      - id: rise_m
+        label: Sunrise at Guilin (minutes)
+        unit: min
+      - id: lon_ref_d
+        label: Longitude Guilin (degrees)
+        unit: °E
+      - id: lon_ref_m
+        label: Longitude Guilin (minutes)
+        unit: "'"
+      - id: lon_new_d
+        label: Longitude Kunming (degrees)
+        unit: °E
+      - id: lon_new_m
+        label: Longitude Kunming (minutes)
+        unit: "'"
+    answer:
+      formula: round(rise_h * 60 + rise_m + ((lon_ref_d + lon_ref_m / 60) - (lon_new_d
+        + lon_new_m / 60)) * 4)
+      unit: minutes
+      decimals: 0
+      format: hh:mm
+    distractors:
+      - id: d1
+        formula: rise_h * 60 + rise_m
+      - id: d2
+        formula: round(rise_h * 60 + rise_m - ((lon_ref_d + lon_ref_m / 60) - (lon_new_d
+          + lon_new_m / 60)) * 4)
+      - id: d3
+        formula: round(rise_h * 60 + rise_m + ((lon_ref_d + lon_ref_m / 60) - (lon_new_d
+          + lon_new_m / 60)))
+      - id: d4
+        formula: round(rise_h * 60 + rise_m + 8 * ((lon_ref_d + lon_ref_m / 60) -
+          (lon_new_d + lon_new_m / 60)))
+    presets:
+      - id: p1
+        values:
+          rise_h: 6
+          rise_m: 2
+          lon_ref_d: 110
+          lon_ref_m: 3
+          lon_new_d: 102
+          lon_new_m: 56
+      - id: p2
+        values:
+          rise_h: 5
+          rise_m: 50
+          lon_ref_d: 120
+          lon_ref_m: 30
+          lon_new_d: 115
+          lon_new_m: 0
+      - id: p3
+        values:
+          rise_h: 7
+          rise_m: 10
+          lon_ref_d: 105
+          lon_ref_m: 15
+          lon_new_d: 101
+          lon_new_m: 45
+    explanation: >-
+      The Earth turns 15° of longitude per hour, so each degree of longitude is
+      4 minutes. Both airports are in the same time zone, and the one further
+      west sees the sun rise later.
+
+
+      **Solution**
+
+
+      Longitude difference: {{= (lon_ref_d + lon_ref_m / 60) - (lon_new_d +
+      lon_new_m / 60)}}°, which is {{= ((lon_ref_d + lon_ref_m / 60) -
+      (lon_new_d + lon_new_m / 60)) * 4}} minutes
+
+
+      Sunrise at Guilin: {{= rise_h * 60 + rise_m}} minutes after midnight, so
+      the sunrise at Kunming is {{= rise_h * 60 + rise_m + ((lon_ref_d +
+      lon_ref_m / 60) - (lon_new_d + lon_new_m / 60)) * 4}} minutes after
+      midnight = **{{answer}} ST**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ST**: keeps the sunrise time at Guilin and ignores the
+      longitude difference.
+
+      - **{{d2}} ST**: moves the sunrise earlier instead of later.
+
+      - **{{d3}} ST**: treats the difference in degrees as minutes.
+
+      - **{{d4}} ST**: applies the correction twice.
+- id: QP42VCASF
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617485
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: Which of these is the correct answer regarding sunrise and sunset
+      times, considering a location in the Northern Hemisphere.
+    explanation: ""
+    options:
+      - id: OTFQWTRVF
+        text: On the 31st of May, the Sun will set earlier at 60°N compared to a
+          location at 30°N.
+        correct: false
+        why: ""
+      - id: OX5037RBH
+        text: Sunrise and sunset times vary with latitude because of the tilt of the
+          Earth's rotational axis.
+        correct: true
+        why: ""
+      - id: OCKTHQRDA
+        text: For a given latitude, on the 1st May, sunrise occurs earlier than on the
+          19th May.
+        correct: false
+        why: ""
+      - id: OHSDBUXQR
+        text: Sunrise and sunset times vary with the date because of the changing
+          distance between the Earth and the Sun.
+        correct: false
+        why: ""
+- id: QQJNQOKM6
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617227
+    - BGS-611713
+    - AVEXAM-69845
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: An aircraft takes-off from airport A (N33°56’, W118°24’) (UTC -7
+      hours) at 21:15 Standard Time on 17th of February and after a total flight
+      of 15 hours and 25 minutes arrives at airport B (N22°18’, E113°55’) (UTC +
+      8 hours). What is the Standard Time (ST) and local date when arriving at
+      aerodrome B?
+    explanation: ""
+    options:
+      - id: OPKH8XKXW
+        text: 03:40 ST, 19th February
+        correct: true
+        why: ""
+      - id: OSBUALBNU
+        text: 21:40 ST, 17th February
+        correct: false
+        why: ""
+      - id: OFRQNNFQP
+        text: 12:40 ST, 18th February
+        correct: false
+        why: ""
+      - id: O0AIDNTS5
+        text: 13:40 ST, 18th February
+        correct: false
+        why: ""
+- id: QQLB7032U
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613307
+    - ATPLGS-127757
+    - AVEXAM-20823
+    - BGS-610108
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: Which statement is true?
+    explanation: ""
+    options:
+      - id: OKPISI3EE
+        text: The duration of the civil twilight on 21st of March and on 23rd of
+          September is equal at all places on Earth independent of latitude.
+        correct: false
+        why: ""
+      - id: OCO7PDHZB
+        text: The declination of the Sun and the latitude of the observer will affect
+          the duration of civil twilight.
+        correct: true
+        why: ""
+      - id: O8CXUZ2LH
+        text: Only the declination of the Sun will affect the duration of civil
+          twilight.
+        correct: false
+        why: ""
+      - id: O14HB0JDV
+        text: Civil twilight at the Equator lasts longer than at 60°N or 60°S because
+          the radius of the Equator is larger than the radius of the 60°
+          parallel.
+        correct: false
+        why: ""
+- id: QQTUJVJR
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617822
+    - AVEXAM-48089
+    - BGS-611263
+  annexes: []
+  learningObjectives:
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: "Compare two points at the same latitude and longitude, point A being
+      at Mean Sea Level and point B at 10 000 ft altitude. At point B, sunrise
+      will occur:"
+    explanation: ""
+    options:
+      - id: OSMBB0V1O
+        text: Later, due to reduced visual horizon.
+        correct: false
+        why: ""
+      - id: OBTMVBPY8
+        text: Earlier, due to more light being refracted from the atmosphere.
+        correct: false
+        why: ""
+      - id: OWKFGELHJ
+        text: Earlier, due to the increased visual horizon.
+        correct: true
+        why: ""
+      - id: O3CGYMLAK
+        text: Later, due to less light being refracted from the atmosphere.
+        correct: false
+        why: ""
+- id: QQXJRGUM
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612032
+    - BGS-611291
+    - AVEXAM-17661
+  annexes:
+    - 061-standard-times-list-iii-places-slow-on-utc-02
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      An aircraft leaves New York, USA, for Hawaii, USA, on the 21st of July,
+      2018, at 21:20 Standard Time (ST). Assume that the Daylight Saving Time
+      (DST) applies, except for Hawaii. The flight time is 12 hours 50 minutes.
+      What will be the Standard Time and date of arrival at Hawaii?
+    explanation: ""
+    options:
+      - id: OYQICO7IM
+        text: 05:10 ST, 22nd July
+        correct: false
+        why: ""
+      - id: ONJFJTCJW
+        text: 04:10 ST, 22nd July
+        correct: true
+        why: ""
+      - id: OUUCOZDW3
+        text: 18:10 ST, 21st July
+        correct: false
+        why: ""
+      - id: OXVRE6JKN
+        text: 14:10 ST, 22nd July
+        correct: false
+        why: ""
+- id: QQYQKASI
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615880
+    - AVEXAM-69202
+    - ATPLGS-627950
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: During the summer months, some states apply daylight savings. What
+      does this mean?
+    explanation: ""
+    options:
+      - id: OMV0JBC6T
+        text: The country state decides.
+        correct: false
+        why: ""
+      - id: O3XOLZTKK
+        text: It makes no difference.
+        correct: false
+        why: ""
+      - id: O3MPKFHYN
+        text: In the afternoon/evening, an hour of daylight is lost.
+        correct: false
+        why: ""
+      - id: OBPTX4HBE
+        text: In the afternoon/evening, an hour of daylight is gained.
+        correct: true
+        why: ""
+- id: QRASRUAK
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617321
+    - AVEXAM-90996
+    - ATPLGS-127756
+    - BGS-610097
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: Standard time for some areas is listed in the Air Almanac as UTC +13
+      instead of UTC -11\. The reason for this is..
+    explanation: ""
+    options:
+      - id: O45VACE7Q
+        text: the sense of the Earth’s rotation.
+        correct: false
+        why: ""
+      - id: OCCVURO5F
+        text: the set-up of the sunrise/sunset tables.
+        correct: false
+        why: ""
+      - id: OPVOWQQEY
+        text: to keep the same date for areas in the same political or economical
+          entity.
+        correct: true
+        why: ""
+      - id: ORVPH5HDQ
+        text: the fact that these areas are applying daylight saving time.
+        correct: false
+        why: ""
+- id: QRKOSDBP
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616852
+    - ATPLGS-110106
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: "Standard time is:"
+    explanation: ""
+    options:
+      - id: O3RWQO88T
+        text: the time which is accepted and used as a standard for the whole world.
+        correct: false
+        why: ""
+      - id: OQYFDP12K
+        text: the time used at a particular meridian.
+        correct: false
+        why: ""
+      - id: OTBO5YK17
+        text: the time most frequently used for air navigation.
+        correct: false
+        why: ""
+      - id: OPWS5ZQQU
+        text: the time enforced by the legal authority to be used in a country or an
+          area.
+        correct: true
+        why: ""
+- id: QRTSZJKK
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616666
+    - ATPLGS-110115
+    - BGS-610098
+    - AVEXAM-78489
+    - AVEXAM-21615
+    - ATPLGS-124450
+    - BGS-610099
+  annexes: []
+  learningObjectives:
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: Which of the following statements is correct when crossing the
+      International Date Line?
+    explanation: ""
+    options:
+      - id: ONXR8EQYR
+        text: The date will increase when crossing on an easterly heading.
+        correct: false
+        why: ""
+      - id: ONDZSGRXT
+        text: The date will increase when crossing on a westerly heading.
+        correct: true
+        why: ""
+      - id: OK36QCLWB
+        text: The date will always be the same.
+        correct: false
+        why: ""
+      - id: ORGBXRQN3
+        text: The date will remain the same when crossing from a westerly longitude to
+          an easterly longitude.
+        correct: false
+        why: ""
+- id: QSCSBHHT
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611463
+  annexes:
+    - 061-061-600416-sunrise-and-morning-civil-twilight-table-latitudes-n72
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: chart
+    question: (For this question use Annex 061-600416). What is the duration of
+      morning civil twilight at 66°48'N, 095°26'W on the 27th of January?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 1 hour 13 minutes
+        wrongAnswers:
+          - 9 hours 27 minutes
+          - 1 hour 2 minutes
+          - 8 hours 14 minutes
+        explanation: >-
+          Civil twilight is the period when the sun is between the horizon and
+          6° below it. The duration is read from the annex table for the
+          latitude and the date.
+
+
+          **Solution**
+
+
+          - Find the row for 66°N and the column for 27 January in the annex
+
+          - Read the morning civil twilight duration: **1 hour 13 minutes**
+
+
+          **Why the other answers are wrong**
+
+
+          - **9 hours 27 minutes**: the value is read from a row for a different
+          latitude.
+
+          - **1 hour 2 minutes**: the value is read from the wrong column for
+          the date.
+
+          - **8 hours 14 minutes**: the evening duration is used instead of the
+          morning one.
+- id: QSSFBKLW
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612062
+  annexes: []
+  learningObjectives:
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: You are flying continuously during daylight on an eastbound track on
+      the 12th of the month. What is the date after crossing the International
+      Date Line?"
+    explanation: ""
+    options:
+      - id: OW2IBNIS0
+        text: 13th of the month
+        correct: false
+        why: ""
+      - id: O3JXDJ84W
+        text: 11th of the month
+        correct: true
+        why: ""
+      - id: OTVHAZA0K
+        text: 10th of the month
+        correct: false
+        why: ""
+      - id: OO0YBEWBF
+        text: 12th of the month
+        correct: false
+        why: ""
+- id: QSUEHQVF
+  docId: 061.05.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611955
+    - ATPLGS-625659
+    - AVEXAM-73536
+    - BGS-610104
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: simple
+    question: Position "Elephant Point" is situated at 58°00’N, 135°30’W. Standard
+      time for this location is listed in the Air Almanac as UTC -8\. If sunset
+      occurs at 00:57 UTC on 21st January, what is the time of sunset in LMT?
+    explanation: ""
+    options:
+      - id: OIM1P4JL1
+        text: 09:59 on January 21st.
+        correct: false
+        why: ""
+      - id: OLJRFBUXA
+        text: 08:57 on January 21st.
+        correct: false
+        why: ""
+      - id: OERHNTPX0
+        text: 16:57 on January 20th.
+        correct: false
+        why: ""
+      - id: OYCSWIVFX
+        text: 15:55 on January 20th.
+        correct: true
+        why: ""
+- id: QSUERWUP
+  docId: 061.05.03
+  relatedQuestions:
+    - QOQSALIY
+  externalIds:
+    - ATPLQ-615484
+    - ATPLGS-626396
+    - AVEXAM-85035
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: calculation
+    question: >-
+      Two positions lie at the same geographical latitude. Position A is at
+      {{lon_a}}°E, Position B at {{lon_b}}°E. Sunrise occurs at {{pick: rise_h |
+      00 | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 |
+      15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23}}:{{pick: rise_m | 00 | 01 | 02
+      | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17
+      | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32
+      | 33 | 34 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47
+      | 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59}} ST at
+      Position B.
+
+
+      Provided that both positions are within the same time zone, what is the ST
+      of sunrise at Position A?
+    variables:
+      - id: lon_a
+        label: Longitude of Position A
+        unit: °E
+      - id: lon_b
+        label: Longitude of Position B
+        unit: °E
+      - id: rise_h
+        label: Sunrise at B (hours)
+        unit: h
+      - id: rise_m
+        label: Sunrise at B (minutes)
+        unit: min
+    answer:
+      formula: rise_h * 60 + rise_m + (lon_b - lon_a) * 4
+      unit: minutes
+      decimals: 0
+      format: hh:mm
+    distractors:
+      - id: d1
+        formula: rise_h * 60 + rise_m
+      - id: d2
+        formula: rise_h * 60 + rise_m - (lon_b - lon_a) * 4
+      - id: d3
+        formula: rise_h * 60 + rise_m + (lon_b - lon_a)
+      - id: d4
+        formula: round(rise_h * 60 + rise_m + (lon_b - lon_a) / 15)
+    presets:
+      - id: p1
+        values:
+          lon_a: 76
+          lon_b: 126
+          rise_h: 7
+          rise_m: 29
+      - id: p2
+        values:
+          lon_a: 95
+          lon_b: 110
+          rise_h: 8
+          rise_m: 14
+      - id: p3
+        values:
+          lon_a: 120
+          lon_b: 150
+          rise_h: 6
+          rise_m: 45
+    explanation: >-
+      The Earth turns 15° of longitude per hour, so each degree of longitude is
+      4 minutes. A place further west sees the sun rise later than a place to
+      the east, and both use the same standard time.
+
+
+      **Solution**
+
+
+      Longitude difference between B and A: {{= lon_b - lon_a}}°, which is {{=
+      (lon_b - lon_a) * 4}} minutes
+
+
+      Sunrise at B: {{= rise_h * 60 + rise_m}} minutes after midnight, so the
+      sunrise at A is {{= rise_h * 60 + rise_m + (lon_b - lon_a) * 4}} minutes
+      after midnight = **{{answer}} ST**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ST**: keeps the sunrise time at Position B and ignores the
+      longitude difference.
+
+      - **{{d2}} ST**: moves the sunrise earlier instead of later.
+
+      - **{{d3}} ST**: treats the difference in degrees as minutes.
+
+      - **{{d4}} ST**: converts the difference into hours but reads the result
+      as minutes.
+- id: QSYZNX7ST
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619398
+    - AVEXAM-11528
+    - BGS-611463
+    - BGS-611471
+  annexes:
+    - 061-sunset-2017-table-october-2-29-and-november-1-19
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      At what UTC time does the sunset occur on the 19th of October 2017 at Bodo
+      airport in Norway (N67°16', E014°22')?
+    explanation: ""
+    options:
+      - id: OOQDJZ71X
+        text: 15:17 UTC
+        correct: true
+        why: ""
+      - id: OTE0M2RRH
+        text: 17:11 UTC
+        correct: false
+        why: ""
+      - id: OR01FX1GU
+        text: 15:26 UTC
+        correct: false
+        why: ""
+      - id: OVWPEBPU5
+        text: 16:14 UTC
+        correct: false
+        why: ""
+- id: QTFKXFRG
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617164
+    - ATPLGS-124494
+  annexes: []
+  learningObjectives:
+    - 061.05.01.01.01
+  template:
+    type: simple
+    question: The sidereal day is..
+    explanation: ""
+    options:
+      - id: OQ1C2OWIG
+        text: a means to find apparent time by applying the equation of time.
+        correct: false
+        why: ""
+      - id: OAKWYKLQX
+        text: introduced because of GPS.
+        correct: false
+        why: ""
+      - id: OZXL8HSQJ
+        text: of constant duration.
+        correct: true
+        why: ""
+      - id: OYZ38FOIY
+        text: shorter in winter than in summer.
+        correct: false
+        why: ""
+- id: QTVLQPBA
+  docId: 061.05.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611377
+    - AVEXAM-54059
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: simple
+    question: What is the Local Mean Time LMT at (35°25’S, 110°45’W) if the
+      Coordinated Universal Time UTC is 18:34 on September 4th?
+    explanation: ""
+    options:
+      - id: OZUVRDQF2
+        text: 11:34 on September 4th
+        correct: false
+        why: ""
+      - id: OC01ATI7Z
+        text: 01:57 on September 5th
+        correct: false
+        why: ""
+      - id: O33FPQHDK
+        text: 11:11 on September 4th
+        correct: true
+        why: ""
+      - id: OD2SMYRA0
+        text: 01:34 on September 5th
+        correct: false
+        why: ""
+- id: QTWHZJPA
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616469
+    - AVEXAM-67553
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: >-
+      Determine the Standard Time (ST) and date of arrival in Chile, given the
+      following information:   
+        
+       Route: New Zealand to Chile, crossing the international date line on an easterly course   
+       Departure time and date: 03:00 UTC, 19th November   
+       Flight time: 12 hours 30 minutes   
+       New Zealand ST: UTC + 12 hours   
+       Chile ST: UTC - 4 hours
+    explanation: ""
+    options:
+      - id: OAYE51BRK
+        text: 11:30, 18th November
+        correct: false
+        why: ""
+      - id: ONOTLJQQJ
+        text: 15:30, 19th November
+        correct: false
+        why: ""
+      - id: OEAYFSEZY
+        text: 11:30, 19th November
+        correct: true
+        why: ""
+      - id: OXWRBLVJY
+        text: 23:30, 18th November
+        correct: false
+        why: ""
+- id: QUBXIQJD
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614066
+    - AVEXAM-47058
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: Some states implement daylight saving time (sometimes referred to as
+      summer time) by advancing the clocks 1 hour in spring. Which of the
+      following options is an effect of this?
+    explanation: ""
+    options:
+      - id: OAURTAKK5
+        text: There is 1 hour of reduced daylight per day.
+        correct: false
+        why: ""
+      - id: ORH1MY08I
+        text: There is 1 hour of additional daylight per day.
+        correct: false
+        why: ""
+      - id: O4UDRPOUT
+        text: The daylight is shifted towards earlier in the day.
+        correct: false
+        why: ""
+      - id: OWQ7THOKI
+        text: The daylight is shifted towards later in the day.
+        correct: true
+        why: ""
+- id: QUEKZZDE
+  docId: 061.05.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617565
+    - AVEXAM-18749
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: simple
+    question: What is the LMT and local date at "A" 102º30’E, when it is 1045 LMT
+      5th of Oct at "B" 156º30’W?
+    explanation: ""
+    options:
+      - id: OKSIDXB7K
+        text: 1529 LMT, 5th of Oct
+        correct: false
+        why: ""
+      - id: OYVIKDC2P
+        text: 1529 LMT, 6th of Oct
+        correct: false
+        why: ""
+      - id: OYLOVRAWK
+        text: 0401 LMT, 5th of Oct
+        correct: false
+        why: ""
+      - id: ODAJ4PFVP
+        text: 0401 LMT, 6th of Oct
+        correct: true
+        why: ""
+- id: QUIBZNNY
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616611
+    - AVEXAM-88823
+  annexes:
+    - 061-standard-times-list-i-places-fast-on-utc
+    - 061-standard-times-list-iii-places-slow-on-utc-01
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: chart
+    question: "Refer to the figures. The standard time (ST) in Whitsunday,
+      Australia, at 21:30 UTC on the 4th of September is:"
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 07:30 ST on the 5th of September.
+        wrongAnswers:
+          - 5:30 ST on the 5th of September.
+          - 11:30 ST on the 4th of September.
+          - 06:30 ST on the 5th of September.
+        explanation: >-
+          Whitsunday is in the Australian Eastern Standard Time zone, which is
+          10 hours ahead of UTC. The time zone is read from the figures. Adding
+          the offset to 21:30 UTC passes midnight, so the date moves on to the
+          5th.
+
+
+          **Solution**
+
+
+          - Standard time = UTC + 10 h
+
+          - 21:30 UTC + 10 h = 07:30 on the next day, the 5th of September
+
+
+          **Why the other answers are wrong**
+
+
+          - **5:30 ST on the 5th of September**: an offset of 8 hours is used.
+
+          - **11:30 ST on the 4th of September**: the date is not moved on to
+          the 5th.
+
+          - **06:30 ST on the 5th of September**: an offset of 9 hours is used.
+- id: QURFXUUX
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618933
+  annexes: []
+  learningObjectives:
+    - 061.01.05.04.05
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: >-
+      On the 4th February at 08:00 Standard Time A STA an aircraft is exactly
+      above position A. Given the following information, estimate the time and
+      date of arrival at position B in Standard Time B STB
+
+
+      Position A: 50°00.0’N, 138°30.0’W STA: UTC -9 hours   
+
+      Position B: 50°00.0’N, 175°45.0’ E STB: UTC +12 hours   
+
+      Ground distance between A and B: 1736 NM   
+
+      Air distance between A and B exactly when the aircraft arrives over
+      position B: 1636 NM   
+
+      Average tailwind component for the flight: 25 kt
+    explanation: ""
+    options:
+      - id: OOEQUVYJV
+        text: 15:00 STB on the 04/02.
+        correct: false
+        why: ""
+      - id: OTYFMBMRS
+        text: 15:00 STB on the 03/02.
+        correct: false
+        why: ""
+      - id: ORTVR0GK5
+        text: 12:00 STB on the 04/02.
+        correct: false
+        why: ""
+      - id: OAU8DME1H
+        text: 09:00 STB on the 05/02.
+        correct: true
+        why: ""
+- id: QUZQOSTH
+  docId: 061.05.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617188
+    - AVEXAM-45540
+  annexes: []
+  learningObjectives:
+    - 061.05.01.02.01
+  template:
+    type: simple
+    question: Determine the Local Mean Time (LMT) and date at position 45°20´S,
+      101°15´W, at 19:00 UTC on the 16th May.
+    explanation: ""
+    options:
+      - id: OZJAT05KL
+        text: 01:45, 17th May
+        correct: false
+        why: ""
+      - id: O1ZSD8DSV
+        text: 06:45, 16th May
+        correct: false
+        why: ""
+      - id: OC948N4DC
+        text: 12:15, 16th May
+        correct: true
+        why: ""
+      - id: OAZFJBFJP
+        text: 15:59, 16th May
+        correct: false
+        why: ""
+- id: QVNWJEUW
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619492
+    - BGS-610760
+  annexes: []
+  learningObjectives:
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: Where is the International Dateline located?
+    explanation: ""
+    options:
+      - id: ORHCEXKXX
+        text: To the west of the 180°E/W meridian only.
+        correct: false
+        why: ""
+      - id: OFWISH8UP
+        text: Exactly on the 180°E/W meridian.
+        correct: false
+        why: ""
+      - id: OCTAXUF4Z
+        text: To the east of the 180°E/W meridian only.
+        correct: false
+        why: ""
+      - id: OZZPJVOX7
+        text: In the vicinity of the 180°E/W meridian.
+        correct: true
+        why: ""
+- id: QWBNMSAH
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612067
+    - AVEXAM-51749
+  annexes:
+    - 061-sunset-and-evening-civil-twilight-tables-october-2-29-and
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: chart
+    question: Refer to the figure. Murmansk, Russia (68°58'N 35°05'E). In UTC, when
+      is the end of evening civil twilight on 18 November?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 12:56
+        wrongAnswers:
+          - 17:36
+          - 17:26
+          - 12:45
+        explanation: >-
+          Evening civil twilight ends when the sun is 6° below the horizon. The
+          figure gives this time for each date and latitude, in UTC.
+
+
+          **Solution**
+
+
+          - Find 18 November on the civil twilight figure for the latitude of
+          Murmansk.
+
+          - Read the end of evening civil twilight in UTC.
+
+          - The time is **12:56 UTC**.
+
+
+          **Why the other answers are wrong**
+
+
+          - **17:36 UTC**: the evening twilight curve is read at the wrong
+          point, far too late.
+
+          - **17:26 UTC**: the same mistake as above, read slightly earlier on
+          the curve.
+
+          - **12:45 UTC**: the time is read a little early on the curve.
+- id: QWFSOLGO
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615999
+    - AVEXAM-63565
+    - ATPLGS-626622
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: What is the standard time and date in Ecuador ( UTC -5 hours) if it is
+      03:25 UTC on the 21st of January?
+    explanation: ""
+    options:
+      - id: OYLRVRSHX
+        text: 08:25, 21 st of January
+        correct: false
+        why: ""
+      - id: OOGRLF1XJ
+        text: 22:25, 20th of January
+        correct: true
+        why: ""
+      - id: OHTXMTXS1
+        text: 22:25, 21st of January
+        correct: false
+        why: ""
+      - id: OLRW3INA9
+        text: 01:35, 20th of January
+        correct: false
+        why: ""
+- id: QWLWUMJER
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615623
+    - BGS-611420
+  annexes:
+    - 061-sunset-and-evening-civil-twilight-tables-october-2-29-and
+  learningObjectives:
+    - 061.05.03.01.01
+  template:
+    type: chart
+    question: Refer to the figure. What is the duration of evening civil twilight
+      (ECT) at Guangzhou Balyon Airport, China (N23° 24', E113° 18') on the 11th
+      October?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 23 minutes
+        wrongAnswers:
+          - 28 minutes
+          - 19 minutes
+          - 26 minutes
+        explanation: >-
+          Evening civil twilight is the time between sunset and the moment the
+          sun is 6° below the horizon. Its duration is read from the civil
+          twilight figure for the date and place.
+
+
+          **Solution**
+
+
+          - Find 11 October on the figure for the latitude of Guangzhou.
+
+          - Read the duration of evening civil twilight.
+
+          - The duration is **23 minutes**.
+
+
+          **Why the other answers are wrong**
+
+
+          - **28 minutes**: read from the wrong point on the figure.
+
+          - **19 minutes**: read a little too early on the curve.
+
+          - **26 minutes**: read a little too late on the curve.
+- id: QXCMREYG
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615270
+    - AVEXAM-69482
+    - AVEXAM-25355
+  annexes:
+    - 061-sunset-and-evening-civil-twilight-tables-october-2-29-and
+  learningObjectives:
+    - 061.05.02.01.01
+    - 061.05.03.01.01
+  template:
+    type: chart-calculation
+    question: >-
+      Refer to figure. Hobart International Airport, Australia (S42°50',
+      E147°31') is in the Standard Time (ST) zone of Tasmania, which is UTC + 10
+      hours. The end of evening civil twilight on the 11th October 2017 is read
+      from the figure in UTC.
+
+
+      What is the standard time (ST) of the end of evening civil twilight at
+      Hobart International Airport? Give the time as hh:mm.
+    variables:
+      - id: ect_h
+        label: Hour of the end of evening civil twilight, UTC (read from the figure)
+        unit: h
+      - id: ect_m
+        label: Minute of the end of evening civil twilight, UTC (read from the figure)
+        unit: min
+    chartInputs:
+      - ect_h
+      - ect_m
+    answer:
+      formula: ect_h * 60 + ect_m + 600
+      unit: minutes
+      decimals: 0
+      format: hh:mm
+    distractors:
+      - id: d1
+        formula: ect_h * 60 + ect_m
+      - id: d2
+        formula: ect_h * 60 + ect_m + 300
+      - id: d3
+        formula: ect_h * 60 + ect_m + 660
+      - id: d4
+        formula: ect_h * 60 + ect_m + 540
+    presets:
+      - id: p1
+        values:
+          ect_h: 8
+          ect_m: 58
+      - id: p2
+        values:
+          ect_h: 9
+          ect_m: 10
+      - id: p3
+        values:
+          ect_h: 7
+          ect_m: 45
+    explanation: >-
+      Evening civil twilight ends when the sun is 6° below the horizon. The
+      figure gives this time in UTC, so the time zone difference has to be added
+      to get the standard time (ST) of Tasmania.
+
+
+      **Solution**
+
+
+      - End of evening civil twilight in UTC, read from the figure:
+      {{ect_h}}:{{ect_m}} UTC
+
+      - Add 10 hours for the Tasmania zone (UTC + 10)
+
+      - Standard time: **{{answer}} ST**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} ST**: the time zone difference is not added, so the UTC time is
+      given.
+
+      - **{{d2}} ST**: the zone is taken as UTC + 5 hours.
+
+      - **{{d3}} ST**: the zone is taken as UTC + 11 hours.
+
+      - **{{d4}} ST**: the zone is taken as UTC + 9 hours.
+- id: QYNJTKYU
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611891
+    - AVEXAM-31841
+  annexes: []
+  learningObjectives:
+    - 061.05.02.02.01
+  template:
+    type: simple
+    question: You are crossing the International Date Line on an eastbound direction
+      during the sunlight period on the 10th of a month. Which date is it at
+      your destination?
+    explanation: ""
+    options:
+      - id: OFWA3PVNZ
+        text: The 10th.
+        correct: false
+        why: ""
+      - id: O92BFIHSK
+        text: The 9th.
+        correct: true
+        why: ""
+      - id: O62V5V6QE
+        text: The 11th.
+        correct: false
+        why: ""
+      - id: OGHOBCZTM
+        text: The 12th.
+        correct: false
+        why: ""
+- id: QYUFWXHP
+  docId: "061.05"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617327
+    - AVEXAM-64116
+  annexes: []
+  learningObjectives:
+    - 061.05.02.01.01
+  template:
+    type: simple
+    question: >-
+      Given the following information from an Air Almanac, what is the Standard
+      Time (ST) and date in country A, if in country B, it is 15:00 ST 15th
+      July?
+
+
+      Standard time in country A is UTC +4 hours.   
+       Standard time in country B is UTC -7 hours.
+    explanation: ""
+    options:
+      - id: OU7TYJAGQ
+        text: 18:00 ST 15th July
+        correct: false
+        why: ""
+      - id: OHRET9RDA
+        text: 02:00 ST 16th July
+        correct: true
+        why: ""
+      - id: OAP7GGWVF
+        text: 22:00 ST 16th July
+        correct: false
+        why: ""
+      - id: ODKFFDQIA
+        text: 04:00 ST 15th July
+        correct: false
+        why: ""
+- id: QZEODDVZ
+  docId: 061.05.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611023
+    - ATPLGS-625361
+    - BGS-610088
+    - AVEXAM-32485
+  annexes: []
+  learningObjectives:
+    - 061.05.01.01.01
+  template:
+    type: simple
+    question: At 00:00 Local Mean Time the…
+    explanation: ""
+    options:
+      - id: OTFD9CMCC
+        text: apparent Sun is in transit with the observer’s meridian.
+        correct: false
+        why: ""
+      - id: ODOKILCXW
+        text: mean Sun is in transit with the observer’s anti-meridian.
+        correct: true
+        why: ""
+      - id: OA9UMC80R
+        text: mean Sun is in transit with the observer’s meridian.
+        correct: false
+        why: ""
+      - id: OASZXNCLR
+        text: apparent Sun is in transit with the observer’s anti-meridian.
+        correct: false
+        why: ""
+- id: QZNHVSHT
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615820
+    - AVEXAM-48007
+    - ATPLGS-625352
+  annexes: []
+  learningObjectives:
+    - 061.05.01.01.01
+    - 061.05.03.01.02
+  template:
+    type: simple
+    question: "At a given day, the sunrise in Dublin (53°29'N, 006°15'W) is 06:23
+      LMT. Calculate the sunrise at Bremen airport (53°29'N, 008°45'E) in LMT:"
+    explanation: ""
+    options:
+      - id: OVDNPEQOB
+        text: 07:23
+        correct: false
+        why: ""
+      - id: OOSTG9ZR1
+        text: 07:49
+        correct: false
+        why: ""
+      - id: OD9WDTD7X
+        text: 06:23
+        correct: true
+        why: ""
+      - id: OALVYCD04
+        text: 05:23
+        correct: false
+        why: ""
+- id: QZWUXKCM
+  docId: 061.05.03
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618136
+    - AVEXAM-19323
+    - AVEXAM-59241
+    - BGS-610106
+  annexes: []
+  learningObjectives:
+    - 061.01.01.02.02
+  template:
+    type: simple
+    question: Which statement about the duration of daylight is true?
+    explanation: ""
+    options:
+      - id: ODKOUV6AZ
+        text: Close to the equinoxes the influence of latitude on the duration of
+          daylight is at its smallest.
+        correct: true
+        why: ""
+      - id: OSTUBVUEQ
+        text: Close to the solstices the influence of latitude on the duration of
+          daylight is at its smallest.
+        correct: false
+        why: ""
+      - id: OUF3NLGP6
+        text: In summer the length of the period of daylight decreases with increasing
+          latitude.
+        correct: false
+        why: ""
+      - id: OQCFNA2YL
+        text: On September 10th the duration of daylight is longer on the Southern
+          Hemisphere than on the Northern Hemisphere.
+        correct: false
+        why: ""

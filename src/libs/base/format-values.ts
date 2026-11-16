@@ -8,6 +8,15 @@ export const formatMillisecondsAsClock = (milliseconds: number) => {
     .join(":");
 };
 
+export const formatMillisecondsAsMinutes = (milliseconds: number) => {
+  const totalSeconds = Math.max(0, Math.floor(milliseconds / 1000));
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return [minutes, seconds]
+    .map((value) => String(value).padStart(2, "0"))
+    .join(":");
+};
+
 export const formatEpochAsDate = (epochMs: number) =>
   new Intl.DateTimeFormat("en-GB", { dateStyle: "medium" }).format(epochMs);
 

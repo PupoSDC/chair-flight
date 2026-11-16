@@ -1,0 +1,20 @@
+# Local Postgres for development. Start it with `docker compose up -d --wait`.
+services:
+  db:
+    image: postgres:17
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: chair_flight
+    volumes:
+      - chair-flight-db:/var/lib/postgresql/data
+      - ./docker/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d chair_flight"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  chair-flight-db:

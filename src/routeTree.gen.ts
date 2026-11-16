@@ -9,264 +9,696 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as publicRouteRouteImport } from './routes/(public)/route'
+import { Route as backofficeBackofficeRouteImport } from './routes/(backoffice)/backoffice'
 import { Route as publicIndexRouteImport } from './routes/(public)/index'
-import { Route as modulesModulesQuestionBankRouteImport } from './routes/(modules)/modules.$questionBank'
+import { Route as publicAboutRouteImport } from './routes/(public)/about'
+import { Route as publicPrivacyRouteImport } from './routes/(public)/privacy'
+import { Route as publicTermsRouteImport } from './routes/(public)/terms'
+import { Route as DesignSystemChar123StoryChar125RouteImport } from './routes/design-system.{-$story}'
+import { Route as a320ModulesA320RouteImport } from './routes/(a320)/modules.a320'
+import { Route as atplModulesAtplRouteImport } from './routes/(atpl)/modules.atpl'
+import { Route as b737ModulesB737RouteImport } from './routes/(b737)/modules.b737'
+import { Route as backofficeBackofficeIndexRouteImport } from './routes/(backoffice)/backoffice.index'
+import { Route as backofficeBackofficeCommentsRouteImport } from './routes/(backoffice)/backoffice.comments'
+import { Route as prepModulesPrepRouteImport } from './routes/(prep)/modules.prep'
 import { Route as publicBlogIndexRouteImport } from './routes/(public)/blog.index'
 import { Route as publicBlogPostIdRouteImport } from './routes/(public)/blog.$postId'
-import { Route as modulesModulesQuestionBankIndexRouteImport } from './routes/(modules)/modules.$questionBank.index'
-import { Route as modulesModulesQuestionBankDocsIndexRouteImport } from './routes/(modules)/modules.$questionBank.docs.index'
-import { Route as modulesModulesQuestionBankDocsDocIdRouteImport } from './routes/(modules)/modules.$questionBank.docs.$docId'
-import { Route as modulesModulesQuestionBankFlashcardsIndexRouteImport } from './routes/(modules)/modules.$questionBank.flashcards.index'
-import { Route as modulesModulesQuestionBankFlashcardsCollectionIdRouteImport } from './routes/(modules)/modules.$questionBank.flashcards.$collectionId'
-import { Route as modulesModulesQuestionBankLearningObjectivesIndexRouteImport } from './routes/(modules)/modules.$questionBank.learning-objectives.index'
-import { Route as modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRouteImport } from './routes/(modules)/modules.$questionBank.learning-objectives.$learningObjectiveId'
-import { Route as modulesModulesQuestionBankQuestionsIndexRouteImport } from './routes/(modules)/modules.$questionBank.questions.index'
-import { Route as modulesModulesQuestionBankQuestionsQuestionIdRouteImport } from './routes/(modules)/modules.$questionBank.questions.$questionId'
-import { Route as modulesModulesQuestionBankTestsIndexRouteImport } from './routes/(modules)/modules.$questionBank.tests.index'
-import { Route as modulesModulesQuestionBankTestsCreateRouteImport } from './routes/(modules)/modules.$questionBank.tests.create'
-import { Route as modulesModulesQuestionBankTestsTestIdRouteImport } from './routes/(modules)/modules.$questionBank_.tests.$testId'
-import { Route as modulesModulesQuestionBankTestsTestIdReviewRouteImport } from './routes/(modules)/modules.$questionBank.tests.$testId.review'
+import { Route as publicModulesIndexRouteImport } from './routes/(public)/modules.index'
+import { Route as a320ModulesA320IndexRouteImport } from './routes/(a320)/modules.a320.index'
+import { Route as a320ModulesA320CreateTestRouteImport } from './routes/(a320)/modules.a320.create-test'
+import { Route as a320ModulesA320QuestionsRouteImport } from './routes/(a320)/modules.a320.questions'
+import { Route as a320ModulesA320SearchRouteImport } from './routes/(a320)/modules.a320.search'
+import { Route as atplModulesAtplIndexRouteImport } from './routes/(atpl)/modules.atpl.index'
+import { Route as atplModulesAtplCreateTestRouteImport } from './routes/(atpl)/modules.atpl.create-test'
+import { Route as b737ModulesB737IndexRouteImport } from './routes/(b737)/modules.b737.index'
+import { Route as b737ModulesB737CreateTestRouteImport } from './routes/(b737)/modules.b737.create-test'
+import { Route as b737ModulesB737QuestionsRouteImport } from './routes/(b737)/modules.b737.questions'
+import { Route as b737ModulesB737SearchRouteImport } from './routes/(b737)/modules.b737.search'
+import { Route as modulesModulesTypeSplatRouteImport } from './routes/(modules)/modules.type.$'
+import { Route as prepModulesPrepIndexRouteImport } from './routes/(prep)/modules.prep.index'
+import { Route as testTestTestIdIndexRouteImport } from './routes/(test)/test.$testId.index'
+import { Route as testTestTestIdReviewRouteImport } from './routes/(test)/test.$testId.review'
+import { Route as a320ModulesA320QuestionsIndexRouteImport } from './routes/(a320)/modules.a320.questions.index'
+import { Route as a320ModulesA320QuestionsQuestionIdRouteImport } from './routes/(a320)/modules.a320.questions.$questionId'
+import { Route as atplModulesAtplDocsIndexRouteImport } from './routes/(atpl)/modules.atpl.docs.index'
+import { Route as atplModulesAtplDocsDocIdRouteImport } from './routes/(atpl)/modules.atpl.docs.$docId'
+import { Route as atplModulesAtplLearningObjectivesIndexRouteImport } from './routes/(atpl)/modules.atpl.learning-objectives.index'
+import { Route as atplModulesAtplLearningObjectivesLearningObjectiveIdRouteImport } from './routes/(atpl)/modules.atpl.learning-objectives.$learningObjectiveId'
+import { Route as atplModulesAtplQuestionsIndexRouteImport } from './routes/(atpl)/modules.atpl.questions.index'
+import { Route as atplModulesAtplQuestionsQuestionIdRouteImport } from './routes/(atpl)/modules.atpl.questions.$questionId'
+import { Route as b737ModulesB737DocsIndexRouteImport } from './routes/(b737)/modules.b737.docs.index'
+import { Route as b737ModulesB737DocsDocIdRouteImport } from './routes/(b737)/modules.b737.docs.$docId'
+import { Route as b737ModulesB737QuestionsIndexRouteImport } from './routes/(b737)/modules.b737.questions.index'
+import { Route as b737ModulesB737QuestionsQuestionIdRouteImport } from './routes/(b737)/modules.b737.questions.$questionId'
+import { Route as prepModulesPrepFlashcardsIndexRouteImport } from './routes/(prep)/modules.prep.flashcards.index'
+import { Route as prepModulesPrepFlashcardsCollectionIdRouteImport } from './routes/(prep)/modules.prep.flashcards.$collectionId'
+import { Route as a320ModulesA320QuestionsChaptersChapterIdRouteImport } from './routes/(a320)/modules.a320.questions.chapters.$chapterId'
+import { Route as b737ModulesB737DocsDocIdIndexRouteImport } from './routes/(b737)/modules.b737.docs.$docId.index'
+import { Route as b737ModulesB737QuestionsChaptersChapterIdRouteImport } from './routes/(b737)/modules.b737.questions.chapters.$chapterId'
 
-const publicIndexRoute = publicIndexRouteImport.update({
-  id: '/(public)/',
-  path: '/',
+const publicRouteRoute = publicRouteRouteImport.update({
+  id: '/(public)',
   getParentRoute: () => rootRouteImport,
 } as any)
-const modulesModulesQuestionBankRoute =
-  modulesModulesQuestionBankRouteImport.update({
-    id: '/(modules)/modules/$questionBank',
-    path: '/modules/$questionBank',
+const backofficeBackofficeRoute = backofficeBackofficeRouteImport.update({
+  id: '/(backoffice)/backoffice',
+  path: '/backoffice',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const publicIndexRoute = publicIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => publicRouteRoute,
+} as any)
+const publicAboutRoute = publicAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => publicRouteRoute,
+} as any)
+const publicPrivacyRoute = publicPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => publicRouteRoute,
+} as any)
+const publicTermsRoute = publicTermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => publicRouteRoute,
+} as any)
+const DesignSystemChar123StoryChar125Route =
+  DesignSystemChar123StoryChar125RouteImport.update({
+    id: '/design-system/{-$story}',
+    path: '/design-system/{-$story}',
     getParentRoute: () => rootRouteImport,
   } as any)
-const publicBlogIndexRoute = publicBlogIndexRouteImport.update({
-  id: '/(public)/blog/',
-  path: '/blog/',
+const a320ModulesA320Route = a320ModulesA320RouteImport.update({
+  id: '/(a320)/modules/a320',
+  path: '/modules/a320',
   getParentRoute: () => rootRouteImport,
 } as any)
-const publicBlogPostIdRoute = publicBlogPostIdRouteImport.update({
-  id: '/(public)/blog/$postId',
-  path: '/blog/$postId',
+const atplModulesAtplRoute = atplModulesAtplRouteImport.update({
+  id: '/(atpl)/modules/atpl',
+  path: '/modules/atpl',
   getParentRoute: () => rootRouteImport,
 } as any)
-const modulesModulesQuestionBankIndexRoute =
-  modulesModulesQuestionBankIndexRouteImport.update({
+const b737ModulesB737Route = b737ModulesB737RouteImport.update({
+  id: '/(b737)/modules/b737',
+  path: '/modules/b737',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const backofficeBackofficeIndexRoute =
+  backofficeBackofficeIndexRouteImport.update({
     id: '/',
     path: '/',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
+    getParentRoute: () => backofficeBackofficeRoute,
   } as any)
-const modulesModulesQuestionBankDocsIndexRoute =
-  modulesModulesQuestionBankDocsIndexRouteImport.update({
+const backofficeBackofficeCommentsRoute =
+  backofficeBackofficeCommentsRouteImport.update({
+    id: '/comments',
+    path: '/comments',
+    getParentRoute: () => backofficeBackofficeRoute,
+  } as any)
+const prepModulesPrepRoute = prepModulesPrepRouteImport.update({
+  id: '/(prep)/modules/prep',
+  path: '/modules/prep',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const publicBlogIndexRoute = publicBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => publicRouteRoute,
+} as any)
+const publicBlogPostIdRoute = publicBlogPostIdRouteImport.update({
+  id: '/blog/$postId',
+  path: '/blog/$postId',
+  getParentRoute: () => publicRouteRoute,
+} as any)
+const publicModulesIndexRoute = publicModulesIndexRouteImport.update({
+  id: '/modules/',
+  path: '/modules/',
+  getParentRoute: () => publicRouteRoute,
+} as any)
+const a320ModulesA320IndexRoute = a320ModulesA320IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => a320ModulesA320Route,
+} as any)
+const a320ModulesA320CreateTestRoute =
+  a320ModulesA320CreateTestRouteImport.update({
+    id: '/create-test',
+    path: '/create-test',
+    getParentRoute: () => a320ModulesA320Route,
+  } as any)
+const a320ModulesA320QuestionsRoute =
+  a320ModulesA320QuestionsRouteImport.update({
+    id: '/questions',
+    path: '/questions',
+    getParentRoute: () => a320ModulesA320Route,
+  } as any)
+const a320ModulesA320SearchRoute = a320ModulesA320SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => a320ModulesA320Route,
+} as any)
+const atplModulesAtplIndexRoute = atplModulesAtplIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => atplModulesAtplRoute,
+} as any)
+const atplModulesAtplCreateTestRoute =
+  atplModulesAtplCreateTestRouteImport.update({
+    id: '/create-test',
+    path: '/create-test',
+    getParentRoute: () => atplModulesAtplRoute,
+  } as any)
+const b737ModulesB737IndexRoute = b737ModulesB737IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => b737ModulesB737Route,
+} as any)
+const b737ModulesB737CreateTestRoute =
+  b737ModulesB737CreateTestRouteImport.update({
+    id: '/create-test',
+    path: '/create-test',
+    getParentRoute: () => b737ModulesB737Route,
+  } as any)
+const b737ModulesB737QuestionsRoute =
+  b737ModulesB737QuestionsRouteImport.update({
+    id: '/questions',
+    path: '/questions',
+    getParentRoute: () => b737ModulesB737Route,
+  } as any)
+const b737ModulesB737SearchRoute = b737ModulesB737SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => b737ModulesB737Route,
+} as any)
+const modulesModulesTypeSplatRoute = modulesModulesTypeSplatRouteImport.update({
+  id: '/(modules)/modules/type/$',
+  path: '/modules/type/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const prepModulesPrepIndexRoute = prepModulesPrepIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => prepModulesPrepRoute,
+} as any)
+const testTestTestIdIndexRoute = testTestTestIdIndexRouteImport.update({
+  id: '/(test)/test/$testId/',
+  path: '/test/$testId/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const testTestTestIdReviewRoute = testTestTestIdReviewRouteImport.update({
+  id: '/(test)/test/$testId/review',
+  path: '/test/$testId/review',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const a320ModulesA320QuestionsIndexRoute =
+  a320ModulesA320QuestionsIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => a320ModulesA320QuestionsRoute,
+  } as any)
+const a320ModulesA320QuestionsQuestionIdRoute =
+  a320ModulesA320QuestionsQuestionIdRouteImport.update({
+    id: '/$questionId',
+    path: '/$questionId',
+    getParentRoute: () => a320ModulesA320QuestionsRoute,
+  } as any)
+const atplModulesAtplDocsIndexRoute =
+  atplModulesAtplDocsIndexRouteImport.update({
     id: '/docs/',
     path: '/docs/',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
+    getParentRoute: () => atplModulesAtplRoute,
   } as any)
-const modulesModulesQuestionBankDocsDocIdRoute =
-  modulesModulesQuestionBankDocsDocIdRouteImport.update({
+const atplModulesAtplDocsDocIdRoute =
+  atplModulesAtplDocsDocIdRouteImport.update({
     id: '/docs/$docId',
     path: '/docs/$docId',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
+    getParentRoute: () => atplModulesAtplRoute,
   } as any)
-const modulesModulesQuestionBankFlashcardsIndexRoute =
-  modulesModulesQuestionBankFlashcardsIndexRouteImport.update({
-    id: '/flashcards/',
-    path: '/flashcards/',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
-  } as any)
-const modulesModulesQuestionBankFlashcardsCollectionIdRoute =
-  modulesModulesQuestionBankFlashcardsCollectionIdRouteImport.update({
-    id: '/flashcards/$collectionId',
-    path: '/flashcards/$collectionId',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
-  } as any)
-const modulesModulesQuestionBankLearningObjectivesIndexRoute =
-  modulesModulesQuestionBankLearningObjectivesIndexRouteImport.update({
+const atplModulesAtplLearningObjectivesIndexRoute =
+  atplModulesAtplLearningObjectivesIndexRouteImport.update({
     id: '/learning-objectives/',
     path: '/learning-objectives/',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
+    getParentRoute: () => atplModulesAtplRoute,
   } as any)
-const modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRoute =
-  modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRouteImport.update(
-    {
-      id: '/learning-objectives/$learningObjectiveId',
-      path: '/learning-objectives/$learningObjectiveId',
-      getParentRoute: () => modulesModulesQuestionBankRoute,
-    } as any,
-  )
-const modulesModulesQuestionBankQuestionsIndexRoute =
-  modulesModulesQuestionBankQuestionsIndexRouteImport.update({
+const atplModulesAtplLearningObjectivesLearningObjectiveIdRoute =
+  atplModulesAtplLearningObjectivesLearningObjectiveIdRouteImport.update({
+    id: '/learning-objectives/$learningObjectiveId',
+    path: '/learning-objectives/$learningObjectiveId',
+    getParentRoute: () => atplModulesAtplRoute,
+  } as any)
+const atplModulesAtplQuestionsIndexRoute =
+  atplModulesAtplQuestionsIndexRouteImport.update({
     id: '/questions/',
     path: '/questions/',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
+    getParentRoute: () => atplModulesAtplRoute,
   } as any)
-const modulesModulesQuestionBankQuestionsQuestionIdRoute =
-  modulesModulesQuestionBankQuestionsQuestionIdRouteImport.update({
+const atplModulesAtplQuestionsQuestionIdRoute =
+  atplModulesAtplQuestionsQuestionIdRouteImport.update({
     id: '/questions/$questionId',
     path: '/questions/$questionId',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
+    getParentRoute: () => atplModulesAtplRoute,
   } as any)
-const modulesModulesQuestionBankTestsIndexRoute =
-  modulesModulesQuestionBankTestsIndexRouteImport.update({
-    id: '/tests/',
-    path: '/tests/',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
+const b737ModulesB737DocsIndexRoute =
+  b737ModulesB737DocsIndexRouteImport.update({
+    id: '/docs/',
+    path: '/docs/',
+    getParentRoute: () => b737ModulesB737Route,
   } as any)
-const modulesModulesQuestionBankTestsCreateRoute =
-  modulesModulesQuestionBankTestsCreateRouteImport.update({
-    id: '/tests/create',
-    path: '/tests/create',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
+const b737ModulesB737DocsDocIdRoute =
+  b737ModulesB737DocsDocIdRouteImport.update({
+    id: '/docs/$docId',
+    path: '/docs/$docId',
+    getParentRoute: () => b737ModulesB737Route,
   } as any)
-const modulesModulesQuestionBankTestsTestIdRoute =
-  modulesModulesQuestionBankTestsTestIdRouteImport.update({
-    id: '/(modules)/modules/$questionBank_/tests/$testId',
-    path: '/modules/$questionBank/tests/$testId',
-    getParentRoute: () => rootRouteImport,
+const b737ModulesB737QuestionsIndexRoute =
+  b737ModulesB737QuestionsIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => b737ModulesB737QuestionsRoute,
   } as any)
-const modulesModulesQuestionBankTestsTestIdReviewRoute =
-  modulesModulesQuestionBankTestsTestIdReviewRouteImport.update({
-    id: '/tests/$testId/review',
-    path: '/tests/$testId/review',
-    getParentRoute: () => modulesModulesQuestionBankRoute,
+const b737ModulesB737QuestionsQuestionIdRoute =
+  b737ModulesB737QuestionsQuestionIdRouteImport.update({
+    id: '/$questionId',
+    path: '/$questionId',
+    getParentRoute: () => b737ModulesB737QuestionsRoute,
+  } as any)
+const prepModulesPrepFlashcardsIndexRoute =
+  prepModulesPrepFlashcardsIndexRouteImport.update({
+    id: '/flashcards/',
+    path: '/flashcards/',
+    getParentRoute: () => prepModulesPrepRoute,
+  } as any)
+const prepModulesPrepFlashcardsCollectionIdRoute =
+  prepModulesPrepFlashcardsCollectionIdRouteImport.update({
+    id: '/flashcards/$collectionId',
+    path: '/flashcards/$collectionId',
+    getParentRoute: () => prepModulesPrepRoute,
+  } as any)
+const a320ModulesA320QuestionsChaptersChapterIdRoute =
+  a320ModulesA320QuestionsChaptersChapterIdRouteImport.update({
+    id: '/chapters/$chapterId',
+    path: '/chapters/$chapterId',
+    getParentRoute: () => a320ModulesA320QuestionsRoute,
+  } as any)
+const b737ModulesB737DocsDocIdIndexRoute =
+  b737ModulesB737DocsDocIdIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => b737ModulesB737DocsDocIdRoute,
+  } as any)
+const b737ModulesB737QuestionsChaptersChapterIdRoute =
+  b737ModulesB737QuestionsChaptersChapterIdRouteImport.update({
+    id: '/chapters/$chapterId',
+    path: '/chapters/$chapterId',
+    getParentRoute: () => b737ModulesB737QuestionsRoute,
   } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof publicIndexRoute
-  '/modules/$questionBank': typeof modulesModulesQuestionBankRouteWithChildren
+  '/backoffice': typeof backofficeBackofficeRouteWithChildren
+  '/about': typeof publicAboutRoute
+  '/privacy': typeof publicPrivacyRoute
+  '/terms': typeof publicTermsRoute
+  '/design-system/{-$story}': typeof DesignSystemChar123StoryChar125Route
+  '/modules/a320': typeof a320ModulesA320RouteWithChildren
+  '/modules/atpl': typeof atplModulesAtplRouteWithChildren
+  '/modules/b737': typeof b737ModulesB737RouteWithChildren
+  '/backoffice/comments': typeof backofficeBackofficeCommentsRoute
+  '/modules/prep': typeof prepModulesPrepRouteWithChildren
   '/blog/$postId': typeof publicBlogPostIdRoute
+  '/backoffice/': typeof backofficeBackofficeIndexRoute
   '/blog/': typeof publicBlogIndexRoute
-  '/modules/$questionBank/': typeof modulesModulesQuestionBankIndexRoute
-  '/modules/$questionBank/docs/$docId': typeof modulesModulesQuestionBankDocsDocIdRoute
-  '/modules/$questionBank/flashcards/$collectionId': typeof modulesModulesQuestionBankFlashcardsCollectionIdRoute
-  '/modules/$questionBank/learning-objectives/$learningObjectiveId': typeof modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRoute
-  '/modules/$questionBank/questions/$questionId': typeof modulesModulesQuestionBankQuestionsQuestionIdRoute
-  '/modules/$questionBank/tests/create': typeof modulesModulesQuestionBankTestsCreateRoute
-  '/modules/$questionBank/tests/$testId': typeof modulesModulesQuestionBankTestsTestIdRoute
-  '/modules/$questionBank/docs/': typeof modulesModulesQuestionBankDocsIndexRoute
-  '/modules/$questionBank/flashcards/': typeof modulesModulesQuestionBankFlashcardsIndexRoute
-  '/modules/$questionBank/learning-objectives/': typeof modulesModulesQuestionBankLearningObjectivesIndexRoute
-  '/modules/$questionBank/questions/': typeof modulesModulesQuestionBankQuestionsIndexRoute
-  '/modules/$questionBank/tests/': typeof modulesModulesQuestionBankTestsIndexRoute
-  '/modules/$questionBank/tests/$testId/review': typeof modulesModulesQuestionBankTestsTestIdReviewRoute
+  '/modules/': typeof publicModulesIndexRoute
+  '/modules/a320/create-test': typeof a320ModulesA320CreateTestRoute
+  '/modules/a320/questions': typeof a320ModulesA320QuestionsRouteWithChildren
+  '/modules/a320/search': typeof a320ModulesA320SearchRoute
+  '/modules/atpl/create-test': typeof atplModulesAtplCreateTestRoute
+  '/modules/b737/create-test': typeof b737ModulesB737CreateTestRoute
+  '/modules/b737/questions': typeof b737ModulesB737QuestionsRouteWithChildren
+  '/modules/b737/search': typeof b737ModulesB737SearchRoute
+  '/modules/type/$': typeof modulesModulesTypeSplatRoute
+  '/test/$testId/review': typeof testTestTestIdReviewRoute
+  '/modules/a320/': typeof a320ModulesA320IndexRoute
+  '/modules/atpl/': typeof atplModulesAtplIndexRoute
+  '/modules/b737/': typeof b737ModulesB737IndexRoute
+  '/modules/prep/': typeof prepModulesPrepIndexRoute
+  '/test/$testId/': typeof testTestTestIdIndexRoute
+  '/modules/a320/questions/$questionId': typeof a320ModulesA320QuestionsQuestionIdRoute
+  '/modules/atpl/docs/$docId': typeof atplModulesAtplDocsDocIdRoute
+  '/modules/atpl/learning-objectives/$learningObjectiveId': typeof atplModulesAtplLearningObjectivesLearningObjectiveIdRoute
+  '/modules/atpl/questions/$questionId': typeof atplModulesAtplQuestionsQuestionIdRoute
+  '/modules/b737/docs/$docId': typeof b737ModulesB737DocsDocIdRouteWithChildren
+  '/modules/b737/questions/$questionId': typeof b737ModulesB737QuestionsQuestionIdRoute
+  '/modules/prep/flashcards/$collectionId': typeof prepModulesPrepFlashcardsCollectionIdRoute
+  '/modules/a320/questions/': typeof a320ModulesA320QuestionsIndexRoute
+  '/modules/atpl/docs/': typeof atplModulesAtplDocsIndexRoute
+  '/modules/atpl/learning-objectives/': typeof atplModulesAtplLearningObjectivesIndexRoute
+  '/modules/atpl/questions/': typeof atplModulesAtplQuestionsIndexRoute
+  '/modules/b737/docs/': typeof b737ModulesB737DocsIndexRoute
+  '/modules/b737/questions/': typeof b737ModulesB737QuestionsIndexRoute
+  '/modules/prep/flashcards/': typeof prepModulesPrepFlashcardsIndexRoute
+  '/modules/a320/questions/chapters/$chapterId': typeof a320ModulesA320QuestionsChaptersChapterIdRoute
+  '/modules/b737/questions/chapters/$chapterId': typeof b737ModulesB737QuestionsChaptersChapterIdRoute
+  '/modules/b737/docs/$docId/': typeof b737ModulesB737DocsDocIdIndexRoute
 }
 export interface FileRoutesByTo {
+  '/about': typeof publicAboutRoute
+  '/privacy': typeof publicPrivacyRoute
+  '/terms': typeof publicTermsRoute
+  '/design-system/{-$story}': typeof DesignSystemChar123StoryChar125Route
   '/': typeof publicIndexRoute
+  '/backoffice/comments': typeof backofficeBackofficeCommentsRoute
   '/blog/$postId': typeof publicBlogPostIdRoute
+  '/backoffice': typeof backofficeBackofficeIndexRoute
   '/blog': typeof publicBlogIndexRoute
-  '/modules/$questionBank': typeof modulesModulesQuestionBankIndexRoute
-  '/modules/$questionBank/docs/$docId': typeof modulesModulesQuestionBankDocsDocIdRoute
-  '/modules/$questionBank/flashcards/$collectionId': typeof modulesModulesQuestionBankFlashcardsCollectionIdRoute
-  '/modules/$questionBank/learning-objectives/$learningObjectiveId': typeof modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRoute
-  '/modules/$questionBank/questions/$questionId': typeof modulesModulesQuestionBankQuestionsQuestionIdRoute
-  '/modules/$questionBank/tests/create': typeof modulesModulesQuestionBankTestsCreateRoute
-  '/modules/$questionBank/tests/$testId': typeof modulesModulesQuestionBankTestsTestIdRoute
-  '/modules/$questionBank/docs': typeof modulesModulesQuestionBankDocsIndexRoute
-  '/modules/$questionBank/flashcards': typeof modulesModulesQuestionBankFlashcardsIndexRoute
-  '/modules/$questionBank/learning-objectives': typeof modulesModulesQuestionBankLearningObjectivesIndexRoute
-  '/modules/$questionBank/questions': typeof modulesModulesQuestionBankQuestionsIndexRoute
-  '/modules/$questionBank/tests': typeof modulesModulesQuestionBankTestsIndexRoute
-  '/modules/$questionBank/tests/$testId/review': typeof modulesModulesQuestionBankTestsTestIdReviewRoute
+  '/modules': typeof publicModulesIndexRoute
+  '/modules/a320/create-test': typeof a320ModulesA320CreateTestRoute
+  '/modules/a320/search': typeof a320ModulesA320SearchRoute
+  '/modules/atpl/create-test': typeof atplModulesAtplCreateTestRoute
+  '/modules/b737/create-test': typeof b737ModulesB737CreateTestRoute
+  '/modules/b737/search': typeof b737ModulesB737SearchRoute
+  '/modules/type/$': typeof modulesModulesTypeSplatRoute
+  '/test/$testId/review': typeof testTestTestIdReviewRoute
+  '/modules/a320': typeof a320ModulesA320IndexRoute
+  '/modules/atpl': typeof atplModulesAtplIndexRoute
+  '/modules/b737': typeof b737ModulesB737IndexRoute
+  '/modules/prep': typeof prepModulesPrepIndexRoute
+  '/test/$testId': typeof testTestTestIdIndexRoute
+  '/modules/a320/questions/$questionId': typeof a320ModulesA320QuestionsQuestionIdRoute
+  '/modules/atpl/docs/$docId': typeof atplModulesAtplDocsDocIdRoute
+  '/modules/atpl/learning-objectives/$learningObjectiveId': typeof atplModulesAtplLearningObjectivesLearningObjectiveIdRoute
+  '/modules/atpl/questions/$questionId': typeof atplModulesAtplQuestionsQuestionIdRoute
+  '/modules/b737/questions/$questionId': typeof b737ModulesB737QuestionsQuestionIdRoute
+  '/modules/prep/flashcards/$collectionId': typeof prepModulesPrepFlashcardsCollectionIdRoute
+  '/modules/a320/questions': typeof a320ModulesA320QuestionsIndexRoute
+  '/modules/atpl/docs': typeof atplModulesAtplDocsIndexRoute
+  '/modules/atpl/learning-objectives': typeof atplModulesAtplLearningObjectivesIndexRoute
+  '/modules/atpl/questions': typeof atplModulesAtplQuestionsIndexRoute
+  '/modules/b737/docs': typeof b737ModulesB737DocsIndexRoute
+  '/modules/b737/questions': typeof b737ModulesB737QuestionsIndexRoute
+  '/modules/prep/flashcards': typeof prepModulesPrepFlashcardsIndexRoute
+  '/modules/a320/questions/chapters/$chapterId': typeof a320ModulesA320QuestionsChaptersChapterIdRoute
+  '/modules/b737/questions/chapters/$chapterId': typeof b737ModulesB737QuestionsChaptersChapterIdRoute
+  '/modules/b737/docs/$docId': typeof b737ModulesB737DocsDocIdIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/(public)': typeof publicRouteRouteWithChildren
+  '/(backoffice)/backoffice': typeof backofficeBackofficeRouteWithChildren
+  '/(public)/about': typeof publicAboutRoute
+  '/(public)/privacy': typeof publicPrivacyRoute
+  '/(public)/terms': typeof publicTermsRoute
+  '/design-system/{-$story}': typeof DesignSystemChar123StoryChar125Route
   '/(public)/': typeof publicIndexRoute
-  '/(modules)/modules/$questionBank': typeof modulesModulesQuestionBankRouteWithChildren
+  '/(a320)/modules/a320': typeof a320ModulesA320RouteWithChildren
+  '/(atpl)/modules/atpl': typeof atplModulesAtplRouteWithChildren
+  '/(b737)/modules/b737': typeof b737ModulesB737RouteWithChildren
+  '/(backoffice)/backoffice/comments': typeof backofficeBackofficeCommentsRoute
+  '/(prep)/modules/prep': typeof prepModulesPrepRouteWithChildren
   '/(public)/blog/$postId': typeof publicBlogPostIdRoute
+  '/(backoffice)/backoffice/': typeof backofficeBackofficeIndexRoute
   '/(public)/blog/': typeof publicBlogIndexRoute
-  '/(modules)/modules/$questionBank/': typeof modulesModulesQuestionBankIndexRoute
-  '/(modules)/modules/$questionBank/docs/$docId': typeof modulesModulesQuestionBankDocsDocIdRoute
-  '/(modules)/modules/$questionBank/flashcards/$collectionId': typeof modulesModulesQuestionBankFlashcardsCollectionIdRoute
-  '/(modules)/modules/$questionBank/learning-objectives/$learningObjectiveId': typeof modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRoute
-  '/(modules)/modules/$questionBank/questions/$questionId': typeof modulesModulesQuestionBankQuestionsQuestionIdRoute
-  '/(modules)/modules/$questionBank/tests/create': typeof modulesModulesQuestionBankTestsCreateRoute
-  '/(modules)/modules/$questionBank_/tests/$testId': typeof modulesModulesQuestionBankTestsTestIdRoute
-  '/(modules)/modules/$questionBank/docs/': typeof modulesModulesQuestionBankDocsIndexRoute
-  '/(modules)/modules/$questionBank/flashcards/': typeof modulesModulesQuestionBankFlashcardsIndexRoute
-  '/(modules)/modules/$questionBank/learning-objectives/': typeof modulesModulesQuestionBankLearningObjectivesIndexRoute
-  '/(modules)/modules/$questionBank/questions/': typeof modulesModulesQuestionBankQuestionsIndexRoute
-  '/(modules)/modules/$questionBank/tests/': typeof modulesModulesQuestionBankTestsIndexRoute
-  '/(modules)/modules/$questionBank/tests/$testId/review': typeof modulesModulesQuestionBankTestsTestIdReviewRoute
+  '/(public)/modules/': typeof publicModulesIndexRoute
+  '/(a320)/modules/a320/create-test': typeof a320ModulesA320CreateTestRoute
+  '/(a320)/modules/a320/questions': typeof a320ModulesA320QuestionsRouteWithChildren
+  '/(a320)/modules/a320/search': typeof a320ModulesA320SearchRoute
+  '/(atpl)/modules/atpl/create-test': typeof atplModulesAtplCreateTestRoute
+  '/(b737)/modules/b737/create-test': typeof b737ModulesB737CreateTestRoute
+  '/(b737)/modules/b737/questions': typeof b737ModulesB737QuestionsRouteWithChildren
+  '/(b737)/modules/b737/search': typeof b737ModulesB737SearchRoute
+  '/(modules)/modules/type/$': typeof modulesModulesTypeSplatRoute
+  '/(test)/test/$testId/review': typeof testTestTestIdReviewRoute
+  '/(a320)/modules/a320/': typeof a320ModulesA320IndexRoute
+  '/(atpl)/modules/atpl/': typeof atplModulesAtplIndexRoute
+  '/(b737)/modules/b737/': typeof b737ModulesB737IndexRoute
+  '/(prep)/modules/prep/': typeof prepModulesPrepIndexRoute
+  '/(test)/test/$testId/': typeof testTestTestIdIndexRoute
+  '/(a320)/modules/a320/questions/$questionId': typeof a320ModulesA320QuestionsQuestionIdRoute
+  '/(atpl)/modules/atpl/docs/$docId': typeof atplModulesAtplDocsDocIdRoute
+  '/(atpl)/modules/atpl/learning-objectives/$learningObjectiveId': typeof atplModulesAtplLearningObjectivesLearningObjectiveIdRoute
+  '/(atpl)/modules/atpl/questions/$questionId': typeof atplModulesAtplQuestionsQuestionIdRoute
+  '/(b737)/modules/b737/docs/$docId': typeof b737ModulesB737DocsDocIdRouteWithChildren
+  '/(b737)/modules/b737/questions/$questionId': typeof b737ModulesB737QuestionsQuestionIdRoute
+  '/(prep)/modules/prep/flashcards/$collectionId': typeof prepModulesPrepFlashcardsCollectionIdRoute
+  '/(a320)/modules/a320/questions/': typeof a320ModulesA320QuestionsIndexRoute
+  '/(atpl)/modules/atpl/docs/': typeof atplModulesAtplDocsIndexRoute
+  '/(atpl)/modules/atpl/learning-objectives/': typeof atplModulesAtplLearningObjectivesIndexRoute
+  '/(atpl)/modules/atpl/questions/': typeof atplModulesAtplQuestionsIndexRoute
+  '/(b737)/modules/b737/docs/': typeof b737ModulesB737DocsIndexRoute
+  '/(b737)/modules/b737/questions/': typeof b737ModulesB737QuestionsIndexRoute
+  '/(prep)/modules/prep/flashcards/': typeof prepModulesPrepFlashcardsIndexRoute
+  '/(a320)/modules/a320/questions/chapters/$chapterId': typeof a320ModulesA320QuestionsChaptersChapterIdRoute
+  '/(b737)/modules/b737/questions/chapters/$chapterId': typeof b737ModulesB737QuestionsChaptersChapterIdRoute
+  '/(b737)/modules/b737/docs/$docId/': typeof b737ModulesB737DocsDocIdIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/modules/$questionBank'
+    | '/backoffice'
+    | '/about'
+    | '/privacy'
+    | '/terms'
+    | '/design-system/{-$story}'
+    | '/modules/a320'
+    | '/modules/atpl'
+    | '/modules/b737'
+    | '/backoffice/comments'
+    | '/modules/prep'
     | '/blog/$postId'
+    | '/backoffice/'
     | '/blog/'
-    | '/modules/$questionBank/'
-    | '/modules/$questionBank/docs/$docId'
-    | '/modules/$questionBank/flashcards/$collectionId'
-    | '/modules/$questionBank/learning-objectives/$learningObjectiveId'
-    | '/modules/$questionBank/questions/$questionId'
-    | '/modules/$questionBank/tests/create'
-    | '/modules/$questionBank/tests/$testId'
-    | '/modules/$questionBank/docs/'
-    | '/modules/$questionBank/flashcards/'
-    | '/modules/$questionBank/learning-objectives/'
-    | '/modules/$questionBank/questions/'
-    | '/modules/$questionBank/tests/'
-    | '/modules/$questionBank/tests/$testId/review'
+    | '/modules/'
+    | '/modules/a320/create-test'
+    | '/modules/a320/questions'
+    | '/modules/a320/search'
+    | '/modules/atpl/create-test'
+    | '/modules/b737/create-test'
+    | '/modules/b737/questions'
+    | '/modules/b737/search'
+    | '/modules/type/$'
+    | '/test/$testId/review'
+    | '/modules/a320/'
+    | '/modules/atpl/'
+    | '/modules/b737/'
+    | '/modules/prep/'
+    | '/test/$testId/'
+    | '/modules/a320/questions/$questionId'
+    | '/modules/atpl/docs/$docId'
+    | '/modules/atpl/learning-objectives/$learningObjectiveId'
+    | '/modules/atpl/questions/$questionId'
+    | '/modules/b737/docs/$docId'
+    | '/modules/b737/questions/$questionId'
+    | '/modules/prep/flashcards/$collectionId'
+    | '/modules/a320/questions/'
+    | '/modules/atpl/docs/'
+    | '/modules/atpl/learning-objectives/'
+    | '/modules/atpl/questions/'
+    | '/modules/b737/docs/'
+    | '/modules/b737/questions/'
+    | '/modules/prep/flashcards/'
+    | '/modules/a320/questions/chapters/$chapterId'
+    | '/modules/b737/questions/chapters/$chapterId'
+    | '/modules/b737/docs/$docId/'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/about'
+    | '/privacy'
+    | '/terms'
+    | '/design-system/{-$story}'
     | '/'
+    | '/backoffice/comments'
     | '/blog/$postId'
+    | '/backoffice'
     | '/blog'
-    | '/modules/$questionBank'
-    | '/modules/$questionBank/docs/$docId'
-    | '/modules/$questionBank/flashcards/$collectionId'
-    | '/modules/$questionBank/learning-objectives/$learningObjectiveId'
-    | '/modules/$questionBank/questions/$questionId'
-    | '/modules/$questionBank/tests/create'
-    | '/modules/$questionBank/tests/$testId'
-    | '/modules/$questionBank/docs'
-    | '/modules/$questionBank/flashcards'
-    | '/modules/$questionBank/learning-objectives'
-    | '/modules/$questionBank/questions'
-    | '/modules/$questionBank/tests'
-    | '/modules/$questionBank/tests/$testId/review'
+    | '/modules'
+    | '/modules/a320/create-test'
+    | '/modules/a320/search'
+    | '/modules/atpl/create-test'
+    | '/modules/b737/create-test'
+    | '/modules/b737/search'
+    | '/modules/type/$'
+    | '/test/$testId/review'
+    | '/modules/a320'
+    | '/modules/atpl'
+    | '/modules/b737'
+    | '/modules/prep'
+    | '/test/$testId'
+    | '/modules/a320/questions/$questionId'
+    | '/modules/atpl/docs/$docId'
+    | '/modules/atpl/learning-objectives/$learningObjectiveId'
+    | '/modules/atpl/questions/$questionId'
+    | '/modules/b737/questions/$questionId'
+    | '/modules/prep/flashcards/$collectionId'
+    | '/modules/a320/questions'
+    | '/modules/atpl/docs'
+    | '/modules/atpl/learning-objectives'
+    | '/modules/atpl/questions'
+    | '/modules/b737/docs'
+    | '/modules/b737/questions'
+    | '/modules/prep/flashcards'
+    | '/modules/a320/questions/chapters/$chapterId'
+    | '/modules/b737/questions/chapters/$chapterId'
+    | '/modules/b737/docs/$docId'
   id:
     | '__root__'
+    | '/(public)'
+    | '/(backoffice)/backoffice'
+    | '/(public)/about'
+    | '/(public)/privacy'
+    | '/(public)/terms'
+    | '/design-system/{-$story}'
     | '/(public)/'
-    | '/(modules)/modules/$questionBank'
+    | '/(a320)/modules/a320'
+    | '/(atpl)/modules/atpl'
+    | '/(b737)/modules/b737'
+    | '/(backoffice)/backoffice/comments'
+    | '/(prep)/modules/prep'
     | '/(public)/blog/$postId'
+    | '/(backoffice)/backoffice/'
     | '/(public)/blog/'
-    | '/(modules)/modules/$questionBank/'
-    | '/(modules)/modules/$questionBank/docs/$docId'
-    | '/(modules)/modules/$questionBank/flashcards/$collectionId'
-    | '/(modules)/modules/$questionBank/learning-objectives/$learningObjectiveId'
-    | '/(modules)/modules/$questionBank/questions/$questionId'
-    | '/(modules)/modules/$questionBank/tests/create'
-    | '/(modules)/modules/$questionBank_/tests/$testId'
-    | '/(modules)/modules/$questionBank/docs/'
-    | '/(modules)/modules/$questionBank/flashcards/'
-    | '/(modules)/modules/$questionBank/learning-objectives/'
-    | '/(modules)/modules/$questionBank/questions/'
-    | '/(modules)/modules/$questionBank/tests/'
-    | '/(modules)/modules/$questionBank/tests/$testId/review'
+    | '/(public)/modules/'
+    | '/(a320)/modules/a320/create-test'
+    | '/(a320)/modules/a320/questions'
+    | '/(a320)/modules/a320/search'
+    | '/(atpl)/modules/atpl/create-test'
+    | '/(b737)/modules/b737/create-test'
+    | '/(b737)/modules/b737/questions'
+    | '/(b737)/modules/b737/search'
+    | '/(modules)/modules/type/$'
+    | '/(test)/test/$testId/review'
+    | '/(a320)/modules/a320/'
+    | '/(atpl)/modules/atpl/'
+    | '/(b737)/modules/b737/'
+    | '/(prep)/modules/prep/'
+    | '/(test)/test/$testId/'
+    | '/(a320)/modules/a320/questions/$questionId'
+    | '/(atpl)/modules/atpl/docs/$docId'
+    | '/(atpl)/modules/atpl/learning-objectives/$learningObjectiveId'
+    | '/(atpl)/modules/atpl/questions/$questionId'
+    | '/(b737)/modules/b737/docs/$docId'
+    | '/(b737)/modules/b737/questions/$questionId'
+    | '/(prep)/modules/prep/flashcards/$collectionId'
+    | '/(a320)/modules/a320/questions/'
+    | '/(atpl)/modules/atpl/docs/'
+    | '/(atpl)/modules/atpl/learning-objectives/'
+    | '/(atpl)/modules/atpl/questions/'
+    | '/(b737)/modules/b737/docs/'
+    | '/(b737)/modules/b737/questions/'
+    | '/(prep)/modules/prep/flashcards/'
+    | '/(a320)/modules/a320/questions/chapters/$chapterId'
+    | '/(b737)/modules/b737/questions/chapters/$chapterId'
+    | '/(b737)/modules/b737/docs/$docId/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  publicIndexRoute: typeof publicIndexRoute
-  modulesModulesQuestionBankRoute: typeof modulesModulesQuestionBankRouteWithChildren
-  publicBlogPostIdRoute: typeof publicBlogPostIdRoute
-  publicBlogIndexRoute: typeof publicBlogIndexRoute
-  modulesModulesQuestionBankTestsTestIdRoute: typeof modulesModulesQuestionBankTestsTestIdRoute
+  publicRouteRoute: typeof publicRouteRouteWithChildren
+  backofficeBackofficeRoute: typeof backofficeBackofficeRouteWithChildren
+  DesignSystemChar123StoryChar125Route: typeof DesignSystemChar123StoryChar125Route
+  a320ModulesA320Route: typeof a320ModulesA320RouteWithChildren
+  atplModulesAtplRoute: typeof atplModulesAtplRouteWithChildren
+  b737ModulesB737Route: typeof b737ModulesB737RouteWithChildren
+  prepModulesPrepRoute: typeof prepModulesPrepRouteWithChildren
+  modulesModulesTypeSplatRoute: typeof modulesModulesTypeSplatRoute
+  testTestTestIdReviewRoute: typeof testTestTestIdReviewRoute
+  testTestTestIdIndexRoute: typeof testTestTestIdIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/(public)': {
+      id: '/(public)'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof publicRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/(backoffice)/backoffice': {
+      id: '/(backoffice)/backoffice'
+      path: '/backoffice'
+      fullPath: '/backoffice'
+      preLoaderRoute: typeof backofficeBackofficeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/(public)/': {
       id: '/(public)/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof publicIndexRouteImport
+      parentRoute: typeof publicRouteRoute
+    }
+    '/(public)/about': {
+      id: '/(public)/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof publicAboutRouteImport
+      parentRoute: typeof publicRouteRoute
+    }
+    '/(public)/privacy': {
+      id: '/(public)/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof publicPrivacyRouteImport
+      parentRoute: typeof publicRouteRoute
+    }
+    '/(public)/terms': {
+      id: '/(public)/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof publicTermsRouteImport
+      parentRoute: typeof publicRouteRoute
+    }
+    '/design-system/{-$story}': {
+      id: '/design-system/{-$story}'
+      path: '/design-system/{-$story}'
+      fullPath: '/design-system/{-$story}'
+      preLoaderRoute: typeof DesignSystemChar123StoryChar125RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/(modules)/modules/$questionBank': {
-      id: '/(modules)/modules/$questionBank'
-      path: '/modules/$questionBank'
-      fullPath: '/modules/$questionBank'
-      preLoaderRoute: typeof modulesModulesQuestionBankRouteImport
+    '/(a320)/modules/a320': {
+      id: '/(a320)/modules/a320'
+      path: '/modules/a320'
+      fullPath: '/modules/a320'
+      preLoaderRoute: typeof a320ModulesA320RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/(atpl)/modules/atpl': {
+      id: '/(atpl)/modules/atpl'
+      path: '/modules/atpl'
+      fullPath: '/modules/atpl'
+      preLoaderRoute: typeof atplModulesAtplRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/(b737)/modules/b737': {
+      id: '/(b737)/modules/b737'
+      path: '/modules/b737'
+      fullPath: '/modules/b737'
+      preLoaderRoute: typeof b737ModulesB737RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/(backoffice)/backoffice/': {
+      id: '/(backoffice)/backoffice/'
+      path: '/'
+      fullPath: '/backoffice/'
+      preLoaderRoute: typeof backofficeBackofficeIndexRouteImport
+      parentRoute: typeof backofficeBackofficeRoute
+    }
+    '/(backoffice)/backoffice/comments': {
+      id: '/(backoffice)/backoffice/comments'
+      path: '/comments'
+      fullPath: '/backoffice/comments'
+      preLoaderRoute: typeof backofficeBackofficeCommentsRouteImport
+      parentRoute: typeof backofficeBackofficeRoute
+    }
+    '/(prep)/modules/prep': {
+      id: '/(prep)/modules/prep'
+      path: '/modules/prep'
+      fullPath: '/modules/prep'
+      preLoaderRoute: typeof prepModulesPrepRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/(public)/blog/': {
@@ -274,163 +706,430 @@ declare module '@tanstack/react-router' {
       path: '/blog'
       fullPath: '/blog/'
       preLoaderRoute: typeof publicBlogIndexRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof publicRouteRoute
     }
     '/(public)/blog/$postId': {
       id: '/(public)/blog/$postId'
       path: '/blog/$postId'
       fullPath: '/blog/$postId'
       preLoaderRoute: typeof publicBlogPostIdRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof publicRouteRoute
     }
-    '/(modules)/modules/$questionBank/': {
-      id: '/(modules)/modules/$questionBank/'
+    '/(public)/modules/': {
+      id: '/(public)/modules/'
+      path: '/modules'
+      fullPath: '/modules/'
+      preLoaderRoute: typeof publicModulesIndexRouteImport
+      parentRoute: typeof publicRouteRoute
+    }
+    '/(a320)/modules/a320/': {
+      id: '/(a320)/modules/a320/'
       path: '/'
-      fullPath: '/modules/$questionBank/'
-      preLoaderRoute: typeof modulesModulesQuestionBankIndexRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
+      fullPath: '/modules/a320/'
+      preLoaderRoute: typeof a320ModulesA320IndexRouteImport
+      parentRoute: typeof a320ModulesA320Route
     }
-    '/(modules)/modules/$questionBank/docs/': {
-      id: '/(modules)/modules/$questionBank/docs/'
-      path: '/docs'
-      fullPath: '/modules/$questionBank/docs/'
-      preLoaderRoute: typeof modulesModulesQuestionBankDocsIndexRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
+    '/(a320)/modules/a320/create-test': {
+      id: '/(a320)/modules/a320/create-test'
+      path: '/create-test'
+      fullPath: '/modules/a320/create-test'
+      preLoaderRoute: typeof a320ModulesA320CreateTestRouteImport
+      parentRoute: typeof a320ModulesA320Route
     }
-    '/(modules)/modules/$questionBank/docs/$docId': {
-      id: '/(modules)/modules/$questionBank/docs/$docId'
-      path: '/docs/$docId'
-      fullPath: '/modules/$questionBank/docs/$docId'
-      preLoaderRoute: typeof modulesModulesQuestionBankDocsDocIdRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
-    }
-    '/(modules)/modules/$questionBank/flashcards/': {
-      id: '/(modules)/modules/$questionBank/flashcards/'
-      path: '/flashcards'
-      fullPath: '/modules/$questionBank/flashcards/'
-      preLoaderRoute: typeof modulesModulesQuestionBankFlashcardsIndexRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
-    }
-    '/(modules)/modules/$questionBank/flashcards/$collectionId': {
-      id: '/(modules)/modules/$questionBank/flashcards/$collectionId'
-      path: '/flashcards/$collectionId'
-      fullPath: '/modules/$questionBank/flashcards/$collectionId'
-      preLoaderRoute: typeof modulesModulesQuestionBankFlashcardsCollectionIdRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
-    }
-    '/(modules)/modules/$questionBank/learning-objectives/': {
-      id: '/(modules)/modules/$questionBank/learning-objectives/'
-      path: '/learning-objectives'
-      fullPath: '/modules/$questionBank/learning-objectives/'
-      preLoaderRoute: typeof modulesModulesQuestionBankLearningObjectivesIndexRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
-    }
-    '/(modules)/modules/$questionBank/learning-objectives/$learningObjectiveId': {
-      id: '/(modules)/modules/$questionBank/learning-objectives/$learningObjectiveId'
-      path: '/learning-objectives/$learningObjectiveId'
-      fullPath: '/modules/$questionBank/learning-objectives/$learningObjectiveId'
-      preLoaderRoute: typeof modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
-    }
-    '/(modules)/modules/$questionBank/questions/': {
-      id: '/(modules)/modules/$questionBank/questions/'
+    '/(a320)/modules/a320/questions': {
+      id: '/(a320)/modules/a320/questions'
       path: '/questions'
-      fullPath: '/modules/$questionBank/questions/'
-      preLoaderRoute: typeof modulesModulesQuestionBankQuestionsIndexRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
+      fullPath: '/modules/a320/questions'
+      preLoaderRoute: typeof a320ModulesA320QuestionsRouteImport
+      parentRoute: typeof a320ModulesA320Route
     }
-    '/(modules)/modules/$questionBank/questions/$questionId': {
-      id: '/(modules)/modules/$questionBank/questions/$questionId'
-      path: '/questions/$questionId'
-      fullPath: '/modules/$questionBank/questions/$questionId'
-      preLoaderRoute: typeof modulesModulesQuestionBankQuestionsQuestionIdRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
+    '/(a320)/modules/a320/search': {
+      id: '/(a320)/modules/a320/search'
+      path: '/search'
+      fullPath: '/modules/a320/search'
+      preLoaderRoute: typeof a320ModulesA320SearchRouteImport
+      parentRoute: typeof a320ModulesA320Route
     }
-    '/(modules)/modules/$questionBank/tests/': {
-      id: '/(modules)/modules/$questionBank/tests/'
-      path: '/tests'
-      fullPath: '/modules/$questionBank/tests/'
-      preLoaderRoute: typeof modulesModulesQuestionBankTestsIndexRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
+    '/(atpl)/modules/atpl/': {
+      id: '/(atpl)/modules/atpl/'
+      path: '/'
+      fullPath: '/modules/atpl/'
+      preLoaderRoute: typeof atplModulesAtplIndexRouteImport
+      parentRoute: typeof atplModulesAtplRoute
     }
-    '/(modules)/modules/$questionBank/tests/create': {
-      id: '/(modules)/modules/$questionBank/tests/create'
-      path: '/tests/create'
-      fullPath: '/modules/$questionBank/tests/create'
-      preLoaderRoute: typeof modulesModulesQuestionBankTestsCreateRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
+    '/(atpl)/modules/atpl/create-test': {
+      id: '/(atpl)/modules/atpl/create-test'
+      path: '/create-test'
+      fullPath: '/modules/atpl/create-test'
+      preLoaderRoute: typeof atplModulesAtplCreateTestRouteImport
+      parentRoute: typeof atplModulesAtplRoute
     }
-    '/(modules)/modules/$questionBank_/tests/$testId': {
-      id: '/(modules)/modules/$questionBank_/tests/$testId'
-      path: '/modules/$questionBank/tests/$testId'
-      fullPath: '/modules/$questionBank/tests/$testId'
-      preLoaderRoute: typeof modulesModulesQuestionBankTestsTestIdRouteImport
+    '/(b737)/modules/b737/': {
+      id: '/(b737)/modules/b737/'
+      path: '/'
+      fullPath: '/modules/b737/'
+      preLoaderRoute: typeof b737ModulesB737IndexRouteImport
+      parentRoute: typeof b737ModulesB737Route
+    }
+    '/(b737)/modules/b737/create-test': {
+      id: '/(b737)/modules/b737/create-test'
+      path: '/create-test'
+      fullPath: '/modules/b737/create-test'
+      preLoaderRoute: typeof b737ModulesB737CreateTestRouteImport
+      parentRoute: typeof b737ModulesB737Route
+    }
+    '/(b737)/modules/b737/questions': {
+      id: '/(b737)/modules/b737/questions'
+      path: '/questions'
+      fullPath: '/modules/b737/questions'
+      preLoaderRoute: typeof b737ModulesB737QuestionsRouteImport
+      parentRoute: typeof b737ModulesB737Route
+    }
+    '/(b737)/modules/b737/search': {
+      id: '/(b737)/modules/b737/search'
+      path: '/search'
+      fullPath: '/modules/b737/search'
+      preLoaderRoute: typeof b737ModulesB737SearchRouteImport
+      parentRoute: typeof b737ModulesB737Route
+    }
+    '/(modules)/modules/type/$': {
+      id: '/(modules)/modules/type/$'
+      path: '/modules/type/$'
+      fullPath: '/modules/type/$'
+      preLoaderRoute: typeof modulesModulesTypeSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/(modules)/modules/$questionBank/tests/$testId/review': {
-      id: '/(modules)/modules/$questionBank/tests/$testId/review'
-      path: '/tests/$testId/review'
-      fullPath: '/modules/$questionBank/tests/$testId/review'
-      preLoaderRoute: typeof modulesModulesQuestionBankTestsTestIdReviewRouteImport
-      parentRoute: typeof modulesModulesQuestionBankRoute
+    '/(prep)/modules/prep/': {
+      id: '/(prep)/modules/prep/'
+      path: '/'
+      fullPath: '/modules/prep/'
+      preLoaderRoute: typeof prepModulesPrepIndexRouteImport
+      parentRoute: typeof prepModulesPrepRoute
+    }
+    '/(test)/test/$testId/': {
+      id: '/(test)/test/$testId/'
+      path: '/test/$testId'
+      fullPath: '/test/$testId/'
+      preLoaderRoute: typeof testTestTestIdIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/(test)/test/$testId/review': {
+      id: '/(test)/test/$testId/review'
+      path: '/test/$testId/review'
+      fullPath: '/test/$testId/review'
+      preLoaderRoute: typeof testTestTestIdReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/(a320)/modules/a320/questions/': {
+      id: '/(a320)/modules/a320/questions/'
+      path: '/'
+      fullPath: '/modules/a320/questions/'
+      preLoaderRoute: typeof a320ModulesA320QuestionsIndexRouteImport
+      parentRoute: typeof a320ModulesA320QuestionsRoute
+    }
+    '/(a320)/modules/a320/questions/$questionId': {
+      id: '/(a320)/modules/a320/questions/$questionId'
+      path: '/$questionId'
+      fullPath: '/modules/a320/questions/$questionId'
+      preLoaderRoute: typeof a320ModulesA320QuestionsQuestionIdRouteImport
+      parentRoute: typeof a320ModulesA320QuestionsRoute
+    }
+    '/(atpl)/modules/atpl/docs/': {
+      id: '/(atpl)/modules/atpl/docs/'
+      path: '/docs'
+      fullPath: '/modules/atpl/docs/'
+      preLoaderRoute: typeof atplModulesAtplDocsIndexRouteImport
+      parentRoute: typeof atplModulesAtplRoute
+    }
+    '/(atpl)/modules/atpl/docs/$docId': {
+      id: '/(atpl)/modules/atpl/docs/$docId'
+      path: '/docs/$docId'
+      fullPath: '/modules/atpl/docs/$docId'
+      preLoaderRoute: typeof atplModulesAtplDocsDocIdRouteImport
+      parentRoute: typeof atplModulesAtplRoute
+    }
+    '/(atpl)/modules/atpl/learning-objectives/': {
+      id: '/(atpl)/modules/atpl/learning-objectives/'
+      path: '/learning-objectives'
+      fullPath: '/modules/atpl/learning-objectives/'
+      preLoaderRoute: typeof atplModulesAtplLearningObjectivesIndexRouteImport
+      parentRoute: typeof atplModulesAtplRoute
+    }
+    '/(atpl)/modules/atpl/learning-objectives/$learningObjectiveId': {
+      id: '/(atpl)/modules/atpl/learning-objectives/$learningObjectiveId'
+      path: '/learning-objectives/$learningObjectiveId'
+      fullPath: '/modules/atpl/learning-objectives/$learningObjectiveId'
+      preLoaderRoute: typeof atplModulesAtplLearningObjectivesLearningObjectiveIdRouteImport
+      parentRoute: typeof atplModulesAtplRoute
+    }
+    '/(atpl)/modules/atpl/questions/': {
+      id: '/(atpl)/modules/atpl/questions/'
+      path: '/questions'
+      fullPath: '/modules/atpl/questions/'
+      preLoaderRoute: typeof atplModulesAtplQuestionsIndexRouteImport
+      parentRoute: typeof atplModulesAtplRoute
+    }
+    '/(atpl)/modules/atpl/questions/$questionId': {
+      id: '/(atpl)/modules/atpl/questions/$questionId'
+      path: '/questions/$questionId'
+      fullPath: '/modules/atpl/questions/$questionId'
+      preLoaderRoute: typeof atplModulesAtplQuestionsQuestionIdRouteImport
+      parentRoute: typeof atplModulesAtplRoute
+    }
+    '/(b737)/modules/b737/docs/': {
+      id: '/(b737)/modules/b737/docs/'
+      path: '/docs'
+      fullPath: '/modules/b737/docs/'
+      preLoaderRoute: typeof b737ModulesB737DocsIndexRouteImport
+      parentRoute: typeof b737ModulesB737Route
+    }
+    '/(b737)/modules/b737/docs/$docId': {
+      id: '/(b737)/modules/b737/docs/$docId'
+      path: '/docs/$docId'
+      fullPath: '/modules/b737/docs/$docId'
+      preLoaderRoute: typeof b737ModulesB737DocsDocIdRouteImport
+      parentRoute: typeof b737ModulesB737Route
+    }
+    '/(b737)/modules/b737/questions/': {
+      id: '/(b737)/modules/b737/questions/'
+      path: '/'
+      fullPath: '/modules/b737/questions/'
+      preLoaderRoute: typeof b737ModulesB737QuestionsIndexRouteImport
+      parentRoute: typeof b737ModulesB737QuestionsRoute
+    }
+    '/(b737)/modules/b737/questions/$questionId': {
+      id: '/(b737)/modules/b737/questions/$questionId'
+      path: '/$questionId'
+      fullPath: '/modules/b737/questions/$questionId'
+      preLoaderRoute: typeof b737ModulesB737QuestionsQuestionIdRouteImport
+      parentRoute: typeof b737ModulesB737QuestionsRoute
+    }
+    '/(prep)/modules/prep/flashcards/': {
+      id: '/(prep)/modules/prep/flashcards/'
+      path: '/flashcards'
+      fullPath: '/modules/prep/flashcards/'
+      preLoaderRoute: typeof prepModulesPrepFlashcardsIndexRouteImport
+      parentRoute: typeof prepModulesPrepRoute
+    }
+    '/(prep)/modules/prep/flashcards/$collectionId': {
+      id: '/(prep)/modules/prep/flashcards/$collectionId'
+      path: '/flashcards/$collectionId'
+      fullPath: '/modules/prep/flashcards/$collectionId'
+      preLoaderRoute: typeof prepModulesPrepFlashcardsCollectionIdRouteImport
+      parentRoute: typeof prepModulesPrepRoute
+    }
+    '/(a320)/modules/a320/questions/chapters/$chapterId': {
+      id: '/(a320)/modules/a320/questions/chapters/$chapterId'
+      path: '/chapters/$chapterId'
+      fullPath: '/modules/a320/questions/chapters/$chapterId'
+      preLoaderRoute: typeof a320ModulesA320QuestionsChaptersChapterIdRouteImport
+      parentRoute: typeof a320ModulesA320QuestionsRoute
+    }
+    '/(b737)/modules/b737/docs/$docId/': {
+      id: '/(b737)/modules/b737/docs/$docId/'
+      path: '/'
+      fullPath: '/modules/b737/docs/$docId/'
+      preLoaderRoute: typeof b737ModulesB737DocsDocIdIndexRouteImport
+      parentRoute: typeof b737ModulesB737DocsDocIdRoute
+    }
+    '/(b737)/modules/b737/questions/chapters/$chapterId': {
+      id: '/(b737)/modules/b737/questions/chapters/$chapterId'
+      path: '/chapters/$chapterId'
+      fullPath: '/modules/b737/questions/chapters/$chapterId'
+      preLoaderRoute: typeof b737ModulesB737QuestionsChaptersChapterIdRouteImport
+      parentRoute: typeof b737ModulesB737QuestionsRoute
     }
   }
 }
 
-interface modulesModulesQuestionBankRouteChildren {
-  modulesModulesQuestionBankIndexRoute: typeof modulesModulesQuestionBankIndexRoute
-  modulesModulesQuestionBankDocsDocIdRoute: typeof modulesModulesQuestionBankDocsDocIdRoute
-  modulesModulesQuestionBankFlashcardsCollectionIdRoute: typeof modulesModulesQuestionBankFlashcardsCollectionIdRoute
-  modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRoute: typeof modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRoute
-  modulesModulesQuestionBankQuestionsQuestionIdRoute: typeof modulesModulesQuestionBankQuestionsQuestionIdRoute
-  modulesModulesQuestionBankTestsCreateRoute: typeof modulesModulesQuestionBankTestsCreateRoute
-  modulesModulesQuestionBankDocsIndexRoute: typeof modulesModulesQuestionBankDocsIndexRoute
-  modulesModulesQuestionBankFlashcardsIndexRoute: typeof modulesModulesQuestionBankFlashcardsIndexRoute
-  modulesModulesQuestionBankLearningObjectivesIndexRoute: typeof modulesModulesQuestionBankLearningObjectivesIndexRoute
-  modulesModulesQuestionBankQuestionsIndexRoute: typeof modulesModulesQuestionBankQuestionsIndexRoute
-  modulesModulesQuestionBankTestsIndexRoute: typeof modulesModulesQuestionBankTestsIndexRoute
-  modulesModulesQuestionBankTestsTestIdReviewRoute: typeof modulesModulesQuestionBankTestsTestIdReviewRoute
+interface publicRouteRouteChildren {
+  publicAboutRoute: typeof publicAboutRoute
+  publicPrivacyRoute: typeof publicPrivacyRoute
+  publicTermsRoute: typeof publicTermsRoute
+  publicIndexRoute: typeof publicIndexRoute
+  publicBlogPostIdRoute: typeof publicBlogPostIdRoute
+  publicBlogIndexRoute: typeof publicBlogIndexRoute
+  publicModulesIndexRoute: typeof publicModulesIndexRoute
 }
 
-const modulesModulesQuestionBankRouteChildren: modulesModulesQuestionBankRouteChildren =
-  {
-    modulesModulesQuestionBankIndexRoute: modulesModulesQuestionBankIndexRoute,
-    modulesModulesQuestionBankDocsDocIdRoute:
-      modulesModulesQuestionBankDocsDocIdRoute,
-    modulesModulesQuestionBankFlashcardsCollectionIdRoute:
-      modulesModulesQuestionBankFlashcardsCollectionIdRoute,
-    modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRoute:
-      modulesModulesQuestionBankLearningObjectivesLearningObjectiveIdRoute,
-    modulesModulesQuestionBankQuestionsQuestionIdRoute:
-      modulesModulesQuestionBankQuestionsQuestionIdRoute,
-    modulesModulesQuestionBankTestsCreateRoute:
-      modulesModulesQuestionBankTestsCreateRoute,
-    modulesModulesQuestionBankDocsIndexRoute:
-      modulesModulesQuestionBankDocsIndexRoute,
-    modulesModulesQuestionBankFlashcardsIndexRoute:
-      modulesModulesQuestionBankFlashcardsIndexRoute,
-    modulesModulesQuestionBankLearningObjectivesIndexRoute:
-      modulesModulesQuestionBankLearningObjectivesIndexRoute,
-    modulesModulesQuestionBankQuestionsIndexRoute:
-      modulesModulesQuestionBankQuestionsIndexRoute,
-    modulesModulesQuestionBankTestsIndexRoute:
-      modulesModulesQuestionBankTestsIndexRoute,
-    modulesModulesQuestionBankTestsTestIdReviewRoute:
-      modulesModulesQuestionBankTestsTestIdReviewRoute,
-  }
-
-const modulesModulesQuestionBankRouteWithChildren =
-  modulesModulesQuestionBankRoute._addFileChildren(
-    modulesModulesQuestionBankRouteChildren,
-  )
-
-const rootRouteChildren: RootRouteChildren = {
+const publicRouteRouteChildren: publicRouteRouteChildren = {
+  publicAboutRoute: publicAboutRoute,
+  publicPrivacyRoute: publicPrivacyRoute,
+  publicTermsRoute: publicTermsRoute,
   publicIndexRoute: publicIndexRoute,
-  modulesModulesQuestionBankRoute: modulesModulesQuestionBankRouteWithChildren,
   publicBlogPostIdRoute: publicBlogPostIdRoute,
   publicBlogIndexRoute: publicBlogIndexRoute,
-  modulesModulesQuestionBankTestsTestIdRoute:
-    modulesModulesQuestionBankTestsTestIdRoute,
+  publicModulesIndexRoute: publicModulesIndexRoute,
+}
+
+const publicRouteRouteWithChildren = publicRouteRoute._addFileChildren(
+  publicRouteRouteChildren,
+)
+
+interface backofficeBackofficeRouteChildren {
+  backofficeBackofficeCommentsRoute: typeof backofficeBackofficeCommentsRoute
+  backofficeBackofficeIndexRoute: typeof backofficeBackofficeIndexRoute
+}
+
+const backofficeBackofficeRouteChildren: backofficeBackofficeRouteChildren = {
+  backofficeBackofficeCommentsRoute: backofficeBackofficeCommentsRoute,
+  backofficeBackofficeIndexRoute: backofficeBackofficeIndexRoute,
+}
+
+const backofficeBackofficeRouteWithChildren =
+  backofficeBackofficeRoute._addFileChildren(backofficeBackofficeRouteChildren)
+
+interface a320ModulesA320QuestionsRouteChildren {
+  a320ModulesA320QuestionsQuestionIdRoute: typeof a320ModulesA320QuestionsQuestionIdRoute
+  a320ModulesA320QuestionsIndexRoute: typeof a320ModulesA320QuestionsIndexRoute
+  a320ModulesA320QuestionsChaptersChapterIdRoute: typeof a320ModulesA320QuestionsChaptersChapterIdRoute
+}
+
+const a320ModulesA320QuestionsRouteChildren: a320ModulesA320QuestionsRouteChildren =
+  {
+    a320ModulesA320QuestionsQuestionIdRoute:
+      a320ModulesA320QuestionsQuestionIdRoute,
+    a320ModulesA320QuestionsIndexRoute: a320ModulesA320QuestionsIndexRoute,
+    a320ModulesA320QuestionsChaptersChapterIdRoute:
+      a320ModulesA320QuestionsChaptersChapterIdRoute,
+  }
+
+const a320ModulesA320QuestionsRouteWithChildren =
+  a320ModulesA320QuestionsRoute._addFileChildren(
+    a320ModulesA320QuestionsRouteChildren,
+  )
+
+interface a320ModulesA320RouteChildren {
+  a320ModulesA320CreateTestRoute: typeof a320ModulesA320CreateTestRoute
+  a320ModulesA320QuestionsRoute: typeof a320ModulesA320QuestionsRouteWithChildren
+  a320ModulesA320SearchRoute: typeof a320ModulesA320SearchRoute
+  a320ModulesA320IndexRoute: typeof a320ModulesA320IndexRoute
+}
+
+const a320ModulesA320RouteChildren: a320ModulesA320RouteChildren = {
+  a320ModulesA320CreateTestRoute: a320ModulesA320CreateTestRoute,
+  a320ModulesA320QuestionsRoute: a320ModulesA320QuestionsRouteWithChildren,
+  a320ModulesA320SearchRoute: a320ModulesA320SearchRoute,
+  a320ModulesA320IndexRoute: a320ModulesA320IndexRoute,
+}
+
+const a320ModulesA320RouteWithChildren = a320ModulesA320Route._addFileChildren(
+  a320ModulesA320RouteChildren,
+)
+
+interface atplModulesAtplRouteChildren {
+  atplModulesAtplCreateTestRoute: typeof atplModulesAtplCreateTestRoute
+  atplModulesAtplIndexRoute: typeof atplModulesAtplIndexRoute
+  atplModulesAtplDocsDocIdRoute: typeof atplModulesAtplDocsDocIdRoute
+  atplModulesAtplLearningObjectivesLearningObjectiveIdRoute: typeof atplModulesAtplLearningObjectivesLearningObjectiveIdRoute
+  atplModulesAtplQuestionsQuestionIdRoute: typeof atplModulesAtplQuestionsQuestionIdRoute
+  atplModulesAtplDocsIndexRoute: typeof atplModulesAtplDocsIndexRoute
+  atplModulesAtplLearningObjectivesIndexRoute: typeof atplModulesAtplLearningObjectivesIndexRoute
+  atplModulesAtplQuestionsIndexRoute: typeof atplModulesAtplQuestionsIndexRoute
+}
+
+const atplModulesAtplRouteChildren: atplModulesAtplRouteChildren = {
+  atplModulesAtplCreateTestRoute: atplModulesAtplCreateTestRoute,
+  atplModulesAtplIndexRoute: atplModulesAtplIndexRoute,
+  atplModulesAtplDocsDocIdRoute: atplModulesAtplDocsDocIdRoute,
+  atplModulesAtplLearningObjectivesLearningObjectiveIdRoute:
+    atplModulesAtplLearningObjectivesLearningObjectiveIdRoute,
+  atplModulesAtplQuestionsQuestionIdRoute:
+    atplModulesAtplQuestionsQuestionIdRoute,
+  atplModulesAtplDocsIndexRoute: atplModulesAtplDocsIndexRoute,
+  atplModulesAtplLearningObjectivesIndexRoute:
+    atplModulesAtplLearningObjectivesIndexRoute,
+  atplModulesAtplQuestionsIndexRoute: atplModulesAtplQuestionsIndexRoute,
+}
+
+const atplModulesAtplRouteWithChildren = atplModulesAtplRoute._addFileChildren(
+  atplModulesAtplRouteChildren,
+)
+
+interface b737ModulesB737QuestionsRouteChildren {
+  b737ModulesB737QuestionsQuestionIdRoute: typeof b737ModulesB737QuestionsQuestionIdRoute
+  b737ModulesB737QuestionsIndexRoute: typeof b737ModulesB737QuestionsIndexRoute
+  b737ModulesB737QuestionsChaptersChapterIdRoute: typeof b737ModulesB737QuestionsChaptersChapterIdRoute
+}
+
+const b737ModulesB737QuestionsRouteChildren: b737ModulesB737QuestionsRouteChildren =
+  {
+    b737ModulesB737QuestionsQuestionIdRoute:
+      b737ModulesB737QuestionsQuestionIdRoute,
+    b737ModulesB737QuestionsIndexRoute: b737ModulesB737QuestionsIndexRoute,
+    b737ModulesB737QuestionsChaptersChapterIdRoute:
+      b737ModulesB737QuestionsChaptersChapterIdRoute,
+  }
+
+const b737ModulesB737QuestionsRouteWithChildren =
+  b737ModulesB737QuestionsRoute._addFileChildren(
+    b737ModulesB737QuestionsRouteChildren,
+  )
+
+interface b737ModulesB737DocsDocIdRouteChildren {
+  b737ModulesB737DocsDocIdIndexRoute: typeof b737ModulesB737DocsDocIdIndexRoute
+}
+
+const b737ModulesB737DocsDocIdRouteChildren: b737ModulesB737DocsDocIdRouteChildren =
+  {
+    b737ModulesB737DocsDocIdIndexRoute: b737ModulesB737DocsDocIdIndexRoute,
+  }
+
+const b737ModulesB737DocsDocIdRouteWithChildren =
+  b737ModulesB737DocsDocIdRoute._addFileChildren(
+    b737ModulesB737DocsDocIdRouteChildren,
+  )
+
+interface b737ModulesB737RouteChildren {
+  b737ModulesB737CreateTestRoute: typeof b737ModulesB737CreateTestRoute
+  b737ModulesB737QuestionsRoute: typeof b737ModulesB737QuestionsRouteWithChildren
+  b737ModulesB737SearchRoute: typeof b737ModulesB737SearchRoute
+  b737ModulesB737IndexRoute: typeof b737ModulesB737IndexRoute
+  b737ModulesB737DocsDocIdRoute: typeof b737ModulesB737DocsDocIdRouteWithChildren
+  b737ModulesB737DocsIndexRoute: typeof b737ModulesB737DocsIndexRoute
+}
+
+const b737ModulesB737RouteChildren: b737ModulesB737RouteChildren = {
+  b737ModulesB737CreateTestRoute: b737ModulesB737CreateTestRoute,
+  b737ModulesB737QuestionsRoute: b737ModulesB737QuestionsRouteWithChildren,
+  b737ModulesB737SearchRoute: b737ModulesB737SearchRoute,
+  b737ModulesB737IndexRoute: b737ModulesB737IndexRoute,
+  b737ModulesB737DocsDocIdRoute: b737ModulesB737DocsDocIdRouteWithChildren,
+  b737ModulesB737DocsIndexRoute: b737ModulesB737DocsIndexRoute,
+}
+
+const b737ModulesB737RouteWithChildren = b737ModulesB737Route._addFileChildren(
+  b737ModulesB737RouteChildren,
+)
+
+interface prepModulesPrepRouteChildren {
+  prepModulesPrepIndexRoute: typeof prepModulesPrepIndexRoute
+  prepModulesPrepFlashcardsCollectionIdRoute: typeof prepModulesPrepFlashcardsCollectionIdRoute
+  prepModulesPrepFlashcardsIndexRoute: typeof prepModulesPrepFlashcardsIndexRoute
+}
+
+const prepModulesPrepRouteChildren: prepModulesPrepRouteChildren = {
+  prepModulesPrepIndexRoute: prepModulesPrepIndexRoute,
+  prepModulesPrepFlashcardsCollectionIdRoute:
+    prepModulesPrepFlashcardsCollectionIdRoute,
+  prepModulesPrepFlashcardsIndexRoute: prepModulesPrepFlashcardsIndexRoute,
+}
+
+const prepModulesPrepRouteWithChildren = prepModulesPrepRoute._addFileChildren(
+  prepModulesPrepRouteChildren,
+)
+
+const rootRouteChildren: RootRouteChildren = {
+  publicRouteRoute: publicRouteRouteWithChildren,
+  backofficeBackofficeRoute: backofficeBackofficeRouteWithChildren,
+  DesignSystemChar123StoryChar125Route: DesignSystemChar123StoryChar125Route,
+  a320ModulesA320Route: a320ModulesA320RouteWithChildren,
+  atplModulesAtplRoute: atplModulesAtplRouteWithChildren,
+  b737ModulesB737Route: b737ModulesB737RouteWithChildren,
+  prepModulesPrepRoute: prepModulesPrepRouteWithChildren,
+  modulesModulesTypeSplatRoute: modulesModulesTypeSplatRoute,
+  testTestTestIdReviewRoute: testTestTestIdReviewRoute,
+  testTestTestIdIndexRoute: testTestTestIdIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { formatMillisecondsAsClock } from "../../../base/format-values";
+import { formatMillisecondsAsMinutes } from "../../../base/format-values";
+import { cn } from "../../utils/cn";
 import { Button } from "../base/button";
 import { Drawer } from "../base/drawer";
 import { Markdown } from "../base/markdown";
@@ -100,29 +101,38 @@ export const TestRunner: FC<{
         title={test.title}
         index={index}
         total={total}
-        clock={formatMillisecondsAsClock(study ? timeSpentInMs : timeLeftInMs)}
+        clock={formatMillisecondsAsMinutes(
+          study ? timeSpentInMs : timeLeftInMs,
+        )}
         showMeta={study}
+        onExit={study ? exitTest : undefined}
         onPrevious={() => goTo(index - 1)}
         onNext={() => goTo(index + 1)}
         onOpenMeta={() => setMetaOpen(true)}
         onOpenNavigation={() => setNavigationOpen(true)}
         onFinish={() => setFinishOpen(true)}
       />
-      <main className="min-h-0 flex-1 overflow-auto">
-        <div className="mx-auto flex w-full max-w-4xl flex-col gap-4 p-4 sm:py-8">
-          <QuestionMultipleChoice
-            question={question.question}
-            options={question.options}
-            annexes={question.annexes}
-            selectedOptionId={question.selectedOptionId}
-            correctOptionId={question.correctOptionId}
-            showResult={study && answered}
-            disabled={study && answered}
-            onAnnexClick={setAnnexHref}
-            onOptionClick={selectOption}
-          />
-        </div>
-      </main>
+      <div className="relative isolate flex min-h-0 flex-1 flex-col">
+        <main className="min-h-0 flex-1 overflow-auto">
+          <div
+            className={cn(
+              "mx-auto flex w-full max-w-4xl flex-col gap-4 p-4 sm:py-8",
+            )}
+          >
+            <QuestionMultipleChoice
+              question={question.question}
+              options={question.options}
+              annexes={question.annexes}
+              selectedOptionId={question.selectedOptionId}
+              correctOptionId={question.correctOptionId}
+              showResult={study && answered}
+              disabled={study && answered}
+              onAnnexClick={setAnnexHref}
+              onOptionClick={selectOption}
+            />
+          </div>
+        </main>
+      </div>
       <Drawer
         title="Question Navigation"
         open={navigationOpen}
@@ -165,16 +175,12 @@ export const TestRunner: FC<{
           onClose={() => setFinishOpen(false)}
           footer={
             <div className="flex flex-wrap justify-end gap-2">
-              <Button
-                className="border-warning! text-warning! hover:text-warning!"
-                onClick={exitTest}
-              >
-                Exit without finishing
-              </Button>
-              <Button
-                className="border-danger! bg-danger! text-white! hover:text-white!"
-                onClick={finishTest}
-              >
+              {study && (
+                <Button variant="warning" onClick={exitTest}>
+                  Exit without finishing
+                </Button>
+              )}
+              <Button variant="danger" onClick={finishTest}>
                 Finish
               </Button>
             </div>

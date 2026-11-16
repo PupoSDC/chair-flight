@@ -4,6 +4,7 @@ import { ChevronLeftIcon } from "../../icons/chevron-left-icon";
 import { ChevronRightIcon } from "../../icons/chevron-right-icon";
 import { CloseIcon } from "../../icons/close-icon";
 import { GridIcon } from "../../icons/grid-icon";
+import { HangarIcon } from "../../icons/hangar-icon";
 import { HelpIcon } from "../../icons/help-icon";
 import { MoonIcon } from "../../icons/moon-icon";
 import { SunIcon } from "../../icons/sun-icon";
@@ -38,7 +39,8 @@ const HeaderButton: FC<{
     disabled={disabled}
     onClick={onClick}
     className={cn(
-      "grid size-7 flex-none cursor-pointer place-items-center border-0 sm:size-8",
+      "grid size-7 flex-none cursor-pointer place-items-center border-0",
+      "sm:size-8",
       "bg-transparent p-0 text-ink hover:text-accent disabled:opacity-50",
     )}
   >
@@ -52,6 +54,7 @@ export const TestHeader: FC<{
   total: number;
   clock: string;
   showMeta: boolean;
+  onExit?: () => void;
   onPrevious: () => void;
   onNext: () => void;
   onOpenMeta: () => void;
@@ -63,6 +66,7 @@ export const TestHeader: FC<{
   total,
   clock,
   showMeta,
+  onExit,
   onPrevious,
   onNext,
   onOpenMeta,
@@ -78,24 +82,40 @@ export const TestHeader: FC<{
         "border-rule bg-canvas",
       )}
     >
-      <div className="flex w-full min-w-0 items-stretch justify-between divide-x divide-rule border-x border-rule sm:w-auto sm:justify-center">
-        <HeaderCell className="px-2 sm:px-4">
+      <div
+        className={cn(
+          "flex w-full min-w-0 items-stretch justify-between divide-x",
+          "divide-rule border-x border-rule sm:w-auto sm:justify-center",
+        )}
+      >
+        <HeaderCell className="w-12 flex-none px-0 sm:w-16 sm:px-0">
           <HeaderButton label="Previous question" onClick={onPrevious}>
             <ChevronLeftIcon size={20} />
           </HeaderButton>
         </HeaderCell>
         <HeaderCell className="hidden capitalize md:flex">{title}</HeaderCell>
-        <HeaderCell>
+        <HeaderCell className="flex-1">
           <span className="max-sm:hidden">Question</span>
           <span className="tabular-nums">
             {index + 1}/{total}
           </span>
         </HeaderCell>
-        <HeaderCell>
+        <HeaderCell className="flex-1">
           <AlarmIcon size={20} className="max-sm:hidden" />
           <span className="tabular-nums">{clock}</span>
         </HeaderCell>
         <HeaderCell className="gap-1 px-2 sm:px-4">
+          <HeaderButton
+            label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+            onClick={toggleTheme}
+          >
+            {theme === "light" ? <SunIcon size={20} /> : <MoonIcon size={20} />}
+          </HeaderButton>
+          {onExit && (
+            <HeaderButton label="Back to module" onClick={onExit}>
+              <HangarIcon size={20} />
+            </HeaderButton>
+          )}
           {showMeta && (
             <HeaderButton label="Explanation & Meta" onClick={onOpenMeta}>
               <HelpIcon size={20} />
@@ -107,14 +127,8 @@ export const TestHeader: FC<{
           <HeaderButton label="Finish" onClick={onFinish}>
             <CloseIcon size={20} />
           </HeaderButton>
-          <HeaderButton
-            label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-            onClick={toggleTheme}
-          >
-            {theme === "light" ? <SunIcon size={20} /> : <MoonIcon size={20} />}
-          </HeaderButton>
         </HeaderCell>
-        <HeaderCell className="px-2 sm:px-4">
+        <HeaderCell className="w-12 flex-none px-0 sm:w-16 sm:px-0">
           <HeaderButton label="Next question" onClick={onNext}>
             <ChevronRightIcon size={20} />
           </HeaderButton>

@@ -1,6 +1,5 @@
 ---
   title: Introducing Our New 737 Type Rating Theory Question Bank
-  author: PupoSDC
   date: '2023-08-02'
   tag: Content
   description: >
@@ -19,4 +18,4 @@ With over 300 thoughtfully curated questions, this question bank is designed to
 challenge and enhance your understanding of the 737's systems, procedures, and
 aircraft limitations.
 
-You can get started here: [B737 Question Bank](/modules/type)
+You can get started here: [B737 Question Bank](/modules/b737)

@@ -10,7 +10,6 @@ export const parseBlogPost = (id: string, source: string) => {
   return {
     id,
     title: String(data.title ?? id),
-    author: String(data.author ?? ""),
     date: String(data.date ?? ""),
     tag: String(data.tag ?? ""),
     description: String(data.description ?? ""),

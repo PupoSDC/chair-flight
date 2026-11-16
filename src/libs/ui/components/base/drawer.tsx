@@ -1,6 +1,6 @@
 import { CloseIcon } from "../../icons/close-icon";
 import { cn } from "../../utils/cn";
-import { IconButton } from "./icon-button";
+import { ButtonIcon } from "./button-icon";
 import type { FC, ReactNode } from "react";
 
 export const Drawer: FC<{
@@ -38,9 +38,7 @@ export const Drawer: FC<{
           )}
         >
           <h2 className="m-0 text-base font-bold">{title}</h2>
-          <IconButton label="Close" onClick={onClose}>
-            <CloseIcon />
-          </IconButton>
+          <ButtonIcon label="Close" onClick={onClose} icon={CloseIcon} />
         </div>
         <div className="min-h-0 flex-1 overflow-auto p-4">{children}</div>
       </aside>

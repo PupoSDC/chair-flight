@@ -1,0 +1,3607 @@
+- id: Q5DGK1I6N
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613729
+  annexes:
+    - vfr-navigation-exercise-on-a-jeppesen-chart
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      You are about to take a VFR flight in Summer with no serviceable radio
+      aids on board your aircraft. The flight is likely to occur in haze in the
+      late afternoon, with the Sun deteriorating visibility even more. Which
+      route should you plan to take?
+    explanation: ""
+    options:
+      - id: O1BKUA9ZV
+        text: Route 1 via "RDG" VOR.
+        correct: false
+        why: ""
+      - id: OECCLRWRW
+        text: Route 2 via the highway then the river.
+        correct: true
+        why: ""
+      - id: OKJJI7MIM
+        text: Route 3 via the tall mast.
+        correct: false
+        why: ""
+      - id: OFNXVIBFJ
+        text: Route 4 via the big city of Regensburg.
+        correct: false
+        why: ""
+- id: Q5SVIV0IB
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613264
+    - AVEXAM-89097
+    - ATPLGS-625409
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.08
+  template:
+    type: calculation
+    question: >-
+      An NDB station is observed on a relative bearing of 45° left of the
+      aircraft's nose. Some time later the same NDB station is observed on a
+      relative bearing of 90° left of the aircraft's nose. Given the following
+      information:
+
+
+      - Time between the two observations: {{t}} min
+
+      - Wind: calm
+
+      - Ground speed: {{gs}} kt
+
+
+      What is the minimum distance between the aircraft and the NDB station?
+    variables:
+      - id: t
+        label: Time between the observations
+        unit: min
+      - id: gs
+        label: Ground speed
+        unit: kt
+    answer:
+      formula: gs * t / 60
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: gs * t / 60 * 1.5
+      - id: d2
+        formula: gs * t / 60 * 2
+      - id: d3
+        formula: gs * t / 60 / 2
+      - id: d4
+        formula: gs * t
+    presets:
+      - id: p1
+        values:
+          t: 3
+          gs: 120
+      - id: p2
+        values:
+          t: 4
+          gs: 150
+      - id: p3
+        values:
+          t: 6
+          gs: 90
+    explanation: >-
+      When the beacon moves from 45° to 90° left of the nose, the aircraft's
+      track and the lines to the beacon form a right-angled triangle with two
+      equal sides. The distance flown between the two observations is then the
+      shortest distance from the NDB to the flight path.
+
+
+      **Solution**
+
+
+      - {{f: gs * t / 60}} = {{n: gs * t / 60}} = **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: multiplies the distance flown by 1.5, which does not
+      match the triangle.
+
+      - **{{d2}} NM**: doubles the distance flown.
+
+      - **{{d3}} NM**: halves the distance flown.
+
+      - **{{d4}} NM**: forgets to convert the minutes into hours, so the
+      distance is 60 times too large.
+- id: Q6CQOR36I
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618148
+  annexes: []
+  learningObjectives:
+    - 061.01.03.01.04
+  template:
+    type: calculation
+    question: >-
+      An island is observed {{rel_left}}° to the left of the aircraft's
+      longitudinal axis.
+
+
+      - Aircraft heading: {{heading}}°M
+
+      - Magnetic variation: {{variation}}°W
+
+
+      What is the true bearing of the aircraft from the island?
+    variables:
+      - id: heading
+        label: Aircraft heading (magnetic)
+        unit: °M
+      - id: rel_left
+        label: Angle of the island to the left of the nose
+        unit: °
+      - id: variation
+        label: Magnetic variation (west)
+        unit: °W
+    answer:
+      formula: heading - rel_left - variation + 180
+      unit: °T
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: heading - rel_left + variation + 180
+      - id: d2
+        formula: heading - rel_left - variation
+      - id: d3
+        formula: heading + rel_left - variation + 180
+      - id: d4
+        formula: heading - rel_left + variation
+    presets:
+      - id: p1
+        values:
+          heading: 120
+          rel_left: 15
+          variation: 17
+      - id: p2
+        values:
+          heading: 190
+          rel_left: 30
+          variation: 12
+      - id: p3
+        values:
+          heading: 60
+          rel_left: 20
+          variation: 8
+    explanation: >-
+      A bearing is measured from the aircraft's nose, so the angle to the left
+      is taken away from the heading to give the bearing of the island from the
+      aircraft. Converting to a true bearing takes away the west variation. The
+      bearing of the aircraft from the island is the reverse of that, so 180° is
+      added.
+
+
+      **Solution**
+
+
+      - Bearing of the island from the aircraft, magnetic: {{heading}} -
+      {{rel_left}} = {{= heading - rel_left}}°M
+
+      - True bearing of the island from the aircraft: {{= heading - rel_left -
+      variation}}°T
+
+      - Reverse it: {{f: heading - rel_left - variation + 180}} = {{n: heading -
+      rel_left - variation + 180}} = **{{answer}}°T**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°T**: adds the west variation instead of taking it away.
+
+      - **{{d2}}°T**: forgets to reverse the bearing, which gives the bearing of
+      the island from the aircraft.
+
+      - **{{d3}}°T**: adds the angle to the left to the heading instead of
+      taking it away.
+
+      - **{{d4}}°T**: applies the variation the wrong way and forgets to reverse
+      the bearing.
+- id: Q6Z8EJLHN
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616098
+  annexes: []
+  learningObjectives:
+    - 061.04.03.01.01
+  template:
+    type: simple
+    question: On VFR charts such as the ED-4 chart from the Jeppesen GSPRM, the
+      obstacles are indicated in...
+    explanation: ""
+    options:
+      - id: O2ZCWF9NB
+        text: feet above ground.
+        correct: false
+        why: ""
+      - id: OKTYT8HKG
+        text: metres above MSL.
+        correct: false
+        why: ""
+      - id: OAUYURK7R
+        text: feet above MSL.
+        correct: true
+        why: ""
+      - id: OU1ATQR0W
+        text: metres above ground.
+        correct: false
+        why: ""
+- id: Q9KUXAS6H
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614025
+    - AVEXAM-14873
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: Which statement is correct according to an excessive power line?
+    explanation: ""
+    options:
+      - id: OQP9AIW39
+        text: It is more dangerous along a ridge than across a village.
+        correct: true
+        why: ""
+      - id: OWMFIV9SP
+        text: It is more dangerous across the village than along a ridge.
+        correct: false
+        why: ""
+      - id: OG1PYUHYB
+        text: It must not be overflown.
+        correct: false
+        why: ""
+      - id: O9XRUDHJ6
+        text: It poses no danger for an aircraft, since each one can be found on the
+          charts.
+        correct: false
+        why: ""
+- id: QAUVYBAIU
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611251
+    - BGS-611673
+  annexes:
+    - 061-aerial-photo-of-a-tall-white-water-tower-on-legs
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      A pilot has chosen the feature in the figure as both a starting and ending
+      waypoint for flights transitioning in and out of the training area during
+      a navigation flight. On a winter day with special VFR conditions,
+      characterized by low cloud cover, limited visibility, and a snowy surface,
+      this feature...
+    explanation: ""
+    options:
+      - id: OA148PFP6
+        text: is easily noticeable because it is much larger than the surrounding
+          terrain.
+        correct: false
+        why: ""
+      - id: O9P18ZDKK
+        text: is easily noticeable because it has a distinct rectangular shape.
+        correct: false
+        why: ""
+      - id: O5ZXIIQYN
+        text: might disappear in the grey-white landscape.
+        correct: true
+        why: ""
+      - id: ONBJMHRFN
+        text: will be undetectable because it has a limited vertical extent, compared to
+          the surrounding terrain.
+        correct: false
+        why: ""
+- id: QBDHWMBQQ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615453
+    - BGS-611560
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: A pilot is flying a VFR flight from A (50ºN, 010ºE) to B (51ºN,
+      010ºE). They have plotted the flight as a straight line on their chart.
+      Which of the following visual landmarks is suitable for determining their
+      lateral deviation from the track?
+    explanation: ""
+    options:
+      - id: OUGRH1NNA
+        text: Four large masts on the horizon, one at approximately each of the cardinal
+          points from the aircraft (North, South, East and West).
+        correct: false
+        why: ""
+      - id: O5SB8SEKQ
+        text: A large highway crossing the track in the East/West direction.
+        correct: false
+        why: ""
+      - id: OUU7334J1
+        text: A large city, 15 nm West of the planned track.
+        correct: false
+        why: ""
+      - id: OLCTPUMCF
+        text: A large waterway running from North to South along the track.
+        correct: true
+        why: ""
+- id: QBNSPO3HN
+  docId: "061.02"
+  relatedQuestions:
+    - QMLIAPS09
+  externalIds:
+    - ATPLQ-611465
+    - ATPLGS-110475
+    - AVEXAM-71118
+  annexes: []
+  learningObjectives:
+    - 061.01.03.01.04
+  template:
+    type: calculation
+    question: >-
+      A ground feature appears {{rel}}° to the left of the centre line of an
+      airborne weather radar.
+
+
+      - Aircraft magnetic heading: {{hdg}}°
+
+      - Magnetic variation: {{var}}° (positive = East, negative = West)
+
+
+      What is the true bearing of the aircraft from the feature?
+    variables:
+      - id: hdg
+        label: Magnetic heading
+        unit: °M
+      - id: var
+        label: Variation
+        unit: °
+      - id: rel
+        label: Relative bearing of the feature (left)
+        unit: °
+    answer:
+      formula: (hdg + var - rel + 180) - 360 * floor((hdg + var - rel + 180) / 360)
+      unit: °T
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (hdg + var - rel) - 360 * floor((hdg + var - rel) / 360)
+      - id: d2
+        formula: (hdg - var - rel + 180) - 360 * floor((hdg - var - rel + 180) / 360)
+      - id: d3
+        formula: (hdg + var + rel + 180) - 360 * floor((hdg + var + rel + 180) / 360)
+    presets:
+      - id: p1
+        values:
+          hdg: 355
+          var: 15
+          rel: 30
+      - id: p2
+        values:
+          hdg: 270
+          var: -5
+          rel: 45
+      - id: p3
+        values:
+          hdg: 90
+          var: 10
+          rel: 10
+    explanation: >-
+      The true heading is found by correcting the magnetic heading for
+      variation. The feature is to the left of the nose, so its bearing from the
+      aircraft is the true heading minus the relative bearing. The bearing of
+      the aircraft from the feature is the reciprocal, 180 degrees different,
+      kept between 0 and 360 degrees.
+
+
+      **Solution**
+
+
+      True heading: {{hdg}}° + {{var}}° = {{= hdg + var}}°
+
+
+      Bearing of the feature: {{= hdg + var}}° − {{rel}}° = {{= hdg + var -
+      rel}}°
+
+
+      Bearing of the aircraft from the feature: add 180° and keep the result
+      between 0° and 360°, giving **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: gives the bearing of the feature from the aircraft, not the
+      reciprocal.
+
+      - **{{d2}}°**: the variation is applied with the wrong sign.
+
+      - **{{d3}}°**: the relative bearing is added instead of subtracted.
+- id: QCJUQ3SOY
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613722
+    - AVEXAM-89097
+    - ATPLGS-625409
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.08
+  template:
+    type: calculation
+    question: >-
+      The same NDB is observed twice from a steady track:
+
+
+      - First observation: {{a1}}° left of the nose
+
+      - Second observation: {{a2}}° left of the nose, {{t_min}} minutes later
+
+      - Wind: calm
+
+      - Groundspeed: {{gs}} kt
+
+
+      What is the minimum distance between the aircraft and the NDB station, in
+      NM?
+    variables:
+      - id: a1
+        label: First relative bearing (left)
+        unit: °
+      - id: a2
+        label: Second relative bearing (left)
+        unit: °
+      - id: t_min
+        label: Time between observations
+        unit: min
+      - id: gs
+        label: Groundspeed
+        unit: kt
+    answer:
+      formula: gs * t_min / 60 * sin(a1) * sin(a2) / sin(a2 - a1)
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: gs * t_min / 60 * sin(a1)
+      - id: d2
+        formula: gs / 60
+      - id: d3
+        formula: gs * t_min / 60 * sin(a2 - a1) * 2
+      - id: d4
+        formula: gs * t_min / 30
+    presets:
+      - id: p1
+        values:
+          a1: 45
+          a2: 90
+          t_min: 3
+          gs: 180
+      - id: p2
+        values:
+          a1: 30
+          a2: 75
+          t_min: 4
+          gs: 210
+      - id: p3
+        values:
+          a1: 40
+          a2: 80
+          t_min: 4
+          gs: 150
+    explanation: >-
+      The aircraft flies a steady track, so the bearing to the NDB changes as it
+      passes. The distance flown between the two observations is the groundspeed
+      multiplied by the time. The two positions of the aircraft and the NDB form
+      a triangle, which is solved with the sine rule. The minimum distance is
+      the shortest distance from the NDB to the track.
+
+
+      **Solution**
+
+
+      - Distance flown between the observations: {{gs}} kt × {{t_min}} min ÷ 60
+      = {{= gs * t_min / 60}} NM
+
+      - Minimum distance: {{f: gs * t_min / 60 * sin(a1) * sin(a2) / sin(a2 -
+      a1)}} = {{n: gs * t_min / 60 * sin(a1) * sin(a2) / sin(a2 - a1)}} =
+      **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: the sine rule was not applied; only the first sine was
+      multiplied by the distance flown.
+
+      - **{{d2}} NM**: only one minute of flying was used.
+
+      - **{{d3}} NM**: the sine of the difference between the bearings was used
+      with a stray factor of two.
+
+      - **{{d4}} NM**: the time was converted with 30 instead of 60, which
+      doubles the distance flown.
+- id: QCRKQBZR
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618462
+    - BGS-611264
+    - ATPLGS-628152
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: multiple-correct
+    question: What are problems associated with VFR navigation (without GPS) over
+      low-flying desert late in the morning at about 11 AM?
+    explanation: ""
+    options:
+      - text: Good navigation features might be widely separated.
+        correct: true
+        why: ""
+      - text: Visual range is likely to be restricted.
+        correct: false
+        why: ""
+      - text: Maps might be incomplete or out-of-date.
+        correct: true
+        why: ""
+      - text: Visibility into the Sun might be difficult due to glare.
+        correct: false
+        why: ""
+- id: QCXLXNR8O
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614202
+  annexes: []
+  learningObjectives:
+    - 061.01.03.02.04
+    - 061.01.03.02.06
+  template:
+    type: calculation
+    question: |-
+      The aircraft has the following data.
+
+      - Ground speed: {{gs}} kt
+      - Time flown since the last fix: {{t}} min
+      - Position: {{xtk}} NM left of track
+
+      Calculate the track error angle, in degrees left, using the 1-in-60 rule.
+    variables:
+      - id: gs
+        label: ground speed
+        unit: kt
+      - id: t
+        label: time flown
+        unit: min
+      - id: xtk
+        label: cross-track distance (left)
+        unit: NM
+    answer:
+      formula: 60 * xtk / (gs * t / 60)
+      unit: ° left
+      decimals: 1
+    distractors:
+      - id: d1
+        formula: 60 * xtk / gs
+      - id: d2
+        formula: atan(xtk / (gs * t / 60))
+      - id: d3
+        formula: 90 * xtk / (gs * t / 60)
+    presets:
+      - id: p1
+        values:
+          gs: 180
+          t: 12
+          xtk: 1.5
+      - id: p2
+        values:
+          gs: 240
+          t: 15
+          xtk: 2
+      - id: p3
+        values:
+          gs: 150
+          t: 20
+          xtk: 3
+    explanation: >-
+      The 1-in-60 rule says that one nautical mile off track after 60 NM flown
+      corresponds to an angle of one degree. The distance flown is the ground
+      speed multiplied by the time in hours.
+
+
+      **Solution**
+
+
+      Distance flown = {{gs}} kt × {{t}} min = {{= gs * t / 60}} NM
+
+
+      Track error = {{f: 60 * xtk / (gs * t / 60)}} = {{n: 60 * xtk / (gs * t /
+      60)}} = **{{answer}}° left**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}° left**: forgets the time flown and uses the ground speed only.
+
+      - **{{d2}}° left**: the exact arctangent of the offset over the distance;
+      the 1-in-60 rule is the method asked for.
+
+      - **{{d3}}° left**: uses 90 instead of 60 in the rule, so the angle is too
+      large.
+- id: QDAWZTEY
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615066
+    - AVEXAM-73738
+    - AVEXAM-8002
+  annexes: []
+  learningObjectives:
+    - 061.02.02.02.01
+  template:
+    type: simple
+    question: You are flying a low level VFR flight over a snowy area with no visual
+      checkpoints and you get lost. What should you do?
+    explanation: ""
+    options:
+      - id: OUJSTNOA0
+        text: Start flying larger concentric circles.
+        correct: false
+        why: ""
+      - id: O1WYQNVS7
+        text: Proceed and turn at the next checkpoint based on time.
+        correct: false
+        why: ""
+      - id: O8E2ZFTOR
+        text: Climb to a higher level and initiate the lost procedure.
+        correct: true
+        why: ""
+      - id: OLKSLJ9UE
+        text: Climb to avoid blowing snow.
+        correct: false
+        why: ""
+- id: QDMLTNXNH
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618736
+  annexes:
+    - 061-photo-of-nasa-vehicle-assembly-building-at-kennedy-space-center
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      The landscape in the figure attached is to be used as a reference point on
+      a VFR flight in winter with low clouds. Which of the following statements
+      is correct?
+    explanation: ""
+    options:
+      - id: OC8UXXD2R
+        text: This reference point could easily merge with the snow-covered terrain.
+        correct: true
+        why: ""
+      - id: OGT8CHK8I
+        text: The area would be unidentifiable with snowfall and low clouds.
+        correct: false
+        why: ""
+      - id: OAEZFKG7E
+        text: The pilot should climb to gain a better visual picture of their
+          surroundings.
+        correct: false
+        why: ""
+      - id: OE57FCAZ5
+        text: The structure provides a good reference point.
+        correct: false
+        why: ""
+- id: QE0TELXUG
+  docId: "061.02"
+  relatedQuestions:
+    - QYIKGDGY
+  externalIds:
+    - ATPLQ-617449
+    - ATPLGS-127776
+    - ATPLGS-628131
+    - ATPLGS-110488
+    - ATPLGS-110484
+    - ATPLGS-110489
+    - AVEXAM-17971
+    - AVEXAM-12156
+    - AVEXAM-48913
+    - AVEXAM-41732
+    - AVEXAM-40850
+    - AVEXAM-36293
+    - AVEXAM-70351
+    - AVEXAM-32055
+    - ATPLGS-110482
+    - ATPLQ-614135
+  annexes: []
+  learningObjectives:
+    - 061.01.03.01.04
+  template:
+    type: calculation
+    question: >-
+      An island appears on the airborne weather radar display. Given the
+      following information, determine the true bearing of the aircraft from the
+      island:
+
+
+      - Island relative to the aircraft's longitudinal axis: {{left}}° to the
+      left
+
+      - Magnetic heading (MH): {{mh}}°
+
+      - Magnetic variation (VAR): {{var}}° (east positive, west negative)
+
+
+      What is the true bearing of the aircraft from the island?
+    variables:
+      - id: mh
+        label: magnetic heading
+        unit: °
+      - id: var
+        label: magnetic variation
+        unit: °
+      - id: left
+        label: island angle to the left
+        unit: °
+    answer:
+      formula: ((mh + var - left + 180) - 360 * floor((mh + var - left + 180) / 360))
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: ((mh + var - left) - 360 * floor((mh + var - left) / 360))
+      - id: d2
+        formula: ((mh - var - left + 180) - 360 * floor((mh - var - left + 180) / 360))
+      - id: d3
+        formula: ((mh + var + left + 180) - 360 * floor((mh + var + left + 180) / 360))
+      - id: d4
+        formula: ((mh - left + 180) - 360 * floor((mh - left + 180) / 360))
+    presets:
+      - id: p1
+        values:
+          mh: 276
+          var: 10
+          left: 60
+      - id: p2
+        values:
+          mh: 20
+          var: -25
+          left: 30
+      - id: p3
+        values:
+          mh: 135
+          var: 8
+          left: 45
+    explanation: >-
+      The true heading is the magnetic heading corrected by the variation (east
+      positive). The island is seen at the true heading minus the angle to the
+      left, so its bearing from the aircraft is that value, and the bearing of
+      the aircraft from the island is the reciprocal: 180° is added and the
+      result is kept between 0° and 360°.
+
+
+      **Solution**
+
+
+      True heading: {{mh}}° + {{var}}° = {{= mh + var}}°
+
+
+      Bearing of the island from the aircraft: {{= mh + var}}° - {{left}}° = {{=
+      mh + var - left}}°
+
+
+      Reciprocal: {{= mh + var - left}}° + 180° = {{= mh + var - left + 180}}°,
+      within 0° to 360°: **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: gives the bearing of the island from the aircraft,
+      forgetting the reciprocal.
+
+      - **{{d2}}°**: applies the variation with the wrong sign.
+
+      - **{{d3}}°**: adds the angle to the left instead of subtracting it, so
+      the island is placed on the right.
+
+      - **{{d4}}°**: forgets the variation completely.
+- id: QEEZAM5KH
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613309
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.02
+  template:
+    type: simple
+    question: What is a visual check point?
+    explanation: ""
+    options:
+      - id: OJTAQKKOX
+        text: A point on the approach to an airfield at which you assess the chances of
+          making a visual approach.
+        correct: false
+        why: ""
+      - id: OCOONBJQ1
+        text: A ground feature used to check the visibility and RVR on the runway.
+        correct: false
+        why: ""
+      - id: OIIVQRU8K
+        text: A feature, or group of features, that is/ are clearly marked on the chart
+          and are easily identifiable on the ground, standing out from the
+          background. Selected as waypoints for visual route navigation.
+        correct: true
+        why: ""
+      - id: ODHT4QUIS
+        text: A pre-determined feature, marked on the chart, used for describing your
+          location to Air Traffic Control.
+        correct: false
+        why: ""
+- id: QEQEZGQNB
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617620
+    - ATPLGS-628146
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.14
+  template:
+    type: simple
+    question: "The best ground feature to check a time deviation while flying on a
+      heading 360º is:"
+    explanation: ""
+    options:
+      - id: OVCD1H1VP
+        text: A railway in an East-West orientation.
+        correct: true
+        why: ""
+      - id: OIUQSNBK4
+        text: A big town 5 NM off-track.
+        correct: false
+        why: ""
+      - id: OHOQ7MCP3
+        text: 4 windmills in a coordinated position.
+        correct: false
+        why: ""
+      - id: O0YVZGKWN
+        text: A large river in a North-South orientation.
+        correct: false
+        why: ""
+- id: QFAN4RYFP
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616200
+    - AVEXAM-71722
+    - BGS-611608
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: An aircraft is flying a low-level VFR route over a mountainous area,
+      which is covered by snow, in high latitudes. Power lines are...
+    explanation: ""
+    options:
+      - id: OOLMYRO8E
+        text: Easily identified, as they are always marked on maps and can therefore be
+          safely avoided.
+        correct: false
+        why: ""
+      - id: OASIVBONI
+        text: Dangerous if they are situated along a ridge, but pose less of a risk of
+          they are crossing a valley.
+        correct: false
+        why: ""
+      - id: OTSPJHGTL
+        text: Dangerous, especially if they cross valleys, but pose less of a risk if
+          they are situated along ridge.
+        correct: true
+        why: ""
+      - id: OH6U8DSCC
+        text: Safely overflown due to their small vertical extent.
+        correct: false
+        why: ""
+- id: QFC1US0Z5
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616600
+    - BGS-611271
+  annexes: []
+  learningObjectives:
+    - 061.02.02.02.01
+  template:
+    type: simple
+    question: "The pilot is in radio contact with an Air Traffic Control unit but
+      has become unsure of the aircraft's position. The pilot's initial
+      action(s) if fuel is NOT critical is:"
+    explanation: ""
+    options:
+      - id: O1JMDS4HI
+        text: Change frequency to 121.5 MHz and make an urgency (PAN) call.
+        correct: false
+        why: ""
+      - id: OFOD8YNXO
+        text: Turn back towards the aircraft's last confirmed position.
+        correct: false
+        why: ""
+      - id: OXIU3IZM4
+        text: Continue to fly on the current heading until position is established.
+        correct: false
+        why: ""
+      - id: OCNCI3SQJ
+        text: Note the time and request assistance from the ATC unit.
+        correct: true
+        why: ""
+- id: QFMFTEWT
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616568
+    - AVEXAM-99507
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.02
+  template:
+    type: simple
+    question: On a VFR flight during night, which one of the following has to be
+      considered by a pilot most carefully?
+    explanation: ""
+    options:
+      - id: OHQYFSMND
+        text: The trajectory of other aircraft will not be clear, unless their landing
+          lights are illuminated.
+        correct: false
+        why: ""
+      - id: OF6DTCAIU
+        text: Terrain and obstacles along an approach may not be clearly visible.
+        correct: true
+        why: ""
+      - id: OZUVXSJGS
+        text: Use of red lights in the cockpit can cause temporary blindness for pilots.
+        correct: false
+        why: ""
+      - id: ONXQASFLI
+        text: When looking outside at lit objects, it can cause disorientation with
+          respect to the instrument readings.
+        correct: false
+        why: ""
+- id: QFUFJGXA
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611132
+    - ATPLGS-628151
+    - BGS-611266
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.03
+  template:
+    type: simple
+    question: "A pilot is planning for a VFR cross-country flight, using visual
+      checkpoints. The following would be the most suitable checkpoint:"
+    explanation: ""
+    options:
+      - id: OH9XKH0FK
+        text: A valley in an area of low hills.
+        correct: false
+        why: ""
+      - id: OJXF56P7J
+        text: A small lake in a mountainous region.
+        correct: false
+        why: ""
+      - id: OMNJVXWRY
+        text: A feature that merges into its natural surroundings.
+        correct: false
+        why: ""
+      - id: ORYXMJSON
+        text: A feature that contrasts with its natural surroundings.
+        correct: true
+        why: ""
+- id: QH5FF7XDS
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615232
+    - ATPLGS-625465
+    - AVEXAM-84207
+    - BGS-610476
+  annexes: []
+  learningObjectives:
+    - 061.02.02.02.01
+  template:
+    type: simple
+    question: During a visual flight, a useful method for a pilot to resolve any
+      uncertainty in the aircraft’s position is to maintain visual contact with
+      the ground and…
+    explanation: ""
+    options:
+      - id: OFCLWYMGE
+        text: fly the reverse of the heading being flown prior to becoming uncertain
+          until a pinpoint is obtained.
+        correct: false
+        why: ""
+      - id: OZPXCULL5
+        text: fly reverse headings and associated timings until the point of departure
+          is regained.
+        correct: false
+        why: ""
+      - id: OAHEI4I0Z
+        text: set the heading towards a line feature such as a coastline, motorway,
+          river or railway.
+        correct: true
+        why: ""
+      - id: OZVAANBZS
+        text: fly expanding circles until a pinpoint is obtained.
+        correct: false
+        why: ""
+- id: QHGQMQLOX
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614102
+    - AVEXAM-98867
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.08
+  template:
+    type: simple
+    question: What is the primary advantage of using line features during a VFR flight?
+    explanation: ""
+    options:
+      - id: OAYVKB9PA
+        text: Line features can be followed towards a significant position.
+        correct: true
+        why: ""
+      - id: O2DPSRPSS
+        text: Following line features, particularly if they are distinctive, removes the
+          need for dead reckoning navigation.
+        correct: false
+        why: ""
+      - id: OQS7BYR6H
+        text: Line features should normally be free of the other VFR navigation traffic.
+        correct: false
+        why: ""
+      - id: OPS9S0DVF
+        text: Overflying an area containing several railway lines and roads, the correct
+          line features can still be reliably identified.
+        correct: false
+        why: ""
+- id: QHIPEPPM
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613163
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: "A VFR flight is planned with a chart whose scale is 1:500 000\\. The
+      ground feature which should be used for orientation is/are:"
+    explanation: ""
+    options:
+      - id: OQWYTXEBN
+        text: Towers widely spread.
+        correct: false
+        why: ""
+      - id: OIEYX67BP
+        text: Small roads crossing.
+        correct: true
+        why: ""
+      - id: OZEAHPFUJ
+        text: A fruit farm.
+        correct: false
+        why: ""
+      - id: OJRXY4FRW
+        text: A small hill.
+        correct: false
+        why: ""
+- id: QHJZGRJW
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618335
+    - AVEXAM-66695
+    - AVEXAM-46783
+    - AVEXAM-28035
+    - ATPLGS-110477
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: "During visual navigation in freezing conditions, after heavy
+      snowfall, which of the following landmark will give the best reference for
+      a visual checkpoint:"
+    explanation: ""
+    options:
+      - id: O0USZRKE3
+        text: a railway.
+        correct: false
+        why: ""
+      - id: OSZQTRMCW
+        text: high-tension lines.
+        correct: true
+        why: ""
+      - id: OCBBHUCY7
+        text: a country road.
+        correct: false
+        why: ""
+      - id: OY4QVI67U
+        text: a river.
+        correct: false
+        why: ""
+- id: QHTS7MAOY
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619003
+    - BGS-611629
+    - AVEXAM-32034
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: Which one of the following situations mostly increases the risk of
+      Controlled Flight Into Terrain (CFIT) during a VFR flight?
+    explanation: ""
+    options:
+      - id: OSNG6QNXF
+        text: Significant thermal turbulence.
+        correct: false
+        why: ""
+      - id: ONT7X2X4E
+        text: Flying overwater with a strong surface wind.
+        correct: false
+        why: ""
+      - id: OWOD7VDSS
+        text: Overcast sky and Snow-Covered Terrain.
+        correct: true
+        why: ""
+      - id: OTHT0DA71
+        text: High humidity & Unstable Air.
+        correct: false
+        why: ""
+- id: QIJWXMWRZ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617900
+    - AVEXAM-62614
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: Which is the best visual ground feature to establish a checkpoint for
+      a day VFR flight over a mountainous area for an aircraft A flying at 5 000
+      ft AGL and an aircraft B flying at 1 000 ft AGL?
+    explanation: ""
+    options:
+      - id: OKVKLVCNW
+        text: A 200-ft-high mast for aircraft A and a small lake for aircraft B.
+        correct: false
+        why: ""
+      - id: OG1EDBIBH
+        text: A path for aircraft A and a small river for aircraft B.
+        correct: false
+        why: ""
+      - id: OYO2MBV39
+        text: A large lake for aircraft A and a 200-ft-high mast for aircraft B.
+        correct: true
+        why: ""
+      - id: OGXUIBK2L
+        text: A small lake for aircraft A and a path for aircraft B.
+        correct: false
+        why: ""
+- id: QIT9FZK5M
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617707
+    - AVEXAM-95735
+    - ATPLGS-110487
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.05
+  template:
+    type: simple
+    question: What is required to establish a track plot?
+    explanation: ""
+    options:
+      - id: OAAULNSDD
+        text: At least two pinpoints or fixes.
+        correct: true
+        why: ""
+      - id: ODEUVKCII
+        text: The air position and a pinpoint.
+        correct: false
+        why: ""
+      - id: O6MRGZDCM
+        text: The last position, air position and DR position.
+        correct: false
+        why: ""
+      - id: OQZMYTGXU
+        text: The last position and the DR position.
+        correct: false
+        why: ""
+- id: QJFIKYGA
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611226
+    - AVEXAM-73738
+    - AVEXAM-8002
+    - BGS-611604
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.09
+  template:
+    type: simple
+    question: An aircraft is flying a VFR flight at a low level over a snowy area
+      with no visual checkpoints. What action by the pilot is recommended?
+    explanation: ""
+    options:
+      - id: OPTUSU2EQ
+        text: Proceed and turn at the next checkpoint based on time.
+        correct: true
+        why: ""
+      - id: ODHWLN861
+        text: Climb to avoid blowing snow.
+        correct: false
+        why: ""
+      - id: O6ZLTLX75
+        text: Climb and initiate lost procedure.
+        correct: false
+        why: ""
+      - id: OPHOEUAWY
+        text: Turn back 180 degrees.
+        correct: false
+        why: ""
+- id: QJMJMPBN
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615371
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: multiple-correct
+    question: When planning a VFR flight, the selection of the navigation features
+      that are suitable for transferring from map to ground is required. What
+      ground features are particularly important for VFR navigation?
+    explanation: ""
+    options:
+      - text: Large water features
+        correct: true
+        why: ""
+      - text: Agricultural farm land
+        correct: false
+        why: ""
+      - text: Exceptionally high obstacles
+        correct: true
+        why: ""
+      - text: Power lines
+        correct: false
+        why: ""
+      - text: Isolated towns.
+        correct: true
+        why: ""
+- id: QJWNDRAW
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611419
+    - BGS-611403
+    - AVEXAM-62753
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: A pilot is planning a VFR flight which crosses a controlled airspace.
+      Because of restrictions of the controlled airspace, part of the flight
+      must be flown at a low level. Which of the following is a problem of
+      navigation at low level that could be faced in a VFR flight?
+    explanation: ""
+    options:
+      - id: OBF1HIAEH
+        text: Visual range to the horizon is restricted at low level.
+        correct: true
+        why: ""
+      - id: OU75XPEBD
+        text: Features with great vertical extent are harder to see.
+        correct: false
+        why: ""
+      - id: OIX8Q9ZXZ
+        text: The feeling that you are flying more slowly over the ground changes how
+          you perceive distance.
+        correct: false
+        why: ""
+      - id: OBLBQOUWW
+        text: Navigation features can be noticed more easily, but are more difficult to
+          identify.
+        correct: false
+        why: ""
+- id: QKKISRLY5
+  docId: "061.02"
+  relatedQuestions:
+    - QL3QEE6YK
+  externalIds:
+    - ATPLQ-615104
+    - AVEXAM-88975
+    - ATPLGS-124488
+    - AVEXAM-23155
+    - ATPLGS-127764
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.08
+  template:
+    type: calculation
+    question: >-
+      An aircraft flies from SALCO to BERRY HEAD and takes two relative bearings
+      from locator PY.
+
+
+      - Magnetic track: {{mt}}°
+
+      - TAS: {{tas}} kt
+
+      - Wind: {{wd}}° (T) / {{ws}} kt
+
+      - Variation: {{vw}}° W
+
+      - Deviation: +{{dev}}°
+
+      - First relative bearing of PY: {{rb1}}°
+
+      - Time between the bearings: {{t}} min
+
+      - Second relative bearing of PY: {{rb2}}°
+
+
+      Calculate the distance of the aircraft from locator PY at the second
+      bearing.
+    variables:
+      - id: mt
+        label: Magnetic track
+        unit: °
+      - id: vw
+        label: Variation (west)
+        unit: °
+      - id: dev
+        label: Deviation (east)
+        unit: °
+      - id: tas
+        label: TAS
+        unit: kt
+      - id: wd
+        label: Wind direction
+        unit: °
+      - id: ws
+        label: Wind speed
+        unit: kt
+      - id: rb1
+        label: First relative bearing
+        unit: °
+      - id: rb2
+        label: Second relative bearing
+        unit: °
+      - id: t
+        label: Time between bearings
+        unit: min
+    answer:
+      formula: (tas * cos(asin(ws * sin(wd - (mt - vw)) / tas)) - ws * cos(wd - (mt -
+        vw))) * t / 60 * sin(rb1 + asin(ws * sin(wd - (mt - vw)) / tas)) /
+        sin(rb2 - rb1)
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (tas * cos(asin(ws * sin(wd - (mt - vw)) / tas)) + ws * cos(wd - (mt -
+          vw))) * t / 60 * sin(rb1 + asin(ws * sin(wd - (mt - vw)) / tas)) /
+          sin(rb2 - rb1)
+      - id: d2
+        formula: (tas * cos(asin(ws * sin(wd - (mt - vw)) / tas)) - ws * cos(wd - (mt -
+          vw))) * t * sin(rb1 + asin(ws * sin(wd - (mt - vw)) / tas)) / sin(rb2
+          - rb1)
+      - id: d3
+        formula: (tas * cos(asin(ws * sin(wd - (mt - vw)) / tas)) - ws * cos(wd - (mt -
+          vw))) * t / 60 * sin(rb1 + asin(ws * sin(wd - (mt - vw)) / tas)) *
+          sin(rb2 - rb1)
+      - id: d4
+        formula: (tas * cos(asin(ws * sin(wd - (mt - vw)) / tas)) - ws * cos(wd - (mt -
+          vw))) * t / 60 * sin(rb1) / sin(rb2 - rb1)
+    presets:
+      - id: p1
+        values:
+          mt: 7
+          vw: 5
+          dev: 2
+          tas: 445
+          wd: 50
+          ws: 40
+          rb1: 311
+          rb2: 266
+          t: 3
+      - id: p2
+        values:
+          mt: 90
+          vw: 3
+          dev: 1
+          tas: 380
+          wd: 200
+          ws: 25
+          rb1: 320
+          rb2: 260
+          t: 4
+    explanation: >-
+      A relative bearing is measured from the nose, so it must be corrected for
+      the crab angle before the sine rule can be used with the ground track. The
+      wind triangle gives the crab angle and the ground speed along the track,
+      and the sine rule then gives the distance at the second bearing.
+
+
+      **Solution**
+
+
+      True track: {{f: mt - vw}} = {{n: mt - vw}}°
+
+
+      Crab angle: {{= asin(ws * sin(wd - (mt - vw)) / tas)}}°
+
+
+      Ground speed: {{= tas * cos(asin(ws * sin(wd - (mt - vw)) / tas)) - ws *
+      cos(wd - (mt - vw))}} kt
+
+
+      Distance flown between the bearings: {{= (tas * cos(asin(ws * sin(wd - (mt
+      - vw)) / tas)) - ws * cos(wd - (mt - vw))) * t / 60}} NM
+
+
+      Distance at the second bearing = **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: treats the headwind as a tailwind.
+
+      - **{{d2}} NM**: forgets to convert the minutes to hours.
+
+      - **{{d3}} NM**: multiplies by the sine of the bearing change instead of
+      dividing by it.
+
+      - **{{d4}} NM**: ignores the crab angle in the relative bearing.
+- id: QKRCNOZJ
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611138
+    - AVEXAM-6896
+    - ATPLGS-124349
+    - BGS-610305
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.11
+  template:
+    type: simple
+    question: Contour lines on aeronautical maps and charts connect points..
+    explanation: ""
+    options:
+      - id: OC1JZMP9I
+        text: having the same longitude.
+        correct: false
+        why: ""
+      - id: ONEK1GEUW
+        text: having the same elevation.
+        correct: true
+        why: ""
+      - id: OFXPNKC8Q
+        text: with the same variation.
+        correct: false
+        why: ""
+      - id: OOJDU7HBC
+        text: of equal latitude.
+        correct: false
+        why: ""
+- id: QL3QEE6YK
+  docId: "061.02"
+  relatedQuestions:
+    - QKKISRLY5
+    - QZWENX4LC
+  externalIds:
+    - ATPLQ-615322
+    - ATPLGS-110553
+    - AVEXAM-34917
+    - ATPLGS-625603
+    - ATPLQ-611092
+    - ATPLGS-110467
+    - AVEXAM-40133
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.08
+  template:
+    type: calculation
+    question: >-
+      An aircraft takes two relative bearings from the same ground feature.
+
+
+      - First relative bearing: {{rb1}}°
+
+      - Time between the bearings: {{t}} min
+
+      - Second relative bearing: {{rb2}}°
+
+      - Ground speed: {{gs}} kt, no wind and no drift
+
+
+      What is the distance from the aircraft to the feature at the time of the
+      second bearing?
+    variables:
+      - id: rb1
+        label: First relative bearing
+        unit: °
+      - id: rb2
+        label: Second relative bearing
+        unit: °
+      - id: t
+        label: Time between bearings
+        unit: min
+      - id: gs
+        label: Ground speed
+        unit: kt
+    answer:
+      formula: gs * t / 60 * sin(rb1) / sin(rb2 - rb1)
+      unit: NM
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: gs * t / 60 * sqrt(2)
+      - id: d2
+        formula: gs * t / 60 * 2
+      - id: d3
+        formula: gs * t / 60 * cos(rb2 - rb1)
+      - id: d4
+        formula: gs * t
+    presets:
+      - id: p1
+        values:
+          rb1: 315
+          rb2: 270
+          t: 10
+          gs: 240
+      - id: p2
+        values:
+          rb1: 315
+          rb2: 270
+          t: 3
+          gs: 180
+    explanation: >-
+      When two relative bearings are taken on the same feature, the distance
+      from the feature at the second bearing follows from the distance flown
+      between the bearings and the two bearing angles. With no wind and no
+      drift, the bearing triangle is solved with the sine rule.
+
+
+      **Solution**
+
+
+      Distance flown between the bearings: {{f: gs * t / 60}} = {{n: gs * t /
+      60}} NM
+
+
+      Distance from the feature at the second bearing: {{f: gs * t / 60 *
+      sin(rb1) / sin(rb2 - rb1)}} = {{n: gs * t / 60 * sin(rb1) / sin(rb2 -
+      rb1)}} = **{{answer}} NM**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}} NM**: multiplies the distance flown by the square root of 2,
+      which is not part of the bearing triangle.
+
+      - **{{d2}} NM**: doubles the distance flown.
+
+      - **{{d3}} NM**: uses the cosine of the bearing change instead of the sine
+      ratio.
+
+      - **{{d4}} NM**: forgets to convert minutes to hours.
+- id: QL6E9AQ5R
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618230
+    - ATPLGS-627952
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: >-
+      Which of the following combinations provides the best visual landmarks for
+      a VFR flight?
+
+
+      **1** \- Large water reservoir  
+
+      **2** \- Fruit fram land  
+
+      **3** \- Excessively high mast  
+
+      **4** \- roads of a large city  
+
+      **5** \- High tension power line
+    explanation: ""
+    options:
+      - id: OL5FCGNRW
+        text: 1, 3, 5.
+        correct: true
+        why: ""
+      - id: OITHYYZDK
+        text: 1, 2, 4.
+        correct: false
+        why: ""
+      - id: OKAH3IIEZ
+        text: 2, 3, 4.
+        correct: false
+        why: ""
+      - id: OLTWZ8OQD
+        text: 2, 4, 5.
+        correct: false
+        why: ""
+- id: QLBUUPXG
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613885
+    - AVEXAM-73738
+    - AVEXAM-8002
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.09
+  template:
+    type: simple
+    question: You are flying a low level VFR flight over a snowy area with no visual
+      checkpoints. What should you do?
+    explanation: ""
+    options:
+      - id: O5ZL8ONUC
+        text: Climb to a higher level and initiate the lost procedure.
+        correct: false
+        why: ""
+      - id: O6VO1VROP
+        text: Start flying larger concentric circles.
+        correct: false
+        why: ""
+      - id: O8DQHEJED
+        text: Climb to avoid blowing snow.
+        correct: false
+        why: ""
+      - id: ORCDPFEMX
+        text: Proceed and turn at the next checkpoint based on time.
+        correct: true
+        why: ""
+- id: QLDFJJNF
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617427
+    - AVEXAM-66481
+    - BGS-611448
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.03
+  template:
+    type: simple
+    question: An aircraft is making a VFR cross-country flight at low level. The
+      flight involves at least four visual checkpoints on the route. What is the
+      most suitable type of checkpoint?
+    explanation: ""
+    options:
+      - id: OAHHOTG1J
+        text: If flying over a wet, lowland area, choose small lakes rather than large
+          ones.
+        correct: false
+        why: ""
+      - id: O5PZ9WR8V
+        text: Fly as low as possible and select aerodromes that are active for
+          parachuting and gliding.
+        correct: false
+        why: ""
+      - id: OS4ZUDYUN
+        text: Look for distinctive features such as a railway line to lead into a
+          checkpoint.
+        correct: true
+        why: ""
+      - id: OMQPDHUWS
+        text: Choose large, built-up areas that can be seen easily from low level.
+        correct: false
+        why: ""
+- id: QLHRHTQJ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615025
+    - ATPLGS-628146
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.06
+  template:
+    type: simple
+    question: "The best ground feature to check track deviation while flying on a
+      heading 360º is:"
+    explanation: ""
+    options:
+      - id: OXLMAFYJO
+        text: A railway in an East-West orientation.
+        correct: false
+        why: ""
+      - id: OYHVC5IL0
+        text: A large river in a North-South orientation.
+        correct: true
+        why: ""
+      - id: OMUUFKSXF
+        text: 4 windmills in a coordinated position.
+        correct: false
+        why: ""
+      - id: OZ26NA00Y
+        text: A big town 5 NM off-track.
+        correct: false
+        why: ""
+- id: QM2T3DOOY
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618785
+    - AVEXAM-4998
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.08
+  template:
+    type: simple
+    question: Which one of the following VFR navigation techniques provides to a
+      pilot the maximum amount of time to check for other traffic and also
+      maintain a good situational awareness?
+    explanation: ""
+    options:
+      - id: OXYCADZC8
+        text: Delay any aircraft system checks until the aircraft is turned onto a new
+          heading.
+        correct: false
+        why: ""
+      - id: OUBU8VDQX
+        text: Keep a continuous update of the position by looking within a short
+          distance of the aircraft.
+        correct: false
+        why: ""
+      - id: OD1I7NOL2
+        text: Plan to fly from point to point as identified on the map and then on the
+          ground.
+        correct: false
+        why: ""
+      - id: OIQKOH4EX
+        text: Identify a feature to be used for guidance as far as possible down the
+          planned track.
+        correct: true
+        why: ""
+- id: QMLIAPS09
+  docId: "061.02"
+  relatedQuestions:
+    - QBNSPO3HN
+  externalIds:
+    - ATPLQ-619344
+  annexes: []
+  learningObjectives:
+    - 061.01.03.01.04
+  template:
+    type: calculation
+    question: >-
+      An island is observed {{rel}}° to the right of the aircraft's longitudinal
+      axis.
+
+
+      - Aircraft magnetic heading: {{hdg}}°
+
+      - Magnetic variation: {{var}}° (positive = East, negative = West)
+
+
+      What is the true bearing from the aircraft to the island?
+    variables:
+      - id: hdg
+        label: Magnetic heading
+        unit: °M
+      - id: var
+        label: Variation
+        unit: °
+      - id: rel
+        label: Relative bearing of the island (right)
+        unit: °
+    answer:
+      formula: (hdg + var + rel) - 360 * floor((hdg + var + rel) / 360)
+      unit: °T
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (hdg + var - rel) - 360 * floor((hdg + var - rel) / 360)
+      - id: d2
+        formula: (hdg - var + rel) - 360 * floor((hdg - var + rel) / 360)
+      - id: d3
+        formula: (hdg - var - rel) - 360 * floor((hdg - var - rel) / 360)
+    presets:
+      - id: p1
+        values:
+          hdg: 290
+          var: 10
+          rel: 30
+      - id: p2
+        values:
+          hdg: 45
+          var: -3
+          rel: 60
+      - id: p3
+        values:
+          hdg: 200
+          var: 5
+          rel: 90
+    explanation: >-
+      Variation turns the magnetic heading into the true heading. The relative
+      bearing is then added to the true heading to give the true bearing of the
+      island from the aircraft.
+
+
+      **Solution**
+
+
+      True heading: {{hdg}}° + {{var}}° = {{= hdg + var}}°
+
+
+      True bearing of the island: {{= hdg + var}}° + {{rel}}° = {{= hdg + var +
+      rel}}°, kept between 0° and 360°, giving **{{answer}}**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the relative bearing is subtracted instead of added.
+
+      - **{{d2}}°**: the variation is applied with the wrong sign.
+
+      - **{{d3}}°**: both the variation and the relative bearing are applied
+      with the wrong sign.
+- id: QMOX4KLMB
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619444
+  annexes:
+    - 061-flight-log-f-imai-lfoi-to-sittingbourne-14-3-take-02
+  learningObjectives:
+    - 061.02.02.02.01
+  template:
+    type: multiple-correct
+    question: >-
+      Refer to figure.  
+
+      A pilot is performing a VFR flight just under the low cloud base following
+      the route above, and at Fruges Windfarm, they get cleared to fly directly
+      to DET VOR/DME. While flying directly towards DET VOR/DME, they realise at
+      15:00 that the on-board GPS equipment has been showing unreliable
+      indications for a few minutes and the pilot becomes unsure of their
+      position. Which of the following should the pilot do in this case?
+    explanation: ""
+    options:
+      - text: Tune in to the DET VOR/DME frequency if within radio range.
+        correct: true
+        why: ""
+      - text: Climb to a higher level to increase radio range.
+        correct: false
+        why: ""
+      - text: Follow the calculated heading towards DET VOR/DME.
+        correct: true
+        why: ""
+      - text: Follow the flight legs according to the operational flight plan.
+        correct: false
+        why: ""
+- id: QMR0Y8NMM
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616663
+    - BGS-611665
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.02
+  template:
+    type: simple
+    question: A pilot has prepared for a VFR flight in daytime. The flight is
+      delayed, and the pilot decides to carry out the flight late at night with
+      clear weather and good visibility forecast. Which of the following is the
+      most significant hazard that the pilot should consider to planning for the
+      night flight?
+    explanation: ""
+    options:
+      - id: O5JHDHB9Q
+        text: Difficulty in identifying the airfield by their beacons.
+        correct: false
+        why: ""
+      - id: OVYUWV3SH
+        text: Greater hazard associated with in obstacles such tall masts at night
+          compared to during the day.
+        correct: false
+        why: ""
+      - id: OMKB7Y2UN
+        text: Limited visibility of navigation features that were selected for the
+          original plan.
+        correct: true
+        why: ""
+      - id: OSXHYHDTM
+        text: Increased fatigue and reduced alertness due to the pilot's circadian
+          rhythm and biological factors.
+        correct: false
+        why: ""
+- id: QMSIXJOBY
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616770
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: What makes a tall rectangular building a favorable VFR feature?
+    explanation: ""
+    options:
+      - id: ODSOEVUF6
+        text: It is square and blends in with other buildings.
+        correct: false
+        why: ""
+      - id: OOTMUEOXO
+        text: It is rectangular and easily confused with surrounding terrain.
+        correct: false
+        why: ""
+      - id: OEMVTVCMZ
+        text: It is round and stands out against the skyline.
+        correct: false
+        why: ""
+      - id: OMLNZRQC5
+        text: It is rectangular and distinct compared to the surrounding terrain.
+        correct: true
+        why: ""
+- id: QMXSSKEL
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613104
+    - BGS-611720
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.02
+  template:
+    type: simple
+    question: While planning a flight on a clear, moon-lit night under VFR and
+      deciding on what visual navigation features to use, a pilot should
+      consider that…
+    explanation: ""
+    options:
+      - id: ODAHLXKQ6
+        text: colour differences will be very difficult to identify.
+        correct: true
+        why: ""
+      - id: OCHD5PIWM
+        text: visibility is worst when flying in the direction of (towards) the moon.
+        correct: false
+        why: ""
+      - id: OTR2EQ6X5
+        text: narrow rivers are easy to see.
+        correct: false
+        why: ""
+      - id: O1GL1SKI2
+        text: roads, including busy ones, are difficult to see.
+        correct: false
+        why: ""
+- id: QNMJMEXYV
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616966
+    - AVEXAM-46857
+    - ATPLGS-110539
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.08
+  template:
+    type: chart
+    question: >-
+      A ground feature was observed on a relative bearing of 325° and five
+      minutes later on a relative bearing of 280°.
+
+
+      The aircraft heading was 165°(M), variation 25°W, drift 10° Right and GS
+      360 kts.
+
+
+      What is the distance and true bearing of the aircraft from the feature
+      when the relative bearing was 280°?
+    explanation: ""
+    variables: []
+    entries:
+      - id: e1
+        values: {}
+        answer: 30 NM and 240º.
+        wrongAnswers:
+          - 30 NM and 060º.
+          - 40 NM and 110º.
+          - 40 NM and 290º.
+        explanation: >-
+          The aircraft flew for 5 minutes at 360 kt, which is 30 NM.
+
+
+          The heading in true is 165° − 25° = 140°. The first bearing was 140° +
+          325° = 105°T, and the second 140° + 280° = 060°T. With the track of
+          150° (drift 10° right) the triangle has angles of 45° at the first
+          position, 90° at the second, and 45° at the feature.
+
+
+          So the second position is **30 NM** from the feature, and the aircraft
+          is on the reciprocal bearing, 060° + 180° = **240°**.
+- id: QNOMCJRG
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611425
+    - AVEXAM-30482
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.11
+    - 061.02.02.01.12
+  template:
+    type: multiple-correct
+    question: "Relief is usually portrayed by combinations of:"
+    explanation: ""
+    options:
+      - text: Contour lines
+        correct: true
+        why: ""
+      - text: Shading
+        correct: true
+        why: ""
+      - text: Lines of latitude
+        correct: false
+        why: ""
+      - text: Different colours
+        correct: true
+        why: ""
+      - text: Spot heights
+        correct: true
+        why: ""
+      - text: Gradual scale
+        correct: false
+        why: ""
+- id: QOQXVEHF
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613752
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.06
+  template:
+    type: simple
+    question: Which of the following ground features should allow a Pilot flying
+      along a VFR track to best check for any time deviation?
+    explanation: ""
+    options:
+      - id: OZLXO0K8C
+        text: A double-lane road crossing a railway close to your intended track.
+        correct: false
+        why: ""
+      - id: O4YBT9A2O
+        text: A double-lane road crossing your intended track.
+        correct: true
+        why: ""
+      - id: ODIXLQ5GE
+        text: A double-lane road crossing a lake close to your intended track.
+        correct: false
+        why: ""
+      - id: OTDPFGZJK
+        text: A single-lane road crossing a lake close to your intended track.
+        correct: false
+        why: ""
+- id: QORDNLSQ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615581
+    - AVEXAM-64093
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: During a low level VFR flight at 600 ft AGL, which one of the
+      following challenges may be faced by the pilot?
+    explanation: ""
+    options:
+      - id: O7XQ5XX4G
+        text: It might NOT be easy to recognise visual waypoints, so he/she could fly
+          past them.
+        correct: true
+        why: ""
+      - id: OOMRHS5GB
+        text: Terrain contours are more difficult to spot compared to when flying at a
+          high altitude.
+        correct: false
+        why: ""
+      - id: OQ6C21KPI
+        text: Vertical features disappear in the surrounding environment and are
+          difficult to spot.
+        correct: false
+        why: ""
+      - id: OEZDEQAYD
+        text: Open areas are much easier to identify than built-up areas.
+        correct: false
+        why: ""
+- id: QOUGJAOOJ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614239
+    - AVEXAM-15137
+    - BGS-610753
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.02
+  template:
+    type: simple
+    question: A visual check point
+    explanation: ""
+    options:
+      - id: ORDDSS0DH
+        text: is a point used to establish the horizontal visibility or the runway
+          visual range.
+        correct: false
+        why: ""
+      - id: OTADYJBYO
+        text: is a land mark or feature visible to both, the radar and the naked eye.
+        correct: false
+        why: ""
+      - id: OISEYIMSM
+        text: is a distinct point which is easily visually identifiable on the terrain
+          as well as on the chart.
+        correct: true
+        why: ""
+      - id: OKFCQRB1Q
+        text: is a reference point which may not be used when proceeding on an
+          instrument flight plan.
+        correct: false
+        why: ""
+- id: QOY6FU7BX
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616150
+  annexes: []
+  learningObjectives:
+    - 061.02.02.02.01
+  template:
+    type: simple
+    question: A pilot flying a VFR flight got lost while in contact with ATC and
+      with enough fuel in tanks. What are the recommended actions in this case?
+    explanation: ""
+    options:
+      - id: OSZN5JTPJ
+        text: Continue the flight with the same heading until the position can be
+          established.
+        correct: false
+        why: ""
+      - id: ON5CQZMRM
+        text: Turn back to the last confirmed position.
+        correct: false
+        why: ""
+      - id: OI99H3KXR
+        text: Make an urgency call (PAN PAN) on frequency 121.5 MHz.
+        correct: false
+        why: ""
+      - id: OL0MEYUIQ
+        text: Note the actual time and ask ATC for help.
+        correct: true
+        why: ""
+- id: QPG6S7BMU
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614079
+    - AVEXAM-12746
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.07
+  template:
+    type: simple
+    question: "The main reason to keep the VFR chart lined up with the current track
+      is that:"
+    explanation: ""
+    options:
+      - id: OAYVBAR9J
+        text: It saves space in the cockpit.
+        correct: false
+        why: ""
+      - id: OXM3S9T8Z
+        text: It stores the chart more easily.
+        correct: false
+        why: ""
+      - id: O8CZUHYUR
+        text: It is easier to recognize landmarks and terrain.
+        correct: true
+        why: ""
+      - id: OFUQDTRCV
+        text: It is easier to distinguish the required track in case of diversion.
+        correct: false
+        why: ""
+- id: QPHNHBDG
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619158
+    - AVEXAM-11147
+  annexes: []
+  learningObjectives:
+    - 061.02.02.02.01
+  template:
+    type: simple
+    question: The pilot of a piston-engined aeroplane, flying a VFR flight and
+      approaching to the last turning point, realizes that he/she is both a few
+      minutes behind schedule and low on fuel. What is the appropriate action
+      that should be taken?
+    explanation: ""
+    options:
+      - id: OO8PJUKOB
+        text: Make an emergency landing at the nearest suitable field.
+        correct: false
+        why: ""
+      - id: O0UOJ7DXD
+        text: Turn before the scheduled turning point and fly directly to the
+          destination.
+        correct: true
+        why: ""
+      - id: OLWRMCVFJ
+        text: Fly to a lower altitude to increase the TAS and decrease the HWC.
+        correct: false
+        why: ""
+      - id: OXZVTD45N
+        text: Orbit and contact ATC to receive further instructions.
+        correct: false
+        why: ""
+- id: QPL0MTSSR
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615958
+    - AVEXAM-48913
+    - AVEXAM-32055
+    - ATPLGS-110482
+  annexes: []
+  learningObjectives:
+    - 061.01.03.01.04
+  template:
+    type: calculation
+    question: |-
+      The island is observed in the following position.
+
+      - Relative bearing: {{rb}}° right
+      - Magnetic heading: {{mh}}°M
+      - Variation: {{var_e}}°E
+
+      What is the true bearing of the aircraft from the island?
+    variables:
+      - id: mh
+        label: magnetic heading
+        unit: °
+      - id: var_e
+        label: variation (east)
+        unit: °
+      - id: rb
+        label: relative bearing (right)
+        unit: °
+    answer:
+      formula: (mh + var_e + rb + 180) - 360 * floor((mh + var_e + rb + 180) / 360)
+      unit: °T
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: (mh - var_e + rb + 180) - 360 * floor((mh - var_e + rb + 180) / 360)
+      - id: d2
+        formula: (mh + var_e - rb + 180) - 360 * floor((mh + var_e - rb + 180) / 360)
+      - id: d3
+        formula: (mh + rb + 180) - 360 * floor((mh + rb + 180) / 360)
+    presets:
+      - id: p1
+        values:
+          mh: 355
+          var_e: 15
+          rb: 30
+      - id: p2
+        values:
+          mh: 120
+          var_e: 5
+          rb: 45
+      - id: p3
+        values:
+          mh: 80
+          var_e: 10
+          rb: 20
+    explanation: >-
+      The true heading is the magnetic heading corrected by the variation (east
+      is added). Adding the relative bearing to the right gives the true bearing
+      of the island from the aircraft. The bearing of the aircraft from the
+      island is the reciprocal, so 180° is added. Results above 360° are reduced
+      by 360°.
+
+
+      **Solution**
+
+
+      True heading = {{mh}}° + {{var_e}}° = {{= mh + var_e}}°
+
+
+      Bearing of the island from the aircraft = {{= mh + var_e}}° + {{rb}}° =
+      {{= mh + var_e + rb}}°
+
+
+      Bearing of the aircraft from the island = {{= mh + var_e + rb}}° + 180° =
+      {{= mh + var_e + rb + 180}}°, minus 360° = **{{answer}}°(T)**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: applies the variation with the wrong sign (subtracts the
+      east variation).
+
+      - **{{d2}}°**: subtracts the relative bearing, as if the island were to
+      the left.
+
+      - **{{d3}}°**: ignores the variation.
+- id: QPZ5IWEP1
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-622105
+    - ATPLGS-125046
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: An aircraft is making a VFR flight under freezing conditions after
+      recent heavy snow fall. Which of the following land marks will provide the
+      most reliable reference?
+    explanation: ""
+    options:
+      - id: OAYELDLOA
+        text: A country road.
+        correct: false
+        why: ""
+      - id: OXAEJX6PS
+        text: A railway track (without an overhead line).
+        correct: false
+        why: ""
+      - id: O058APWWZ
+        text: A river.
+        correct: false
+        why: ""
+      - id: OEIID7RBV
+        text: A high-tension power line (with towers).
+        correct: true
+        why: ""
+- id: QQ8COB3YL
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616637
+    - AVEXAM-30418
+    - BGS-611293
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - 061.02.02.01.14
+  template:
+    type: simple
+    question: >-
+      (For this question use the VFR chart ED-4 from the Jeppesen GSPRM
+      2017).   
+       You are planning a VFR flight departing at midday from aerodrome Arnbruck (EDNB) (N49°08', E012°59') to aerodrome Hohenfels (ETIH) (N49°13', E011°50'). What is the best means of checking the groundspeed?
+    explanation: ""
+    options:
+      - id: ORNTUITL6
+        text: The parallel river running through the town of Nittenau
+          (N49°12',E012°18").
+        correct: false
+        why: ""
+      - id: OKQM5EJU2
+        text: The road A93, which crosses the track.
+        correct: true
+        why: ""
+      - id: ONKGIR79W
+        text: Passing abeam Griesau aerodrome (EDPG) (N48°57', E012º25").
+        correct: false
+        why: ""
+      - id: OZEOZMG4R
+        text: Passing abeam (opposite) the lighted mast at N49°03', E012°10'.
+        correct: false
+        why: ""
+- id: QQCAPXVP
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613134
+    - BGS-611406
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.02
+  template:
+    type: simple
+    question: A pilot has planned a VFR trip by day but, due to weather delays, must
+      now undertake the same flight at night, with clear weather. Which of the
+      following threats pose the greatest risk to their flight?
+    explanation: ""
+    options:
+      - id: O8WIBDLKB
+        text: Inability to recognise fixes planned for navigating during the day.
+        correct: true
+        why: ""
+      - id: OSDMU4T95
+        text: Tall masts and other well lit obstacles.
+        correct: false
+        why: ""
+      - id: OTC7NNWTS
+        text: Difficulty recognising the aerodrome from its beacon.
+        correct: false
+        why: ""
+      - id: OVVFYLVML
+        text: Difficulty recognising populated areas, including well lit ones.
+        correct: false
+        why: ""
+- id: QQJILMCU
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613367
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.07
+  template:
+    type: simple
+    question: "Identifying landmarks and overall orientation and visualisation of
+      the inflight situation on a VFR flight can be made easy by:"
+    explanation: ""
+    options:
+      - id: ORIQNWV0M
+        text: Holding a relevant part of the map with track-up orientation.
+        correct: true
+        why: ""
+      - id: O3OWPZHHK
+        text: Holding the complete map with track-up orientation.
+        correct: false
+        why: ""
+      - id: OLFWBFCQX
+        text: Holding the complete map with North-up orientation.
+        correct: false
+        why: ""
+      - id: OI84V8560
+        text: Holding only a small part of the map with North-up orientation.
+        correct: false
+        why: ""
+- id: QQPRAEDE
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-617548
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: multiple-correct
+    question: A VFR flight is planned in winter with snowfall expected the night
+      before. Which of the following ground features should be used for
+      orientation?
+    explanation: ""
+    options:
+      - text: Farmland and vegetation
+        correct: false
+        why: ""
+      - text: Roads
+        correct: false
+        why: ""
+      - text: Railroads
+        correct: false
+        why: ""
+      - text: Large waterways
+        correct: true
+        why: ""
+      - text: Vertical checkpoints (e.g. broadcast antennas)
+        correct: true
+        why: ""
+      - text: Coastlines.
+        correct: true
+        why: ""
+- id: QRKGJZHT
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613809
+    - AVEXAM-99507
+    - BGS-611261
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.02
+  template:
+    type: simple
+    question: What is the greatest potential threat for VFR navigation at night?
+    explanation: ""
+    options:
+      - id: OUP0HWP9M
+        text: It is difficult to determine the flight direction of other aircraft unless
+          their landing lights are on.
+        correct: false
+        why: ""
+      - id: OB9XF390U
+        text: The aircraft height during an approach can be easily misjudged due to
+          insufficient external visual cues.
+        correct: true
+        why: ""
+      - id: OQ23EXXQM
+        text: Exposure to red light can cause the eyes to lose dark adaptation and may
+          cause temporary blindness.
+        correct: false
+        why: ""
+      - id: OLA8T1SRS
+        text: When external lighting provides good visual cues, flying by
+          cross-reference to instruments may cause spatial disorientation.
+        correct: false
+        why: ""
+- id: QRSOB0DQH
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619104
+    - BGS-611451
+    - BGS-611661
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.07
+  template:
+    type: simple
+    question: Why should the pilot keep a VFR chart oriented to True North direction
+      while navigating visually in flight?
+    explanation: ""
+    options:
+      - id: OF6M6LPQF
+        text: Visualisation of the surrounding terrain is easier.
+        correct: false
+        why: ""
+      - id: OAYJIKZCX
+        text: The chart can be folded and stored more easily in-flight.
+        correct: false
+        why: ""
+      - id: OBN2CM4OH
+        text: Allows to identify a line feature and to track the progress.
+        correct: false
+        why: ""
+      - id: OH44QGMDI
+        text: Aeronautical and topographical information can be easily read.
+        correct: true
+        why: ""
+- id: QRTOQNYZZ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615166
+    - BGS-611652
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.06
+  template:
+    type: multiple-correct
+    question: A pilot planning a VFR flight leg is looking for a ground feature
+      part-way a long a leg that is NOT in built up area. All of the following
+      are depicted on the VFR chart in suitable locations for a visual fix.
+      Which might allow the pilot to check for any drifting error along the
+      track?
+    explanation: ""
+    options:
+      - text: Dual-carriageway (four line) road crossing the intended track.
+        correct: false
+        why: ""
+      - text: Dual-carriageway (four line) road crossing a river close to the intended
+          track.
+        correct: true
+        why: ""
+      - text: Disused railway crossing a river on intended track.
+        correct: true
+        why: ""
+      - text: Single carriageway (two line) road crossing a railway close to intended
+          track.
+        correct: true
+        why: ""
+- id: QSBULXYA
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616619
+    - ATPLGS-628525
+    - BGS-611495
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.02
+  template:
+    type: simple
+    question: Which of the following options describe the greatest potential threat
+      for VFR navigation at night?
+    explanation: ""
+    options:
+      - id: OPMUMZEAC
+        text: Due to the specific wavelength to the colour red, lit obstacles are
+          difficult to identify, increasing the potential for a collision.
+        correct: false
+        why: ""
+      - id: OVCKI3HA9
+        text: During an outside scan using peripheral vision, illuminated obstacles
+          appear as being further away than they actually are, giving the
+          impression that there is adequate avoidance time.
+        correct: false
+        why: ""
+      - id: OJQCPY6ZP
+        text: If the aircraft deviates from the planned route, natural obstacles
+          excluded during the planning stage could be a threat as they could be
+          difficult to see.
+        correct: true
+        why: ""
+      - id: OQMUAWQQH
+        text: Location of aerodromes CANNOT be easily identified unless flying overhead,
+          due to low lightning intensity.
+        correct: false
+        why: ""
+- id: QT0CFPYQM
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618558
+    - ATPLGS-628142
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - 061.04.03.02.01
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017.  
+
+      Find the highest obstacle or elevation, within a band of 5 NM each side of
+      the track and considering a 5 NM radius around the aerodromes, when flying
+      directly from Griesau (N48°57′, E12°25′) to Arnbruck (N49°7′, E12°59′).
+    explanation: ""
+    options:
+      - id: OG6V38JCE
+        text: 4 055 ft.
+        correct: true
+        why: ""
+      - id: OJHHB8C8O
+        text: 3 438 ft.
+        correct: false
+        why: ""
+      - id: OWKTREC5K
+        text: 3 717 ft.
+        correct: false
+        why: ""
+      - id: O4KK44QOS
+        text: 4 777 ft.
+        correct: false
+        why: ""
+- id: QTDNTKNO
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612858
+    - BGS-611411
+    - AVEXAM-48684
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: Which features are the most suitable when flying a VFR flight at low
+      level during the daylight, using checkpoints on a 1:500 000 map?
+    explanation: ""
+    options:
+      - id: O1NGWDDMH
+        text: Minor roads in a built up area.
+        correct: false
+        why: ""
+      - id: O5Y05EKLX
+        text: Ones that are tall and prominent, such as towers.
+        correct: true
+        why: ""
+      - id: OGZOMK5TA
+        text: Very large ones, such as an extensive wooded area.
+        correct: false
+        why: ""
+      - id: OEZ3VW4L8
+        text: Small ones, such as individual houses distributed over an area of
+          farmland.
+        correct: false
+        why: ""
+- id: QTHCKURM
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618888
+    - AVEXAM-6357
+    - ATPLGS-628149
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: "The best visual marking for a VFR flight on a warm summer day is:"
+    explanation: ""
+    options:
+      - id: O4T8TVM6U
+        text: A reservoir in the country side.
+        correct: true
+        why: ""
+      - id: OVZ1OVJL1
+        text: A village on the edge of a larger city.
+        correct: false
+        why: ""
+      - id: OJ8IA8XMZ
+        text: 4 distant windmills widely spread.
+        correct: false
+        why: ""
+      - id: OWRVQ7HDX
+        text: A grass airfield in the country side.
+        correct: false
+        why: ""
+- id: QTSQFCBZ
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618819
+    - ATPLGS-628138
+    - AVEXAM-43393
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.03
+  template:
+    type: simple
+    question: When selecting en-route navigational visual checkpoints during flight
+      planning, which of the following is not a general consideration?
+    explanation: ""
+    options:
+      - id: OS5EMOUIP
+        text: Size of the feature
+        correct: false
+        why: ""
+      - id: O6IRQXD1E
+        text: In-flight visibility
+        correct: true
+        why: ""
+      - id: OVKLNNBMS
+        text: Terrain
+        correct: false
+        why: ""
+      - id: OYIHQBLHJ
+        text: Proximity to leg
+        correct: false
+        why: ""
+- id: QTVRFAMQ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615844
+    - BGS-611717
+  annexes: []
+  learningObjectives:
+    - 061.02.02.02.01
+  template:
+    type: multiple-correct
+    question: >-
+      When flying VFR by day in early summer over part of central Europe, you
+      have been busy looking at the scenery and NOT concentrating on where
+      exactly you are.
+
+
+      What are the features which would be suitable for you to set your heading
+      towards, when unsure of your position?
+    explanation: ""
+    options:
+      - text: A motorway
+        correct: true
+        why: ""
+      - text: A junction of two small roads.
+        correct: false
+        why: ""
+      - text: A railway.
+        correct: true
+        why: ""
+      - text: A river.
+        correct: true
+        why: ""
+      - text: A coastline
+        correct: true
+        why: ""
+      - text: A fruit farm.
+        correct: false
+        why: ""
+- id: QUHEQZO4H
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614225
+    - AVEXAM-85722
+  annexes:
+    - jeppesen-vfr-chart-excerpt-eastern-bavaria-and-czech-border
+  learningObjectives:
+    - 061.02.02.02.01
+    - 061.04.03.02.02
+  template:
+    type: simple
+    question: >-
+      Refer to figure.
+
+
+      (For this question use VFR chart ED-4 from the Jeppesen GSPRM 2017). An
+      aircraft is flying a VFR flight from STRUNKOVICE airport (LKSR, N49°05.0'
+      E14°04.5') to REGENSBURG OBERHUB airport (EDNR, N49° 08.5' E012° 04.9')
+      via VILSHOFEN airport (EDMV, N48°38.1′, E13°11.7′) and the mast of 1848 ft
+      next to MALLERSDORF. Due to inattention of the pilot, he/she drifted to
+      the right and confused ELSENTHAL-GRAFENAU airport (EDNF,
+      N48º49.4',E013º22.0') for VILSHOFEN airport turning earlier right on the
+      correct heading. When the pilot saw the mast with an elevation of 3750 ft,
+      he/she started to doubt his/her position. What is the best action to take?
+    explanation: ""
+    options:
+      - id: OTOXDWRVW
+        text: Tune the VOR/DME RODING frequency to determine the position on the map.
+        correct: true
+        why: ""
+      - id: OWWUYXD1V
+        text: Make a 180º turn to fly back to Strunkovice airport and restart the
+          flight.
+        correct: false
+        why: ""
+      - id: OOUBPWIZI
+        text: Climb higher to get a better view.
+        correct: false
+        why: ""
+      - id: OHSSQMP2S
+        text: Circle around a distinct feature and consult the chart to establish your
+          position.
+        correct: false
+        why: ""
+- id: QUSUMLGA
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611792
+    - ATPLGS-628148
+    - AVEXAM-35148
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: A pilot is flying VFR and is about to conduct an approach to an
+      unfamiliar airfield just after the sunrise. What should he/she pay extra
+      attention to?
+    explanation: ""
+    options:
+      - id: OJIMJFWY7
+        text: The position of the sun.
+        correct: true
+        why: ""
+      - id: OLJXEBJZZ
+        text: The position of the moon.
+        correct: false
+        why: ""
+      - id: OEP9YCIE8
+        text: The aerodrome reference point.
+        correct: false
+        why: ""
+      - id: OYMNLQD6H
+        text: The duration of the morning civil twilight.
+        correct: false
+        why: ""
+- id: QVNJMAMC
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619277
+    - AVEXAM-74058
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.03
+  template:
+    type: simple
+    question: >-
+      Refer to VFR Chart ED-4 from Jeppesen GSPRM 2017\.   
+       You are planning a VFR flight during the day from Dingolfing aerodrome EDPD (N48°40', E12°30') to Arnbruck aerodrome EDNB (N49°08', E012°59'). What is the best visual checkpoint that should be used en-route to check the flight progress?
+    explanation: ""
+    options:
+      - id: OPVCQXIFW
+        text: The unlighted obstacle 2 NM North off Deggendorf.
+        correct: false
+        why: ""
+      - id: OAYVP1SYC
+        text: The intersection of the multi-lane roads A3 and A92.
+        correct: true
+        why: ""
+      - id: OXV3Y3AGB
+        text: The lighted obstacle 6 NM South off Deggendorf.
+        correct: false
+        why: ""
+      - id: OABIUK1HO
+        text: The heliport at the North part of Straubing.
+        correct: false
+        why: ""
+- id: QVVSEZYJ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614119
+    - ATPLGS-627946
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: multiple-correct
+    question: "The following features are the most useful for VFR navigation by day:"
+    explanation: ""
+    options:
+      - text: Tall masts
+        correct: true
+        why: ""
+      - text: Large lakes
+        correct: true
+        why: ""
+      - text: Streets in a large town
+        correct: false
+        why: ""
+      - text: Area with several small woods
+        correct: false
+        why: ""
+      - text: Active power station
+        correct: true
+        why: ""
+- id: QVZDMXTLU
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616070
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: In which of the following conditions is there the most risk of CFIT?
+    explanation: ""
+    options:
+      - id: OAPCZ64WI
+        text: High headwind and turbulence causing rapid changes in vertical speed
+          indications.
+        correct: false
+        why: ""
+      - id: OGXOTGFC8
+        text: Night flight around largely populated cities.
+        correct: false
+        why: ""
+      - id: OYZJZJYLK
+        text: Overcast cloud layer with a low ceiling and the underlying ground being
+          completely covered by snow.
+        correct: true
+        why: ""
+      - id: OWHMXRDKJ
+        text: During a flight in a mountainous area with strong wind conditions.
+        correct: false
+        why: ""
+- id: QWBRKHOE
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614394
+    - AVEXAM-88839
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: '"Whiteout" occurs:'
+    explanation: ""
+    options:
+      - id: O3XYCXDN9
+        text: When taking-off from a snow-covered lake.
+        correct: false
+        why: ""
+      - id: OZX8VQMDL
+        text: When the terrain is covered with snow and the horizon blends with the sky,
+          visual determination of height becomes difficult.
+        correct: true
+        why: ""
+      - id: OBHOATOV5
+        text: When flying in heavy snow.
+        correct: false
+        why: ""
+      - id: OFPDJ4OO4
+        text: In flight conditions when you suddenly enter a cloud and everything "gets
+          white" outside the cockpit windows.
+        correct: false
+        why: ""
+- id: QWHZGPEGP
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612213
+    - AVEXAM-12819
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: Which is the best visual ground feature to establish a checkpoint for
+      a day VFR flight over a mountainous area for an aircraft A flying at 1 000
+      ft AGL and an aircraft B flying at 5 000 ft AGL?
+    explanation: ""
+    options:
+      - id: OR8RWF3ZR
+        text: High mast for both A and B.
+        correct: false
+        why: ""
+      - id: OBRFHQJHW
+        text: High mast for A and big lake for B.
+        correct: true
+        why: ""
+      - id: OF0APU9P3
+        text: Big lake for both A and B.
+        correct: false
+        why: ""
+      - id: OPQI6WLNG
+        text: Big lake for A and high mast for B.
+        correct: false
+        why: ""
+- id: QWMEUGUY
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616629
+    - AVEXAM-83214
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.03
+  template:
+    type: simple
+    question: What is the best ground feature to check the track deviation for a
+      north-south flight?
+    explanation: ""
+    options:
+      - id: OQGQRKXP0
+        text: 4 windmills spaced east-west.
+        correct: false
+        why: ""
+      - id: OTGL4X9HA
+        text: A railroad running from east to west.
+        correct: false
+        why: ""
+      - id: OH3WNIUHX
+        text: A river in a north-south direction.
+        correct: true
+        why: ""
+      - id: OC1VPGUES
+        text: An east to west power line.
+        correct: false
+        why: ""
+- id: QWU2FQ3MP
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-612363
+  annexes: []
+  learningObjectives:
+    - 061.01.05.04.07
+    - 061.02.02.01.14
+  template:
+    type: simple
+    question: On a VFR navigation flight, which of the following visual checkpoints
+      is suitable to determine the aircraft’s ground speed regarding the
+      calculated time ticks?
+    explanation: ""
+    options:
+      - id: OBGGPCTAH
+        text: An 800 ft radio mast on the horizon.
+        correct: false
+        why: ""
+      - id: OTLENK2ZQ
+        text: A railroad perpendicular to the track.
+        correct: true
+        why: ""
+      - id: OPSJ5QUH5
+        text: A straight highway along the calculated track.
+        correct: false
+        why: ""
+      - id: OWKNZEA5X
+        text: A large waterway in the direction of the aircraft’s nose.
+        correct: false
+        why: ""
+- id: QX7SHNQAM
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616943
+    - AVEXAM-63375
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: What is the danger about power lines when flying VFR over a snowy area?
+    explanation: ""
+    options:
+      - id: OF1VZDAMA
+        text: Always marked on the map, no problem.
+        correct: false
+        why: ""
+      - id: OFHRWA2YJ
+        text: Due to their small vertical extents, not a factor.
+        correct: false
+        why: ""
+      - id: O9CN7BXTL
+        text: Represent a danger when flying over a mountain's ridge.
+        correct: false
+        why: ""
+      - id: OGWTAZOKT
+        text: Represent a danger when power lines cross a valley.
+        correct: true
+        why: ""
+- id: QXAHUGIQA
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-615463
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: multiple-correct
+    question: Which of the following provide the best visual landmarks for a VFR flight?
+    explanation: ""
+    options:
+      - text: Large water features
+        correct: false
+        why: ""
+      - text: Agricultural farm land
+        correct: false
+        why: ""
+      - text: Exceptionally high obstacles
+        correct: true
+        why: ""
+      - text: High-tension power lines
+        correct: true
+        why: ""
+      - text: Isolated towns.
+        correct: true
+        why: ""
+- id: QXH8RWSIJ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616563
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: Flying with low overcast cloud over snow-covered areas can increase
+      the danger of what?
+    explanation: ""
+    options:
+      - id: OZGQNBUGA
+        text: Unreliable indications from electronic instruments.
+        correct: false
+        why: ""
+      - id: OWIZLHAVY
+        text: Moderate to severe icing, even in clear air.
+        correct: false
+        why: ""
+      - id: OGXFKXN4B
+        text: Controlled flight into terrain.
+        correct: true
+        why: ""
+      - id: OH60LVZZ2
+        text: False indications on altimeter and airspeed indicator.
+        correct: false
+        why: ""
+- id: QXKNPJCQ
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619266
+    - ATPLGS-124278
+    - ATPLGS-110480
+    - AVEXAM-78900
+    - BGS-610503
+  annexes: []
+  learningObjectives:
+    - 061.01.05.04.07
+    - 061.02.02.01.14
+  template:
+    type: simple
+    question: During a low level flight two parallel roads are crossed at right
+      angles by an aircraft. What can the time taken between the road crossing
+      be used to check?
+    explanation: ""
+    options:
+      - id: O8KKQXW3X
+        text: drift
+        correct: false
+        why: ""
+      - id: OBS0ZUUCH
+        text: position
+        correct: false
+        why: ""
+      - id: OIXPTXU0M
+        text: groundspeed
+        correct: true
+        why: ""
+      - id: OHYJJTWZ3
+        text: track
+        correct: false
+        why: ""
+- id: QXSMQFQN
+  docId: "061.02"
+  relatedQuestions:
+    - QZBMMSXV
+  externalIds:
+    - ATPLQ-617912
+    - AVEXAM-13514
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: Which one of the following below may reduce the visibility for an
+      aircraft performing a low level VFR flight on a day with clear sky?
+    explanation: ""
+    options:
+      - id: OHMNDHXPW
+        text: Sun is high in the sky.
+        correct: false
+        why: ""
+      - id: OQS0URIYV
+        text: Flying with the sun behind the aircraft.
+        correct: false
+        why: ""
+      - id: OKMZESTDK
+        text: Flying downwind of factories producing smoke.
+        correct: true
+        why: ""
+      - id: O8GXJC17E
+        text: Climbing to a higher altitude.
+        correct: false
+        why: ""
+- id: QXVLBDMJ
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-611064
+  annexes: []
+  learningObjectives:
+    - 061.02.01.01.01
+  template:
+    type: simple
+    question: What is the best visual reporting point for an aircraft flying a VFR
+      flight above a hilly area?
+    explanation: ""
+    options:
+      - id: OCBHJHWAF
+        text: A hill.
+        correct: false
+        why: ""
+      - id: OIDJJWIWS
+        text: A slightly steeper hillside.
+        correct: false
+        why: ""
+      - id: O5TFPJUUB
+        text: Few small rivers that leave a big river.
+        correct: false
+        why: ""
+      - id: OS7QFOM1S
+        text: A valley.
+        correct: true
+        why: ""
+- id: QYGXIIBL
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-619932
+    - ATPLGS-124322
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.08
+  template:
+    type: multiple-correct
+    question: Which of the factors named hereafter should be considered by the pilot
+      when selecting landmarks as visual reference points?
+    explanation: ""
+    options:
+      - text: Possibility of identification
+        correct: true
+        why: ""
+      - text: Transmitted frequency
+        correct: false
+        why: ""
+      - text: Visibility
+        correct: true
+        why: ""
+      - text: Closeness to the track
+        correct: true
+        why: ""
+- id: QYIUVKDN
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616186
+    - AVEXAM-72686
+    - AVEXAM-3718
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.03
+  template:
+    type: multiple-correct
+    question: Which of the following are the best suitable check points for VFR flight?
+    explanation: ""
+    options:
+      - text: Dual road crossing the intended track.
+        correct: true
+        why: ""
+      - text: Railroad crossing river close intended track.
+        correct: true
+        why: ""
+      - text: Disused railway that crosses a river close to the track.
+        correct: false
+        why: ""
+      - text: Large lake crossing the intended track.
+        correct: true
+        why: ""
+- id: QYJZGXXL
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-613398
+    - BGS-611693
+    - AVEXAM-74103
+  annexes: []
+  learningObjectives:
+    - 061.02.02.02.01
+  template:
+    type: multiple-correct
+    question: When flying a VFR map-reading exercise, the pilot becomes lost because
+      of isolated patches of fog hindering the ability to accurately pin-point
+      his/her position. Which of the following should the pilot do in this
+      situation ?
+    explanation: ""
+    options:
+      - text: Maintain visual contact with the ground.
+        correct: true
+        why: ""
+      - text: Communicate, if in contact with an Air Traffic Control (ATC) unit, to
+          request assistance.
+        correct: true
+        why: ""
+      - text: Fly a series of expanding circles to find a suitable check point.
+        correct: false
+        why: ""
+      - text: Look at the terrain for hills and valleys or line features such as a
+          motorway, railway, river or coastline.
+        correct: true
+        why: ""
+      - text: Read the map from map to ground.
+        correct: false
+        why: ""
+- id: QYOODPAM
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616767
+    - AVEXAM-19036
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: When a pilot operates a VFR cross-country flight during the day in a
+      mountainous region at low altitudes, due to ATC restrictions, what should
+      a pilot be aware of?
+    explanation: ""
+    options:
+      - id: OP4NRYBYF
+        text: Inability to identify visual references, placed near mountain ridges.
+        correct: false
+        why: ""
+      - id: OXRFKZHS2
+        text: Low visibility.
+        correct: false
+        why: ""
+      - id: OKHGAHDTA
+        text: Loss of GPS signal.
+        correct: false
+        why: ""
+      - id: ORNRN5TVC
+        text: Visual references will be visible for a limited period of time.
+        correct: true
+        why: ""
+- id: QZBMMSXV
+  docId: "061.02"
+  relatedQuestions:
+    - QXSMQFQN
+  externalIds:
+    - ATPLQ-618798
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.01
+  template:
+    type: simple
+    question: Which one of the following below may reduce the visibility for an
+      aircraft performing a low level VFR flight on a day with clear sky?
+    explanation: ""
+    options:
+      - id: O4SHDQWJF
+        text: Man-made obstacle ahead of the aircraft.
+        correct: false
+        why: ""
+      - id: ORSVG0VFE
+        text: Sun high in the sky.
+        correct: false
+        why: ""
+      - id: OJZUQQ1D6
+        text: Heavy showers of rain.
+        correct: false
+        why: ""
+      - id: OCPMKETN9
+        text: Downwind smoke from a factory.
+        correct: true
+        why: ""
+- id: QZLEXQGL
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-616781
+    - ATPLGS-124311
+    - AVEXAM-24014
+    - BGS-610974
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.06
+  template:
+    type: simple
+    question: When wanting to check flight progress by observation of a single
+      visual position line (e.g. a canal) the latter must be
+    explanation: ""
+    options:
+      - id: O3ZPCRDPZ
+        text: oblique to the track.
+        correct: false
+        why: ""
+      - id: OZU7ZXD1Q
+        text: more or less parallel to the track.
+        correct: false
+        why: ""
+      - id: OEDWUMMDV
+        text: more or less perpendicular to the track.
+        correct: true
+        why: ""
+      - id: OBD6DF6CI
+        text: curved across the track.
+        correct: false
+        why: ""
+- id: QZSFPGLH
+  docId: 061.02.02.01
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-618413
+  annexes: []
+  learningObjectives:
+    - 061.02.02.01.11
+  template:
+    type: simple
+    question: When the contour lines are closer together, the slope is...
+    explanation: ""
+    options:
+      - id: OLOIEXFM0
+        text: The terrain is flat.
+        correct: false
+        why: ""
+      - id: O6H5BO40H
+        text: Narrow mountain bowl.
+        correct: false
+        why: ""
+      - id: OEIRSCYGD
+        text: Shallow.
+        correct: false
+        why: ""
+      - id: ONVDI1SRC
+        text: Steep.
+        correct: true
+        why: ""
+- id: QZVFYKLO
+  docId: "061.02"
+  relatedQuestions: []
+  externalIds:
+    - ATPLQ-614088
+    - AVEXAM-63029
+    - BGS-611253
+  annexes: []
+  learningObjectives:
+    - 061.02.01.02.02
+  template:
+    type: simple
+    question: What will be the risk if a night VFR flight navigates out of the
+      studied route?
+    explanation: ""
+    options:
+      - id: OWDJ7SFPB
+        text: The presence of obstacles in the area not studied before the flight.
+        correct: true
+        why: ""
+      - id: OCU9U5KE8
+        text: The airport can not be identified due to lighting.
+        correct: false
+        why: ""
+      - id: OVIMCIECN
+        text: The obstacles seem to be closer.
+        correct: false
+        why: ""
+      - id: OQWSATMUP
+        text: The obstacles marked with red light due to red wavelength.
+        correct: false
+        why: ""

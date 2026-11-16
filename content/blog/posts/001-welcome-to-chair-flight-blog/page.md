@@ -1,6 +1,5 @@
 ---
   title: Welcome to Chair Flight Blog!
-  author: PupoSDC
   date: '2023-07-23'
   tag: Technical
   description: 
@@ -15,7 +14,7 @@ journey as a flight student as smooth as possible.
 
 ## What is Chair Flight?
 
-Although the [About us](/articles/about-us) page is a good place to start, I'll
+Although the [About us](/about) page is a good place to start, I'll
 give you a more personalized version of what chair-flight aims to be.
 
 During our ATPL studies, we had to go through several different ATPL theory
@@ -59,30 +58,11 @@ writable in 3 different small variations that can be either correct or
 incorrect. For this simple question, it's possible to write 18 variations!
 
 That's 16 times more seeing this question than you really need to see it. In
-Chair Flight, these question variants are combined into a single question:
+Chair Flight, these question variants are combined into a single question.
 
-```tsx
-// TODO FIXME
-<QuestionOverview
-  noSsr
-  questionId={"QYFPA3CY4E"}
-  questionBank="atpl"
-  sx={{
-    position: "relative",
-    maxHeight: "620px",
-    bgcolor: "background.surface",
-    overflow: "auto",
-    borderRadius: "8px",
-    py: 1,
-    my: 2,
-  }}
-/>
-```
-
-Feel free to spend some time playing around. You will notice all these possible
-combinations of this one question8are collapsed into one. There is one shared
-`Explanation` for all the variations, and on the `Variants` tab you can see all
-the possible variations.
+All these possible combinations of this one question are collapsed into one.
+There is one shared explanation for all the variations, and every time you see
+the question you get a different variant.
 
 The advantage of this approach is that you will be able to flag this variant as
 seen without having to go over all the possible variations. Alternatively, if

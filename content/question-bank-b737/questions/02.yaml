@@ -1,0 +1,582 @@
+- id: QOLVPSCQ
+  relatedQuestions:
+    - QHNSYYDO
+    - QZNIFJOV
+    - QMCINKVN
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: When operating on the Standby Pack Controls, what temperatures will
+      the packs be producing?
+    explanation: |
+      Two very similar tidbits of logic you need to know:
+
+      - **Standby packs**: Operate at an average for the two cabin zones.
+      - **All Temperature selectors OFF**:  Left Pack, 24ºC.  Right Pack, 18ºC.
+
+      > ### Standby Pack Average Temperature
+      >
+      > If all zone controls and primary pack controls fail, the standby pack controls
+      > command the packs to produce air temperatures which will satisfy the average
+      > temperature demand of the two cabin zones. The trim air modulating valves will
+      > close. The flight deck zone Temperature Selector will have no effect on the
+      > standby pack controls.
+    options:
+      - id: uilmng
+        text: An average temperature for the two cabin zones.
+        correct: true
+        why: ""
+      - id: n1jtg
+        text: The trim air modulating valves close so no pack air is provided to the two
+          cabin zones, only re-circulated air is provided.
+        correct: false
+        why: ""
+      - id: hyo1b
+        text: Left pack produces 18 degrees C, right pack produces 22 degrees C.
+        correct: false
+        why: ""
+      - id: 7uji9
+        text: The flight deck required temperature will also be provided to the
+          passenger cabin.
+        correct: false
+        why: ""
+- id: QIFNFXYG
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: Which systems use engine bleed air during operation?
+    explanation: |
+      - Engine starting: The starter uses Bleed air from APU, external or Cross Feed.
+      - Air conditioning: PACKS are fed with bleed air from 5th and 9th stage 
+      - Cabin pressurisation: Achieved by the PACKS
+      - Engine and wing anti-icing: Both use bleed air to heat up critical ice prone surfaces
+      - Hydraulic: Bleed air is used to pressurize the hydraulic reservoirs.
+      - water: Bleed air is used to pressurize the water tank.
+
+      Make sure to select the option that lists all systems, and not just a few.
+    options:
+      - id: 69qqk
+        text: Engine starting, air conditioning, cabin pressurisation, engine and wing
+          anti-icing, hydraulic, water.
+        correct: true
+        why: ""
+      - id: f3qw9
+        text: Engine and wing anti-icing, engine starting, cabin pressurisation,
+          hydraulic reservoir pressurisation.
+        correct: false
+        why: Missing water.
+      - id: 3zh04
+        text: Engine and wing anti-icing, air conditioning, cabin pressurisation,
+          hydraulic reservoir pressurisation.
+        correct: false
+        why: Missing Engine starting
+      - id: i1xpdl
+        text: Engine and wing anti-icing, engine starting, air conditioning, cabin
+          pressurisation, hydraulic reservoir pressurisation.
+        correct: false
+        why: Missing water.
+- id: QQOELHSQ
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: true-or-false
+    question: The TRIP RESET switch is pushed to reset a PACK, WING-BODY OVERHEAT
+      and BLEED TRIP OFF, it isolates the associated valve and extinguishes the
+      alert.
+    explanation: |
+      > ### TRIP RESET Switch
+      >
+      > - resets BLEED TRIP OFF, PACK or ZONE TEMP lights
+      > - related engine bleed air valve opens, or related pack valve opens, or 
+      >   related trim air modulating valve opens
+    answer: false
+- id: QHNSYYDO
+  relatedQuestions:
+    - QZNIFJOV
+    - QOLVPSCQ
+    - QMCINKVN
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: If all zone and primary pack controls fail, how is cabin temperatures
+      controlled?
+    explanation: |
+      Two very similar tidbits of logic you need to know:
+
+      - **Standby packs**: Operate at an average for the two cabin zones.
+      - **All Temperature selectors OFF**:  Left Pack, 24ºC.  Right Pack, 18ºC.
+
+      > ### Standby Pack Average Temperature
+      >
+      > If all zone controls and primary pack controls fail, the standby pack controls
+      > command the packs to produce air temperatures which will satisfy the average
+      > temperature demand of the two cabin zones. The trim air modulating valves will
+      > close. The flight deck zone Temperature Selector will have no effect on the
+      > standby pack controls.
+    options:
+      - id: 5g3ai
+        text: The last settings before the failure will be maintained until the packs
+          are selected OFF.
+        correct: false
+        why: ""
+      - id: dzm6z
+        text: The cabin temperatures cannot be controlled in this situation.
+        correct: false
+        why: ""
+      - id: fnzrt
+        text: The standby pack controls command the packs to produce the average
+          temperature demand of the 2 passenger cabin zones.
+        correct: true
+        why: ""
+      - id: jxg9j
+        text: A fixed cabin temperature will be produced in this situation - 24 degrees
+          C from the left pack, and 18 degrees C from the right pack.
+        correct: false
+        why: ""
+- id: QMZOUWVG
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: true-or-false
+    question: The APU is capable of supplying bleed air for two packs on the ground,
+      or one pack in flight.
+    explanation: |
+      > ### Air Conditioning Pack
+      > 
+      > The APU is capable of supplying bleed air for two packs on the ground, or one
+      > pack in flight.
+    answer: true
+- id: QZNIFJOV
+  relatedQuestions:
+    - QOLVPSCQ
+    - QHNSYYDO
+    - QMCINKVN
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: If all Temperature Selectors are positioned OFF, the pack controls
+      will cause the packs to produce which fixed temperatures?
+    explanation: |
+      Two very similar tidbits of logic you need to know:
+
+      - **Standby packs**: Operate at an average for the two cabin zones.
+      - **All Temperature selectors OFF**:  Left Pack, 24ºC.  Right Pack, 18ºC.
+
+      > ### Fixed Cabin Temperature
+      >
+      > If all Temperature Selectors are positioned OFF, the pack controls will cause the
+      > left pack to maintain a fixed temperature of 75°F (24°C) and the right pack to
+      > maintain 65°F (18°C) as measured at the pack temperature sensor.
+    options:
+      - id: w3htk
+        text: Left Pack, 24 degrees Centigrade.  Right Pack, 18 degrees Centigrade.
+        correct: true
+        why: ""
+      - id: oqg73
+        text: Left Pack, 20 degrees Centigrade.  Right Pack, 22 degrees Centigrade.
+        correct: false
+        why: ""
+      - id: vg19i
+        text: Left Pack, 18 degrees Centigrade.  Right Pack, 24 degrees Centigrade.
+        correct: false
+        why: ""
+      - id: oam9t
+        text: Left Pack, 22 degrees Centigrade.  Right Pack, 20 degrees Centigrade.
+        correct: false
+        why: ""
+- id: QCJDLWQG
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: true-or-false
+    question: Engine bleed air pressure is controlled by means of the bleed air
+      valve which acts as both a shutoff and pressure regulating valve.
+    explanation: |
+      > ### Engine Bleed Air Valves
+      >
+      > The engine bleed air valve acts as a pressure regulator and shutoff valve. With the
+      > engine bleed air switch ON, the valve is DC activated and pressure operated. The
+      > valve maintains proper system operating pressure and reduces bleed air outflow in
+      > response to high bleed air temperature.
+    answer: true
+- id: QEVYNJMT
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: What is the primary function of the recirculation fans?
+    explanation: |
+      > ### Recirculation Fans
+      >
+      > The recirculation fan system reduces the air conditioning system pack load and the
+      > engine bleed air demand. Air from the passenger cabin and electrical equipment
+      > bay is drawn to the forward cargo bay where it is filtered and recirculated to the
+      > mix manifold. 
+    options:
+      - id: 67ux1
+        text: To provide standby air conditioning if the packs fail.
+        correct: false
+        why: ""
+      - id: sep8e
+        text: Reduce engine bleed air demand and load on the packs.
+        correct: true
+        why: ""
+      - id: 1wdfz
+        text: Recirculate cabin air to allow it to be filtered to remove contaminants as
+          it passes through the recirculation fan HEPA filters.
+        correct: false
+        why: ""
+      - id: 6jv2i
+        text: Recirculate the air from the passenger cabin to provide heating for the
+          forward cargo compartment
+        correct: false
+        why: ""
+- id: QTYCWEMT
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: true-or-false
+    question: Conditioned air from the left hand pack flows directly to the Flight
+      Deck from the Mix Manifold.
+    explanation: |
+      > Since the flight deck requires only a fraction of the air supply provided by the left
+      > pack, most of the left pack air output is mixed with the right pack supply and
+      > routed to the passenger cabin
+
+      The statement from the question is false. Not all the air flows to the
+      flight deck. Most of it is mixed with the right pack supply and
+      routed to the passenger cabin.
+    answer: false
+- id: QBIYKRTN
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: true-or-false
+    question: The packs produce the coolest temperature selected in any of the
+      zones, with the other zones temperature controlled by adding hot trim air
+      to produce the required temperature.
+    explanation: |
+      > ### Zone Temperature Control
+      > 
+      > The packs produce an air temperature that satisfies the zone which requires the
+      > most cooling. Zone temperature is controlled by introducing the proper amount of
+      > trim air to the zone supply ducts. The quantity of trim air is regulated 
+      > by individual trim air modulating valves.
+
+      Hot trim air is bleed air that is decompressed but is not cooled. 
+      To achieve the desired temperature, you mix this air, with
+      the cooled air from the packs. This system allows for a single pack to satisfy
+      temperature requirements of multiple zones.
+    answer: true
+- id: QREZLOSJ
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: How many Trim Air Pressure Regulators are there in the Air
+      Conditioning system?
+    explanation: |
+      The system contains ONE trim air pressure regulator, and THREE trim air 
+      modulating valves. One for each control zone.
+    options:
+      - id: dglis
+        text: "2"
+        correct: false
+        why: ""
+      - id: ze9l2k
+        text: "3"
+        correct: false
+        why: ""
+      - id: knkbi
+        text: "1"
+        correct: true
+        why: ""
+      - id: uao22
+        text: There are no Trim Air Pressure Regulators, only Trim Air Modulating
+          valves.
+        correct: false
+        why: ""
+- id: QHZAJDAJ
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: The differential pressure of the cabin is limited by a pressure relief
+      system - which of the following statements is correct?
+    explanation: |
+      > ### Pressure Relief Valves
+      >
+      > Two pressure relief valves provide safety pressure relief by limiting the
+      > differential pressure to a maximum of 9.1 psi. A negative relief valve prevents
+      > external atmospheric pressure from exceeding internal cabin pressure.
+    options:
+      - id: gzw1n
+        text: There is a negative pressure relief valve, which limits the cabin pressure
+          to 9.1 psi above ambient.
+        correct: false
+        why: ""
+      - id: pafa2
+        text: There is an outflow valve which opens when cabin pressure reaches 9.1 psi
+          above ambient.
+        correct: false
+        why: ""
+      - id: s1pkbh
+        text: There are two negative pressure relief valves, which limit the cabin
+          pressure to 9.1 psi above ambient.
+        correct: false
+        why: ""
+      - id: kb4ta
+        text: There are two pressure relief valves which limit differential pressure to
+          9.1 psi.
+        correct: true
+        why: ""
+- id: QMCINKVN
+  relatedQuestions:
+    - QOLVPSCQ
+    - QHNSYYDO
+    - QZNIFJOV
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: What is the result if all temperature zone selectors are positioned to OFF?
+    explanation: |
+      Two very similar tidbits of logic you need to know:
+
+      - **Standby packs**: Operate at an average for the two cabin zones.
+      - **All Temperature selectors OFF**:  Left Pack, 24ºC.  Right Pack, 18ºC.
+
+      > ### Fixed Cabin Temperature
+      >
+      > If all Temperature Selectors are positioned OFF, the pack controls will cause the
+      > left pack to maintain a fixed temperature of 75°F (24°C) and the right pack to
+      > maintain 65°F (18°C) as measured at the pack temperature sensor.
+    options:
+      - id: 9a6tr
+        text: The right pack will produce a fixed temperature of 75 degrees Fahrenheit,
+          and the left pack will produce a fixed temperature of 65 degrees
+          Fahrenheit.
+        correct: false
+        why: ""
+      - id: wlxcl
+        text: Left pack will produce 24 degrees centigrade and right pack will produce
+          18 degrees centigrade.
+        correct: true
+        why: ""
+      - id: 9o5tj
+        text: The packs will attempt to maintain an average temperature across all
+          zones.
+        correct: false
+        why: ""
+      - id: rlnd2
+        text: ----
+        correct: false
+        why: ""
+- id: QBMWZZSN
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: Where are the wing-body overheat sensors located?
+    explanation: ""
+    options:
+      - id: zqpbz
+        text: Engine struts, wing leading edge slats, air conditioning bays, APU duct,
+          keel beam.
+        correct: false
+        why: ""
+      - id: i8eybh
+        text: Engine struts, wing inboard leading edges, air conditioning bays, APU
+          bleed duct, keel beam.
+        correct: true
+        why: ""
+      - id: xzmgr
+        text: Engine cowling lips, wing leading edge slats, air conditioning bays, APU
+          compartment, keel beam.
+        correct: false
+        why: ""
+      - id: kzjbp
+        text: Engine cowl lips, wing leading edge slats, air conditioning bays,
+          electronic equipment bay, APU bleed duct.
+        correct: false
+        why: ""
+- id: QSKVUUWY
+  relatedQuestions:
+    - QFNVBZKC
+    - QKMPYYJI
+    - QUFTPXXQ
+  annexes: []
+  chapter: "02"
+  template:
+    type: true-or-false
+    question: Bleed air is taken from stage 4 and stage 10 of the high pressure
+      compressor.
+    explanation: |
+      Bleed air is taken from **stage 5** from the **low pressure** compressor 
+      and **stage 9** of the **high pressure compressor**.
+    answer: false
+- id: QUFTPXXQ
+  relatedQuestions:
+    - QFNVBZKC
+    - QKMPYYJI
+    - QSKVUUWY
+  annexes: []
+  chapter: "02"
+  template:
+    type: true-or-false
+    question: Bleed air is taken from stage 5 and stage 9 of the high pressure
+      compressor.
+    explanation: |
+      Bleed air is taken from **stage 5** from the **low pressure** compressor and 
+      **stage 9** of the **high pressure compressor**.
+    answer: false
+- id: QKMPYYJI
+  relatedQuestions:
+    - QFNVBZKC
+    - QSKVUUWY
+    - QUFTPXXQ
+  annexes: []
+  chapter: "02"
+  template:
+    type: true-or-false
+    question: Bleed air is taken from stage 5 from the low pressure compressor and
+      stage 9 of the high pressure compressor.
+    explanation: |
+      Bleed air is taken from **stage 5** from the **low pressure** compressor 
+      and **stage 9** of the **high pressure compressor**.
+    answer: true
+- id: QFNVBZKC
+  relatedQuestions:
+    - QKMPYYJI
+    - QSKVUUWY
+    - QUFTPXXQ
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: "Which statement is correct:"
+    explanation: |
+      Bleed air is taken from **stage 5** from the **low pressure** compressor 
+      and **stage 9** of the **high pressure compressor**.
+    options:
+      - id: 4ha3ff
+        text: Bleed air is constantly provided from stage 5 and stage 9 of the
+          compressor.
+        correct: false
+        why: ""
+      - id: bc8lm
+        text: Bleed air is only supplied from the 9th stage when the valve modulates
+          open if bleed air requirement is greater than the 5th stage alone can
+          supply.
+        correct: true
+        why: ""
+      - id: m6ni5i
+        text: Bleed air is only supplied from the 5th stage when the valve modulates
+          open if bleed air requirement is greater than the 9th stage alone can
+          supply.
+        correct: false
+        why: ""
+      - id: mljcp
+        text: ----
+        correct: false
+        why: ""
+- id: QYYNKNMD
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: What is the result if one pack fails in-flight?
+    explanation: |
+      41000ft is the maximum certified ceiling for the aircraft. It is required
+      by the certification that it must be able to operate safely using a single
+      pack at this altitude.
+    options:
+      - id: i80jkf
+        text: The remaining pack when selected to AUTO will be capable of maintaining
+          pressurisation up to aircraft ceiling, only if all Zone Temperature
+          Controllers are selected to OFF.
+        correct: false
+        why: ""
+      - id: w6gy2
+        text: The remaining pack will not operate in HIGH flow.
+        correct: false
+        why: ""
+      - id: f2r0k
+        text: The remaining pack is capable of maintaining pressurisation and acceptable
+          cabin temperatures up to 41,000 feet.
+        correct: true
+        why: ""
+      - id: d9voal
+        text: The remaining pack will be capable of maintaining pressurisation up to the
+          aircraft maximum certified ceiling, and will attempt to produce an
+          average temperature across all cabin zones.
+        correct: false
+        why: ""
+- id: QGPWTNAV
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: simple
+    question: What is the function of the dual Bleed Light?
+    explanation: |
+      > ### DUAL BLEED Light
+      >
+      > The DUAL BLEED light illuminates whenever the APU bleed air valve is open
+      > and the position of the engine bleed air switches and isolation valve would permit
+      > possible backpressure of the APU. Therefore, thrust must be limited to idle with
+      > the DUAL BLEED light illuminated.
+
+      This is to prevent damage to the APU. The solution is most often to close 
+      APU Bleed.
+    options:
+      - id: jb5ri
+        text: Illuminates to warn of possible backpressure whenever both engines are
+          providing bleed air, and engines are at different thrust settings.
+        correct: false
+        why: ""
+      - id: 99ixh
+        text: Illuminates whenever both APU and engines is running to warn of risk of
+          backpressure to APU.
+        correct: false
+        why: ""
+      - id: cv916f
+        text: Illuminates when engine running and APU bleed air valve, engine bleed air
+          valve, and isolation valve are in a position to permit possible
+          backpressure of the APU.
+        correct: true
+        why: ""
+      - id: fqmvu
+        text: Illuminates whenever pressure in APU rises above a pre-set value.
+        correct: false
+        why: ""
+- id: QJYKFMBZ
+  relatedQuestions: []
+  annexes: []
+  chapter: "02"
+  template:
+    type: true-or-false
+    question: Cabin pressurisation is controlled by the position of the Outflow
+      Valve, but some air is also exhausted through the toilet and galley vents.
+    explanation: |
+      > ### Pressurization Outflow
+      >
+      > Cabin air outflow is controlled by the outflow valve and the overboard exhaust
+      > valve. A small amount is also exhausted through toilet and galley vents,
+      > miscellaneous fixed vents, and by seal leakage.
+    answer: true

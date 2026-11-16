@@ -6,7 +6,7 @@ import { ChevronsLeftIcon } from "../../icons/chevrons-left-icon";
 import { ChevronsRightIcon } from "../../icons/chevrons-right-icon";
 import { cn } from "../../utils/cn";
 import { Button } from "../base/button";
-import { IconButton } from "../base/icon-button";
+import { ButtonIcon } from "../base/button-icon";
 import type { FC } from "react";
 import type { Test } from "../../../core/tests/test";
 
@@ -27,7 +27,11 @@ export const TestNavigation: FC<{
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="grid grid-cols-[repeat(auto-fill,32px)] justify-center gap-1.5">
+      <div
+        className={cn(
+          "grid grid-cols-[repeat(auto-fill,32px)] justify-center gap-1.5",
+        )}
+      >
         {test.questions.slice(offset, offset + pageSize).map((item, i) => {
           const index = offset + i;
           const answered = Boolean(item.selectedOptionId);
@@ -57,42 +61,35 @@ export const TestNavigation: FC<{
         })}
       </div>
       <div className="flex items-center justify-center gap-2">
-        <IconButton
+        <ButtonIcon
           label="First page"
           disabled={currentPage === 0}
           onClick={() => setPage(0)}
-        >
-          <ChevronsLeftIcon />
-        </IconButton>
-        <IconButton
+          icon={ChevronsLeftIcon}
+        />
+        <ButtonIcon
           label="Previous page"
           disabled={currentPage === 0}
           onClick={() => setPage(currentPage - 1)}
-        >
-          <ChevronLeftIcon />
-        </IconButton>
+          icon={ChevronLeftIcon}
+        />
         <span className="min-w-16 text-center text-sm tabular-nums">
           {currentPage + 1} / {pageCount}
         </span>
-        <IconButton
+        <ButtonIcon
           label="Next page"
           disabled={currentPage >= pageCount - 1}
           onClick={() => setPage(currentPage + 1)}
-        >
-          <ChevronRightIcon />
-        </IconButton>
-        <IconButton
+          icon={ChevronRightIcon}
+        />
+        <ButtonIcon
           label="Last page"
           disabled={currentPage >= pageCount - 1}
           onClick={() => setPage(pageCount - 1)}
-        >
-          <ChevronsRightIcon />
-        </IconButton>
+          icon={ChevronsRightIcon}
+        />
       </div>
-      <Button
-        className="border-danger! bg-danger! text-white! hover:text-white!"
-        onClick={onFinish}
-      >
+      <Button variant="danger" onClick={onFinish}>
         Finish
       </Button>
     </div>
