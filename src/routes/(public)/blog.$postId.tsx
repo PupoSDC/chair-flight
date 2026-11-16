@@ -75,8 +75,28 @@ const BlogPostPage: FC = () => {
 
 export const Route = createFileRoute("/(public)/blog/$postId")({
   loader: ({ params }) => fetchBlogPost({ data: { postId: params.postId } }),
-  head: ({ loaderData }) => ({
-    meta: [{ title: `${loaderData?.title ?? "Blog"} · Chair Flight` }],
-  }),
+  head: ({ loaderData, params }) => {
+    const origin = "https://chair-flight.com";
+    const title = loaderData?.title ?? "Blog";
+    const image = loaderData?.image?.startsWith("/")
+      ? `${origin}${loaderData.image}`
+      : (loaderData?.image ?? `${origin}/images/social/default.png`);
+    return {
+      meta: [
+        { title: `${title} · Chair Flight` },
+        { name: "description", content: loaderData?.description ?? "" },
+        { property: "og:type", content: "article" },
+        { property: "og:site_name", content: "Chair Flight" },
+        { property: "og:title", content: title },
+        { property: "og:description", content: loaderData?.description ?? "" },
+        { property: "og:url", content: `${origin}/blog/${params.postId}` },
+        { property: "og:image", content: image },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: loaderData?.description ?? "" },
+        { name: "twitter:image", content: image },
+      ],
+    };
+  },
   component: BlogPostPage,
 });

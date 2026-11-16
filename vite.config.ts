@@ -50,6 +50,7 @@ export default defineConfig({
 			prerender: {
 				enabled: true,
 				crawlLinks: false,
+				concurrency: 1,
 				// The back office is an admin-only page: nothing to prerender.
 				filter: ({ path }) => !path.startsWith("/backoffice"),
 			},

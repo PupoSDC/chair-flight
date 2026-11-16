@@ -12,7 +12,7 @@ export const parseBlogPost = (id: string, source: string) => {
     title: String(data.title ?? id),
     date: String(data.date ?? ""),
     tag: String(data.tag ?? ""),
-    description: String(data.description ?? ""),
+    description: String(data.description ?? "").trim(),
     content: source
       .slice(match?.[0].length ?? 0)
       .replaceAll(IMPORT_MATCH, "")

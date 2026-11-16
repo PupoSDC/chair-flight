@@ -75,7 +75,19 @@ export const Route = createRootRoute({
         content:
           "Chair Flight is a community driven aviation question bank built by students for students.",
       },
-      { property: "og:image", content: "/images/social/default.png" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Chair Flight" },
+      { property: "og:title", content: "Chair Flight" },
+      {
+        property: "og:description",
+        content:
+          "Chair Flight is a community driven aviation question bank built by students for students.",
+      },
+      {
+        property: "og:image",
+        content: "https://chair-flight.com/images/social/default.png",
+      },
+      { name: "twitter:card", content: "summary" },
       { name: "theme-color", content: "#0b6bcb" },
     ],
     links: [
