@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 868 1304" font-family="Helvetica,Arial,sans-serif">
+<style>
+text{font-size:13px;text-anchor:middle;fill:#171a1c}
+.header text{fill:#fff;font-weight:700}
+.title{font-size:18px;font-weight:700}
+.bold{font-weight:700}
+.start{text-anchor:start}
+.end{text-anchor:end}
+.brand{fill:#0b6bcb}
+.soft{fill:#e3effb}
+.muted{fill:#f2f4f6}
+.grid,.divider{fill:none;stroke:#171a1c}
+.divider{stroke-width:2}
+</style>
+<rect width="868" height="1304" fill="#fff"/>
+<text x="434" y="29" class="title">Fuel Penalty Factors / ECAM Alert Table</text>
+<rect x="12" y="44" width="56" height="50" class="brand" stroke="#171a1c"/>
+<g class="header">
+<text x="40" y="73">SYS</text>
+</g>
+<rect x="68" y="44" width="213" height="50" class="brand" stroke="#171a1c"/>
+<g class="header">
+<text x="174.5" y="73">ECAM alert</text>
+</g>
+<rect x="281" y="44" width="175" height="50" class="brand" stroke="#171a1c"/>
+<g class="header">
+<text x="368.5" y="64.5">Fuel-critical</text>
+<text x="368.5" y="81.5">inoperative system</text>
+</g>
+<rect x="456" y="44" width="312" height="50" class="brand" stroke="#171a1c"/>
+<g class="header">
+<text x="612" y="73">Conditions</text>
+</g>
+<rect x="768" y="44" width="88" height="50" class="brand" stroke="#171a1c"/>
+<g class="header">
+<text x="812" y="64.5">Fuel penalty</text>
+<text x="812" y="81.5">factor</text>
+</g>
+<rect x="12" y="94" width="56" height="96" class="soft" stroke="#171a1c"/>
+<text x="40" y="146" class="bold">ELEC</text>
+<rect x="12" y="190" width="56" height="606" class="soft" stroke="#171a1c"/>
+<text x="40" y="497" class="bold">F/CTL</text>
+<rect x="12" y="796" width="56" height="345" class="soft" stroke="#171a1c"/>
+<text x="40" y="972.5" class="bold">HYD</text>
+<rect x="12" y="1141" width="56" height="151" class="soft" stroke="#171a1c"/>
+<text x="40" y="1220.5" class="bold">L/G</text>
+<rect x="68" y="94" width="213" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="113.5" class="start">AC BUS 1 FAULT</text>
+<text x="76" y="130.5" class="start">(equivalent to B SYS LO PR)</text>
+<rect x="281" y="94" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="122">SPLR 3</text>
+<rect x="456" y="94" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="113.5" class="start">If L(R) spoiler 3 is indicated extended</text>
+<text x="464" y="130.5" class="start">(at the time of the failure)</text>
+<rect x="768" y="94" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="122">10%</text>
+<rect x="68" y="142" width="213" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="161.5" class="start">DC ESS BUS FAULT</text>
+<text x="76" y="178.5" class="start">(equivalent to B SYS LO PR)</text>
+<rect x="281" y="142" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="170">SPLR 3</text>
+<rect x="456" y="142" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="161.5" class="start">If L(R) spoiler 3 is indicated extended</text>
+<text x="464" y="178.5" class="start">(at the time of the failure)</text>
+<rect x="768" y="142" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="170">10%</text>
+<rect x="68" y="190" width="213" height="96" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="242" class="start">L(R) AIL FAULT</text>
+<rect x="281" y="190" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="218">L(R) AIL</text>
+<rect x="456" y="190" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="209.5" class="start">If one aileron is indicated fully extended</text>
+<text x="464" y="226.5" class="start">(upwards or downwards)</text>
+<rect x="768" y="190" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="218">27%</text>
+<rect x="281" y="238" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="266">L(A) AIL or L+A AIL</text>
+<rect x="456" y="238" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="257.5" class="start">If one or both ailerons are indicated</text>
+<text x="464" y="274.5" class="start">partially extended</text>
+<rect x="768" y="238" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="266">8%</text>
+<rect x="68" y="286" width="213" height="400" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="490" class="start">SPLR FAULT</text>
+<rect x="281" y="286" width="175" height="256" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="418">SPLR (affected)</text>
+<rect x="456" y="286" width="312" height="208" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="309" class="start">If one spoiler is suspected fully extended</text>
+<text x="464" y="326" class="start">Cruise conditions</text>
+<text x="464" y="343" class="start">OPT SPEED: GDOT +10 KT</text>
+<text x="464" y="360" class="start">Whenever possible, target green dot speed</text>
+<text x="464" y="377" class="start">+10 kt to minimise fuel consumption.</text>
+<text x="464" y="394" class="start">If buffet is encountered at GDOT speed</text>
+<text x="464" y="411" class="start">+10 kt, increase speed to fly out of buffet.</text>
+<text x="464" y="428" class="start">CRUISE ALT: AS REQUIRED</text>
+<text x="464" y="445" class="start">The current flight level may not be</text>
+<text x="464" y="462" class="start">maintainable due to increased drag.</text>
+<text x="464" y="479" class="start">Maintain a cruise FL as high as possible.</text>
+<rect x="768" y="286" width="88" height="208" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="394">55%</text>
+<rect x="456" y="494" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="513.5" class="start">If one spoiler or one pair of spoilers is</text>
+<text x="464" y="530.5" class="start">partially extended (zero hinge moment)</text>
+<rect x="768" y="494" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="522">10%</text>
+<rect x="281" y="542" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="570">SPLR 3 with BLUE HYD</text>
+<rect x="456" y="542" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="561.5" class="start">If spoiler 3 is partially extended after the</text>
+<text x="464" y="578.5" class="start">loss of the B hydraulic system</text>
+<rect x="768" y="542" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="570">up to 4%</text>
+<rect x="281" y="590" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="609.5">SPLR 1 or 5 with</text>
+<text x="368.5" y="626.5">GREEN HYD</text>
+<rect x="456" y="590" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="609.5" class="start">If spoiler 1 or 5 is partially extended after</text>
+<text x="464" y="626.5" class="start">the loss of the G hydraulic system</text>
+<rect x="768" y="590" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="618">up to 9%</text>
+<rect x="281" y="638" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="657.5">SPLR 2 or 4 with</text>
+<text x="368.5" y="674.5">YELLOW HYD</text>
+<rect x="456" y="638" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="657.5" class="start">If spoiler 2 or 4 is partially extended after</text>
+<text x="464" y="674.5" class="start">the loss of the Y hydraulic system</text>
+<rect x="768" y="638" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="666">up to 9%</text>
+<rect x="68" y="686" width="213" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="705.5" class="start">FLAPS FAULT/LOCKED</text>
+<rect x="281" y="686" width="175" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="705.5">FLAPS</text>
+<rect x="456" y="686" width="312" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="705.5" class="start">If flaps are extended</text>
+<rect x="768" y="686" width="88" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="705.5">80%</text>
+<rect x="68" y="717" width="213" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="736.5" class="start">SLATS FAULT/LOCKED</text>
+<rect x="281" y="717" width="175" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="736.5">SLATS</text>
+<rect x="456" y="717" width="312" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="736.5" class="start">If slats are extended</text>
+<rect x="768" y="717" width="88" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="736.5">60%</text>
+<rect x="68" y="748" width="213" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="767.5" class="start">SLATS+FLAPS</text>
+<text x="76" y="784.5" class="start">FAULT/LOCKED</text>
+<rect x="281" y="748" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="776">SLATS+FLAPS</text>
+<rect x="456" y="748" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="776" class="start">If slats and flaps are extended</text>
+<rect x="768" y="748" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="776">100%</text>
+<rect x="68" y="796" width="213" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="824" class="start">B SYS LO PR</text>
+<rect x="281" y="796" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="824">SPLR 3</text>
+<rect x="456" y="796" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="815.5" class="start">If L(R) spoiler 3 is indicated extended</text>
+<text x="464" y="832.5" class="start">(at the time of the failure)</text>
+<rect x="768" y="796" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="824">10%</text>
+<rect x="68" y="844" width="213" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="872" class="start">G SYS LO PR</text>
+<rect x="281" y="844" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="872">SPLR 1+5</text>
+<rect x="456" y="844" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="863.5" class="start">If L(R) spoiler 5 is indicated extended</text>
+<text x="464" y="880.5" class="start">(at the time of the failure)</text>
+<rect x="768" y="844" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="872">10%</text>
+<rect x="68" y="892" width="213" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="920" class="start">Y SYS LO PR</text>
+<rect x="281" y="892" width="175" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="920">SPLR 2+4</text>
+<rect x="456" y="892" width="312" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="911.5" class="start">If L(R) spoilers 2 and 4 are indicated</text>
+<text x="464" y="928.5" class="start">extended (at the time of the failure)</text>
+<rect x="768" y="892" width="88" height="48" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="920">20%</text>
+<rect x="68" y="940" width="213" height="81" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="984.5" class="start">G+B SYS LO PR</text>
+<rect x="281" y="940" width="175" height="81" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="976">L+R AIL SPLR</text>
+<text x="368.5" y="993">1+3+5 L ELEV</text>
+<rect x="456" y="940" width="312" height="81" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="959" class="start">Both ailerons have failed</text>
+<text x="464" y="976" class="start">Spoilers 1, 3 and 5</text>
+<text x="464" y="993" class="start">Left elevator has failed</text>
+<text x="464" y="1010" class="start">RAT is extended</text>
+<rect x="768" y="940" width="88" height="81" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="984.5">10–15%</text>
+<rect x="68" y="1021" width="213" height="58" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="1054" class="start">G+Y SYS LO PR</text>
+<rect x="281" y="1021" width="175" height="58" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="1045.5">SPLR 1+2+4+5</text>
+<text x="368.5" y="1062.5">STABILIZER</text>
+<rect x="456" y="1021" width="312" height="58" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="1045.5" class="start">Stabiliser is jammed</text>
+<text x="464" y="1062.5" class="start">Spoilers 1, 2, 4 and 5</text>
+<rect x="768" y="1021" width="88" height="58" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="1054">0–10%</text>
+<rect x="68" y="1079" width="213" height="62" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="1114" class="start">B+Y SYS LO PR</text>
+<rect x="281" y="1079" width="175" height="62" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="1114">SPLR 2+3+4 R ELEV</text>
+<rect x="456" y="1079" width="312" height="62" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="1097" class="start">Spoilers 2, 3 and 4</text>
+<text x="464" y="1114" class="start">Right elevator has failed</text>
+<text x="464" y="1131" class="start">RAT is extended</text>
+<rect x="768" y="1079" width="88" height="62" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="1114">3–10%</text>
+<rect x="68" y="1141" width="213" height="30" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="1160" class="start">SHOCK ABSORBER FAULT</text>
+<rect x="281" y="1141" width="175" height="120" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="1205">L/G RETRACT</text>
+<rect x="456" y="1141" width="312" height="120" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="1196.5" class="start">All landing gear is extended</text>
+<text x="464" y="1213.5" class="start">(also refer to PRO-SP-25-10)</text>
+<rect x="768" y="1141" width="88" height="120" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="1205">180%</text>
+<rect x="68" y="1171" width="213" height="30" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="1190" class="start">GEAR NOT UPLOCKED</text>
+<rect x="68" y="1201" width="213" height="30" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="1220" class="start">BOGIE ALIGN FAULT (option)</text>
+<rect x="68" y="1231" width="213" height="30" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="1250" class="start">GEAR UPLOCK FAULT</text>
+<rect x="68" y="1261" width="213" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="76" y="1280.5" class="start">DOORS NOT CLOSED</text>
+<rect x="281" y="1261" width="175" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="368.5" y="1280.5">L/G DOOR</text>
+<rect x="456" y="1261" width="312" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="464" y="1280.5" class="start">All landing gear doors are extended</text>
+<rect x="768" y="1261" width="88" height="31" fill="#fff" stroke="#171a1c"/>
+<text x="812" y="1280.5">15%</text>
+</svg>

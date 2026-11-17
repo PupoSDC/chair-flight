@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 630" font-family="Helvetica,Arial,sans-serif">
+<style>
+text{font-size:13px;text-anchor:middle;fill:#171a1c}
+.header text{fill:#fff;font-weight:700}
+.title{font-size:18px;font-weight:700}
+.bold{font-weight:700}
+.start{text-anchor:start}
+.end{text-anchor:end}
+.brand{fill:#0b6bcb}
+.soft{fill:#e3effb}
+.muted{fill:#f2f4f6}
+.grid,.divider{fill:none;stroke:#171a1c}
+.divider{stroke-width:2}
+</style>
+<rect width="700" height="630" fill="#fff"/>
+<text x="12" y="27" class="bold start">JAR-FCL</text>
+<rect x="12" y="39" width="676" height="33" class="brand"/>
+<g class="header">
+<text x="350" y="60">FLIGHT PLANNING – QUICK DETERMINATION OF FLIGHT PLAN</text>
+</g>
+<text x="12" y="94" class="bold start">INTRODUCTION</text>
+<text x="12" y="115" class="start">The following flight planning tables allow the planner to determine trip fuel consumption and trip time required</text>
+<text x="12" y="133" class="start">to cover a given air distance.</text>
+<text x="12" y="161" class="start">These tables are established for:</text>
+<text x="24" y="181" class="start">•  Take-off</text>
+<text x="24" y="198" class="start">•  Climb profile: 250 kt/300 kt/M.80</text>
+<text x="24" y="215" class="start">•  Cruise Mach number: M.80, M.82, M.84, LR</text>
+<text x="24" y="232" class="start">•  Descent profile: Cruise Mach number/300 kt/250 kt</text>
+<text x="24" y="249" class="start">•  Approach and landing: 240 kg - 6 minute IFR</text>
+<text x="24" y="266" class="start">•  ISA</text>
+<text x="24" y="283" class="start">•  CG = 37%</text>
+<text x="24" y="300" class="start">•  Normal air conditioning</text>
+<text x="24" y="317" class="start">•  Anti-icing OFF</text>
+<text x="12" y="347" class="bold start">Note:</text>
+<text x="24" y="368" class="start">1.</text>
+<text x="43" y="368" class="start">In the tables, the asterisk (*) means that a step climb of 4,000 feet must be flown to reach the</text>
+<text x="43" y="385" class="start">corresponding FL.</text>
+<text x="24" y="408" class="start">2.</text>
+<text x="43" y="408" class="start">To obtain a flight plan at optimum cruise level, the highest flight level desired within the flight has</text>
+<text x="43" y="425" class="start">to be selected in the table.</text>
+<text x="24" y="448" class="start">3.</text>
+<text x="43" y="448" class="start">For each degree Celsius above ISA temperature apply fuel correction 0.010 (kg/°C/NM) × ISA (°C) ×</text>
+<text x="43" y="465" class="start">Air Distance (NM).</text>
+<rect x="12" y="475" width="676" height="33" class="brand"/>
+<g class="header">
+<text x="350" y="496">CORRECTION FOR DEVIATION FROM REFERENCE LANDING WEIGHT</text>
+</g>
+<text x="12" y="530" class="start">The fuel consumption must be corrected when the actual landing weight is different from the reference</text>
+<text x="12" y="551" class="start">landing weight.</text>
+<text x="12" y="572" class="start">If it is lower (or greater) than the reference landing weight, subtract (or add) the value given in the</text>
+<text x="12" y="593" class="start">correction part of the table per 1,000 kg below (or above) the reference landing weight.</text>
+</svg>

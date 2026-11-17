@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 515 898" width="515" height="898"
+  role="img" aria-labelledby="title">
+  <title id="title">FMA sequence options FMA-1 to FMA-6 during autoland</title>
+  <defs>
+    <g id="display" font-size="17" fill="#66de45">
+      <rect width="212" height="86" fill="#000"/>
+      <path d="M71 0v44M146 0v44" fill="none" stroke="#a9a9a9"/>
+      <text x="106" y="72">CMD</text>
+    </g>
+  </defs>
+  <rect width="515" height="898" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <g transform="translate(152 63)">
+      <text x="106" y="-10" font-size="17">FMA-1</text>
+      <use href="#display"/>
+      <text y="20" fill="#66de45" font-size="12">
+        <tspan x="37">MCP SPD</tspan><tspan x="106">VOR/LOC</tspan><tspan x="176">G/S</tspan>
+      </text>
+      <text y="34" fill="#fff" font-size="10">
+        <tspan x="106">FLARE</tspan><tspan x="176">FLARE</tspan>
+      </text>
+    </g>
+    <g transform="translate(152 196)">
+      <text x="106" y="-10" font-size="17">FMA-2</text>
+      <use href="#display"/>
+      <text y="20" fill="#66de45" font-size="12">
+        <tspan x="37">RETARD</tspan><tspan x="106">VOR/LOC</tspan><tspan x="176">G/S</tspan>
+      </text>
+      <text y="34" fill="#fff" font-size="10">
+        <tspan x="106">FLARE</tspan><tspan x="176">FLARE</tspan>
+      </text>
+    </g>
+    <g transform="translate(152 330)">
+      <text x="106" y="-10" font-size="17">FMA-3</text>
+      <use href="#display"/>
+      <text y="20" fill="#66de45" font-size="12">
+        <tspan x="37">MCP SPD</tspan><tspan x="106">VOR/LOC</tspan><tspan x="176">FLARE</tspan>
+      </text>
+      <text x="106" y="34" fill="#fff" font-size="10">FLARE</text>
+    </g>
+    <g transform="translate(152 463)">
+      <text x="106" y="-10" font-size="17">FMA-4</text>
+      <use href="#display"/>
+      <text y="20" fill="#66de45" font-size="12">
+        <tspan x="37">RETARD</tspan><tspan x="106">VOR/LOC</tspan><tspan x="176">FLARE</tspan>
+      </text>
+      <text x="106" y="34" fill="#fff" font-size="10">FLARE</text>
+    </g>
+    <g transform="translate(152 596)">
+      <text x="106" y="-10" font-size="17">FMA-5</text>
+      <use href="#display"/>
+      <text y="20" fill="#66de45" font-size="12">
+        <tspan x="37">RETARD</tspan><tspan x="176">TO/GA</tspan>
+      </text>
+      <text x="106" y="34" fill="#fff" font-size="10">FLARE</text>
+    </g>
+    <g transform="translate(152 730)">
+      <text x="106" y="-10" font-size="17">FMA-6</text>
+      <use href="#display"/>
+      <text y="20" fill="#66de45" font-size="12">
+        <tspan x="37">GA</tspan><tspan x="176">TO/GA</tspan>
+      </text>
+      <text x="106" y="34" fill="#fff" font-size="10">FLARE</text>
+    </g>
+  </g>
+</svg>

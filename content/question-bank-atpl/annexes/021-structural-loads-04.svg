@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="184" height="194" viewBox="0 0 184 194" role="img" aria-labelledby="title">
+  <title id="title">Structural load diagram</title>
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="6" height="6" fill="#e6ebf0"/>
+      <path d="M0 0v6" stroke="#8998a7" stroke-width="2"/>
+    </pattern>
+    <path id="arrow" d="M-8-15 0 0 8-15Z" fill="#1d5b99"/>
+    <rect id="support" x="46" width="76" height="12" fill="url(#hatch)" stroke="#243647" stroke-width="2"/>
+  </defs>
+  <rect width="184" height="194" fill="#fff"/>
+  <rect x="8.5" y="8.5" width="167" height="177" rx="6" fill="none" stroke="#bcc8d4"/>
+  <g transform="translate(8 -3)">
+    <use href="#support" y="157"/>
+    <path d="M84 83v74" fill="none" stroke="#8998a7" stroke-width="2" stroke-dasharray="5 4"/>
+    <path d="M84 83c0 21-19 36-19 51 0 9 8 18 19 23" fill="none" stroke="#243647" stroke-width="6"/>
+    <path d="M84 31v34" stroke="#1d5b99" stroke-width="4"/>
+    <use href="#arrow" x="84" y="77"/>
+  </g>
+</svg>

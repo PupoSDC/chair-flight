@@ -28,7 +28,6 @@ const resolveSourceFile = (requestedPath: string) => {
     return path.join(
       "content",
       "blog",
-      "posts",
       path.basename(folder),
       path.basename(fileName),
     );
@@ -58,7 +57,7 @@ const copyContentIntoPublicFolder = async () => {
       ),
     ),
   );
-  const postsFolder = path.join("content", "blog", "posts");
+  const postsFolder = path.join("content", "blog");
   const posts = await fs.readdir(postsFolder).catch(() => []);
   await Promise.all(
     posts.map((post) =>

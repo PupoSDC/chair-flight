@@ -10,6 +10,7 @@
     "dev": "node --env-file-if-exists=.env node_modules/vite/bin/vite.js dev",
     "dev:local": "node --env-file=.env.local node_modules/vite/bin/vite.js dev",
     "build": "node --env-file-if-exists=.env node_modules/vite/bin/vite.js build",
+    "preview": "node --env-file-if-exists=.env node_modules/vite/bin/vite.js preview",
     "start": "node --env-file-if-exists=.env .output/server/index.mjs",
     "check": "tsc --noEmit",
     "lint": "biome check",

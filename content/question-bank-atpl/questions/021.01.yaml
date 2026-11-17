@@ -575,34 +575,46 @@
   relatedQuestions: []
   externalIds:
     - ATPLQ-218451
-  annexes:
-    - 021-structural-loads-on-four-parts-1-to-4-tension-compression
+    - ATPLQ-211209
+  annexes: []
   learningObjectives:
     - 021.01.02.01.01
   template:
-    type: simple
-    question: |-
-      Refer to figure.
+    type: definition
+    question: What type of loading or behaviour is shown in the figure?
+    showOptionExplanations: false
+    explanation: |-
+      ![Five numbered structural load diagrams](annex:021-structural-loads)
 
-      Which part is subjected to compression?
-    explanation: ""
+      {table}
+
+      Tension pulls a member apart along its axis. Compression pushes it
+      together along its axis. A transverse force bends the cantilever.
+      Buckling occurs when a member becomes unstable and deflects sideways
+      under compression. The opposing forces on the overlapping plates load
+      the rivet in shear.
     options:
-      - id: OYLKVPDRM
-        text: "2"
-        correct: true
-        why: ""
-      - id: OWHO3N06Q
-        text: "3"
-        correct: false
-        why: ""
-      - id: OMZUJTPY5
-        text: "4"
-        correct: false
-        why: ""
       - id: OAFLMOJGP
-        text: "1"
-        correct: false
-        why: ""
+        term: "1"
+        annex: 021-structural-loads-01
+        definition: Tension
+      - id: OYLKVPDRM
+        term: "2"
+        annex: 021-structural-loads-02
+        definition: Compression
+      - id: OWHO3N06Q
+        term: "3"
+        annex: 021-structural-loads-03
+        definition: Bending
+      - id: OTWTAV5WD
+        term: "4"
+        annex: 021-structural-loads-04
+        definition: Buckling
+      - id: OMZUJTPY5
+        term: "5"
+        annex: 021-structural-loads-05
+        definition: Shear
+    fakeOptions: []
 - id: QGGOIM4MP
   docId: 021.01.01.01
   relatedQuestions: []
@@ -734,39 +746,6 @@
         why: ""
       - id: OXOPCQ3TC
         text: By blue powder.
-        correct: false
-        why: ""
-- id: QIUK50YKE
-  docId: "021.01"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-211209
-  annexes:
-    - 021-structural-loads-figures-1-to-4-shear-on-a-rivet
-  learningObjectives:
-    - 021.01.02.01.01
-  template:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      Which of the figures below shows a buckling load?
-    explanation: ""
-    options:
-      - id: OYARRGUHN
-        text: "2"
-        correct: false
-        why: ""
-      - id: OTWTAV5WD
-        text: "4"
-        correct: true
-        why: ""
-      - id: OLST6UZ2L
-        text: "3"
-        correct: false
-        why: ""
-      - id: OY6FPHWVV
-        text: "1"
         correct: false
         why: ""
 - id: QIVG45FCP

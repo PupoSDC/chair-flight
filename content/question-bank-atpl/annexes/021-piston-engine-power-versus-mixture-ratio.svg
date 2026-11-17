@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1224 1224" font-family="Helvetica,Arial,sans-serif">
+  <rect width="1224" height="1224" fill="#fff"/>
+  <g fill="#171a1c" text-anchor="middle">
+    <text x="612" y="102" font-size="35">Effect of mixture ratio (air mass flow / fuel mass flow)</text>
+    <text x="612" y="145" font-size="35">on power at a given RPM and manifold pressure</text>
+    <text x="53" y="306" font-size="35" transform="rotate(-90 53 306)">Power</text>
+    <text x="1180" y="969" font-size="35" text-anchor="end">Mixture Ratio</text>
+    <g font-size="44">
+      <text x="335" y="1082">10</text>
+      <text x="509" y="1082">12</text>
+      <text x="702" y="1082">14</text>
+      <text x="889" y="1082">16</text>
+    </g>
+    <g font-size="40" font-weight="700">
+      <text x="319" y="507">1</text>
+      <text x="509" y="376">2</text>
+      <text x="725" y="459">3</text>
+      <text x="794" y="519">4</text>
+      <text x="919" y="744">5</text>
+    </g>
+    <path d="M82 203l-11 23h22z M1179 997l-24-11v22z"/>
+  </g>
+  <g fill="none" stroke="#171a1c">
+    <path d="M82 223V997H1156" stroke-width="5"/>
+    <path d="M335 997v34m174-34v34m193-34v34m61-34v85m126-85v34" stroke-width="4"/>
+    <path d="M335 531V997M509 399V997M702 481V997M763 537V997M889 759V997" stroke-width="2" stroke-dasharray="18 17" stroke-dashoffset="-6"/>
+    <path d="M335 531C393 410.4 451 396 509 399C573.3 402.3 637.7 435.1 702 481C722.3 495.5 742.7 513.2 763 537C805 586.2 847 641 889 759C896.7 780.5 904.3 800.7 912 832" stroke-width="5.5"/>
+  </g>
+  <g fill="#171a1c">
+    <circle cx="335" cy="531" r="12"/>
+    <circle cx="509" cy="399" r="12"/>
+    <circle cx="702" cy="481" r="12"/>
+    <circle cx="763" cy="537" r="12"/>
+    <circle cx="889" cy="759" r="12"/>
+  </g>
+</svg>

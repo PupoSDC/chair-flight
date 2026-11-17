@@ -8,18 +8,26 @@ export const getMultipleChoiceQuestionForVariantDefinition = (
   const shuffle = getRandomShuffler(seed);
   const [correctOption, ...otherOptions] = shuffle(variant.options);
   const withAnnexes = variant.options.some((option) => option.annex);
+  const showOptionExplanations = variant.showOptionExplanations ?? true;
   const wrongOptions = shuffle([
-    ...otherOptions.map((option) => ({
-      id: option.id,
-      text: option.definition,
-      why: withAnnexes
-        ? `Correct definition for image ${option.term}.`
-        : `Correct definition for "${option.term}".`,
-    })),
+    ...otherOptions.map((option) => {
+      const reference = withAnnexes
+        ? `image ${option.term}`
+        : `"${option.term}"`;
+      return {
+        id: option.id,
+        text: option.definition,
+        why: showOptionExplanations
+          ? `Correct definition for ${reference}.`
+          : "",
+      };
+    }),
     ...variant.fakeOptions.map((option) => ({
       id: option.id,
       text: option.definition,
-      why: "This definition does not match any term in this question.",
+      why: showOptionExplanations
+        ? "This definition does not match any term in this question."
+        : "",
     })),
   ]).slice(0, 3);
   const table = [

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="244" viewBox="0 0 920 244" role="img" aria-labelledby="title">
+  <title id="title">Five numbered examples of structural loads</title>
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="6" height="6" fill="#e6ebf0"/>
+      <path d="M0 0v6" stroke="#8998a7" stroke-width="2"/>
+    </pattern>
+    <path id="arrow" d="M-8-15 0 0 8-15Z" fill="#1d5b99"/>
+    <rect id="panel" x="0.5" y="0.5" width="167" height="219" rx="6" fill="#fff" stroke="#bcc8d4"/>
+    <rect id="support" x="46" width="76" height="12" fill="url(#hatch)" stroke="#243647" stroke-width="2"/>
+  </defs>
+  <rect width="920" height="244" fill="#fff"/>
+  <g transform="translate(8 12)">
+    <use href="#panel"/>
+    <use href="#support" y="22"/>
+    <rect x="79" y="34" width="10" height="87" fill="#d3dde7" stroke="#243647" stroke-width="3"/>
+    <path d="M84 125v33" stroke="#1d5b99" stroke-width="4"/>
+    <use href="#arrow" x="84" y="170"/>
+  </g>
+  <g transform="translate(192 12)">
+    <use href="#panel"/>
+    <use href="#support" y="157"/>
+    <rect x="78" y="108" width="12" height="49" fill="#d3dde7" stroke="#243647" stroke-width="3"/>
+    <path d="M84 58v34" stroke="#1d5b99" stroke-width="4"/>
+    <use href="#arrow" x="84" y="104"/>
+  </g>
+  <g transform="translate(376 12)">
+    <use href="#panel"/>
+    <path d="M32 95h106" fill="none" stroke="#8998a7" stroke-width="2" stroke-dasharray="5 4"/>
+    <path d="M32 95c45 0 80 9 106 33" fill="none" stroke="#243647" stroke-width="8"/>
+    <rect x="19" y="62" width="13" height="66" fill="url(#hatch)" stroke="#243647" stroke-width="2"/>
+    <path d="M138 77v32" stroke="#1d5b99" stroke-width="4"/>
+    <use href="#arrow" x="138" y="121"/>
+  </g>
+  <g transform="translate(560 12)">
+    <use href="#panel"/>
+    <use href="#support" y="157"/>
+    <path d="M84 83v74" fill="none" stroke="#8998a7" stroke-width="2" stroke-dasharray="5 4"/>
+    <path d="M84 83c0 21-19 36-19 51 0 9 8 18 19 23" fill="none" stroke="#243647" stroke-width="6"/>
+    <path d="M84 31v34" stroke="#1d5b99" stroke-width="4"/>
+    <use href="#arrow" x="84" y="77"/>
+  </g>
+  <g transform="translate(744 12)">
+    <use href="#panel"/>
+    <g stroke="#243647" stroke-width="2">
+      <rect x="41" y="115" width="62" height="13" fill="url(#hatch)"/>
+      <rect x="65" y="102" width="62" height="13" fill="url(#hatch)"/>
+      <path d="M79 102c0-8 10-8 10 0v26c0 8-10 8-10 0Z" fill="#a4b3c1"/>
+    </g>
+    <path d="M79 115h10" stroke="#243647" stroke-width="1.5" stroke-dasharray="2 1"/>
+    <path d="M130 108.5h16M38 121.5H22" stroke="#1d5b99" stroke-width="4"/>
+    <use href="#arrow" transform="translate(158 108.5) rotate(-90)"/>
+    <use href="#arrow" transform="translate(10 121.5) rotate(90)"/>
+  </g>
+  <g fill="#243647" font-family="Arial, sans-serif" font-size="23" font-weight="700" text-anchor="middle">
+    <text x="92" y="211">1</text>
+    <text x="276" y="211">2</text>
+    <text x="460" y="211">3</text>
+    <text x="644" y="211">4</text>
+    <text x="828" y="211">5</text>
+  </g>
+</svg>

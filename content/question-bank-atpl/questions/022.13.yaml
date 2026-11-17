@@ -219,47 +219,6 @@
         text: (1) Terrain and ground features database; (2) PFD.
         correct: true
         why: ""
-- id: Q6LZ8JUKI
-  docId: "022.13"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-223381
-    - BGS-620504
-    - BGS-620507
-    - BGS-620503
-    - BGS-620508
-    - BGS-620510
-    - BGS-620509
-  annexes:
-    - 022-efis-displays-figures-1-to-4-02
-  learningObjectives:
-    - 022.13.03.03.03
-  template:
-    type: simple
-    question: >-
-      Refer to figure.
-
-
-      Which of the figures shows an Electronic Flight Instrument System (EFIS)
-      display in map mode?
-    explanation: ""
-    options:
-      - id: OX4NBAVK3
-        text: Figure 2
-        correct: false
-        why: ""
-      - id: OY9QFT1LQ
-        text: Figure 3
-        correct: true
-        why: ""
-      - id: OHIWSWVOO
-        text: Figure 4
-        correct: false
-        why: ""
-      - id: OMGOQF8L9
-        text: Figure 1
-        correct: false
-        why: ""
 - id: Q8CD2UDQJ
   docId: 022.13.04
   relatedQuestions: []
@@ -698,6 +657,7 @@
   relatedQuestions: []
   externalIds:
     - ATPLQ-227895
+    - ATPLQ-223381
     - BGS-620504
     - BGS-620506
     - ATPLGS-124886
@@ -709,36 +669,47 @@
     - BGS-620508
     - BGS-620510
     - BGS-620509
-  annexes:
-    - 022-efis-displays-figures-1-to-4-01
+  annexes: []
   learningObjectives:
+    - 022.13.03.03.03
     - 022.13.03.03.04
   template:
-    type: simple
+    type: definition
     question: >-
-      Refer to figure.
-
-
-      Which of the figures depicts an Electronic Flight Instrument System (EFIS)
-      display in full VOR/ILS mode with a VOR frequency selected?
-    explanation: ""
+      Which mode is shown on this Electronic Flight Instrument System (EFIS)
+      navigation display?
+    explanation: |-
+      1. **Full VOR** uses a 360° compass rose and shows the selected VOR frequency.
+      2. **PLAN** shows the route against a true-north-up map. The north arrow is
+         at the lower right.
+      3. **MAP** shows the route relative to the aircraft, with the track at the
+         top and the aircraft symbol near the bottom centre.
+      4. **Expanded VOR** uses a compass arc and shows the VOR frequency and a
+         TO/FROM indication.
+      5. **Expanded ILS** uses a compass arc and shows the ILS frequency and
+         glideslope deviation scale.
     options:
       - id: OTNACYAHY
-        text: Figure 1
-        correct: true
-        why: ""
-      - id: ODQMUDO1F
-        text: Figure 3
-        correct: false
-        why: ""
-      - id: OEIIDCAL5
-        text: Figure 2
-        correct: false
-        why: ""
-      - id: OBSL4BDJC
-        text: Figure 4
-        correct: false
-        why: ""
+        term: "1"
+        annex: 022-nd-full-vor-mode-hdg-195
+        definition: Full VOR/ILS mode with a VOR frequency selected
+      - id: OVFUXLPGQ
+        term: "2"
+        annex: 022-nd-map-mode-trk-073-m-with-flight-plan-waypoints
+        definition: PLAN mode
+      - id: OY9QFT1LQ
+        term: "3"
+        annex: 022-nd-map-mode-trk-073-m-with-flight-plan-ght
+        definition: MAP mode
+      - id: OMANHL6K8
+        term: "4"
+        annex: 022-nd-expanded-vor-mode-hdg-280
+        definition: Expanded VOR/ILS mode with a VOR frequency selected
+      - id: OU2TCM7IJ
+        term: "5"
+        annex: 022-nd-expanded-ils-mode-01
+        definition: Expanded VOR/ILS mode with an ILS frequency selected
+    fakeOptions: []
 - id: QDJCPPQI
   docId: "022.13"
   relatedQuestions: []
@@ -2014,7 +1985,7 @@
     - AVEXAM-54629
     - AVEXAM-8043
   annexes:
-    - 022-nd-map-mode-with-weather-radar
+    - 022-weather-radar-nd-map-mode
   learningObjectives:
     - 022.13.03.03.02
   template:
@@ -3158,7 +3129,7 @@
     - BGS-222212
     - AVEXAM-8043
   annexes:
-    - 022-nd-expanded-rose-ils-mode-with-weather-radar
+    - 022-weather-radar-nd-expanded-ils-rose
   learningObjectives:
     - 022.13.03.03.07
   template:

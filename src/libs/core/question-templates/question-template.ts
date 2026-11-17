@@ -29,6 +29,7 @@ export type QuestionTemplate =
       type: "definition";
       question: string;
       explanation: string;
+      showOptionExplanations?: boolean;
       options: {
         id: string;
         term: string;

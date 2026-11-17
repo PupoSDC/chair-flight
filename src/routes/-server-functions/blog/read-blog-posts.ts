@@ -1,12 +1,13 @@
 import { parseBlogPost } from "../../../libs/core/blog/parse-blog-post";
 
-const SOURCES = import.meta.glob<string>(
-  "../../../../content/blog/posts/*/page.md",
-  { query: "?raw", import: "default", eager: true },
-);
+const SOURCES = import.meta.glob<string>("../../../../content/blog/*/page.md", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
 
 const COVERS = Object.keys(
-  import.meta.glob("../../../../content/blog/posts/*/cover.{jpg,png,webp}"),
+  import.meta.glob("../../../../content/blog/*/cover.{jpg,png,webp}"),
 );
 
 export const readBlogPosts = () =>

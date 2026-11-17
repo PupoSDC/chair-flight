@@ -428,43 +428,6 @@
         text: Warm southerly wind
         correct: false
         why: ""
-- id: Q5CV7ZMAD
-  docId: "050.10"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-506021
-    - ATPLGS-124009
-    - BGS-501023
-    - ATPLGS-124008
-    - BGS-501281
-    - BGS-501024
-  annexes:
-    - 050-weather-symbols-1-4
-  learningObjectives:
-    - 050.10.03.01.02
-  template:
-    type: simple
-    question: |-
-      (For this question use annex 050-037).   
-       According to ICAO, which symbol indicates a tropical revolving storm?
-    explanation: ""
-    options:
-      - id: OECP3GZW7
-        text: Symbol 3
-        correct: false
-        why: ""
-      - id: OCKL52WRD
-        text: Symbol 4
-        correct: true
-        why: ""
-      - id: OTY4G1TBF
-        text: Symbol 2
-        correct: false
-        why: ""
-      - id: ODYRJSHCO
-        text: Symbol 1
-        correct: false
-        why: ""
 - id: Q5IKGJWTO
   docId: "050.10"
   relatedQuestions: []
@@ -753,7 +716,7 @@
     - ATPLQ-506387
     - AVEXAM-23979
   annexes:
-    - 050-uk-met-office-forecast-weather-below-10000-ft-valid-260800
+    - 050-met-low-level-forecast-2017-07-26-0800z
   learningObjectives:
     - 050.10.02.01.02
   template:
@@ -970,7 +933,8 @@
         why: ""
 - id: Q96CIRJQ8
   docId: "050.10"
-  relatedQuestions: []
+  relatedQuestions:
+    - QRVASI4JI
   externalIds:
     - ATPLQ-504265
     - ATPLGS-124009
@@ -981,34 +945,71 @@
     - BGS-501281
     - BGS-501037
     - BGS-501024
-  annexes:
-    - 050-four-weather-symbols-numbered-1-to-4-01
+    - ATPLQ-509534
+    - BGS-501269
+    - ATPLGS-124011
+    - BGS-501025
+    - ATPLQ-509555
+    - BGS-501019
+    - ATPLQ-506021
+  annexes: []
   learningObjectives:
     - 050.10.02.01.01
+    - 050.10.03.01.02
   template:
-    type: simple
-    question: |-
-      Refer to figure.
+    type: definition
+    question: What does this weather chart symbol represent?
+    showOptionExplanations: false
+    explanation: |-
+      ![Eleven numbered weather chart symbols](annex:050-weather-chart-symbols)
 
-      According to ICAO, which symbol indicates severe icing?
-    explanation: ""
+      {table}
     options:
       - id: OEGFBTAIR
-        text: Symbol 1
-        correct: true
-        why: ""
-      - id: OL2EPQF50
-        text: Symbol 4
-        correct: false
-        why: ""
+        term: "1"
+        annex: 050-weather-chart-symbols-01
+        definition: Severe icing
       - id: OZH5JW5PD
-        text: Symbol 2
-        correct: false
-        why: ""
+        term: "2"
+        annex: 050-weather-chart-symbols-02
+        definition: Snow
       - id: OTWHCGZQ0
-        text: Symbol 3
-        correct: false
-        why: ""
+        term: "3"
+        annex: 050-weather-chart-symbols-03
+        definition: Showers
+      - id: OL2EPQF50
+        term: "4"
+        annex: 050-weather-chart-symbols-04
+        definition: Severe turbulence
+      - id: OT2C0AZQG
+        term: "5"
+        annex: 050-weather-chart-symbols-05
+        definition: Widespread haze
+      - id: OY6L26CWI
+        term: "6"
+        annex: 050-weather-chart-symbols-06
+        definition: Hail
+      - id: OIR0EXK1B
+        term: "7"
+        annex: 050-weather-chart-symbols-07
+        definition: Widespread mist
+      - id: OUEB7NY6U
+        term: "8"
+        annex: 050-weather-chart-symbols-08
+        definition: Freezing precipitation
+      - id: ODYRJSHCO
+        term: "9"
+        annex: 050-weather-chart-symbols-09
+        definition: Widespread fog
+      - id: OTY4G1TBF
+        term: "10"
+        annex: 050-weather-chart-symbols-10
+        definition: Widespread smoke
+      - id: OCKL52WRD
+        term: "11"
+        annex: 050-weather-chart-symbols-11
+        definition: Tropical cyclone
+    fakeOptions: []
 - id: Q9EYGTMAS
   docId: "050.10"
   relatedQuestions: []
@@ -2439,7 +2440,7 @@
     - ATPLQ-509962
     - BGS-501848
   annexes:
-    - 050-met-low-level-forecast-2017-03-12-1400z-01
+    - 050-met-low-level-forecast-2017-03-12-1400z
   learningObjectives:
     - 050.10.02.01.02
   template:
@@ -3010,44 +3011,6 @@
         why: ""
       - id: O4ITFS4KG
         text: 500 hPa chart.
-        correct: false
-        why: ""
-- id: QEWXEF2WO
-  docId: "050.10"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-509534
-    - BGS-501269
-    - ATPLGS-124011
-    - BGS-501025
-  annexes:
-    - 050-four-weather-symbols-numbered-1-to-4-02
-  learningObjectives:
-    - 050.10.02.01.01
-  template:
-    type: simple
-    question: >-
-      Refer to figure.
-
-
-      According to ICAO, which symbol indicates danger to an aircraft flying
-      according to instrument flight rules (IFR)?
-    explanation: ""
-    options:
-      - id: OGZOPMCEL
-        text: Symbol 4
-        correct: false
-        why: ""
-      - id: OUEB7NY6U
-        text: Symbol 3
-        correct: true
-        why: ""
-      - id: OIR0EXK1B
-        text: Symbol 2
-        correct: false
-        why: ""
-      - id: OTSITRE75
-        text: Symbol 1
         correct: false
         why: ""
 - id: QEZYEMJQ
@@ -4102,7 +4065,7 @@
     - ATPLQ-501209
     - AVEXAM-49110
   annexes:
-    - 050-aircraft-weather-radar-on-navigation-display-ils31r-gs-277-tas
+    - 050-weather-radar-nd-ils31r-gs-277
   learningObjectives:
     - 050.10.01.04.05
   template:
@@ -4460,7 +4423,7 @@
     - ATPLQ-509622
     - AVEXAM-19423
   annexes:
-    - 050-aircraft-weather-radar-on-navigation-display-trk-227-mag-gs
+    - 050-weather-radar-nd-trk-227
   learningObjectives:
     - 050.10.01.04.05
   template:
@@ -4962,7 +4925,7 @@
     - ATPLQ-502188
     - AVEXAM-55743
   annexes:
-    - 050-weather-radar-image-with-a-hook-echo
+    - 050-weather-radar-ground-hook-echo
   learningObjectives:
     - 050.10.02.01.02
   template:
@@ -5832,7 +5795,7 @@
     - ATPLQ-507643
     - AVEXAM-66919
   annexes:
-    - 050-met-office-forecast-weather-below-10000-ft-valid-020200-to
+    - 050-met-low-level-forecast-2018-07-02-0200z
   learningObjectives:
     - 050.10.02.01.02
   template:
@@ -5906,7 +5869,7 @@
   externalIds:
     - ATPLQ-503785
   annexes:
-    - 050-weather-radar-display-on-navigation-display-ils31r-approach-gs-305
+    - 050-weather-radar-nd-ils31r-gs-305
   learningObjectives:
     - 050.10.01.04.05
   template:
@@ -7411,7 +7374,7 @@
   externalIds:
     - ATPLQ-506636
   annexes:
-    - 050-ground-weather-radar-image-of-iowa-and-illinois-area-green
+    - 050-weather-radar-ground-iowa-illinois
   learningObjectives:
     - 050.10.02.01.02
   template:
@@ -8110,7 +8073,7 @@
     - AVEXAM-26491
     - BGS-502487
   annexes:
-    - 050-aircraft-weather-radar-display-with-two-pink-arrows-pointing-at
+    - 050-weather-radar-nd-storm-cells-marked
   learningObjectives:
     - 050.10.01.04.05
   template:
@@ -8580,37 +8543,60 @@
         why: ""
 - id: QRVASI4JI
   docId: "050.10"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q96CIRJQ8
   externalIds:
     - ATPLQ-504771
   annexes:
-    - 050-met-weather-symbols-1-to-6
+    - 050-weather-chart-symbols
   learningObjectives:
     - 050.10.02.01.01
   template:
-    type: simple
+    type: definition
     question: |-
-      Refer to figure.
+      Which numbered symbol represents this weather phenomenon?
 
-      On a significant weather chart, frozen rain is represented by the symbol:
-    explanation: ""
+      **{term}**
+    showOptionExplanations: false
+    explanation: |-
+      ![Eleven numbered weather chart symbols](annex:050-weather-chart-symbols)
+
+      {table}
     options:
-      - id: OLHADIDTE
-        text: "1"
-        correct: false
-        why: ""
+      - id: OD826B09B
+        term: Severe icing
+        definition: Symbol 1
+      - id: O326D146D
+        term: Snow
+        definition: Symbol 2
+      - id: OE2DDC6B4
+        term: Showers
+        definition: Symbol 3
+      - id: O151BFC46
+        term: Severe turbulence
+        definition: Symbol 4
+      - id: ODA5E181F
+        term: Widespread haze
+        definition: Symbol 5
+      - id: O1F6ACDA4
+        term: Hail
+        definition: Symbol 6
+      - id: OD6C64A0A
+        term: Widespread mist
+        definition: Symbol 7
       - id: OUQPYKVQ5
-        text: "4"
-        correct: true
-        why: ""
-      - id: O9DWNPVOE
-        text: "6"
-        correct: false
-        why: ""
-      - id: OAULMWVNH
-        text: "3"
-        correct: false
-        why: ""
+        term: Freezing precipitation
+        definition: Symbol 8
+      - id: O66A58560
+        term: Widespread fog
+        definition: Symbol 9
+      - id: O9C3559F7
+        term: Widespread smoke
+        definition: Symbol 10
+      - id: O53F00438
+        term: Tropical cyclone
+        definition: Symbol 11
+    fakeOptions: []
 - id: QRWGK7QGI
   docId: "050.10"
   relatedQuestions: []
@@ -8731,7 +8717,7 @@
     - BGS-501914
     - BGS-502070
   annexes:
-    - 050-ground-weather-radar-image-of-a-large-storm-colours-from
+    - 050-weather-radar-ground-severe-storm
   learningObjectives:
     - 050.10.01.04.05
   template:
@@ -8978,7 +8964,7 @@
   externalIds:
     - ATPLQ-501780
   annexes:
-    - 050-met-low-level-forecast-2017-03-12-1400z-01
+    - 050-met-low-level-forecast-2017-03-12-1400z
   learningObjectives:
     - 050.10.02.01.02
   template:
@@ -9091,40 +9077,6 @@
         why: ""
       - id: OOIUWKB9L
         text: The true altitude will be higher over B than over A
-        correct: false
-        why: ""
-- id: QSZRHNS6K
-  docId: "050.10"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-509555
-    - BGS-501019
-  annexes:
-    - 050-four-symbols-numbered-1-to-4
-  learningObjectives:
-    - 050.10.02.01.01
-  template:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      On a significant weather chart, hail is represented by symbol
-    explanation: ""
-    options:
-      - id: OY6L26CWI
-        text: "4"
-        correct: true
-        why: ""
-      - id: OETZ6LYSQ
-        text: "3"
-        correct: false
-        why: ""
-      - id: OT2C0AZQG
-        text: "2"
-        correct: false
-        why: ""
-      - id: OFS47YUVG
-        text: "1"
         correct: false
         why: ""
 - id: QSZZPGKZ

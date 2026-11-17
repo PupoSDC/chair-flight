@@ -887,15 +887,30 @@
     - ATPLGS-123122
     - AVEXAM-70623
     - BGS-331236
-  annexes:
-    - 033-notam-lffa-a6768-14-notamr
+  annexes: []
   learningObjectives:
     - "033.04"
   template:
     type: simple
-    question: >-
-      Refer to figure.
+    question: |-
+      Refer to the NOTAM.
 
+      ```text
+      ORIGINAL MESSAGE TO NOTAM LFFA A
+
+      A6768/14 NOTAMR A6307/14
+      Q) LFBB/QPMCH/I /NBO/A /000 /999 /4338N0012E005
+      A) LFBO B) 1411071055 C) 1507312359
+      E) MINIMA OF LNAV RWY 32R PROC CHANGED:
+      OCH: 428
+      CAT MDA(H) RVR
+      A   930 (430) 1500
+      B   930 (430) 1500
+      C   930 (430) 2000
+      D   930 (430) 2000
+      DL  930 (430) 2000
+      REF AD2 LFBO IAC 18
+      ```
 
       What is the Minimum Descent Altitude (MDA) for a Cat A aircraft executing
       an LNAV approach to runway 32R at Toulouse Blagnac aerodrome (LFBO)?
@@ -1333,19 +1348,38 @@
         why: ""
 - id: QCEY6RO6C
   docId: "033.04"
-  relatedQuestions: []
+  relatedQuestions:
+    - QNNYE5TXI
   externalIds:
     - ATPLQ-334903
     - ATPLGS-123315
-  annexes:
-    - 033-notam-r0201-15-notamn-lfff
+  annexes: []
   learningObjectives:
     - "033.04"
   template:
     type: simple
-    question: >-
-      Refer to figure.
+    question: |-
+      Refer to the NOTAM.
 
+      ```text
+      R0201/15 NOTAMN
+      Q) LFFF/QRTCA/IV/BO /W/000/035/4842N00242E005
+      A) LFFF B) 1502021500 C) 1503160800
+      D) SS PLUS 30-SR MINUS30
+      E) TEMPO RESTRICTED AREA (ZRT) RDL 012/6NM FROM MELUN AD (LFPM):
+      UNMANNED ACFT EXPERIMENT.
+      PSN: 2.7NM RADIUS CENTRED ON 484204N 0024207E
+      THE ZRT REPLACES INTERFERING AIRSPACE.
+      SERVICES PROVIDED: FLIGHT INFO AND ALERT
+      ENTRY CONDITIONS:
+      CIV AND MIL AIR TFC BYPASS COMPULSORY EXCEPT FOR ACFT PERFORMING
+      SAFETY OR SECURITY MISSIONS WHEN AVOIDANCE IS NOT POSSIBLE.
+      THEN CONTACT UNMANNED ACFT MANAGER TEL 33 (0) 663 83 64 64
+      INFO: SEINE INFO 134.300MHZ
+      PARIS INFO 126.100MHZ
+      F) SFC
+      G) 500FT AGL
+      ```
 
       What is the daily activation time for the temporarily established
       restricted area (ZRT)?
@@ -3697,20 +3731,39 @@
         why: ""
 - id: QNNYE5TXI
   docId: "033.04"
-  relatedQuestions: []
+  relatedQuestions:
+    - QCEY6RO6C
   externalIds:
     - ATPLQ-333146
     - AVEXAM-82984
     - ATPLGS-123314
-  annexes:
-    - 033-notam-r0201-15-notamn-lfff
+  annexes: []
   learningObjectives:
     - "033.04"
   template:
     type: simple
-    question: >-
-      Refer to figure.
+    question: |-
+      Refer to the NOTAM.
 
+      ```text
+      R0201/15 NOTAMN
+      Q) LFFF/QRTCA/IV/BO /W/000/035/4842N00242E005
+      A) LFFF B) 1502021500 C) 1503160800
+      D) SS PLUS 30-SR MINUS30
+      E) TEMPO RESTRICTED AREA (ZRT) RDL 012/6NM FROM MELUN AD (LFPM):
+      UNMANNED ACFT EXPERIMENT.
+      PSN: 2.7NM RADIUS CENTRED ON 484204N 0024207E
+      THE ZRT REPLACES INTERFERING AIRSPACE.
+      SERVICES PROVIDED: FLIGHT INFO AND ALERT
+      ENTRY CONDITIONS:
+      CIV AND MIL AIR TFC BYPASS COMPULSORY EXCEPT FOR ACFT PERFORMING
+      SAFETY OR SECURITY MISSIONS WHEN AVOIDANCE IS NOT POSSIBLE.
+      THEN CONTACT UNMANNED ACFT MANAGER TEL 33 (0) 663 83 64 64
+      INFO: SEINE INFO 134.300MHZ
+      PARIS INFO 126.100MHZ
+      F) SFC
+      G) 500FT AGL
+      ```
 
       What is the lower limit for the temporarily-established restricted area
       (ZRT)?
@@ -5579,9 +5632,8 @@
   template:
     type: chart-calculation
     question: >-
-      For this question use annex 033-053 rev. 05.11.2004. For a long distance
-      flight at FL {{fl}}, "Long Range" regime, divided into four flight legs,
-      what is the total air distance?
+      Refer to the annex. For a long distance flight at FL {{fl}}, "Long Range"
+      regime, divided into four flight legs, what is the total air distance?
 
 
       - Segment AB: ground distance {{g_ab}} NM, headwind component {{w_ab}} kt,

@@ -238,15 +238,29 @@
     14
   format: webp
   source: ""
-- id: 021-structural-loads-on-four-parts-1-to-4-tension-compression
-  description: Structural loads on four parts 1 to 4, tension, compression, shear
-    in a bolt and bending of a cantilever
-  format: webp
+- id: 021-structural-loads
+  description: Five numbered diagrams of structural loads and their effects
+  format: svg
   source: ""
-- id: 021-structural-loads-figures-1-to-4-shear-on-a-rivet
-  description: Structural loads figures 1 to 4, shear on a rivet, tension,
-    compression, buckling of a slender column under axial force
-  format: webp
+- id: 021-structural-loads-01
+  description: Structural load diagram
+  format: svg
+  source: ""
+- id: 021-structural-loads-02
+  description: Structural load diagram
+  format: svg
+  source: ""
+- id: 021-structural-loads-03
+  description: Structural load diagram
+  format: svg
+  source: ""
+- id: 021-structural-loads-04
+  description: Structural load diagram
+  format: svg
+  source: ""
+- id: 021-structural-loads-05
+  description: Structural load diagram
+  format: svg
   source: ""
 - id: 021-fuselage-cross-sections-1-to-4-square-circle-double-bubble
   description: Fuselage cross sections 1 to 4, square, circle, double bubble,
@@ -346,12 +360,11 @@
     DCMON1/2, DC1/DC2 primary, essential and monitored buses"
   format: webp
   source: ""
-- id: 021-graph
-  description: "Graph: effect of mixture ratio (massflow air/massflow fuel) on
-    power at given RPM and manifold pressure, piston engine; points 1 to 5 at
-    mixture ratios 10, 12, 14, 16 (point 2 max power at about 12, point 4 near
-    stoichiometric about 14.7, point 5 lean)"
-  format: webp
+- id: 021-piston-engine-power-versus-mixture-ratio
+  description: Piston-engine power versus mixture ratio (air mass flow divided
+    by fuel mass flow) at a fixed RPM and manifold pressure, with five labelled
+    points from rich to lean
+  format: svg
   source: ""
 - id: 021-axial-compressor-rotor-and-stator-blade-arrangements-figures-1-to
   description: Axial compressor rotor and stator blade arrangements, Figures 1 to
@@ -527,18 +540,14 @@
     ft below) and downward arrow (descending): traffic advisory (TA)"
   format: webp
   source: ""
-- id: 022-efis-displays-figures-1-to-4-01
-  description: "EFIS displays Figures 1 to 4: Fig 1 full VOR mode with compass
-    rose, DME 21.0 NM, HDG 195 M, VOR 114.75; Fig 2 map mode TRK 073 M; Fig 3
-    map mode with flight plan; Fig 4 expanded ILS/VOR arc HDG 280 M, DME 30.0
-    NM; Figure 1 is full VOR/ILS with VOR frequency selected"
+- id: 022-nd-full-vor-mode-hdg-195
+  description: EFIS navigation display with a 360° compass rose, magnetic
+    heading 195°, and DME reading 21.0 NM.
   format: webp
   source: ""
-- id: 022-efis-displays-figures-1-to-4-02
-  description: "EFIS displays Figures 1 to 4: Fig 1 expanded ILS 110.9 DME 16.5 NM
-    HDG 280 M, Fig 2 map mode TRK 073 M waypoints TBX UOC FGL YTB, Fig 3 map
-    mode TRK 073 M with flight plan EDI YTB GVS AST, Fig 4 VOR 114.75; map mode
-    is Figure 3"
+- id: 022-nd-expanded-vor-mode-hdg-280
+  description: EFIS navigation display with a compass arc, magnetic heading
+    280°, and DME reading 30.0 NM.
   format: webp
   source: ""
 - id: 022-nd-expanded-ils-mode-01
@@ -548,14 +557,14 @@
     of localizer and below glidepath, track 272° M"
   format: webp
   source: ""
-- id: 022-nd-map-mode-with-weather-radar
+- id: 022-weather-radar-nd-map-mode
   description: "ND MAP mode with weather radar: heading/track 359, GS 250 TAS 320,
     wind 110, VOR1 109.30 DME 8.4 NM, VOR2 109.70 DME 29.7 NM, green/yellow/red
     precipitation cells, TCAS amber traffic +09 descending, 33 and 3 compass
     marks"
   format: webp
   source: ""
-- id: 022-nd-expanded-rose-ils-mode-with-weather-radar
+- id: 022-weather-radar-nd-expanded-ils-rose
   description: "ND expanded rose ILS mode with weather radar: heading 359, DME
     16.3, ILS 109.70, 33 and 3 compass marks, green/yellow/red precipitation
     cells, localizer and glideslope deviation"
@@ -581,9 +590,8 @@
   format: webp
   source: ""
 - id: 022-nd-map-mode-trk-073-m-with-flight-plan-waypoints
-  description: ND map mode TRK 073 M with flight plan waypoints FGL, UOC, TBX, YTB
-    and nav aids HSM QTX OLV EDI, airports KABC KEFJ KLKN; track from TBX to YTB
-    is 097° T
+  description: ND in PLAN mode with a true north arrow and a route through FGL,
+    UOC, TBX and YTB. The track tape shows 073° M.
   format: webp
   source: ""
 - id: 022-nd-map-mode-trk-073-m-wind-arrow-bottom-left
@@ -1063,11 +1071,6 @@
     SEP1 Page 3: Figure 2.1  Take-Off Distance Flaps Up"
   format: svg
   source: ""
-- id: 032-take-off-normal-procedure-chart-032-009
-  description: Take-Off Normal Procedure (MEP) chart 032-009, take-off distance
-    over 50 ft against OAT, pressure altitude, mass and wind component
-  format: webp
-  source: ""
 - id: CAP-698-page-19
   description: "CAP 698 Aeroplane Performance Manual, PDF page 19, Section 2 -
     SEP1 Page 5: Figure 2.2 Take-Off Distance Flaps Approach"
@@ -1085,26 +1088,12 @@
     SEP1 Page 10: Figure 2.4 Landing"
   format: svg
   source: ""
-- id: 032-cap-698-mep1-figure-3-1-take-off-normal-procedure
-  description: "CAP 698 MEP1 Figure 3.1 take-off normal procedure (annex 032-009):
-    flaps up, 2800 rpm 40 in MAP, lift-off and barrier 79 kt IAS. Example OAT
-    21C, PA 2000 ft, 3969 lb, 9 kt headwind: ground roll 1350 ft, 1650 ft over
-    50 ft obstacle"
-  format: webp
-  source: ""
 - id: 032-twin-turboprop-mep-take-off-performance-table-pressure-altitude-0
   description: "Twin turboprop / MEP take-off performance table, pressure altitude
     0 ft, flaps clean: gross mass 9.0-12.5 x1000 lb vs OAT -20 to 40C giving
     stop/go distances (ft) and V2/Vy/gradient; correction flaps 10 reduce GO 2%,
     altitude +10C per 1000 ft. Used for ASD/AGD and regulated take-off mass"
-  format: webp
-  source: ""
-- id: 032-cap-698-mep-take-off-climb-performance-gear-retracted-take
-  description: "CAP 698 MEP take-off climb performance, gear retracted, take-off
-    power, 92 kt IAS: 2-engine and single-engine rate of climb vs OAT, pressure
-    altitude and mass. Example OAT 10C, PA 10000 ft, 4000 lb: 1650 / 300 fpm.
-    Used for one-engine-inoperative gradient"
-  format: webp
+  format: svg
   source: ""
 - id: 032-airfield-diagram-for-obstacle-clearance-01
   description: "Airfield diagram for obstacle clearance: crossing runways 09/27
@@ -1123,13 +1112,6 @@
   source: ""
 
 
-- id: 032-cap-697-sep-cruise-performance-table-25-0-in-hg
-  description: "CAP 697 SEP cruise performance table 25.0 in Hg (or full throttle)
-    @ 2500 rpm, lean mixture, 3400 lb: ISA deviation -20/0/+20C by pressure
-    altitude 0-16000 ft with IOAT, manifold pressure, fuel flow PPH/GPH, KIAS
-    and KTAS. E.g. ISA+20, 2500 ft: 13.8 GPH, 167 KTAS"
-  format: svg
-  source: ""
 - id: CAP-697-page-17
   description: "CAP 697 Flight Planning Manual, PDF page 17, Section 2 -
     SEP1  Page 3: Figure 2.1"
@@ -1186,12 +1168,10 @@
     engines, points A to F
   format: webp
   source: ""
-- id: 032-twin-jet-optimum-drift-down-speed-one-engine-inoperative-0-01
-  description: "Twin jet optimum drift-down speed, one engine inoperative, 0.74
-    Mach: table of initial max continuous %N1 by TAT and pressure altitude (e.g.
-    FL350 -45C = 98.4%), and drift-down speed/level-off table by mass (70-35 t)
-    with optimum KIAS and level-off altitude by ISA deviation"
-  format: webp
+- id: CAP-698-page-87
+  description: "CAP 698 Aeroplane Performance Manual, PDF page 87, Section 4 -
+    MRJT1 Page 39: Figure 4.22 Driftdown"
+  format: svg
   source: ""
 - id: CAP-698-page-57
   description: "CAP 698 Aeroplane Performance Manual, PDF page 57, Section 4 -
@@ -1232,14 +1212,6 @@
     A-D on the y axis; balanced field where ASD meets TOD N-1 (A)"
   format: webp
   source: ""
-- id: 032-cap-698-figure-4-23-net-level-off-altitude-one
-  description: "CAP 698 Figure 4.23 net level-off altitude, one engine
-    inoperative: level-off pressure altitude (1000 ft) vs gross mass (1000 kg)
-    for ISA deviation +10 and below, +15, +20C, with A/C auto (high) vs off and
-    bleed mass adjustments (anti-ice on -1950 kg, eng and wing -5650, A/C auto
-    below 17000 ft -2500)"
-  format: webp
-  source: ""
 - id: 032-wet-runway-speed-tables
   description: "Wet runway speed tables: take-off speeds V1, VR, V2 at 70000 kg
     for flaps 5, 10, 15, 25 (e.g. flaps 5: 129/138/148) and landing Vref at
@@ -1253,20 +1225,6 @@
     68262 kg, V1 150, VR 150, V2 154"
   format: webp
   source: ""
-- id: 032-twin-jet-optimum-drift-down-speed-one-engine-inoperative-0-02
-  description: "Twin jet optimum drift-down speed, one engine inoperative, 0.74
-    Mach, A/C auto (high): table of initial max continuous %N1 by TAT and
-    pressure altitude, plus drift-down speed/level-off table by mass (70-35 t)
-    with optimum KIAS and level-off altitude by ISA deviation"
-  format: webp
-  source: ""
-
-- id: 032-twin-jet-0-74-m-250-kias-economy-descent-table
-  description: "Twin jet 0.74 M / 250 KIAS economy descent table: pressure
-    altitude 37000 to 3700 ft vs time (min), fuel (kg) and air distance NM by
-    landing weight 35000-75000 kg (e.g. FL370: 23 min, 295 kg)"
-  format: webp
-  source: ""
 - id: CAP-698-page-63
   description: "CAP 698 Aeroplane Performance Manual, PDF page 63, Section 4 -
     MRJT1 Page 15: Figure 4.7 Take-Off Brake Energy Limit"
@@ -1278,11 +1236,9 @@
   format: svg
   source: ""
 
-- id: 032-ecqb-032-071-instructions-for-calculating-v-speeds-with-density
-  description: "ECQB-032-071 instructions for calculating V speeds (steps a-h)
-    with density sub graph: pressure altitude (0-9000 ft) vs temperature (F/C)
-    giving columns A-F for the V speed tables"
-  format: webp
+- id: 032-take-off-speeds-calculation-instructions
+  description: Instructions for calculating take-off V speeds and checking VMCG, TORA and TORR, with the density sub-graph
+  format: svg
   source: ""
 
 - id: 032-a320-take-off-chart-rtow-paris-orly
@@ -1298,7 +1254,7 @@
     Charts (RTOW), A320-214 CFM56-5B4, Paris Orly LFPO runway 08 dry: MTOW and
     V1/VR/V2 by OAT for CONF 1+F, 2, 3 and wind -10/0/+10 kt, with influence of
     runway condition (wet), delta QNH and air conditioning"
-  format: webp
+  format: svg
   source: ""
 - id: CAP-698-page-61
   description: "CAP 698 Aeroplane Performance Manual, PDF page 61, Section 4 -
@@ -1350,10 +1306,8 @@
     QNH, line-up, wet; limitation codes 1-9"
   format: svg
   source: ""
-- id: 032-take-off-speed-tables-flaps-10-v1-vr-v2-and
-  description: Take-off speed tables, flaps 10, V1 VR V2 and climb attitude by
-    mass 200 to 400 t, temperature-altitude regions A to M, slope and wind V1
-    adjustment
+- id: 032-take-off-speeds-flaps-10-tables
+  description: Flaps 10 take-off speed tables for V1, VR and V2, with climb attitude and slope and wind adjustments
   format: svg
   source: ""
 - id: 032-engine-failure-driftdown-table-by-altitude-at-engine-failure-vs-01
@@ -1383,11 +1337,9 @@
     QNH, line-up, wet; limitation codes 1-9"
   format: svg
   source: ""
-- id: 032-density-sub-graph
-  description: "Density sub graph: pressure altitude (0-9000 ft) vs temperature
-    C/F giving density zones A-F (used to pick the column in the take-off speed
-    tables)"
-  format: webp
+- id: 032-take-off-speeds-density-sub-graph
+  description: Density sub-graph for selecting take-off speed table columns A–F by pressure altitude and temperature
+  format: svg
   source: ""
 - id: 032-large-jet-take-off-speeds-flaps-10
   description: "Large jet take-off speeds, flaps 10: slope/wind V1 adjustment by
@@ -1699,7 +1651,7 @@
   description: "Flight plan / navigation log (computer flight plan) table: legend
     EET, TTLT, DIS, RDIS, GS; route LGSK Skiathos to LGKV Kavala via TSLIB,
     UM603 ARNAS, PEREN, ASKOS; columns FL, IMT, MN, TAS, GS, wind, OAT, EFOB"
-  format: webp
+  format: svg
   source: ""
 - id: 033-vfr-navigation-flight-log-callsign-sx-atpl-take-off-13
   description: "VFR navigation flight log (flight plan form), callsign SX-ATPL,
@@ -1713,7 +1665,7 @@
     Odense via RAKITIT, A4 FLD Friedland, B56 PEROM KOSEB CDA, UA4 ODN:
     distance, MT/TT, variation 03E, time, FL240, wind 330/058, TAS 414, MOCA,
     abbreviations legend"
-  format: webp
+  format: svg
   source: ""
 - id: jeppesen-ad-eham-10-2a
   description: "Jeppesen Amsterdam Schiphol EHAM/AMS (10-2A) STAR chart: DENUT 1A,
@@ -1834,13 +1786,12 @@
   format: webp
   source: ""
 - id: 033-jar-fcl-flight-planning-quick-determination-of-flight-plan
-  description: "JAR-FCL flight planning, quick determination of flight plan
-    (033-036): introduction to the flight planning tables for the
-    Boeing/Airbus-type jet, climb 250kt/300kt/M.80, cruise M.80, M.82, M.84, LR,
+  description: "JAR-FCL flight planning, quick determination of flight plan.
+    Introduction to the flight planning tables for the Boeing/Airbus-type jet, climb 250kt/300kt/M.80, cruise M.80, M.82, M.84, LR,
     descent, reference landing weight, asterisk step climb 4000 ft, ISA fuel
     correction 0.010 kg/°C/NM, correction for deviation from reference landing
     weight"
-  format: webp
+  format: svg
   source: ""
 - id: 033-vfr-navigation-flight-log-route-ajaccio-to-marina-di-campo
   description: "VFR navigation flight log, route Ajaccio (LFKJ) to Marina di Campo
@@ -1867,13 +1818,7 @@
   description: "Flight planning table M.82 (air distance versus ground distance):
     ground distance 10-10000 NM versus air distance for wind component tail wind
     +150/+100/+50, 0, head wind -50/-100/-150 kt, labelled M.82"
-  format: webp
-  source: ""
-- id: 033-flight-planning-table-long-range-cruise-above-fl250
-  description: "Flight planning table Long Range cruise above FL250 (air distance
-    versus ground distance): ground distance 10-10000 NM versus air distance for
-    wind component tail wind +150 to head wind -150 kt"
-  format: webp
+  format: svg
   source: ""
 - id: jeppesen-ad-eham-10-2c
   description: "Jeppesen Amsterdam Schiphol EHAM/AMS (10-2C) STAR chart: TOPPA 2A
@@ -2068,12 +2013,6 @@
     VORs, TMAs, Oran/Algiers FIR boundary"
   format: webp
   source: ""
-- id: 033-descent-table-m-74-250-kt-ias-and-m-70-01
-  description: "Descent table M.74/250 kt IAS and M.70/280/250 kt IAS (idle
-    thrust): time (min), fuel (kg) and distance (NM air) by pressure altitude
-    37000 ft to 3700 ft and landing weight 35000-75000 kg"
-  format: webp
-  source: ""
 - id: jeppesen-ad-lgsr-10-2a
   description: "Jeppesen LGSR/JTR Santorini STAR chart IRBEG 1C, PEXAN 1C and
     UVRIT 1C arrivals rwy 16L: SNI VOR 110.4, waypoints NITSA, NETIS, KORAX IAF,
@@ -2104,12 +2043,6 @@
     NINE BRAVO (DKB 9B, rwy 25) and DKB FOUR HOTEL (DKB 4H, rwy 07): waypoints
     DS041, DS050, DS032, routing table, initial climb 5000 ft, climb gradient
     table"
-  format: webp
-  source: ""
-- id: 033-true-airspeed-chart-piston-aeroplane-01
-  description: "True airspeed chart for a piston aeroplane (ECQB-033-177): outside
-    air temperature vs pressure altitude vs power setting 45-100%, mid cruise
-    mass 4450 lb, example OAT 13 °C, PA 16500 ft, 55% power gives TAS 172 kt"
   format: webp
   source: ""
 - id: jeppesen-gsprm-introduction-glossary-page
@@ -2162,12 +2095,6 @@
     ROBVI, SUGOL IAF, jet speed 260-280 KT at FL230, max 250 KT below FL100"
   format: webp
   source: ""
-- id: 033-descent-table-m-74-250-kt-ias-and-m-70-02
-  description: "Descent table M.74/250 kt IAS and M.70/280/250 kt IAS (idle
-    thrust): time (min), fuel (kg) and distance (NM air) by pressure altitude
-    37000 ft to 3700 ft and landing weight 35000-75000 kg"
-  format: webp
-  source: ""
 - id: 033-wind-range-correction-graph
   description: "Wind range correction graph (033-065): ground distance vs air
     distance (NAM) using average cruise TAS 300-600 kt and head/tail wind
@@ -2202,24 +2129,15 @@
     corrections"
   format: svg
   source: ""
-- id: 033-piston-aeroplane-cruise-power-table-25-0-in-hg-or
-  description: "Piston aeroplane cruise power table, 25.0 in. Hg or full throttle
-    at 2500 rpm, cruise lean mixture, cruise weight 3400 lb: ISA deviation
-    -20/0/+20, pressure altitude 0-16000 ft, IOAT, manifold pressure, fuel flow
-    PPH and GPH, KIAS and KTAS; method of use"
-  format: webp
-  source: ""
 - id: CAP-697-page-35
   description: "CAP 697 Flight Planning Manual, PDF page 35, Section 4 -
     MRJT1  Page 3: Figure 4.3.1"
   format: svg
   source: ""
-- id: 033-simplified-flight-planning-alternate-long-range-cruise
-  description: "Simplified Flight Planning Alternate Planning Long Range Cruise
-    chart (033-018): time to alternate (hr) and alternate fuel (1000 kg) vs
-    distance to alternate (ground NM), by landing weight 35-70 t and wind;
-    example 245 NM, 50 kt headwind, 45000 kg gives 1900 kg and 0.82 h"
-  format: webp
+- id: CAP-697-page-48
+  description: "CAP 697 Flight Planning Manual, PDF page 48, Section 4 -
+    MRJT1 Page 16: Figure 4.3.6 Simplified Flight Planning - Alternate Planning Long Range Cruise"
+  format: svg
   source: ""
 - id: 033-mrjt-stepped-climb-cruise-graph
   description: "MRJT Stepped Climb Cruise graph (step climb to 2000 ft above
@@ -2241,14 +2159,14 @@
   description: "Holding planning table, flaps up: total fuel flow (kg/hr) by
     weight 30-80 (1000 kg) and pressure altitude 1500-41000 ft, includes 5%
     additional fuel for racetrack pattern"
-  format: webp
+  format: svg
   source: ""
 - id: 033-operational-flight-plan-excerpt-01
   description: "Operational flight plan (nav log) excerpt: waypoints OKEPI, OKIRA,
     MOU, MADIV, MOKIP, MILPA, KOGAS, NITAM, MOFBO, ELB, RIFFI, TOD, PNZ, ISKIA
     with TM, ETO/ATO, temperature, MTK, DST, W/V, MSA, minimum fuel required (MF
     REQD) and actual fuel remaining (AREM); legend"
-  format: webp
+  format: svg
   source: ""
 - id: 033-fuel-price-ratio-graph
   description: "Fuel price ratio graph: fuel price ratio (0.83-0.98) vs optimum
@@ -2256,17 +2174,17 @@
     500-5000 NM, example line at 0.89 ratio"
   format: webp
   source: ""
-- id: 033-holding-fuel-flow-table
-  description: "Holding fuel flow table: fuel flow in kg per hour by pressure
-    altitude 1500-37000 ft and weight 38-66 (x1000 kg)"
-  format: webp
+- id: CAP-697-page-49
+  description: "CAP 697 Flight Planning Manual, PDF page 49, Section 4 -
+    MRJT1 Page 17: Figure 4.4 Holding Fuel Flow - Flaps Retracted"
+  format: svg
   source: ""
 - id: 033-operational-flight-plan-excerpt-02
   description: "Operational flight plan (nav log) excerpt: airway positions TESGA,
     OSBIT, KEMES, LAMSI, SASAL, BABIT, NISVA with lat/long, EET/TTLT, ETO/ATO,
     FL, wind, OAT, estimated and actual fuel on board (tonnes); Vienna, Budapest
     and Beograd FIR boundaries; legend"
-  format: webp
+  format: svg
   source: ""
 - id: 033-data-sheet-lrjt-1-flight-planning-integrated-cruise-long-range-02
   description: "Data sheet LRJT 1 (JAR-FCL) flight planning integrated cruise,
@@ -2280,7 +2198,7 @@
     contingency 3% 1261, alternate EGGP 2066, final reserve 2284, minimum
     take-off fuel 64656, taxi 500, block fuel 65156, extra, operational impacts
     (weight, FL, speed change) and unit notes"
-  format: webp
+  format: svg
   source: ""
 - id: CAP-697-page-38
   description: "CAP 697 Flight Planning Manual, PDF page 38, Section 4 -
@@ -2292,13 +2210,12 @@
     by system (ELEC, F/CTL, HYD, L/G) with fuel-critical inoperative system,
     conditions and fuel penalty factor %, e.g. flaps fault/locked 80%, slats
     60%, spoiler fault 55%, landing gear extended 180%"
-  format: webp
+  format: svg
   source: ""
-- id: 033-piston-engine-power-setting-table
-  description: "Piston engine power setting table (033-023): power 45/55/65/75%
-    with fuel flow 16.0/18.7/23.3/29.0 GPH, RPM and manifold pressure by
-    pressure altitude SL-25000 ft and ISA temperature, EGT max 1650°F/1525°F"
-  format: webp
+- id: CAP-697-page-29
+  description: "CAP 697 Flight Planning Manual, PDF page 29, Section 3 -
+    MEP1 Page 5: Figure 3.3 Power Setting Table"
+  format: svg
   source: ""
 - id: 033-route-diagram-01
   description: "Route diagram: aircraft flying from A to B, total AB 2000 NM, with
@@ -2306,11 +2223,8 @@
     the third point"
   format: webp
   source: ""
-- id: 033-simplified-flight-planning-long-range-cruise-graph-based-on-280
-  description: "Simplified Flight Planning Long Range Cruise graph (033-072),
-    based on 280/74 climb and .74/250 descent: trip time and fuel required vs
-    trip ground distance 1000-3000 NM, with example (1700 NM, 12 kt headwind,
-    22000 ft, 54000 kg, ISA+10 gives 13000 kg, 4:45 h)"
+- id: 033-simplified-flight-planning-long-range-cruise
+  description: Simplified long-range cruise flight planning chart
   format: svg
   source: ""
 - id: CAP-697-page-47
@@ -2329,11 +2243,9 @@
     DEST elevation 1000 ft with DEST Alternate"
   format: webp
   source: ""
-- id: 033-short-trip-simplified-fuel-and-time-planning-graph
-  description: "Short trip simplified fuel and time planning graph: trip time
-    (hours) and trip fuel (1000 kg) vs trip distance 0-500 NM by landing weight
-    40-70 t and head/tail wind"
-  format: webp
+- id: 033-simplified-flight-planning-short-trip-fuel-and-time
+  description: Short trip fuel and time planning by ground distance, wind and landing weight
+  format: svg
   source: ""
 - id: 033-route-diagram-02
   description: "Route diagram: DEP, point A and DEST on a straight line, distance
@@ -2345,14 +2257,14 @@
     CHS 1499, alternate TPA 2442, final reserve 2113, take-off fuel, taxi OSL
     210, PIC extra, tankering note; alternate route table (KTPA, KPBI, KFLL,
     KMIA) and routing"
-  format: webp
+  format: svg
   source: ""
 - id: 033-flight-plan-fuel-summaries-ankr-737-lfpg-eidw-and-ankr
   description: "Flight plan fuel summaries ANKR 737 LFPG-EIDW and ANKR 738
     EIDW-LFPG (17 MAY): taxi, trip, contingency, alternate EGAA/EFPO, final
     reserve, FPL fuel, extra, target fuel, fuel carriage cost and 2000 ft
     above/below trip fuel changes"
-  format: webp
+  format: svg
   source: ""
 - id: 033-data-sheet-lrjt-1-integrated-cruise-descent-correction
   description: "Data sheet LRJT 1 (JAR-FCL) integrated cruise descent correction
@@ -2393,7 +2305,7 @@
     3% HECA 439, alternate HELX 1481, final reserve 1300, min take-off fuel
     17856, taxi EGBB 176, block fuel 18032, possible extra, tankering note and
     operational impacts table (weight, FL and speed change)"
-  format: webp
+  format: svg
   source: ""
 - id: 033-data-sheet-lrjt-1-flight-planning-integrated-cruise-at-m-02
   description: "Data sheet LRJT 1 (JAR-FCL) flight planning integrated cruise at
@@ -2401,12 +2313,6 @@
     (1000 kg) by aircraft weight 126-172 t, TAS 470 kt, pack flow and anti-ice
     corrections"
   format: svg
-  source: ""
-- id: 033-true-airspeed-chart-piston-aeroplane-02
-  description: "True airspeed chart for a piston aeroplane: outside air
-    temperature vs pressure altitude vs power setting 45-100%, mid cruise mass
-    4450 lb, example OAT 13 °C, PA 16500 ft, 55% power gives TAS 172 kt"
-  format: webp
   source: ""
 - id: 033-flight-log-fuel-monitoring-table-02
   description: "Flight log fuel monitoring table: waypoints ALPHA, BRAVO, CHARLIE,
@@ -2425,7 +2331,7 @@
     (GS 435 kt, distance 185 NM, 25 min, fuel 39.0 - 36.5 = 2.5 tonnes); columns
     WAYPOINT, MORA, AVTT, SPD, GS/TAS, FL/TP, TMP, R/DST, MIN, ACC, ETO/ATO,
     RF/AFU with abbreviation definitions"
-  format: webp
+  format: svg
   source: ""
 - id: 033-long-range-cruise-table-two-engine-jet-aeroplane
   description: "Long Range Cruise table, two engine jet aeroplane: pressure
@@ -2437,7 +2343,7 @@
   description: "0.74 Mach cruise trip graph (based on 280/0.74 climb, 0.74/250
     descent): trip distance NM, wind, pressure altitude, ISA deviation and
     landing weight to trip time and fuel required"
-  format: webp
+  format: svg
   source: ""
 - id: 033-mrjt-long-range-cruise-table-pressure-altitude-28000-ft
   description: "Long Range Cruise table, pressure altitude 28,000 ft: gross weight
@@ -2456,14 +2362,14 @@
   description: "Integrated Cruise table, M.80 OPT, ISA, CG 37.0%: weight 174-218
     (1000 kg) vs distance (NM) and time (min), TAS 459-461 kt, with fuel
     corrections for pack flow and anti-ice"
-  format: webp
+  format: svg
   source: ""
 
 - id: 033-operational-flight-plan-header-easa02-gvac-egcc-a321-02feb2020
   description: "Operational flight plan header EASA02 GVAC-EGCC A321 02FEB2020:
     M.77 cruise, ground distance 2516, air distance 2705, avg wind 349.035, avg
     FF 2969 kg/h, fuel bias, reduced contingency fuel flight"
-  format: webp
+  format: svg
   source: ""
 - id: 033-data-sheet-lrjt-1-flight-planning-fuel-tanking-integrated-cruise
   description: "Data sheet LRJT 1 (033-045) Flight Planning Fuel Tanking,
@@ -2519,7 +2425,7 @@
   format: webp
   source: ""
 - id: 033-data-sheet-lrjt-1-flight-planning-ground-distance-air-distance
-  description: "Data sheet LRJT 1 (033-053) Flight Planning Ground Distance/Air
+  description: "Data sheet LRJT 1 Flight Planning Ground Distance/Air
     Distance, long range cruise above FL250: ground distance 10-10000 NM vs air
     distance for tailwind +150 to headwind -150 kt wind component"
   format: svg
@@ -2528,19 +2434,7 @@
   description: "NOTAM page with five NOTAMs: A1557/14 OMAL cranes, A7408/14 LIRA
     Rome frequency change, A8236/14 LIRF taxiway C closed, B1144/14 LGKV Kavala
     hours of service, H5669/14 YSSY taxiway restrictions"
-  format: webp
-  source: ""
-- id: 033-notam-lffa-a6768-14-notamr
-  description: "NOTAM LFFA A6768/14 NOTAMR: LFBO Toulouse-Blagnac LNAV RWY 32R
-    minima changed, OCH 428, MDA(H) 930 (430) and RVR by category A-D and DL,
-    ref AD2 LFBO IAC 18"
-  format: webp
-  source: ""
-- id: 033-notam-r0201-15-notamn-lfff
-  description: "NOTAM R0201/15 NOTAMN LFFF: temporary restricted area (ZRT) 2.7 NM
-    radius near Melun (LFPM) for unmanned aircraft experiment, SFC to 500 ft
-    AGL, entry conditions, Seine Info and Paris Info frequencies"
-  format: webp
+  format: svg
   source: ""
 - id: 033-icao-doc-4444-16th-edition-2016-flight-plan-item-10
   description: "ICAO Doc 4444 16th Edition 2016, Flight plan Item 10: Equipment
@@ -2554,14 +2448,14 @@
     MARU1M MARUN Y150 TOLGI Z90 DLE UL19 NOLGO NOLGO1A, destination EDDH, EET
     0043, alternate EDDW, Item 18 EET/EDUU0010 EDV0018 EDWW0034 REG/DAISR
     OPR/DLH DOF/120105"
-  format: webp
+  format: svg
   source: ""
 - id: 033-icao-flight-plan-form-filled-in-01
   description: "ICAO flight plan form filled in: TETAVI3 PA42 (M) VFR flight EFHK
     1340 to EHAM, N0220 F100, EET 0135, Item 18 PBN/B202 DOF/141113 REF/OHBDA
     OPR/TETAVIA; endurance 0350, 6 persons on board, white with blue tail, pilot
     Schultz"
-  format: webp
+  format: svg
   source: ""
 
 - id: 033-icao-flight-plan-form-filled-in-02
@@ -2569,7 +2463,7 @@
     aviation from EFJY 1030 to EFPO, N0120 A020, route KUOHU HAAVI EFHA TALVI
     YLOJARVI, EET 0145, touch and go EFHA, endurance 0300, 3 persons on board,
     white red, pilot M Eskelinen"
-  format: webp
+  format: svg
   source: ""
 - id: 033-flight-log-fuel-planning-form-with-stages-a-toc-b
   description: "Flight log / fuel planning form with stages A-TOC-B-C-D at FL40:
@@ -2633,7 +2527,7 @@
   description: "Integrated Cruise table, long range (LR) FL250, ISA, CG 30.0%:
     weight 126-172 (1000 kg) vs distance (NM) and time (min), TAS 356-376 kt,
     fuel corrections for pack flow and anti-ice"
-  format: webp
+  format: svg
   source: ""
 - id: 033-navigation-log-ok-thy-dep-to-dest-with-alternate-altn
   description: "Navigation log OK-THY DEP to Dest with alternate ALTN (elevation
@@ -2688,7 +2582,7 @@
     OSBIT, KEMES, LAMSI, Vienna FIR LOVV, Budapest FIR LHCC, SASAL, Beograd UIR
     LYBA, BABIT, NISVA with lat/long, EET, ETO/ATO, TAS, GS, wind, OAT,
     EFOB/AFOB (tonnes) and legends"
-  format: webp
+  format: svg
   source: ""
 - id: 033-flight-log-excerpt-02
   description: "Flight log excerpt (033-125): waypoints ALPHA, BETA, GAMMA, DELTA
@@ -2728,7 +2622,7 @@
     inner tank, inner tank division, vent tank, trim tank; usable fuel table in
     litres, US gallons, kg and lb (total 97530 l, 25764 US gal, 76561 kg, 168788
     lb; fuel specific gravity 0.785)"
-  format: webp
+  format: svg
   source: ""
 - id: 033-excerpt-from-flight-log-04
   description: "Excerpt from flight log: waypoints ALPHA, BETA, GAMMA, DELTA with
@@ -2755,30 +2649,18 @@
     remaining fuel 5690, 5200, 4850 kg"
   format: svg
   source: ""
-- id: 033-fuel-tank-layout-diagram-wing-with-centre-tank
-  description: "Fuel tank layout diagram, wing with centre tank: outer, inner,
-    centre and vent tanks; usable fuel table (total 23858 litres, 6302 US gal,
-    18728 kg, 41285 lb; fuel density 0.785 kg/l or 6.551 lb/US gal)"
-  format: webp
-  source: ""
 - id: 033-fuel-penalty-factors-text-and-table
   description: "Fuel penalty factors text and table: methodology for adding
     penalty factors, flaps extended 80%, slats extended 60%, flaps and slats
     100%, landing gear not retracted 180%, gear doors extended 15%, 1/2/3
     spoilers per wing 10%, 20%, 55%"
-  format: webp
-  source: ""
-- id: 033-fuel-tank-layout-diagram-01
-  description: "Fuel tank layout diagram (duplicate scan): outer, inner, trim and
-    vent tanks, inner tank division; usable fuel table total 97530 litres, 25764
-    US gal, 76561 kg, 168788 lb"
-  format: webp
+  format: svg
   source: ""
 - id: 033-alternate-airports-table-with-legend
   description: "Alternate airports table with legend (APT, TRK, DST, FL, WC, TIME,
     FUEL): ESNU/14 track 195 dist 144 FL160, EFOU/12 track 106 dist 109 FL150,
     EFRO/21 track 042 dist 126 FL150, with time and fuel in kg"
-  format: webp
+  format: svg
   source: ""
 - id: 033-flight-log-excerpt-03
   description: "Flight log excerpt (033-124): waypoints ALPHA, BETA, GAMMA, DELTA
@@ -2797,13 +2679,7 @@
     EFOB, AFOB): DCT TESGA, OSBIT, KEMES, LAMSI, Vienna FIR LOVV, Budapest FIR
     LHCC, SASAL, Beograd UIR LYBA, BABIT, NISVA with lat/long, FL, IMT, Mach,
     TAS, GS, wind component, OAT, EFOB tonnes"
-  format: webp
-  source: ""
-- id: 033-fuel-tank-layout-diagram-02
-  description: "Fuel tank layout diagram (large twin-aisle aircraft): outer,
-    inner, trim and vent tanks, inner tank division; usable fuel table total
-    97530 litres, 25764 US gal, 76561 kg, 168788 lb"
-  format: webp
+  format: svg
   source: ""
 - id: 033-completed-vfr-flight-log-d-easa-lpfr-to-lemg-03
   description: "Completed VFR flight log D-EASA LPFR to LEMG, 03.05.2021: ATC
@@ -2962,7 +2838,7 @@
     highs 1033, 1040, 1011, line A to B
   format: webp
   source: ""
-- id: 050-weather-fronts-diagram-warm-front-and-cold-front-meeting-labels
+- id: 050-weather-fronts-warm-cold-junction
   description: Weather fronts diagram, warm front (red semicircles) and cold front
     (blue triangles) meeting, labels A, B, C, D on either side of fronts
   format: webp
@@ -3256,14 +3132,6 @@
     Dakar-Recife (great circle routes, distance)
   format: webp
   source: ""
-- id: 050-map-atlantic-africa-and-europe-60w-to-120e-arctic-circle-01
-  description: Map Atlantic, Africa and Europe 60W to 120E, Arctic Circle,
-    Tropics, Equator, cities Bermuda, Azores, Lisbon, Stockholm, Rome, Dakar,
-    Freetown, Recife, Rio de Janeiro, Nairobi, routes Bermuda-Azores,
-    Lisbon-Freetown, Rome-Nairobi, Dakar-Rio de Janeiro (great circle distance
-    and track)
-  format: webp
-  source: ""
 - id: 050-globe-diagram-north-pole-with-latitude-bands-60-30-0
   description: Globe diagram North Pole with latitude bands 60, 30, 0, 30, 60 and
     zones labelled T, U, V, W, X, Y (general circulation, pressure belts and
@@ -3392,7 +3260,7 @@
     streets. Cloud to ground lightning, thunderstorm
   format: webp
   source: ""
-- id: 050-weather-radar-display-on-navigation-display-ils31r-approach-gs-305
+- id: 050-weather-radar-nd-ils31r-gs-305
   description: Weather radar display on navigation display (ND), ILS31R approach,
     GS 305, TAS 306, wind 210/15, LARKO waypoint, 49 NM, range arcs 10 and 15
     NM, heading 300. Red, yellow and green storm return ahead on track, GPS
@@ -3444,21 +3312,21 @@
     Gulf of Mexico. Satellite imagery interpretation, visible and infrared"
   format: webp
   source: ""
-- id: 050-aircraft-weather-radar-on-navigation-display-ils31r-gs-277-tas
+- id: 050-weather-radar-nd-ils31r-gs-277
   description: Aircraft weather radar on navigation display, ILS31R, GS 277, TAS
     277, wind 120/35, range 201 NM, 09:39, range arcs 40 and 60 NM, BP030
     waypoint. Green, yellow and red returns, two storm cells ahead. Weather
     radar interpretation, thunderstorm avoidance
   format: webp
   source: ""
-- id: 050-aircraft-weather-radar-display-with-two-pink-arrows-pointing-at
+- id: 050-weather-radar-nd-storm-cells-marked
   description: Aircraft weather radar display with two pink arrows pointing at red
     and yellow cells within green returns, headings 14 to 21, GS 445, wind
     120/35, range arcs 40 and 60 NM. Weather radar interpretation, thunderstorm
     cells with strong returns, avoid red areas
   format: webp
   source: ""
-- id: 050-ground-weather-radar-image-of-a-large-storm-colours-from
+- id: 050-weather-radar-ground-severe-storm
   description: Ground weather radar image of a large storm, colours from blue and
     green to yellow, red and a pink or purple core. Strong reflectivity, severe
     thunderstorm, hail core. Radar echo intensity interpretation
@@ -3480,7 +3348,7 @@
   description: "CAA page 13 Runway State Group in METAR/SPECI, eight figure group:
     (a) runway designator, (b) runway deposits, (c) extent of contamination, (d)
     depth of deposit, (e) friction coefficient or braking action. CLRD, SNOCLO"
-  format: webp
+  format: svg
   source: ""
 - id: 050-surface-pressure-europe-050-020
   description: Surface pressure chart of Europe, 1200 UTC, reference 050-020. Low
@@ -3530,13 +3398,55 @@
     weather at LSZH
   format: webp
   source: ""
-- id: 050-four-weather-symbols-numbered-1-to-4-01
-  description: "Four weather symbols numbered 1 to 4: arc with three vertical
-    lines, snow asterisk, inverted triangle (shower) and mountain wave symbol.
-    Weather and phenomena symbols"
-  format: webp
+- id: 050-weather-chart-symbols
+  description: Eleven numbered weather chart symbols
+  format: svg
   source: ""
-- id: 050-ground-weather-radar-image-of-iowa-and-illinois-area-green
+- id: 050-weather-chart-symbols-01
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-02
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-03
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-04
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-05
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-06
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-07
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-08
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-09
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-10
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-chart-symbols-11
+  description: Weather chart symbol
+  format: svg
+  source: ""
+- id: 050-weather-radar-ground-iowa-illinois
   description: Ground weather radar image of Iowa and Illinois area (Waterloo,
     Clinton, Davenport, Ottumwa, Quincy, Saint Louis), green rain bands with
     yellow and orange cells, red X marking a storm south-east near the line of
@@ -3560,7 +3470,7 @@
     the warm sector"
   format: webp
   source: ""
-- id: 050-aircraft-weather-radar-on-navigation-display-trk-227-mag-gs
+- id: 050-weather-radar-nd-trk-227
   description: Aircraft weather radar on navigation display, TRK 227 MAG, GS 250,
     TAS 250, wind 162°/10, BP030, 49 NM, 09:39, range arcs 10 and 15 NM, WX+T,
     TFC, GPS PRIMARY. Green, yellow and red storm cell ahead on track, deviation
@@ -3604,7 +3514,7 @@
     pressure at B"
   format: webp
   source: ""
-- id: 050-weather-radar-image-with-a-hook-echo
+- id: 050-weather-radar-ground-hook-echo
   description: "Weather radar image with a hook echo: green rain area, red and
     yellow core to the north-west, yellow circle around a hook shape near
     Walker, Jefferson also marked. Tornadic storm, thunderstorm radar signature"
@@ -3673,12 +3583,12 @@
     dot on the Iberian peninsula. Weather at the marked point
   format: webp
   source: ""
-- id: 050-met-low-level-forecast-2017-03-12-1400z-01
-  description: Met Office low-level forecast weather below 10000 FT (GAMET style
-    area forecast), valid 121400 to 122300Z MAR 17, fronts valid 121800Z. Chart
-    with areas A, B, C, D, E, F and table of surface visibility and weather,
-    cloud, zero degree level (0 C), wind arrows in KT, issued at 120915Z, F415.
-    Reading area forecast
+- id: 050-met-low-level-forecast-2017-03-12-1400z
+  description: Met Office forecast weather below 10000 FT (low-level chart), valid
+    121400 to 122300Z MAR 17, fronts valid 121800Z, areas A, B, C, D, E, F,
+    table of surface visibility and weather, cloud and zero degree level, with a
+    red line between B and D in area B. Cross-section line B-D and weather along
+    it
   format: webp
   source: ""
 - id: 050-surface-pressure-nw-europe-january
@@ -3686,12 +3596,6 @@
     hPa) west of Ireland with warm front and cold front, isobars 984, 992, 1000,
     1008, 1016, point A over Ireland, 30°W to 10°E, 50°N and 60°N. Wind and
     weather at point A"
-  format: webp
-  source: ""
-- id: 050-four-symbols-numbered-1-to-4
-  description: "Four symbols numbered 1 to 4: asterisk (snow), figure eight (haze
-    or infinity sign), inverted triangle (shower) and upright triangle. Weather
-    symbols identification"
   format: webp
   source: ""
 - id: 050-icao-sigwx-euro-fl100-450-2008-03-01-0000z
@@ -3741,7 +3645,7 @@
     diagram with dashed lines, green diagonal lines and red curves. Lapse rate
     diagram: ISA temperature, dry and saturated adiabats, temperature and
     altitude reading"
-  format: webp
+  format: svg
   source: ""
 - id: 050-met-low-level-sigwx-finland
   description: "Low-level significant weather chart of Finland: warm front, cold
@@ -3764,14 +3668,6 @@
     spread. Fog, low cloud and visibility profile identification"
   format: webp
   source: ""
-- id: 050-met-low-level-forecast-2017-03-12-1400z-02
-  description: Met Office forecast weather below 10000 FT (low-level chart), valid
-    121400 to 122300Z MAR 17, fronts valid 121800Z, areas A, B, C, D, E, F,
-    table of surface visibility and weather, cloud and zero degree level, with a
-    red line between B and D in area B. Cross-section line B-D and weather along
-    it
-  format: webp
-  source: ""
 - id: 050-surface-pressure-nw-europe-two-deep-lows
   description: Surface pressure chart of north-west Europe with two deep lows,
     cold and warm fronts, highs over eastern Europe and the Mediterranean, scale
@@ -3784,12 +3680,6 @@
     the west, low L in the east, isobars 1000 and 1016 hPa, cold front over
     France and the Bay of Biscay, point S over northern England, 30°W to 10°E,
     50°N and 60°N. Wind direction and speed at S"
-  format: webp
-  source: ""
-- id: 050-four-weather-symbols-numbered-1-to-4-02
-  description: "Four weather symbols numbered 1 to 4: asterisk (snow), two
-    horizontal lines (mist), dot with wavy line, figure eight (haze). Weather
-    phenomena symbols identification"
   format: webp
   source: ""
 - id: 050-rsmc-offenbach-wind-temp-fl180-500-2008-03-01-1800z
@@ -3825,12 +3715,8 @@
     chart symbols identification"
   format: webp
   source: ""
-- id: 050-met-office-forecast-weather-below-10000-ft-valid-020200-to
-  description: Met Office forecast weather below 10000 FT, valid 020200 to 021100Z
-    JUL 18, fronts valid 020600Z, areas A, A1, B, B1, C with trough, cold front,
-    warm front, occlusion, L and wind arrows in KT. Table of surface visibility,
-    weather, cloud and zero degree level (0 C), outlook until 021800Z, issued
-    012115Z F215
+- id: 050-met-low-level-forecast-2018-07-02-0200z
+  description: UK Met Office Forecast Weather Below 10,000 ft, valid from 02:00Z to 11:00Z on 2 July 2018
   format: webp
   source: ""
 - id: 050-isobar-pattern-with-two-lows-a-and-b-paris-marked
@@ -3863,12 +3749,6 @@
   description: Surface chart September 6 0600 UTC (050-012), Europe, cold
     front/warm front near UK and France, lows and highs, airports EGLL EDDL EDDF
     LFPO LOWW LIRF LEMD EPWA
-  format: webp
-  source: ""
-- id: 050-uk-met-office-forecast-weather-below-10000-ft-valid-260800
-  description: UK Met Office Forecast Weather below 10000 FT (F215), valid 260800
-    to 261700Z JUL 17, fronts, areas A B C D E A1, surface visibility and
-    weather, cloud, icing, turbulence, OC freezing level table
   format: webp
   source: ""
 - id: 050-wafc-washington-wind-temp-fl240-2021-05-09-0000z
@@ -3923,12 +3803,6 @@
     1031 1019 1028
   format: webp
   source: ""
-- id: 050-weather-symbols-1-4
-  description: "Weather symbols 1-4: three horizontal lines (haze/mist),
-    turbulence/icing style wave symbol, two loops symbol (thunderstorm/squall),
-    tropical cyclone hurricane symbol"
-  format: webp
-  source: ""
 - id: 050-icao-sigwx-euro-fl100-450-2016-02-17-1200z-02
   description: WAFC London SIGWX chart PGDE14 EGRR 161200 Euro FL100-450 valid 12
     UTC 17 Feb 2016, jet streams FL300-FL370, CAT areas 1-9, CB areas,
@@ -3945,25 +3819,13 @@
   description: "Magnetic compass deviation card table: For N 030 060 E 120 150
     steer 358 029 060 088 119 152; For S 210 240 W 300 330 steer 182 209 241 269
     298 332"
-  format: webp
+  format: svg
   source: ""
 - id: 061-flight-navigation-log-f-imai-lfoi-to-sittingbourne-14-3
   description: Flight navigation log F-IMAI LFOI to Sittingbourne 14/3 take-off
     14:17 UTC, legs TOC, Fruges windfarm, Wimereux, M20 Junction, DET VOR,
     Landing site, EGKB, TAS GS track heading wind distance time ETA ATA, safety
     altitude 2100-2400
-  format: webp
-  source: ""
-- id: 061-magnetic-compass-deviation-card-table-02
-  description: "Magnetic compass deviation card table: For N 030 060 E 120 150
-    steer 358 029 060 088 119 152; For S 210 240 W 300 330 steer 182 209 241 269
-    298 332"
-  format: webp
-  source: ""
-- id: 061-flight-plan-log-table-lines-1-6-time-course-track
-  description: Flight plan log table lines 1-6, time, course/track(T), W/V, VAR,
-    positions A-B to L-M, CAS/MACH 210 175 M0.82 M0.78 150 M0.84, FL/OAT,
-    distance 300 480 300 600 275 495 NM, HDG TAS GS blank
   format: webp
   source: ""
 - id: 061-061-11993-a-diagram-of-points-x-y-z-on
@@ -3974,14 +3836,14 @@
 - id: 061-061-600386-navigation-table-time-0023-from-a-to-b
   description: 061-600386 navigation table time 0023, from A to B, distance 50,
     track 090, heading(T) 095, TAS 120, GS 130, wind 225/15
-  format: webp
+  format: svg
   source: ""
 - id: 061-061-9440-a-flight-plan-log-table-lines-1-6
   description: 061-9440 A flight plan log table lines 1-6, time 1015-1355,
     course/track(T) 270 180 090 360 330 070, W/V, VAR, positions A-B to L-M,
     CAS/MACH 210 175 M0.82 M0.78 150 M0.84, FL/OAT, distance 300 480 300 600 275
     495 NM, HDG TAS GS TIME ETA blank
-  format: webp
+  format: svg
   source: ""
 - id: 061-flight-log-non417p-pa-31-310-ec-nda-leal-to-01
   description: Flight log NON417P PA 31-310 EC-NDA LEAL to LFMN 14/3, off block
@@ -4037,14 +3899,6 @@
   description: Waypoint table AA BB CC DD EE, time interval 19 26 08 41 min, total
     time 19 45 53 1:34, TAS 252 256 259 250 kt
   format: svg
-  source: ""
-- id: 061-flight-plan-log-table-lines-1-6-time-10
-  description: Flight plan log table lines 1-6, time 10:15-13:55, course/track(T)
-    270 180 090 360 330 070, W/V 050/40 320/50 140/60 315/70 240/30 020/60, VAR
-    7E 5W 10W 10E 17W 11W, positions A-B to L-M, CAS/MACH 210 175 M0.82 M0.78
-    150 M0.84, FL/OAT, dist 300 480 300 600 275 495 NM, HDG TAS GS TIME ETA
-    blank
-  format: webp
   source: ""
 - id: jeppesen-vfr-chart-18-strasbourg-entzheim
   description: VFR chart Strasbourg area (E007°30' to E008°00', N48°00' to
@@ -4286,11 +4140,6 @@
     to 0, January 23 26 29 and February 1 4 7, times in h m
   format: svg
   source: ""
-- id: 061-sunset-and-evening-civil-twilight-2017-table-october-dates-2
-  description: Sunset and evening civil twilight 2017 table, October dates 2 5 8
-    11 14 17 20, latitudes N72 to S60, times h m
-  format: webp
-  source: ""
 - id: 061-sunrise-and-morning-civil-twilight-table-dec-30-and-january
   description: Sunrise and morning civil twilight table, Dec 30 and January 2 5 8
     11 14 17 20 23 26 29, February 1 4 7 10 13, latitudes N72 to S60, times h/m
@@ -4299,17 +4148,17 @@
 - id: 061-sunset-2017-table-october-2-29-and-november-1-19
   description: Sunset 2017 table, October 2-29 and November 1-19, latitudes N72 to
     S60, times h m
-  format: webp
+  format: svg
   source: ""
 - id: 061-sunrise-and-sunset-tables-november-19-22-25-28-and
   description: Sunrise and sunset tables, November 19 22 25 28 and December 1 4 7
     10 13 16 19 22 25 28 31, January 3, latitudes N72 to S60, times hm
   format: svg
   source: ""
-- id: 061-sunset-and-evening-civil-twilight-tables-october-2-29-and
-  description: Sunset and evening civil twilight tables, October 2-29 and November
+- id: 061-evening-civil-twilight-2017-table-october-2-29-and-november-1-19
+  description: Evening civil twilight 2017 table, October 2-29 and November
     1-19, latitudes N72 to S60, times h/m
-  format: webp
+  format: svg
   source: ""
 - id: 062-frequency-modulated-carrier-wave-diagram-constant-amplitude-with-varying-frequency
   description: Frequency modulated (FM) carrier wave diagram, constant amplitude
@@ -4597,13 +4446,13 @@
     centred, selected courses 150, 060, 300 and 240 respectively
   format: webp
   source: ""
-- id: 062-efis-nd-arc-mode-with-weather-radar-wx-t-trk
+- id: 062-weather-radar-nd-trk-227
   description: EFIS ND arc mode with weather radar WX+T, TRK 227 MAG, GS 250 TAS
     255, wind 162/10, D270J 0738.5Z 6NM, DECEL, RNP 400 ANP 63, VOR1 CLN DME
     59.7 FMCL, ADF 2 NH, C127 waypoint, traffic TFC
   format: webp
   source: ""
-- id: 062-efis-nd-arc-mode-ils31r-gs-305-tas-306-bp030
+- id: 062-weather-radar-nd-ils31r-gs-305
   description: EFIS ND arc mode ILS31R, GS 305 TAS 306, BP030 297 deg 49 NM 09:39,
     weather radar red/yellow/green cell ahead, range arcs 10 and 15, GPS PRIMARY
   format: webp
@@ -4660,31 +4509,31 @@
     225 relative bearing, HI heading about 300 degrees, HDG knob
   format: webp
   source: ""
-- id: 062-weather-radar-blind-alley-diagram-aircraft-between-two-storm-cells
+- id: 062-weather-radar-blind-alley
   description: Weather radar "blind alley" diagram (062-600164), aircraft between
     two storm cells, shadowed storm behind the first cell, radar sweep display
     on the right
   format: webp
   source: ""
-- id: 062-weather-radar-display-wx-on-range-arcs-20-40-60
+- id: 062-weather-radar-nd-range-arcs
   description: Weather radar display, WX ON, range arcs 20 40 60 80 NM,
     precipitation cells green/yellow/red with magenta core, arrows A B C
     pointing to different areas
   format: webp
   source: ""
-- id: 062-weather-radar-control-panel-mode-selector-pws-mode-off-auto
+- id: 062-weather-radar-control-panel
   description: Weather radar control panel, mode selector (WX, WX+T, TURB, MAP),
     PWS mode OFF/AUTO, GAIN knob (MIN CAL MAX), TILT knob (0 5 15 UP/DN), GND
     CTLR SPRS ON/OFF, controls 1 2 3
   format: webp
   source: ""
-- id: 062-efis-nd-arc-mode-hdg-121-m-range-27-5
+- id: 062-weather-radar-nd-hdg-121
   description: EFIS ND arc mode HDG 121 M, range 27.5 NM, time 1222.3z, wind
     110/56, weather cell red/yellow/green, flight plan waypoints BUGLE 1222Z
     CAMPO 1306Z SADIM 1344Z
   format: webp
   source: ""
-- id: 062-efis-nd-arc-mode-hdg-136-m-range-25-5
+- id: 062-weather-radar-nd-hdg-136
   description: EFIS ND arc mode HDG 136 M, range 25.5 NM, time 1335.4z, WX+T +12,
     wind 127/20, waypoints HIJ KLM NOP, weather cell with 40, altitude 2580, 0.5
     L 0.6 R
@@ -4722,13 +4571,13 @@
 - id: 071-air-operator-certificate-template-approval-schedule-for-air-transport-operators
   description: Air Operator Certificate (AOC) template, approval schedule for air
     transport operators, Annex V Regulation (EU) 2018/1139
-  format: webp
+  format: svg
   source: ""
 - id: 071-table-planning-minima-for-the-etops-en-route-alternate-aerodrome
   description: "Table planning minima for the ETOPS en-route alternate aerodrome
     (SPA.ETOPS.115): precision approach DA/H +200 ft, RVR/VIS +800 m;
     non-precision or circling MDA/H +400 ft, RVR/VIS +1500 m"
-  format: webp
+  format: svg
   source: ""
 - id: 071-tables-cat-op-mpa-185-planning-minima-ifr-flights-aeroplanes
   description: Tables CAT.OP.MPA.185 planning minima IFR flights aeroplanes (DEST
@@ -4736,7 +4585,7 @@
     with Aerodrome B (elevation 1180 ft, VOR/DME MDA 1590 ft, circling 1980 ft)
     and Aerodrome C (elevation 250 ft, ILS CAT I DA 1590 ft RVR 1200 m, VOR/DME
     MDA 800 ft, circling 1250 ft)
-  format: webp
+  format: svg
   source: ""
 - id: 071-fms-cdu-position-monitor-page
   description: "FMS CDU POSITION MONITOR page: FMS1 4710.6N/03348.4W, FMS2
@@ -4797,7 +4646,7 @@
     a function of weather conditions and OAT, fluid concentration 100/0 75/25
     50/50, freezing fog, snow, freezing drizzle, light freezing rain, rain on
     cold soaked wing, times in hours:minutes, LOUT
-  format: webp
+  format: svg
   source: ""
 - id: 071-dangerous-goods-list-extract
   description: "Dangerous goods list extract: lithium hypochlorite mixture UN 1471
@@ -4831,13 +4680,6 @@
     symbol, white diamond with number 6
   format: webp
   source: ""
-- id: 071-take-off-speeds-wet-runway-table-mass-70000-kg-flaps-01
-  description: "Take-off speeds (knots) wet runway table, mass 70000 kg, flaps 5
-    10 15 25, V1 VR V2 (flaps 5: 129 138 148; flaps 10: 124 135 145; flaps 15:
-    118 124 134; flaps 25: 106 116 125) and landing VREF speed wet runway mass
-    45000 kg, flaps 40 30 15 = 104 106 111"
-  format: webp
-  source: ""
 - id: 071-illustration-of-an-airliner-flying-over-clouds-at-sunset-with
   description: Illustration of an airliner flying over clouds at sunset with an
     orange flight path line and arrow, generic title image
@@ -4850,13 +4692,6 @@
     9.3.3 ammunition max 5 kg per passenger, 9.3.4 commander notified, no
     written record required"
   format: svg
-  source: ""
-- id: 071-take-off-speeds-wet-runway-table-mass-70000-kg-flaps-02
-  description: "Take-off speeds (knots) wet runway table, mass 70000 kg, flaps
-    5/10/15/25 with V1, VR, V2 (flaps 5: 129/138/148; flaps 10: 124/135/145;
-    flaps 15: 118/124/134; flaps 25: 106/116/125); landing VREF wet runway, mass
-    45000 kg, flaps 40/30/15 = 104/106/111"
-  format: webp
   source: ""
 - id: 071-snowtam-0183-essa-02121526
   description: "SNOWTAM 0183 ESSA 02121526: runways 01L, 01R, 08 with runway
@@ -4885,7 +4720,7 @@
     label/classification vs 1 excl. 1.4S, 1.4S, 2, 3, 4.2, 4.3, 5.1; X means
     segregation required, - no segregation, notes on 1.4S special provisions
     (e.g. class 3 and 4.2 segregated from 5.1; class 4.2 vs 5.1 and 3 X)
-  format: webp
+  format: svg
   source: ""
 - id: 071-graph-aeroplane-pressure-altitude-vs-cabin-altitude-altimeter-and-cabin
   description: Graph Aeroplane Pressure Altitude vs Cabin Altitude (x1000 ft),

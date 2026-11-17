@@ -185,7 +185,7 @@
     - BGS-331353
     - AVEXAM-30646
   annexes:
-    - 033-short-trip-simplified-fuel-and-time-planning-graph
+    - 033-simplified-flight-planning-short-trip-fuel-and-time
   learningObjectives:
     - 033.03.03.01.02
   template:
@@ -501,7 +501,7 @@
     - BGS-331012
     - AVEXAM-12213
   annexes:
-    - 033-true-airspeed-chart-piston-aeroplane-02
+    - CAP-697-page-30
   learningObjectives:
     - "033.03"
   template:
@@ -3250,8 +3250,8 @@
   template:
     type: chart-calculation
     question: >-
-      Refer to the figure (annex 033-036 and 033-038). Assuming the following
-      data:
+      Refer to the attached figures, including annex 033-038. Assuming the
+      following data:
 
 
       - Ground distance to be covered: {{distance}} NM
@@ -3677,7 +3677,7 @@
     - ATPLQ-339723
     - BGS-331304
   annexes:
-    - 033-piston-aeroplane-cruise-power-table-25-0-in-hg-or
+    - CAP-697-page-18
   learningObjectives:
     - 033.03.01.01.02
   template:
@@ -6940,7 +6940,7 @@
     - BGS-330200
     - ATPLQ-333255
   annexes:
-    - 033-piston-engine-power-setting-table
+    - CAP-697-page-29
   learningObjectives:
     - 033.03.02.05.01
   template:
@@ -7075,8 +7075,8 @@
   template:
     type: chart-calculation
     question: >-
-      Refer to the figure (annex 033-036 and 033-038). Assuming the following
-      data:
+      Refer to the attached figures, including annex 033-038. Assuming the
+      following data:
 
 
       Ground distance to be covered: {{distance}} NM
@@ -8100,7 +8100,7 @@
     - BGS-330257
     - BGS-330264
   annexes:
-    - 033-simplified-flight-planning-long-range-cruise-graph-based-on-280
+    - 033-simplified-flight-planning-long-range-cruise
   learningObjectives:
     - 033.03.02.05.01
   template:
@@ -12167,7 +12167,7 @@
     - AVEXAM-15287
   annexes:
     - CAP-697-page-83
-    - 033-holding-fuel-flow-table
+    - CAP-697-page-49
   learningObjectives:
     - 033.03.02.03.08
   template:
@@ -13745,15 +13745,15 @@
     - ATPLGS-123287
     - BGS-330499
   annexes:
-    - 033-simplified-flight-planning-alternate-long-range-cruise
+    - CAP-697-page-48
   learningObjectives:
     - 033.03.02.02.02
   template:
     type: simple
     question: >-
-      (For this question use annex 033-018 rev. 05.11.2004 or Flight Planning
-      Manual MRJT 1 Figure 4.3.6).   
-       In order to get alternate fuel and time, the twin-jet aeroplane operations manual graph shall be entered with:
+      Refer to CAP 697, Figure 4.3.6.
+
+      In order to get alternate fuel and time, the twin-jet aeroplane operations manual graph shall be entered with:
     explanation: ""
     options:
       - id: OKYTMKG1G
@@ -14650,14 +14650,14 @@
     - AVEXAM-72226
     - BGS-330223
   annexes:
-    - 033-descent-table-m-74-250-kt-ias-and-m-70-01
+    - CAP-697-page-101
+    - CAP-697-page-102
   learningObjectives:
     - 033.03.01.01.08
   template:
     type: simple
     question: >-
-      (For this question use annex 033-031 rev. 05.11.2004 or Flight Planning
-      Manual MRJT 1 Figure 4.5.4).   
+      Refer to the CAP 697 descent tables.
 
       Planning an IFR flight from Paris to London for the twin jet aeroplane.
       Given:
@@ -16456,13 +16456,14 @@
     - ATPLQ-335433
     - AVEXAM-13666
   annexes:
-    - 033-descent-table-m-74-250-kt-ias-and-m-70-02
+    - CAP-697-page-101
+    - CAP-697-page-102
   learningObjectives:
     - 033.03.01.01.08
   template:
     type: simple
     question: >-
-      Refer to figure.
+      Refer to the CAP 697 descent tables.
 
 
       Planning an IFR flight from Paris to London for the twin jet aeroplane.
