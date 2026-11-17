@@ -30,6 +30,13 @@ export const fillTemplate = (
       }
       return choices[Math.round(all[name])] ?? "";
     }
+    if (raw.startsWith("pad:")) {
+      const name = raw.slice(4).trim();
+      if (!Object.hasOwn(all, name)) {
+        throw new Error(`Unknown placeholder "${name}"`);
+      }
+      return String(Math.round(all[name])).padStart(3, "0");
+    }
     if (raw.startsWith("f:")) {
       return formulaToMathMl(raw.slice(2), { labels: context.labels });
     }

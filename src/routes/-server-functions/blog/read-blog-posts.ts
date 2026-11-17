@@ -14,14 +14,9 @@ export const readBlogPosts = () =>
     .map(([file, source]) => {
       const id = file.split("/").at(-2) ?? "";
       const cover = COVERS.find((path) => path.split("/").at(-2) === id);
-      const imageBaseUrl = import.meta.env.DEV
-        ? "/local-blog"
-        : `${process.env.SUPABASE_URL}/storage/v1/object/public/chair-flight/blog`;
       return {
         ...parseBlogPost(id, source),
-        image: cover
-          ? `${imageBaseUrl}/${id}/${cover.split("/").at(-1)}`
-          : null,
+        image: cover ? `/content/blog/${id}/${cover.split("/").at(-1)}` : null,
       };
     })
     .sort((a, b) => b.date.localeCompare(a.date));

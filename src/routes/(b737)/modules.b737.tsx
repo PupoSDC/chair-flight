@@ -123,7 +123,10 @@ const ModuleB737Layout: FC = () => {
             </svg>
           </div>
           <B737Front className="aircraft-module-outline" />
-          <div className="h-full overflow-auto overscroll-none">
+          <div
+            data-scroll-reset
+            className="h-full overflow-auto overscroll-none"
+          >
             <Outlet />
           </div>
         </div>

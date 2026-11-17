@@ -183,6 +183,16 @@ const pullAtpl = async () => {
     db.select().from(atplQuestionsToAnnexes),
   ]);
   const restoreAnnexLinks = createAnnexLinkRestorer(annexes);
+  const restoreOptionAnnexes = (template: QuestionTemplate) =>
+    template.type === "definition"
+      ? {
+          ...template,
+          options: template.options.map((option) => {
+            const annex = annexes.find(({ href }) => href === option.annex);
+            return annex ? { ...option, annex: annex.id } : option;
+          }),
+        }
+      : template;
 
   await writeYaml(
     path.join(root, "content", "subjects.yaml"),
@@ -264,7 +274,7 @@ const pullAtpl = async () => {
           learningObjectives:
             learningObjectivesByQuestion.get(question.id) ?? [],
           template: {
-            ...question.template,
+            ...restoreOptionAnnexes(question.template),
             explanation: restoreAnnexLinks(question.template.explanation),
           },
         })),

@@ -32,6 +32,7 @@ export type QuestionTemplate =
       options: {
         id: string;
         term: string;
+        annex?: string;
         definition: string;
       }[];
       fakeOptions: {
@@ -58,19 +59,30 @@ export type QuestionTemplate =
         label: string;
         unit: string;
       }[];
-      answer: {
+      answer?: {
         formula: string;
         unit: string;
         decimals: number;
         format?: string;
+        optionText?: string;
+        second?: {
+          formula: string;
+          unit: string;
+          decimals: number;
+          format?: string;
+        };
       };
-      distractors: {
+      distractors?: {
         id: string;
         formula: string;
+        second?: string;
       }[];
       presets: {
         id: string;
         values: Record<string, number>;
+        answer?: string;
+        wrongAnswers?: string[];
+        explanation?: string;
       }[];
     }
   | {
@@ -100,18 +112,43 @@ export type QuestionTemplate =
         unit: string;
       }[];
       chartInputs: string[];
-      answer: {
+      answer?: {
         formula: string;
         unit: string;
         decimals: number;
         format?: string;
+        optionText?: string;
+        second?: {
+          formula: string;
+          unit: string;
+          decimals: number;
+          format?: string;
+        };
       };
-      distractors: {
+      distractors?: {
         id: string;
         formula: string;
+        second?: string;
       }[];
       presets: {
         id: string;
         values: Record<string, number>;
+        answer?: string;
+        wrongAnswers?: string[];
+        explanation?: string;
+      }[];
+    }
+  | {
+      type: "mrjt";
+      question: string;
+      explanation: string;
+      given: string[];
+      answer: string;
+      presets: {
+        id: string;
+        values: Record<string, number>;
+        answer?: string;
+        wrongAnswers?: string[];
+        explanation?: string;
       }[];
     };

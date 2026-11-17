@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { createPortal } from "react-dom";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import rehypeRaw from "rehype-raw";
@@ -6,6 +8,9 @@ import remarkMath from "remark-math";
 import { getHighlightRegExp } from "../../../base/get-highlight-reg-exp";
 import { useSearchWords } from "../../hooks/use-search-words";
 import { cn } from "../../utils/cn";
+import { BuffetOnsetChart } from "../question-bank/annex-buffet-onset-chart";
+import { AnnexModal } from "../question-bank/annex-modal";
+import { MrjtLoadTrimSheet } from "../question-bank/annex-mrjt-load-trim-sheet";
 import type { FC } from "react";
 
 type HastNode = {
@@ -41,6 +46,40 @@ const rehypeHighlight = (words: string[]) => () => (tree: HastNode) => {
   tree.children = tree.children?.flatMap((child) => markNode(pattern, child));
 };
 
+const MarkdownImage: FC<{
+  src?: string;
+  alt?: string;
+}> = ({ src = "", alt = "" }) => {
+  const [expanded, setExpanded] = useState(false);
+  const [file, query] = src.split("?");
+  const buffet = file.endsWith("buffet-onset-boundary-chart.svg");
+  if (!buffet && !file.endsWith("031-mrjt-load-trim-sheet.svg")) {
+    return <img src={src} alt={alt} />;
+  }
+  const fields = Object.fromEntries(new URLSearchParams(query));
+  return (
+    <>
+      <button
+        type="button"
+        aria-label="Expand annex"
+        className="block w-full cursor-zoom-in border-0 bg-transparent p-0"
+        onClick={() => setExpanded(true)}
+      >
+        {buffet ? (
+          <BuffetOnsetChart fields={fields} className="border border-rule" />
+        ) : (
+          <MrjtLoadTrimSheet fields={fields} className="border border-rule" />
+        )}
+      </button>
+      {expanded &&
+        createPortal(
+          <AnnexModal href={src} onClose={() => setExpanded(false)} />,
+          document.body,
+        )}
+    </>
+  );
+};
+
 export const Markdown: FC<{
   children: string;
   className?: string;
@@ -55,6 +94,7 @@ export const Markdown: FC<{
           ...(words.length > 0 ? [rehypeHighlight(words)] : []),
           rehypeKatex,
         ]}
+        components={{ img: MarkdownImage }}
       >
         {children}
       </ReactMarkdown>

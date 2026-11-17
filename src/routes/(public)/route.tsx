@@ -1,8 +1,14 @@
-import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
+import {
+  createFileRoute,
+  Link,
+  Outlet,
+  useMatches,
+} from "@tanstack/react-router";
 import { ButtonIconLink } from "../../libs/ui/components/base/button-icon-link";
 import { ThemeToggle } from "../../libs/ui/components/base/theme-toggle";
 import { Wordmark } from "../../libs/ui/components/base/wordmark";
 import { AccountButton } from "../../libs/ui/components/community/account-button";
+import { ChevronRightIcon } from "../../libs/ui/icons/chevron-right-icon";
 import { GithubIcon } from "../../libs/ui/icons/github-icon";
 import { PropellerFront } from "../../libs/ui/outlines/propeller-front";
 import { TurbofanFront } from "../../libs/ui/outlines/turbofan-front";
@@ -70,57 +76,88 @@ const PublicBlueprintBackground: FC = () => {
   );
 };
 
-const PublicLayout: FC = () => (
-  <div className="home-page relative isolate flex h-dvh flex-col overflow-hidden text-ink">
-    <PublicBlueprintBackground />
-    <header
-      className={cn(
-        "relative z-20 flex h-12 flex-none items-center gap-6 border-b",
-        "border-rule bg-paper/80 pr-4 pl-2 backdrop-blur",
-      )}
-    >
-      <Wordmark />
-      <Link
-        to="/blog"
-        className="text-sm text-muted no-underline hover:text-accent"
+const PublicLayout: FC = () => {
+  const postMatch = useMatches().find(
+    (match) => match.routeId === "/(public)/blog/$postId",
+  );
+  const postTitle = (postMatch?.loaderData as { title?: string } | undefined)
+    ?.title;
+
+  return (
+    <div className="home-page relative isolate flex h-dvh flex-col overflow-hidden text-ink">
+      <PublicBlueprintBackground />
+      <header
+        className={cn(
+          "relative z-20 flex h-12 flex-none items-center gap-6 border-b",
+          "border-rule bg-paper/80 pr-4 pl-2 backdrop-blur",
+        )}
       >
-        Blog
-      </Link>
-      <span className="flex-1" />
-      <div className="flex items-center gap-1">
-        <ButtonIconLink
-          to="."
-          href="https://github.com/PupoSDC/chair-flight"
-          target="_blank"
-          rel="noreferrer"
-          icon={GithubIcon}
-          label="GitHub"
-        />
-        <ThemeToggle />
-        <AccountButton variant="header" />
-      </div>
-    </header>
-    <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain">
-      <div className="flex flex-1 flex-col">
-        <Outlet />
-      </div>
-      <footer className="flex flex-none justify-center gap-5 px-4 py-4 text-xs">
-        <Link to="/about" className="text-accent no-underline hover:underline">
-          About
-        </Link>
-        <Link to="/terms" className="text-accent no-underline hover:underline">
-          Terms of service
-        </Link>
-        <Link
-          to="/privacy"
-          className="text-accent no-underline hover:underline"
+        <Wordmark logoOnly={Boolean(postTitle)} />
+        <nav
+          aria-label="Breadcrumb"
+          className="flex min-w-0 items-center gap-1.5 text-sm"
         >
-          Privacy
-        </Link>
-      </footer>
+          <Link
+            to="/blog"
+            className="text-muted no-underline hover:text-accent"
+          >
+            Blog
+          </Link>
+          {postTitle && (
+            <>
+              <ChevronRightIcon size={14} className="flex-none text-muted" />
+              <span className="truncate text-ink">{postTitle}</span>
+            </>
+          )}
+        </nav>
+        <span className="flex-1" />
+        <div className="flex items-center gap-1">
+          <ButtonIconLink
+            to="."
+            href="https://github.com/PupoSDC/chair-flight"
+            target="_blank"
+            rel="noreferrer"
+            icon={GithubIcon}
+            label="GitHub"
+          />
+          <ThemeToggle />
+          <AccountButton variant="header" />
+        </div>
+      </header>
+      <div
+        data-scroll-reset
+        className={cn(
+          "flex min-h-0 flex-1 flex-col overflow-y-auto",
+          "overscroll-contain",
+        )}
+      >
+        <div className="flex flex-1 flex-col">
+          <Outlet />
+        </div>
+        <footer className="flex flex-none justify-center gap-5 px-4 py-4 text-xs">
+          <Link
+            to="/about"
+            className="text-accent no-underline hover:underline"
+          >
+            About
+          </Link>
+          <Link
+            to="/terms"
+            className="text-accent no-underline hover:underline"
+          >
+            Terms of service
+          </Link>
+          <Link
+            to="/privacy"
+            className="text-accent no-underline hover:underline"
+          >
+            Privacy
+          </Link>
+        </footer>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export const Route = createFileRoute("/(public)")({
   component: PublicLayout,

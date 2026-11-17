@@ -20,8 +20,8 @@
     "script:seed-database:local": "node --env-file=.env.local src/tools/seed-database.ts",
     "script:pull-database": "node --env-file-if-exists=.env src/tools/pull-database.ts",
     "script:pull-database:local": "node --env-file=.env.local src/tools/pull-database.ts",
-    "script:upload-blog-images": "node --env-file-if-exists=.env src/tools/upload-blog-images.ts",
-    "script:import-learning-objectives": "node src/tools/import-learning-objectives.ts"
+    "script:import-learning-objectives": "node src/tools/import-learning-objectives.ts",
+    "script:draw-surface-charts": "node src/tools/draw-surface-charts.ts"
   },
   "dependencies": {
     "@fontsource/figtree": "^5.3.0",

@@ -20,14 +20,14 @@ const B737DocsPage: FC = () => {
         </span>
         <h1
           className={cn(
-            "m-0 bg-gradient-to-b from-ink to-accent bg-clip-text text-7xl",
+            "m-0 bg-linear-to-b from-ink to-accent bg-clip-text text-7xl",
             "font-bold tracking-tight text-transparent sm:text-8xl",
           )}
         >
           737
         </h1>
         <p className="text-sm">
-          This is a collection of sudent notes based on the contents of the
+          This is a collection of student notes based on the contents of the
           737-800/8200 FCOM.
         </p>
         <p className="m-0 border-l-4 border-rule pl-3 text-sm text-muted">

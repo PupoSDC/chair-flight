@@ -1,6 +1,7 @@
 import { getMultipleChoiceQuestionForVariantCalculation } from "./get-multiple-choice-question-for-variant-calculation.ts";
 import { getMultipleChoiceQuestionForVariantChart } from "./get-multiple-choice-question-for-variant-chart.ts";
 import { getMultipleChoiceQuestionForVariantDefinition } from "./get-multiple-choice-question-for-variant-definition.ts";
+import { getMultipleChoiceQuestionForVariantMrjt } from "./get-multiple-choice-question-for-variant-mrjt.ts";
 import { getMultipleChoiceQuestionForVariantMultipleCorrect } from "./get-multiple-choice-question-for-variant-multiple-correct.ts";
 import { getMultipleChoiceQuestionForVariantOneTwo } from "./get-multiple-choice-question-for-variant-one-two.ts";
 import { getMultipleChoiceQuestionForVariantSimple } from "./get-multiple-choice-question-for-variant-simple.ts";
@@ -19,6 +20,9 @@ export const getMultipleChoiceQuestion = (
     why: string;
   }[];
   explanation?: string;
+  annexes?: string[];
+  annexFields?: Record<string, string>;
+  explanationAnnexFields?: Record<string, string>;
 } => {
   switch (variant.type) {
     case "simple":
@@ -37,5 +41,7 @@ export const getMultipleChoiceQuestion = (
       return getMultipleChoiceQuestionForVariantCalculation(variant, seed);
     case "calculation":
       return getMultipleChoiceQuestionForVariantCalculation(variant, seed);
+    case "mrjt":
+      return getMultipleChoiceQuestionForVariantMrjt(variant, seed);
   }
 };

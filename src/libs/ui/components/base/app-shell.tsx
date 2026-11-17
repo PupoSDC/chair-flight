@@ -105,6 +105,7 @@ const AppHeader: FC<{ children: ReactNode }> = ({ children }) => (
 
 const AppMain: FC<{ children: ReactNode }> = ({ children }) => (
   <main
+    data-scroll-reset
     className={cn(
       "col-start-1 row-start-2 min-h-0 min-w-0 overflow-auto",
       "overscroll-contain sm:col-start-2",

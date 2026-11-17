@@ -15,19 +15,30 @@ export const getMultipleChoiceQuestionForVariantCalculation = (
       label: string;
       unit: string;
     }[];
-    answer: {
+    answer?: {
       formula: string;
       unit: string;
       decimals: number;
       format?: string;
+      optionText?: string;
+      second?: {
+        formula: string;
+        unit: string;
+        decimals: number;
+        format?: string;
+      };
     };
-    distractors: {
+    distractors?: {
       id: string;
       formula: string;
+      second?: string;
     }[];
     presets: {
       id: string;
       values: Record<string, number>;
+      answer?: string;
+      wrongAnswers?: string[];
+      explanation?: string;
     }[];
     explanation: string;
   },
@@ -39,22 +50,71 @@ export const getMultipleChoiceQuestionForVariantCalculation = (
   const labels = Object.fromEntries(
     variant.variables.map(({ id, label }) => [id, label]),
   );
-  const format = (value: number) => formatAnswerValue(value, variant.answer);
+  const fillValues = (text: string) =>
+    fillTemplate(text, { values: preset.values, labels });
 
-  const answerValue = evaluateFormula(variant.answer.formula, preset.values);
-  const answerText = format(answerValue);
+  if (preset.answer !== undefined || !variant.answer) {
+    const { answer, wrongAnswers = [], explanation } = preset;
+    if (answer === undefined) {
+      throw new Error(`Preset "${preset.id}" has no answer`);
+    }
+    return {
+      question: fillValues(variant.question),
+      explanation: fillValues(explanation ?? variant.explanation),
+      correctOptionId: "answer",
+      options: shuffle([
+        { id: "answer", text: answer, why: "" },
+        ...shuffle(wrongAnswers)
+          .slice(0, MAX_WRONG_OPTIONS)
+          .map((text, index) => ({ id: `wrong-${index + 1}`, text, why: "" })),
+      ]),
+    };
+  }
 
-  const allDistractors = variant.distractors.map(({ id, formula }) => ({
-    id,
-    formula,
-    value: evaluateFormula(formula, preset.values),
-  }));
+  const answerConfig = variant.answer;
+  const format = (value: number) => formatAnswerValue(value, answerConfig);
+
+  const { second } = answerConfig;
+  const formatSecond = (value: number) =>
+    second ? formatAnswerValue(value, second) : "";
+  const unitSuffix = answerConfig.format ? "" : ` ${answerConfig.unit}`;
+  const secondUnitSuffix = second?.format ? "" : ` ${second?.unit}`;
+  const getOptionText = (value: number, secondValue: number) => {
+    if (!second) return `${format(value)}${unitSuffix}`;
+    const firstText = `${format(value)}${unitSuffix}`;
+    const secondText = `${formatSecond(secondValue)}${secondUnitSuffix}`;
+    if (!answerConfig.optionText) return `${firstText}, ${secondText}`;
+    return answerConfig.optionText
+      .replace("{first}", firstText)
+      .replace("{second}", secondText);
+  };
+
+  const answerValue = evaluateFormula(answerConfig.formula, preset.values);
+  const answerSecondValue = second
+    ? evaluateFormula(second.formula, preset.values)
+    : 0;
+  const answerText = getOptionText(answerValue, answerSecondValue);
+
+  const allDistractors = (variant.distractors ?? []).map((distractor) => {
+    const secondFormula = distractor.second ?? second?.formula ?? "";
+    return {
+      id: distractor.id,
+      formula: distractor.formula,
+      secondFormula,
+      value: evaluateFormula(distractor.formula, preset.values),
+      secondValue: second ? evaluateFormula(secondFormula, preset.values) : 0,
+    };
+  });
 
   const wrongOptions = allDistractors
-    .filter(({ value }) => Number.isFinite(value))
-    .filter(({ value }, index, all) => {
-      const text = format(value);
-      const firstIndex = all.findIndex((other) => format(other.value) === text);
+    .filter(({ value, secondValue }) => {
+      return Number.isFinite(value) && Number.isFinite(secondValue);
+    })
+    .filter((distractor, index, all) => {
+      const text = getOptionText(distractor.value, distractor.secondValue);
+      const firstIndex = all.findIndex((other) => {
+        return getOptionText(other.value, other.secondValue) === text;
+      });
       return text !== answerText && firstIndex === index;
     });
 
@@ -68,15 +128,23 @@ export const getMultipleChoiceQuestionForVariantCalculation = (
       values: preset.values,
       labels,
       results,
-      decimals: variant.answer.decimals,
+      decimals: answerConfig.decimals,
       formatResult: format,
     });
 
-  const unitSuffix = variant.answer.format ? "" : ` ${variant.answer.unit}`;
-  const toOption = (id: string, value: number, formula: string) => ({
+  const toOption = (
+    id: string,
+    value: number,
+    formula: string,
+    secondValue: number,
+    secondFormula: string,
+  ) => ({
     id,
-    text: `${format(value)}${unitSuffix}`,
-    why: formulaToMathMl(formula, { values: preset.values }),
+    text: getOptionText(value, secondValue),
+    why: [formula, secondFormula]
+      .filter(Boolean)
+      .map((text) => formulaToMathMl(text, { values: preset.values }))
+      .join(" "),
   });
 
   return {
@@ -84,10 +152,24 @@ export const getMultipleChoiceQuestionForVariantCalculation = (
     explanation: fill(variant.explanation),
     correctOptionId: "answer",
     options: shuffle([
-      toOption("answer", answerValue, variant.answer.formula),
+      toOption(
+        "answer",
+        answerValue,
+        answerConfig.formula,
+        answerSecondValue,
+        second?.formula ?? "",
+      ),
       ...shuffle(wrongOptions)
         .slice(0, MAX_WRONG_OPTIONS)
-        .map(({ id, value, formula }) => toOption(id, value, formula)),
+        .map((wrong) =>
+          toOption(
+            wrong.id,
+            wrong.value,
+            wrong.formula,
+            wrong.secondValue,
+            wrong.secondFormula,
+          ),
+        ),
     ]),
   };
 };

@@ -112,7 +112,7 @@
     - ATPLQ-322133
     - ATPLGS-127644
   annexes:
-    - cap-698-page-63-figure-4.7
+    - CAP-698-page-63
   learningObjectives:
     - "032.04"
   template:
@@ -1739,13 +1739,21 @@
         why: ""
 - id: QAEEHTYZ
   docId: "032.04"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q35MTK4XF
+    - Q4VSNNVLQ
+    - QCMTFBYC
+    - QEDDHTED
+    - QEOPFRUS
+    - QRUQBGNP
+    - QVYOTHHN
+    - QWYDLNSL
+    - QZBA1WOON
   externalIds:
     - ATPLQ-323506
     - BGS-320528
     - ATPLGS-127608
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration-with-example-overlay
+  annexes: []
   learningObjectives:
     - 032.04.03.06.05
   template:
@@ -1759,30 +1767,37 @@
       of the aeroplane is an extended line of thunderstorms. If the 1.4 g buffet
       range is Mach 0.79 to 0.81, which of the following answers is the most
       appropriate operational decision?
-    explanation: ""
+    explanation: |-
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=350&w=128.5&n=1.4)
+
+      At FL350 the 1.4 g buffet range of Mach 0.79 to 0.81 corresponds to a mass of about 128 t. The band is very narrow, so little manoeuvre or turbulence margin is left near thunderstorms.
+
+      Descending to FL330 with the same mass and 1.4 g widens the band to roughly Mach 0.73 to above Mach 0.84.
+
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=330&w=128.5&n=1.4)
     options:
       - id: OEMFKWTUU
         text: Navigate laterally between the thunderstorm cells, limiting the angle of
           bank to no more than 30°, which will ensure a buffet margin of Mach
           0.67 to greater than Mach 0.84.
         correct: false
-        why: ""
+        why: "A 30° bank is 1.15 g, which does give a wide band at FL350, but turbulence near thunderstorms can push the load factor well past that, back towards the narrow 1.4 g band."
       - id: OKPC1URWR
         text: Continue as planned because the threat of stall has already been mitigated
           against by using the 1.4 g buffet margin.
         correct: false
-        why: ""
+        why: "A 1.4 g band of only Mach 0.79 to 0.81 at FL350 is a very small margin, so the threat has not been mitigated."
       - id: O0WANNDMG
         text: Navigate laterally between the thunderstorm cells, ensuring straight and
           level flight at a load factor of 1, which will ensure a buffet margin
           of Mach 0.62 to greater than Mach 0.84.
         correct: false
-        why: ""
+        why: "The 1 g band is wider, but straight and level flight cannot be assured while weaving through thunderstorm cells."
       - id: OCLVSCNVG
         text: Descend to FL330 where the 1.4 g buffet margin is Mach 0.73 to greater
           than Mach 0.84 and navigate laterally between the thunderstorm cells.
         correct: true
-        why: ""
+        why: "At FL330 the 1.4 g band widens to roughly Mach 0.73 to above Mach 0.84."
 - id: QAHFVNDN
   docId: "032.04"
   relatedQuestions: []
@@ -6826,7 +6841,7 @@
     - AVEXAM-64395
     - BGS-320336
   annexes:
-    - cap-698-page-89-figure-4.24
+    - CAP-698-page-89
   learningObjectives:
     - "032.04"
   template:
@@ -10259,7 +10274,7 @@
     - BGS-320671
     - ATPLGS-107521
   annexes:
-    - cap-698-page-57-figure-4.4
+    - CAP-698-page-57
   learningObjectives:
     - 032.04.01.09.03
   template:
@@ -12058,7 +12073,7 @@
     - BGS-320841
     - AVEXAM-89872
   annexes:
-    - jeppesen-airport-chart-10-9-gclp-lpa-gran-canaria-canary
+    - jeppesen-ad-gclp-10-9
   learningObjectives:
     - 032.04.06.03.01
   template:
@@ -14391,7 +14406,7 @@
     - ATPLQ-325420
     - ATPLGS-127626
   annexes:
-    - cap-698-page-52-figure-4.1
+    - CAP-698-page-52
   learningObjectives:
     - "032.04"
   template:

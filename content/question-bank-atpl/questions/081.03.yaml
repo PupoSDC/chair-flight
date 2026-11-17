@@ -99,13 +99,21 @@
         why: ""
 - id: Q35MTK4XF
   docId: "081.03"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q4VSNNVLQ
+    - QAEEHTYZ
+    - QCMTFBYC
+    - QEDDHTED
+    - QEOPFRUS
+    - QRUQBGNP
+    - QVYOTHHN
+    - QWYDLNSL
+    - QZBA1WOON
   externalIds:
     - ATPLQ-817051
     - AVEXAM-56899
     - AVEXAM-69483
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration-with-example-overlay
+  annexes: []
   learningObjectives:
     - "081.03"
   template:
@@ -114,26 +122,33 @@
       Refer to figure.
 
       At a mass of 140 tons:
-    explanation: ""
+    explanation: |-
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=360&w=140&bank=30)
+
+      At 140 t in a level 30 degree bank turn (1.15 g) at FL360, the buffet free range runs from about Mach 0.74 to above Mach 0.84.
+
+      At 1 g the band at FL400 is only about Mach 0.77 to 0.82, and at FL410 the 140 t weight line lies above the buffet boundary at every Mach number.
+
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=410&w=140&n=1)
     options:
       - id: OM5FRRQCG
         text: the buffet free range in 1 g flight at FL400 is from approximately M =
           0.76 to M = 0.835.
         correct: false
-        why: ""
+        why: "At FL400 and 1 g the band is only about Mach 0.77 to 0.82."
       - id: O2WQPCIXL
         text: at FL410 buffet free flight is possible at M = 0.80 only.
         correct: false
-        why: ""
+        why: "At FL410 and 140 t there is no buffet free Mach number at all."
       - id: OMXOJV8DN
         text: buffet free flight at 1 g at FL410 is possible.
         correct: false
-        why: ""
+        why: "At FL410 and 140 t the weight line lies above the buffet boundary at every Mach number."
       - id: OSFTCQ76N
         text: the buffet free range in a level 30 degree bank turn at FL360 is from
           approximately M = 0.74 to M = 0.84.
         correct: true
-        why: ""
+        why: "In a 30° bank (1.15 g) at FL360 the band is about Mach 0.74 to above Mach 0.84."
 - id: Q4N4F5ISL
   docId: "081.03"
   relatedQuestions: []
@@ -174,12 +189,20 @@
         why: ""
 - id: Q4VSNNVLQ
   docId: "081.03"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q35MTK4XF
+    - QAEEHTYZ
+    - QCMTFBYC
+    - QEDDHTED
+    - QEOPFRUS
+    - QRUQBGNP
+    - QVYOTHHN
+    - QWYDLNSL
+    - QZBA1WOON
   externalIds:
     - ATPLQ-811595
     - AVEXAM-5334
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration-with-example-overlay
+  annexes: []
   learningObjectives:
     - "081.03"
   template:
@@ -189,24 +212,27 @@
 
       The maximum achievable load factor without buffet onset at FL380 at a mass
       of 90 tons is approximately:
-    explanation: ""
+    explanation: |-
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=380&w=90&m=0.8)
+
+      At FL380 the best margin is at about Mach 0.80, where the buffet boundary is highest. Follow that Mach number up to the FL380 curve, across to the 90 t weight curve, then down to the load factor scale: about 1.75 g (a bank of roughly 55 degrees).
     options:
       - id: OFJ9QY5UO
         text: 2 g at M = 0.80.
         correct: false
-        why: ""
+        why: "At 90 t and FL380, 2 g is beyond the buffet boundary at every Mach number."
       - id: O7RKXEEE2
         text: 1.5 g at M = 0.80.
         correct: false
-        why: ""
+        why: "1.5 g is buffet free, but it is not the maximum."
       - id: O9SDFK7ZF
         text: 1 g at M = 0.80.
         correct: false
-        why: ""
+        why: "1 g is buffet free, but it is not the maximum."
       - id: OXBMPBNSE
         text: 1.75 g at M = 0.80.
         correct: true
-        why: ""
+        why: "At M 0.80 the 90 t weight curve meets the FL380 boundary at about 1.75 g."
 - id: Q56DRU3CH
   docId: "081.03"
   relatedQuestions: []
@@ -1222,8 +1248,10 @@
   relatedQuestions: []
   externalIds:
     - ATPLQ-815180
+    - ATPLQ-815652
+    - BGS-812621
   annexes:
-    - 081-two-aeroplanes-in-side-view-01
+    - 081-two-aeroplanes-in-side-view-02
   learningObjectives:
     - "081.03"
   template:
@@ -1497,11 +1525,19 @@
         why: ""
 - id: QCMTFBYC
   docId: "081.03"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q35MTK4XF
+    - Q4VSNNVLQ
+    - QAEEHTYZ
+    - QEDDHTED
+    - QEOPFRUS
+    - QRUQBGNP
+    - QVYOTHHN
+    - QWYDLNSL
+    - QZBA1WOON
   externalIds:
     - ATPLQ-812566
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration-with-example-overlay
+  annexes: []
   learningObjectives:
     - 081.03.02.02.06
   template:
@@ -1519,28 +1555,18 @@
           - 104 tons.
           - 91 tons for a 45 degree banked turn.
           - 121 tons for a 30 degree banked turn.
-        explanation: >-
-          The maximum mass for buffet onset is read from the buffet onset chart
-          in annex 081-001 at FL400, using the Certification Specifications.
+        explanation: |-
+          ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=400&n=1.3&m=0.8)
 
-
-          **Solution**
-
-
-          Find FL400 on the chart and read the maximum mass at buffet onset:
-          **110 tons**.
-
+          The Certification Specifications require buffet margin up to a load factor of 1.3 g. At FL400 the boundary is highest at about Mach 0.80. Follow that Mach number up to the FL400 curve, across to 1.3 on the load factor scale, then down to the weight curve: about 109 t, which is **110 tons**.
 
           **Why the other answers are wrong**
 
+          - **104 tons.**: too conservative, the 1.3 g limit allows about 109 tons.
 
-          - **104 tons.**: a misreading of the chart value at the same level.
+          - **91 tons for a 45 degree banked turn.**: a 45 degree bank is 1.41 g, not the 1.3 g required.
 
-          - **91 tons for a 45 degree banked turn.**: uses a steeper bank angle
-          than the question asks for.
-
-          - **121 tons for a 30 degree banked turn.**: uses a shallower bank
-          angle than the question asks for.
+          - **121 tons for a 30 degree banked turn.**: a 30 degree bank is 1.15 g, not the 1.3 g required.
 - id: QCNNJGGT
   docId: "081.03"
   relatedQuestions: []
@@ -1830,21 +1856,34 @@
         why: ""
 - id: QEDDHTED
   docId: "081.03"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q35MTK4XF
+    - Q4VSNNVLQ
+    - QAEEHTYZ
+    - QCMTFBYC
+    - QEOPFRUS
+    - QRUQBGNP
+    - QVYOTHHN
+    - QWYDLNSL
+    - QZBA1WOON
   externalIds:
     - ATPLQ-814323
     - AVEXAM-33425
     - AVEXAM-92910
     - ATPLGS-118618
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration-with-example-overlay
+  annexes: []
   learningObjectives:
     - 081.03.02.02.02
   template:
     type: one-two
     question: Refer to figure. Regarding the Buffet Onset Boundary Chart in the
       annex, which of these statements are correct or incorrect?
-    explanation: ""
+    explanation: |-
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?machs=0.75,0.8,0.82)
+
+      Each buffet boundary curve peaks at about Mach 0.80, which is where the buffet free band is widest, so Mach 0.80 gives the optimum margin. Beyond it the curves fall away again, so Mach 0.84 or 0.85 leaves less margin and is suboptimal.
+
+      For a given mass and load factor the buffet free flight levels are those whose curve lies above the weight line. At Mach 0.82 the curves reach higher flight levels than at Mach 0.75, so the maximum altitude is higher at Mach 0.82 than at Mach 0.75.
     firstCorrectStatements:
       - Flying at M = 0.8 provides the optimum margin with respect to buffet
         onset.
@@ -1943,22 +1982,33 @@
         why: ""
 - id: QEOPFRUS
   docId: "081.03"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q35MTK4XF
+    - Q4VSNNVLQ
+    - QAEEHTYZ
+    - QCMTFBYC
+    - QEDDHTED
+    - QRUQBGNP
+    - QVYOTHHN
+    - QWYDLNSL
+    - QZBA1WOON
   externalIds:
     - ATPLQ-813538
     - AVEXAM-33425
     - AVEXAM-68718
     - AVEXAM-92910
     - ATPLGS-118618
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration-with-example-overlay
+  annexes: []
   learningObjectives:
     - 081.03.02.02.06
   template:
     type: one-two
     question: Regarding the Buffet Onset Boundary Chart in the annexe, which of
       these statements are correct or incorrect?
-    explanation: ""
+    explanation: |-
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?machs=0.75,0.8,0.82)
+
+      For a given mass and load factor the buffet free flight levels are those whose curve lies above the weight line. At Mach 0.82 the curves reach higher flight levels than at Mach 0.75, so the maximum altitude is higher at Mach 0.82 than at Mach 0.75.
     firstCorrectStatements:
       - The maximum altitude that can be achieved with respect to buffet onset,
         according to Certification Specifications, is higher at M = 0.82 than at
@@ -4399,8 +4449,10 @@
     - ATPLQ-816525
     - BGS-812450
     - AVEXAM-27010
+    - ATPLQ-819985
+    - AVEXAM-83799
   annexes:
-    - 081-two-aeroplanes-side-view
+    - 081-two-aeroplanes-in-side-view-02
   learningObjectives:
     - "081.03"
   template:
@@ -4413,31 +4465,31 @@
       different design principles. On a manually flown approach, they are
       instructed by ATC to go-around, which requires a change in pitch attitude
       from +2° to approximately +12°, whilst maintaining speed. The pilots in
-      both aeroplanes select full thrust, which makes aeroplane 1...
+      both aeroplanes select full thrust, which makes aeroplane A...
     explanation: ""
     options:
       - id: OBIBAN3E2
-        text: and aeroplane 2 require a pull force to achieve the appropriate attitude
+        text: and aeroplane B require a pull force to achieve the appropriate attitude
           and speed since they are statically stable and resist moving from the
           trimmed position.
         correct: false
         why: ""
       - id: ONQ34D5B9
         text: pitch up, requiring a push force to maintain the climb attitude, while
-          aeroplane 2 requires a pull force to counteract the pitching motion
+          aeroplane B requires a pull force to counteract the pitching motion
           caused by the engines.
         correct: false
         why: ""
       - id: ODA7KXFSW
-        text: and aeroplane 2 pitch up since they are statically speed-stable, requiring
+        text: and aeroplane B pitch up since they are statically speed-stable, requiring
           only small control inputs by the pilots in order to refine the
           appropriate attitude and speed.
         correct: false
         why: ""
       - id: O9TQ20K9C
-        text: accelerate, unless a slight pull force is applied to achieve the climb
-          attitude, while aeroplane 2 requires a push force to prevent
-          over-rotation and speed loss.
+        text: pitch up, requiring a push force to prevent over-rotation and speed
+          loss, while aeroplane B accelerates unless a slight pull force is
+          applied to achieve the climb attitude.
         correct: true
         why: ""
 - id: QMROUXJK
@@ -5705,11 +5757,19 @@
         why: ""
 - id: QRUQBGNP
   docId: "081.03"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q35MTK4XF
+    - Q4VSNNVLQ
+    - QAEEHTYZ
+    - QCMTFBYC
+    - QEDDHTED
+    - QEOPFRUS
+    - QVYOTHHN
+    - QWYDLNSL
+    - QZBA1WOON
   externalIds:
     - ATPLQ-814691
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration
+  annexes: []
   learningObjectives:
     - 081.03.02.02.06
   template:
@@ -5739,31 +5799,22 @@
           - <= FL410; <= M0.68 & >= FL360; >= M0.55
           - <= FL400; <= M0.67 & >= FL380; >= M0.60
           - <= FL410; <= M0.65 & >= FL380; >= M0.60
-        explanation: >-
-          Low speed buffet sets the lowest usable speed at a given mass and bank
-          angle. Find the mass and bank angle on the figure, then read the
-          flight level and Mach limits that keep the aircraft clear of low speed
-          buffet.
+        explanation: |-
+          ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=410&w=100&bank=30)
 
+          A 30 degree bank is 1.15 g. At 100 t and FL410, low speed buffet limits the aeroplane to about Mach 0.70 and above.
 
-          **Solution**
+          ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=380&w=100&bank=30)
 
-
-          For 100 t and a 30 degree bank, the figure gives **<= FL410; <= M0.70
-          & >= FL380; >= M0.65**.
-
+          At FL380 the lower limit drops to about Mach 0.65. The answer is **<= FL410; <= M0.70 & >= FL380; >= M0.65**.
 
           **Why the other answers are wrong**
 
+          - **<= FL410; <= M0.68 & >= FL360; >= M0.55.**: the lower Mach limits are too low, and FL360 gives about Mach 0.61.
 
-          - **<= FL410; <= M0.68 & >= FL360; >= M0.55.**: misreads the Mach
-          limits and the lower flight level.
+          - **<= FL400; <= M0.67 & >= FL380; >= M0.60.**: at FL400 the limit is about Mach 0.68, and at FL380 it is about 0.65.
 
-          - **<= FL400; <= M0.67 & >= FL380; >= M0.60.**: misreads the upper
-          flight level and both Mach limits.
-
-          - **<= FL410; <= M0.65 & >= FL380; >= M0.60.**: misreads the upper
-          Mach limit.
+          - **<= FL410; <= M0.65 & >= FL380; >= M0.60.**: the FL410 limit is about Mach 0.70, and the FL380 limit about 0.65.
 - id: QRZWD01CZ
   docId: "081.03"
   relatedQuestions: []
@@ -6995,14 +7046,22 @@
 - id: QVYOTHHN
   docId: "081.03"
   relatedQuestions:
+    - Q35MTK4XF
+    - Q4VSNNVLQ
+    - QAEEHTYZ
+    - QCMTFBYC
+    - QEDDHTED
+    - QEOPFRUS
     - QOXBSYBY
+    - QRUQBGNP
+    - QWYDLNSL
+    - QZBA1WOON
   externalIds:
     - ATPLQ-816894
     - ATPLGS-118576
     - AVEXAM-85521
     - BGS-810614
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration-with-example-overlay
+  annexes: []
   learningObjectives:
     - 081.03.02.02.06
   template:
@@ -7032,30 +7091,18 @@
           - M = 0.70 to M > 0.84.
           - M = 0.74 to M = 0.84.
           - M = 0.72 to M > 0.84.
-        explanation: >-
-          The buffet free speed range is the band of Mach numbers between the
-          low-speed buffet boundary and the high-speed buffet boundary. Find the
-          mass, bank angle and flight level on the annex, then read both Mach
-          limits from the chart.
+        explanation: |-
+          ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=320&w=100&bank=50)
 
-
-          **Solution**
-
-
-          For 100 tons, a 50 degree bank and FL320, the lower limit is M = 0.65
-          and the upper limit is above M = 0.84. The answer is **M = 0.65 to M >
-          0.84**.
-
+          A 50 degree bank is 1.56 g. At 100 tons and FL320, the 100 t weight line at 1.56 g crosses the FL320 boundary at about Mach 0.65 and stays clear of it up to the end of the chart, so the range is **M = 0.65 to M > 0.84**.
 
           **Why the other answers are wrong**
 
+          - **M = 0.70 to M > 0.84.**: the lower limit is about Mach 0.65, not 0.70.
 
-          - **M = 0.70 to M > 0.84.**: misreads the lower Mach limit.
+          - **M = 0.74 to M = 0.84.**: the lower limit is about Mach 0.65 and the upper limit is above 0.84.
 
-          - **M = 0.74 to M = 0.84.**: misreads both Mach limits.
-
-          - **M = 0.72 to M > 0.84.**: misreads the lower Mach limit by a
-          different amount.
+          - **M = 0.72 to M > 0.84.**: the lower limit is about Mach 0.65, not 0.72.
 - id: QVZBXMZP
   docId: "081.03"
   relatedQuestions: []
@@ -7080,53 +7127,6 @@
         correct: true
         why: ""
       - text: Unusually low indicated airspeed, confirmed on both sets of instruments
-        correct: false
-        why: ""
-- id: QWFP2VTQM
-  docId: "081.03"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-815652
-    - BGS-812621
-  annexes:
-    - 081-two-aeroplanes-side-view
-  learningObjectives:
-    - "081.03"
-  template:
-    type: simple
-    question: >-
-      Refer to figure.
-
-
-      Two airplanes with distinct design configurations are depicted in the
-      illustration. Certain parameters must be taken into consideration in order
-      to certify the aircraft. Which of the following best represents a feature
-      that could need to be incorporated into the designs for the aircraft in
-      order for them to be certified?
-    explanation: ""
-    options:
-      - id: OQUYXGRGY
-        text: Aeroplane 1 requires a stick pusher to prevent the aeroplane from reaching
-          an excessively high AoA as it is likely to display undesirable
-          behaviour during a stall.
-        correct: true
-        why: ""
-      - id: ONKVIN1KT
-        text: Aeroplane 2 requires an automatic trim system since the large pitch-power
-          couple caused by the location of the engines may overcome the
-          authority of the elevator.
-        correct: false
-        why: ""
-      - id: OHXXBZKRK
-        text: Aeroplane 2 requires a fly-by- wire system to control the large
-          destabilising pitch-up moment caused by changing engine thrust,
-          expecially during a go-around.
-        correct: false
-        why: ""
-      - id: O6CQO5SBY
-        text: Aeroplane 1 requires a fly-by-wire system with envelope protection because
-          the design lacks static stability due to the placement of the engines
-          giving an aft CG.
         correct: false
         why: ""
 - id: QWIUJKKK
@@ -7336,13 +7336,21 @@
 - id: QWYDLNSL
   docId: "081.03"
   relatedQuestions:
+    - Q35MTK4XF
+    - Q4VSNNVLQ
+    - QAEEHTYZ
+    - QCMTFBYC
+    - QEDDHTED
     - QEMHUFBF
+    - QEOPFRUS
+    - QRUQBGNP
+    - QVYOTHHN
+    - QZBA1WOON
   externalIds:
     - ATPLQ-816109
     - AVEXAM-56899
     - AVEXAM-69483
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration-with-example-overlay
+  annexes: []
   learningObjectives:
     - 081.03.01.02.07
   template:
@@ -7350,27 +7358,34 @@
     question: |-
       Refer to figure.  
       At a mass of 130 tons:
-    explanation: ""
+    explanation: |-
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=410&w=130&n=1)
+
+      At 130 t and 1 g, the 130 t weight line crosses the FL410 curve at about Mach 0.76 and again at about Mach 0.83, so the buffet free range at FL410 is Mach 0.76 to 0.83.
+
+      In a level 30 degree bank turn (1.15 g) at FL360 the band starts at about Mach 0.71, not 0.75.
+
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=360&w=130&bank=30)
     options:
       - id: OMYMPYNSV
         text: the buffet free range in a level 30 degree bank turn at FL360 is from
           approximately M = 0.75 to M = 0.84.
         correct: false
-        why: ""
+        why: "At 130 t in a 30° bank at FL360 the band starts at about Mach 0.71."
       - id: OSTEHRESD
         text: buffet free flight is possible at M = 0.80 only.
         correct: false
-        why: ""
+        why: "At 130 t and 1 g at FL410 the band is Mach 0.76 to 0.83, not only Mach 0.80."
       - id: OTTV8QNCJ
         text: the buffet free range in 1 g flight at FL410 is from approximately M =
           0.76 to M = 0.83.
         correct: true
-        why: ""
+        why: "At FL410 and 1 g the 130 t weight line gives a band of about Mach 0.76 to 0.83."
       - id: OVMCH54WZ
         text: buffet free flight at 1 g at FL410 is possible without any Mach number
           restriction.
         correct: false
-        why: ""
+        why: "The band is bounded on both sides, so there is a Mach number restriction."
 - id: QWZWSTFT
   docId: "081.03"
   relatedQuestions: []
@@ -7841,21 +7856,34 @@
         why: ""
 - id: QZBA1WOON
   docId: "081.03"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q35MTK4XF
+    - Q4VSNNVLQ
+    - QAEEHTYZ
+    - QCMTFBYC
+    - QEDDHTED
+    - QEOPFRUS
+    - QRUQBGNP
+    - QVYOTHHN
+    - QWYDLNSL
   externalIds:
     - ATPLQ-816079
     - AVEXAM-33425
     - AVEXAM-92910
     - ATPLGS-118618
-  annexes:
-    - buffet-onset-boundary-chart-clean-configuration-with-example-overlay
+  annexes: []
   learningObjectives:
     - 081.03.02.02.02
   template:
     type: one-two
     question: Regarding the Buffet Onset Boundary Chart in the annex which of these
       statements are correct or incorrect?
-    explanation: ""
+    explanation: |-
+      ![Buffet onset boundary chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?machs=0.75,0.8,0.82)
+
+      Each buffet boundary curve peaks at about Mach 0.80, which is where the buffet free band is widest, so Mach 0.80 gives the optimum margin. Beyond it the curves fall away again, so Mach 0.84 or 0.85 leaves less margin and is suboptimal.
+
+      For a given mass and load factor the buffet free flight levels are those whose curve lies above the weight line. At Mach 0.82 the curves reach higher flight levels than at Mach 0.75, so the maximum altitude is higher at Mach 0.82 than at Mach 0.75.
     firstCorrectStatements:
       - Flying at M = 0.84 provides the suboptimal margin with respect to buffet
         onset.

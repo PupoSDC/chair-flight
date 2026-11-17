@@ -1010,7 +1010,7 @@
   externalIds:
     - ATPLQ-313292
   annexes:
-    - cap-696-page-28-figure-4.3
+    - CAP-696-page-28
   learningObjectives:
     - 031.05.02.04.05
   template:
@@ -1395,6 +1395,83 @@
 
       - **{{d4}} lb**: the distance is measured from the current CG instead of
       from the giving hold.
+- id: QMRJTLTS1
+  docId: "031.05"
+  relatedQuestions: []
+  externalIds: []
+  annexes: []
+  learningObjectives:
+    - 031.05.02.03.01
+  template:
+    type: mrjt
+    question: |-
+      Refer to the Load & Trim Sheet.
+
+      The sheet has been partially completed for a flight carrying
+      {{paxMale}} males and {{paxFemale}} females at a standard mass of
+      {{adultMass}} kg each.
+
+      Trip fuel is {{tripFuel}} kg.
+
+      Determine the underload before LMC.
+    explanation: ""
+    given:
+      - dryOperatingMass
+      - takeOffFuel
+      - tripFuel
+      - maxZeroFuelMass
+      - maxTakeOffMass
+      - maxLandingMass
+      - paxMale
+      - paxFemale
+      - baggage1
+      - baggage4
+      - cargo1
+      - cargo4
+    answer: underload
+    presets:
+      - id: sheet-a
+        values:
+          dryOperatingMass: 34900
+          takeOffFuel: 9500
+          tripFuel: 6500
+          maxZeroFuelMass: 51300
+          maxTakeOffMass: 62800
+          maxLandingMass: 52900
+          paxMale: 60
+          paxFemale: 30
+          baggage1: 500
+          baggage4: 670
+          cargo1: 800
+          cargo4: 1700
+      - id: sheet-b
+        values:
+          dryOperatingMass: 35200
+          takeOffFuel: 11200
+          tripFuel: 8300
+          maxZeroFuelMass: 51300
+          maxTakeOffMass: 62800
+          maxLandingMass: 54900
+          paxMale: 72
+          paxFemale: 48
+          baggage1: 640
+          baggage4: 920
+          cargo1: 1100
+          cargo4: 1450
+      - id: sheet-c
+        values:
+          dryOperatingMass: 34500
+          takeOffFuel: 13800
+          tripFuel: 10400
+          maxZeroFuelMass: 51300
+          maxTakeOffMass: 62800
+          maxLandingMass: 54900
+          paxMale: 55
+          paxFemale: 50
+          baggage1: 420
+          baggage4: 880
+          cargo1: 950
+          cargo4: 2100
 - id: QBFHHUJS2
   docId: "031.05"
   relatedQuestions: []
@@ -1509,7 +1586,7 @@
   externalIds:
     - ATPLQ-311117
   annexes:
-    - cap-696-page-34-figure-4.11
+    - CAP-696-page-34
   learningObjectives:
     - 031.05.02.04.02
   template:
@@ -1988,7 +2065,7 @@
     - AVEXAM-96023
     - BGS-310537
   annexes:
-    - cap-696-page-24-figure-3.4
+    - CAP-696-page-24
   learningObjectives:
     - 031.05.02.02.02
   template:
@@ -3909,7 +3986,7 @@
     - AVEXAM-73101
     - BGS-310543
   annexes:
-    - cap-696-page-35-figure-4.12
+    - CAP-696-page-35
   learningObjectives:
     - 031.05.02.03.03
   template:
@@ -4046,7 +4123,7 @@
     - ATPLQ-312003
     - AVEXAM-52511
   annexes:
-    - load-trim-cg-envelope-chart
+    - 031-load-trim-cg-envelope-chart
   learningObjectives:
     - 031.05.02.04.04
   template:
@@ -4319,7 +4396,7 @@
   externalIds:
     - ATPLQ-314856
   annexes:
-    - cap-696-page-28-figure-4.3
+    - CAP-696-page-28
   learningObjectives:
     - 031.05.02.02.02
   template:
@@ -5072,7 +5149,7 @@
     - BGS-310438
     - AVEXAM-3255
   annexes:
-    - cap-696-page-28-figure-4.3
+    - CAP-696-page-28
   learningObjectives:
     - 031.05.02.04.05
   template:
@@ -5187,7 +5264,7 @@
     - ATPLQ-315201
     - AVEXAM-21685
   annexes:
-    - cap-696-page-35-figure-4.12
+    - CAP-696-page-35
   learningObjectives:
     - 031.05.02.04.02
   template:
@@ -5449,7 +5526,7 @@
     - ATPLQ-312573
     - AVEXAM-65028
   annexes:
-    - cap-696-page-20-figure-2.5
+    - CAP-696-page-20
   learningObjectives:
     - 031.05.01.01.01
   template:
@@ -5962,7 +6039,7 @@
     - ATPLQ-314294
     - AVEXAM-33819
   annexes:
-    - cap-696-page-35-figure-4.12
+    - CAP-696-page-35
   learningObjectives:
     - 031.05.02.04.02
   template:
@@ -6672,7 +6749,7 @@
     - ATPLQ-315618
     - AVEXAM-56380
   annexes:
-    - cap-696-page-35-figure-4.12
+    - CAP-696-page-35
   learningObjectives:
     - 031.05.02.04.07
   template:
@@ -7706,7 +7783,7 @@
     - AVEXAM-35933
     - BGS-310559
   annexes:
-    - cap-696-page-35-figure-4.12
+    - CAP-696-page-35
   learningObjectives:
     - 031.05.02.03.01
   template:
@@ -7856,37 +7933,56 @@
   externalIds:
     - ATPLQ-315397
     - BGS-310550
-  annexes:
-    - jaa-fcl-twin-jet-load-trim-sheet
+  annexes: []
   learningObjectives:
     - 031.05.02.03.04
   template:
-    type: simple
-    question: >-
-      Refer to figure.
+    type: mrjt
+    question: |-
+      Refer to the Load & Trim Sheet.
 
+      The sheet has been partially completed for a Medium Range Jet Transport
+      (MRJT) flight carrying {{paxMale}} males, {{paxFemale}} females and
+      {{paxChildren}} children at the standard masses, plus {{paxInfants}}
+      infants.
 
-      Cross-check the information contained in the load/trim sheet of a Medium
-      Range Jet Commercial Air Transport (MRJT) aeroplane. Which of the
-      following masses/loads is correctly computed?
+      Trip fuel is {{tripFuel}} kg.
+
+      Determine the underload before LMC.
     explanation: ""
-    options:
-      - id: OZWRMVR8Z
-        text: ZFM
-        correct: false
-        why: ""
-      - id: OHXRE6LRB
-        text: Underload before LMC
-        correct: true
-        why: ""
-      - id: OONAL3170
-        text: TOM
-        correct: false
-        why: ""
-      - id: OAVNYP7TF
-        text: LM
-        correct: false
-        why: ""
+    given:
+      - dryOperatingMass
+      - takeOffFuel
+      - tripFuel
+      - maxZeroFuelMass
+      - maxTakeOffMass
+      - maxLandingMass
+      - paxMale
+      - paxFemale
+      - paxChildren
+      - paxInfants
+      - baggage1
+      - baggage4
+      - cargo1
+      - cargo4
+    answer: underload
+    presets:
+      - id: sheet-jaa
+        values:
+          dryOperatingMass: 34700
+          takeOffFuel: 10120
+          tripFuel: 8210
+          maxZeroFuelMass: 51300
+          maxTakeOffMass: 62800
+          maxLandingMass: 54900
+          paxMale: 66
+          paxFemale: 49
+          paxChildren: 9
+          paxInfants: 3
+          baggage1: 650
+          baggage4: 555
+          cargo1: 300
+          cargo4: 900
 - id: QZOWQUR8D
   docId: "031.05"
   relatedQuestions: []

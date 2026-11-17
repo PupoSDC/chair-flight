@@ -12,12 +12,36 @@ export const createTestQuestion = (
   },
   seed: string,
 ): Test["questions"][number] => {
+  const {
+    annexFields,
+    explanationAnnexFields,
+    annexes: generatedAnnexes = [],
+    ...question
+  } = getMultipleChoiceQuestion(template.template, seed);
+  const explanation = question.explanation ?? template.template.explanation;
+  const [fillableAnnex] = template.annexes;
+  const completedAnnex =
+    explanationAnnexFields && fillableAnnex
+      ? `${fillableAnnex}?${new URLSearchParams({
+          ...explanationAnnexFields,
+          solved: Object.keys(explanationAnnexFields)
+            .filter((name) => !(name in (annexFields ?? {})))
+            .join(","),
+        })}`
+      : undefined;
   return {
     questionId: getRandomId(getRandomGenerator(`${seed}-id`)),
     templateId: template.id,
     seed,
-    annexes: template.annexes,
-    explanation: template.template.explanation,
-    ...getMultipleChoiceQuestion(template.template, seed),
+    ...question,
+    annexes: [
+      ...template.annexes.map((href) =>
+        annexFields ? `${href}?${new URLSearchParams(annexFields)}` : href,
+      ),
+      ...generatedAnnexes,
+    ],
+    explanation: completedAnnex
+      ? `![Completed sheet](${completedAnnex})\n\n${explanation}`
+      : explanation,
   };
 };

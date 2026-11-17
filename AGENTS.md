@@ -44,6 +44,10 @@ The code has implicit dependencies.
 
 `routes/-server-functions/*` is where data is constructed. Data is aquired using providers, passed on to core functions, and returned. folder structuring should mirror core, and cross polination should no exist (ie, server/functions should not be pulling from core/finances).
 
+## Guidelines for development
+
+- Don't be afraid to push to local db when doing development. specially when developing quesiton types, or trying out modifications to questions. Otherwise I can't see your work.
+
 ## Guidelines for copy
 
 - Use British UK English for spelling.

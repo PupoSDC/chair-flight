@@ -1,0 +1,81 @@
+description: >-
+  Surface pressure chart of Europe and the eastern North Atlantic. A deep
+  low sits over Ireland and western Britain with tightly packed isobars. Its
+  cold front trails south-west into the Atlantic, where it becomes the warm
+  front of the next wave. Its warm front, labelled Z, runs south-east
+  across southern England and the Channel into France, with point Q just
+  ahead of it over the southern North Sea. The front continues across the
+  Alps and turns into a cold front that curves north through the Balkans
+  and Poland, becoming an occlusion that runs north into a second low over
+  northern Scandinavia. A warm front branches east from the triple point.
+  A ridge lies over the Atlantic west of Ireland and another over Germany.
+  Highs sit south-west of Iberia and over the central Mediterranean.
+view: europe
+isobars:
+  - through: [[-10.0, 54.5], [-7.5, 56.3], [-4.4, 54.8], [-7.0, 53.0]]
+    closed: true
+  - through: [[-12.0, 54.2], [-7.6, 57.3], [-2.4, 54.6], [-6.8, 51.7]]
+    closed: true
+  - through: [[-9.2, 50.4], [-13.4, 53.5], [-13.0, 57.3], [-7.9, 58.9], [-1.5, 57.6], [0.2, 54.5], [-0.9, 52.4]]
+  - through: [[-10.9, 48.2], [-15.3, 53.2], [-14.2, 58.2], [-7.2, 60.4], [1.3, 58.3], [2.1, 54.4], [1.1, 51.1]]
+  - through: [[-37.3, 42.5], [-30.8, 43.4]]
+  - through: [[-30.8, 43.4], [-34.9, 49.6], [-38.9, 56.4], [-35.3, 60.8], [-25.4, 60.4], [-18.5, 54.2], [-12.6, 47.1]]
+  - through: [[-12.6, 47.1], [-4.4, 49.0], [3.3, 49.2]]
+  - through: [[3.3, 49.2], [5.8, 50.9], [10.0, 57.1], [18.4, 58.8], [27.9, 55.2], [30.0, 49.6]]
+  - through: [[-36.5, 41.6], [-26.3, 43.2]]
+  - through: [[-26.3, 43.2], [-29.9, 49.4], [-28.1, 53.9], [-21.5, 52.1], [-17.6, 48.6], [-14.3, 45.5]]
+  - through: [[-14.3, 45.5], [-4.4, 48.2], [4.7, 48.0]]
+  - through: [[4.7, 48.0], [8.3, 51.1], [13.5, 55.2], [18.5, 54.9], [24.5, 51.6], [26.5, 46.5]]
+  - through: [[-35.7, 40.7], [-22.8, 43.3]]
+  - through: [[-22.8, 43.3], [-25.5, 46.3], [-23.4, 48.8], [-18.9, 48.4], [-15.5, 44.9]]
+  - through: [[-15.5, 44.9], [-4.4, 47.4], [6.1, 46.8]]
+  - through: [[6.1, 46.8], [10.3, 50.6], [14.4, 52.1], [19.4, 51.2], [23.0, 47.5], [23.2, 44.6]]
+  - through: [[-34.9, 39.7], [-26.1, 41.8], [-17.5, 43.3], [-4.3, 46.5], [7.5, 45.6]]
+  - through: [[7.5, 45.6], [12.6, 48.2], [17.2, 47.4], [19.6, 44.9], [19.3, 43.2]]
+  - through: [[-34.0, 38.6], [-20.0, 41.9], [-4.3, 45.5], [10.3, 43.5], [18.5, 42.4], [24.7, 42.0], [30.2, 41.0]]
+  - through: [[-31.2, 34.8], [-21.9, 39.5], [-10.1, 43.1], [3.1, 44.0], [18.1, 41.6], [29.1, 39.6]]
+  - through: [[-0.0, 33.0], [-1.5, 36.9], [0.4, 40.0], [6.2, 41.5], [14.9, 41.2], [22.9, 39.3], [27.3, 37.3]]
+  - through: [[-29.1, 31.5], [-24.1, 34.8], [-19.4, 36.0], [-16.5, 34.6], [-15.6, 31.8]]
+  - through: [[26.4, 36.1], [22.9, 35.2], [22.1, 33.8], [23.7, 31.7]]
+  - through: [[-6.3, 68.3], [3.6, 65.2], [13.7, 62.6], [22.1, 59.5], [28.7, 56.1], [33.0, 52.5]]
+  - through: [[21.7, 66.3], [24.2, 61.7], [29.0, 58.2], [34.6, 55.2]]
+  - through: [[27.9, 62.3], [33.6, 62.4], [36.9, 60.1], [33.5, 58.6], [28.2, 60.3]]
+    closed: true
+  - through: [[43.6, 59.2], [35.3, 52.9], [29.7, 48.1]]
+  - through: [[45.6, 58.0], [37.0, 52.0], [31.1, 48.0], [34.7, 45.7]]
+  - through: [[47.5, 56.9], [39.5, 51.9], [37.6, 48.2]]
+fronts:
+  - type: warm
+    symbols: left
+    through: [[-38.8, 44.0], [-32.0, 43.6], [-26.3, 43.2], [-20.7, 43.4]]
+  - type: cold
+    symbols: right
+    through: [[-20.7, 43.4], [-15.0, 45.1], [-10.5, 48.2], [-8.2, 51.1], [-7.3, 53.5]]
+  - type: warm
+    symbols: left
+    through: [[-7.3, 53.5], [-3.5, 53.4], [-0.1, 52.0], [3.2, 49.3], [5.4, 47.3], [8.3, 45.2], [11.1, 44.1]]
+  - type: cold
+    symbols: right
+    through: [[11.1, 44.1], [14.6, 43.3], [19.0, 43.2], [23.1, 44.5], [26.9, 46.4], [28.5, 47.8]]
+  - type: occluded
+    symbols: right
+    through: [[28.5, 47.8], [32.5, 51.8], [35.8, 55.6], [38.0, 58.9], [39.0, 61.3]]
+  - type: warm
+    symbols: left
+    through: [[28.5, 47.8], [29.9, 46.8], [30.1, 44.5], [30.2, 41.4]]
+centres:
+  - type: low
+    at: [-7.5, 54.8]
+  - type: low
+    at: [32.4, 60.8]
+  - type: high
+    at: [-22.2, 32.4]
+  - type: high
+    at: [12.4, 37.9]
+markers:
+  - label: Q
+    style: circle
+    at: [2.8, 52.8]
+  - label: Z
+    style: box
+    at: [4.6, 48.4]

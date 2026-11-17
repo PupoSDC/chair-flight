@@ -15,7 +15,11 @@ The aircraft has **three** independent systems: *A*, *B* and standby.
 
 > Check the quantity before the first flight of the day.
 
-See the [FCOM](https://example.com) for \`limitations\`.`;
+See the [FCOM](https://example.com) for \`limitations\`.
+
+![Completed sheet](/content/annexes/atpl/031-mrjt-load-trim-sheet.svg?dryOperatingMass=34900&takeOffFuel=9500&solved=underload&underload=3770)
+
+![Buffet chart](/content/annexes/atpl/buffet-onset-boundary-chart.svg?fl=350&w=128.5&n=1.4)`;
 
 export const MarkdownStory: FC = () => (
   <div className="max-w-2xl">

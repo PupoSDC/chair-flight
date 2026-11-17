@@ -30,3 +30,8 @@ export const formatSlugAsTitle = (slug: string) =>
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
+
+export const formatNumberAsGroupedDigits = (value: number) =>
+  new Intl.NumberFormat("en-GB", { maximumFractionDigits: 0 })
+    .format(value)
+    .replaceAll(",", " ");

@@ -1,7 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { formatIsoDateAsDate } from "../../libs/base/format-values";
+import { ButtonLink } from "../../libs/ui/components/base/button-link";
 import { Markdown } from "../../libs/ui/components/base/markdown";
-import { ChevronLeftIcon } from "../../libs/ui/icons/chevron-left-icon";
 import { CessnaProfile } from "../../libs/ui/outlines/cessna-profile";
 import { cn } from "../../libs/ui/utils/cn";
 import { fetchBlogPost } from "../-server-functions/blog/fetch-blog-post";
@@ -17,16 +17,6 @@ const BlogPostPage: FC = () => {
         "sm:py-16",
       )}
     >
-      <Link
-        to="/blog"
-        className={cn(
-          "flex w-fit items-center gap-1 rounded-full border border-rule",
-          "bg-paper/90 py-1.5 pr-3.5 pl-2.5 text-sm font-medium text-ink",
-          "no-underline backdrop-blur transition-colors hover:border-accent",
-        )}
-      >
-        <ChevronLeftIcon size={16} /> Blog
-      </Link>
       <article
         className={cn(
           "flex flex-col gap-8 rounded-2xl border border-rule bg-paper/85",
@@ -68,6 +58,15 @@ const BlogPostPage: FC = () => {
           </h1>
         </header>
         <Markdown className="text-base leading-7">{post.content}</Markdown>
+        <hr className="m-0 w-full border-0 border-t border-rule" />
+        <div className="flex flex-col gap-3 sm:flex-row sm:justify-between">
+          <ButtonLink to="/blog" size="large">
+            Read more posts
+          </ButtonLink>
+          <ButtonLink to="/modules" variant="primary" size="large">
+            Start studying
+          </ButtonLink>
+        </div>
       </article>
     </main>
   );

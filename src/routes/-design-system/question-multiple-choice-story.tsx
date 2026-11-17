@@ -17,6 +17,10 @@ export const QuestionMultipleChoiceStory: FC = () => {
       <QuestionMultipleChoice
         question="What is the flight crew maximum oxygen pressure for the first flight of the day?"
         options={OPTIONS}
+        annexes={[
+          "/content/annexes/atpl/031-mrjt-load-trim-sheet.svg?dryOperatingMass=34900&takeOffFuel=9500&tripFuel=6500",
+          "/content/annexes/atpl/buffet-onset-boundary-chart.svg",
+        ]}
         selectedOptionId={selected}
         correctOptionId="b"
         showResult={Boolean(selected)}

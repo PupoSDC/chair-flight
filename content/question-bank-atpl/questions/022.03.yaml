@@ -1142,14 +1142,15 @@
     - 022.03.02.01.05
   template:
     type: calculation
-    question: >-
+    question: |-
       Given the deviation table of a direct reading compass:
 
-
-      To fly: 000 030 060 090 120 150 180 210 240 270 300 330
-
-      Steer: 359 030 061 092 121 150 178 209 242 272 298 331
-
+      <table>
+      <tbody>
+      <tr><td><strong>For</strong></td><td><strong>000</strong></td><td><strong>030</strong></td><td><strong>060</strong></td><td><strong>090</strong></td><td><strong>120</strong></td><td><strong>150</strong></td><td><strong>180</strong></td><td><strong>210</strong></td><td><strong>240</strong></td><td><strong>270</strong></td><td><strong>300</strong></td><td><strong>330</strong></td></tr>
+      <tr><td><strong>Steer</strong></td><td>359</td><td>030</td><td>061</td><td>092</td><td>121</td><td>150</td><td>178</td><td>209</td><td>242</td><td>272</td><td>298</td><td>331</td></tr>
+      </tbody>
+      </table>
 
       The compass indicates a heading of {{comp}}° and the variation is
       {{var}}°E. The row of the table whose steer value equals the compass
@@ -1713,39 +1714,275 @@
         why: ""
 - id: QORQCQHG
   docId: "022.03"
-  relatedQuestions: []
+  relatedQuestions:
+    - Q8VM8MGBJ
   externalIds:
     - ATPLQ-225963
     - AVEXAM-42258
     - AVEXAM-39603
-  annexes:
-    - 022-magnetic-compass-deviation-card-table-for-d-ezzd-dated-01
+  annexes: []
   learningObjectives:
     - 022.03.02.01.05
   template:
-    type: simple
+    type: calculation
     question: |-
-      Refer to figure.
+      Refer to the deviation card of D-EZZD:
 
-      What is the deviation when flying on a heading of 088°(C).
+      <table>
+      <tbody>
+      <tr><td><strong>For</strong></td><td><strong>N</strong></td><td><strong>030°</strong></td><td><strong>060°</strong></td><td><strong>E</strong></td><td><strong>120°</strong></td><td><strong>150°</strong></td></tr>
+      <tr><td><strong>Steer</strong></td><td>{{pad:s1}}°</td><td>{{pad:s2}}°</td><td>{{pad:s3}}°</td><td>{{pad:s4}}°</td><td>{{pad:s5}}°</td><td>{{pad:s6}}°</td></tr>
+      <tr><td><strong>For</strong></td><td><strong>S</strong></td><td><strong>210°</strong></td><td><strong>240°</strong></td><td><strong>W</strong></td><td><strong>300°</strong></td><td><strong>330°</strong></td></tr>
+      <tr><td><strong>Steer</strong></td><td>{{pad:s7}}°</td><td>{{pad:s8}}°</td><td>{{pad:s9}}°</td><td>{{pad:s10}}°</td><td>{{pad:s11}}°</td><td>{{pad:s12}}°</td></tr>
+      </tbody>
+      </table>
+
+      What is the deviation when flying on a compass heading of {{pad:ch}}°?
     explanation: ""
-    options:
-      - id: OPPVCURUN
-        text: 2°W
-        correct: false
-        why: ""
-      - id: OP0NKHWPV
-        text: 2°E
-        correct: true
-        why: ""
-      - id: OSXDGIYZP
-        text: 0°
-        correct: false
-        why: ""
-      - id: O2HNTMDW2
-        text: "-2"
-        correct: false
-        why: ""
+    variables:
+      - id: s1
+        label: Steer heading 1
+        unit: °
+      - id: s2
+        label: Steer heading 2
+        unit: °
+      - id: s3
+        label: Steer heading 3
+        unit: °
+      - id: s4
+        label: Steer heading 4
+        unit: °
+      - id: s5
+        label: Steer heading 5
+        unit: °
+      - id: s6
+        label: Steer heading 6
+        unit: °
+      - id: s7
+        label: Steer heading 7
+        unit: °
+      - id: s8
+        label: Steer heading 8
+        unit: °
+      - id: s9
+        label: Steer heading 9
+        unit: °
+      - id: s10
+        label: Steer heading 10
+        unit: °
+      - id: s11
+        label: Steer heading 11
+        unit: °
+      - id: s12
+        label: Steer heading 12
+        unit: °
+      - id: mh
+        label: Magnetic heading
+        unit: °
+      - id: ch
+        label: Compass heading
+        unit: °
+    presets:
+      - id: p1
+        values:
+          s1: 358
+          s2: 28
+          s3: 59
+          s4: 88
+          s5: 120
+          s6: 150
+          s7: 181
+          s8: 209
+          s9: 240
+          s10: 269
+          s11: 299
+          s12: 330
+          mh: 90
+          ch: 88
+        answer: 2°E
+        wrongAnswers:
+          - 2°W
+          - 3°E
+          - 1°E
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 090° - 088° = **2°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p2
+        values:
+          s1: 358
+          s2: 28
+          s3: 59
+          s4: 88
+          s5: 120
+          s6: 150
+          s7: 181
+          s8: 211
+          s9: 240
+          s10: 269
+          s11: 299
+          s12: 330
+          mh: 210
+          ch: 211
+        answer: 1°W
+        wrongAnswers:
+          - 1°E
+          - 2°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 210° - 211° = **1°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p3
+        values:
+          s1: 358
+          s2: 31
+          s3: 59
+          s4: 88
+          s5: 120
+          s6: 150
+          s7: 181
+          s8: 209
+          s9: 240
+          s10: 269
+          s11: 299
+          s12: 330
+          mh: 30
+          ch: 31
+        answer: 1°W
+        wrongAnswers:
+          - 1°E
+          - 2°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 030° - 031° = **1°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p4
+        values:
+          s1: 358
+          s2: 28
+          s3: 59
+          s4: 88
+          s5: 120
+          s6: 150
+          s7: 181
+          s8: 209
+          s9: 240
+          s10: 269
+          s11: 299
+          s12: 330
+          mh: 300
+          ch: 299
+        answer: 1°E
+        wrongAnswers:
+          - 1°W
+          - 2°E
+          - 3°E
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 300° - 299° = **1°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p5
+        values:
+          s1: 358
+          s2: 28
+          s3: 59
+          s4: 88
+          s5: 120
+          s6: 149
+          s7: 181
+          s8: 209
+          s9: 240
+          s10: 269
+          s11: 299
+          s12: 330
+          mh: 150
+          ch: 149
+        answer: 1°E
+        wrongAnswers:
+          - 1°W
+          - 2°E
+          - 3°E
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 150° - 149° = **1°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p6
+        values:
+          s1: 358
+          s2: 28
+          s3: 59
+          s4: 88
+          s5: 120
+          s6: 150
+          s7: 181
+          s8: 209
+          s9: 238
+          s10: 269
+          s11: 299
+          s12: 330
+          mh: 240
+          ch: 238
+        answer: 2°E
+        wrongAnswers:
+          - 2°W
+          - 3°E
+          - 1°E
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 240° - 238° = **2°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p7
+        values:
+          s1: 358
+          s2: 28
+          s3: 59
+          s4: 88
+          s5: 120
+          s6: 150
+          s7: 181
+          s8: 209
+          s9: 240
+          s10: 269
+          s11: 299
+          s12: 330
+          mh: 60
+          ch: 59
+        answer: 1°E
+        wrongAnswers:
+          - 1°W
+          - 2°E
+          - 3°E
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 060° - 059° = **1°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p8
+        values:
+          s1: 358
+          s2: 28
+          s3: 59
+          s4: 88
+          s5: 120
+          s6: 150
+          s7: 181
+          s8: 209
+          s9: 240
+          s10: 269
+          s11: 299
+          s12: 332
+          mh: 330
+          ch: 332
+        answer: 2°W
+        wrongAnswers:
+          - 2°E
+          - 1°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 330° - 332° = **2°W**.
+          
+          East deviation is positive and West deviation is negative.
 - id: QP9WE0WSP
   docId: 022.03.03
   relatedQuestions: []
@@ -2028,14 +2265,15 @@
     - 022.03.02.01.05
   template:
     type: calculation
-    question: >-
+    question: |-
       Given the deviation table of a direct reading compass:
 
-
-      To fly: 000 030 060 090 120 150 180 210 240 270 300 330
-
-      Steer: 359 030 061 092 121 150 178 209 242 272 298 331
-
+      <table>
+      <tbody>
+      <tr><td><strong>For</strong></td><td><strong>000</strong></td><td><strong>030</strong></td><td><strong>060</strong></td><td><strong>090</strong></td><td><strong>120</strong></td><td><strong>150</strong></td><td><strong>180</strong></td><td><strong>210</strong></td><td><strong>240</strong></td><td><strong>270</strong></td><td><strong>300</strong></td><td><strong>330</strong></td></tr>
+      <tr><td><strong>Steer</strong></td><td>359</td><td>030</td><td>061</td><td>092</td><td>121</td><td>150</td><td>178</td><td>209</td><td>242</td><td>272</td><td>298</td><td>331</td></tr>
+      </tbody>
+      </table>
 
       The desired true heading is {{th}}°. The variation in the area is
       {{var}}°W. What should be the indication of the direct reading compass (in

@@ -590,9 +590,9 @@
     - ATPLGS-622158
     - ATPLQ-611345
   annexes:
-    - ifr-en-route-low-altitude-chart-north-sea-netherlands
-    - jeppesen-en-route-chart-excerpt-scotland-isle-of-man-and
-    - jeppesen-vfr-chart-excerpt-bavaria-czech-border
+    - jeppesen-enr-north-sea-amsterdam
+    - jeppesen-enr-scotland-isle-of-man
+    - jeppesen-vfr-chart-15-bavaria-czech-border
   learningObjectives:
     - 061.03.03.02.01
   template:
@@ -1458,37 +1458,401 @@
         why: ""
 - id: Q8VM8MGBJ
   docId: "061.01"
-  relatedQuestions: []
+  relatedQuestions:
+    - QORQCQHG
   externalIds:
     - ATPLQ-619894
-  annexes:
-    - 061-magnetic-compass-deviation-card
+    - ATPLQ-614077
+    - AVEXAM-28870
+    - ATPLQ-617590
+  annexes: []
   learningObjectives:
     - 061.01.03.01.07
   template:
-    type: simple
+    type: calculation
     question: |-
-      Refer to figure.
+      Refer to the deviation card:
 
-      What is the deviation when flying on a heading of 209°(C)?
+      <table>
+      <tbody>
+      <tr><td><strong>For</strong></td><td><strong>N</strong></td><td><strong>030°</strong></td><td><strong>060°</strong></td><td><strong>E</strong></td><td><strong>120°</strong></td><td><strong>150°</strong></td></tr>
+      <tr><td><strong>Steer</strong></td><td>{{pad:s1}}°</td><td>{{pad:s2}}°</td><td>{{pad:s3}}°</td><td>{{pad:s4}}°</td><td>{{pad:s5}}°</td><td>{{pad:s6}}°</td></tr>
+      <tr><td><strong>For</strong></td><td><strong>S</strong></td><td><strong>210°</strong></td><td><strong>240°</strong></td><td><strong>W</strong></td><td><strong>300°</strong></td><td><strong>330°</strong></td></tr>
+      <tr><td><strong>Steer</strong></td><td>{{pad:s7}}°</td><td>{{pad:s8}}°</td><td>{{pad:s9}}°</td><td>{{pad:s10}}°</td><td>{{pad:s11}}°</td><td>{{pad:s12}}°</td></tr>
+      </tbody>
+      </table>
+
+      What is the deviation when flying on a compass heading of {{pad:ch}}°?
     explanation: ""
-    options:
-      - id: OCBMFJAIV
-        text: 2°W
-        correct: false
-        why: ""
-      - id: ORBYB9HO4
-        text: 2°E
-        correct: false
-        why: ""
-      - id: ONZZPCIAH
-        text: 1°W
-        correct: false
-        why: ""
-      - id: OPZQ6G1FA
-        text: 1°E
-        correct: true
-        why: ""
+    variables:
+      - id: s1
+        label: Steer heading 1
+        unit: °
+      - id: s2
+        label: Steer heading 2
+        unit: °
+      - id: s3
+        label: Steer heading 3
+        unit: °
+      - id: s4
+        label: Steer heading 4
+        unit: °
+      - id: s5
+        label: Steer heading 5
+        unit: °
+      - id: s6
+        label: Steer heading 6
+        unit: °
+      - id: s7
+        label: Steer heading 7
+        unit: °
+      - id: s8
+        label: Steer heading 8
+        unit: °
+      - id: s9
+        label: Steer heading 9
+        unit: °
+      - id: s10
+        label: Steer heading 10
+        unit: °
+      - id: s11
+        label: Steer heading 11
+        unit: °
+      - id: s12
+        label: Steer heading 12
+        unit: °
+      - id: mh
+        label: Magnetic heading
+        unit: °
+      - id: ch
+        label: Compass heading
+        unit: °
+    presets:
+      - id: p1
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 210
+          ch: 209
+        answer: 1°E
+        wrongAnswers:
+          - 1°W
+          - 2°E
+          - 3°E
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 210° - 209° = **1°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p2
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 30
+          ch: 32
+        answer: 2°W
+        wrongAnswers:
+          - 2°E
+          - 1°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 030° - 032° = **2°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p3
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 240
+          ch: 239
+        answer: 1°E
+        wrongAnswers:
+          - 1°W
+          - 2°E
+          - 3°E
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 240° - 239° = **1°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p4
+        values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 119
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 241
+          s10: 269
+          s11: 298
+          s12: 332
+          mh: 300
+          ch: 298
+        answer: 2°E
+        wrongAnswers:
+          - 2°W
+          - 3°E
+          - 1°E
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 300° - 298° = **2°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p5
+        values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 119
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 241
+          s10: 269
+          s11: 298
+          s12: 332
+          mh: 150
+          ch: 152
+        answer: 2°W
+        wrongAnswers:
+          - 2°E
+          - 1°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 150° - 152° = **2°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p6
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 211
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 210
+          ch: 211
+        answer: 1°W
+        wrongAnswers:
+          - 1°E
+          - 2°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 210° - 211° = **1°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p7
+        values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 119
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 241
+          s10: 269
+          s11: 301
+          s12: 332
+          mh: 300
+          ch: 301
+        answer: 1°W
+        wrongAnswers:
+          - 1°E
+          - 2°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 300° - 301° = **1°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p8
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 330
+          ch: 332
+        answer: 2°W
+        wrongAnswers:
+          - 2°E
+          - 1°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 330° - 332° = **2°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p9
+        values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 119
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 241
+          s10: 269
+          s11: 298
+          s12: 332
+          mh: 240
+          ch: 241
+        answer: 1°W
+        wrongAnswers:
+          - 1°E
+          - 2°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 240° - 241° = **1°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p10
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 60
+          ch: 61
+        answer: 1°W
+        wrongAnswers:
+          - 1°E
+          - 2°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 060° - 061° = **1°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p11
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 238
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 240
+          ch: 238
+        answer: 2°E
+        wrongAnswers:
+          - 2°W
+          - 3°E
+          - 1°E
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 240° - 238° = **2°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p12
+        values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 119
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 241
+          s10: 269
+          s11: 298
+          s12: 332
+          mh: 180
+          ch: 182
+        answer: 2°W
+        wrongAnswers:
+          - 2°E
+          - 1°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 180° - 182° = **2°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p13
+        values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 121
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 241
+          s10: 269
+          s11: 298
+          s12: 332
+          mh: 120
+          ch: 121
+        answer: 1°W
+        wrongAnswers:
+          - 1°E
+          - 2°W
+          - 3°W
+        explanation: |-
+          Deviation = magnetic heading - compass heading = 120° - 121° = **1°W**.
+          
+          East deviation is positive and West deviation is negative.
 - id: Q8WHCKJNC
   docId: "061.01"
   relatedQuestions: []
@@ -2680,59 +3044,6 @@
       - **{{d3}}**: uses 0 °C instead of the outside air temperature.
 
       - **{{d4}}**: forgets the square root in the speed of sound.
-- id: QASMNOFS
-  docId: "061.01"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-616746
-    - AVEXAM-45343
-  annexes:
-    - 061-magnetic-compass-deviation-card
-  learningObjectives:
-    - 061.01.03.01.07
-  template:
-    type: chart
-    question: Refer to the figure. According to the deviation card, in order to
-      follow a heading of 150°(M), what compass heading must be followed and how
-      much is the compass deviation?
-    explanation: ""
-    variables: []
-    entries:
-      - id: e1
-        values: {}
-        answer: 002° East(+) deviation; compass heading 148°
-        wrongAnswers:
-          - 002° West(-) deviation; compass heading 152°
-          - 002° West(-) deviation; compass heading 148°
-          - 002° East(+) deviation; compass heading 152°
-        explanation: >-
-          The deviation card gives the compass deviation for each magnetic
-          heading. An East deviation is positive, so the compass heading is the
-          magnetic heading minus the deviation.
-
-
-          **Solution**
-
-
-          - The card shows a deviation of 2° East for magnetic heading 150°.
-
-          - Compass heading = 150° - 2° = **148°**.
-
-          - The answer is **002° East(+) deviation; compass heading 148°**.
-
-
-          **Why the other answers are wrong**
-
-
-          - **002° West(-) deviation; compass heading 152°**: the deviation is
-          read as West, and the compass heading is worked out with the wrong
-          sign.
-
-          - **002° West(-) deviation; compass heading 148°**: the deviation is
-          read with the wrong sign, but the compass heading is still subtracted.
-
-          - **002° East(+) deviation; compass heading 152°**: the East deviation
-          is added instead of subtracted.
 - id: QATEHVPVA
   docId: "061.01"
   relatedQuestions: []
@@ -4346,7 +4657,7 @@
     - ATPLQ-612077
     - AVEXAM-51147
   annexes:
-    - jeppesen-en-route-chart-excerpt-scotland-northern-uk
+    - jeppesen-enr-scotland-north
   learningObjectives:
     - 061.01.03.01.04
   template:
@@ -5542,41 +5853,6 @@
         text: 44°52'N; 000°14'E
         correct: false
         why: ""
-- id: QDFYXPYB
-  docId: "061.01"
-  relatedQuestions:
-    - QGLUQWTJ
-  externalIds:
-    - ATPLQ-614077
-    - AVEXAM-28870
-  annexes:
-    - 061-magnetic-compass-deviation-card
-  learningObjectives:
-    - 061.01.03.01.07
-  template:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      What is the deviation when flying on a heading of 032°(C)?
-    explanation: ""
-    options:
-      - id: OEVGRBUIG
-        text: 2°W
-        correct: true
-        why: ""
-      - id: O2WP5TBBN
-        text: 0°
-        correct: false
-        why: ""
-      - id: O3HFRLPWH
-        text: 2° E
-        correct: false
-        why: ""
-      - id: OPNDIGWMA
-        text: +2°
-        correct: false
-        why: ""
 - id: QDICNLDG
   docId: "061.01"
   relatedQuestions:
@@ -6092,7 +6368,7 @@
     - AVEXAM-39204
     - AVEXAM-9432
   annexes:
-    - 061-waypoint-table-hurly-waric-grisby-grave-distances-10-17-22
+    - 061-waypoint-table-hurly-waric-gisby-grave-distances-10-17-22
   learningObjectives:
     - 061.01.05.04.07
   template:
@@ -6329,7 +6605,7 @@
   externalIds:
     - ATPLQ-613741
   annexes:
-    - vfr-chart-strasbourg-area-lfst-strasbourg-entzheim-strasbourg-neuhof-lfgc
+    - jeppesen-vfr-chart-18-strasbourg-entzheim
   learningObjectives:
     - 061.01.03.02.04
   template:
@@ -9739,40 +10015,6 @@
       - id: O10CYRFE6
         text: Be constant 825 ft/min.
         correct: false
-        why: ""
-- id: QGLUQWTJ
-  docId: "061.01"
-  relatedQuestions:
-    - QDFYXPYB
-  externalIds:
-    - ATPLQ-617590
-  annexes:
-    - 061-magnetic-compass-deviation-card
-  learningObjectives:
-    - 061.01.03.01.07
-  template:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      What is the deviation when flying on a heading of 239°(C)?
-    explanation: ""
-    options:
-      - id: OAUWK9WIG
-        text: "0"
-        correct: false
-        why: ""
-      - id: OLI2KBJEI
-        text: 1°W
-        correct: false
-        why: ""
-      - id: OJQMMNHBC
-        text: \-1
-        correct: false
-        why: ""
-      - id: O3XLTA8EW
-        text: 1°E
-        correct: true
         why: ""
 - id: QGPXMCYJ
   docId: "061.01"
@@ -14560,7 +14802,7 @@
   externalIds:
     - ATPLQ-618203
   annexes:
-    - jeppesen-north-atlantic-en-route-planning-chart
+    - jeppesen-enr-north-atlantic-planning
   learningObjectives:
     - 061.04.03.02.01
   template:
@@ -18768,7 +19010,7 @@
     - ATPLQ-618150
     - AVEXAM-35907
   annexes:
-    - ifr-en-route-low-altitude-chart-scotland-and-northern-england
+    - jeppesen-enr-scotland-england
   learningObjectives:
     - 061.04.03.02.01
   template:
@@ -19363,7 +19605,7 @@
     - ATPLQ-619739
     - AVEXAM-22244
   annexes:
-    - ifr-en-route-low-altitude-chart-ireland-dublin-dub-shannon
+    - jeppesen-enr-ireland
   learningObjectives:
     - 061.04.03.02.02
   template:
@@ -19470,90 +19712,369 @@
     - AVEXAM-42143
     - ATPLQ-615512
     - AVEXAM-87297
-  annexes:
-    - 061-magnetic-compass-deviation-card-table-01
-    - 061-magnetic-compass-deviation-card-table-02
+    - ATPLQ-616746
+    - AVEXAM-45343
+  annexes: []
   learningObjectives:
     - 061.01.03.01.07
   template:
-    type: chart
-    question: Refer to the deviation card in the figure. If you want to fly a
-      magnetic heading of {{mh}}°, what compass heading should the aircraft
-      steer and what is the compass deviation?
+    type: calculation
+    question: |-
+      Refer to the deviation card:
+
+      <table>
+      <tbody>
+      <tr><td><strong>For</strong></td><td><strong>N</strong></td><td><strong>030°</strong></td><td><strong>060°</strong></td><td><strong>E</strong></td><td><strong>120°</strong></td><td><strong>150°</strong></td></tr>
+      <tr><td><strong>Steer</strong></td><td>{{pad:s1}}°</td><td>{{pad:s2}}°</td><td>{{pad:s3}}°</td><td>{{pad:s4}}°</td><td>{{pad:s5}}°</td><td>{{pad:s6}}°</td></tr>
+      <tr><td><strong>For</strong></td><td><strong>S</strong></td><td><strong>210°</strong></td><td><strong>240°</strong></td><td><strong>W</strong></td><td><strong>300°</strong></td><td><strong>330°</strong></td></tr>
+      <tr><td><strong>Steer</strong></td><td>{{pad:s7}}°</td><td>{{pad:s8}}°</td><td>{{pad:s9}}°</td><td>{{pad:s10}}°</td><td>{{pad:s11}}°</td><td>{{pad:s12}}°</td></tr>
+      </tbody>
+      </table>
+
+      If you want to fly a magnetic heading of {{pad:mh}}°, what compass
+      heading should the aircraft steer and what is the compass deviation?
     explanation: ""
     variables:
+      - id: s1
+        label: Steer heading 1
+        unit: °
+      - id: s2
+        label: Steer heading 2
+        unit: °
+      - id: s3
+        label: Steer heading 3
+        unit: °
+      - id: s4
+        label: Steer heading 4
+        unit: °
+      - id: s5
+        label: Steer heading 5
+        unit: °
+      - id: s6
+        label: Steer heading 6
+        unit: °
+      - id: s7
+        label: Steer heading 7
+        unit: °
+      - id: s8
+        label: Steer heading 8
+        unit: °
+      - id: s9
+        label: Steer heading 9
+        unit: °
+      - id: s10
+        label: Steer heading 10
+        unit: °
+      - id: s11
+        label: Steer heading 11
+        unit: °
+      - id: s12
+        label: Steer heading 12
+        unit: °
       - id: mh
         label: Magnetic heading
         unit: °
-    entries:
-      - id: e1
+      - id: ch
+        label: Compass heading
+        unit: °
+    presets:
+      - id: p1
         values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 119
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 241
+          s10: 269
+          s11: 298
+          s12: 332
           mh: 300
+          ch: 298
         answer: 298° and 2°E
         wrongAnswers:
-          - 298° and 2°W
-          - 300° and 2°W
           - 302° and 2°W
-        explanation: >-
-          The deviation card gives the compass deviation for each magnetic
-          heading. An East deviation is positive, so the compass heading is the
-          magnetic heading minus the deviation.
-
-
-          **Solution**
-
-
-          - The card shows a deviation of 2° East for magnetic heading 300°.
-
-          - Compass heading = 300° - 2° = **298°**.
-
-          - The answer is **298° and 2°E**.
-
-
-          **Why the other answers are wrong**
-
-
-          - **298° and 2°W**: the deviation is read with the wrong sign, as
-          West.
-
-          - **300° and 2°W**: the magnetic heading is used as the compass
-          heading, with the wrong sign.
-
-          - **302° and 2°W**: the deviation is added to the magnetic heading
-          instead of subtracted.
-      - id: e2
+          - 300° and 2°W
+          - 302° and 2°E
+        explanation: |-
+          The card gives 298° as the compass heading for a magnetic heading of 300°.
+          
+          Deviation = 300° - 298° = **2°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p2
         values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 119
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 241
+          s10: 269
+          s11: 298
+          s12: 332
           mh: 150
+          ch: 152
         answer: 152° and 2°W
         wrongAnswers:
-          - 148° and 2°W
+          - 148° and 2°E
           - 150° and 2°E
+          - 148° and 2°W
+        explanation: |-
+          The card gives 152° as the compass heading for a magnetic heading of 150°.
+          
+          Deviation = 150° - 152° = **2°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p3
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 150
+          ch: 148
+        answer: 148° and 2°E
+        wrongAnswers:
+          - 152° and 2°W
+          - 150° and 2°W
           - 152° and 2°E
-        explanation: >-
-          The deviation card gives the compass deviation for each magnetic
-          heading. A West deviation is negative, so the compass heading is the
-          magnetic heading plus the size of the deviation.
-
-
-          **Solution**
-
-
-          - The card shows a deviation of 2° West for magnetic heading 150°.
-
-          - Compass heading = 150° + 2° = **152°**.
-
-          - The answer is **152° and 2°W**.
-
-
-          **Why the other answers are wrong**
-
-
-          - **148° and 2°W**: the West deviation is subtracted instead of added.
-
-          - **150° and 2°E**: no deviation is applied, and the sign is wrong.
-
-          - **152° and 2°E**: the compass heading is right, but the deviation is
-          marked as East.
+        explanation: |-
+          The card gives 148° as the compass heading for a magnetic heading of 150°.
+          
+          Deviation = 150° - 148° = **2°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p4
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 330
+          ch: 332
+        answer: 332° and 2°W
+        wrongAnswers:
+          - 328° and 2°E
+          - 330° and 2°E
+          - 328° and 2°W
+        explanation: |-
+          The card gives 332° as the compass heading for a magnetic heading of 330°.
+          
+          Deviation = 330° - 332° = **2°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p5
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 211
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 210
+          ch: 211
+        answer: 211° and 1°W
+        wrongAnswers:
+          - 209° and 1°E
+          - 210° and 1°E
+          - 209° and 1°W
+        explanation: |-
+          The card gives 211° as the compass heading for a magnetic heading of 210°.
+          
+          Deviation = 210° - 211° = **1°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p6
+        values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 119
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 239
+          s10: 269
+          s11: 298
+          s12: 332
+          mh: 240
+          ch: 239
+        answer: 239° and 1°E
+        wrongAnswers:
+          - 241° and 1°W
+          - 240° and 1°W
+          - 241° and 1°E
+        explanation: |-
+          The card gives 239° as the compass heading for a magnetic heading of 240°.
+          
+          Deviation = 240° - 239° = **1°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p7
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 298
+          s12: 332
+          mh: 300
+          ch: 298
+        answer: 298° and 2°E
+        wrongAnswers:
+          - 302° and 2°W
+          - 300° and 2°W
+          - 302° and 2°E
+        explanation: |-
+          The card gives 298° as the compass heading for a magnetic heading of 300°.
+          
+          Deviation = 300° - 298° = **2°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p8
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 120
+          ch: 118
+        answer: 118° and 2°E
+        wrongAnswers:
+          - 122° and 2°W
+          - 120° and 2°W
+          - 122° and 2°E
+        explanation: |-
+          The card gives 118° as the compass heading for a magnetic heading of 120°.
+          
+          Deviation = 120° - 118° = **2°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p9
+        values:
+          s1: 358
+          s2: 29
+          s3: 60
+          s4: 88
+          s5: 119
+          s6: 152
+          s7: 182
+          s8: 209
+          s9: 241
+          s10: 269
+          s11: 298
+          s12: 332
+          mh: 30
+          ch: 29
+        answer: 029° and 1°E
+        wrongAnswers:
+          - 031° and 1°W
+          - 030° and 1°W
+          - 031° and 1°E
+        explanation: |-
+          The card gives 029° as the compass heading for a magnetic heading of 030°.
+          
+          Deviation = 030° - 029° = **1°E**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p10
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 332
+          mh: 60
+          ch: 61
+        answer: 061° and 1°W
+        wrongAnswers:
+          - 059° and 1°E
+          - 060° and 1°E
+          - 059° and 1°W
+        explanation: |-
+          The card gives 061° as the compass heading for a magnetic heading of 060°.
+          
+          Deviation = 060° - 061° = **1°W**.
+          
+          East deviation is positive and West deviation is negative.
+      - id: p11
+        values:
+          s1: 1
+          s2: 32
+          s3: 61
+          s4: 89
+          s5: 118
+          s6: 148
+          s7: 180
+          s8: 209
+          s9: 239
+          s10: 270
+          s11: 302
+          s12: 329
+          mh: 330
+          ch: 329
+        answer: 329° and 1°E
+        wrongAnswers:
+          - 331° and 1°W
+          - 330° and 1°W
+          - 331° and 1°E
+        explanation: |-
+          The card gives 329° as the compass heading for a magnetic heading of 330°.
+          
+          Deviation = 330° - 329° = **1°E**.
+          
+          East deviation is positive and West deviation is negative.
 - id: QQFQNNXT
   docId: "061.01"
   relatedQuestions: []
@@ -21819,7 +22340,7 @@
     - ATPLQ-615513
     - AVEXAM-7410
   annexes:
-    - ifr-en-route-low-altitude-chart-scotland-n-ireland-isle
+    - jeppesen-enr-scotland-northern-ireland
   learningObjectives:
     - 061.04.03.02.01
   template:
@@ -22580,63 +23101,131 @@
     - ATPLGS-124461
     - ATPLGS-110542
     - ATPLGS-124462
-  annexes:
-    - 061-navigation-table-time-00-02
+  annexes: []
   learningObjectives:
     - 061.01.06.02.01
   template:
-    type: chart
+    type: calculation
     question: >-
-      Refer to figure.
+      An aircraft is flying according to the flight log:
 
 
-      An aircraft is flying according to the flight log at the Annex.
+      | Time | From | To | Dist (NM) | TRK/CRS (T) | HDG (T) | TAS (kt) | GS (kt) | W/V |
+
+      | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+      | 00:23 | A | B | {{total}} | {{track}}° | {{hdg}}° | 120 | {{gs}} | 225/15 |
 
 
-      After 15 minutes of flying with the planned TAS and TH the aircraft is 3
-      NM North of the intended track and 2.5 NM ahead of the dead reckoning
-      position.
+      After {{time}} minutes of flying with the planned TAS and TH the
+      aircraft is {{xte}} NM North of the intended track and {{ahead}} NM
+      ahead of the dead reckoning position.
 
 
       To reach destination B from this position the TH should be:
-    explanation: ""
-    variables: []
-    entries:
-      - id: e1
-        values: {}
-        answer: 112°
-        wrongAnswers:
-          - 090°
-          - 078°
-          - 107°
-        explanation: >-
-          The new true heading is the direction from the actual position to
-          destination B. The actual position is found on the annex, from the
-          offset to the intended track and the distance ahead of the dead
-          reckoning position.
+    variables:
+      - id: track
+        label: Planned track
+        unit: °
+      - id: hdg
+        label: Planned true heading
+        unit: °
+      - id: gs
+        label: Ground speed
+        unit: kt
+      - id: total
+        label: Distance from A to B
+        unit: NM
+      - id: time
+        label: Time flown
+        unit: min
+      - id: xte
+        label: Distance north of the intended track
+        unit: NM
+      - id: ahead
+        label: Distance ahead of the DR position
+        unit: NM
+    answer:
+      formula: hdg + (60 * xte / (gs * time / 60 + ahead) + 60 * xte / (total - (gs * time / 60 + ahead)))
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: track
+      - id: d2
+        formula: hdg - (60 * xte / (gs * time / 60 + ahead) + 60 * xte / (total - (gs * time / 60 + ahead)))
+      - id: d3
+        formula: track + (60 * xte / (gs * time / 60 + ahead) + 60 * xte / (total - (gs * time / 60 + ahead)))
+    presets:
+      - id: p1
+        values:
+          track: 90
+          hdg: 95
+          gs: 130
+          total: 50
+          time: 15
+          xte: 3
+          ahead: 2.5
+      - id: p2
+        values:
+          track: 90
+          hdg: 95
+          gs: 130
+          total: 60
+          time: 18
+          xte: 4
+          ahead: 3
+      - id: p3
+        values:
+          track: 90
+          hdg: 95
+          gs: 130
+          total: 55
+          time: 15
+          xte: 5
+          ahead: 2
+    explanation: >-
+      The aircraft is off track, so the heading changes by two angles from the
+      planned heading: the track error, which stops the drift away from the
+      track, and the closing angle, which brings the aircraft back to the track
+      before the destination. Both are found with the 1 in 60 rule. The
+      distance along the track is the distance flown at ground speed plus the
+      distance ahead of the DR position.
 
 
-          **Solution**
+      **Solution**
 
 
-          - Plot the actual position on the annex, 3 NM north of the intended
-          track and 2.5 NM ahead of the DR position.
-
-          - Draw the line from this position to destination B.
-
-          - Read the true heading of this line: **112°**.
+      Distance along the track: {{gs}} kt x {{time}} min / 60 +
+      {{ahead}} NM = {{= gs * time / 60 + ahead}} NM
 
 
-          **Why the other answers are wrong**
+      Distance to go: {{total}} NM - {{= gs * time / 60 + ahead}} NM =
+      {{= total - (gs * time / 60 + ahead)}} NM
 
 
-          - **090°**: a heading read straight east, which does not point at
-          destination B.
+      Track error: 60 x {{xte}} / {{= gs * time / 60 + ahead}} =
+      {{= 60 * xte / (gs * time / 60 + ahead)}}°
 
-          - **078°**: the heading is read from the wrong side of the offset.
 
-          - **107°**: the heading is read from the intended track instead of
-          from the actual position.
+      Closing angle: 60 x {{xte}} / {{= total - (gs * time / 60 + ahead)}} =
+      {{= 60 * xte / (total - (gs * time / 60 + ahead))}}°
+
+
+      The aircraft is north of a track flown towards the east, so the heading is changed
+      towards the right: **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the planned track, which ignores the wind drift and the
+      closing angle
+
+      - **{{d2}}°**: the heading is changed to the wrong side
+
+      - **{{d3}}°**: the correction is applied to the track instead of to the
+      planned heading
 - id: QSWGOLNC
   docId: "061.01"
   relatedQuestions:
@@ -24295,7 +24884,7 @@
   externalIds:
     - ATPLQ-614271
   annexes:
-    - ifr-en-route-low-altitude-chart-northern-england
+    - jeppesen-enr-england-north
   learningObjectives:
     - 061.04.03.02.02
   template:
@@ -25012,7 +25601,7 @@
   externalIds:
     - ATPLQ-617616
   annexes:
-    - jeppesen-vfr-chart-icao-1-11
+    - jeppesen-vfr-chart-11-linz-wels
   learningObjectives:
     - 061.04.03.02.01
   template:
@@ -25079,64 +25668,132 @@
     - AVEXAM-44038
     - ATPLGS-110545
     - ATPLGS-124462
-  annexes:
-    - 061-navigation-table-time-00-01
+  annexes: []
   learningObjectives:
     - 061.01.03.02.05
     - 061.01.03.02.06
   template:
-    type: chart
+    type: calculation
     question: >-
-      Refer to figure.
+      An aircraft is flying according to the flight log:
 
 
-      An aircraft is flying according to the flight log at the Annex.
+      | Time | From | To | Dist (NM) | TRK/CRS (T) | HDG (T) | TAS (kt) | GS (kt) | W/V |
+
+      | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+      | 00:23 | A | B | {{total}} | {{track}}° | {{hdg}}° | 120 | {{gs}} | 045/15 |
 
 
-      After 15 minutes of flying with the planned TAS and TH the aircraft is 3
-      NM North of the intended track and 2.5 NM ahead of the dead reckoning
-      position.
+      After {{time}} minutes of flying with the planned TAS and TH the
+      aircraft is {{xte}} NM North of the intended track and {{ahead}} NM
+      ahead of the dead reckoning position.
 
 
       To reach destination B from this position the TH should be:
-    explanation: ""
-    variables: []
-    entries:
-      - id: e1
-        values: {}
-        answer: 258°
-        wrongAnswers:
-          - 253°
-          - 270°
-          - 292°
-        explanation: >-
-          The new true heading is the direction from the actual position to
-          destination B. The actual position is found on the annex, from the
-          offset to the intended track and the distance ahead of the dead
-          reckoning position.
+    variables:
+      - id: track
+        label: Planned track
+        unit: °
+      - id: hdg
+        label: Planned true heading
+        unit: °
+      - id: gs
+        label: Ground speed
+        unit: kt
+      - id: total
+        label: Distance from A to B
+        unit: NM
+      - id: time
+        label: Time flown
+        unit: min
+      - id: xte
+        label: Distance north of the intended track
+        unit: NM
+      - id: ahead
+        label: Distance ahead of the DR position
+        unit: NM
+    answer:
+      formula: hdg - (60 * xte / (gs * time / 60 + ahead) + 60 * xte / (total - (gs * time / 60 + ahead)))
+      unit: °
+      decimals: 0
+    distractors:
+      - id: d1
+        formula: track
+      - id: d2
+        formula: hdg + (60 * xte / (gs * time / 60 + ahead) + 60 * xte / (total - (gs * time / 60 + ahead)))
+      - id: d3
+        formula: track - (60 * xte / (gs * time / 60 + ahead) + 60 * xte / (total - (gs * time / 60 + ahead)))
+    presets:
+      - id: p1
+        values:
+          track: 270
+          hdg: 275
+          gs: 130
+          total: 50
+          time: 15
+          xte: 3
+          ahead: 2.5
+      - id: p2
+        values:
+          track: 270
+          hdg: 275
+          gs: 130
+          total: 60
+          time: 18
+          xte: 4
+          ahead: 3
+      - id: p3
+        values:
+          track: 270
+          hdg: 275
+          gs: 130
+          total: 55
+          time: 15
+          xte: 5
+          ahead: 2
+    explanation: >-
+      The aircraft is off track, so the heading changes by two angles from the
+      planned heading: the track error, which stops the drift away from the
+      track, and the closing angle, which brings the aircraft back to the track
+      before the destination. Both are found with the 1 in 60 rule. The
+      distance along the track is the distance flown at ground speed plus the
+      distance ahead of the DR position.
 
 
-          **Solution**
+      **Solution**
 
 
-          - Plot the actual position on the annex, 3 NM north of the intended
-          track and 2.5 NM ahead of the DR position.
-
-          - Draw the line from this position to destination B.
-
-          - Read the true heading of this line: **258°**.
+      Distance along the track: {{gs}} kt x {{time}} min / 60 +
+      {{ahead}} NM = {{= gs * time / 60 + ahead}} NM
 
 
-          **Why the other answers are wrong**
+      Distance to go: {{total}} NM - {{= gs * time / 60 + ahead}} NM =
+      {{= total - (gs * time / 60 + ahead)}} NM
 
 
-          - **253°**: the heading is read from a line that is slightly off, as
-          if the offset were on the other side.
+      Track error: 60 x {{xte}} / {{= gs * time / 60 + ahead}} =
+      {{= 60 * xte / (gs * time / 60 + ahead)}}°
 
-          - **270°**: a heading read straight across, which does not point at
-          destination B.
 
-          - **292°**: the heading is read from the wrong side of the track.
+      Closing angle: 60 x {{xte}} / {{= total - (gs * time / 60 + ahead)}} =
+      {{= 60 * xte / (total - (gs * time / 60 + ahead))}}°
+
+
+      The aircraft is north of a track flown towards the west, so the heading is changed
+      towards the left: **{{answer}}°**
+
+
+      **Why the other answers are wrong**
+
+
+      - **{{d1}}°**: the planned track, which ignores the wind drift and the
+      closing angle
+
+      - **{{d2}}°**: the heading is changed to the wrong side
+
+      - **{{d3}}°**: the correction is applied to the track instead of to the
+      planned heading
 - id: QV0HXVQHT
   docId: "061.01"
   relatedQuestions:

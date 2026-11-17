@@ -3,10 +3,9 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 import { type BuildEnvironmentOptions, defineConfig } from "vite";
+import { contentAssetsPlugin } from "./src/tools/vite-content-assets.ts";
 import { designMaskPlugin } from "./src/tools/vite-design-mask.ts";
 import { impersonatePlugin } from "./src/tools/vite-impersonate.ts";
-import { localAnnexesPlugin } from "./src/tools/vite-local-annexes.ts";
-import { localBlogImagesPlugin } from "./src/tools/vite-local-blog-images.ts";
 
 const IGNORED_WARNINGS = new Set([
 	"MODULE_LEVEL_DIRECTIVE",
@@ -42,8 +41,7 @@ export default defineConfig({
 	environments: { nitro: { build: { rolldownOptions: { onLog } } } },
 	plugins: [
 		impersonatePlugin(),
-		localAnnexesPlugin(),
-		localBlogImagesPlugin(),
+		contentAssetsPlugin(),
 		designMaskPlugin(),
 		tailwindcss(),
 		tanstackStart({

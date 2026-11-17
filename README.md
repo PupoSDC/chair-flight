@@ -40,22 +40,20 @@ The app runs on http://localhost:3100.
 | `pnpm script:seed-database:local`          | `.env.local` | Same on the local database, plus mock users and comments     |
 | `pnpm script:pull-database`                | `.env`       | Write the database into `content/`, annexes included         |
 | `pnpm script:pull-database:local`          | `.env.local` | Same, from the local database                                |
-| `pnpm script:upload-blog-images`           | `.env`       | Upload `content/blog/posts/*/cover.*` to the storage bucket  |
 | `pnpm script:import-learning-objectives`   |              | Convert the `external/*.xlsx` syllabi into YAML              |
 | `pnpm check` / `lint` / `format` / `build` | `.env`       | Type check, lint, format, production build                   |
 
 `script:seed-database` accepts `--dry-run`. `.env.local` is committed on purpose
-and holds no secrets; `.env` is yours and ignored by git. Annexes are uploaded
-only when seeding a non-local database with `SUPABASE_SECRET_KEY` set.
+and holds no secrets; `.env` is yours and ignored by git.
 
 ## Content
 
 The database is the source of truth. `content/question-bank-*` is a backup of
 it, written by `script:pull-database` and readable by `script:seed-database`.
 Blog posts in `content/blog` are read at build time. A post's image is
-`content/blog/posts/<post>/cover.jpg` (or `.png`, `.webp`); it is served from
-disk in development and uploaded to the storage bucket with
-`script:upload-blog-images`.
+`content/blog/posts/<post>/cover.jpg` (or `.png`, `.webp`); annexes
+and blog images are served straight from `content/` in development, and copied
+into `public/content/` (git-ignored) by `pnpm build`, so they ship with the app.
 
 Tests are stored in the browser.
 

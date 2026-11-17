@@ -24,6 +24,7 @@ const QuestionsLayout: FC = () => {
 
   return (
     <div
+      data-scroll-reset
       className={cn(
         "flex h-full flex-col lg:flex-row",
         !chapterId && "max-lg:overflow-auto",
@@ -50,6 +51,7 @@ const QuestionsLayout: FC = () => {
         </div>
       </nav>
       <div
+        data-scroll-reset
         className={cn(
           "min-h-0 min-w-0 lg:flex-1 lg:overflow-auto lg:overscroll-none",
           chapterId

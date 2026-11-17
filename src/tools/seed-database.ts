@@ -1,6 +1,5 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
-import { createClient } from "@supabase/supabase-js";
 import { inArray, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
@@ -56,13 +55,6 @@ type Transaction = Parameters<
 
 const FRONT_MATTER_MATCH = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/;
 const ANNEX_LINK_MATCH = /(\]\()annex:([^)]*)\)/g;
-const ANNEX_CONTENT_TYPES: Record<string, string> = {
-  ".jpg": "image/jpeg",
-  ".png": "image/png",
-  ".pdf": "application/pdf",
-};
-const ANNEX_BUCKET = "chair-flight";
-const UPLOAD_CONCURRENCY = 2;
 const INSERT_CHUNK_SIZE = 500;
 
 const BIG_DISCUSSION = { questionBank: "atpl", questionId: "QSCLCOEJ7" };
@@ -107,9 +99,6 @@ const readDocs = async (folder: string) =>
   );
 
 const readAnnexes = async (questionBank: string) => {
-  const annexBaseUrl =
-    process.env.ANNEX_BASE_URL ??
-    `${readEnv("SUPABASE_URL")}/storage/v1/object/public/chair-flight`;
   const annexes = await readYamlFile<{
     id: string;
     format: string;
@@ -125,7 +114,7 @@ const readAnnexes = async (questionBank: string) => {
   );
   const rows = annexes.map((annex) => ({
     id: annex.id,
-    href: `${annexBaseUrl}/${questionBank}/${annex.id}.${annex.format}`,
+    href: `/content/annexes/${questionBank}/${annex.id}.${annex.format}`,
     format: annex.format,
     description: annex.description ?? "",
     source: annex.source ?? "",
@@ -137,12 +126,28 @@ const readAnnexes = async (questionBank: string) => {
       if (!href) throw new Error(`Missing annex ${id}.`);
       return `${prefix}${href})`;
     });
-  return { rows, replaceAnnexLinks };
+  const replaceOptionAnnexes = (template: QuestionTemplate) =>
+    template.type === "definition"
+      ? {
+          ...template,
+          options: template.options.map((option) => {
+            if (!option.annex) return option;
+            const href = hrefsById.get(option.annex);
+            if (!href) throw new Error(`Missing annex ${option.annex}.`);
+            return { ...option, annex: href };
+          }),
+        }
+      : template;
+  return { rows, replaceAnnexLinks, replaceOptionAnnexes };
 };
 
 const readAtpl = async () => {
   const root = path.join("content", "question-bank-atpl");
-  const { rows: annexes, replaceAnnexLinks } = await readAnnexes("atpl");
+  const {
+    rows: annexes,
+    replaceAnnexLinks,
+    replaceOptionAnnexes,
+  } = await readAnnexes("atpl");
   const subjects = await readYamlFile<{
     id: string;
     longName: string;
@@ -227,7 +232,7 @@ const readAtpl = async () => {
       docId: question.docId,
       preview: getQuestionPreview(question.template),
       template: {
-        ...question.template,
+        ...replaceOptionAnnexes(question.template),
         explanation: replaceAnnexLinks(question.template.explanation),
       },
     })),
@@ -359,55 +364,6 @@ const replaceTables = async (
       await tx.insert(table).values(chunk as never);
     }
   }
-};
-
-const uploadAnnexes = async () => {
-  const questionBanks = ["atpl", "a320", "b737"];
-  const annexFiles = (
-    await Promise.all(
-      questionBanks.map(async (questionBank) => {
-        const folder = path.join(
-          "content",
-          `question-bank-${questionBank}`,
-          "annexes",
-        );
-        const files = await fs.readdir(folder).catch(() => []);
-        return files
-          .filter((file) => path.extname(file) in ANNEX_CONTENT_TYPES)
-          .map((file) => ({
-            file: path.join(folder, file),
-            target: `${questionBank}/${file}`,
-            contentType: ANNEX_CONTENT_TYPES[path.extname(file)],
-          }));
-      }),
-    )
-  ).flat();
-  const supabase = createClient(
-    readEnv("SUPABASE_URL"),
-    readEnv("SUPABASE_SECRET_KEY"),
-  );
-  const { error: bucketError } = await supabase.storage.createBucket(
-    ANNEX_BUCKET,
-    { public: true },
-  );
-  if (bucketError && !/already exists/i.test(bucketError.message)) {
-    throw bucketError;
-  }
-  for (const batch of chunkItems(annexFiles, UPLOAD_CONCURRENCY)) {
-    await Promise.all(
-      batch.map(async ({ file, target, contentType }) => {
-        const { error } = await supabase.storage
-          .from(ANNEX_BUCKET)
-          .upload(target, await fs.readFile(file), {
-            contentType,
-            cacheControl: "31536000",
-            upsert: true,
-          });
-        if (error) throw new Error(`${target}: ${error.message}`);
-      }),
-    );
-  }
-  console.info(`${annexFiles.length} annexes uploaded`);
 };
 
 const getMockUserId = (position: number) =>
@@ -695,12 +651,6 @@ try {
     ]);
   });
   console.info("Content seeded.");
-
-  if (process.env.ANNEX_BASE_URL || local) {
-    console.info("Annex upload skipped: annexes are served from disk.");
-  } else {
-    await uploadAnnexes();
-  }
 
   if (local) {
     await seedMockCommunity(db);

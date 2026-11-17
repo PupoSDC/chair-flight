@@ -4,7 +4,9 @@ import { ThemeToggle } from "../libs/ui/components/base/theme-toggle";
 import { cn } from "../libs/ui/utils/cn";
 import { AccountButtonStory } from "./-design-system/account-button-story";
 import { AccountModalStory } from "./-design-system/account-modal-story";
+import { AnnexBuffetOnsetChartStory } from "./-design-system/annex-buffet-onset-chart-story";
 import { AnnexModalStory } from "./-design-system/annex-modal-story";
+import { AnnexMrjtLoadTrimSheetStory } from "./-design-system/annex-mrjt-load-trim-sheet-story";
 import { AppShellStory } from "./-design-system/app-shell-story";
 import { BadgeStory } from "./-design-system/badge-story";
 import { BreadcrumbsStory } from "./-design-system/breadcrumbs-story";
@@ -254,6 +256,18 @@ const GROUPS: {
         name: "Annex modal",
         about: "The viewer for a question annex.",
         Story: AnnexModalStory,
+      },
+      {
+        id: "annex-mrjt-load-trim-sheet",
+        name: "Annex MRJT load and trim sheet",
+        about: "The fillable Load and Trim Sheet used by MRJT questions.",
+        Story: AnnexMrjtLoadTrimSheetStory,
+      },
+      {
+        id: "annex-buffet-onset-chart",
+        name: "Annex buffet onset chart",
+        about: "The buffet onset boundary chart with solved overlay lines.",
+        Story: AnnexBuffetOnsetChartStory,
       },
       {
         id: "learning-objective-table",

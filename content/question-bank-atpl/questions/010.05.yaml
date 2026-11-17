@@ -675,40 +675,176 @@
 - id: QADWAAPE
   docId: "010.05"
   relatedQuestions:
-    - QEAKZSXW
-    - QLPGQCVO
-    - QNMWGRUP
-    - QVLLCRFD
+    - QFDKELTU
   externalIds:
     - ATPLQ-107664
     - AVEXAM-44872
-  annexes:
-    - 010-marshalling-signal-cut-engines
+    - ATPLQ-108643
+    - AVEXAM-71151
+    - ATPLQ-101490
+    - AVEXAM-44860
+    - ATPLGS-127380
+    - BGS-100135
+    - ATPLQ-105582
+    - ATPLQ-102525
+    - AVEXAM-39512
+    - ATPLQ-105697
+    - AVEXAM-76354
+    - ATPLQ-109664
+    - ATPLQ-105867
+    - ATPLQ-104523
+    - AVEXAM-86527
+    - ATPLQ-103559
+  annexes: []
   learningObjectives:
     - 010.05.03.01.03
   template:
-    type: simple
-    question: |-
-      Refer to figure. 
-       What does this marshalling signal mean?
-    explanation: ""
+    type: definition
+    question: What is the meaning of the hand signal shown?
+    explanation: |-
+      ![Aircraft marshalling signals](annex:010-aircraft-marshalling-signals)
+
+      {table}
+
+      Images 1–34 show signals from the marshaller. Images 35–39 show
+      signals from the pilot.
+
+      See SERA Appendix 1, section 4 in the [CAA Regulatory Library](https://regulatorylibrary.caa.co.uk/923-2012/Content/Regs/03830_4._MARSHALLING_SIGNALS.htm).
     options:
-      - id: AKSK1J5OCY
-        text: Cut engines.
-        correct: true
-        why: ""
-      - id: ANX6DEN2ZM
-        text: Hover.
-        correct: false
-        why: ""
-      - id: A14YA5Y669
-        text: Start engines.
-        correct: false
-        why: ""
-      - id: ABR1WCUXUX
-        text: Remove onside chocks.
-        correct: false
-        why: ""
+      - id: OMARI0001
+        term: "1"
+        annex: 010-marshalling-signal-01
+        definition: "Wingwalker: the path into or out of the stand is clear."
+      - id: OMARI0002
+        term: "2"
+        annex: 010-marshalling-signal-02
+        definition: Identify the gate or stand.
+      - id: OMARI0003
+        term: "3"
+        annex: 010-marshalling-signal-03
+        definition: Proceed in the direction indicated to the next marshaller or as
+          directed by tower or ground control.
+      - id: OMARI0004
+        term: "4"
+        annex: 010-marshalling-signal-04
+        definition: Continue straight ahead.
+      - id: OMARI0005
+        term: "5"
+        annex: 010-marshalling-signal-05
+        definition: Turn left from the pilot’s perspective.
+      - id: OMARI0006
+        term: "6"
+        annex: 010-marshalling-signal-06
+        definition: Turn right from the pilot’s perspective.
+      - id: OMARI0007
+        term: "7"
+        annex: 010-marshalling-signal-07
+        definition: Normal stop.
+      - id: OMARI0008
+        term: "8"
+        annex: 010-marshalling-signal-08
+        definition: Emergency stop.
+      - id: OMARI0009
+        term: "9"
+        annex: 010-marshalling-signal-09
+        definition: Set the brakes.
+      - id: OMARI0010
+        term: "10"
+        annex: 010-marshalling-signal-10
+        definition: Release the brakes.
+      - id: OMARI0011
+        term: "11"
+        annex: 010-marshalling-signal-11
+        definition: Chocks inserted.
+      - id: OMARI0012
+        term: "12"
+        annex: 010-marshalling-signal-12
+        definition: Chocks removed.
+      - id: OMARI0013
+        term: "13"
+        annex: 010-marshalling-signal-13
+        definition: Start the indicated engine.
+      - id: OMARI0014
+        term: "14"
+        annex: 010-marshalling-signal-14
+        definition: Cut the engines.
+      - id: OMARI0015
+        term: "15"
+        annex: 010-marshalling-signal-15
+        definition: Reduce the aircraft’s speed.
+      - id: OMARI0016
+        term: "16"
+        annex: 010-marshalling-signal-16
+        definition: Reduce power on the indicated side.
+      - id: OMARI0017
+        term: "17"
+        annex: 010-marshalling-signal-17
+        definition: Move the aircraft backwards.
+      - id: OMARI0018
+        term: "18"
+        annex: 010-marshalling-signal-18
+        definition: While backing up, turn the tail to starboard.
+      - id: OMARI0019
+        term: "19"
+        annex: 010-marshalling-signal-19
+        definition: While backing up, turn the tail to port.
+      - id: OMARI0020
+        term: "20"
+        annex: 010-marshalling-signal-20
+        definition: Affirmative or all clear.
+      - id: OMARI0027
+        term: "27"
+        annex: 010-marshalling-signal-27
+        definition: Hold position or stand by.
+      - id: OMARI0028
+        term: "28"
+        annex: 010-marshalling-signal-28
+        definition: Aircraft dispatched.
+      - id: OMARI0029
+        term: "29"
+        annex: 010-marshalling-signal-29
+        definition: Do not touch the controls.
+      - id: OMARI0030
+        term: "30"
+        annex: 010-marshalling-signal-30
+        definition: Connect ground power.
+      - id: OMARI0031
+        term: "31"
+        annex: 010-marshalling-signal-31
+        definition: Disconnect ground power.
+      - id: OMARI0032
+        term: "32"
+        annex: 010-marshalling-signal-32
+        definition: Negative.
+      - id: OMARI0033
+        term: "33"
+        annex: 010-marshalling-signal-33
+        definition: Establish contact via interphone.
+      - id: OMARI0034
+        term: "34"
+        annex: 010-marshalling-signal-34
+        definition: Open or close the aircraft stairs.
+      - id: OMARI0035
+        term: "35"
+        annex: 010-marshalling-signal-35
+        definition: The pilot has engaged the brakes.
+      - id: OMARI0036
+        term: "36"
+        annex: 010-marshalling-signal-36
+        definition: The pilot has released the brakes.
+      - id: OMARI0037
+        term: "37"
+        annex: 010-marshalling-signal-37
+        definition: The pilot requests that chocks be inserted.
+      - id: OMARI0038
+        term: "38"
+        annex: 010-marshalling-signal-38
+        definition: The pilot requests that chocks be removed.
+      - id: OMARI0039
+        term: "39"
+        annex: 010-marshalling-signal-39
+        definition: The pilot is ready to start the engine indicated.
+    fakeOptions: []
 - id: QAI1AGFTH
   docId: "010.05"
   relatedQuestions: []
@@ -1018,42 +1154,6 @@
         correct: true
         why: ""
       - text: Fuel on board
-        correct: false
-        why: ""
-- id: QCGBDA7MB
-  docId: "010.05"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-108643
-    - AVEXAM-71151
-  annexes:
-    - 010-marshalling-signal-wing-walker-one-wand-raised-vertically-and-one
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: >-
-      Refer to figure.
-
-
-      What does the signal from the signalman (marshaller) situated at the
-      aircraft wing tip, which is shown in the attached figure, mean?
-    explanation: ""
-    options:
-      - id: O4EFLGZGU
-        text: The aircraft movement on/off a parking position would be unobstructed.
-        correct: true
-        why: ""
-      - id: OBAXMO0L5
-        text: Chocks inserted.
-        correct: false
-        why: ""
-      - id: OYDIVB5CI
-        text: The aircraft movement on/off a parking position would be obstructed.
-        correct: false
-        why: ""
-      - id: OTVY0UGJC
-        text: Caution, birds on the apron.
         correct: false
         why: ""
 - id: QCKY3SDYV
@@ -1536,45 +1636,6 @@
         text: Libya Rules
         correct: false
         why: ""
-- id: QEAKZSXW
-  docId: "010.05"
-  relatedQuestions:
-    - QADWAAPE
-    - QLPGQCVO
-    - QNMWGRUP
-    - QVLLCRFD
-  externalIds:
-    - ATPLQ-101490
-    - AVEXAM-44860
-    - ATPLGS-127380
-    - BGS-100135
-  annexes:
-    - 010-marshalling-signal-you-can-safely-release-the-brakes-hand-raised
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: |-
-      Refer to figure. 
-       What does this marshalling signal mean?
-    explanation: ""
-    options:
-      - id: AZA2MW67PU
-        text: You can safely release the brakes.
-        correct: true
-        why: ""
-      - id: AMGIMHULCV
-        text: You can set the parking brake.
-        correct: false
-        why: ""
-      - id: AAM5TI22ZU
-        text: Start slowly to brake.
-        correct: false
-        why: ""
-      - id: AQCO2MEGGN
-        text: You need to stop immediately.
-        correct: false
-        why: ""
 - id: QEBHHRSFW
   docId: "010.05"
   relatedQuestions: []
@@ -1755,74 +1816,192 @@
         text: No, the pilot must fly in accordance with the Visual Flight Rules.
         correct: false
         why: ""
-- id: QF5B34YFH
-  docId: "010.05"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-105582
-  annexes:
-    - 010-marshalling-signal-set-brakes
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      What does this signal from the marshaller mean?
-    explanation: ""
-    options:
-      - id: OZAKYSJDT
-        text: Lights off
-        correct: false
-        why: ""
-      - id: OWP4WDFNL
-        text: Set brakes
-        correct: true
-        why: ""
-      - id: OVZOSFBIE
-        text: Slow down
-        correct: false
-        why: ""
-      - id: O2NPMYUSB
-        text: Chokes inserted
-        correct: false
-        why: ""
 - id: QFDKELTU
   docId: "010.05"
-  relatedQuestions: []
+  relatedQuestions:
+    - QADWAAPE
   externalIds:
     - ATPLQ-107269
     - AVEXAM-54960
+    - ATPLQ-101813
+    - BGS-100123
+    - AVEXAM-23220
   annexes: []
   learningObjectives:
     - 010.05.03.01.03
   template:
-    type: simple
-    question: >-
-      Refer to figure.
+    type: definition
+    question: |-
+      What does this marshalling signal mean?
 
+      {term}
+    explanation: |-
+      The same hand shape can mean different things depending on who
+      gives the signal and how the hand moves.
 
-      A marshaller abruptly extends arms and wands to top of head, crossing
-      wands. What does this mean?
-    explanation: ""
+      See SERA Appendix 1, section 4 in the [CAA Regulatory Library](https://regulatorylibrary.caa.co.uk/923-2012/Content/Regs/03830_4._MARSHALLING_SIGNALS.htm).
     options:
-      - id: OT7WYH2UN
-        text: Proceed to gate.
-        correct: false
-        why: ""
-      - id: ONZG8WS8S
-        text: Normal Stop.
-        correct: false
-        why: ""
-      - id: OCWWHHXI2
-        text: Parking area is clear.
-        correct: false
-        why: ""
-      - id: OFRSJFS3B
-        text: Emergency stop.
-        correct: true
-        why: ""
+      - id: OMART0001
+        term: The marshaller holds their right wand upright above their head and swings
+          their left wand down towards their body.
+        definition: "Wingwalker: the path into or out of the stand is clear."
+      - id: OMART0002
+        term: The marshaller holds both arms straight up overhead, with both wands
+          vertical.
+        definition: Identify the gate or stand.
+      - id: OMART0003
+        term: The marshaller starts with both arms pointing up, then brings them out to
+          point to one side, using the wands to indicate the onward direction.
+        definition: Proceed in the direction indicated to the next marshaller or as
+          directed by tower or ground control.
+      - id: OMART0004
+        term: The marshaller bends both elbows and repeatedly moves the wands between
+          chest and head height.
+        definition: Continue straight ahead.
+      - id: OMART0005
+        term: The marshaller holds their right wand straight out at shoulder height and
+          beckons with their left wand, setting the turn rate with the speed of
+          the gesture.
+        definition: Turn left from the pilot’s perspective.
+      - id: OMART0006
+        term: The marshaller holds their left wand straight out at shoulder height and
+          beckons with their right wand, setting the turn rate with the speed of
+          the gesture.
+        definition: Turn right from the pilot’s perspective.
+      - id: OMART0007
+        term: Starting with both wands held out at shoulder height, the marshaller
+          slowly raises them until they cross overhead.
+        definition: Normal stop.
+      - id: OMART0008
+        term: The marshaller snaps both arms up and crosses their wands over their head
+          in one abrupt movement.
+        definition: Emergency stop.
+      - id: OMART0009
+        term: After making eye contact, the marshaller closes their raised open hand
+          into a fist just above shoulder height and waits for a thumbs-up.
+        definition: Set the brakes.
+      - id: OMART0010
+        term: After making eye contact, the marshaller opens their raised fist into a
+          flat palm just above shoulder height and waits for a thumbs-up.
+        definition: Release the brakes.
+      - id: OMART0011
+        term: With both arms high overhead, the marshaller jabs the wands towards each
+          other until they touch and waits for acknowledgement.
+        definition: Chocks inserted.
+      - id: OMART0012
+        term: With both arms high overhead, the marshaller jabs the wands apart. They
+          must receive authorisation before removing the chocks.
+        definition: Chocks removed.
+      - id: OMART0013
+        term: The marshaller circles their upright right wand near head height and
+          points their raised left wand at the engine to be started.
+        definition: Start the indicated engine.
+      - id: OMART0014
+        term: The marshaller extends a wand forwards at shoulder height, then draws it
+          across their throat from their left shoulder to their right.
+        definition: Cut the engines.
+      - id: OMART0015
+        term: The marshaller makes a low patting motion with both wands, between waist
+          and knee height.
+        definition: Reduce the aircraft’s speed.
+      - id: OMART0016
+        term: From a position with both arms low and both wands down, the marshaller
+          waves one wand up and down to indicate the engine on the opposite side
+          from their own raised hand.
+        definition: Reduce power on the indicated side.
+      - id: OMART0017
+        term: The marshaller rolls both forearms forwards in front of their waist.
+        definition: Move the aircraft backwards.
+      - id: OMART0018
+        term: The marshaller keeps their left wand pointed down and repeatedly lowers
+          their right arm from overhead to point forwards at shoulder height.
+        definition: While backing up, turn the tail to starboard.
+      - id: OMART0019
+        term: The marshaller keeps their right wand pointed down and repeatedly lowers
+          their left arm from overhead to point forwards at shoulder height.
+        definition: While backing up, turn the tail to port.
+      - id: OMART0020
+        term: The marshaller gives a right-handed thumbs-up at head height, or holds the
+          right wand upright at that height, while keeping their left arm down.
+        definition: Affirmative or all clear.
+      - id: OMART0021
+        term: The marshaller holds both arms and wands fixed straight out at shoulder
+          height.
+        definition: Hover.
+      - id: OMART0022
+        term: With arms spread at shoulder height and palms up, the marshaller raises
+          both hands. The speed of the movement indicates the climb rate.
+        definition: Ascend from the hover.
+      - id: OMART0023
+        term: With arms spread at shoulder height and palms down, the marshaller lowers
+          both hands. The speed of the movement indicates the descent rate.
+        definition: Descend from the hover.
+      - id: OMART0024
+        term: The marshaller extends their right arm sideways at shoulder height and
+          sweeps their other arm towards it.
+        definition: Move sideways to the pilot’s left.
+      - id: OMART0025
+        term: The marshaller extends their left arm sideways at shoulder height and
+          sweeps their other arm towards it.
+        definition: Move sideways to the pilot’s right.
+      - id: OMART0026
+        term: The marshaller crosses both arms low in front of their body, with the
+          wands pointing down.
+        definition: Land.
+      - id: OMART0027
+        term: The marshaller keeps both arms straight and still, angled down and out at
+          45 degrees.
+        definition: Hold position or stand by.
+      - id: OMART0028
+        term: The marshaller salutes with their right hand or wand and keeps eye contact
+          until the aircraft starts taxiing.
+        definition: Aircraft dispatched.
+      - id: OMART0029
+        term: The marshaller extends their right arm all the way overhead, with a closed
+          fist or a horizontal wand, and leaves their left arm down.
+        definition: Do not touch the controls.
+      - id: OMART0030
+        term: With both arms overhead, the marshaller brings the fingers of their right
+          hand up against their horizontal left palm to form a T.
+        definition: Connect ground power.
+      - id: OMART0031
+        term: The marshaller forms a T overhead with their hands, then moves their right
+          fingers away from their left palm. They wait for authorisation before
+          disconnecting power.
+        definition: Disconnect ground power.
+      - id: OMART0032
+        term: With their left arm down, the marshaller extends their right arm sideways
+          at shoulder height and points the wand down or gives a thumbs-down.
+        definition: Negative.
+      - id: OMART0033
+        term: The marshaller starts with arms spread at shoulder height, then brings
+          both hands in to cup their ears.
+        definition: Establish contact via interphone.
+      - id: OMART0034
+        term: The marshaller holds their left arm diagonally overhead, then sweeps their
+          right hand up from their side towards their left shoulder.
+        definition: Open or close the aircraft stairs.
+      - id: OMART0035
+        term: In the cockpit, the pilot raises an open hand in front of their face and
+          closes it into a fist as they engage the brakes.
+        definition: The pilot has engaged the brakes.
+      - id: OMART0036
+        term: In the cockpit, the pilot raises a clenched fist in front of their face
+          and opens it as they release the brakes.
+        definition: The pilot has released the brakes.
+      - id: OMART0037
+        term: With both palms facing out, the pilot moves their outstretched arms
+          inwards to cross their hands in front of their face.
+        definition: The pilot requests that chocks be inserted.
+      - id: OMART0038
+        term: The pilot starts with hands crossed in front of their face and palms out,
+          then moves both arms apart.
+        definition: The pilot requests that chocks be removed.
+      - id: OMART0039
+        term: In the cockpit, the pilot raises the number of fingers corresponding to
+          the engine they are ready to start.
+        definition: The pilot is ready to start the engine indicated.
+    fakeOptions: []
 - id: QFKP9E02T
   docId: "010.05"
   relatedQuestions: []
@@ -3085,39 +3264,6 @@
       - text: Time of arrival
         correct: true
         why: ""
-- id: QLFYIAVY
-  docId: "010.05"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-101813
-    - BGS-100123
-    - AVEXAM-23220
-  annexes: []
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: A marshaller requests a pilot to engage the brakes with the signal
-    explanation: ""
-    options:
-      - id: OXHOT2M4Y
-        text: raised arm and hand with fingers extended horizontally in front of body,
-          then fist clenched.
-        correct: true
-        why: ""
-      - id: O2W7QF2XM
-        text: crossing arms extended above their head.
-        correct: false
-        why: ""
-      - id: OKKBX4LVL
-        text: arms down, palms facing inwards, moving arms from extended position
-          inwards.
-        correct: false
-        why: ""
-      - id: O63DST7PR
-        text: horizontally moving hands fingers extended, palms towards the ground.
-        correct: false
-        why: ""
 - id: QLGSRRI3Z
   docId: "010.05"
   relatedQuestions: []
@@ -3150,43 +3296,6 @@
         why: ""
       - id: O4HQYNI0P
         text: an altitude, in all cases.
-        correct: false
-        why: ""
-- id: QLPGQCVO
-  docId: "010.05"
-  relatedQuestions:
-    - QADWAAPE
-    - QEAKZSXW
-    - QNMWGRUP
-    - QVLLCRFD
-  externalIds:
-    - ATPLQ-102525
-    - AVEXAM-39512
-  annexes:
-    - 010-marshalling-signal-normal-stop-marshaller-crosses-wands-overhead
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: |-
-      Refer to figure. 
-       What does this marshalling signal mean?
-    explanation: ""
-    options:
-      - id: AKE833CRN0
-        text: Normal stop
-        correct: true
-        why: ""
-      - id: AZCUST2TDP
-        text: Set brakes
-        correct: false
-        why: ""
-      - id: AYLIWLYAKQ
-        text: Lights on
-        correct: false
-        why: ""
-      - id: AWR1H3RS3H
-        text: Lights off
         correct: false
         why: ""
 - id: QLPVSSSG
@@ -3790,43 +3899,6 @@
         why: ""
       - id: O9LAHKK7B
         text: 3%
-        correct: false
-        why: ""
-- id: QNMWGRUP
-  docId: "010.05"
-  relatedQuestions:
-    - QADWAAPE
-    - QEAKZSXW
-    - QLPGQCVO
-    - QVLLCRFD
-  externalIds:
-    - ATPLQ-105697
-    - AVEXAM-76354
-  annexes:
-    - 010-marshalling-signal-chocks-removed
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: |-
-      Refer to figure. 
-       What does this marshalling signal mean?
-    explanation: ""
-    options:
-      - id: A6BQRA8ECW
-        text: Chocks removed.
-        correct: true
-        why: ""
-      - id: AQ5P8S5A7P
-        text: Stop.
-        correct: false
-        why: ""
-      - id: AA8LSSGMMG
-        text: Brakes Applied.
-        correct: false
-        why: ""
-      - id: AKIAHPXK6M
-        text: Chocks inserted.
         correct: false
         why: ""
 - id: QO9B407FA
@@ -4845,39 +4917,6 @@
           call on the frequency 121.5 MHz.
         correct: false
         why: ""
-- id: QSZCIZLIW
-  docId: "010.05"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-109664
-  annexes:
-    - 010-marshalling-signal-identify-gate-marshaller-with-both-arms-raised-and
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      What does the marshalling signal indicate?
-    explanation: ""
-    options:
-      - id: OG2NSXWGS
-        text: Identify Gate
-        correct: true
-        why: ""
-      - id: OAKNDZNCW
-        text: Slow down
-        correct: false
-        why: ""
-      - id: OOUYV2MAE
-        text: Wingwalker/guide
-        correct: false
-        why: ""
-      - id: ORMJNCLUB
-        text: Straight ahead
-        correct: false
-        why: ""
 - id: QTCZ0WTUB
   docId: "010.05"
   relatedQuestions: []
@@ -4943,39 +4982,6 @@
       - id: OGT2S0GXR
         text: 500 feet
         correct: true
-        why: ""
-- id: QTTKDIDCE
-  docId: "010.05"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-105867
-  annexes:
-    - 010-marshalling-signal-slow-down-marshaller-with-arms-extended-and-wands
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      What does the marshalling signal indicate?
-    explanation: ""
-    options:
-      - id: OXSKBVF9J
-        text: Slow down
-        correct: true
-        why: ""
-      - id: OATBFM919
-        text: Straight ahead
-        correct: false
-        why: ""
-      - id: OAQHOVNGJ
-        text: Emergency stop
-        correct: false
-        why: ""
-      - id: OMCIEEYVT
-        text: Normal stop
-        correct: false
         why: ""
 - id: QTU1SSOCO
   docId: "010.05"
@@ -5238,43 +5244,6 @@
         text: 5%; in excess of 2 minutes
         correct: true
         why: ""
-- id: QVLLCRFD
-  docId: "010.05"
-  relatedQuestions:
-    - QADWAAPE
-    - QEAKZSXW
-    - QLPGQCVO
-    - QNMWGRUP
-  externalIds:
-    - ATPLQ-104523
-    - AVEXAM-86527
-  annexes:
-    - 010-marshaller-sign-straight-ahead
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: |-
-      Refer to figure. 
-       What does this marshalling signal mean?
-    explanation: ""
-    options:
-      - id: ARMYXJVUZ4
-        text: Straight ahead
-        correct: true
-        why: ""
-      - id: AKRFN2TS46
-        text: Slow down
-        correct: false
-        why: ""
-      - id: A7FQ2WNQZX
-        text: Stop immediately
-        correct: false
-        why: ""
-      - id: AYX7HK43SW
-        text: Set brakes
-        correct: false
-        why: ""
 - id: QVPTVWLZ
   docId: "010.05"
   relatedQuestions: []
@@ -5305,41 +5274,6 @@
       - id: OE89DNWRD
         text: The decision must be made by the first-officer and the flight attendant
           because they are a majority.
-        correct: false
-        why: ""
-- id: QVRBXOPQ5
-  docId: "010.05"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-103559
-    - AVEXAM-44860
-  annexes:
-    - 010-marshalling-signal-you-can-safely-release-the-brakes-hand-raised
-  learningObjectives:
-    - 010.05.03.01.03
-  template:
-    type: simple
-    question: >-
-      Refer to figure.   
-
-      What does the following sign mean? moves the hand up closed in a fist and
-      then opens the palm after ensuring eye contact with you.
-    explanation: ""
-    options:
-      - id: OQGVCYT7W
-        text: Start slowly to brake.
-        correct: false
-        why: ""
-      - id: OWLPSTL91
-        text: You can safely release the brakes.
-        correct: true
-        why: ""
-      - id: OASQG4COG
-        text: You need to stop immediately.
-        correct: false
-        why: ""
-      - id: OGLYZZKWZ
-        text: You can set the parking brake.
         correct: false
         why: ""
 - id: QVSEKNRH

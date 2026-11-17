@@ -402,7 +402,7 @@
     explanation: ""
     options:
       - id: OPQFDVXEI
-        text: Only aircraft 1 will have significant changes in control.
+        text: Only aircraft A will have significant changes in control.
         correct: false
         why: ""
       - id: OKIVS25KO
@@ -410,7 +410,7 @@
         correct: true
         why: ""
       - id: ORHAPIK8E
-        text: Only aircraft 2 will have significant changes in control.
+        text: Only aircraft B will have significant changes in control.
         correct: false
         why: ""
       - id: OFKWTTV2I
@@ -3217,40 +3217,6 @@
         text: moves in the same direction as the control surface and the anti-balance
           tab moves in the opposite direction to the control surface.
         correct: false
-        why: ""
-- id: QTSQ45KCR
-  docId: "081.05"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-819985
-    - AVEXAM-83799
-  annexes:
-    - 081-two-aeroplanes-in-side-view-02
-  learningObjectives:
-    - "081.05"
-  template:
-    type: simple
-    question: |-
-      Refer to figure.
-
-      During a go-around, how will each aircraft react?
-    explanation: ""
-    options:
-      - id: OK4ATP3J2
-        text: A tends to pitch down on application of TOGA.
-        correct: false
-        why: ""
-      - id: OBINRROS2
-        text: B will just accelerate if no pull force is applied.
-        correct: false
-        why: ""
-      - id: O3BA0NN3M
-        text: A requires more pull force than B.
-        correct: false
-        why: ""
-      - id: OJUEIW2VX
-        text: A is more likely to over rotate.
-        correct: true
         why: ""
 - id: QTTXYO1BS
   docId: "081.05"

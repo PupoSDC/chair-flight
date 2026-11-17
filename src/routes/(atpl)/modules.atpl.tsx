@@ -178,7 +178,10 @@ const ModuleAtplLayout: FC = () => {
             </svg>
           </div>
           <CessnaProfile className="aircraft-module-outline" />
-          <div className="h-full overflow-auto overscroll-contain">
+          <div
+            data-scroll-reset
+            className="h-full overflow-auto overscroll-contain"
+          >
             <Outlet />
           </div>
         </div>

@@ -117,7 +117,10 @@ const ModuleA320Layout: FC = () => {
             </svg>
           </div>
           <A320Front className="aircraft-module-outline" />
-          <div className="h-full overflow-auto overscroll-contain">
+          <div
+            data-scroll-reset
+            className="h-full overflow-auto overscroll-contain"
+          >
             <Outlet />
           </div>
         </div>

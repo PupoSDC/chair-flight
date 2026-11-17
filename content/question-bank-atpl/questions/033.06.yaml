@@ -87,7 +87,7 @@
     - ATPLGS-123229
     - BGS-330271
   annexes:
-    - cap-697-page-108-figure-4.7.3
+    - CAP-697-page-108
   learningObjectives:
     - "033.06"
   template:
@@ -260,7 +260,7 @@
     - ATPLQ-338033
     - AVEXAM-45571
   annexes:
-    - jeppesen-en-route-chart-excerpt-northern-scotland-02
+    - jeppesen-enr-scotland-north
   learningObjectives:
     - "033.06"
   template:
@@ -2504,95 +2504,6 @@
       - **{{d3}} kg**: the air distance difference ({{= dist * tas / (tas - w) -
       dist * tas / (tas + w)}} NM) is converted to fuel, although the
       consumption is already per ground NM.
-- id: QFLDORT0O
-  docId: "033.06"
-  relatedQuestions: []
-  externalIds:
-    - ATPLQ-334264
-    - ATPLGS-123124
-    - AVEXAM-30674
-    - ATPLGS-123123
-    - AVEXAM-48457
-  annexes:
-    - 033-fuel-progress-table-01
-  learningObjectives:
-    - "033.06"
-  template:
-    type: chart-calculation
-    question: >-
-      Refer to the figure. Given the following information, what is the
-      estimated remaining fuel at waypoint C?
-
-
-      Fuel flow: {{ff}} lb/h
-
-
-      From the figure: fuel at the start of the leg(s) = {{f0}} lb and elapsed
-      time to waypoint C = {{t}} min.
-    variables:
-      - id: ff
-        label: Fuel flow
-        unit: lb/h
-      - id: f0
-        label: Fuel at start (from figure)
-        unit: lb
-      - id: t
-        label: Elapsed time to C (from figure)
-        unit: min
-    chartInputs:
-      - f0
-      - t
-    answer:
-      formula: f0 - ff * t / 60
-      unit: lb
-      decimals: 0
-    distractors:
-      - id: d1
-        formula: f0 - ff * (t - 12) / 60
-      - id: d2
-        formula: f0 - ff * t / 100
-      - id: d3
-        formula: f0 - ff * (t + 12) / 60
-      - id: d4
-        formula: f0
-    presets:
-      - id: p1
-        values:
-          ff: 900
-          f0: 1600
-          t: 22
-      - id: p2
-        values:
-          ff: 800
-          f0: 2000
-          t: 36
-      - id: p3
-        values:
-          ff: 1000
-          f0: 2400
-          t: 36
-    explanation: >-
-      Remaining fuel at a waypoint is the fuel at the start minus the fuel flow
-      multiplied by the elapsed time (in hours). The elapsed time and starting
-      fuel come from the figure.
-
-
-      **Solution**
-
-
-      {{f: f0 - ff * t / 60}} = {{n: f0 - ff * t / 60}} = **{{answer}} lb**
-
-
-      **Why the other answers are wrong**
-
-
-      - **{{d1}} lb**: the elapsed time was taken 12 minutes too short.
-
-      - **{{d2}} lb**: the time in minutes was not converted correctly to hours.
-
-      - **{{d3}} lb**: the elapsed time was taken 12 minutes too long.
-
-      - **{{d4}} lb**: no fuel burn was subtracted.
 - id: QFQYBJPB
   docId: "033.06"
   relatedQuestions:
@@ -2749,7 +2660,7 @@
     - 033-excerpt-from-flight-log-03
     - 033-excerpt-from-flight-log-06
     - 033-excerpt-from-flight-log-07
-    - 033-flight-log-excerpt-with-legend
+    - 033-flight-log-excerpt-01
   learningObjectives:
     - "033.06"
     - 033.06.01.01.04
@@ -3542,7 +3453,7 @@
     - AVEXAM-80617
     - ATPLGS-627143
   annexes:
-    - jeppesen-eham-10-2c
+    - jeppesen-ad-eham-10-2c
   learningObjectives:
     - "033.06"
   template:
@@ -5632,7 +5543,7 @@
     - ATPLQ-334463
     - AVEXAM-879
   annexes:
-    - jeppesen-eham-ams-amsterdam-schiphol-star-chart-lamso-2a-molix
+    - jeppesen-ad-eham-10-2b-02
   learningObjectives:
     - "033.06"
   template:
@@ -6180,7 +6091,7 @@
     - AVEXAM-18874
     - AVEXAM-89785
   annexes:
-    - jeppesen-en-route-chart-excerpt-northern-scotland-02
+    - jeppesen-enr-scotland-north
   learningObjectives:
     - "033.06"
   template:
@@ -8159,36 +8070,111 @@
     - ATPLGS-123123
     - AVEXAM-48457
     - BGS-331152
-  annexes:
-    - 033-fuel-progress-table-02
+    - ATPLQ-334264
+    - AVEXAM-30674
+  annexes: []
   learningObjectives:
     - "033.06"
   template:
-    type: simple
-    question: >-
-      Refer to figure.
-
+    type: calculation
+    question: |-
+      Refer to the table.
 
       Given the following information, what will be the Estimated Time of
       Overflight (ETO) and estimated remaining fuel at waypoint C?
-    explanation: ""
-    options:
-      - id: ORIOUKBIV
-        text: ETO 15:45, and estimated remaining fuel 1775 lb.
-        correct: false
-        why: ""
-      - id: OEYFFYANM
-        text: ETO 15:40, and estimated remaining fuel 1775 lb.
-        correct: true
-        why: ""
-      - id: OMRUOWILD
-        text: ETO 15:45, and estimated remaining fuel 1850 lb.
-        correct: false
-        why: ""
-      - id: OCTEZQ38U
-        text: ETO 15:40, and estimated remaining fuel 1850 lb.
-        correct: false
-        why: ""
+
+      | Waypoint | Distance (NM) | ETO | ATO | Estimated fuel (lb) | Actual fuel (lb) |
+      | --- | --- | --- | --- | --- | --- |
+      | Departure | | | {{= floor(tdep / 60) * 100 + tdep - floor(tdep / 60) * 60}} | | {{f0}} |
+      | B | {{dab}} | {{= floor(tb / 60) * 100 + tb - floor(tb / 60) * 60}} | {{= floor(tb / 60) * 100 + tb - floor(tb / 60) * 60}} | {{fe}} | {{fa}} |
+      | C | {{dbc}} | ? | | ? | |
+    variables:
+      - id: tdep
+        label: Departure ATO
+        unit: min
+      - id: tb
+        label: ETO and ATO at B
+        unit: min
+      - id: dab
+        label: Distance Departure to B
+        unit: NM
+      - id: dbc
+        label: Distance B to C
+        unit: NM
+      - id: f0
+        label: Actual fuel at departure
+        unit: lb
+      - id: fe
+        label: Estimated fuel at B
+        unit: lb
+      - id: fa
+        label: Actual fuel at B
+        unit: lb
+    answer:
+      formula: tb + dbc * (tb - tdep) / dab
+      unit: min
+      decimals: 0
+      format: hh:mm
+      optionText: ETO {first}, and estimated remaining fuel {second}.
+      second:
+        formula: fa - dbc * (f0 - fa) / dab
+        unit: lb
+        decimals: 0
+    distractors:
+      - id: d1
+        formula: tb + dbc * (tb - tdep) / dab
+        second: fe - dbc * (f0 - fe) / dab
+      - id: d2
+        formula: tb + (tb - tdep)
+      - id: d3
+        formula: tb + (tb - tdep)
+        second: fe - dbc * (f0 - fe) / dab
+      - id: d4
+        formula: tb + dbc * (tb - tdep) / dab + 5
+        second: fa - (f0 - fa)
+    presets:
+      - id: p1
+        values:
+          tdep: 870
+          tb: 910
+          dab: 200
+          dbc: 150
+          f0: 3000
+          fe: 2400
+          fa: 2300
+      - id: p2
+        values:
+          tdep: 600
+          tb: 640
+          dab: 160
+          dbc: 120
+          f0: 2800
+          fe: 2300
+          fa: 2200
+    explanation: |-
+      The time and fuel rates of the leg already flown are extended to the
+      next leg, using the actual figures.
+
+      **Solution**
+
+      Time rate = {{= tb - tdep}} min / {{dab}} NM, applied to
+      {{dbc}} NM, added to the time at B.
+
+      Fuel burn rate = ({{f0}} - {{fa}}) lb / {{dab}} NM, applied to
+      {{dbc}} NM, subtracted from the actual fuel at B.
+
+      ETO at C = **{{answer}}**
+
+      **Why the other answers are wrong**
+
+      - Fuel burn taken from the estimated column instead of the actual one.
+
+      - Time of the whole previous leg repeated for the next leg.
+
+      - A combination of both errors.
+
+      - A 5 minute error on the time and the whole previous leg's fuel burn
+      repeated.
 - id: QXM0XF2OF
   docId: "033.06"
   relatedQuestions: []

@@ -1,5 +1,7 @@
 import { cn } from "../../utils/cn";
 import { Markdown } from "../base/markdown";
+import { BuffetOnsetChart } from "../question-bank/annex-buffet-onset-chart";
+import { MrjtLoadTrimSheet } from "../question-bank/annex-mrjt-load-trim-sheet";
 import type { FC } from "react";
 
 const OPTION_LETTERS = ["A", "B", "C", "D", "E", "F"];
@@ -34,26 +36,39 @@ export const QuestionMultipleChoice: FC<{
       <Markdown className="question-markdown text-base">{question}</Markdown>
       {annexes.length > 0 && (
         <div className="flex flex-wrap gap-2">
-          {annexes.map((href) => (
-            <button
-              key={href}
-              type="button"
-              aria-label="Open annex"
-              className={cn(
-                "grid size-14 cursor-pointer place-items-center",
-                "overflow-hidden",
-                "rounded-md border",
-                "border-rule-strong bg-paper p-0 hover:border-accent",
-              )}
-              onClick={() => onAnnexClick?.(href)}
-            >
-              {href.endsWith(".pdf") ? (
-                <span className="text-xs font-semibold text-muted">PDF</span>
-              ) : (
-                <img src={href} alt="" className="size-full object-cover" />
-              )}
-            </button>
-          ))}
+          {annexes.map((href) => {
+            const sheet = href
+              .split("?")[0]
+              .endsWith("031-mrjt-load-trim-sheet.svg");
+            const buffet = href
+              .split("?")[0]
+              .endsWith("buffet-onset-boundary-chart.svg");
+            const fields = Object.fromEntries(
+              new URLSearchParams(href.split("?")[1]),
+            );
+            return (
+              <button
+                key={href}
+                type="button"
+                aria-label="Open annex"
+                className={cn(
+                  "cursor-pointer overflow-hidden",
+                  "rounded-md border",
+                  "border-rule-strong bg-paper p-0 hover:border-accent",
+                  "grid size-14 place-items-center",
+                )}
+                onClick={() => onAnnexClick?.(href)}
+              >
+                {sheet ? (
+                  <MrjtLoadTrimSheet fields={fields} className="size-full!" />
+                ) : buffet ? (
+                  <BuffetOnsetChart fields={fields} className="size-full!" />
+                ) : (
+                  <img src={href} alt="" className="size-full object-cover" />
+                )}
+              </button>
+            );
+          })}
         </div>
       )}
       <div className="flex flex-col gap-2">

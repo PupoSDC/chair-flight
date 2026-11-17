@@ -144,8 +144,8 @@ const QuestionPractice: FC = () => {
               <div className="flex flex-col gap-6">
                 <section>
                   <SectionTitle>Explanation</SectionTitle>
-                  {template.template.explanation ? (
-                    <Markdown>{template.template.explanation}</Markdown>
+                  {question.explanation ? (
+                    <Markdown>{question.explanation}</Markdown>
                   ) : (
                     <p className="m-0 text-sm text-muted">
                       No explanation yet.

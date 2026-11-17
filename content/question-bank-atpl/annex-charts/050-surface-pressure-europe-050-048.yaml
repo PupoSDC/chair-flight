@@ -1,0 +1,60 @@
+description: >-
+  Surface pressure chart of western Europe. A deep low is centred over
+  southern Ireland, ringed by closely spaced isobars. A short occlusion
+  curls out of the centre to a triple point over south-west Britain. From
+  there a cold front runs west-south-west across the Bay of Biscay, just
+  north of Spain, into the Atlantic, and a warm front runs south-south-east
+  across France to the Mediterranean coast, passing just west of Geneva
+  (LSGG). The isobars in the warm sector between the two fronts are straight
+  and parallel, running west to east. East of the warm front they turn
+  north-east across Germany. A high lies east of the Alps and a
+  second low is at the north-east corner of the chart.
+view: western-europe
+isobars:
+  - through: [[-7.1, 51.9], [-5.4, 52.9], [-3.2, 52.5], [-4.8, 51.4]]
+    closed: true
+  - through: [[-9.0, 51.5], [-7.5, 53.6], [-4.0, 54.2], [-0.9, 52.7], [-2.0, 51.0], [-5.7, 50.3]]
+    closed: true
+  - through: [[-2.8, 48.4], [-7.4, 48.8], [-10.1, 50.9], [-9.9, 53.6], [-6.2, 55.4], [-1.1, 54.9], [1.2, 52.5], [0.9, 49.7], [1.3, 48.6]]
+  - through: [[1.3, 48.6], [-2.8, 48.4]]
+  - through: [[-5.7, 46.7], [-9.4, 47.8], [-12.0, 50.5], [-12.3, 54.0], [-7.3, 56.4], [-0.7, 56.1], [2.6, 53.6], [2.6, 50.1], [2.1, 47.6]]
+  - through: [[2.1, 47.6], [-5.7, 46.7]]
+  - through: [[-11.6, 61.8], [-16.1, 56.4], [-15.8, 51.5], [-12.4, 47.9], [-7.3, 45.6]]
+  - through: [[-7.3, 45.6], [-2.1, 46.3], [2.9, 46.5]]
+  - through: [[2.9, 46.5], [4.1, 49.1], [7.5, 52.9], [11.4, 55.6], [14.7, 58.3], [19.8, 60.0], [24.6, 61.5]]
+  - through: [[-18.0, 60.7], [-19.7, 54.7], [-18.1, 50.2], [-14.4, 46.7], [-9.6, 44.5]]
+  - through: [[-9.6, 44.5], [-2.9, 45.3], [3.4, 45.5]]
+  - through: [[3.4, 45.5], [6.3, 49.8], [11.0, 53.0], [17.1, 53.5], [22.5, 52.1], [31.3, 49.6]]
+  - through: [[-23.9, 59.2], [-22.6, 52.7], [-20.3, 48.4], [-16.6, 45.1], [-12.7, 43.0]]
+  - through: [[-12.7, 43.0], [-4.0, 44.1], [3.8, 44.6]]
+  - through: [[3.8, 44.6], [7.3, 48.2], [12.9, 51.1], [19.5, 50.6], [29.7, 47.4]]
+  - through: [[-19.0, 43.6], [-16.1, 42.4], [-14.6, 42.2]]
+  - through: [[-14.6, 42.2], [-6.1, 43.0], [4.4, 43.7]]
+  - through: [[4.4, 43.7], [7.6, 45.0], [10.2, 47.3], [15.6, 48.7], [23.1, 47.7], [26.2, 45.5], [24.9, 42.0], [22.2, 39.9], [24.5, 37.5]]
+  - through: [[-16.4, 39.1], [-9.6, 40.2], [-3.3, 40.8], [1.8, 41.7], [6.1, 41.1], [9.8, 43.3], [13.3, 42.7], [17.1, 40.2], [23.7, 35.6]]
+  - through: [[-15.2, 36.6], [-6.9, 38.2], [-0.9, 38.9], [4.5, 38.9], [9.3, 38.3], [13.5, 38.8], [15.6, 35.5]]
+  - through: [[15.1, 45.7], [17.1, 46.6], [21.3, 45.9], [22.3, 44.5], [20.3, 43.7], [16.2, 44.4]]
+    closed: true
+  - through: [[26.1, 61.3], [25.2, 58.0], [27.9, 55.9], [35.5, 54.5]]
+  - through: [[20.1, 62.2], [20.4, 57.6], [23.8, 54.6], [33.0, 51.7]]
+fronts:
+  - type: cold
+    symbols: left
+    through: [[-0.2, 50.9], [-3.5, 48.0], [-7.3, 45.6], [-9.6, 44.5], [-12.7, 43.0], [-17.5, 41.1]]
+  - type: warm
+    symbols: left
+    through: [[-0.2, 50.9], [1.9, 48.2], [3.7, 45.0], [5.3, 42.6]]
+  - type: occluded
+    symbols: right
+    through: [[-0.2, 50.9], [-1.0, 51.8], [-1.8, 52.8], [-2.9, 53.1], [-4.1, 53.1]]
+centres:
+  - type: low
+    at: [-5.3, 52.1]
+  - type: high
+    at: [18.8, 45.2]
+  - type: low
+    at: [29.6, 58.0]
+markers:
+  - label: LSGG
+    style: dot
+    at: geneva

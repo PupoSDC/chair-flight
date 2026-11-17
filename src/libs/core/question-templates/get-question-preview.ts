@@ -1,6 +1,7 @@
 import { getQuestionPreviewForVariantCalculation } from "./get-question-preview-for-variant-calculation.ts";
 import { getQuestionPreviewForVariantChart } from "./get-question-preview-for-variant-chart.ts";
 import { getQuestionPreviewForVariantDefinition } from "./get-question-preview-for-variant-definition.ts";
+import { getQuestionPreviewForVariantMrjt } from "./get-question-preview-for-variant-mrjt.ts";
 import { getQuestionPreviewForVariantMultipleCorrect } from "./get-question-preview-for-variant-multiple-correct.ts";
 import { getQuestionPreviewForVariantOneTwo } from "./get-question-preview-for-variant-one-two.ts";
 import { getQuestionPreviewForVariantSimple } from "./get-question-preview-for-variant-simple.ts";
@@ -25,5 +26,7 @@ export const getQuestionPreview = (variant: QuestionTemplate) => {
       return getQuestionPreviewForVariantCalculation(variant);
     case "calculation":
       return getQuestionPreviewForVariantCalculation(variant);
+    case "mrjt":
+      return getQuestionPreviewForVariantMrjt(variant);
   }
 };
