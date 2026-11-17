@@ -18,13 +18,6 @@ import katexCss from "katex/dist/katex.min.css?url";
 import appCss from "../styles.css?url";
 
 const RootDocument: FC<PropsWithChildren> = ({ children }) => {
-  useEffect(() => {
-    if (!import.meta.env.DEV) return;
-    import("../tools/design-mask/activate-design-mask").then((module) => {
-      module.activateDesignMask();
-    });
-  }, []);
-
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
