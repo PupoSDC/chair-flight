@@ -30,26 +30,27 @@ pnpm dev
 
 The app runs on http://localhost:3100.
 
-| Command                                    | Reads        | Purpose                                                      |
-| ------------------------------------------ | ------------ | ------------------------------------------------------------ |
-| `pnpm dev`                                 | `.env`       | Dev server against the hosted database                       |
-| `pnpm dev:local`                           | `.env.local` | Dev server against the local Docker database                 |
-| `pnpm migrate`                             | `.env`       | Apply database migrations                                    |
-| `pnpm migrate:local`                       | `.env.local` | Same, on the local database                                  |
-| `pnpm script:seed-database`                | `.env`       | Replace the database with `content/` (needs `-- --upstream`) |
-| `pnpm script:seed-database:local`          | `.env.local` | Same on the local database, plus mock users and comments     |
-| `pnpm script:pull-database`                | `.env`       | Write the database into `content/`, annexes included         |
-| `pnpm script:pull-database:local`          | `.env.local` | Same, from the local database                                |
-| `pnpm script:import-learning-objectives`   |              | Convert the `external/*.xlsx` syllabi into YAML              |
-| `pnpm check` / `lint` / `format` / `build` | `.env`       | Type check, lint, format, production build                   |
+| Command                                    | Reads        | Purpose                                              |
+| ------------------------------------------ | ------------ | ---------------------------------------------------- |
+| `pnpm dev`                                 | `.env`       | Dev server against the hosted database               |
+| `pnpm dev:local`                           | `.env.local` | Dev server against the local Docker database         |
+| `pnpm migrate`                             | `.env`       | Apply database migrations                            |
+| `pnpm migrate:local`                       | `.env.local` | Same, on the local database                          |
+| `pnpm script:push-content`                 | `.env`       | Replace the database with `content/`                 |
+| `pnpm script:push-content:local`           | `.env.local` | Same on the local database                           |
+| `pnpm script:pull-content`                 | `.env`       | Write the database into `content/`, annexes included |
+| `pnpm script:pull-content:local`           | `.env.local` | Same, from the local database                        |
+| `pnpm script:seed-local-db`                | `.env.local` | Add mock users and comments to the local database    |
+| `pnpm script:import-learning-objectives`   |              | Convert the `external/*.xlsx` syllabi into YAML      |
+| `pnpm check` / `lint` / `format` / `build` | `.env`       | Type check, lint, format, production build           |
 
-`script:seed-database` accepts `--dry-run`. `.env.local` is committed on purpose
+`script:push-content` accepts `--dry-run`. `.env.local` is committed on purpose
 and holds no secrets; `.env` is yours and ignored by git.
 
 ## Content
 
 The database is the source of truth. `content/question-bank-*` is a backup of
-it, written by `script:pull-database` and readable by `script:seed-database`.
+it, written by `script:pull-content` and readable by `script:push-content`.
 Blog posts in `content/blog` are read at build time. A post's image is
 `content/blog/posts/<post>/cover.jpg` (or `.png`, `.webp`); annexes
 and blog images are served straight from `content/` in development, and copied
@@ -86,14 +87,15 @@ Develop against a throwaway Postgres instead of Supabase (needs Docker):
 ```sh
 docker compose up -d --wait   # Postgres on localhost:54322
 pnpm migrate:local
-pnpm script:seed-database:local   # content, 10 mock users and comments
+pnpm script:push-content:local    # content
+pnpm script:seed-local-db         # 10 mock users and comments
 pnpm dev:local
 ```
 
 Then open `http://localhost:3100/auth/impersonate/<userId>` to sign in as a
 mock user, or `/auth/impersonate` for the list. User ids are
 `00000000-0000-4000-8000-000000000001` to `...0010`, and the first one is an
-administrator. Run `pnpm script:seed-database:local` to reset the mock comments.
+administrator. Run `pnpm script:seed-local-db` to reset the mock comments.
 
 The endpoint is a dev server middleware, so it is not part of any build. It also
 refuses to work unless `DATABASE_URL` points at `localhost`, so plain `pnpm dev`

@@ -16,12 +16,12 @@
     "format": "biome check --write",
     "migrate": "node --env-file-if-exists=.env node_modules/drizzle-kit/bin.cjs migrate --config src/database/drizzle.config.ts",
     "migrate:local": "node --env-file=.env.local node_modules/drizzle-kit/bin.cjs migrate --config src/database/drizzle.config.ts",
-    "script:seed-database": "node --env-file-if-exists=.env src/tools/seed-database.ts",
-    "script:seed-database:local": "node --env-file=.env.local src/tools/seed-database.ts",
-    "script:pull-database": "node --env-file-if-exists=.env src/tools/pull-database.ts",
-    "script:pull-database:local": "node --env-file=.env.local src/tools/pull-database.ts",
-    "script:import-learning-objectives": "node src/tools/import-learning-objectives.ts",
-    "script:draw-surface-charts": "node src/tools/draw-surface-charts.ts"
+    "script:seed-local-db": "node --env-file=.env.local src/tools/seed-local-db.ts",
+    "script:pull-content": "node --env-file-if-exists=.env src/tools/pull-content.ts",
+    "script:pull-content:local": "node --env-file=.env.local src/tools/pull-content.ts",
+    "script:push-content": "node --env-file-if-exists=.env src/tools/push-content.ts",
+    "script:push-content:local": "node --env-file=.env.local src/tools/push-content.ts",
+    "script:import-learning-objectives": "node src/tools/import-learning-objectives.ts"
   },
   "dependencies": {
     "@fontsource/figtree": "^5.3.0",

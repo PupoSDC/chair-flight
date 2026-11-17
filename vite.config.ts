@@ -4,7 +4,6 @@ import viteReact from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 import { type BuildEnvironmentOptions, defineConfig } from "vite";
 import { contentAssetsPlugin } from "./src/tools/vite-content-assets.ts";
-import { designMaskPlugin } from "./src/tools/vite-design-mask.ts";
 import { impersonatePlugin } from "./src/tools/vite-impersonate.ts";
 
 const IGNORED_WARNINGS = new Set([
@@ -42,7 +41,6 @@ export default defineConfig({
 	plugins: [
 		impersonatePlugin(),
 		contentAssetsPlugin(),
-		designMaskPlugin(),
 		tailwindcss(),
 		tanstackStart({
 			prerender: {
