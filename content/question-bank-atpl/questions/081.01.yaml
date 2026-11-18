@@ -11,24 +11,38 @@
     question: "According to the equation of continuity, the constant mass flow in a
       stream tube is dependent on the following for a low subsonic flow,
       assuming that the air is incompressible:"
-    explanation: ""
+    explanation: |-
+      In steady flow, the same mass passes each cross-section of the stream tube
+      per second. The mass flow rate is **ṁ = ρAV**, where ρ is air density,
+      A is the cross-sectional area and V is the mean speed through that section.
+
+      For the low-speed, incompressible flow in this question, density is constant.
+      This gives **A₁V₁ = A₂V₂**. Area and speed both determine the flow rate at
+      a section. If the area halves along the tube, the speed must double.
+
+      ![A stream tube narrows from 2 m² at 15 m/s to 1 m² at 30 m/s](annex:081-stream-tube-continuity)
+
+      In the diagram, both sections pass **30 m³/s** of air. At a density of
+      1.2 kg/m³, both therefore pass **36 kg/s**.
+
+      See [NASA Glenn’s guide to mass flow rate](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate/).
     options:
       - id: O4EIBB1K1
         text: Velocity of the air only
         correct: false
-        why: ""
+        why: "The same speed through a larger area moves more air per second."
       - id: OYHCVVRHB
         text: Velocity of the air and cross-sectional area of the stream tube
         correct: true
-        why: ""
+        why: "At a fixed density, the mass flow rate is proportional to the product of area and speed."
       - id: ODO94T6Y8
         text: Mass of the air only
         correct: false
-        why: ""
+        why: "Mass alone gives an amount. Mass flow rate measures the amount passing per second."
       - id: OC9CZ1SSX
         text: Density of the air only
         correct: false
-        why: ""
+        why: "Density is fixed in this question. The volume passing each second still depends on area and speed."
 - id: Q0BSJFTHU
   docId: "081.01"
   relatedQuestions:
