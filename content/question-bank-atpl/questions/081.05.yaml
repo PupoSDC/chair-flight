@@ -48,7 +48,10 @@
     type: simple
     question: "A jet aeroplane equipped with inboard and outboard ailerons as well
       as spoilers is cruising at its normal cruise Mach number. In this case:"
-    explanation: ""
+    explanation: |-
+      Outboard ailerons act through a long moment arm, making them effective at
+      low speed. At high speed on this type of system, locking them out limits
+      wing twisting loads. Inboard ailerons and spoilers provide roll control.
     options:
       - id: OZFYGRKIE
         text: outboard ailerons are locked out.
@@ -80,7 +83,10 @@
   template:
     type: simple
     question: "In general, control forces are reduced by:"
-    explanation: ""
+    explanation: |-
+      A horn balance puts some control-surface area ahead of the hinge to
+      reduce the hinge moment. A servo tab uses aerodynamic force to move the
+      main surface. A spring tab adds assistance as control loads rise.
     options:
       - id: OWQ7G3FVF
         text: mass balancing, a trim tab and spring tab.
@@ -154,7 +160,11 @@
       no wind, bank or sideslip
 
       The relationship between these three parameters is:
-    explanation: ""
+    explanation: |-
+      Pitch attitude θ is measured from the horizon, and flight-path angle γ is
+      measured from the same horizon. Angle of attack α is the angle from the
+      flight path to the reference chord in this diagram convention. Adding the
+      angles gives θ = γ + α.
     options:
       - id: OPZ49RRQB
         text: theta = gamma + alpha.

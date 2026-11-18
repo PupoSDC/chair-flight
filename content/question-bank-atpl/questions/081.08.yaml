@@ -238,7 +238,11 @@
     type: simple
     question: "Compared with straight and level flight in order to maintain constant
       speed during a level, co-ordinated turn, the pilot must:"
-    explanation: ""
+    explanation: |-
+      Banking tilts the lift vector, so total lift must increase to keep its
+      vertical component equal to weight. At the same speed, that requires a
+      higher angle of attack. The extra lift increases induced drag, so more
+      thrust is required to hold speed.
     options:
       - id: OTVU60CMH
         text: increase thrust and decrease angle of attack.
@@ -320,7 +324,11 @@
     question: After losing all engines and starting a glide descent, the pilot
       lowers the flaps in an attempt to increase the glide range. The pilot
       acted...
-    explanation: ""
+    explanation: |-
+      In a steady glide, the glide angle depends on the lift-to-drag ratio.
+      Extending the flaps in this example adds drag and lowers that ratio, so
+      the glide becomes steeper and covers less horizontal distance from the
+      same height in still air.
     options:
       - id: OS4HO0EVW
         text: Incorrectly, because lowering the flaps decreases glide range and
@@ -640,7 +648,11 @@
   template:
     type: simple
     question: In a coordinated banked turn, the centripetal force is equal to...
-    explanation: ""
+    explanation: |-
+      Banking tilts the lift vector by the bank angle φ. Its horizontal
+      component, L sin φ, points towards the centre of the turn and provides
+      the centripetal force. In a level turn, the vertical component, L cos φ,
+      balances weight.
     options:
       - id: OBJ6ON4DM
         text: L x sin(bank angle)

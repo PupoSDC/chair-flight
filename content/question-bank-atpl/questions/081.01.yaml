@@ -269,7 +269,10 @@
   template:
     type: simple
     question: "The aerodynamic centre of the wing is the point, where:"
-    explanation: ""
+    explanation: |-
+      The aerodynamic centre is the point about which the pitching moment
+      coefficient stays approximately constant as angle of attack changes. The
+      centre of pressure can move with angle of attack.
     options:
       - id: OXHJ3UF4C
         text: the aeroplane’s lateral axis intersects with the centre of gravity.
@@ -402,7 +405,11 @@
   template:
     type: simple
     question: Which of the following is a characteristic of a turbulent boundary layer?
-    explanation: ""
+    explanation: |-
+      Turbulent mixing brings faster-moving air closer to the surface. This
+      helps the boundary layer remain attached when pressure rises in the
+      direction of flow, so it can follow the aerofoil farther before
+      separating.
     options:
       - id: OIGTZZN9C
         text: Greater laminar flow transition tendency.
@@ -436,7 +443,10 @@
     type: simple
     question: Which type of aeroplane and situation will experience a larger
       decrease in induced drag at heights between ground level and a wingspan?
-    explanation: ""
+    explanation: |-
+      Ground effect gets stronger as the wing gets closer to the surface. For a
+      comparable landing attitude, a low wing is closer to the runway, so its
+      downwash and induced drag are reduced more.
     options:
       - id: OMB4KBHTK
         text: High wing on take-off
