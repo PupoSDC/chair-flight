@@ -13,7 +13,11 @@
     type: simple
     question: "If the sum of all the moments in flight is not zero, the aeroplane
       will rotate about the:"
-    explanation: ""
+    explanation: |-
+      The centre of gravity is the reference point for the rotational motion of
+      a free aeroplane. A non-zero net moment about it produces angular
+      acceleration, while a net force changes the motion of the centre of
+      gravity itself.
     options:
       - id: OZKTSSY6S
         text: aerodynamic centre of the wing.
@@ -225,7 +229,10 @@
   template:
     type: simple
     question: "The purpose of a dorsal fin is to:"
-    explanation: ""
+    explanation: |-
+      The dorsal fin adds side area ahead of the main fin but still aft of the
+      centre of gravity. At large sideslip angles, it helps the tail retain a
+      restoring yawing moment.
     options:
       - id: ORPHZLEVI
         text: stabilise forebody vortices.
@@ -365,7 +372,11 @@
     question: Which of the following aircraft design characteristics is desirable
       during a flight with a long time spent in straight and level flight and
       only gentle manoeuvring?
-    explanation: ""
+    explanation: |-
+      Positive static stability means the initial response to a disturbance
+      tends to restore the trimmed condition. This helps the aeroplane hold its
+      flight condition with fewer corrections. Dynamic stability describes what
+      happens over time.
     options:
       - id: OXTCNFSMO
         text: An aeroplane with neutral stability, because it will tend to move less in

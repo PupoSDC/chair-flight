@@ -44,7 +44,11 @@
     type: simple
     question: Why would an aircraft in a coordinated turn during an approach
       suddenly stall?
-    explanation: ""
+    explanation: |-
+      In a level turn, only the vertical component of lift supports the weight,
+      so the wing must produce more total lift. The higher load factor raises
+      the stall speed. At 60° of bank in a level turn, the load factor is 2 and
+      stall speed is about 1.41 times the 1 g value.
     options:
       - id: OL8GCZMZK
         text: An aircraft always stalls at the critical angle of attack.
@@ -75,7 +79,10 @@
   template:
     type: simple
     question: "V**S1G** is:"
-    explanation: ""
+    explanation: |-
+      The 1 g in VS1G refers to a lift-to-weight ratio of one. VS1G is the
+      lowest speed at which the aeroplane can still generate lift equal to its
+      weight, measured normal to the flight path.
     options:
       - id: OQNN1PQ87
         text: the minimum speed at which the aeroplane can develop a lift force equal to
@@ -281,7 +288,10 @@
     type: simple
     question: Just after take-off, a pilot inadvertently retracts the flaps instead
       of the landing gear. What are the consequences?
-    explanation: ""
+    explanation: |-
+      Retracting the flaps lowers the maximum lift coefficient and raises the
+      stall speed. If the aeroplane is below the clean stall speed for the load
+      factor required, the clean wing cannot supply the required lift.
     options:
       - id: O6OCUX4CX
         text: The aeroplane will stall if the speed is lower than the stall speed in

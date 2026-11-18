@@ -10,7 +10,10 @@
   template:
     type: simple
     question: When descending with a constant TAS, what happens?
-    explanation: ""
+    explanation: |-
+      Mach number equals TAS divided by the local speed of sound. In a standard
+      tropospheric descent, the air gets warmer and the speed of sound rises.
+      At constant TAS, Mach number therefore falls.
     options:
       - id: O4DFGBWTX
         text: Mach speed decreases.
@@ -108,7 +111,10 @@
     question: "During the cruise, modern large jet aeroplanes normally fly at speeds
       faster than MCRIT since the increase in speed is more significant than the
       increase in drag. This is achieved:"
-    explanation: ""
+    explanation: |-
+      MCRIT is reached when the airflow first becomes sonic somewhere on the
+      wing. A supercritical aerofoil limits the strength of the shock and
+      delays the sharp rise in wave drag, making cruise above MCRIT practical.
     options:
       - id: OAEXPYQ7Z
         text: By flying at lower altitudes where the TAS is higher for a given Mach
@@ -186,7 +192,10 @@
     type: simple
     question: "When the speed over an aerofoil section increases from subsonic to
       supersonic, its aerodynamic centre:"
-    explanation: ""
+    explanation: |-
+      The standard thin-aerofoil approximation places the aerodynamic centre
+      near the quarter-chord in subsonic flow and near the mid-chord in
+      supersonic flow. That is an aft shift from about 25% to 50% chord.
     options:
       - id: OXPC0ZCQV
         text: moves aft by approximately 10% of the chord.

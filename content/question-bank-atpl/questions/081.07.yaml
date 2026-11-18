@@ -165,7 +165,11 @@
     type: simple
     question: "In twin engine aeroplanes with propellers turning clockwise as seen
       from behind:"
-    explanation: ""
+    explanation: |-
+      At positive angle of attack, P-factor shifts the effective thrust of each
+      clockwise-turning propeller to the right of its hub as seen from behind.
+      With the left engine failed, the remaining right engine therefore has the
+      larger yawing moment arm. That makes the left engine critical.
     options:
       - id: OHGB5GNAN
         text: the right engine is the critical engine.
@@ -741,7 +745,11 @@
     type: simple
     question: "Select the option which correctly completes the following sentence: A
       constant-speed propeller…"
-    explanation: ""
+    explanation: |-
+      The governor varies blade pitch to hold the selected RPM within its
+      governing range. This allows the propeller to use a finer pitch at low
+      speed and a coarser pitch as airspeed rises, keeping the blades closer to
+      an efficient angle of attack.
     options:
       - id: OOARRPEMW
         text: has a more simple construction than a fixed-pitch propeller.
@@ -806,7 +814,10 @@
   template:
     type: simple
     question: Which definition of propeller parameters is correct?
-    explanation: ""
+    explanation: |-
+      Blade angle of attack is measured between the chord of a blade section
+      and the local relative airflow. Blade pitch angle is measured between
+      that chord and the propeller’s plane of rotation.
     options:
       - id: OFW9LVW5T
         text: Helix angle is the angle between the actual path of the propeller and the

@@ -594,7 +594,10 @@
   template:
     type: simple
     question: "VFE means the:"
-    explanation: ""
+    explanation: |-
+      VFE is the maximum speed for flight with the flaps in the specified
+      extended position. Different flap settings can have different VFE values
+      because they impose different aerodynamic loads.
     options:
       - id: OSNPLWWA3
         text: Maximum flap extension or retraction speed.
@@ -1496,7 +1499,10 @@
   template:
     type: simple
     question: "Mass balancing of control surfaces is used to:"
-    explanation: ""
+    explanation: |-
+      A control-surface mass balance moves the surface’s centre of mass towards
+      the hinge line. This reduces the inertial coupling between structural
+      motion and control-surface deflection that can drive flutter.
     options:
       - id: OZWDHKO0O
         text: prevent flutter of control surfaces.
@@ -1597,7 +1603,10 @@
   template:
     type: simple
     question: "The speed VLE is the maximum speed to be flown:"
-    explanation: ""
+    explanation: |-
+      VLE is the speed limit for flying with the landing gear extended. VLO is
+      the limit for operating the gear, and extension and retraction may have
+      different limits.
     options:
       - id: OXZKZCWUN
         text: With the leading edge devices extended.
